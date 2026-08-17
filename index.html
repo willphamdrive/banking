@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basel Academics - Học tập BASEL I, II, III & IV</title>
+  <meta name="description" content="Ứng dụng học tập tương tác về các hiệp ước Basel I, II, III trong quản trị rủi ro ngân hàng và tính tỷ lệ an toàn vốn CAR.">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- SIDEBAR NAV -->
+    <aside class="sidebar">
+      <div class="logo-container">
+        <div class="logo-icon">B</div>
+        <div class="logo-text">
+          <h2>Basel Academics</h2>
+          <span>Quản trị Rủi ro</span>
+        </div>
+      </div>
+      
+      <nav class="nav-menu">
+        <li>
+          <a href="#dashboard" class="nav-item active">
+            <i data-lucide="layout-dashboard"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="#timeline" class="nav-item">
+            <i data-lucide="milestone"></i>
+            <span>Dòng thời gian</span>
+          </a>
+        </li>
+        <li>
+          <a href="#pillars" class="nav-item">
+            <i data-lucide="columns-3"></i>
+            <span>Các Trụ cột chính</span>
+          </a>
+        </li>
+        <li>
+          <a href="#comparison" class="nav-item">
+            <i data-lucide="git-compare"></i>
+            <span>Bảng so sánh</span>
+          </a>
+        </li>
+        <li>
+          <a href="#calculator" class="nav-item">
+            <i data-lucide="calculator"></i>
+            <span>Bộ tính CAR</span>
+          </a>
+        </li>
+        <li>
+          <a href="#quiz" class="nav-item">
+            <i data-lucide="help-circle"></i>
+            <span>Trắc nghiệm ôn tập</span>
+          </a>
+        </li>
+      </nav>
+      
+      <div class="sidebar-footer">
+        <button id="theme-toggle" class="theme-btn" title="Chuyển chế độ Sáng/Tối">
+          <i data-lucide="sun"></i>
+        </button>
+        <span style="font-size: 0.75rem; color: var(--text-muted);">v1.0.0</span>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      
+      <!-- 1. DASHBOARD SECTION -->
+      <section id="dashboard-section" class="content-section">
+        <header>
+          <h1>Học tập & Thực hành Hiệp ước Basel</h1>
+          <p>Tìm hiểu lịch sử tiến hóa, các nguyên tắc cốt lõi và thực hành đo lường tỷ lệ an toàn vốn (CAR) trong hệ thống ngân hàng thương mại.</p>
+        </header>
+
+        <div class="dashboard-grid">
+          <!-- Hero Card -->
+          <div class="intro-card card">
+            <div class="intro-content">
+              <h2>Ủy ban Basel là gì?</h2>
+              <p>
+                Ủy ban Basel về Giám sát Ngân hàng (BCBS - Basel Committee on Banking Supervision) được thành lập năm 1974 bởi Thống đốc Ngân hàng Trung ương nhóm các nước G10. 
+                Ủy ban ban hành các quy định về an toàn vốn ngân hàng nhằm đảm bảo sự ổn định của hệ thống tài chính toàn cầu trước các rủi ro.
+              </p>
+            </div>
+            <div class="intro-illustration">🏦</div>
+          </div>
+
+          <!-- Nav Card 1 -->
+          <div class="menu-card card" data-target="timeline">
+            <div class="menu-card-header">
+              <div class="menu-icon-box"><i data-lucide="milestone"></i></div>
+              <h3>Dòng thời gian tiến hóa</h3>
+            </div>
+            <p>Khám phá lịch sử phát triển từ Basel I (1988), Basel II (2004), Basel III (2010) đến những cải cách Basel IV (2023+).</p>
+            <span class="arrow-link">Khám phá ngay <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i></span>
+          </div>
+
+          <!-- Nav Card 2 -->
+          <div class="menu-card card" data-target="pillars">
+            <div class="menu-card-header">
+              <div class="menu-icon-box"><i data-lucide="columns-3"></i></div>
+              <h3>Các Trụ cột Basel</h3>
+            </div>
+            <p>Tìm hiểu sâu cấu trúc 3 Trụ cột cốt lõi của Basel II & III: Yêu cầu vốn tối thiểu, Giám sát của cơ quan quản lý, và Kỷ luật thị trường.</p>
+            <span class="arrow-link">Xem chi tiết <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i></span>
+          </div>
+
+          <!-- Nav Card 3 -->
+          <div class="menu-card card" data-target="comparison">
+            <div class="menu-card-header">
+              <div class="menu-icon-box"><i data-lucide="git-compare"></i></div>
+              <h3>Bảng so sánh đối chiếu</h3>
+            </div>
+            <p>Xem tóm tắt so sánh trực quan các thay đổi chủ chốt giữa các phiên bản về tỷ lệ vốn, rủi ro điều chỉnh và các tỷ lệ thanh khoản LCR/NSFR.</p>
+            <span class="arrow-link">Xem so sánh <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i></span>
+          </div>
+
+          <!-- Nav Card 4 -->
+          <div class="menu-card card" data-target="calculator">
+            <div class="menu-card-header">
+              <div class="menu-icon-box"><i data-lucide="calculator"></i></div>
+              <h3>Bộ tính CAR mô phỏng</h3>
+            </div>
+            <p>Thực hành nhập số liệu vốn tự có và cơ cấu tài sản rủi ro (RWA) để tự động tính tỷ lệ CAR ngân hàng và đánh giá tuân thủ.</p>
+            <span class="arrow-link">Thực hành tính <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i></span>
+          </div>
+
+          <!-- Nav Card 5 -->
+          <div class="menu-card card" data-target="quiz">
+            <div class="menu-card-header">
+              <div class="menu-icon-box"><i data-lucide="help-circle"></i></div>
+              <h3>Trắc nghiệm kiến thức</h3>
+            </div>
+            <p>Đánh giá lại mức độ hiểu biết của bạn thông qua bộ câu hỏi trắc nghiệm chất lượng kèm giải thích học thuật trực quan chi tiết.</p>
+            <span class="arrow-link">Làm bài test <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. TIMELINE SECTION -->
+      <section id="timeline-section" class="content-section hidden">
+        <div class="section-header">
+          <h2>Dòng thời gian tiến hóa của Hiệp ước Basel</h2>
+          <p>Tìm hiểu các mốc lịch sử, bối cảnh khủng hoảng kinh tế và sự cải tiến không ngừng của các quy chế an toàn vốn ngân hàng toàn cầu.</p>
+        </div>
+        <div id="timeline-container">
+          <!-- Rendered dynamically by js/app.js -->
+        </div>
+      </section>
+
+      <!-- 3. PILLARS SECTION -->
+      <section id="pillars-section" class="content-section hidden">
+        <div class="section-header">
+          <h2>Cấu trúc 3 Trụ cột chính (The Three Pillars)</h2>
+          <p>Basel II và Basel III định hình cấu trúc quản trị rủi ro toàn diện xung quanh ba trụ cột cốt lõi.</p>
+        </div>
+
+        <div class="pillars-grid">
+          <!-- Pillar 1 -->
+          <div class="pillar-card card">
+            <div class="pillar-number">01</div>
+            <h3>Trụ cột 1: Yêu cầu vốn tối thiểu</h3>
+            <p>Định nghĩa cách thức đo lường tài sản có rủi ro (RWA) và đặt ra tỷ lệ an toàn vốn tối thiểu bắt buộc đối với ngân hàng thương mại.</p>
+            <ul class="pillar-subpoints">
+              <li><strong>Rủi ro Tín dụng (Credit Risk)</strong>: Rủi ro khách hàng không trả nợ. Tính theo phương pháp chuẩn hóa (SA) hoặc nội bộ (IRB).</li>
+              <li><strong>Rủi ro Thị trường (Market Risk)</strong>: Rủi ro do biến động lãi suất, tỷ giá, giá chứng khoán trên sổ kinh doanh.</li>
+              <li><strong>Rủi ro Hoạt động (Operational Risk)</strong>: Rủi ro tổn thất do con người, lỗi hệ thống, sự kiện bên ngoài (gian lận, sự cố công nghệ).</li>
+              <li>Công thức: <code>CAR = Tổng Vốn / (RWA Tín dụng + RWA Thị trường + RWA Hoạt động) >= 8%</code>.</li>
+            </ul>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="pillar-card card">
+            <div class="pillar-number">02</div>
+            <h3>Trụ cột 2: Giám sát của Cơ quan quản lý</h3>
+            <p>Yêu cầu ngân hàng xây dựng quy trình tự đánh giá mức độ đủ vốn nội bộ (ICAAP) và cơ quan quản lý thực hiện kiểm tra đánh giá độc lập.</p>
+            <ul class="pillar-subpoints">
+              <li><strong>Tự đánh giá ICAAP</strong>: Ngân hàng phải tự lập mô hình rủi ro bao gồm cả các loại rủi ro ngoài Trụ cột 1 (rủi ro tập trung, rủi ro danh tiếng).</li>
+              <li><strong>Can thiệp sớm</strong>: Cơ quan quản lý (NHNN) có quyền yêu cầu ngân hàng nắm giữ mức vốn cao hơn 8% nếu phát hiện quản trị rủi ro yếu kém.</li>
+              <li><strong>Thử nghiệm ứng phó (Stress Testing)</strong>: Mô phỏng ngân hàng trong các kịch bản suy thoái kinh tế cực đoan để kiểm tra khả năng phục hồi.</li>
+            </ul>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="pillar-card card">
+            <div class="pillar-number">03</div>
+            <h3>Trụ cột 3: Kỷ luật thị trường</h3>
+            <p>Thúc đẩy tính minh bạch và lành mạnh của hệ thống thông qua việc bắt buộc ngân hàng công bố thông tin định kỳ ra công chúng.</p>
+            <ul class="pillar-subpoints">
+              <li><strong>Minh bạch hóa</strong>: Công bố cơ cấu vốn, các chỉ tiêu rủi ro cụ thể để các cổ đông, người gửi tiền, và các tổ chức định hạng tín nhiệm giám sát.</li>
+              <li><strong>Báo cáo định kỳ</strong>: Thường niên hoặc bán niên, chi tiết hóa cách thức ngân hàng quản trị rủi ro và các hạn mức vốn dự phòng.</li>
+              <li><strong>Khuyến khích lành mạnh</strong>: Giúp thị trường định giá đúng cổ phiếu ngân hàng, ngân hàng rủi ro cao sẽ phải chịu chi phí huy động vốn đắt hơn.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. COMPARISON SECTION -->
+      <section id="comparison-section" class="content-section hidden">
+        <div class="section-header">
+          <h2>So sánh Basel I, II, III & IV</h2>
+          <p>Xem sự thay đổi mang tính hệ thống qua các thời kỳ phát triển về các chỉ tiêu an toàn và quản lý thanh khoản.</p>
+        </div>
+        <div id="comparison-table-container" class="comparison-table-card card">
+          <!-- Rendered dynamically by js/app.js -->
+        </div>
+      </section>
+
+      <!-- 5. CALCULATOR SECTION -->
+      <section id="calculator-section" class="content-section hidden">
+        <div class="section-header">
+          <h2>Mô phỏng tỷ lệ an toàn vốn CAR (Basel I, II, III)</h2>
+          <p>Nhập số liệu tài chính giả định của một ngân hàng (đơn vị: Tỷ đồng) để tính tỷ lệ an toàn vốn, tỷ lệ đòn bẩy và đánh giá tuân thủ quy chuẩn.</p>
+        </div>
+
+        <div class="calc-container">
+          <!-- Nhập số liệu -->
+          <div class="calc-form card">
+            <div>
+              <div class="form-group-title">1. Thành phần Vốn tự có (Capital)</div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="input-cet1">Vốn Cổ phần Phổ thông cấp 1 (CET1)</label>
+                  <div class="input-container">
+                    <input type="number" id="input-cet1" value="7500" min="0">
+                    <span class="input-unit">tỷ đ</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="input-at1">Vốn Cấp 1 bổ sung (AT1)</label>
+                  <div class="input-container">
+                    <input type="number" id="input-at1" value="1500" min="0">
+                    <span class="input-unit">tỷ đ</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-row" style="margin-top: 1rem;">
+                <div class="form-group">
+                  <label for="input-tier2">Vốn Cấp 2 (Tier 2)</label>
+                  <div class="input-container">
+                    <input type="number" id="input-tier2" value="2000" min="0">
+                    <span class="input-unit">tỷ đ</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="form-group-title">2. Danh mục tài sản tính RWA Tín dụng</div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="asset-cash">Tiền mặt (Trọng số 0%)</label>
+                  <div class="input-container">
+                    <input type="number" id="asset-cash" value="5000" min="0">
+                    <span class="input-unit">tỷ đ</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="asset-gov">Trái phiếu Chính phủ (Trọng số 0%)</label>
+                  <div class="input-container">
+                    <input type="number" id="asset-gov" value="15000" min="0">
+                    <span class="input-unit">tỷ đ</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-row" style="margin-top: 1rem;">
+                <div class="form-group">
+                  <label for="asset-mortgage">Cho vay thế chấp nhà ở (Trọng số 50%)</label>
+                  <div class="input-container">
+                    <input type="number" id="asset-mortgage" value="20000" min="0">
+                    <span class="input-unit">tỷ đ</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="asset-retail">Cho vay bán lẻ/cá nhân (Trọng số 75%)</label>
+                  <div class="input-container">
+                    <input type="number" id="asset-retail" value="30000" min="0">
+                    <span class="input-unit">tỷ đ</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-row" style="margin-top: 1rem;">
+                <div class="form-group" style="grid-column: 1 / -1;">
+                  <label for="asset-corporate">Cho vay doanh nghiệp (Trọng số 100%)</label>
+                  <div class="input-container">
+                    <input type="number" id="asset-corporate" value="45000" min="0">
+                    <span class="input-unit">tỷ đ</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="form-group-title">3. RWA rủi ro Thị trường & Hoạt động</div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="input-market-rwa">RWA rủi ro Thị trường</label>
+                  <div class="input-container">
+                    <input type="number" id="input-market-rwa" value="3000" min="0">
+                    <span class="input-unit">tỷ đ</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="input-op-rwa">RWA rủi ro Hoạt động</label>
+                  <div class="input-container">
+                    <input type="number" id="input-op-rwa" value="8000" min="0">
+                    <span class="input-unit">tỷ đ</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kết quả tính toán -->
+          <div class="calc-results">
+            <div class="card" style="margin-bottom: 0;">
+              <h3>Kết quả tính toán</h3>
+              
+              <!-- 4 tỷ lệ chính -->
+              <div class="ratios-grid" style="margin-top: 1rem;">
+                <div class="ratio-box">
+                  <span class="ratio-label">Tỷ lệ an toàn vốn (CAR)</span>
+                  <span id="out-car-ratio" class="ratio-value">0.00%</span>
+                </div>
+                <div class="ratio-box">
+                  <span class="ratio-label">Tỷ lệ Vốn cấp 1</span>
+                  <span id="out-tier1-ratio" class="ratio-value">0.00%</span>
+                </div>
+                <div class="ratio-box">
+                  <span class="ratio-label">Tỷ lệ vốn CET1</span>
+                  <span id="out-cet1-ratio" class="ratio-value">0.00%</span>
+                </div>
+                <div class="ratio-box">
+                  <span class="ratio-label">Tỷ lệ đòn bẩy</span>
+                  <span id="out-leverage-ratio" class="ratio-value">0.00%</span>
+                </div>
+              </div>
+
+              <!-- Chi tiết thông số -->
+              <div style="margin-top: 1.5rem; font-size: 0.9rem; line-height: 1.8;">
+                <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding: 4px 0;">
+                  <span style="color: var(--text-muted);">Tổng tài sản trên sổ:</span>
+                  <strong id="out-total-assets">0 tỷ đ</strong>
+                </div>
+                <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding: 4px 0;">
+                  <span style="color: var(--text-muted);">RWA rủi ro tín dụng:</span>
+                  <strong id="out-credit-rwa">0 tỷ đ</strong>
+                </div>
+                <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding: 4px 0;">
+                  <span style="color: var(--text-muted);">Tổng tài sản có rủi ro (RWA):</span>
+                  <strong id="out-total-rwa" style="color: var(--primary);">0 tỷ đ</strong>
+                </div>
+                <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding: 4px 0;">
+                  <span style="color: var(--text-muted);">Vốn Cấp 1 (Tier 1):</span>
+                  <strong id="out-tier1">0 tỷ đ</strong>
+                </div>
+                <div style="display: flex; justify-content: space-between; padding: 4px 0;">
+                  <span style="color: var(--text-muted);">Tổng Vốn tự có:</span>
+                  <strong id="out-total-capital" style="color: var(--success);">0 tỷ đ</strong>
+                </div>
+              </div>
+
+              <!-- Đánh giá tuân thủ -->
+              <div class="compliance-checker" style="margin-top: 1.5rem;">
+                <div class="compliance-title">Đánh giá tính tuân thủ quy chuẩn</div>
+                
+                <div class="compliance-status-row">
+                  <span>Hiệp ước Basel I (1988)</span>
+                  <span id="status-basel1" class="status-badge">Đánh giá</span>
+                </div>
+                <div class="compliance-status-row">
+                  <span>Hiệp ước Basel II (2004)</span>
+                  <span id="status-basel2" class="status-badge">Đánh giá</span>
+                </div>
+                <div class="compliance-status-row">
+                  <span>Hiệp ước Basel III (2010)</span>
+                  <span id="status-basel3" class="status-badge">Đánh giá</span>
+                </div>
+
+                <div id="compliance-alerts" class="compliance-alerts-box hidden">
+                  <!-- Rendered by js/calculator.js -->
+                </div>
+              </div>
+
+              <!-- Biểu đồ cơ cấu RWA -->
+              <div class="chart-container">
+                <canvas id="rwa-chart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. QUIZ SECTION -->
+      <section id="quiz-section" class="content-section hidden">
+        <div class="section-header">
+          <h2>Trắc nghiệm kiến thức về Basel I, II, III & IV</h2>
+          <p>Tự kiểm tra khả năng ghi nhớ và áp dụng kiến thức thông qua bộ câu hỏi trắc nghiệm tương tác lý thú.</p>
+        </div>
+
+        <!-- Màn hình bắt đầu -->
+        <div id="quiz-start" class="quiz-welcome card">
+          <div class="quiz-welcome-icon">🧠</div>
+          <h3>Sẵn sàng thử thách bản thân?</h3>
+          <p style="color: var(--text-muted); margin: 1rem 0 2rem 0; line-height: 1.6;">
+            Bài trắc nghiệm gồm 8 câu hỏi về sự khác biệt giữa Basel I, II, III, IV, các đệm bảo toàn vốn, tỷ lệ đòn bẩy và tỷ lệ thanh khoản. 
+            Bạn cần trả lời đúng tối thiểu 5 câu (60%) để vượt qua thử thách.
+          </p>
+          <button id="btn-start-quiz" class="quiz-btn">Bắt đầu làm bài</button>
+        </div>
+
+        <!-- Màn hình câu hỏi đang làm -->
+        <div id="quiz-active" class="quiz-active-card card hidden">
+          <div class="quiz-progress-container">
+            <div class="quiz-progress-bar">
+              <div id="quiz-progress-fill" class="quiz-progress-fill"></div>
+            </div>
+            <span id="quiz-progress-text">Hoàn thành 0%</span>
+          </div>
+
+          <div class="quiz-question-box">
+            <h3 id="question-text">Câu hỏi 1/8: Nội dung câu hỏi ở đây?</h3>
+            <div id="options-container" class="quiz-options">
+              <!-- Dynamically populated by js/quiz.js -->
+            </div>
+          </div>
+
+          <div id="explanation-container" class="explanation-box hidden">
+            <h4>Giải thích học thuật:</h4>
+            <p id="explanation-text">Nội dung giải thích chi tiết...</p>
+          </div>
+
+          <div class="quiz-action-bar">
+            <button id="btn-next-question" class="quiz-btn hidden">Câu tiếp theo</button>
+          </div>
+        </div>
+
+        <!-- Màn hình kết quả -->
+        <div id="quiz-results" class="quiz-results-card card hidden">
+          <h3>Kết quả bài trắc nghiệm</h3>
+          <div class="results-score" id="quiz-score-text">0 / 0</div>
+          <div class="results-percent" id="quiz-score-percent">0%</div>
+          <p class="results-msg" id="quiz-score-message">Thông báo chúc mừng hoặc khuyến khích ở đây.</p>
+          <button id="btn-restart-quiz" class="quiz-btn">
+            <i data-lucide="rotate-ccw" style="width: 18px; height: 18px;"></i>
+            Làm lại bài thi
+          </button>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- SCRIPT FILES -->
+  <script src="js/data.js"></script>
+  <script src="js/calculator.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

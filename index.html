@@ -388,10 +388,22 @@
           <!-- Kết quả tính toán -->
           <div class="calc-results">
             <div class="card" style="margin-bottom: 0;">
-              <h3>Kết quả tính toán</h3>
-              
-              <!-- 4 tỷ lệ chính -->
-              <div class="ratios-grid" style="margin-top: 1rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">
+                <h3 style="margin: 0;">Kết quả tính toán</h3>
+                <div style="display: flex; gap: 0.35rem;">
+                  <button id="btn-calc-grid" class="btn btn-sm" style="padding: 0.35rem 0.75rem; font-size: 0.72rem; font-weight: 600; border-radius: 4px; background: var(--primary); color: white; border: 1px solid var(--primary); display: flex; align-items: center; gap: 0.25rem;">
+                    <i data-lucide="layout-grid" style="width: 13px; height: 13px;"></i> Bảng số
+                  </button>
+                  <button id="btn-calc-flow" class="btn btn-sm" style="padding: 0.35rem 0.75rem; font-size: 0.72rem; font-weight: 600; border-radius: 4px; background: rgba(255,255,255,0.05); color: var(--text-muted); border: 1px solid var(--border-color); display: flex; align-items: center; gap: 0.25rem;">
+                    <i data-lucide="git-branch" style="width: 13px; height: 13px;"></i> Sơ đồ luồng
+                  </button>
+                </div>
+              </div>
+
+              <!-- 1. Grid view (Numbers, formulas, and details) -->
+              <div id="calc-grid-view" style="display: block;">
+                <!-- 4 tỷ lệ chính -->
+                <div class="ratios-grid" style="margin-top: 1rem;">
                 <div class="ratio-box">
                   <span class="ratio-label">Tỷ lệ an toàn vốn (CAR)</span>
                   <span id="out-car-ratio" class="ratio-value">0.00%</span>
@@ -407,6 +419,135 @@
                 <div class="ratio-box">
                   <span class="ratio-label">Tỷ lệ đòn bẩy</span>
                   <span id="out-leverage-ratio" class="ratio-value">0.00%</span>
+                </div>
+              </div>
+
+              <!-- Công thức động và mối liên hệ giữa các tỷ lệ -->
+              <div style="margin-top: 1.5rem;">
+                <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.85rem;">① Cấu trúc phân tầng vốn</div>
+
+                <!-- Capital Stack -->
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 10px; overflow: hidden; margin-bottom: 1.25rem;">
+                  <!-- CET1 -->
+                  <div style="padding: 0.6rem 0.9rem; border-bottom: 1px solid var(--border-color); display:flex; justify-content: space-between; align-items: center;">
+                    <div>
+                      <span style="font-weight: 700; font-size: 0.82rem; color: #6366f1;">CET1</span>
+                      <span style="font-size: 0.72rem; color: var(--text-muted); margin-left: 0.4rem;">Vốn Cổ phần Phổ thông cấp 1</span>
+                    </div>
+                    <span id="f-cet1" style="font-weight: 700; color: #6366f1; font-size: 0.9rem;">0</span>
+                  </div>
+                  <!-- AT1 -->
+                  <div style="padding: 0.6rem 0.9rem; border-bottom: 1px solid var(--border-color); display:flex; justify-content: space-between; align-items: center; background: rgba(99,102,241,0.04);">
+                    <div>
+                      <span style="font-size: 0.72rem; color: var(--text-muted); margin-left: 1.2rem;">+ AT1 (bổ sung cấp 1)</span>
+                    </div>
+                    <span id="f-at1" style="font-size: 0.85rem; color: var(--text-muted);">0</span>
+                  </div>
+                  <!-- Tier 1 subtotal -->
+                  <div style="padding: 0.6rem 0.9rem; border-bottom: 1px solid var(--border-color); display:flex; justify-content: space-between; align-items: center; background: rgba(99,102,241,0.08);">
+                    <div>
+                      <span style="font-weight: 700; font-size: 0.82rem; color: #818cf8;">= Tier 1</span>
+                      <span style="font-size: 0.72rem; color: var(--text-muted); margin-left: 0.4rem;">Vốn cấp 1</span>
+                    </div>
+                    <span id="f-tier1" style="font-weight: 700; color: #818cf8; font-size: 0.9rem;">0</span>
+                  </div>
+                  <!-- Tier 2 -->
+                  <div style="padding: 0.6rem 0.9rem; border-bottom: 1px solid var(--border-color); display:flex; justify-content: space-between; align-items: center; background: rgba(99,102,241,0.04);">
+                    <div>
+                      <span style="font-size: 0.72rem; color: var(--text-muted); margin-left: 1.2rem;">+ Tier 2 (vốn cấp 2)</span>
+                    </div>
+                    <span id="f-tier2" style="font-size: 0.85rem; color: var(--text-muted);">0</span>
+                  </div>
+                  <!-- Total Capital -->
+                  <div style="padding: 0.65rem 0.9rem; display:flex; justify-content: space-between; align-items: center; background: rgba(5,150,105,0.08);">
+                    <div>
+                      <span style="font-weight: 700; font-size: 0.82rem; color: var(--success);">= Tổng Vốn tự có</span>
+                    </div>
+                    <span id="f-total-capital" style="font-weight: 700; color: var(--success); font-size: 0.9rem;">0</span>
+                  </div>
+                </div>
+
+                <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.85rem;">② Công thức tính tỷ lệ</div>
+
+                <!-- Formula Cards -->
+                <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+
+                  <!-- CAR -->
+                  <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 8px; padding: 0.75rem 0.9rem;">
+                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem;">
+                      <span style="font-size: 0.72rem; font-weight: 700; background: rgba(99,102,241,0.15); color: #818cf8; padding: 1px 7px; border-radius: 20px;">CAR</span>
+                      <span style="font-size: 0.72rem; color: var(--text-muted);">Tỷ lệ an toàn vốn &ge; 8%</span>
+                    </div>
+                    <div style="font-family: 'Courier New', monospace; font-size: 0.8rem; color: var(--text-main); line-height: 1.6;">
+                      <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
+                        <span style="color: var(--success); font-weight: 700;" id="f-car-val">0.00%</span>
+                        <span style="color: var(--text-muted);">=</span>
+                        <div style="display: inline-flex; flex-direction: column; align-items: center;">
+                          <span style="border-bottom: 1px solid var(--text-muted); padding-bottom: 2px; min-width: 60px; text-align: center;" id="f-car-num">0</span>
+                          <span style="padding-top: 2px; min-width: 60px; text-align: center;" id="f-car-den">0</span>
+                        </div>
+                        <span style="color: var(--text-muted);">= Tổng vốn / Tổng RWA</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Tier 1 Ratio -->
+                  <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 8px; padding: 0.75rem 0.9rem;">
+                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem;">
+                      <span style="font-size: 0.72rem; font-weight: 700; background: rgba(129,140,248,0.15); color: #818cf8; padding: 1px 7px; border-radius: 20px;">Tier 1</span>
+                      <span style="font-size: 0.72rem; color: var(--text-muted);">Tỷ lệ vốn cấp 1 &ge; 6%</span>
+                    </div>
+                    <div style="font-family: 'Courier New', monospace; font-size: 0.8rem; color: var(--text-main); line-height: 1.6;">
+                      <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
+                        <span style="color: #818cf8; font-weight: 700;" id="f-t1-val">0.00%</span>
+                        <span style="color: var(--text-muted);">=</span>
+                        <div style="display: inline-flex; flex-direction: column; align-items: center;">
+                          <span style="border-bottom: 1px solid var(--text-muted); padding-bottom: 2px; min-width: 60px; text-align: center;" id="f-t1-num">0</span>
+                          <span style="padding-top: 2px; min-width: 60px; text-align: center;" id="f-t1-den">0</span>
+                        </div>
+                        <span style="color: var(--text-muted);">= Tier 1 / Tổng RWA</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- CET1 Ratio -->
+                  <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 8px; padding: 0.75rem 0.9rem;">
+                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem;">
+                      <span style="font-size: 0.72rem; font-weight: 700; background: rgba(99,102,241,0.15); color: #6366f1; padding: 1px 7px; border-radius: 20px;">CET1</span>
+                      <span style="font-size: 0.72rem; color: var(--text-muted);">Tỷ lệ vốn cổ phần &ge; 4.5%</span>
+                    </div>
+                    <div style="font-family: 'Courier New', monospace; font-size: 0.8rem; color: var(--text-main); line-height: 1.6;">
+                      <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
+                        <span style="color: #6366f1; font-weight: 700;" id="f-cet1-val">0.00%</span>
+                        <span style="color: var(--text-muted);">=</span>
+                        <div style="display: inline-flex; flex-direction: column; align-items: center;">
+                          <span style="border-bottom: 1px solid var(--text-muted); padding-bottom: 2px; min-width: 60px; text-align: center;" id="f-cet1-num">0</span>
+                          <span style="padding-top: 2px; min-width: 60px; text-align: center;" id="f-cet1-den">0</span>
+                        </div>
+                        <span style="color: var(--text-muted);">= CET1 / Tổng RWA</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Leverage -->
+                  <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 8px; padding: 0.75rem 0.9rem;">
+                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem;">
+                      <span style="font-size: 0.72rem; font-weight: 700; background: rgba(245,158,11,0.15); color: #f59e0b; padding: 1px 7px; border-radius: 20px;">Đòn bẩy</span>
+                      <span style="font-size: 0.72rem; color: var(--text-muted);">Tỷ lệ đòn bẩy phi rủi ro &ge; 3%</span>
+                    </div>
+                    <div style="font-family: 'Courier New', monospace; font-size: 0.8rem; color: var(--text-main); line-height: 1.6;">
+                      <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
+                        <span style="color: #f59e0b; font-weight: 700;" id="f-lev-val">0.00%</span>
+                        <span style="color: var(--text-muted);">=</span>
+                        <div style="display: inline-flex; flex-direction: column; align-items: center;">
+                          <span style="border-bottom: 1px solid var(--text-muted); padding-bottom: 2px; min-width: 60px; text-align: center;" id="f-lev-num">0</span>
+                          <span style="padding-top: 2px; min-width: 60px; text-align: center;" id="f-lev-den">0</span>
+                        </div>
+                        <span style="color: var(--text-muted);">= Tier 1 / Tổng TS</span>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
               </div>
 
@@ -459,6 +600,137 @@
               <!-- Biểu đồ cơ cấu RWA -->
               <div class="chart-container">
                 <canvas id="rwa-chart"></canvas>
+              </div>
+            </div> <!-- Close calc-grid-view -->
+
+            <!-- 2. Flow Diagram View (Updated in real-time) -->
+            <div id="calc-flow-view" style="display: none; position: relative; height: 410px; min-width: 480px; padding: 0.5rem 0; overflow-x: auto;">
+              <!-- SVG CONNECTOR NETWORK -->
+              <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <defs>
+                  <marker id="carrow-indigo" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+                    <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#6366f1" />
+                  </marker>
+                  <marker id="carrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+                    <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#10b981" />
+                  </marker>
+                  <marker id="carrow-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+                    <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#f59e0b" />
+                  </marker>
+                  <marker id="carrow-muted" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="3" markerHeight="3" orient="auto-start-reverse">
+                    <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="rgba(255,255,255,0.25)" />
+                  </marker>
+                </defs>
+
+                <!-- 1. CET1 & AT1 to Tier 1 (Orthogonal in Gutter 1) -->
+                <path d="M 28 9.75 L 31 9.75 L 31 19.5 L 34 19.5" fill="none" stroke="rgba(99, 102, 241, 0.4)" stroke-width="0.3" />
+                <path d="M 28 29.27 L 31 29.27 L 31 19.5 L 34 19.5" fill="none" stroke="rgba(99, 102, 241, 0.4)" stroke-width="0.3" />
+                <path d="M 31 19.5 L 33.5 19.5" fill="none" stroke="#6366f1" stroke-width="0.35" marker-end="url(#carrow-indigo)" />
+
+                <!-- 2. Tier 1 to Total Capital (Vertical inside Middle Column) -->
+                <path d="M 50 28 L 50 39" fill="none" stroke="rgba(16, 185, 129, 0.4)" stroke-width="0.35" marker-end="url(#carrow-green)" />
+
+                <!-- 3. Tier 2 to Total Capital (Orthogonal in Gutter 1) -->
+                <path d="M 28 48.78 L 33.5 48.78" fill="none" stroke="rgba(16, 185, 129, 0.35)" stroke-width="0.3" marker-end="url(#carrow-green)" />
+
+                <!-- 4. RWA to Total RWA (Straight horizontal) -->
+                <path d="M 28 81.7 L 33.5 81.7" fill="none" stroke="rgba(245, 158, 11, 0.4)" stroke-width="0.35" marker-end="url(#carrow-amber)" />
+
+                <!-- 5. Outputs from Tier 1 (CET1 Ratio, Tier 1 Ratio, Leverage) - Enters Left Side -->
+                <path d="M 66 19.5 L 69 19.5" fill="none" stroke="rgba(99, 102, 241, 0.35)" stroke-width="0.3" />
+                <path d="M 69 19.5 L 69 9.75 L 72 9.75" fill="none" stroke="rgba(99, 102, 241, 0.35)" stroke-width="0.3" marker-end="url(#carrow-indigo)" />
+                <path d="M 69 19.5 L 69 29.27 L 72 29.27" fill="none" stroke="rgba(99, 102, 241, 0.35)" stroke-width="0.3" marker-end="url(#carrow-indigo)" />
+                <path d="M 69 19.5 L 69 48.78 L 72 48.78" fill="none" stroke="rgba(245, 158, 11, 0.35)" stroke-width="0.3" marker-end="url(#carrow-amber)" />
+
+                <!-- 6. Outputs from Total Capital (CAR Ratio) - Enters Left Side -->
+                <path d="M 66 57.3 L 67.5 57.3 L 67.5 81.7 L 72 81.7" fill="none" stroke="rgba(16, 185, 129, 0.4)" stroke-width="0.3" marker-end="url(#carrow-green)" />
+
+                <!-- 7. Outputs from Total RWA to Denominator (Enters Right Side - Fully isolated loop) -->
+                <path d="M 50 90.2 L 50 95 L 98 95 L 98 9.75" fill="none" stroke="rgba(255, 255, 255, 0.15)" stroke-width="0.25" stroke-dasharray="0.8,0.8" />
+                <path d="M 98 9.75 L 96 9.75" fill="none" stroke="rgba(255, 255, 255, 0.15)" stroke-width="0.2" stroke-dasharray="0.8,0.8" marker-end="url(#carrow-muted)" />
+                <path d="M 98 29.27 L 96 29.27" fill="none" stroke="rgba(255, 255, 255, 0.15)" stroke-width="0.2" stroke-dasharray="0.8,0.8" marker-end="url(#carrow-muted)" />
+                <path d="M 98 81.7 L 96 81.7" fill="none" stroke="rgba(255, 255, 255, 0.15)" stroke-width="0.2" stroke-dasharray="0.8,0.8" marker-end="url(#carrow-muted)" />
+              </svg>
+
+              <div style="display: flex; justify-content: space-between; height: 100%; position: relative; z-index: 2; width: 100%;">
+                <!-- CỘT 1: CẤU PHẦN GỐC -->
+                <div style="width: 28%; position: relative; height: 100%;">
+                  <!-- CET1 -->
+                  <div style="position: absolute; top: 10px; left: 0; right: 0; height: 60px; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 8px; padding: 0.4rem; text-align: center; display: flex; flex-direction: column; justify-content: center;">
+                    <strong style="color: #6366f1; font-size: 0.8rem; display: block;">Vốn CET1</strong>
+                    <span id="calcf-cet1" style="font-size: 0.72rem; color: #6366f1; font-weight: 700; margin-top: 2px;">0 Tỷ</span>
+                  </div>
+                  <!-- AT1 -->
+                  <div style="position: absolute; top: 90px; left: 0; right: 0; height: 60px; background: rgba(99, 102, 241, 0.02); border: 1px dashed var(--border-color); border-radius: 8px; padding: 0.4rem; text-align: center; display: flex; flex-direction: column; justify-content: center;">
+                    <strong style="color: var(--text-main); font-size: 0.8rem; display: block;">Vốn AT1</strong>
+                    <span id="calcf-at1" style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; margin-top: 2px;">0 Tỷ</span>
+                  </div>
+                  <!-- Tier 2 -->
+                  <div style="position: absolute; top: 170px; left: 0; right: 0; height: 60px; background: rgba(255, 255, 255, 0.02); border: 1px dashed var(--border-color); border-radius: 8px; padding: 0.4rem; text-align: center; display: flex; flex-direction: column; justify-content: center;">
+                    <strong style="color: var(--text-main); font-size: 0.8rem; display: block;">Vốn Cấp 2</strong>
+                    <span id="calcf-tier2" style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; margin-top: 2px;">0 Tỷ</span>
+                  </div>
+                  <!-- RWA Parts -->
+                  <div style="position: absolute; top: 300px; left: 0; right: 0; height: 70px; background: rgba(245, 158, 11, 0.02); border: 1px solid var(--border-color); border-radius: 8px; padding: 0.4rem; text-align: center; display: flex; flex-direction: column; justify-content: center;">
+                    <strong style="color: #f59e0b; font-size: 0.8rem; display: block;">RWA Tín dụng</strong>
+                    <span id="calcf-rwa-credit" style="font-size: 0.72rem; color: #f59e0b; font-weight: 700; margin-top: 2px;">0 Tỷ</span>
+                  </div>
+                </div>
+
+                <!-- CỘT 2: TỔNG HỢP / HỢP NHẤT -->
+                <div style="width: 32%; position: relative; height: 100%; border-left: 2px solid var(--border-color); border-right: 2px solid var(--border-color); padding: 0 10px;">
+                  <!-- Tier 1 Capital -->
+                  <div style="position: absolute; top: 45px; left: 10px; right: 10px; height: 70px; background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.35); border-radius: 8px; padding: 0.4rem; text-align: center; display: flex; flex-direction: column; justify-content: center;">
+                    <strong style="color: #818cf8; font-size: 0.82rem; display: block;">Vốn Cấp 1 (Tier 1)</strong>
+                    <span id="calcf-tier1-cap" style="font-size: 0.72rem; color: #818cf8; font-weight: 700; margin-top: 2px;">0 Tỷ</span>
+                  </div>
+                  <!-- Total Capital -->
+                  <div style="position: absolute; top: 165px; left: 10px; right: 10px; height: 70px; background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 8px; padding: 0.4rem; text-align: center; display: flex; flex-direction: column; justify-content: center;">
+                    <strong style="color: #10b981; font-size: 0.82rem; display: block;">Tổng Vốn tự có</strong>
+                    <span id="calcf-total-cap" style="font-size: 0.72rem; color: #10b981; font-weight: 700; margin-top: 2px;">0 Tỷ</span>
+                  </div>
+                  <!-- Total RWA -->
+                  <div style="position: absolute; top: 300px; left: 10px; right: 10px; height: 70px; background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.35); border-radius: 8px; padding: 0.4rem; text-align: center; display: flex; flex-direction: column; justify-content: center;">
+                    <strong style="color: #f59e0b; font-size: 0.82rem; display: block;">Tổng RWA</strong>
+                    <span id="calcf-total-rwa" style="font-size: 0.72rem; color: #f59e0b; font-weight: 700; margin-top: 2px;">0 Tỷ</span>
+                  </div>
+                </div>
+
+                <!-- CỘT 3: TỶ LỆ ĐẦU RA -->
+                <div style="width: 35%; position: relative; height: 100%;">
+                  <!-- CET1 Ratio -->
+                  <div style="position: absolute; top: 10px; left: 10px; right: 10px; height: 60px; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); border-radius: 8px; padding: 0.3rem 0.85rem; display: flex; justify-content: space-between; align-items: center;">
+                    <div style="text-align: left;">
+                      <strong style="color: #6366f1; font-size: 0.8rem; display: block;">Tỷ lệ CET1</strong>
+                      <span id="calcf-cet1-ratio" style="font-size: 0.72rem; color: #6366f1; font-weight: 700; display: block; margin-top: 1px;">0.00%</span>
+                    </div>
+                    <strong style="color: #6366f1; font-size: 0.95rem; font-family: monospace;">&ge; 4.5%</strong>
+                  </div>
+                  <!-- Tier 1 Ratio -->
+                  <div style="position: absolute; top: 90px; left: 10px; right: 10px; height: 60px; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); border-radius: 8px; padding: 0.3rem 0.85rem; display: flex; justify-content: space-between; align-items: center;">
+                    <div style="text-align: left;">
+                      <strong style="color: #818cf8; font-size: 0.8rem; display: block;">Tỷ lệ Vốn cấp 1</strong>
+                      <span id="calcf-tier1-ratio" style="font-size: 0.72rem; color: #818cf8; font-weight: 700; display: block; margin-top: 1px;">0.00%</span>
+                    </div>
+                    <strong style="color: #818cf8; font-size: 0.95rem; font-family: monospace;">&ge; 6.0%</strong>
+                  </div>
+                  <!-- Leverage Ratio -->
+                  <div style="position: absolute; top: 170px; left: 10px; right: 10px; height: 60px; background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.35); border-radius: 8px; padding: 0.3rem 0.85rem; display: flex; justify-content: space-between; align-items: center; border-left: 4px solid #f59e0b;">
+                    <div style="text-align: left;">
+                      <strong style="color: #f59e0b; font-size: 0.8rem; display: block;">Tỷ lệ Đòn bẩy</strong>
+                      <span id="calcf-leverage-ratio" style="font-size: 0.72rem; color: #f59e0b; font-weight: 700; display: block; margin-top: 1px;">0.00%</span>
+                    </div>
+                    <strong style="color: #f59e0b; font-size: 1.05rem; font-family: monospace;">&ge; 3.0%</strong>
+                  </div>
+                  <!-- CAR Ratio -->
+                  <div style="position: absolute; top: 300px; left: 10px; right: 10px; height: 70px; background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.35); border-radius: 8px; padding: 0.3rem 0.85rem; display: flex; justify-content: space-between; align-items: center; border-left: 4px solid #10b981;">
+                    <div style="text-align: left;">
+                      <strong style="color: #10b981; font-size: 0.82rem; display: block;">Tỷ lệ CAR</strong>
+                      <span id="calcf-car-ratio" style="font-size: 0.72rem; color: #10b981; font-weight: 700; display: block; margin-top: 2px;">0.00%</span>
+                    </div>
+                    <strong style="color: #10b981; font-size: 1.05rem; font-family: monospace;">&ge; 8.0%</strong>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -793,6 +1065,199 @@
         <div class="section-header">
           <h2>Phụ lục Giải thích Thuật ngữ Ngân hàng</h2>
           <p>Tra cứu định nghĩa, viết tắt và cơ chế tính toán các chỉ số an toàn vốn, đệm thanh khoản, rủi ro hoạt động và các giới hạn pháp lý.</p>
+        </div>
+
+        <!-- Sơ đồ mối liên hệ các tỷ lệ -->
+        <div class="card" style="margin-bottom: 1.5rem; padding: 1.75rem; background: radial-gradient(circle at 10% 10%, rgba(99, 102, 241, 0.04) 0%, transparent 50%); overflow-x: auto;">
+          <h3 style="margin-bottom: 0.25rem; display: flex; align-items: center; gap: 0.5rem; color: var(--primary);">
+            <i data-lucide="git-branch" style="width: 20px; height: 20px;"></i>
+            Mô hình Mối liên hệ Chỉ số An toàn Vốn (Basel & NHNN)
+          </h3>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 2rem;">Sơ đồ tương tác thể hiện dòng chảy dữ liệu từ cấu phần Vốn tự có, Tài sản rủi ro (RWA) đến các Tỷ lệ giám sát.</p>
+
+          <!-- View Mode Toggle Buttons -->
+          <div style="display: flex; gap: 0.5rem; margin-bottom: 1.25rem;">
+            <button id="btn-flow-interactive" class="btn btn-sm" style="display: flex; align-items: center; gap: 0.35rem; padding: 0.4rem 0.85rem; font-size: 0.72rem; font-weight: 600; border-radius: 6px; background: var(--primary); color: white; border: 1px solid var(--primary);">
+              <i data-lucide="git-branch" style="width: 14px; height: 14px;"></i> Sơ đồ tương tác (SVG)
+            </button>
+            <button id="btn-flow-graphic" class="btn btn-sm" style="display: flex; align-items: center; gap: 0.35rem; padding: 0.4rem 0.85rem; font-size: 0.72rem; font-weight: 600; border-radius: 6px; background: rgba(255,255,255,0.05); color: var(--text-muted); border: 1px solid var(--border-color);">
+              <i data-lucide="image" style="width: 14px; height: 14px;"></i> Bản đồ họa cao cấp (Hi-Fi)
+            </button>
+          </div>
+
+          <!-- 1. Interactive view (Headers + Flow) -->
+          <div id="flow-interactive-view" style="display: block;">
+            <!-- Headers for Columns -->
+            <div style="min-width: 850px; display: flex; justify-content: space-between; margin-bottom: 0.75rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">
+              <div style="width: 28%; text-align: center;">
+                <span style="font-size: 0.72rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">1. Cấu phần gốc (Base components)</span>
+              </div>
+              <div style="width: 32%; text-align: center;">
+                <span style="font-size: 0.72rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">2. Chỉ tiêu Hợp nhất (Aggregation)</span>
+              </div>
+              <div style="width: 35%; text-align: center;">
+                <span style="font-size: 0.72rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">3. Tỷ lệ Giám sát tối thiểu (Output Ratios)</span>
+              </div>
+            </div>
+
+            <!-- Height Container for flow diagram -->
+            <div style="min-width: 850px; display: flex; justify-content: space-between; position: relative; height: 410px;">
+              
+              <!-- SVG CONNECTOR NETWORK -->
+              <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <defs>
+                  <marker id="arrow-indigo" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+                    <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#6366f1" />
+                  </marker>
+                  <marker id="arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+                    <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#10b981" />
+                  </marker>
+                  <marker id="arrow-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+                    <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#f59e0b" />
+                  </marker>
+                  <marker id="arrow-muted" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="3" markerHeight="3" orient="auto-start-reverse">
+                    <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="rgba(255,255,255,0.25)" />
+                  </marker>
+                </defs>
+
+                <!-- 1. CET1 & AT1 to Tier 1 (Orthogonal in Gutter 1) -->
+                <path d="M 28 9.75 L 31 9.75 L 31 19.5 L 34 19.5" fill="none" stroke="rgba(99, 102, 241, 0.4)" stroke-width="0.3" />
+                <path d="M 28 29.27 L 31 29.27 L 31 19.5 L 34 19.5" fill="none" stroke="rgba(99, 102, 241, 0.4)" stroke-width="0.3" />
+                <path d="M 31 19.5 L 33.5 19.5" fill="none" stroke="#6366f1" stroke-width="0.35" marker-end="url(#arrow-indigo)" />
+
+                <!-- 2. Tier 1 to Total Capital (Vertical inside Middle Column) -->
+                <path d="M 50 28 L 50 39" fill="none" stroke="rgba(16, 185, 129, 0.4)" stroke-width="0.35" marker-end="url(#arrow-green)" />
+
+                <!-- 3. Tier 2 to Total Capital (Orthogonal in Gutter 1) -->
+                <path d="M 28 48.78 L 33.5 48.78" fill="none" stroke="rgba(16, 185, 129, 0.35)" stroke-width="0.3" marker-end="url(#arrow-green)" />
+
+                <!-- 4. RWA to Total RWA (Straight horizontal) -->
+                <path d="M 28 81.7 L 33.5 81.7" fill="none" stroke="rgba(245, 158, 11, 0.4)" stroke-width="0.35" marker-end="url(#arrow-amber)" />
+
+                <!-- 5. Outputs from Tier 1 (CET1 Ratio, Tier 1 Ratio, Leverage) - Enters Left Side -->
+                <!-- Leverage is now Card 3 (Y = 48.78%) -->
+                <path d="M 66 19.5 L 69 19.5" fill="none" stroke="rgba(99, 102, 241, 0.35)" stroke-width="0.3" />
+                <path d="M 69 19.5 L 69 9.75 L 72 9.75" fill="none" stroke="rgba(99, 102, 241, 0.35)" stroke-width="0.3" marker-end="url(#arrow-indigo)" />
+                <path d="M 69 19.5 L 69 29.27 L 72 29.27" fill="none" stroke="rgba(99, 102, 241, 0.35)" stroke-width="0.3" marker-end="url(#arrow-indigo)" />
+                <path d="M 69 19.5 L 69 48.78 L 72 48.78" fill="none" stroke="rgba(245, 158, 11, 0.35)" stroke-width="0.3" marker-end="url(#arrow-amber)" />
+
+                <!-- 6. Outputs from Total Capital (CAR Ratio) - Enters Left Side -->
+                <!-- CAR is now Card 4 (Y = 81.7%) -->
+                <path d="M 66 57.3 L 67.5 57.3 L 67.5 81.7 L 72 81.7" fill="none" stroke="rgba(16, 185, 129, 0.4)" stroke-width="0.3" marker-end="url(#arrow-green)" />
+
+                <!-- 7. Outputs from Total RWA to Denominator (Enters Right Side - Fully isolated loop) -->
+                <!-- Plugs into CET1 Ratio (9.75%), Tier 1 Ratio (29.27%), and CAR (81.7%) from the right -->
+                <path d="M 50 90.2 L 50 95 L 98 95 L 98 9.75" fill="none" stroke="rgba(255, 255, 255, 0.15)" stroke-width="0.25" stroke-dasharray="0.8,0.8" />
+                <path d="M 98 9.75 L 96 9.75" fill="none" stroke="rgba(255, 255, 255, 0.15)" stroke-width="0.2" stroke-dasharray="0.8,0.8" marker-end="url(#arrow-muted)" />
+                <path d="M 98 29.27 L 96 29.27" fill="none" stroke="rgba(255, 255, 255, 0.15)" stroke-width="0.2" stroke-dasharray="0.8,0.8" marker-end="url(#arrow-muted)" />
+                <path d="M 98 81.7 L 96 81.7" fill="none" stroke="rgba(255, 255, 255, 0.15)" stroke-width="0.2" stroke-dasharray="0.8,0.8" marker-end="url(#arrow-muted)" />
+              </svg>
+
+              <!-- CỘT 1: CẤU PHẦN GỐC -->
+              <div style="width: 28%; position: relative; height: 100%; z-index: 2;">
+                <!-- CET1 -->
+                <div style="position: absolute; top: 10px; left: 0; right: 0; height: 60px; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 8px; padding: 0.4rem; text-align: center; display: flex; flex-direction: column; justify-content: center;">
+                  <strong style="color: #6366f1; font-size: 0.8rem; display: block;">Vốn CET1</strong>
+                  <span style="font-size: 0.65rem; color: var(--text-muted);">Cổ phần phổ thông, LN giữ lại</span>
+                  <span style="font-size: 0.68rem; color: #6366f1; font-weight: 600; margin-top: 2px;">📍 TCB 2022 (Riêng lẻ): 95,420 Tỷ</span>
+                </div>
+                
+                <!-- AT1 -->
+                <div style="position: absolute; top: 90px; left: 0; right: 0; height: 60px; background: rgba(99, 102, 241, 0.02); border: 1px dashed var(--border-color); border-radius: 8px; padding: 0.4rem; text-align: center; display: flex; flex-direction: column; justify-content: center;">
+                  <strong style="color: var(--text-main); font-size: 0.8rem; display: block;">Vốn AT1</strong>
+                  <span style="font-size: 0.65rem; color: var(--text-muted);">Nợ thứ cấp không thời hạn</span>
+                  <span style="font-size: 0.68rem; color: var(--text-muted); font-weight: 600; margin-top: 2px;">📍 TCB 2022 (Riêng lẻ): 10,250 Tỷ</span>
+                </div>
+
+                <!-- Tier 2 -->
+                <div style="position: absolute; top: 170px; left: 0; right: 0; height: 60px; background: rgba(255, 255, 255, 0.02); border: 1px dashed var(--border-color); border-radius: 8px; padding: 0.4rem; text-align: center; display: flex; flex-direction: column; justify-content: center;">
+                  <strong style="color: var(--text-main); font-size: 0.8rem; display: block;">Vốn Cấp 2 (Tier 2)</strong>
+                  <span style="font-size: 0.65rem; color: var(--text-muted);">Nợ thứ cấp, dự phòng chung</span>
+                  <span style="font-size: 0.68rem; color: var(--text-muted); font-weight: 600; margin-top: 2px;">📍 TCB 2022 (Riêng lẻ): 9,035 Tỷ</span>
+                </div>
+
+                <!-- RWA Parts -->
+                <div style="position: absolute; top: 300px; left: 0; right: 0; height: 70px; background: rgba(245, 158, 11, 0.02); border: 1px solid var(--border-color); border-radius: 8px; padding: 0.4rem; text-align: center; display: flex; flex-direction: column; justify-content: center;">
+                  <strong style="color: #f59e0b; font-size: 0.8rem; display: block;">RWA Tín dụng, Thị trường & HĐ</strong>
+                  <span style="font-size: 0.62rem; color: var(--text-muted);">Tài sản nhân hệ số rủi ro tương ứng</span>
+                  <span style="font-size: 0.68rem; color: #f59e0b; font-weight: 600; margin-top: 2px;">📍 TCB 2022 (Riêng lẻ): 785,150 Tỷ</span>
+                </div>
+              </div>
+
+              <!-- CỘT 2: TỔNG HỢP / HỢP NHẤT -->
+              <div style="width: 32%; position: relative; height: 100%; border-left: 2px solid var(--border-color); border-right: 2px solid var(--border-color); z-index: 2; padding: 0 10px;">
+                <!-- Tier 1 Capital -->
+                <div style="position: absolute; top: 45px; left: 10px; right: 10px; height: 70px; background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.35); border-radius: 8px; padding: 0.4rem; text-align: center; display: flex; flex-direction: column; justify-content: center;">
+                  <strong style="color: #818cf8; font-size: 0.82rem; display: block;">Vốn Cấp 1 (Tier 1) = CET1 + AT1</strong>
+                  <span style="font-size: 0.65rem; color: var(--text-muted);">Vốn cốt lõi chống đỡ rủi ro khi hoạt động</span>
+                  <span style="font-size: 0.68rem; color: #818cf8; font-weight: 600; margin-top: 2px;">📍 TCB 2022 (Riêng lẻ): 105,670 Tỷ</span>
+                </div>
+
+                <!-- Total Capital -->
+                <div style="position: absolute; top: 165px; left: 10px; right: 10px; height: 70px; background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 8px; padding: 0.4rem; text-align: center; display: flex; flex-direction: column; justify-content: center;">
+                  <strong style="color: #10b981; font-size: 0.82rem; display: block;">Tổng Vốn tự có = Tier 1 + Tier 2</strong>
+                  <span style="font-size: 0.65rem; color: var(--text-muted);">Vốn khả dụng bảo vệ người gửi tiền</span>
+                  <span style="font-size: 0.68rem; color: #10b981; font-weight: 600; margin-top: 2px;">📍 TCB 2022 (Riêng lẻ): 114,705 Tỷ</span>
+                </div>
+
+                <!-- Total RWA -->
+                <div style="position: absolute; top: 300px; left: 10px; right: 10px; height: 70px; background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.35); border-radius: 8px; padding: 0.4rem; text-align: center; display: flex; flex-direction: column; justify-content: center;">
+                  <strong style="color: #f59e0b; font-size: 0.82rem; display: block;">Tổng tài sản rủi ro (RWA)</strong>
+                  <span style="font-size: 0.65rem; color: var(--text-muted);">Mẫu số chung đo lường độ nhạy rủi ro</span>
+                  <span style="font-size: 0.68rem; color: #f59e0b; font-weight: 600; margin-top: 2px;">📍 TCB 2022 (Riêng lẻ): 785,150 Tỷ</span>
+                </div>
+              </div>
+
+              <!-- CỘT 3: TỶ LỆ ĐẦU RA -->
+              <div style="width: 35%; position: relative; height: 100%; z-index: 2;">
+                <!-- CET1 Ratio -->
+                <div style="position: absolute; top: 10px; left: 10px; right: 10px; height: 60px; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); border-radius: 8px; padding: 0.3rem 0.85rem; display: flex; justify-content: space-between; align-items: center;">
+                  <div style="text-align: left;">
+                    <strong style="color: #6366f1; font-size: 0.8rem; display: block;">Tỷ lệ vốn CET1</strong>
+                    <span style="font-size: 0.65rem; color: var(--text-muted);">Vốn CET1 / Tổng RWA</span>
+                    <span style="font-size: 0.68rem; color: #6366f1; font-weight: 600; display: block; margin-top: 1px;">📍 TCB 2022 (Riêng lẻ): 12.18% (Đạt)</span>
+                  </div>
+                  <strong style="color: #6366f1; font-size: 0.95rem; font-family: monospace;">&ge; 4.5%</strong>
+                </div>
+
+                <!-- Tier 1 Ratio -->
+                <div style="position: absolute; top: 90px; left: 10px; right: 10px; height: 60px; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); border-radius: 8px; padding: 0.3rem 0.85rem; display: flex; justify-content: space-between; align-items: center;">
+                  <div style="text-align: left;">
+                    <strong style="color: #818cf8; font-size: 0.8rem; display: block;">Tỷ lệ Vốn cấp 1</strong>
+                    <span style="font-size: 0.65rem; color: var(--text-muted);">Vốn Tier 1 / Tổng RWA</span>
+                    <span style="font-size: 0.68rem; color: #818cf8; font-weight: 600; display: block; margin-top: 1px;">📍 TCB 2022 (Riêng lẻ): 13.46% (Đạt)</span>
+                  </div>
+                  <strong style="color: #818cf8; font-size: 0.95rem; font-family: monospace;">&ge; 6.0%</strong>
+                </div>
+
+                <!-- Leverage Ratio (Swapped to Card 3) -->
+                <div style="position: absolute; top: 170px; left: 10px; right: 10px; height: 60px; background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.35); border-radius: 8px; padding: 0.3rem 0.85rem; display: flex; justify-content: space-between; align-items: center; border-left: 4px solid #f59e0b;">
+                  <div style="text-align: left;">
+                    <strong style="color: #f59e0b; font-size: 0.8rem; display: block;">Tỷ lệ Đòn bẩy (Leverage)</strong>
+                    <span style="font-size: 0.65rem; color: var(--text-muted);">Vốn Tier 1 / Tổng tài sản</span>
+                    <span style="font-size: 0.68rem; color: #f59e0b; font-weight: 600; display: block; margin-top: 1px;">📍 TCB 2022 (Riêng lẻ): 9.20% (Đạt)</span>
+                  </div>
+                  <strong style="color: #f59e0b; font-size: 1.05rem; font-family: monospace;">&ge; 3.0%</strong>
+                </div>
+
+                <!-- CAR Ratio (Swapped to Card 4) -->
+                <div style="position: absolute; top: 300px; left: 10px; right: 10px; height: 70px; background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.35); border-radius: 8px; padding: 0.3rem 0.85rem; display: flex; justify-content: space-between; align-items: center; border-left: 4px solid #10b981;">
+                  <div style="text-align: left;">
+                    <strong style="color: #10b981; font-size: 0.82rem; display: block;">Tỷ lệ an toàn vốn (CAR)</strong>
+                    <span style="font-size: 0.65rem; color: var(--text-muted);">Tổng Vốn tự có / Tổng RWA</span>
+                    <span style="font-size: 0.68rem; color: #10b981; font-weight: 600; display: block; margin-top: 2px;">📍 TCB 2022 (Riêng lẻ): 14.61% (Đạt chuẩn)</span>
+                  </div>
+                  <strong style="color: #10b981; font-size: 1.05rem; font-family: monospace;">&ge; 8.0%</strong>
+                </div>
+              </div>
+
+            </div>
+          </div> <!-- Close flow-interactive-view -->
+
+          <!-- 2. Graphic View (High-fidelity image) -->
+          <div id="flow-graphic-view" style="display: none; width: 100%; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); background: #0b0f19; text-align: center; padding: 0.5rem; position: relative;">
+            <img src="docs/solvency_model_tcb.jpg" alt="Capital Solvency Flow Chart TCB" style="max-width: 100%; height: auto; border-radius: 8px; display: block; margin: 0 auto; box-shadow: 0 4px 20px rgba(0,0,0,0.4);" />
+          </div>
         </div>
 
         <div class="card" style="margin-bottom: 1.5rem;">

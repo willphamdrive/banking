@@ -126,12 +126,14 @@ class BaselAnalysis {
     this.indYear = "2025";
     this.indYScale = "auto"; // Mặc định tự động co giãn trục Y
     this.indYTick = 1; // Bước chia tick: 1% mặc định
+    this.indMetric = "car"; // Chỉ số phân tích đơn lẻ mặc định: car
     
     // Trạng thái So sánh Đối chiếu
     this.compBanks = ["TCB", "VCB", "BID", "MBB"];
     this.compYear = "2025";
     this.compYScale = "narrow"; // Mặc định cận cảnh (6% - 18%) để giống ảnh mẫu
     this.compYTick = 1; // Bước chia tick: 1% mặc định
+    this.compMetric = "car"; // Chỉ số so sánh đối chiếu mặc định: car
 
     // Quản lý các phiên bản Chart.js active để destroy khi redraw
     this.charts = {};
@@ -302,6 +304,8 @@ class BaselAnalysis {
       });
     }
 
+
+
     // Lắng nghe sự kiện đổi theme để vẽ lại biểu đồ
     const themeBtn = document.getElementById("theme-toggle");
     if (themeBtn) {
@@ -313,6 +317,31 @@ class BaselAnalysis {
         }, 100);
       });
     }
+  }
+
+  // Lấy giá trị của chỉ số cụ thể từ dữ liệu năm
+  getMetricValueForData(yearData, metric) {
+    if (!yearData) return null;
+    if (metric === "car") return yearData.car;
+    if (metric === "charter_rwa") return (yearData.charter / yearData.rwa) * 100;
+    if (metric === "charter_capital") return (yearData.charter / yearData.capital) * 100;
+    if (metric === "capital") return yearData.capital;
+    if (metric === "rwa") return yearData.rwa;
+    return null;
+  }
+
+  getMetricLabel(metric) {
+    if (metric === "car") return "Tỷ lệ CAR (%)";
+    if (metric === "charter_rwa") return "Vốn điều lệ / RWA (%)";
+    if (metric === "charter_capital") return "Vốn điều lệ / Vốn tự có (%)";
+    if (metric === "capital") return "Vốn tự có (Tỷ VND)";
+    if (metric === "rwa") return "Tổng RWA (Tỷ VND)";
+    return "";
+  }
+
+  getMetricUnit(metric) {
+    if (metric === "capital" || metric === "rwa") return " Tỷ VND";
+    return "%";
   }
 
   // Cấu hình phông chữ và màu sắc trục tọa độ Chart.js phù hợp chế độ giao diện sáng/tối
@@ -511,10 +540,24 @@ class BaselAnalysis {
 
   // Lấy cấu hình trục Y (Vertical Axis Scale) dựa trên chế độ lựa chọn, bước chia tick và dữ liệu thực tế
   getYScaleConfig(yScale, stepSize, dataValues) {
-    const step = parseFloat(stepSize) || 1;
+    const isCurrency = dataValues && dataValues.some(v => v > 100);
+    let step = parseFloat(stepSize) || 1;
 
-    // Callback format tick theo độ phân giải
+    if (isCurrency) {
+      // Tính toán step tự động cho các giá trị tiền tệ lớn để tránh tràn trục
+      const valid = dataValues.filter(v => v !== null && v !== undefined && !isNaN(v));
+      const maxVal = valid.length > 0 ? Math.max(...valid) : 100000;
+      if (maxVal > 500000) step = 100000;
+      else if (maxVal > 100000) step = 20000;
+      else if (maxVal > 50000) step = 10000;
+      else step = 5000;
+    }
+
+    // Callback format tick theo độ phân giải hoặc tiền tệ
     const tickCallback = (v) => {
+      if (isCurrency) {
+        return v.toLocaleString() + ' Tỷ';
+      }
       if (step < 0.1) {
         return v.toFixed(2) + '%';
       } else if (step < 1) {
@@ -530,7 +573,7 @@ class BaselAnalysis {
     // trên màn hình, zoom vào trung tâm dữ liệu thực. Bước chia nhỏ hơn →
     // viewport hẹp hơn → lines trải rộng hơn trong cùng chiều cao chart.
     const N_TICKS = 80; // số ticks hiển thị mục tiêu
-    if (step < 1 && dataValues && dataValues.length > 0 && yScale !== "zero") {
+    if (!isCurrency && step < 1 && dataValues && dataValues.length > 0 && yScale !== "zero") {
       // Loại trừ giá trị tham chiếu 8% khỏi tính midpoint để zoom không bị kéo xuống
       const bankValues = dataValues.filter(v => v !== null && v !== undefined && !isNaN(v) && v !== 8);
       const allValues  = dataValues.filter(v => v !== null && v !== undefined && !isNaN(v));
@@ -565,7 +608,7 @@ class BaselAnalysis {
         max: undefined,
         ticks: tickConfig
       };
-    } else if (yScale === "narrow") {
+    } else if (yScale === "narrow" && !isCurrency) {
       return {
         beginAtZero: false,
         min: 6,
@@ -593,8 +636,11 @@ class BaselAnalysis {
 
     // Hủy các chart cũ của trang đơn lẻ
     this.destroyChart("indCar");
+    this.destroyChart("indCharterRwa");
+    this.destroyChart("indCharterCapital");
     this.destroyChart("indScale");
     this.destroyChart("indCarTrend");
+    this.destroyChart("indOtherRatiosTrend");
     this.destroyChart("indGrowth");
 
     if (this.indYear !== "series") {
@@ -652,19 +698,35 @@ class BaselAnalysis {
         </div>
 
         <!-- Chart Grid -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
-          <!-- Chart.js Canvas for CAR comparison -->
-          <div class="card" style="padding: 1.5rem; display: flex; flex-direction: column; min-height: 250px;">
-            <h4 style="margin: 0 0 1rem 0; color: var(--text-muted); text-align: center;">Tỷ lệ CAR so với ngưỡng tối thiểu (8.00%)</h4>
-            <div style="flex-grow: 1; position: relative; height: 180px;">
+        <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 2rem;">
+          <!-- CAR Comparison -->
+          <div class="card" style="padding: 1.5rem; display: flex; flex-direction: column; min-height: 350px;">
+            <h4 style="margin: 0 0 0.75rem 0; color: var(--text-muted); text-align: center; font-size: 0.85rem;">Tỷ lệ an toàn vốn CAR (%)</h4>
+            <div style="flex-grow: 1; position: relative; height: 280px;">
               <canvas id="chart-ind-car"></canvas>
             </div>
           </div>
 
+          <!-- Charter Capital to RWA Ratio -->
+          <div class="card" style="padding: 1.5rem; display: flex; flex-direction: column; min-height: 350px;">
+            <h4 style="margin: 0 0 0.75rem 0; color: var(--text-muted); text-align: center; font-size: 0.85rem;">Tỷ lệ Vốn điều lệ / RWA (%)</h4>
+            <div style="flex-grow: 1; position: relative; height: 280px;">
+              <canvas id="chart-ind-charter-rwa"></canvas>
+            </div>
+          </div>
+
+          <!-- Charter Capital to Total Capital Ratio -->
+          <div class="card" style="padding: 1.5rem; display: flex; flex-direction: column; min-height: 350px;">
+            <h4 style="margin: 0 0 0.75rem 0; color: var(--text-muted); text-align: center; font-size: 0.85rem;">Vốn điều lệ / Vốn tự có (%)</h4>
+            <div style="flex-grow: 1; position: relative; height: 280px;">
+              <canvas id="chart-ind-charter-capital"></canvas>
+            </div>
+          </div>
+
           <!-- Chart.js Canvas for Capital vs RWA -->
-          <div class="card" style="padding: 1.5rem; display: flex; flex-direction: column; min-height: 250px;">
-            <h4 style="margin: 0 0 1rem 0; color: var(--text-muted); text-align: center;">Cơ cấu Vốn tự có đối ứng RWA</h4>
-            <div style="flex-grow: 1; position: relative; height: 180px;">
+          <div class="card" style="padding: 1.5rem; display: flex; flex-direction: column; min-height: 350px;">
+            <h4 style="margin: 0 0 0.75rem 0; color: var(--text-muted); text-align: center; font-size: 0.85rem;">Cơ cấu Vốn tự có đối ứng RWA</h4>
+            <div style="flex-grow: 1; position: relative; height: 280px;">
               <canvas id="chart-ind-scale"></canvas>
             </div>
           </div>
@@ -700,22 +762,27 @@ class BaselAnalysis {
     } else {
       // RENDERING TIME SERIES FOR INDIVIDUAL BANK
       const years = Object.keys(bankData).map(Number).sort();
-      const carDataPoints = years.map(yr => bankData[yr].car);
-      const capDataPoints = years.map(yr => bankData[yr].capital);
-      const rwaDataPoints = years.map(yr => bankData[yr].rwa);
 
       this.indRender.innerHTML = `
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+        <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 2rem;">
           <!-- CAR Time Series Line Chart -->
           <div class="card" style="padding: 1.5rem; min-height: ${this.getChartHeight(this.indYTick) + 60}px; display: flex; flex-direction: column;">
-            <h3 style="margin-bottom: 1rem;">Xu hướng CAR (%) ${years[0]} - ${years[years.length-1]}</h3>
+            <h3 style="margin-bottom: 1rem;">Xu hướng Tỷ lệ CAR (%) ${years[0]} - ${years[years.length-1]}</h3>
             <div style="flex-grow: 1; position: relative; height: ${this.getChartHeight(this.indYTick)}px;">
               <canvas id="chart-ind-car-trend"></canvas>
             </div>
           </div>
 
+          <!-- Other ratios Time Series Line Chart -->
+          <div class="card" style="padding: 1.5rem; min-height: ${this.getChartHeight(this.indYTick) + 60}px; display: flex; flex-direction: column;">
+            <h3 style="margin-bottom: 1rem;">Xu hướng các Tỷ lệ Vốn khác (%) ${years[0]} - ${years[years.length-1]}</h3>
+            <div style="flex-grow: 1; position: relative; height: ${this.getChartHeight(this.indYTick)}px;">
+              <canvas id="chart-ind-other-ratios-trend"></canvas>
+            </div>
+          </div>
+
           <!-- RWA vs Capital growth bar chart -->
-          <div class="card" style="padding: 1.5rem; min-height: 280px; display: flex; flex-direction: column;">
+          <div class="card" style="padding: 1.5rem; min-height: 280px; display: flex; flex-direction: column; grid-column: 1 / -1;">
             <h3 style="margin-bottom: 1rem;">Tăng trưởng Vốn tự có vs RWA (Tỷ VND)</h3>
             <div style="flex-grow: 1; position: relative;">
               <canvas id="chart-ind-growth"></canvas>
@@ -753,7 +820,7 @@ class BaselAnalysis {
       });
 
       // Khởi tạo các biểu đồ chuỗi thời gian
-      this.initIndSeriesCharts(years, carDataPoints, capDataPoints, rwaDataPoints, color, bankName);
+      this.initIndSeriesCharts(years, bankData, color, bankName);
     }
 
     lucide.createIcons();
@@ -766,18 +833,49 @@ class BaselAnalysis {
     const selectedBanks = this.compBanks;
 
     // Hủy các chart so sánh cũ
-    this.destroyChart("compYearly");
-    this.destroyChart("compTrend");
+    this.destroyChart("compYearlyCar");
+    this.destroyChart("compYearlyCharterRwa");
+    this.destroyChart("compYearlyCharterCapital");
+    this.destroyChart("compYearlySize");
+    this.destroyChart("compTrendCar");
+    this.destroyChart("compTrendCharterRwa");
+    this.destroyChart("compTrendCharterCapital");
+    this.destroyChart("compTrendCapital");
+    this.destroyChart("compTrendRwa");
 
     if (this.compYear !== "series") {
       const year = this.compYear;
       
       this.compRender.innerHTML = `
-        <!-- SVG Bar Chart Compare CAR -->
-        <div class="card" style="padding: 1.5rem; min-height: ${this.getChartHeight(this.compYTick) + 60}px; display: flex; flex-direction: column; margin-bottom: 1.5rem;">
-          <h3 style="margin-bottom: 1rem; text-align: center;">Hệ số an toàn vốn CAR các ngân hàng (${year})</h3>
-          <div style="flex-grow: 1; position: relative; height: ${this.getChartHeight(this.compYTick)}px;">
-            <canvas id="chart-comp-yearly"></canvas>
+        <!-- GRID BIỂU ĐỒ SO SÁNH HÀNG NĂM -->
+        <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 2rem;">
+          <!-- Chart CAR -->
+          <div class="card" style="padding: 1.5rem; min-height: ${this.getChartHeight(this.compYTick) + 60}px; display: flex; flex-direction: column;">
+            <h3 style="margin-bottom: 1rem; text-align: center; font-size: 0.95rem;">Tỷ lệ an toàn vốn CAR (%) các ngân hàng (${year})</h3>
+            <div style="flex-grow: 1; position: relative; height: ${this.getChartHeight(this.compYTick)}px;">
+              <canvas id="chart-comp-yearly-car"></canvas>
+            </div>
+          </div>
+          <!-- Chart Charter / RWA -->
+          <div class="card" style="padding: 1.5rem; min-height: ${this.getChartHeight(this.compYTick) + 60}px; display: flex; flex-direction: column;">
+            <h3 style="margin-bottom: 1rem; text-align: center; font-size: 0.95rem;">Tỷ lệ Vốn điều lệ / RWA (%) các ngân hàng (${year})</h3>
+            <div style="flex-grow: 1; position: relative; height: ${this.getChartHeight(this.compYTick)}px;">
+              <canvas id="chart-comp-yearly-charter-rwa"></canvas>
+            </div>
+          </div>
+          <!-- Chart Charter / Capital -->
+          <div class="card" style="padding: 1.5rem; min-height: ${this.getChartHeight(this.compYTick) + 60}px; display: flex; flex-direction: column;">
+            <h3 style="margin-bottom: 1rem; text-align: center; font-size: 0.95rem;">Tỷ lệ Vốn điều lệ / Vốn tự có (%) các ngân hàng (${year})</h3>
+            <div style="flex-grow: 1; position: relative; height: ${this.getChartHeight(this.compYTick)}px;">
+              <canvas id="chart-comp-yearly-charter-capital"></canvas>
+            </div>
+          </div>
+          <!-- Chart Size (Capital vs RWA) -->
+          <div class="card" style="padding: 1.5rem; min-height: 380px; display: flex; flex-direction: column; grid-column: 1 / -1;">
+            <h3 style="margin-bottom: 1rem; text-align: center; font-size: 0.95rem;">Quy mô Vốn tự có vs RWA (Tỷ VND) các ngân hàng (${year})</h3>
+            <div style="flex-grow: 1; position: relative; height: 300px;">
+              <canvas id="chart-comp-yearly-size"></canvas>
+            </div>
           </div>
         </div>
 
@@ -846,13 +944,41 @@ class BaselAnalysis {
       const years = [2019, 2020, 2021, 2022, 2023, 2024, 2025];
       
       this.compRender.innerHTML = `
+        <!-- GRID BIỂU ĐỒ SO SÁNH XU HƯỚNG CHUỖI THỜI GIAN -->
         <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 2rem;">
-          <!-- SVG Line Chart Compare Time Series CAR -->
-          <div class="card" style="padding: 1.5rem; min-height: ${this.getChartHeight(this.compYTick) + 100}px; display: flex; flex-direction: column;">
-            <h3 style="margin-bottom: 0.5rem;">Biểu đồ So sánh Xu hướng CAR (%) ${years[0]} - ${years[years.length-1]}</h3>
-            <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem;">Click chọn các hộp màu ở danh sách chú giải (legend) để ẩn/hiện hoặc so sánh song song các ngân hàng:</p>
+          <!-- CAR Trend -->
+          <div class="card" style="padding: 1.5rem; min-height: ${this.getChartHeight(this.compYTick) + 80}px; display: flex; flex-direction: column;">
+            <h3 style="margin-bottom: 0.5rem; font-size: 0.95rem;">Biểu đồ So sánh Xu hướng CAR (%)</h3>
             <div style="flex-grow: 1; position: relative; height: ${this.getChartHeight(this.compYTick)}px;">
-              <canvas id="chart-comp-trend"></canvas>
+              <canvas id="chart-comp-trend-car"></canvas>
+            </div>
+          </div>
+          <!-- Charter / RWA Trend -->
+          <div class="card" style="padding: 1.5rem; min-height: ${this.getChartHeight(this.compYTick) + 80}px; display: flex; flex-direction: column;">
+            <h3 style="margin-bottom: 0.5rem; font-size: 0.95rem;">Biểu đồ So sánh Xu hướng Vốn điều lệ / RWA (%)</h3>
+            <div style="flex-grow: 1; position: relative; height: ${this.getChartHeight(this.compYTick)}px;">
+              <canvas id="chart-comp-trend-charter-rwa"></canvas>
+            </div>
+          </div>
+          <!-- Charter / Capital Trend -->
+          <div class="card" style="padding: 1.5rem; min-height: ${this.getChartHeight(this.compYTick) + 80}px; display: flex; flex-direction: column;">
+            <h3 style="margin-bottom: 0.5rem; font-size: 0.95rem;">Biểu đồ So sánh Xu hướng Vốn điều lệ / Vốn tự có (%)</h3>
+            <div style="flex-grow: 1; position: relative; height: ${this.getChartHeight(this.compYTick)}px;">
+              <canvas id="chart-comp-trend-charter-capital"></canvas>
+            </div>
+          </div>
+          <!-- Capital Size Trend -->
+          <div class="card" style="padding: 1.5rem; min-height: 400px; display: flex; flex-direction: column;">
+            <h3 style="margin-bottom: 0.5rem; font-size: 0.95rem;">Biểu đồ So sánh Xu hướng Vốn tự có (Tỷ VND)</h3>
+            <div style="flex-grow: 1; position: relative; height: 320px;">
+              <canvas id="chart-comp-trend-capital"></canvas>
+            </div>
+          </div>
+          <!-- RWA Size Trend -->
+          <div class="card" style="padding: 1.5rem; min-height: 400px; display: flex; flex-direction: column; grid-column: 1 / -1;">
+            <h3 style="margin-bottom: 0.5rem; font-size: 0.95rem;">Biểu đồ So sánh Xu hướng Tổng tài sản có rủi ro RWA (Tỷ VND)</h3>
+            <div style="flex-grow: 1; position: relative; height: 320px;">
+              <canvas id="chart-comp-trend-rwa"></canvas>
             </div>
           </div>
         </div>
@@ -900,20 +1026,16 @@ class BaselAnalysis {
 
   // 1. Phân tích đơn lẻ theo năm: CAR và Vốn/RWA
   initIndYearlyCharts(yearData, color, bankName) {
-    if (!window.Chart) {
-      // Fallback sang vẽ SVG nếu không load được Chart.js
-      document.getElementById("chart-ind-car").parentElement.innerHTML = this.generateSvgSingleBar(yearData.car, color);
-      return;
-    }
+    if (!window.Chart) return;
 
-    // Chart CAR
+    // 1. Chart CAR (%)
     const carCtx = document.getElementById("chart-ind-car").getContext("2d");
     this.charts.indCar = new Chart(carCtx, {
       type: 'bar',
       data: {
         labels: [bankName, 'Quy định NHNN'],
         datasets: [{
-          label: 'Hệ số CAR (%)',
+          label: 'Tỷ lệ CAR (%)',
           data: [yearData.car, 8.0],
           backgroundColor: [color, '#ef4444'],
           borderColor: [color, '#ef4444'],
@@ -925,7 +1047,8 @@ class BaselAnalysis {
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
-          legend: { display: false }
+          legend: { display: false },
+          tooltip: { callbacks: { label: (c) => ` ${c.label}: ${c.raw.toFixed(2)}%` } }
         },
         scales: {
           y: this.getYScaleConfig(this.indYScale, this.indYTick, [yearData.car, 8.0])
@@ -933,7 +1056,65 @@ class BaselAnalysis {
       }
     });
 
-    // Chart scale Capital vs RWA
+    // 2. Chart Vốn điều lệ / RWA (%)
+    const charterRwaVal = (yearData.charter / yearData.rwa) * 100;
+    const crCtx = document.getElementById("chart-ind-charter-rwa").getContext("2d");
+    this.charts.indCharterRwa = new Chart(crCtx, {
+      type: 'bar',
+      data: {
+        labels: [bankName],
+        datasets: [{
+          label: 'Vốn điều lệ / RWA (%)',
+          data: [charterRwaVal],
+          backgroundColor: [color],
+          borderColor: [color],
+          borderWidth: 1,
+          barThickness: 30
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { callbacks: { label: (c) => ` ${c.label}: ${c.raw.toFixed(2)}%` } }
+        },
+        scales: {
+          y: this.getYScaleConfig(this.indYScale, this.indYTick, [charterRwaVal])
+        }
+      }
+    });
+
+    // 3. Chart Vốn điều lệ / Vốn tự có (%)
+    const charterCapitalVal = (yearData.charter / yearData.capital) * 100;
+    const ccCtx = document.getElementById("chart-ind-charter-capital").getContext("2d");
+    this.charts.indCharterCapital = new Chart(ccCtx, {
+      type: 'bar',
+      data: {
+        labels: [bankName],
+        datasets: [{
+          label: 'Vốn điều lệ / Vốn tự có (%)',
+          data: [charterCapitalVal],
+          backgroundColor: [color],
+          borderColor: [color],
+          borderWidth: 1,
+          barThickness: 30
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { callbacks: { label: (c) => ` ${c.label}: ${c.raw.toFixed(2)}%` } }
+        },
+        scales: {
+          y: this.getYScaleConfig(this.indYScale, this.indYTick, [charterCapitalVal])
+        }
+      }
+    });
+
+    // 4. Chart scale Capital vs RWA
     const scaleCtx = document.getElementById("chart-ind-scale").getContext("2d");
     this.charts.indScale = new Chart(scaleCtx, {
       type: 'doughnut',
@@ -953,10 +1134,7 @@ class BaselAnalysis {
           legend: { position: 'bottom' },
           tooltip: {
             callbacks: {
-              label: (item) => {
-                const val = item.raw;
-                return ` ${item.label}: ${val.toLocaleString()} Tỷ VND`;
-              }
+              label: (item) => ` ${item.label}: ${item.raw.toLocaleString()} Tỷ VND`
             }
           }
         }
@@ -965,14 +1143,16 @@ class BaselAnalysis {
   }
 
   // 2. Phân tích đơn lẻ Time Series
-  initIndSeriesCharts(years, carData, capData, rwaData, color, bankName) {
-    if (!window.Chart) {
-      document.getElementById("chart-ind-car-trend").parentElement.innerHTML = this.generateSvgLineChart(years, [carData], [bankName], [color], "%");
-      document.getElementById("chart-ind-growth").parentElement.innerHTML = this.generateSvgDoubleBarChart(years, capData, rwaData, color);
-      return;
-    }
+  initIndSeriesCharts(years, bankData, color, bankName) {
+    const carData = years.map(yr => bankData[yr].car);
+    const charterRwaData = years.map(yr => (bankData[yr].charter / bankData[yr].rwa) * 100);
+    const charterCapitalData = years.map(yr => (bankData[yr].charter / bankData[yr].capital) * 100);
+    const capData = years.map(yr => bankData[yr] ? bankData[yr].capital : 0);
+    const rwaData = years.map(yr => bankData[yr] ? bankData[yr].rwa : 0);
 
-    // CAR Trend — thêm shortLabel để endLabelPlugin hiển thị tên NH tại điểm cuối
+    if (!window.Chart) return;
+
+    // 1. CAR Trend
     const trendCtx = document.getElementById("chart-ind-car-trend").getContext("2d");
     const endLabelPluginInd = this.getEndLabelPlugin();
     this.charts.indCarTrend = new Chart(trendCtx, {
@@ -1013,7 +1193,49 @@ class BaselAnalysis {
       plugins: [endLabelPluginInd]
     });
 
-    // Capital vs RWA Growth
+    // 2. Other ratios trend
+    const otherCtx = document.getElementById("chart-ind-other-ratios-trend").getContext("2d");
+    this.charts.indOtherRatiosTrend = new Chart(otherCtx, {
+      type: 'line',
+      data: {
+        labels: years,
+        datasets: [
+          {
+            label: 'Vốn điều lệ / RWA (%)',
+            shortLabel: 'C/RWA',
+            data: charterRwaData,
+            borderColor: '#f59e0b',
+            backgroundColor: 'rgba(245, 158, 11, 0.05)',
+            tension: 0.15,
+            borderWidth: 2.5,
+            pointRadius: 4,
+            fill: false
+          },
+          {
+            label: 'Vốn điều lệ / Vốn tự có (%)',
+            shortLabel: 'C/Cap',
+            data: charterCapitalData,
+            borderColor: '#10b981',
+            backgroundColor: 'rgba(16, 185, 129, 0.05)',
+            tension: 0.15,
+            borderWidth: 2.5,
+            pointRadius: 4,
+            fill: false
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        layout: { padding: { right: 90 } },
+        scales: {
+          y: this.getYScaleConfig(this.indYScale, this.indYTick, [...charterRwaData, ...charterCapitalData])
+        }
+      },
+      plugins: [endLabelPluginInd]
+    });
+
+    // 3. Capital vs RWA Growth
     const growthCtx = document.getElementById("chart-ind-growth").getContext("2d");
     this.charts.indGrowth = new Chart(growthCtx, {
       type: 'bar',
@@ -1049,38 +1271,117 @@ class BaselAnalysis {
 
   // 3. So sánh các ngân hàng theo năm cụ thể
   initCompYearlyCharts(banks, year) {
+    if (!window.Chart) return;
+
     const labels = banks.map(b => b);
-    const values = banks.map(b => BANK_CAR_DATABASE[b][year] ? BANK_CAR_DATABASE[b][year].car : null);
     const colors = banks.map(b => BANK_COLORS[b]);
 
-    if (!window.Chart) {
-      document.getElementById("chart-comp-yearly").parentElement.innerHTML = this.generateSvgMultiBarChart(labels, values, colors);
-      return;
-    }
+    // 1. CAR Comparison
+    const carValues = banks.map(b => BANK_CAR_DATABASE[b][year] ? BANK_CAR_DATABASE[b][year].car : null);
+    const carCtx = document.getElementById("chart-comp-yearly-car").getContext("2d");
+    this.charts.compYearlyCar = new Chart(carCtx, {
+      type: 'bar',
+      data: {
+        labels: labels.map(l => BANK_NAMES[l]),
+        datasets: [{
+          label: 'Tỷ lệ CAR (%)',
+          data: carValues,
+          backgroundColor: colors,
+          borderRadius: 4,
+          barThickness: 28
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+          y: this.getYScaleConfig(this.compYScale, this.compYTick, [...carValues.filter(v => v !== null), 8])
+        }
+      }
+    });
 
-    const ctx = document.getElementById("chart-comp-yearly").getContext("2d");
-    this.charts.compYearly = new Chart(ctx, {
+    // 2. Charter / RWA Comparison
+    const crValues = banks.map(b => BANK_CAR_DATABASE[b][year] ? (BANK_CAR_DATABASE[b][year].charter / BANK_CAR_DATABASE[b][year].rwa) * 100 : null);
+    const crCtx = document.getElementById("chart-comp-yearly-charter-rwa").getContext("2d");
+    this.charts.compYearlyCharterRwa = new Chart(crCtx, {
+      type: 'bar',
+      data: {
+        labels: labels.map(l => BANK_NAMES[l]),
+        datasets: [{
+          label: 'Vốn điều lệ / RWA (%)',
+          data: crValues,
+          backgroundColor: colors,
+          borderRadius: 4,
+          barThickness: 28
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+          y: this.getYScaleConfig(this.compYScale, this.compYTick, crValues.filter(v => v !== null))
+        }
+      }
+    });
+
+    // 3. Charter / Capital Comparison
+    const ccValues = banks.map(b => BANK_CAR_DATABASE[b][year] ? (BANK_CAR_DATABASE[b][year].charter / BANK_CAR_DATABASE[b][year].capital) * 100 : null);
+    const ccCtx = document.getElementById("chart-comp-yearly-charter-capital").getContext("2d");
+    this.charts.compYearlyCharterCapital = new Chart(ccCtx, {
+      type: 'bar',
+      data: {
+        labels: labels.map(l => BANK_NAMES[l]),
+        datasets: [{
+          label: 'Vốn điều lệ / Vốn tự có (%)',
+          data: ccValues,
+          backgroundColor: colors,
+          borderRadius: 4,
+          barThickness: 28
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+          y: this.getYScaleConfig(this.compYScale, this.compYTick, ccValues.filter(v => v !== null))
+        }
+      }
+    });
+
+    // 4. Size (Capital vs RWA) Comparison
+    const capValues = banks.map(b => BANK_CAR_DATABASE[b][year] ? BANK_CAR_DATABASE[b][year].capital : null);
+    const rwaValues = banks.map(b => BANK_CAR_DATABASE[b][year] ? BANK_CAR_DATABASE[b][year].rwa : null);
+    const sizeCtx = document.getElementById("chart-comp-yearly-size").getContext("2d");
+    this.charts.compYearlySize = new Chart(sizeCtx, {
       type: 'bar',
       data: {
         labels: labels.map(l => BANK_NAMES[l]),
         datasets: [
           {
-            label: 'Tỷ lệ CAR (%)',
-            data: values,
-            backgroundColor: colors,
-            borderRadius: 4,
-            barThickness: 28
+            label: 'Vốn tự có (Tỷ VND)',
+            data: capValues,
+            backgroundColor: 'rgba(99, 102, 241, 0.85)',
+            borderRadius: 4
+          },
+          {
+            label: 'Tổng RWA (Tỷ VND)',
+            data: rwaValues,
+            backgroundColor: 'rgba(255, 255, 255, 0.12)',
+            borderRadius: 4
           }
         ]
       },
       options: {
         responsive: true,
         maintainAspectRatio: false,
-        plugins: {
-          legend: { display: false }
-        },
         scales: {
-          y: this.getYScaleConfig(this.compYScale, this.compYTick, [...values.filter(v => v !== null), 8])
+          y: {
+            beginAtZero: true,
+            ticks: { callback: (v) => (v / 1000).toLocaleString() + 'k Tỷ' }
+          }
         }
       }
     });
@@ -1088,47 +1389,35 @@ class BaselAnalysis {
 
   // 4. So sánh xu hướng CAR (Time Series) của nhiều ngân hàng
   initCompSeriesCharts(banks, years) {
-    if (!window.Chart) {
-      const lineData = banks.map(b => years.map(yr => BANK_CAR_DATABASE[b][yr] ? BANK_CAR_DATABASE[b][yr].car : null));
-      const lineNames = banks.map(b => BANK_NAMES[b]);
-      const lineColors = banks.map(b => BANK_COLORS[b]);
-      document.getElementById("chart-comp-trend").parentElement.innerHTML = this.generateSvgLineChart(years, lineData, lineNames, lineColors, "%");
-      return;
-    }
+    if (!window.Chart) return;
 
-    const datasets = banks.map(b => {
-      return {
-        label: BANK_NAMES[b],
-        shortLabel: b, // mã viết tắt hiển thị tại điểm cuối
-        data: years.map(yr => BANK_CAR_DATABASE[b][yr] ? BANK_CAR_DATABASE[b][yr].car : null),
-        borderColor: BANK_COLORS[b],
-        backgroundColor: BANK_COLORS[b] + '15',
-        tension: 0.15,
-        borderWidth: 2.5,
-        pointRadius: 4,
-        fill: false
-      };
-    });
+    const endLabelPluginComp = this.getEndLabelPlugin();
 
-    // Thêm mốc đỏ tối thiểu (không có shortLabel → không hiển thị label đuối)
-    datasets.push({
+    // 1. CAR Trend
+    const carDatasets = banks.map(b => ({
+      label: BANK_NAMES[b],
+      shortLabel: b,
+      data: years.map(yr => BANK_CAR_DATABASE[b][yr] ? BANK_CAR_DATABASE[b][yr].car : null),
+      borderColor: BANK_COLORS[b],
+      backgroundColor: BANK_COLORS[b] + '10',
+      tension: 0.15,
+      borderWidth: 2,
+      pointRadius: 3,
+      fill: false
+    }));
+    carDatasets.push({
       label: 'Mức tối thiểu NHNN (8%)',
       data: Array(years.length).fill(8),
       borderColor: '#ef4444',
-      borderWidth: 1.5,
-      borderDash: [5, 5],
+      borderWidth: 1.2,
+      borderDash: [4, 4],
       pointRadius: 0,
       fill: false
     });
-
-    const ctx = document.getElementById("chart-comp-trend").getContext("2d");
-    const endLabelPluginComp = this.getEndLabelPlugin();
-    this.charts.compTrend = new Chart(ctx, {
+    const trendCarCtx = document.getElementById("chart-comp-trend-car").getContext("2d");
+    this.charts.compTrendCar = new Chart(trendCarCtx, {
       type: 'line',
-      data: {
-        labels: years,
-        datasets: datasets
-      },
+      data: { labels: years, datasets: carDatasets },
       options: {
         responsive: true,
         maintainAspectRatio: false,
@@ -1139,12 +1428,127 @@ class BaselAnalysis {
             8
           ])
         },
-        plugins: {
-          legend: {
-            position: 'bottom',
-            labels: { boxWidth: 12, padding: 15 }
-          }
-        }
+        plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, padding: 10 } } }
+      },
+      plugins: [endLabelPluginComp]
+    });
+
+    // 2. Charter / RWA Trend
+    const crDatasets = banks.map(b => ({
+      label: BANK_NAMES[b],
+      shortLabel: b,
+      data: years.map(yr => BANK_CAR_DATABASE[b][yr] ? (BANK_CAR_DATABASE[b][yr].charter / BANK_CAR_DATABASE[b][yr].rwa) * 100 : null),
+      borderColor: BANK_COLORS[b],
+      backgroundColor: BANK_COLORS[b] + '10',
+      tension: 0.15,
+      borderWidth: 2,
+      pointRadius: 3,
+      fill: false
+    }));
+    const trendCrCtx = document.getElementById("chart-comp-trend-charter-rwa").getContext("2d");
+    this.charts.compTrendCharterRwa = new Chart(trendCrCtx, {
+      type: 'line',
+      data: { labels: years, datasets: crDatasets },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        layout: { padding: { right: 60 } },
+        scales: {
+          y: this.getYScaleConfig(this.compYScale, this.compYTick, [
+            ...banks.flatMap(b => years.map(yr => BANK_CAR_DATABASE[b][yr] ? (BANK_CAR_DATABASE[b][yr].charter / BANK_CAR_DATABASE[b][yr].rwa) * 100 : null)).filter(v => v !== null)
+          ])
+        },
+        plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, padding: 10 } } }
+      },
+      plugins: [endLabelPluginComp]
+    });
+
+    // 3. Charter / Capital Trend
+    const ccDatasets = banks.map(b => ({
+      label: BANK_NAMES[b],
+      shortLabel: b,
+      data: years.map(yr => BANK_CAR_DATABASE[b][yr] ? (BANK_CAR_DATABASE[b][yr].charter / BANK_CAR_DATABASE[b][yr].capital) * 100 : null),
+      borderColor: BANK_COLORS[b],
+      backgroundColor: BANK_COLORS[b] + '10',
+      tension: 0.15,
+      borderWidth: 2,
+      pointRadius: 3,
+      fill: false
+    }));
+    const trendCcCtx = document.getElementById("chart-comp-trend-charter-capital").getContext("2d");
+    this.charts.compTrendCharterCapital = new Chart(trendCcCtx, {
+      type: 'line',
+      data: { labels: years, datasets: ccDatasets },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        layout: { padding: { right: 60 } },
+        scales: {
+          y: this.getYScaleConfig(this.compYScale, this.compYTick, [
+            ...banks.flatMap(b => years.map(yr => BANK_CAR_DATABASE[b][yr] ? (BANK_CAR_DATABASE[b][yr].charter / BANK_CAR_DATABASE[b][yr].capital) * 100 : null)).filter(v => v !== null)
+          ])
+        },
+        plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, padding: 10 } } }
+      },
+      plugins: [endLabelPluginComp]
+    });
+
+    // 4. Capital Size Trend
+    const capDatasets = banks.map(b => ({
+      label: BANK_NAMES[b],
+      shortLabel: b,
+      data: years.map(yr => BANK_CAR_DATABASE[b][yr] ? BANK_CAR_DATABASE[b][yr].capital : null),
+      borderColor: BANK_COLORS[b],
+      backgroundColor: BANK_COLORS[b] + '10',
+      tension: 0.15,
+      borderWidth: 2,
+      pointRadius: 3,
+      fill: false
+    }));
+    const trendCapCtx = document.getElementById("chart-comp-trend-capital").getContext("2d");
+    this.charts.compTrendCapital = new Chart(trendCapCtx, {
+      type: 'line',
+      data: { labels: years, datasets: capDatasets },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        layout: { padding: { right: 60 } },
+        scales: {
+          y: this.getYScaleConfig(this.compYScale, this.compYTick, [
+            ...banks.flatMap(b => years.map(yr => BANK_CAR_DATABASE[b][yr] ? BANK_CAR_DATABASE[b][yr].capital : null)).filter(v => v !== null)
+          ])
+        },
+        plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, padding: 10 } } }
+      },
+      plugins: [endLabelPluginComp]
+    });
+
+    // 5. RWA Size Trend
+    const rwaDatasets = banks.map(b => ({
+      label: BANK_NAMES[b],
+      shortLabel: b,
+      data: years.map(yr => BANK_CAR_DATABASE[b][yr] ? BANK_CAR_DATABASE[b][yr].rwa : null),
+      borderColor: BANK_COLORS[b],
+      backgroundColor: BANK_COLORS[b] + '10',
+      tension: 0.15,
+      borderWidth: 2,
+      pointRadius: 3,
+      fill: false
+    }));
+    const trendRwaCtx = document.getElementById("chart-comp-trend-rwa").getContext("2d");
+    this.charts.compTrendRwa = new Chart(trendRwaCtx, {
+      type: 'line',
+      data: { labels: years, datasets: rwaDatasets },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        layout: { padding: { right: 60 } },
+        scales: {
+          y: this.getYScaleConfig(this.compYScale, this.compYTick, [
+            ...banks.flatMap(b => years.map(yr => BANK_CAR_DATABASE[b][yr] ? BANK_CAR_DATABASE[b][yr].rwa : null)).filter(v => v !== null)
+          ])
+        },
+        plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, padding: 10 } } }
       },
       plugins: [endLabelPluginComp]
     });

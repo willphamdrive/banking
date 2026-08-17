@@ -47,6 +47,12 @@ class BaselCalculator {
     this.btnSafe = document.getElementById("scenario-safe");
     this.btnBuffer = document.getElementById("scenario-buffer-warning");
     this.btnUnsafe = document.getElementById("scenario-unsafe");
+
+    // Toggle views trong calculator results
+    this.btnCalcGrid = document.getElementById("btn-calc-grid");
+    this.btnCalcFlow = document.getElementById("btn-calc-flow");
+    this.calcGridView = document.getElementById("calc-grid-view");
+    this.calcFlowView = document.getElementById("calc-flow-view");
   }
 
   bindEvents() {
@@ -70,6 +76,34 @@ class BaselCalculator {
     }
     if (this.btnUnsafe) {
       this.btnUnsafe.addEventListener("click", () => this.applyScenario("unsafe"));
+    }
+
+    if (this.btnCalcGrid && this.btnCalcFlow && this.calcGridView && this.calcFlowView) {
+      this.btnCalcGrid.addEventListener("click", () => {
+        this.btnCalcGrid.style.background = "var(--primary)";
+        this.btnCalcGrid.style.color = "white";
+        this.btnCalcGrid.style.borderColor = "var(--primary)";
+        
+        this.btnCalcFlow.style.background = "rgba(255,255,255,0.05)";
+        this.btnCalcFlow.style.color = "var(--text-muted)";
+        this.btnCalcFlow.style.borderColor = "var(--border-color)";
+        
+        this.calcGridView.style.display = "block";
+        this.calcFlowView.style.display = "none";
+      });
+      
+      this.btnCalcFlow.addEventListener("click", () => {
+        this.btnCalcFlow.style.background = "var(--primary)";
+        this.btnCalcFlow.style.color = "white";
+        this.btnCalcFlow.style.borderColor = "var(--primary)";
+        
+        this.btnCalcGrid.style.background = "rgba(255,255,255,0.05)";
+        this.btnCalcGrid.style.color = "var(--text-muted)";
+        this.btnCalcGrid.style.borderColor = "var(--border-color)";
+        
+        this.calcGridView.style.display = "none";
+        this.calcFlowView.style.display = "block";
+      });
     }
   }
 
@@ -171,6 +205,76 @@ class BaselCalculator {
 
     // 7. Cập nhật biểu đồ phân bổ RWA
     this.updateChart(creditRwa, marketRwa, opRwa);
+
+    // 8. Cập nhật phần hiển thị công thức động
+    this.updateFormulaDisplay(cet1, at1, tier1, tier2, totalCapital, totalRwa, totalAssets, cet1Ratio, tier1Ratio, carRatio, leverageRatio, creditRwa);
+  }
+
+  // Cập nhật real-time tất cả phần tử trong section công thức & mối liên hệ
+  updateFormulaDisplay(cet1, at1, tier1, tier2, totalCapital, totalRwa, totalAssets, cet1Ratio, tier1Ratio, carRatio, leverageRatio, creditRwa) {
+    const fmt = (n) => n.toLocaleString() + ' tỷ';
+    const pct = (n) => n.toFixed(2) + '%';
+    const setEl = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
+
+    // ① Capital Stack
+    setEl('f-cet1',          fmt(cet1));
+    setEl('f-at1',           fmt(at1));
+    setEl('f-tier1',         fmt(tier1));
+    setEl('f-tier2',         fmt(tier2));
+    setEl('f-total-capital', fmt(totalCapital));
+
+    // ② Công thức phân số — CAR
+    setEl('f-car-val', pct(carRatio));
+    setEl('f-car-num', fmt(totalCapital));
+    setEl('f-car-den', fmt(totalRwa));
+
+    // Tier 1 ratio
+    setEl('f-t1-val', pct(tier1Ratio));
+    setEl('f-t1-num', fmt(tier1));
+    setEl('f-t1-den', fmt(totalRwa));
+
+    // CET1 ratio
+    setEl('f-cet1-val', pct(cet1Ratio));
+    setEl('f-cet1-num', fmt(cet1));
+    setEl('f-cet1-den', fmt(totalRwa));
+
+    // Leverage ratio
+    setEl('f-lev-val', pct(leverageRatio));
+    setEl('f-lev-num', fmt(tier1));
+    setEl('f-lev-den', fmt(totalAssets));
+
+    // ③ Sơ đồ luồng (Flow view) - Cập nhật số liệu thực tế người dùng nhập
+    setEl('calcf-cet1',           fmt(cet1));
+    setEl('calcf-at1',            fmt(at1));
+    setEl('calcf-tier2',          fmt(tier2));
+    setEl('calcf-rwa-credit',     fmt(creditRwa));
+    setEl('calcf-tier1-cap',      fmt(tier1));
+    setEl('calcf-total-cap',      fmt(totalCapital));
+    setEl('calcf-total-rwa',      fmt(totalRwa));
+    setEl('calcf-cet1-ratio',     pct(cet1Ratio));
+    setEl('calcf-tier1-ratio',    pct(tier1Ratio));
+    setEl('calcf-leverage-ratio', pct(leverageRatio));
+    setEl('calcf-car-ratio',      pct(carRatio));
+
+    // Đổi màu CAR theo ngưỡng đạt/không đạt
+    const carEl = document.getElementById('f-car-val');
+    if (carEl) carEl.style.color = carRatio >= 8 ? 'var(--success)' : 'var(--danger)';
+    const t1El = document.getElementById('f-t1-val');
+    if (t1El) t1El.style.color = tier1Ratio >= 6 ? '#818cf8' : 'var(--danger)';
+
+    // Đổi màu các tỷ lệ trên Sơ đồ luồng
+    const cfCet1 = document.getElementById('calcf-cet1-ratio');
+    if (cfCet1) cfCet1.style.color = cet1Ratio >= 4.5 ? '#6366f1' : 'var(--danger)';
+    const cfT1 = document.getElementById('calcf-tier1-ratio');
+    if (cfT1) cfT1.style.color = tier1Ratio >= 6 ? '#818cf8' : 'var(--danger)';
+    const cfLev = document.getElementById('calcf-leverage-ratio');
+    if (cfLev) cfLev.style.color = leverageRatio >= 3 ? '#f59e0b' : 'var(--danger)';
+    const cfCar = document.getElementById('calcf-car-ratio');
+    if (cfCar) cfCar.style.color = carRatio >= 8 ? '#10b981' : 'var(--danger)';
+    const cet1El = document.getElementById('f-cet1-val');
+    if (cet1El) cet1El.style.color = cet1Ratio >= 4.5 ? '#6366f1' : 'var(--danger)';
+    const levEl = document.getElementById('f-lev-val');
+    if (levEl) levEl.style.color = leverageRatio >= 3 ? '#f59e0b' : 'var(--danger)';
   }
 
   assessCompliance(cet1Ratio, tier1Ratio, carRatio, leverageRatio, totalRwa, creditRwa, marketRwa, opRwa) {

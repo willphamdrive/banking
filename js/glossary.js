@@ -121,6 +121,88 @@ class GlossaryManager {
     this.render();
   }
 
+  // Định dạng công thức chữ thành giao diện trực quan (Phân số, timeline...)
+  formatFormula(formula) {
+    if (!formula) return "";
+
+    // 1. Dạng tiến trình/timeline (chứa ->)
+    if (formula.includes("->")) {
+      const steps = formula.split("->").map(s => s.trim());
+      return `
+        <div style="display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap; margin-top: 0.25rem;">
+          ${steps.map((s, idx) => `
+            <span style="font-size: 0.76rem; font-weight: 700; background: rgba(99, 102, 241, 0.08); color: #818cf8; padding: 2px 6px; border-radius: 4px; border: 1px solid rgba(99,102,241,0.15);">${s}</span>
+            ${idx < steps.length - 1 ? '<span style="color: var(--text-muted); font-size: 0.75rem; font-weight: 900;">&rarr;</span>' : ''}
+          `).join("")}
+        </div>
+      `;
+    }
+
+    // Định dạng các toán tử toán học
+    const formatSymbols = (text) => {
+      return text
+        .replace(/ \+ /g, ' <span style="color: #10b981; font-weight: bold; margin: 0 2px;">+</span> ')
+        .replace(/ - /g, ' <span style="color: #ef4444; font-weight: bold; margin: 0 2px;">-</span> ')
+        .replace(/ x /g, ' <span style="color: #3b82f6; font-weight: bold; margin: 0 2px;">&times;</span> ')
+        .replace(/ \* /g, ' <span style="color: #3b82f6; font-weight: bold; margin: 0 2px;">&times;</span> ')
+        .replace(/ \>= /g, ' <span style="color: #10b981; font-weight: bold; margin: 0 4px;">&ge;</span> ')
+        .replace(/ \<= /g, ' <span style="color: #ef4444; font-weight: bold; margin: 0 4px;">&le;</span> ');
+    };
+
+    // 2. Dạng phân số: LHS = [Numerator / Denominator] Multiplier
+    if (formula.includes("=") && formula.includes("[") && formula.includes("]") && formula.includes("/")) {
+      const eqParts = formula.split("=");
+      const lhs = eqParts[0].trim();
+      const rhs = eqParts[1].trim();
+
+      const bracketStart = rhs.indexOf("[");
+      const bracketEnd = rhs.indexOf("]");
+      if (bracketStart !== -1 && bracketEnd !== -1) {
+        const pre = rhs.substring(0, bracketStart).trim();
+        const post = rhs.substring(bracketEnd + 1).trim();
+        const inside = rhs.substring(bracketStart + 1, bracketEnd).trim();
+        const slashIdx = inside.indexOf("/");
+
+        if (slashIdx !== -1) {
+          const num = inside.substring(0, slashIdx).trim();
+          const den = inside.substring(slashIdx + 1).trim();
+
+          return `
+            <div style="display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap; font-size: 0.8rem; color: var(--text-main); margin-top: 0.25rem;">
+              <span style="font-weight: 700; color: var(--primary);">${lhs}</span>
+              <span style="color: var(--text-muted); font-weight: bold;">=</span>
+              ${pre ? `<span>${formatSymbols(pre)}</span>` : ""}
+              <div style="display: inline-flex; flex-direction: column; align-items: center; border-left: 1px solid var(--border-color); border-right: 1px solid var(--border-color); padding: 0 6px; background: rgba(255,255,255,0.01); border-radius: 4px;">
+                <span style="border-bottom: 1px solid var(--border-color); padding-bottom: 1px; text-align: center; font-weight: 600; color: var(--text-main); font-size: 0.78rem;">${formatSymbols(num)}</span>
+                <span style="padding-top: 1px; text-align: center; color: var(--text-muted); font-size: 0.74rem;">${formatSymbols(den)}</span>
+              </div>
+              ${post ? `<span>${formatSymbols(post)}</span>` : ""}
+            </div>
+          `;
+        }
+      }
+    }
+
+    // 3. Phương trình thường (chứa dấu =)
+    if (formula.includes("=")) {
+      const parts = formula.split("=");
+      return `
+        <div style="font-size: 0.8rem; color: var(--text-main); margin-top: 0.25rem; line-height: 1.4;">
+          <span style="font-weight: 700; color: var(--primary);">${parts[0].trim()}</span>
+          <span style="color: var(--text-muted); font-weight: bold; margin: 0 3px;">=</span>
+          <span>${formatSymbols(parts[1].trim())}</span>
+        </div>
+      `;
+    }
+
+    // Fallback thông thường
+    return `
+      <div style="font-size: 0.8rem; color: var(--text-main); margin-top: 0.25rem; font-weight: 500;">
+        ${formatSymbols(formula)}
+      </div>
+    `;
+  }
+
   initElements() {
     this.container = document.getElementById("glossary-list-container");
     this.searchInput = document.getElementById("glossary-search-input");
@@ -200,9 +282,9 @@ class GlossaryManager {
         </div>
         <div>
           <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 0.75rem 0; opacity: 0.3;">
-          <div style="background: rgba(255,255,255,0.02); border: 1px dashed var(--border-color); border-radius: 6px; padding: 0.5rem 0.75rem;">
-            <span style="font-size: 0.72rem; color: var(--text-muted); display: block; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px;">Công thức / Cơ chế:</span>
-            <code style="font-family: monospace; font-size: 0.85rem; color: var(--success); font-weight: 600; word-break: break-all;">${item.formula}</code>
+          <div style="background: rgba(99, 102, 241, 0.02); border: 1px solid var(--border-color); border-radius: 8px; padding: 0.75rem 0.85rem; min-height: 52px; display: flex; flex-direction: column; justify-content: center;">
+            <span style="font-size: 0.65rem; color: var(--text-muted); display: block; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; font-weight: 700;">Công thức / Cơ chế:</span>
+            ${this.formatFormula(item.formula)}
           </div>
         </div>
       </div>
@@ -228,5 +310,45 @@ class GlossaryManager {
 document.addEventListener("DOMContentLoaded", () => {
   if (document.getElementById("glossary-section")) {
     window.glossaryManager = new GlossaryManager();
+    
+    // Logic chuyển đổi chế độ xem Sơ đồ mối liên hệ chỉ số an toàn vốn
+    const btnInteractive = document.getElementById("btn-flow-interactive");
+    const btnGraphic = document.getElementById("btn-flow-graphic");
+    const viewInteractive = document.getElementById("flow-interactive-view");
+    const viewGraphic = document.getElementById("flow-graphic-view");
+    
+    if (btnInteractive && btnGraphic && viewInteractive && viewGraphic) {
+      btnInteractive.addEventListener("click", () => {
+        // Active Interactive Button
+        btnInteractive.style.background = "var(--primary)";
+        btnInteractive.style.color = "white";
+        btnInteractive.style.borderColor = "var(--primary)";
+        
+        // Inactive Graphic Button
+        btnGraphic.style.background = "rgba(255,255,255,0.05)";
+        btnGraphic.style.color = "var(--text-muted)";
+        btnGraphic.style.borderColor = "var(--border-color)";
+        
+        // Show/Hide Views
+        viewInteractive.style.display = "block";
+        viewGraphic.style.display = "none";
+      });
+      
+      btnGraphic.addEventListener("click", () => {
+        // Active Graphic Button
+        btnGraphic.style.background = "var(--primary)";
+        btnGraphic.style.color = "white";
+        btnGraphic.style.borderColor = "var(--primary)";
+        
+        // Inactive Interactive Button
+        btnInteractive.style.background = "rgba(255,255,255,0.05)";
+        btnInteractive.style.color = "var(--text-muted)";
+        btnInteractive.style.borderColor = "var(--border-color)";
+        
+        // Show/Hide Views
+        viewInteractive.style.display = "none";
+        viewGraphic.style.display = "block";
+      });
+    }
   }
 });

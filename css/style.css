@@ -1135,3 +1135,524 @@ header p {
     right: auto !important;
   }
 }
+
+/* VIETNAMESE LAWS STYLING */
+.law-card {
+  transition: all 0.3s ease;
+}
+.law-card:hover {
+  transform: translateY(-2px);
+  background: var(--card-hover);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+}
+.law-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.law-code-badge {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  font-family: 'Outfit', sans-serif;
+}
+.badge-law {
+  background: var(--primary-glow);
+  color: var(--primary);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+}
+.badge-circular {
+  background: var(--warning-bg);
+  color: var(--warning);
+  border: 1px solid var(--warning-border);
+}
+.badge-decree {
+  background: rgba(59, 130, 246, 0.15);
+  color: #3b82f6;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+.law-effect-date {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+.law-card-title {
+  font-size: 1.3rem;
+  color: var(--text-main);
+  margin-bottom: 0.75rem;
+}
+.law-card-summary {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+.law-card-highlights {
+  background: rgba(255, 255, 255, 0.015);
+  border-left: 3px solid var(--primary);
+  padding: 0.75rem 1rem;
+  border-radius: 0 8px 8px 0;
+  margin-top: 1rem;
+}
+[data-theme="light"] .law-card-highlights {
+  background: rgba(0, 0, 0, 0.01);
+}
+.law-card-highlights h4 {
+  font-size: 0.92rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-main);
+}
+.law-card-highlights ul {
+  padding-left: 1.2rem;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+.law-card-highlights ul li {
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+
+/* Category Filter Buttons in Laws Tab */
+.law-cat-btn {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+.law-cat-btn:hover {
+  background: var(--card-hover);
+  color: var(--text-main);
+  border-color: var(--primary);
+}
+.law-cat-btn.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  box-shadow: 0 4px 12px var(--primary-glow);
+}
+
+/* Source Document Link Button */
+.source-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  color: var(--primary);
+  padding: 0.45rem 1rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 1.25rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  width: fit-content;
+}
+[data-theme="light"] .source-link-btn {
+  background: rgba(0, 0, 0, 0.03);
+}
+.source-link-btn:hover {
+  background: var(--primary);
+  color: white !important;
+  border-color: var(--primary);
+  box-shadow: 0 4px 10px var(--primary-glow);
+}
+.source-link-btn i {
+  flex-shrink: 0;
+}
+
+/* === PHÂN HỆ PHÂN TÍCH CAR TCB vs VCB === */
+.analysis-toggle-container .tab-btn {
+  transition: all 0.25s ease;
+}
+.analysis-toggle-container .tab-btn.active {
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
+}
+.analysis-accordion-item {
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  transition: all 0.25s ease;
+}
+.analysis-accordion-item:hover {
+  border-color: var(--primary) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+.analysis-stat-row hr {
+  opacity: 0.3;
+}
+
+/* Sub-tabs & Controllers cho Phân tích CAR Redesign */
+.sub-tab-btn {
+  padding: 0.65rem 1.25rem;
+  border: none;
+  background: none;
+  color: var(--text-muted);
+  font-weight: 600;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.sub-tab-btn.active {
+  color: var(--text-main);
+  border-bottom-color: var(--primary);
+}
+.sub-tab-btn:hover {
+  color: var(--text-main);
+}
+.sub-tab-panel.hidden {
+  display: none !important;
+}
+
+.year-btn {
+  padding: 0.45rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--card-bg);
+  color: var(--text-muted);
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.year-btn.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
+}
+.year-btn:hover {
+  color: var(--text-main);
+  border-color: var(--primary);
+}
+
+/* Styled Checkboxes cho Multi-bank compare */
+#compare-banks-checkboxes label {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+#compare-banks-checkboxes label:hover {
+  border-color: var(--primary);
+  background: rgba(255, 255, 255, 0.04);
+}
+#compare-banks-checkboxes input[type="checkbox"]:checked + label {
+  border-color: var(--primary);
+  background: rgba(99, 102, 241, 0.05);
+}
+
+/* === TOGGLE SIDEBAR STYLING === */
+.app-container {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.sidebar {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.main-content {
+  transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1), padding-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Collapsed state rules */
+.app-container.sidebar-collapsed .sidebar {
+  transform: translateX(-280px);
+}
+.app-container.sidebar-collapsed .main-content {
+  margin-left: 0;
+  padding-left: 5rem; /* Space for expand button */
+}
+
+.sidebar-toggle-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0.35rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+.sidebar-toggle-btn:hover {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.main-sidebar-toggle-btn {
+  position: fixed;
+  left: 1.5rem;
+  top: 1.5rem;
+  z-index: 101; /* Must be above sidebar index if needed, or sidebar is hidden */
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+}
+.main-sidebar-toggle-btn:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  transform: scale(1.05);
+}
+.main-sidebar-toggle-btn.hidden {
+  display: none !important;
+}
+
+/* === DOCUMENT FINDER DRAWER STYLING === */
+.floating-doc-tab {
+  position: fixed;
+  right: 0;
+  top: 30%;
+  z-index: 1002;
+  background: #1e293b;
+  color: white;
+  border: 1px solid var(--border-color);
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  padding: 1rem 0.45rem;
+  cursor: pointer;
+  box-shadow: -4px 0 15px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 44px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(32px);
+  opacity: 0.65;
+}
+.floating-doc-tab span {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #f8fafc;
+}
+.floating-doc-tab:hover {
+  background: var(--primary);
+  transform: translateX(0);
+  opacity: 1;
+}
+.floating-doc-tab i {
+  color: #f8fafc;
+}
+
+.doc-finder-drawer {
+  position: fixed;
+  right: -400px;
+  top: 0;
+  bottom: 0;
+  width: 380px;
+  background: var(--card-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-left: 1px solid var(--border-color);
+  z-index: 1003;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -6px 0 25px rgba(0, 0, 0, 0.3);
+  transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.doc-finder-drawer.open {
+  right: 0;
+}
+
+.doc-drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.75rem;
+}
+
+.doc-drawer-close-btn {
+  font-size: 1.6rem;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 0.25rem;
+  transition: color 0.2s;
+}
+.doc-drawer-close-btn:hover {
+  color: var(--text-main);
+}
+
+.doc-pill-btn {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.doc-pill-btn.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
+}
+.doc-pill-btn:hover {
+  border-color: var(--primary);
+  color: var(--text-main);
+}
+
+/* Styled Folder Tree Nodes */
+.doc-folder-node {
+  margin-bottom: 0.65rem;
+}
+
+.doc-folder-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.45rem 0.6rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.doc-folder-header:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: var(--primary);
+}
+
+.doc-folder-content {
+  padding-left: 1rem;
+  margin-top: 0.35rem;
+  border-left: 1px dashed rgba(255, 255, 255, 0.06);
+}
+.doc-folder-content.collapsed {
+  display: none !important;
+}
+
+.doc-file-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.45rem 0.5rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  margin-bottom: 0.25rem;
+  cursor: pointer;
+}
+.doc-file-item:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.doc-action-btn {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+.doc-action-btn.pin-btn {
+  color: var(--text-muted);
+}
+.doc-action-btn.pin-btn.pinned {
+  color: #eab308 !important; /* Gold yellow */
+}
+.doc-action-btn.open-btn {
+  color: var(--primary);
+}
+.doc-action-btn.open-btn:hover {
+  color: var(--success);
+}
+.doc-action-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* === PDF VIEW MODAL STYLING === */
+.pdf-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  transition: opacity 0.25s ease;
+}
+.pdf-modal-content {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  width: 90vw;
+  height: 90vh;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  animation: pdfModalFadeIn 0.3s ease;
+}
+@keyframes pdfModalFadeIn {
+  from { transform: scale(0.96); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.pdf-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+.pdf-modal-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--text-main);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 70%;
+}
+.pdf-modal-body {
+  flex-grow: 1;
+  background: #27272a;
+  border-radius: 0 0 12px 12px;
+  overflow: hidden;
+}

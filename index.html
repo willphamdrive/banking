@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Basel Academics - Học tập BASEL I, II, III & IV</title>
-  <meta name="description" content="Ứng dụng học tập tương tác về các hiệp ước Basel I, II, III trong quản trị rủi ro ngân hàng và tính tỷ lệ an toàn vốn CAR.">
+  <title>Basel & BankRegs - Hệ thống Pháp chế & Quản trị Rủi ro Ngân hàng</title>
+  <meta name="description" content="Hệ thống học tập, tra cứu và phân tích tỷ lệ an toàn vốn CAR, hiệp ước Basel và các văn bản pháp luật ngân hàng Việt Nam.">
   <link rel="stylesheet" href="css/style.css">
   
   <!-- Chart.js CDN -->
@@ -18,49 +18,48 @@
     
     <!-- SIDEBAR NAV -->
     <aside class="sidebar">
-      <div class="logo-container">
-        <div class="logo-icon">B</div>
-        <div class="logo-text">
-          <h2>Basel Academics</h2>
-          <span>Quản trị Rủi ro</span>
+      <div class="logo-container" style="position: relative;">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <div class="logo-icon">B</div>
+          <div class="logo-text">
+            <h2>Basel & BankRegs</h2>
+            <span>Pháp chế & Rủi ro</span>
+          </div>
         </div>
+        <button id="sidebar-collapse-btn" class="sidebar-toggle-btn" title="Thu gọn Menu" style="position: absolute; right: -8px; top: 50%; transform: translateY(-50%);">
+          <i data-lucide="chevron-left" style="width: 18px; height: 18px;"></i>
+        </button>
       </div>
       
       <nav class="nav-menu">
         <li>
           <a href="#dashboard" class="nav-item active">
             <i data-lucide="layout-dashboard"></i>
-            <span>Dashboard</span>
+            <span>Tổng quan (Dashboard)</span>
           </a>
         </li>
         <li>
-          <a href="#timeline" class="nav-item">
-            <i data-lucide="milestone"></i>
-            <span>Dòng thời gian</span>
+          <a href="#basel" class="nav-item">
+            <i data-lucide="landmark"></i>
+            <span>Hiệp ước Basel</span>
           </a>
         </li>
         <li>
-          <a href="#pillars" class="nav-item">
-            <i data-lucide="columns-3"></i>
-            <span>Các Trụ cột chính</span>
+          <a href="#laws" class="nav-item">
+            <i data-lucide="scale"></i>
+            <span>Pháp luật Ngân hàng VN</span>
           </a>
         </li>
         <li>
-          <a href="#comparison" class="nav-item">
-            <i data-lucide="git-compare"></i>
-            <span>Bảng so sánh</span>
+          <a href="#bank-analysis" class="nav-item">
+            <i data-lucide="trending-up"></i>
+            <span>Phân tích CAR Ngân hàng</span>
           </a>
         </li>
         <li>
-          <a href="#calculator" class="nav-item">
-            <i data-lucide="calculator"></i>
-            <span>Bộ tính CAR</span>
-          </a>
-        </li>
-        <li>
-          <a href="#quiz" class="nav-item">
-            <i data-lucide="help-circle"></i>
-            <span>Trắc nghiệm ôn tập</span>
+          <a href="#glossary" class="nav-item">
+            <i data-lucide="book-open"></i>
+            <span>Từ điển Thuật ngữ</span>
           </a>
         </li>
       </nav>
@@ -75,6 +74,11 @@
 
     <!-- MAIN CONTENT -->
     <main class="main-content">
+      
+      <!-- Toggle button when sidebar collapsed -->
+      <button id="sidebar-expand-btn" class="main-sidebar-toggle-btn hidden" title="Mở rộng Menu">
+        <i data-lucide="menu"></i>
+      </button>
       
       <!-- 1. DASHBOARD SECTION -->
       <section id="dashboard-section" class="content-section">
@@ -145,22 +149,73 @@
             <p>Đánh giá lại mức độ hiểu biết của bạn thông qua bộ câu hỏi trắc nghiệm chất lượng kèm giải thích học thuật trực quan chi tiết.</p>
             <span class="arrow-link">Làm bài test <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i></span>
           </div>
+
+          <!-- Nav Card 6 -->
+          <div class="menu-card card" data-target="laws">
+            <div class="menu-card-header">
+              <div class="menu-icon-box"><i data-lucide="scale"></i></div>
+              <h3>Luật Ngân hàng VN</h3>
+            </div>
+            <p>Học tập hệ thống pháp luật ngân hàng Việt Nam: Luật Các TCTD 2024, Luật NHNN và các Thông tư an toàn hoạt động của NHNN.</p>
+            <span class="arrow-link">Xem văn bản <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i></span>
+          </div>
+
+          <!-- Nav Card 7 -->
+          <div class="menu-card card" data-target="bank-analysis">
+            <div class="menu-card-header">
+              <div class="menu-icon-box"><i data-lucide="trending-up"></i></div>
+              <h3>Phân tích CAR 2025</h3>
+            </div>
+            <p>Phân tích chi tiết hệ số an toàn vốn thực tế của Techcombank vs Vietcombank năm 2025 và sự liên hệ với các quy định pháp luật Việt Nam & Basel.</p>
+            <span class="arrow-link">Xem phân tích <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i></span>
+          </div>
+
+          <!-- Nav Card 8 -->
+          <div class="menu-card card" data-target="glossary">
+            <div class="menu-card-header">
+              <div class="menu-icon-box"><i data-lucide="book-open"></i></div>
+              <h3>Phụ lục thuật ngữ</h3>
+            </div>
+            <p>Giải nghĩa tường tận tất cả các định nghĩa, thuật ngữ chuyên ngành tài chính ngân hàng và cơ chế đo lường rủi ro theo chuẩn Basel & Việt Nam.</p>
+            <span class="arrow-link">Xem thuật ngữ <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i></span>
+          </div>
         </div>
       </section>
 
-      <!-- 2. TIMELINE SECTION -->
-      <section id="timeline-section" class="content-section hidden">
-        <div class="section-header">
-          <h2>Dòng thời gian tiến hóa của Hiệp ước Basel</h2>
-          <p>Tìm hiểu các mốc lịch sử, bối cảnh khủng hoảng kinh tế và sự cải tiến không ngừng của các quy chế an toàn vốn ngân hàng toàn cầu.</p>
+      <!-- BASEL ACADEMY CONSOLIDATED SECTION -->
+      <section id="basel-section" class="content-section hidden">
+        <!-- Sub-tabs navigation for Basel Section -->
+        <div class="sub-tabs-container" style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; flex-wrap: wrap;">
+          <button class="sub-tab-btn active" data-baseltab="timeline">
+            <i data-lucide="milestone"></i> Dòng thời gian
+          </button>
+          <button class="sub-tab-btn" data-baseltab="pillars">
+            <i data-lucide="columns-3"></i> Trụ cột chính
+          </button>
+          <button class="sub-tab-btn" data-baseltab="comparison">
+            <i data-lucide="git-compare"></i> Bảng so sánh
+          </button>
+          <button class="sub-tab-btn" data-baseltab="calculator">
+            <i data-lucide="calculator"></i> Bộ tính CAR
+          </button>
+          <button class="sub-tab-btn" data-baseltab="quiz">
+            <i data-lucide="help-circle"></i> Trắc nghiệm
+          </button>
         </div>
+
+        <!-- 2. TIMELINE SECTION (Nested) -->
+        <div id="timeline-section" class="basel-tab-panel">
+          <div class="section-header">
+            <h2>Dòng thời gian tiến hóa của Hiệp ước Basel</h2>
+            <p>Tìm hiểu các mốc lịch sử, bối cảnh khủng hoảng kinh tế và sự cải tiến không ngừng của các quy chế an toàn vốn ngân hàng toàn cầu.</p>
+          </div>
         <div id="timeline-container">
           <!-- Rendered dynamically by js/app.js -->
         </div>
-      </section>
+      </div>
 
-      <!-- 3. PILLARS SECTION -->
-      <section id="pillars-section" class="content-section hidden">
+      <!-- 3. PILLARS SECTION (Nested) -->
+      <div id="pillars-section" class="basel-tab-panel hidden">
         <div class="section-header">
           <h2>Cấu trúc 3 Trụ cột chính (The Three Pillars)</h2>
           <p>Basel II và Basel III định hình cấu trúc quản trị rủi ro toàn diện xung quanh ba trụ cột cốt lõi.</p>
@@ -203,11 +258,10 @@
               <li><strong>Khuyến khích lành mạnh</strong>: Giúp thị trường định giá đúng cổ phiếu ngân hàng, ngân hàng rủi ro cao sẽ phải chịu chi phí huy động vốn đắt hơn.</li>
             </ul>
           </div>
-        </div>
-      </section>
+      </div>
 
-      <!-- 4. COMPARISON SECTION -->
-      <section id="comparison-section" class="content-section hidden">
+      <!-- 4. COMPARISON SECTION (Nested) -->
+      <div id="comparison-section" class="basel-tab-panel hidden">
         <div class="section-header">
           <h2>So sánh Basel I, II, III & IV</h2>
           <p>Xem sự thay đổi mang tính hệ thống qua các thời kỳ phát triển về các chỉ tiêu an toàn và quản lý thanh khoản.</p>
@@ -215,10 +269,10 @@
         <div id="comparison-table-container" class="comparison-table-card card">
           <!-- Rendered dynamically by js/app.js -->
         </div>
-      </section>
+      </div>
 
-      <!-- 5. CALCULATOR SECTION -->
-      <section id="calculator-section" class="content-section hidden">
+      <!-- 5. CALCULATOR SECTION (Nested) -->
+      <div id="calculator-section" class="basel-tab-panel hidden">
         <div class="section-header">
           <h2>Mô phỏng tỷ lệ an toàn vốn CAR (Basel I, II, III)</h2>
           <p>Nhập số liệu tài chính giả định của một ngân hàng (đơn vị: Tỷ đồng) để tính tỷ lệ an toàn vốn, tỷ lệ đòn bẩy và đánh giá tuân thủ quy chuẩn.</p>
@@ -400,10 +454,10 @@
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      <!-- 6. QUIZ SECTION -->
-      <section id="quiz-section" class="content-section hidden">
+      <!-- 6. QUIZ SECTION (Nested) -->
+      <div id="quiz-section" class="basel-tab-panel hidden">
         <div class="section-header">
           <h2>Trắc nghiệm kiến thức về Basel I, II, III & IV</h2>
           <p>Tự kiểm tra khả năng ghi nhớ và áp dụng kiến thức thông qua bộ câu hỏi trắc nghiệm tương tác lý thú.</p>
@@ -457,15 +511,345 @@
             Làm lại bài thi
           </button>
         </div>
+      </div>
+      </section>
+
+      <!-- 7. LAWS SECTION -->
+      <section id="laws-section" class="content-section hidden">
+        <div class="section-header">
+          <h2>Hệ thống Pháp luật Ngân hàng Việt Nam</h2>
+          <p>Tra cứu văn bản pháp luật, giới hạn an toàn hoạt động và ôn luyện trắc nghiệm pháp chế ngân hàng.</p>
+        </div>
+
+        <!-- Thống kê Tỷ lệ Giới hạn An toàn thực tế ở VN -->
+        <div class="card" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(99, 102, 241, 0.02) 100%); border-color: rgba(16, 185, 129, 0.2);">
+          <h3 style="color: var(--success); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+            <i data-lucide="shield-check"></i> Các Tỷ lệ An toàn & Giới hạn Cốt lõi (Ngân hàng TM Việt Nam)
+          </h3>
+          <div class="ratios-grid">
+            <div class="ratio-box" style="border-color: rgba(16, 185, 129, 0.15)">
+              <span class="ratio-label">Tỷ lệ LDR tối đa</span>
+              <span class="ratio-value" style="color: var(--success)">85%</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted); display: block; margin-top: 4px;">Thông tư 22/2019/TT-NHNN</span>
+            </div>
+            <div class="ratio-box" style="border-color: rgba(16, 185, 129, 0.15)">
+              <span class="ratio-label">Nguồn ngắn hạn cho vay trung-dài hạn</span>
+              <span class="ratio-value" style="color: var(--success)">Tối đa 30%</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted); display: block; margin-top: 4px;">Thông tư 22/2019/TT-NHNN</span>
+            </div>
+            <div class="ratio-box" style="border-color: rgba(16, 185, 129, 0.15)">
+              <span class="ratio-label">Giới hạn cấp tín dụng/Khách hàng</span>
+              <span class="ratio-value" style="color: var(--success)">Tối đa 10% vốn tự có</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted); display: block; margin-top: 4px;">Luật Các TCTD 2024 (Giảm từ 15%)</span>
+            </div>
+            <div class="ratio-box" style="border-color: rgba(16, 185, 129, 0.15)">
+              <span class="ratio-label">Dự phòng chung nợ nhóm 1 - 4</span>
+              <span class="ratio-value" style="color: var(--success)">0.75%</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted); display: block; margin-top: 4px;">Thông tư 11/2021/TT-NHNN</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tìm kiếm & Lọc văn bản -->
+        <div class="card">
+          <div class="laws-filter-bar" style="display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; align-items: center;">
+            <div class="search-input-wrapper" style="position: relative; flex-grow: 1; min-width: 250px;">
+              <i data-lucide="search" style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--text-muted); width: 18px; height: 18px;"></i>
+              <input type="text" id="laws-search-input" placeholder="Tìm kiếm văn bản, số hiệu, từ khóa..." style="width: 100%; padding: 0.65rem 1rem 0.65rem 2.5rem; background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-main); outline: none;">
+            </div>
+            <div class="laws-categories" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <button class="law-cat-btn active" data-category="all" style="background: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-muted); padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; font-weight: 500; font-size: 0.9rem;">Tất cả</button>
+              <button class="law-cat-btn" data-category="core" style="background: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-muted); padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; font-weight: 500; font-size: 0.9rem;">Luật cốt lõi</button>
+              <button class="law-cat-btn" data-category="safety" style="background: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-muted); padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; font-weight: 500; font-size: 0.9rem;">An toàn hoạt động</button>
+              <button class="law-cat-btn" data-category="provision" style="background: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-muted); padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; font-weight: 500; font-size: 0.9rem;">Phân loại nợ & Dự phòng</button>
+            </div>
+          </div>
+
+          <!-- Container hiển thị danh sách văn bản pháp luật -->
+          <div id="laws-list-container" style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;">
+            <!-- Populate dynamically by js/laws.js -->
+          </div>
+        </div>
+
+        <!-- Trắc nghiệm Pháp chế Ngân hàng Việt Nam -->
+        <div id="law-quiz-wrapper" class="card" style="border-color: rgba(99, 102, 241, 0.25); background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, transparent 100%);">
+          <div class="section-header" style="margin-bottom: 1.5rem;">
+            <h3 style="color: var(--primary); display: flex; align-items: center; gap: 0.5rem; font-size: 1.4rem;">
+              <i data-lucide="help-circle"></i> Trắc nghiệm Pháp lý & Tình huống Việt Nam
+            </h3>
+            <p style="font-size: 0.9rem; margin-top: 0.25rem;">Thực hành làm các bài tập tình huống thực tế áp dụng quy chuẩn pháp luật ngân hàng tại Việt Nam.</p>
+          </div>
+
+          <!-- Màn hình bắt đầu law quiz -->
+          <div id="law-quiz-start" style="text-align: center; padding: 2rem 1rem;">
+            <div style="font-size: 4rem; margin-bottom: 1rem;">⚖️</div>
+            <h4 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Luyện đề thi Pháp chế Ngân hàng</h4>
+            <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 500px; margin: 0 auto 1.5rem auto;">Bộ trắc nghiệm gồm các tình huống xác định nhóm nợ quá hạn, tính trích lập dự phòng cụ thể, và kiểm tra tính hợp pháp của việc cấp tín dụng.</p>
+            <button id="btn-start-law-quiz" class="quiz-btn">Bắt đầu thi thử</button>
+          </div>
+
+          <!-- Màn hình câu hỏi đang làm -->
+          <div id="law-quiz-active" class="hidden">
+            <div class="quiz-progress-container" style="margin-bottom: 1.5rem;">
+              <div class="quiz-progress-bar">
+                <div id="law-quiz-progress-fill" class="quiz-progress-fill" style="width: 0%;"></div>
+              </div>
+              <span id="law-quiz-progress-text">Hoàn thành 0%</span>
+            </div>
+            <div class="quiz-question-box">
+              <h3 id="law-question-text" style="font-size: 1.25rem; margin-bottom: 1.5rem;">Nội dung câu hỏi tình huống...</h3>
+              <div id="law-options-container" class="quiz-options">
+                <!-- Dynamically populated by js/laws.js -->
+              </div>
+            </div>
+            <div id="law-explanation-container" class="explanation-box hidden">
+              <h4 style="color: var(--primary);">Giải thích pháp lý (Luật/Thông tư liên quan):</h4>
+              <p id="law-explanation-text">Nội dung trích dẫn luật giải thích...</p>
+            </div>
+            <div class="quiz-action-bar">
+              <button id="btn-next-law-question" class="quiz-btn hidden">Câu tiếp theo</button>
+            </div>
+          </div>
+
+          <!-- Màn hình kết quả -->
+          <div id="law-quiz-results" style="text-align: center; padding: 2rem 1rem;" class="hidden">
+            <h4 style="font-size: 1.5rem;">Kết quả bài trắc nghiệm Pháp chế</h4>
+            <div class="results-score" id="law-score-text" style="font-size: 3.5rem; font-weight: 800; color: var(--primary); margin: 0.5rem 0;">0 / 0</div>
+            <div class="results-percent" id="law-score-percent" style="color: var(--success); font-size: 1.3rem; font-weight: 600; margin-bottom: 1rem;">0%</div>
+            <p id="law-score-message" style="color: var(--text-muted); margin-bottom: 1.5rem; max-width: 500px; margin-left: auto; margin-right: auto; line-height: 1.6;">Thông báo...</p>
+            <button id="btn-restart-law-quiz" class="quiz-btn">Làm lại bài thi</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. BANK ANALYSIS SECTION -->
+      <section id="bank-analysis-section" class="content-section hidden">
+        <div class="section-header">
+          <h2>Phân tích & So sánh CAR Ngân hàng</h2>
+          <p>Hệ thống phân tích chỉ số an toàn vốn (CAR) của 10 ngân hàng thương mại Việt Nam. Hỗ trợ tra cứu chi tiết từng ngân hàng hoặc so sánh chuỗi thời gian.</p>
+        </div>
+
+        <!-- Sub-tabs navigation -->
+        <div class="sub-tabs-container" style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; flex-wrap: wrap;">
+          <button class="sub-tab-btn active" data-subtab="individual">
+            <i data-lucide="building-2"></i> Phân tích Đơn lẻ
+          </button>
+          <button class="sub-tab-btn" data-subtab="compare">
+            <i data-lucide="git-compare"></i> So sánh Đối chiếu
+          </button>
+        </div>
+
+        <!-- PAGE 1: INDIVIDUAL BANK ANALYSIS -->
+        <div id="individual-tab-content" class="sub-tab-panel">
+          <!-- Control box -->
+          <div class="card" style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <label for="analysis-bank-select" style="font-weight: 600; color: var(--text-main); font-size: 0.95rem;">Ngân hàng:</label>
+                <select id="analysis-bank-select" style="padding: 0.5rem 1.5rem 0.5rem 0.75rem; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-main); font-weight: 600; outline: none; cursor: pointer;">
+                  <option value="TCB">Techcombank (TCB)</option>
+                  <option value="VCB">Vietcombank (VCB)</option>
+                  <option value="BID">BIDV (BID)</option>
+                  <option value="CTG">VietinBank (CTG)</option>
+                  <option value="MBB">MBBank (MBB)</option>
+                  <option value="VPB">VPBank (VPB)</option>
+                  <option value="ACB">ACB (ACB)</option>
+                  <option value="STB">Sacombank (STB)</option>
+                  <option value="TPB">TPBank (TPB)</option>
+                  <option value="HDB">HDBank (HDB)</option>
+                </select>
+              </div>
+              <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;" id="analysis-year-selectors">
+                <button class="year-btn" data-year="2019">2019</button>
+                <button class="year-btn" data-year="2020">2020</button>
+                <button class="year-btn" data-year="2021">2021</button>
+                <button class="year-btn" data-year="2022">2022</button>
+                <button class="year-btn" data-year="2023">2023</button>
+                <button class="year-btn" data-year="2024">2024</button>
+                <button class="year-btn active" data-year="2025">2025</button>
+                <button class="year-btn" data-year="series"><i data-lucide="trending-up"></i> Time Series</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Target Render Container for Individual Analysis -->
+          <div id="individual-analysis-render">
+            <!-- Rendered dynamically by js/analysis.js -->
+          </div>
+        </div>
+
+        <!-- PAGE 2: MULTI-BANK COMPARISON -->
+        <div id="compare-tab-content" class="sub-tab-panel hidden">
+          <!-- Control box -->
+          <div class="card" style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+              <h4 style="margin: 0; font-size: 0.95rem; color: var(--text-muted);">Bước 1: Chọn các ngân hàng cần so sánh (tối thiểu 2)</h4>
+              <label style="display: flex; align-items: center; gap: 0.35rem; cursor: pointer; font-weight: 600; font-size: 0.85rem; color: var(--primary);">
+                <input type="checkbox" id="compare-select-all" style="accent-color: var(--primary);"> Chọn tất cả
+              </label>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 0.75rem; margin-bottom: 1.25rem;" id="compare-banks-checkboxes">
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="TCB" checked style="accent-color: var(--primary);"> Techcombank (TCB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="VCB" checked style="accent-color: var(--primary);"> Vietcombank (VCB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="BID" checked style="accent-color: var(--primary);"> BIDV (BID)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="CTG" style="accent-color: var(--primary);"> VietinBank (CTG)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="MBB" checked style="accent-color: var(--primary);"> MBBank (MBB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="VPB" style="accent-color: var(--primary);"> VPBank (VPB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="ACB" style="accent-color: var(--primary);"> ACB (ACB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="STB" style="accent-color: var(--primary);"> Sacombank (STB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="TPB" style="accent-color: var(--primary);"> TPBank (TPB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="HDB" style="accent-color: var(--primary);"> HDBank (HDB)
+              </label>
+            </div>
+            
+            <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 1rem 0;">
+            
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+              <span style="font-weight: 600; color: var(--text-main); font-size: 0.95rem;">Bước 2: Chọn thời kỳ phân tích:</span>
+              <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;" id="compare-year-selectors">
+                <button class="year-btn" data-year="2019">2019</button>
+                <button class="year-btn" data-year="2020">2020</button>
+                <button class="year-btn" data-year="2021">2021</button>
+                <button class="year-btn" data-year="2022">2022</button>
+                <button class="year-btn" data-year="2023">2023</button>
+                <button class="year-btn" data-year="2024">2024</button>
+                <button class="year-btn active" data-year="2025">2025</button>
+                <button class="year-btn" data-year="series"><i data-lucide="trending-up"></i> Time Series</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Target Render Container for Multi-bank Comparison -->
+          <div id="compare-analysis-render">
+            <!-- Rendered dynamically by js/analysis.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. GLOSSARY SECTION -->
+      <section id="glossary-section" class="content-section hidden">
+        <div class="section-header">
+          <h2>Phụ lục Giải thích Thuật ngữ Ngân hàng</h2>
+          <p>Tra cứu định nghĩa, viết tắt và cơ chế tính toán các chỉ số an toàn vốn, đệm thanh khoản, rủi ro hoạt động và các giới hạn pháp lý.</p>
+        </div>
+
+        <div class="card" style="margin-bottom: 1.5rem;">
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+            <div class="search-input-wrapper" style="position: relative; flex-grow: 1; min-width: 250px;">
+              <i data-lucide="search" style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--text-muted); width: 18px; height: 18px;"></i>
+              <input type="text" id="glossary-search-input" placeholder="Tìm kiếm thuật ngữ, viết tắt, định nghĩa..." style="width: 100%; padding: 0.65rem 1rem 0.65rem 2.5rem; background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-main); outline: none;">
+            </div>
+            <div class="laws-categories" style="display: flex; gap: 0.5rem; flex-wrap: wrap;" id="glossary-category-selectors">
+              <button class="law-cat-btn active" data-category="all" style="padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; border: 1px solid var(--border-color); font-weight: 500; font-size: 0.9rem;">Tất cả</button>
+              <button class="law-cat-btn" data-category="basel" style="padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; border: 1px solid var(--border-color); font-weight: 500; font-size: 0.9rem;">Basel (Chuẩn quốc tế)</button>
+              <button class="law-cat-btn" data-category="vietnam" style="padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; border: 1px solid var(--border-color); font-weight: 500; font-size: 0.9rem;">Luật Việt Nam</button>
+              <button class="law-cat-btn" data-category="risk" style="padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; border: 1px solid var(--border-color); font-weight: 500; font-size: 0.9rem;">Rủi ro & Đo lường</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Target Container for Glossary rendering -->
+        <div id="glossary-list-container" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem;">
+          <!-- Dynamically populated by js/glossary.js -->
+        </div>
       </section>
 
     </main>
+  </div>
+
+  <!-- FLOATING SIDEBAR TOGGLE TAB -->
+  <button id="floating-doc-finder-tab" class="floating-doc-tab" title="Mở Trình Tìm Kiếm Tài Liệu">
+    <i data-lucide="folder-search" style="width: 16px; height: 16px; flex-shrink: 0;"></i>
+    <span>TÀI LIỆU BANK & BASEL (92 PDFs)</span>
+  </button>
+
+  <!-- DOCUMENT FINDER DRAWER -->
+  <div id="doc-finder-drawer" class="doc-finder-drawer">
+    <!-- Header -->
+    <div class="doc-drawer-header">
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <i data-lucide="search" style="width: 18px; height: 18px; color: var(--primary);"></i>
+        <h3 style="margin: 0; font-size: 1.1rem; color: var(--text-main);">Tra cứu Tài liệu Bank & Basel</h3>
+      </div>
+      <button id="doc-drawer-close" class="doc-drawer-close-btn">&times;</button>
+    </div>
+
+    <!-- Search Input -->
+    <div style="margin-bottom: 1rem; position: relative;">
+      <i data-lucide="search" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: var(--text-muted); width: 16px; height: 16px;"></i>
+      <input type="text" id="doc-search-input" placeholder="Tìm kiếm hoặc lọc các tệp PDF..." style="width: 100%; padding: 0.55rem 1rem 0.55rem 2.2rem; background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 6px; color: var(--text-main); font-size: 0.88rem; outline: none; border-color: var(--border-color);">
+    </div>
+
+    <!-- Category Pills -->
+    <div class="doc-categories-pills" style="display: flex; gap: 0.35rem; flex-wrap: wrap; margin-bottom: 1rem;">
+      <button class="doc-pill-btn active" data-cat="all">Tất cả</button>
+      <button class="doc-pill-btn" data-cat="basel">Hiệp ước Basel</button>
+      <button class="doc-pill-btn" data-cat="laws">Luật & TT</button>
+      <button class="doc-pill-btn" data-cat="banks">CAR Ngân hàng</button>
+      <button class="doc-pill-btn" data-cat="pinned" style="display: flex; align-items: center; gap: 2px;"><i data-lucide="pin" style="width: 12px; height: 12px;"></i> Được ghim</button>
+    </div>
+
+    <!-- Expand/Collapse all links -->
+    <div style="display: flex; justify-content: space-between; font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.75rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; align-items: center;">
+      <span style="display: flex; align-items: center; gap: 4px;"><i data-lucide="folder" style="width: 12px; height: 12px;"></i> resources / bank_docs</span>
+      <div>
+        <button id="doc-expand-all" style="background: none; border: none; color: var(--primary); font-weight: 600; cursor: pointer; padding: 0 4px; font-size: 0.78rem;">Mở rộng</button>
+        |
+        <button id="doc-collapse-all" style="background: none; border: none; color: var(--text-muted); font-weight: 600; cursor: pointer; padding: 0 4px; font-size: 0.78rem;">Gập gọn</button>
+      </div>
+    </div>
+
+    <!-- Scrollable Tree Container -->
+    <div class="doc-tree-container" id="doc-tree-container" style="flex-grow: 1; overflow-y: auto; padding-right: 4px;">
+      <!-- Tree will render here dynamically -->
+    </div>
+  </div>
+
+  <!-- PDF VIEW MODAL -->
+  <div id="pdf-viewer-modal" class="pdf-modal hidden">
+    <div class="pdf-modal-content">
+      <div class="pdf-modal-header">
+        <h3 id="pdf-modal-title">Tên tài liệu</h3>
+        <div style="display: flex; gap: 0.5rem; align-items: center;">
+          <a id="pdf-modal-external-link" href="#" target="_blank" class="source-link-btn" style="margin-top: 0; padding: 0.35rem 0.75rem; display: flex; align-items: center; gap: 4px; font-size: 0.78rem;">
+            <i data-lucide="external-link" style="width: 12px; height: 12px;"></i> Mở tab mới
+          </a>
+          <button id="pdf-modal-close-btn" class="doc-drawer-close-btn" style="font-size: 1.6rem; padding: 0 0.5rem;">&times;</button>
+        </div>
+      </div>
+      <div class="pdf-modal-body">
+        <iframe id="pdf-modal-iframe" src="" style="width: 100%; height: 100%; border: none;"></iframe>
+      </div>
+    </div>
   </div>
 
   <!-- SCRIPT FILES -->
   <script src="js/data.js"></script>
   <script src="js/calculator.js"></script>
   <script src="js/quiz.js"></script>
+  <script src="js/laws.js"></script>
+  <script src="js/analysis.js"></script>
+  <script src="js/glossary.js"></script>
+  <script src="js/docfinder.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

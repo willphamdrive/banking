@@ -35,12 +35,72 @@ class BaselApp {
       });
     });
 
-    // Sự kiện click liên kết từ màn hình Dashboard
+    // Sự kiện click liên kết từ màn hình Dashboard (hỗ trợ chuyển hướng sub-tabs của Basel)
     this.dashLinks.forEach(link => {
       link.addEventListener("click", (e) => {
         e.preventDefault();
-        const tabId = link.getAttribute("data-target");
-        this.switchTab(tabId);
+        const target = link.getAttribute("data-target");
+        const baselSubTabs = ["timeline", "pillars", "comparison", "calculator", "quiz"];
+        
+        if (baselSubTabs.includes(target)) {
+          this.switchTab("basel");
+          // Kích hoạt sub-tab tương ứng
+          const subTabBtn = document.querySelector(`.sub-tab-btn[data-baseltab="${target}"]`);
+          if (subTabBtn) {
+            subTabBtn.click();
+          }
+        } else {
+          this.switchTab(target);
+        }
+      });
+    });
+
+    // Sự kiện đóng mở (toggle) sidebar
+    const collapseBtn = document.getElementById("sidebar-collapse-btn");
+    const expandBtn = document.getElementById("sidebar-expand-btn");
+    const appContainer = document.querySelector(".app-container");
+    
+    if (collapseBtn && expandBtn && appContainer) {
+      collapseBtn.addEventListener("click", () => {
+        appContainer.classList.add("sidebar-collapsed");
+        expandBtn.classList.remove("hidden");
+      });
+      expandBtn.addEventListener("click", () => {
+        appContainer.classList.remove("sidebar-collapsed");
+        expandBtn.classList.add("hidden");
+      });
+    }
+
+    // Sự kiện chuyển sub-tab trong phân hệ Basel
+    const baselSubTabBtns = document.querySelectorAll(".sub-tab-btn[data-baseltab]");
+    const baselTabPanels = document.querySelectorAll(".basel-tab-panel");
+    
+    baselSubTabBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        baselSubTabBtns.forEach(b => {
+          b.classList.remove("active");
+          b.style.borderBottomColor = "transparent";
+          b.style.color = "var(--text-muted)";
+        });
+        btn.classList.add("active");
+        btn.style.borderBottomColor = "var(--primary)";
+        btn.style.color = "var(--text-main)";
+
+        const subTabId = btn.getAttribute("data-baseltab");
+        baselTabPanels.forEach(panel => {
+          if (panel.id === `${subTabId}-section`) {
+            panel.classList.remove("hidden");
+          } else {
+            panel.classList.add("hidden");
+          }
+        });
+
+        // Kích hoạt tính toán nếu nhảy vào tab calculator
+        if (subTabId === "calculator" && window.baselCalculator) {
+          window.baselCalculator.calculate();
+        }
+
+        lucide.createIcons();
       });
     });
   }
@@ -93,9 +153,12 @@ class BaselApp {
     // Cuộn lên đầu trang
     window.scrollTo({ top: 0, behavior: "smooth" });
 
-    // Trình kích hoạt vẽ biểu đồ trong máy tính nếu nhảy vào tab máy tính
-    if (tabId === "calculator" && window.baselCalculator) {
-      window.baselCalculator.calculate();
+    // Kích hoạt biểu đồ nếu vào tab máy tính (hoặc qua tab basel đang mở máy tính)
+    if (tabId === "basel") {
+      const activeSub = document.querySelector(".sub-tab-btn[data-baseltab].active");
+      if (activeSub && activeSub.getAttribute("data-baseltab") === "calculator" && window.baselCalculator) {
+        window.baselCalculator.calculate();
+      }
     }
   }
 
@@ -107,6 +170,11 @@ class BaselApp {
       const isEven = idx % 2 === 0;
       const keyRulesHtml = item.keyRules.map(rule => `<li>${this.formatMarkdown(rule)}</li>`).join("");
       const limitationsHtml = item.limitations.map(lim => `<li>${this.formatMarkdown(lim)}</li>`).join("");
+      const sourceUrlHtml = item.sourceUrl ? `
+        <a href="${item.sourceUrl}" target="_blank" class="source-link-btn">
+          <i data-lucide="external-link" style="width: 12px; height: 12px;"></i> Tài liệu gốc (BIS)
+        </a>
+      ` : "";
 
       return `
         <div class="timeline-item ${isEven ? 'left' : 'right'}">
@@ -129,11 +197,16 @@ class BaselApp {
                 <h4>Hạn chế & Điểm yếu:</h4>
                 <ul>${limitationsHtml}</ul>
               </div>
+
+              ${sourceUrlHtml}
             </div>
           </div>
         </div>
       `;
     }).join("");
+
+    // Khởi tạo lại icons cho nội dung sinh động
+    lucide.createIcons();
   }
 
   renderComparisonTable() {

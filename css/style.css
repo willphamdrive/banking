@@ -1656,3 +1656,30 @@ header p {
   border-radius: 0 0 12px 12px;
   overflow: hidden;
 }
+
+/* === BASEL COMPARISON TABLE COL HIGHLIGHT === */
+.comparison-table td.col-highlight,
+.comparison-table th.col-highlight {
+  background-color: rgba(99, 102, 241, 0.04) !important;
+  transition: background-color 0.15s ease;
+}
+.comparison-table td.col-active,
+.comparison-table th.col-active {
+  background-color: rgba(99, 102, 241, 0.08) !important;
+  border-left: 1px dashed var(--primary) !important;
+  border-right: 1px dashed var(--primary) !important;
+}
+
+/* === SCENARIO SIMULATION BUTTONS === */
+.scenario-btn {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.scenario-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  filter: brightness(1.1);
+}
+.scenario-btn:active {
+  transform: translateY(0);
+}

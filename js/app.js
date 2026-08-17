@@ -171,9 +171,9 @@ class BaselApp {
       const keyRulesHtml = item.keyRules.map(rule => `<li>${this.formatMarkdown(rule)}</li>`).join("");
       const limitationsHtml = item.limitations.map(lim => `<li>${this.formatMarkdown(lim)}</li>`).join("");
       const sourceUrlHtml = item.sourceUrl ? `
-        <a href="${item.sourceUrl}" target="_blank" class="source-link-btn">
-          <i data-lucide="external-link" style="width: 12px; height: 12px;"></i> Tài liệu gốc (BIS)
-        </a>
+        <button class="source-link-btn open-pdf-timeline-btn" data-docpath="${item.sourceUrl}" data-docname="${item.title}" style="cursor: pointer; border: none; outline: none; display: inline-flex; align-items: center; gap: 6px;">
+          <i data-lucide="book-open" style="width: 12px; height: 12px;"></i> Đọc trực tiếp (PDF)
+        </button>
       ` : "";
 
       return `
@@ -204,6 +204,18 @@ class BaselApp {
         </div>
       `;
     }).join("");
+
+    // Đăng ký sự kiện click mở xem PDF trực tiếp cho Timeline
+    const timelinePdfBtns = container.querySelectorAll(".open-pdf-timeline-btn");
+    timelinePdfBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const path = btn.getAttribute("data-docpath");
+        const name = btn.getAttribute("data-docname");
+        if (window.documentFinder) {
+          window.documentFinder.openPdfViewer(path, name);
+        }
+      });
+    });
 
     // Khởi tạo lại icons cho nội dung sinh động
     lucide.createIcons();
@@ -241,6 +253,55 @@ class BaselApp {
         </table>
       </div>
     `;
+
+    // Thiết lập tính năng tương tác làm nổi bật (highlight) cột khi hover và click
+    const table = container.querySelector(".comparison-table");
+    if (table) {
+      const cells = table.querySelectorAll("th, td");
+      cells.forEach(cell => {
+        // Chỉ xử lý các cột chỉ số (cột 1 đến cột 4), bỏ qua cột tiêu chí đầu tiên (cột 0)
+        cell.addEventListener("mouseenter", () => {
+          const colIdx = cell.cellIndex;
+          if (colIdx === 0) return;
+          const rows = table.querySelectorAll("tr");
+          rows.forEach(row => {
+            const targetCell = row.cells[colIdx];
+            if (targetCell) {
+              targetCell.classList.add("col-highlight");
+            }
+          });
+        });
+
+        cell.addEventListener("mouseleave", () => {
+          const colIdx = cell.cellIndex;
+          const rows = table.querySelectorAll("tr");
+          rows.forEach(row => {
+            const targetCell = row.cells[colIdx];
+            if (targetCell) {
+              targetCell.classList.remove("col-highlight");
+            }
+          });
+        });
+
+        // Click để ghim highlight cố định cho cột đó
+        cell.addEventListener("click", () => {
+          const colIdx = cell.cellIndex;
+          if (colIdx === 0) return;
+          
+          // Xóa tất cả các ghim cũ
+          table.querySelectorAll("th, td").forEach(c => c.classList.remove("col-active"));
+
+          // Thêm ghim mới cho cột được click
+          const rows = table.querySelectorAll("tr");
+          rows.forEach(row => {
+            const targetCell = row.cells[colIdx];
+            if (targetCell) {
+              targetCell.classList.add("col-active");
+            }
+          });
+        });
+      });
+    }
   }
 
   // Tiện ích format markdown cơ bản (in đậm **, code ``, màu sắc)

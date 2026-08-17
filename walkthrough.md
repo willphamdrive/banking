@@ -276,3 +276,42 @@ Tôi đã hoàn trả lại cơ chế tương tác mở/đóng của Drawer gi�
 *   **Đồng bộ số lượng và năm**:
     - Nhãn hiển thị trên thanh kéo trượt lề phải cập nhật tăng quy mô từ 87 lên **92 PDFs**.
     - Tối ưu hóa biểu thức chính quy để trích xuất động năm ban hành trực tiếp từ tiêu đề tài liệu (ví dụ: `1988`, `2004`) nếu tên tệp tin vật lý không chứa thông số năm. Các tệp Basel hiển thị có tiền tố năm đẹp mắt (e.g. `[1988] Basel I...`).
+
+---
+
+## 🚀 Nâng cấp toàn diện các trang tính năng trong tab Hiệp ước Basel
+
+Để tối ưu hóa sự tích hợp và tính tương tác của phân hệ Hiệp ước Basel:
+*   **Dòng thời gian (Timeline) & Pháp luật mở PDF trực tiếp**:
+    - Đổi các liên kết ngoài mở tab mới tại dòng thời gian Basel (`Tài liệu gốc (BIS)`) và danh mục pháp luật VN (`Tài liệu gốc`) thành các nút mở trực tiếp PDF trên bộ khung xem Modal tích hợp (`window.documentFinder.openPdfViewer`). Người dùng có thể đọc văn bản offline cực kỳ chuyên nghiệp mà không bị đẩy ra ngoài ứng dụng.
+*   **Tương tác hóa Bảng so sánh Basel (Interactive Comparison Table)**:
+    - Bổ sung hiệu ứng Hover nổi bật cột dữ liệu tương ứng khi di chuyển chuột qua.
+    - Hỗ trợ sự kiện **Click khóa cột**: Nhấp chuột vào bất cứ ô nào trong cột Basel I, II, III hoặc IV để ghim nổi bật cột đó (background đậm màu primary và viền nét đứt), giúp so sánh và theo dõi tập trung không bị lệch dòng.
+*   **Chọn nhanh kịch bản trong Bộ tính CAR (Preset Scenarios)**:
+    - Tích hợp 3 kịch bản mô phỏng cài sẵn ở đầu Bộ tính CAR:
+        1.  *Kịch bản An toàn (Basel III)*: Vốn tự có dày dặn, tỷ lệ nợ rủi ro thấp, CAR đạt ~11.5% tuân thủ CCB.
+        2.  *Kịch bản Thiếu đệm CCB*: Tỷ lệ CAR đạt ~9.5% (đạt tối thiểu 8% nhưng vi phạm cảnh báo đệm CCB).
+        3.  *Kịch bản Vi phạm Nghiêm trọng*: Tỷ lệ CAR rơi xuống ~4.5% (vi phạm toàn diện tất cả các chuẩn).
+    - Click vào kịch bản bất kỳ sẽ tự động điền các thông số số liệu tương ứng và kích hoạt vẽ lại biểu đồ Chart.js cơ cấu RWA lập tức.
+
+---
+
+## 📈 Lựa chọn Tỷ lệ Trục dọc (Y-Axis Scale) cho Biểu đồ CAR
+
+Để hỗ trợ người dùng linh hoạt phóng to dữ liệu hoặc quan sát toàn cảnh:
+*   **Bộ chọn trục dọc (Y-Scale Selectors)**: Tích hợp thêm dropdown chọn tỉ lệ trục dọc trên thanh điều khiển của cả 2 trang phân tích:
+    - **Trang Phân tích Đơn lẻ**: Cho phép tùy chỉnh tỷ lệ cho biểu đồ CAR hàng năm và biểu đồ xu hướng thời gian.
+    - **Trang So sánh Đối chiếu**: Cho phép tùy chỉnh tỷ lệ cho biểu đồ so sánh cột và biểu đồ so sánh xu hướng nhiều ngân hàng.
+*   **3 Chế độ phóng tỷ lệ linh hoạt**:
+    - `Tự động (Zoom)`: Hệ thống tự động tính toán khoảng dữ liệu tối ưu nhất của các điểm dữ liệu để phóng to đường xu hướng (tạo cảm giác nhạy bén, dễ thấy độ dốc biến động).
+    - `Bắt đầu từ 0%`: Buộc trục Y bắt đầu từ mức 0% đến mức cực đại (giúp so sánh khách quan quy mô và giữ tỷ lệ thực tế, tránh hiểu nhầm về độ dốc).
+    - `Cận cảnh (6% - 18%)`: Khoá cố định dải tỷ lệ an toàn vốn từ 6% đến 18% giống y hệt như biểu đồ tham chiếu của các năm.
+*   **Đồng bộ tức thì**: Thay đổi tùy chọn Y-Scale sẽ kích hoạt vẽ lại (redraw) canvas Chart.js ngay lập tức với hiệu ứng hoạt họa chuyển đổi trơn tru.
+
+---
+
+## 🛠️ Sửa lỗi cấu trúc thẻ HTML (Hotfix Nested Tab Panel Visibility)
+
+*   **Vấn đề**: Khi chuyển sang các tab phụ "Bảng so sánh", "Bộ tính CAR" và "Trắc nghiệm", nội dung vùng hiển thị trống trơn.
+*   **Nguyên nhân**: Thẻ `div` của `#pillars-section` bị thiếu mất thẻ đóng `</div>` (chỉ đóng thẻ `.pillars-grid` ở bên trong). Điều này khiến cho cả 3 phân hệ bên dưới bị lồng nhầm làm phần tử con của `#pillars-section`. Khi chuyển tab, `#pillars-section` bị ẩn (thêm class `hidden`), gián tiếp ẩn luôn toàn bộ các phân hệ con lồng sai cấu trúc này.
+*   **Giải pháp**: Thêm thẻ `</div>` đóng chính xác `#pillars-section` tại dòng 262 trong [`index.html`](file:///Users/toanpham/Desktop/Banking/index.html), giúp đưa các tab panel phụ trở về cùng cấp (siblings), khắc phục triệt để lỗi hiển thị trống.

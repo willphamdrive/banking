@@ -124,10 +124,14 @@ class BaselAnalysis {
     // Trạng thái Phân tích Đơn lẻ
     this.indBank = "TCB";
     this.indYear = "2025";
+    this.indYScale = "auto"; // Mặc định tự động co giãn trục Y
+    this.indYTick = 1; // Bước chia tick: 1% mặc định
     
     // Trạng thái So sánh Đối chiếu
     this.compBanks = ["TCB", "VCB", "BID", "MBB"];
     this.compYear = "2025";
+    this.compYScale = "narrow"; // Mặc định cận cảnh (6% - 18%) để giống ảnh mẫu
+    this.compYTick = 1; // Bước chia tick: 1% mặc định
 
     // Quản lý các phiên bản Chart.js active để destroy khi redraw
     this.charts = {};
@@ -262,6 +266,42 @@ class BaselAnalysis {
       });
     });
 
+    // Lắng nghe sự kiện thay đổi tỷ lệ trục dọc (Y-Scale) - Trang Phân tích Đơn lẻ
+    const indYScaleSelect = document.getElementById("individual-y-scale-select");
+    if (indYScaleSelect) {
+      indYScaleSelect.addEventListener("change", (e) => {
+        this.indYScale = e.target.value;
+        this.renderIndividualAnalysis();
+      });
+    }
+
+    // Lắng nghe sự kiện thay đổi tỷ lệ trục dọc (Y-Scale) - Trang So sánh Đối chiếu
+    const compYScaleSelect = document.getElementById("compare-y-scale-select");
+    if (compYScaleSelect) {
+      compYScaleSelect.addEventListener("change", (e) => {
+        this.compYScale = e.target.value;
+        this.renderCompareAnalysis();
+      });
+    }
+
+    // Lắng nghe sự kiện thay đổi bước chia tick trục dọc - Trang Phân tích Đơn lẻ
+    const indYTickSelect = document.getElementById("individual-y-tick-select");
+    if (indYTickSelect) {
+      indYTickSelect.addEventListener("change", (e) => {
+        this.indYTick = parseFloat(e.target.value);
+        this.renderIndividualAnalysis();
+      });
+    }
+
+    // Lắng nghe sự kiện thay đổi bước chia tick trục dọc - Trang So sánh Đối chiếu
+    const compYTickSelect = document.getElementById("compare-y-tick-select");
+    if (compYTickSelect) {
+      compYTickSelect.addEventListener("change", (e) => {
+        this.compYTick = parseFloat(e.target.value);
+        this.renderCompareAnalysis();
+      });
+    }
+
     // Lắng nghe sự kiện đổi theme để vẽ lại biểu đồ
     const themeBtn = document.getElementById("theme-toggle");
     if (themeBtn) {
@@ -292,6 +332,254 @@ class BaselAnalysis {
     if (this.charts[key]) {
       this.charts[key].destroy();
       delete this.charts[key];
+    }
+  }
+
+  // Biến bảng thường thành bảng sắp xếp được khi click vào header
+  setupSortableTable(tableId) {
+    const table = document.getElementById(tableId);
+    if (!table) return;
+    const headers = table.querySelectorAll('thead th');
+    const tbody = table.querySelector('tbody');
+    let sortState = { col: -1, asc: true };
+
+    headers.forEach((th, colIdx) => {
+      th.style.cursor = 'pointer';
+      th.style.userSelect = 'none';
+      th.title = 'Click để sắp xếp';
+      // Thêm span icon điều hướng
+      const icon = document.createElement('span');
+      icon.className = 'sort-icon';
+      icon.style.cssText = 'margin-left:4px;opacity:0.35;font-size:0.75em;transition:opacity 0.15s';
+      icon.textContent = '⇅';
+      th.appendChild(icon);
+
+      th.addEventListener('click', () => {
+        const isActive = sortState.col === colIdx;
+        sortState.asc = isActive ? !sortState.asc : true;
+        sortState.col = colIdx;
+
+        // Cập nhật icon
+        headers.forEach((h, i) => {
+          const ic = h.querySelector('.sort-icon');
+          if (!ic) return;
+          if (i === colIdx) {
+            ic.textContent = sortState.asc ? '▲' : '▼';
+            ic.style.opacity = '1';
+            ic.style.color = 'var(--primary)';
+          } else {
+            ic.textContent = '⇅';
+            ic.style.opacity = '0.35';
+            ic.style.color = '';
+          }
+        });
+
+        // Sắp xếp rows
+        const rows = Array.from(tbody.querySelectorAll('tr'));
+        rows.sort((a, b) => {
+          const aCell = a.cells[colIdx];
+          const bCell = b.cells[colIdx];
+          if (!aCell || !bCell) return 0;
+          const aText = aCell.textContent.replace(/[%,\s]/g, '').trim();
+          const bText = bCell.textContent.replace(/[%,\s]/g, '').trim();
+          const aNum = parseFloat(aText);
+          const bNum = parseFloat(bText);
+          const useNum = !isNaN(aNum) && !isNaN(bNum);
+          const cmp = useNum ? aNum - bNum : aText.localeCompare(bText, 'vi');
+          return sortState.asc ? cmp : -cmp;
+        });
+
+        // Tái chèn với hiệu ứng mờ dần
+        tbody.style.opacity = '0.3';
+        setTimeout(() => {
+          rows.forEach(r => tbody.appendChild(r));
+          tbody.style.transition = 'opacity 0.18s';
+          tbody.style.opacity = '1';
+        }, 80);
+      });
+    });
+  }
+
+  // Custom Chart.js plugin: vẽ tên viết tắt NH tại điểm cuối cùng của mỗi line,
+  // với collision avoidance đẩy label lên/xuống khi các đường quá gần nhau.
+  getEndLabelPlugin() {
+    return {
+      id: 'endLabel',
+      afterDatasetsDraw(chart) {
+        const { ctx, chartArea } = chart;
+        if (!chartArea) return;
+
+        const gathered = [];
+
+        chart.data.datasets.forEach((dataset, i) => {
+          if (!dataset.shortLabel) return; // chỉ xử lý dataset có shortLabel
+          const meta = chart.getDatasetMeta(i);
+          if (meta.hidden) return;
+
+          // Tìm điểm cuối cùng không null
+          let lastIdx = -1;
+          for (let j = dataset.data.length - 1; j >= 0; j--) {
+            if (dataset.data[j] !== null && dataset.data[j] !== undefined) {
+              lastIdx = j;
+              break;
+            }
+          }
+          if (lastIdx === -1) return;
+
+          const point = meta.data[lastIdx];
+          if (!point) return;
+
+          gathered.push({
+            x: point.x,
+            y: point.y,
+            origY: point.y,
+            text: dataset.shortLabel,
+            value: dataset.data[lastIdx],
+            color: dataset.borderColor
+          });
+        });
+
+        // Sắp xếp theo Y (trên → dưới = nhỏ → lớn)
+        gathered.sort((a, b) => a.y - b.y);
+
+        // Collision avoidance: đẩy label tránh chồng lấn, ưu tiên giữ gần vị trí gốc
+        const minGap = 15; // pixel tối thiểu giữa 2 label
+        for (let i = 1; i < gathered.length; i++) {
+          if (gathered[i].y - gathered[i - 1].y < minGap) {
+            gathered[i].y = gathered[i - 1].y + minGap;
+          }
+        }
+        // Pass ngược: đảm bảo không đẩy quá lên phía trên
+        for (let i = gathered.length - 2; i >= 0; i--) {
+          if (gathered[i + 1].y - gathered[i].y < minGap) {
+            gathered[i].y = gathered[i + 1].y - minGap;
+          }
+        }
+
+        // Vẽ labels
+        gathered.forEach(item => {
+          const labelX = item.x + 10;
+          const labelY = item.y;
+
+          ctx.save();
+
+          // Connector line từ điểm thực → label nếu label bị đẩy lệch
+          if (Math.abs(labelY - item.origY) > 4) {
+            ctx.beginPath();
+            ctx.moveTo(item.x + 4, item.origY);
+            ctx.lineTo(labelX, labelY);
+            ctx.strokeStyle = item.color + '80';
+            ctx.lineWidth = 0.8;
+            ctx.setLineDash([2, 2]);
+            ctx.stroke();
+            ctx.setLineDash([]);
+          }
+
+          // Background pill cho dễ đọc
+          ctx.font = 'bold 10.5px Inter, system-ui, sans-serif';
+          const tw = ctx.measureText(item.text).width;
+          const ph = 14, pw = tw + 8;
+          const rx = labelX - 2, ry = labelY - ph / 2;
+          ctx.fillStyle = 'rgba(15,23,42,0.82)';
+          ctx.beginPath();
+          if (typeof ctx.roundRect === 'function') {
+            ctx.roundRect(rx, ry, pw, ph, 3);
+          } else {
+            ctx.rect(rx, ry, pw, ph); // fallback cho browser cũ
+          }
+          ctx.fill();
+
+          // Text
+          ctx.fillStyle = item.color;
+          ctx.textBaseline = 'middle';
+          ctx.fillText(item.text, labelX + 2, labelY);
+
+          ctx.restore();
+        });
+      }
+    };
+  }
+
+  // Tính chiều cao chart (px) dựa trên bước chia tick — bước nhỏ hơn → chart cao hơn
+  // để mỗi tick có đủ pixel thể hiện rõ sự chênh lệch nhỏ.
+  getChartHeight(step) {
+    const s = parseFloat(step) || 1;
+    if (s <= 0.01)  return 1800; // 1 bps → rất cao, thấy chênh lệch từng bps
+    if (s <= 0.1)   return 700;  // 0.1% → cao, thấy chênh lệch 0.1%
+    return 320;                  // 1% → chiều cao tiêu chuẩn
+  }
+
+  // Lấy cấu hình trục Y (Vertical Axis Scale) dựa trên chế độ lựa chọn, bước chia tick và dữ liệu thực tế
+  getYScaleConfig(yScale, stepSize, dataValues) {
+    const step = parseFloat(stepSize) || 1;
+
+    // Callback format tick theo độ phân giải
+    const tickCallback = (v) => {
+      if (step < 0.1) {
+        return v.toFixed(2) + '%';
+      } else if (step < 1) {
+        return v.toFixed(1) + '%';
+      } else {
+        return Number.isInteger(v) ? v + '%' : v.toFixed(1) + '%';
+      }
+    };
+
+    const tickConfig = { stepSize: step, callback: tickCallback };
+
+    // Fixed Tick Viewport: khi bước chia nhỏ, giữ đúng N_TICKS ticks hiển thị
+    // trên màn hình, zoom vào trung tâm dữ liệu thực. Bước chia nhỏ hơn →
+    // viewport hẹp hơn → lines trải rộng hơn trong cùng chiều cao chart.
+    const N_TICKS = 80; // số ticks hiển thị mục tiêu
+    if (step < 1 && dataValues && dataValues.length > 0 && yScale !== "zero") {
+      // Loại trừ giá trị tham chiếu 8% khỏi tính midpoint để zoom không bị kéo xuống
+      const bankValues = dataValues.filter(v => v !== null && v !== undefined && !isNaN(v) && v !== 8);
+      const allValues  = dataValues.filter(v => v !== null && v !== undefined && !isNaN(v));
+      const refValues  = bankValues.length > 0 ? bankValues : allValues;
+      if (refValues.length > 0) {
+        const dataMin   = Math.min(...refValues);
+        const dataMax   = Math.max(...refValues);
+        const midpoint  = (dataMin + dataMax) / 2;
+        const dataRange = dataMax - dataMin;
+
+        // Viewport = max(dữ liệu thực + 20% padding, N_TICKS * step)
+        const visibleRange = Math.max(dataRange * 1.2, N_TICKS * step);
+        const halfRange    = visibleRange / 2;
+
+        // Làm tròn về bội số của step để ticks thẳng hàng
+        const dynMin = Math.floor((midpoint - halfRange) / step) * step;
+        const dynMax = Math.ceil((midpoint + halfRange) / step) * step;
+
+        return {
+          beginAtZero: false,
+          min: parseFloat(Math.max(0, dynMin).toFixed(4)),
+          max: parseFloat(dynMax.toFixed(4)),
+          ticks: tickConfig
+        };
+      }
+    }
+
+    if (yScale === "zero") {
+      return {
+        beginAtZero: true,
+        min: 0,
+        max: undefined,
+        ticks: tickConfig
+      };
+    } else if (yScale === "narrow") {
+      return {
+        beginAtZero: false,
+        min: 6,
+        max: 18,
+        ticks: tickConfig
+      };
+    } else {
+      // auto mode
+      return {
+        beginAtZero: false,
+        min: undefined,
+        max: undefined,
+        ticks: tickConfig
+      };
     }
   }
 
@@ -391,14 +679,23 @@ class BaselAnalysis {
               </h3>
               <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0.25rem 0 0 0;">Bạn có thể trực tiếp mở đọc bản PDF báo cáo CAR chính thức cuối năm ${this.indYear} của ${bankName}:</p>
             </div>
-            <a href="docs/banks/${yearData.pdf}" target="_blank" class="source-link-btn" style="margin-top: 0; background: ${color}20; border-color: ${color}40; color: ${color};">
+            <button class="source-link-btn open-pdf-analysis-btn" data-docpath="docs/banks/${yearData.pdf}" data-docname="${bankName} - Báo cáo CAR năm ${this.indYear}" style="margin-top: 0; background: ${color}20; border-color: ${color}40; color: ${color}; border: none; cursor: pointer;">
               Mở file PDF gốc
-            </a>
+            </button>
           </div>
         </div>
       `;
 
-      // Khởi tạo Chart.js sau khi đã nạp DOM
+      // Wire up PDF viewer button for yearly analysis
+      const pdfBtns = this.indRender.querySelectorAll('.open-pdf-analysis-btn');
+      pdfBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          if (window.documentFinder) {
+            window.documentFinder.openPdfViewer(btn.dataset.docpath, btn.dataset.docname);
+          }
+        });
+      });
+
       this.initIndYearlyCharts(yearData, color, bankName);
     } else {
       // RENDERING TIME SERIES FOR INDIVIDUAL BANK
@@ -410,9 +707,9 @@ class BaselAnalysis {
       this.indRender.innerHTML = `
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
           <!-- CAR Time Series Line Chart -->
-          <div class="card" style="padding: 1.5rem; min-height: 280px; display: flex; flex-direction: column;">
+          <div class="card" style="padding: 1.5rem; min-height: ${this.getChartHeight(this.indYTick) + 60}px; display: flex; flex-direction: column;">
             <h3 style="margin-bottom: 1rem;">Xu hướng CAR (%) ${years[0]} - ${years[years.length-1]}</h3>
-            <div style="flex-grow: 1; position: relative;">
+            <div style="flex-grow: 1; position: relative; height: ${this.getChartHeight(this.indYTick)}px;">
               <canvas id="chart-ind-car-trend"></canvas>
             </div>
           </div>
@@ -436,14 +733,24 @@ class BaselAnalysis {
                   <span style="font-weight: 700; color: ${color}; font-size: 1.1rem; display: block;">Năm ${yr}</span>
                   <span style="font-size: 0.75rem; color: var(--text-muted);">CAR: ${bankData[yr].car.toFixed(2)}% | Vốn: ${bankData[yr].capital.toLocaleString()} Tỷ</span>
                 </div>
-                <a href="docs/banks/${bankData[yr].pdf}" target="_blank" class="source-link-btn" style="margin-top: 0.25rem; font-size: 0.75rem; width: 100%; text-align: center; justify-content: center; background: rgba(255,255,255,0.04);">
+                <button class="source-link-btn open-pdf-analysis-btn" data-docpath="docs/banks/${bankData[yr].pdf}" data-docname="${bankName} - Báo cáo CAR năm ${yr}" style="margin-top: 0.25rem; font-size: 0.75rem; width: 100%; text-align: center; justify-content: center; background: rgba(255,255,255,0.04); border: none; cursor: pointer;">
                   Mở PDF
-                </a>
+                </button>
               </div>
             `).join("")}
           </div>
         </div>
       `;
+
+      // Wire up PDF viewer buttons for time series library
+      const pdfBtns2 = this.indRender.querySelectorAll('.open-pdf-analysis-btn');
+      pdfBtns2.forEach(btn => {
+        btn.addEventListener('click', () => {
+          if (window.documentFinder) {
+            window.documentFinder.openPdfViewer(btn.dataset.docpath, btn.dataset.docname);
+          }
+        });
+      });
 
       // Khởi tạo các biểu đồ chuỗi thời gian
       this.initIndSeriesCharts(years, carDataPoints, capDataPoints, rwaDataPoints, color, bankName);
@@ -467,18 +774,18 @@ class BaselAnalysis {
       
       this.compRender.innerHTML = `
         <!-- SVG Bar Chart Compare CAR -->
-        <div class="card" style="padding: 1.5rem; min-height: 320px; display: flex; flex-direction: column; margin-bottom: 1.5rem;">
+        <div class="card" style="padding: 1.5rem; min-height: ${this.getChartHeight(this.compYTick) + 60}px; display: flex; flex-direction: column; margin-bottom: 1.5rem;">
           <h3 style="margin-bottom: 1rem; text-align: center;">Hệ số an toàn vốn CAR các ngân hàng (${year})</h3>
-          <div style="flex-grow: 1; position: relative; height: 240px;">
+          <div style="flex-grow: 1; position: relative; height: ${this.getChartHeight(this.compYTick)}px;">
             <canvas id="chart-comp-yearly"></canvas>
           </div>
         </div>
 
         <!-- Bảng đối chiếu so sánh chỉ số -->
         <div class="card" style="padding: 1.5rem; margin-bottom: 1.5rem;">
-          <h3>Bảng Số liệu Đối chiếu Chi tiết (${year})</h3>
+          <h3>Bảng Số liệu Đối chiếu Chi tiết (${year}) <span style="font-size:0.75rem;font-weight:400;color:var(--text-muted);">— Click cột để sắp xếp</span></h3>
           <div class="table-responsive" style="margin-top: 1rem;">
-            <table class="comparison-table">
+            <table id="comp-detail-table" class="comparison-table">
               <thead>
                 <tr>
                   <th>Ngân hàng</th>
@@ -532,6 +839,8 @@ class BaselAnalysis {
       `;
 
       this.initCompYearlyCharts(selectedBanks, year);
+      // Kích hoạt sort cho bảng chi tiết
+      this.setupSortableTable('comp-detail-table');
     } else {
       // RENDERING TIME SERIES TREND FOR MULTIPLE BANKS
       const years = [2019, 2020, 2021, 2022, 2023, 2024, 2025];
@@ -539,19 +848,19 @@ class BaselAnalysis {
       this.compRender.innerHTML = `
         <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 2rem;">
           <!-- SVG Line Chart Compare Time Series CAR -->
-          <div class="card" style="padding: 1.5rem; min-height: 320px; display: flex; flex-direction: column;">
+          <div class="card" style="padding: 1.5rem; min-height: ${this.getChartHeight(this.compYTick) + 100}px; display: flex; flex-direction: column;">
             <h3 style="margin-bottom: 0.5rem;">Biểu đồ So sánh Xu hướng CAR (%) ${years[0]} - ${years[years.length-1]}</h3>
             <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem;">Click chọn các hộp màu ở danh sách chú giải (legend) để ẩn/hiện hoặc so sánh song song các ngân hàng:</p>
-            <div style="flex-grow: 1; position: relative; height: 260px;">
+            <div style="flex-grow: 1; position: relative; height: ${this.getChartHeight(this.compYTick)}px;">
               <canvas id="chart-comp-trend"></canvas>
             </div>
           </div>
         </div>
 
         <div class="card">
-          <h3>Bảng xu hướng CAR lịch sử (${years[0]} - ${years[years.length-1]})</h3>
+          <h3>Bảng xu hướng CAR lịch sử (${years[0]} - ${years[years.length-1]}) <span style="font-size:0.75rem;font-weight:400;color:var(--text-muted);">— Click cột để sắp xếp</span></h3>
           <div class="table-responsive" style="margin-top: 1rem;">
-            <table class="comparison-table">
+            <table id="comp-trend-table" class="comparison-table">
               <thead>
                 <tr>
                   <th>Ngân hàng</th>
@@ -580,6 +889,8 @@ class BaselAnalysis {
       `;
 
       this.initCompSeriesCharts(selectedBanks, years);
+      // Kích hoạt sort cho bảng xu hướng
+      this.setupSortableTable('comp-trend-table');
     }
 
     lucide.createIcons();
@@ -617,13 +928,7 @@ class BaselAnalysis {
           legend: { display: false }
         },
         scales: {
-          y: {
-            beginAtZero: true,
-            max: 18.0,
-            ticks: {
-              callback: (value) => value + '%'
-            }
-          }
+          y: this.getYScaleConfig(this.indYScale, this.indYTick, [yearData.car, 8.0])
         }
       }
     });
@@ -667,8 +972,9 @@ class BaselAnalysis {
       return;
     }
 
-    // CAR Trend
+    // CAR Trend — thêm shortLabel để endLabelPlugin hiển thị tên NH tại điểm cuối
     const trendCtx = document.getElementById("chart-ind-car-trend").getContext("2d");
+    const endLabelPluginInd = this.getEndLabelPlugin();
     this.charts.indCarTrend = new Chart(trendCtx, {
       type: 'line',
       data: {
@@ -676,6 +982,7 @@ class BaselAnalysis {
         datasets: [
           {
             label: `CAR ${bankName} (%)`,
+            shortLabel: bankName,
             data: carData,
             borderColor: color,
             backgroundColor: color + '20',
@@ -698,14 +1005,12 @@ class BaselAnalysis {
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        layout: { padding: { right: 90 } },
         scales: {
-          y: {
-            min: 6,
-            max: 18,
-            ticks: { callback: (v) => v + '%' }
-          }
+          y: this.getYScaleConfig(this.indYScale, this.indYTick, [...carData, 8])
         }
-      }
+      },
+      plugins: [endLabelPluginInd]
     });
 
     // Capital vs RWA Growth
@@ -775,11 +1080,7 @@ class BaselAnalysis {
           legend: { display: false }
         },
         scales: {
-          y: {
-            beginAtZero: true,
-            max: 18,
-            ticks: { callback: (v) => v + '%' }
-          }
+          y: this.getYScaleConfig(this.compYScale, this.compYTick, [...values.filter(v => v !== null), 8])
         }
       }
     });
@@ -798,6 +1099,7 @@ class BaselAnalysis {
     const datasets = banks.map(b => {
       return {
         label: BANK_NAMES[b],
+        shortLabel: b, // mã viết tắt hiển thị tại điểm cuối
         data: years.map(yr => BANK_CAR_DATABASE[b][yr] ? BANK_CAR_DATABASE[b][yr].car : null),
         borderColor: BANK_COLORS[b],
         backgroundColor: BANK_COLORS[b] + '15',
@@ -808,7 +1110,7 @@ class BaselAnalysis {
       };
     });
 
-    // Thêm mốc đỏ tối thiểu
+    // Thêm mốc đỏ tối thiểu (không có shortLabel → không hiển thị label đuối)
     datasets.push({
       label: 'Mức tối thiểu NHNN (8%)',
       data: Array(years.length).fill(8),
@@ -820,6 +1122,7 @@ class BaselAnalysis {
     });
 
     const ctx = document.getElementById("chart-comp-trend").getContext("2d");
+    const endLabelPluginComp = this.getEndLabelPlugin();
     this.charts.compTrend = new Chart(ctx, {
       type: 'line',
       data: {
@@ -829,12 +1132,12 @@ class BaselAnalysis {
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        layout: { padding: { right: 60 } },
         scales: {
-          y: {
-            min: 6,
-            max: 18,
-            ticks: { callback: (v) => v + '%' }
-          }
+          y: this.getYScaleConfig(this.compYScale, this.compYTick, [
+            ...banks.flatMap(b => years.map(yr => BANK_CAR_DATABASE[b][yr] ? BANK_CAR_DATABASE[b][yr].car : null)).filter(v => v !== null),
+            8
+          ])
         },
         plugins: {
           legend: {
@@ -842,7 +1145,8 @@ class BaselAnalysis {
             labels: { boxWidth: 12, padding: 15 }
           }
         }
-      }
+      },
+      plugins: [endLabelPluginComp]
     });
   }
 

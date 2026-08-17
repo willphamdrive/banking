@@ -42,6 +42,11 @@ class BaselCalculator {
     this.statusBasel2 = document.getElementById("status-basel2");
     this.statusBasel3 = document.getElementById("status-basel3");
     this.complianceAlerts = document.getElementById("compliance-alerts");
+
+    // Các nút kịch bản mô phỏng
+    this.btnSafe = document.getElementById("scenario-safe");
+    this.btnBuffer = document.getElementById("scenario-buffer-warning");
+    this.btnUnsafe = document.getElementById("scenario-unsafe");
   }
 
   bindEvents() {
@@ -56,6 +61,51 @@ class BaselCalculator {
         input.addEventListener("input", () => this.calculate());
       }
     });
+
+    if (this.btnSafe) {
+      this.btnSafe.addEventListener("click", () => this.applyScenario("safe"));
+    }
+    if (this.btnBuffer) {
+      this.btnBuffer.addEventListener("click", () => this.applyScenario("buffer"));
+    }
+    if (this.btnUnsafe) {
+      this.btnUnsafe.addEventListener("click", () => this.applyScenario("unsafe"));
+    }
+  }
+
+  applyScenario(type) {
+    const data = {
+      safe: {
+        cet1: 9500, at1: 2000, tier2: 3000,
+        cash: 6000, gov: 16000, mortgage: 18000, retail: 25000, corporate: 35000,
+        market: 2000, op: 5000
+      },
+      buffer: {
+        cet1: 6500, at1: 1000, tier2: 1500,
+        cash: 4000, gov: 10000, mortgage: 25000, retail: 32000, corporate: 55000,
+        market: 4000, op: 9000
+      },
+      unsafe: {
+        cet1: 3000, at1: 500, tier2: 1000,
+        cash: 2000, gov: 5000, mortgage: 20000, retail: 35000, corporate: 65000,
+        market: 6000, op: 12000
+      }
+    }[type];
+
+    if (data) {
+      this.inputCet1.value = data.cet1;
+      this.inputAt1.value = data.at1;
+      this.inputTier2.value = data.tier2;
+      this.assetCash.value = data.cash;
+      this.assetGov.value = data.gov;
+      this.assetMortgage.value = data.mortgage;
+      this.assetRetail.value = data.retail;
+      this.assetCorporate.value = data.corporate;
+      this.inputMarketRwa.value = data.market;
+      this.inputOpRwa.value = data.op;
+      
+      this.calculate();
+    }
   }
 
   calculate() {

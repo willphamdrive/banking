@@ -115,9 +115,9 @@ class BaselLaws {
 
       const highlightsHtml = law.highlights.map(hl => `<li>${this.formatMarkdown(hl)}</li>`).join("");
       const sourceUrlHtml = law.sourceUrl ? `
-        <a href="${law.sourceUrl}" target="_blank" class="source-link-btn">
-          <i data-lucide="external-link" style="width: 12px; height: 12px;"></i> Tài liệu gốc
-        </a>
+        <button class="source-link-btn open-pdf-law-btn" data-docpath="${law.sourceUrl}" data-docname="${law.title}" style="cursor: pointer; border: none; outline: none; display: inline-flex; align-items: center; gap: 6px;">
+          <i data-lucide="book-open" style="width: 12px; height: 12px;"></i> Đọc trực tiếp (PDF)
+        </button>
       ` : "";
 
       return `
@@ -136,6 +136,18 @@ class BaselLaws {
         </div>
       `;
     }).join("");
+
+    // Đăng ký sự kiện click mở xem PDF trực tiếp cho Pháp luật
+    const lawPdfBtns = this.listContainer.querySelectorAll(".open-pdf-law-btn");
+    lawPdfBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const path = btn.getAttribute("data-docpath");
+        const name = btn.getAttribute("data-docname");
+        if (window.documentFinder) {
+          window.documentFinder.openPdfViewer(path, name);
+        }
+      });
+    });
 
     // Khởi tạo lại icons cho nội dung sinh động
     lucide.createIcons();

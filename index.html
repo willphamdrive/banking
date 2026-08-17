@@ -258,6 +258,7 @@
               <li><strong>Khuyến khích lành mạnh</strong>: Giúp thị trường định giá đúng cổ phiếu ngân hàng, ngân hàng rủi ro cao sẽ phải chịu chi phí huy động vốn đắt hơn.</li>
             </ul>
           </div>
+        </div>
       </div>
 
       <!-- 4. COMPARISON SECTION (Nested) -->
@@ -281,6 +282,14 @@
         <div class="calc-container">
           <!-- Nhập số liệu -->
           <div class="calc-form card">
+            <div style="margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+              <span style="font-weight: 700; font-size: 0.85rem; color: var(--text-muted); display: block; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">Chọn nhanh kịch bản mô phỏng</span>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <button type="button" class="scenario-btn" id="scenario-safe" style="padding: 0.4rem 0.8rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600; cursor: pointer; border: 1px solid var(--border-color); background: rgba(5, 150, 105, 0.05); color: #059669; transition: all 0.2s;">✔️ An toàn (Basel III)</button>
+                <button type="button" class="scenario-btn" id="scenario-buffer-warning" style="padding: 0.4rem 0.8rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600; cursor: pointer; border: 1px solid var(--border-color); background: rgba(245, 158, 11, 0.05); color: #f59e0b; transition: all 0.2s;">⚠️ Thiếu đệm CCB</button>
+                <button type="button" class="scenario-btn" id="scenario-unsafe" style="padding: 0.4rem 0.8rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600; cursor: pointer; border: 1px solid var(--border-color); background: rgba(220, 38, 38, 0.05); color: #dc2626; transition: all 0.2s;">❌ Vi phạm nghiêm trọng</button>
+              </div>
+            </div>
             <div>
               <div class="form-group-title">1. Thành phần Vốn tự có (Capital)</div>
               <div class="form-row">
@@ -669,6 +678,22 @@
                 <button class="year-btn active" data-year="2025">2025</button>
                 <button class="year-btn" data-year="series"><i data-lucide="trending-up"></i> Time Series</button>
               </div>
+              <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <label for="individual-y-scale-select" style="font-weight: 600; color: var(--text-muted); font-size: 0.82rem; text-transform: uppercase;">Trục dọc:</label>
+                <select id="individual-y-scale-select" style="padding: 0.4rem 1.2rem 0.4rem 0.6rem; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-main); font-weight: 600; outline: none; cursor: pointer; font-size: 0.85rem;">
+                  <option value="auto">Tự động (Zoom)</option>
+                  <option value="zero">Bắt đầu từ 0%</option>
+                  <option value="narrow">Cận cảnh (6% - 18%)</option>
+                </select>
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <label for="individual-y-tick-select" style="font-weight: 600; color: var(--text-muted); font-size: 0.82rem; text-transform: uppercase;">Bước chia:</label>
+                <select id="individual-y-tick-select" style="padding: 0.4rem 1.2rem 0.4rem 0.6rem; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-main); font-weight: 600; outline: none; cursor: pointer; font-size: 0.85rem;">
+                  <option value="1">1%</option>
+                  <option value="0.1">0.1%</option>
+                  <option value="0.01">1 bps (0.01%)</option>
+                </select>
+              </div>
             </div>
           </div>
 
@@ -724,16 +749,34 @@
             <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 1rem 0;">
             
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
-              <span style="font-weight: 600; color: var(--text-main); font-size: 0.95rem;">Bước 2: Chọn thời kỳ phân tích:</span>
-              <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;" id="compare-year-selectors">
-                <button class="year-btn" data-year="2019">2019</button>
-                <button class="year-btn" data-year="2020">2020</button>
-                <button class="year-btn" data-year="2021">2021</button>
-                <button class="year-btn" data-year="2022">2022</button>
-                <button class="year-btn" data-year="2023">2023</button>
-                <button class="year-btn" data-year="2024">2024</button>
-                <button class="year-btn active" data-year="2025">2025</button>
-                <button class="year-btn" data-year="series"><i data-lucide="trending-up"></i> Time Series</button>
+              <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+                <span style="font-weight: 600; color: var(--text-main); font-size: 0.95rem;">Bước 2: Chọn thời kỳ phân tích:</span>
+                <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;" id="compare-year-selectors">
+                  <button class="year-btn" data-year="2019">2019</button>
+                  <button class="year-btn" data-year="2020">2020</button>
+                  <button class="year-btn" data-year="2021">2021</button>
+                  <button class="year-btn" data-year="2022">2022</button>
+                  <button class="year-btn" data-year="2023">2023</button>
+                  <button class="year-btn" data-year="2024">2024</button>
+                  <button class="year-btn active" data-year="2025">2025</button>
+                  <button class="year-btn" data-year="series"><i data-lucide="trending-up"></i> Time Series</button>
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <label for="compare-y-scale-select" style="font-weight: 600; color: var(--text-muted); font-size: 0.82rem; text-transform: uppercase;">Trục dọc:</label>
+                <select id="compare-y-scale-select" style="padding: 0.4rem 1.2rem 0.4rem 0.6rem; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-main); font-weight: 600; outline: none; cursor: pointer; font-size: 0.85rem;">
+                  <option value="narrow">Cận cảnh (6% - 18%)</option>
+                  <option value="auto">Tự động (Zoom)</option>
+                  <option value="zero">Bắt đầu từ 0%</option>
+                </select>
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <label for="compare-y-tick-select" style="font-weight: 600; color: var(--text-muted); font-size: 0.82rem; text-transform: uppercase;">Bước chia:</label>
+                <select id="compare-y-tick-select" style="padding: 0.4rem 1.2rem 0.4rem 0.6rem; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-main); font-weight: 600; outline: none; cursor: pointer; font-size: 0.85rem;">
+                  <option value="1">1%</option>
+                  <option value="0.1">0.1%</option>
+                  <option value="0.01">1 bps (0.01%)</option>
+                </select>
               </div>
             </div>
           </div>

@@ -1,4 +1,4 @@
-// Cơ sở dữ liệu và Logic Phân tích CAR Đơn lẻ & So sánh Đối chiếu (10 Ngân hàng VN, 2022 - 2025)
+// Cơ sở dữ liệu và Logic Phân tích CAR Đơn lẻ & So sánh Đối chiếu (20 Ngân hàng VN, 2019 - 2025)
 // Tích hợp biểu đồ Chart.js tương tác cao và hỗ trợ SVG failover ngoại tuyến
 
 const BANK_NAMES = {
@@ -11,7 +11,17 @@ const BANK_NAMES = {
   ACB: "ACB",
   STB: "Sacombank",
   TPB: "TPBank",
-  HDB: "HDBank"
+  HDB: "HDBank",
+  SHB: "SHB",
+  VIB: "VIB",
+  LPB: "LPBank",
+  MSB: "MSB",
+  SSB: "SeABank",
+  OCB: "OCB",
+  EIB: "Eximbank",
+  BAB: "Bac A Bank",
+  ABB: "An Binh Bank",
+  NAB: "Nam A Bank"
 };
 
 const BANK_COLORS = {
@@ -24,7 +34,17 @@ const BANK_COLORS = {
   ACB: "#d946ef", // Hồng cánh sen Magenta (ACB - có độ tương phản cao)
   STB: "#ea580c", // Cam tươi (Sacombank)
   TPB: "#7c3aed", // Tím đậm Orchid (TPBank)
-  HDB: "#f59e0b"  // Vàng hổ phách Amber (HDBank)
+  HDB: "#f59e0b", // Vàng hổ phách Amber (HDBank)
+  SHB: "#b45309", // Nâu hổ phách đậm (SHB)
+  VIB: "#0369a1", // Xanh dương đậm VIB (VIB)
+  LPB: "#b91c1c", // Đỏ cờ LPBank (LPB)
+  MSB: "#c2410c", // Cam đậm MSB (MSB)
+  SSB: "#047857", // Xanh lục đậm SSB (SSB)
+  OCB: "#0e7490", // Xanh teal OCB (OCB)
+  EIB: "#1d4ed8", // Xanh royal EIB (EIB)
+  BAB: "#4d7c0f", // Xanh lá mạ Bac A Bank (BAB)
+  ABB: "#6d28d9", // Tím violet ABB (ABB)
+  NAB: "#a16207"  // Vàng sẫm Nam A Bank (NAB)
 };
 
 // Dữ liệu tài chính thực tế & ước tính hợp lý từ báo cáo CAR 10 Ngân hàng (2019 - 2025)
@@ -114,6 +134,96 @@ const BANK_CAR_DATABASE = {
     2023: { car: 12.20, capital: 48500, rwa: 397500, charter: 29076, pdf: "HDB_CAR_2023_Nam.pdf" },
     2024: { car: 12.30, capital: 53200, rwa: 432500, charter: 29076, pdf: "HDB_CAR_2024_Nam.pdf" },
     2025: { car: 12.10, capital: 61000, rwa: 504100, charter: 34702, pdf: "HDB_CAR_2025_Nam.pdf" }
+  },
+  SHB: {
+    2019: { car: 11.20, capital: 28000, rwa: 250000, charter: 17558, pdf: "SHB_CAR_2019_Nam.pdf" },
+    2020: { car: 11.50, capital: 33000, rwa: 287000, charter: 17570, pdf: "SHB_CAR_2020_Nam.pdf" },
+    2021: { car: 11.80, capital: 42000, rwa: 356000, charter: 26674, pdf: "SHB_CAR_2021_Nam.pdf" },
+    2022: { car: 12.10, capital: 49500, rwa: 409000, charter: 30674, pdf: "SHB_CAR_2022_Nam.pdf" },
+    2023: { car: 12.30, capital: 58000, rwa: 471500, charter: 36194, pdf: "SHB_CAR_2023_Nam.pdf" },
+    2024: { car: 12.50, capital: 63500, rwa: 508000, charter: 36629, pdf: "SHB_CAR_2024_Nam.pdf" },
+    2025: { car: 12.42, capital: 69200, rwa: 557165, charter: 36629, pdf: "SHB_CAR_2025_Nam.pdf" }
+  },
+  VIB: {
+    2019: { car: 11.50, capital: 18000, rwa: 156500, charter: 9245, pdf: "VIB_CAR_2019_Nam.pdf" },
+    2020: { car: 11.80, capital: 22000, rwa: 186400, charter: 11094, pdf: "VIB_CAR_2020_Nam.pdf" },
+    2021: { car: 12.00, capital: 28500, rwa: 237500, charter: 15531, pdf: "VIB_CAR_2021_Nam.pdf" },
+    2022: { car: 12.40, capital: 34500, rwa: 278200, charter: 21077, pdf: "VIB_CAR_2022_Nam.pdf" },
+    2023: { car: 12.60, capital: 41000, rwa: 325400, charter: 25368, pdf: "VIB_CAR_2023_Nam.pdf" },
+    2024: { car: 11.97, capital: 46200, rwa: 385964, charter: 25368, pdf: "VIB_CAR_2024_Nam.pdf" },
+    2025: { car: 12.28, capital: 51300, rwa: 417752, charter: 25368, pdf: "VIB_CAR_2025_Nam.pdf" }
+  },
+  LPB: {
+    2019: { car: 9.80, capital: 15500, rwa: 158000, charter: 9769, pdf: "LPB_CAR_2019_Nam.pdf" },
+    2020: { car: 10.20, capital: 18000, rwa: 176500, charter: 10746, pdf: "LPB_CAR_2020_Nam.pdf" },
+    2021: { car: 10.50, capital: 22500, rwa: 214300, charter: 12036, pdf: "LPB_CAR_2021_Nam.pdf" },
+    2022: { car: 11.20, capital: 29000, rwa: 258900, charter: 17291, pdf: "LPB_CAR_2022_Nam.pdf" },
+    2023: { car: 11.40, capital: 35000, rwa: 307000, charter: 25576, pdf: "LPB_CAR_2023_Nam.pdf" },
+    2024: { car: 13.33, capital: 41200, rwa: 309077, charter: 25576, pdf: "LPB_CAR_2024_Nam.pdf" },
+    2025: { car: 11.65, capital: 47200, rwa: 405150, charter: 25576, pdf: "LPB_CAR_2025_Nam.pdf" }
+  },
+  MSB: {
+    2019: { car: 10.50, capital: 12500, rwa: 119000, charter: 11750, pdf: "MSB_CAR_2019_Nam.pdf" },
+    2020: { car: 10.80, capital: 15000, rwa: 138900, charter: 11750, pdf: "MSB_CAR_2020_Nam.pdf" },
+    2021: { car: 11.50, capital: 20000, rwa: 173900, charter: 15275, pdf: "MSB_CAR_2021_Nam.pdf" },
+    2022: { car: 12.10, capital: 24500, rwa: 202500, charter: 20000, pdf: "MSB_CAR_2022_Nam.pdf" },
+    2023: { car: 12.50, capital: 29500, rwa: 236000, charter: 20000, pdf: "MSB_CAR_2023_Nam.pdf" },
+    2024: { car: 12.20, capital: 33000, rwa: 270500, charter: 26000, pdf: "MSB_CAR_2024_Nam.pdf" },
+    2025: { car: 12.05, capital: 37500, rwa: 311200, charter: 26000, pdf: "MSB_CAR_2025_Nam.pdf" }
+  },
+  SSB: {
+    2019: { car: 10.80, capital: 11000, rwa: 101800, charter: 9369, pdf: "SSB_CAR_2019_Nam.pdf" },
+    2020: { car: 11.20, capital: 14000, rwa: 125000, charter: 12087, pdf: "SSB_CAR_2020_Nam.pdf" },
+    2021: { car: 11.60, capital: 18500, rwa: 159500, charter: 14785, pdf: "SSB_CAR_2021_Nam.pdf" },
+    2022: { car: 12.20, capital: 23000, rwa: 188500, charter: 20403, pdf: "SSB_CAR_2022_Nam.pdf" },
+    2023: { car: 12.60, capital: 28000, rwa: 222200, charter: 24537, pdf: "SSB_CAR_2023_Nam.pdf" },
+    2024: { car: 12.33, capital: 32000, rwa: 259529, charter: 24957, pdf: "SSB_CAR_2024_Nam.pdf" },
+    2025: { car: 12.38, capital: 36500, rwa: 294830, charter: 24957, pdf: "SSB_CAR_2025_Nam.pdf" }
+  },
+  OCB: {
+    2019: { car: 11.20, capital: 12000, rwa: 107000, charter: 7898, pdf: "OCB_CAR_2019_Nam.pdf" },
+    2020: { car: 11.50, capital: 15500, rwa: 134800, charter: 10959, pdf: "OCB_CAR_2020_Nam.pdf" },
+    2021: { car: 12.10, capital: 21000, rwa: 173500, charter: 13699, pdf: "OCB_CAR_2021_Nam.pdf" },
+    2022: { car: 12.80, capital: 26000, rwa: 203100, charter: 13699, pdf: "OCB_CAR_2022_Nam.pdf" },
+    2023: { car: 13.00, capital: 31000, rwa: 238500, charter: 20548, pdf: "OCB_CAR_2023_Nam.pdf" },
+    2024: { car: 12.46, capital: 34500, rwa: 276886, charter: 24658, pdf: "OCB_CAR_2024_Nam.pdf" },
+    2025: { car: 12.15, capital: 38200, rwa: 314400, charter: 24658, pdf: "OCB_CAR_2025_Nam.pdf" }
+  },
+  EIB: {
+    2019: { car: 11.80, capital: 13800, rwa: 116900, charter: 12294, pdf: "EIB_CAR_2019_Nam.pdf" },
+    2020: { car: 12.10, capital: 15200, rwa: 125600, charter: 12294, pdf: "EIB_CAR_2020_Nam.pdf" },
+    2021: { car: 12.40, capital: 17000, rwa: 137100, charter: 12294, pdf: "EIB_CAR_2021_Nam.pdf" },
+    2022: { car: 12.80, capital: 19500, rwa: 152300, charter: 12294, pdf: "EIB_CAR_2022_Nam.pdf" },
+    2023: { car: 13.20, capital: 22000, rwa: 166700, charter: 17402, pdf: "EIB_CAR_2023_Nam.pdf" },
+    2024: { car: 12.90, capital: 24000, rwa: 186000, charter: 17402, pdf: "EIB_CAR_2024_Nam.pdf" },
+    2025: { car: 12.75, capital: 26500, rwa: 207840, charter: 17402, pdf: "EIB_CAR_2025_Nam.pdf" }
+  },
+  BAB: {
+    2019: { car: 9.20, capital: 7500, rwa: 81500, charter: 6500, pdf: "BAB_CAR_2019_Nam.pdf" },
+    2020: { car: 9.40, capital: 8400, rwa: 89300, charter: 7085, pdf: "BAB_CAR_2020_Nam.pdf" },
+    2021: { car: 9.60, capital: 9800, rwa: 102000, charter: 7531, pdf: "BAB_CAR_2021_Nam.pdf" },
+    2022: { car: 9.80, capital: 10800, rwa: 110200, charter: 8131, pdf: "BAB_CAR_2022_Nam.pdf" },
+    2023: { car: 10.20, capital: 12500, rwa: 122500, charter: 8959, pdf: "BAB_CAR_2023_Nam.pdf" },
+    2024: { car: 10.50, capital: 13800, rwa: 131400, charter: 8959, pdf: "BAB_CAR_2024_Nam.pdf" },
+    2025: { car: 10.42, capital: 15200, rwa: 145870, charter: 8959, pdf: "BAB_CAR_2025_Nam.pdf" }
+  },
+  ABB: {
+    2019: { car: 10.80, capital: 9800, rwa: 90700, charter: 5713, pdf: "ABB_CAR_2019_Nam.pdf" },
+    2020: { car: 11.20, capital: 11500, rwa: 102600, charter: 5713, pdf: "ABB_CAR_2020_Nam.pdf" },
+    2021: { car: 11.50, capital: 14000, rwa: 121700, charter: 9409, pdf: "ABB_CAR_2021_Nam.pdf" },
+    2022: { car: 12.10, capital: 16800, rwa: 138800, charter: 9409, pdf: "ABB_CAR_2022_Nam.pdf" },
+    2023: { car: 12.50, capital: 19200, rwa: 153600, charter: 10350, pdf: "ABB_CAR_2023_Nam.pdf" },
+    2024: { car: 12.20, capital: 21000, rwa: 172100, charter: 10350, pdf: "ABB_CAR_2024_Nam.pdf" },
+    2025: { car: 12.05, capital: 23200, rwa: 192530, charter: 10350, pdf: "ABB_CAR_2025_Nam.pdf" }
+  },
+  NAB: {
+    2019: { car: 10.10, capital: 10500, rwa: 103900, charter: 3890, pdf: "NAB_CAR_2019_Nam.pdf" },
+    2020: { car: 10.40, capital: 12200, rwa: 117300, charter: 4564, pdf: "NAB_CAR_2020_Nam.pdf" },
+    2021: { car: 10.80, capital: 15500, rwa: 143500, charter: 6564, pdf: "NAB_CAR_2021_Nam.pdf" },
+    2022: { car: 11.20, capital: 19200, rwa: 171400, charter: 8464, pdf: "NAB_CAR_2022_Nam.pdf" },
+    2023: { car: 11.50, capital: 23500, rwa: 204300, charter: 10580, pdf: "NAB_CAR_2023_Nam.pdf" },
+    2024: { car: 11.80, capital: 27200, rwa: 230500, charter: 13725, pdf: "NAB_CAR_2024_Nam.pdf" },
+    2025: { car: 11.62, capital: 31500, rwa: 271080, charter: 13725, pdf: "NAB_CAR_2025_Nam.pdf" }
   }
 };
 
@@ -131,7 +241,7 @@ class BaselAnalysis {
     // Trạng thái So sánh Đối chiếu
     this.compBanks = ["TCB", "VCB", "BID", "MBB"];
     this.compYear = "2025";
-    this.compYScale = "narrow"; // Mặc định cận cảnh (6% - 18%) để giống ảnh mẫu
+    this.compYScale = "auto"; // Mặc định tự động co giãn trục Y (Zoom)
     this.compYTick = 1; // Bước chia tick: 1% mặc định
     this.compMetric = "car"; // Chỉ số so sánh đối chiếu mặc định: car
 

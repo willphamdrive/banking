@@ -117,7 +117,81 @@ const DOCS_DATABASE = [
   { id: "hdb_2022", name: "HDB Báo cáo CAR công bố thông tin năm 2022", filename: "HDB_CAR_2022_Nam.pdf", path: "docs/banks/HDB_CAR_2022_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / HDBank (HDB)" },
   { id: "hdb_2023", name: "HDB Báo cáo CAR công bố thông tin năm 2023", filename: "HDB_CAR_2023_Nam.pdf", path: "docs/banks/HDB_CAR_2023_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / HDBank (HDB)" },
   { id: "hdb_2024", name: "HDB Báo cáo CAR công bố thông tin năm 2024", filename: "HDB_CAR_2024_Nam.pdf", path: "docs/banks/HDB_CAR_2024_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / HDBank (HDB)" },
-  { id: "hdb_2025", name: "HDB Báo cáo CAR công bố thông tin năm 2025", filename: "HDB_CAR_2025_Nam.pdf", path: "docs/banks/HDB_CAR_2025_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / HDBank (HDB)" }
+  { id: "hdb_2025", name: "HDB Báo cáo CAR công bố thông tin năm 2025", filename: "HDB_CAR_2025_Nam.pdf", path: "docs/banks/HDB_CAR_2025_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / HDBank (HDB)" },
+
+  // SHB
+  { id: "shb_2020", name: "SHB Báo cáo CAR công bố thông tin năm 2020", filename: "SHB_CAR_2020_Nam.pdf", path: "docs/banks/SHB_CAR_2020_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / SHB (SHB)" },
+  { id: "shb_2021", name: "SHB Báo cáo CAR công bố thông tin năm 2021", filename: "SHB_CAR_2021_Nam.pdf", path: "docs/banks/SHB_CAR_2021_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / SHB (SHB)" },
+  { id: "shb_2022", name: "SHB Báo cáo CAR công bố thông tin năm 2022", filename: "SHB_CAR_2022_Nam.pdf", path: "docs/banks/SHB_CAR_2022_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / SHB (SHB)" },
+  { id: "shb_2023", name: "SHB Báo cáo CAR công bố thông tin năm 2023", filename: "SHB_CAR_2023_Nam.pdf", path: "docs/banks/SHB_CAR_2023_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / SHB (SHB)" },
+  { id: "shb_2024", name: "SHB Báo cáo CAR công bố thông tin năm 2024", filename: "SHB_CAR_2024_Nam.pdf", path: "docs/banks/SHB_CAR_2024_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / SHB (SHB)" },
+  { id: "shb_2025", name: "SHB Báo cáo CAR công bố thông tin năm 2025", filename: "SHB_CAR_2025_Nam.pdf", path: "docs/banks/SHB_CAR_2025_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / SHB (SHB)" },
+
+  // VIB
+  { id: "vib_2019", name: "VIB Báo cáo CAR công bố thông tin năm 2019", filename: "VIB_CAR_2019_Nam.pdf", path: "docs/banks/VIB_CAR_2019_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / VIB (VIB)" },
+  { id: "vib_2020", name: "VIB Báo cáo CAR công bố thông tin năm 2020", filename: "VIB_CAR_2020_Nam.pdf", path: "docs/banks/VIB_CAR_2020_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / VIB (VIB)" },
+  { id: "vib_2021", name: "VIB Báo cáo CAR công bố thông tin năm 2021", filename: "VIB_CAR_2021_Nam.pdf", path: "docs/banks/VIB_CAR_2021_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / VIB (VIB)" },
+  { id: "vib_2022", name: "VIB Báo cáo CAR công bố thông tin năm 2022", filename: "VIB_CAR_2022_Nam.pdf", path: "docs/banks/VIB_CAR_2022_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / VIB (VIB)" },
+  { id: "vib_2023", name: "VIB Báo cáo CAR công bố thông tin năm 2023", filename: "VIB_CAR_2023_Nam.pdf", path: "docs/banks/VIB_CAR_2023_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / VIB (VIB)" },
+  { id: "vib_2024", name: "VIB Báo cáo CAR công bố thông tin năm 2024", filename: "VIB_CAR_2024_Nam.pdf", path: "docs/banks/VIB_CAR_2024_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / VIB (VIB)" },
+
+  // LPBank
+  { id: "lpb_2020", name: "LPB Báo cáo CAR công bố thông tin năm 2020", filename: "LPB_CAR_2020_Nam.pdf", path: "docs/banks/LPB_CAR_2020_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / LPBank (LPB)" },
+  { id: "lpb_2021", name: "LPB Báo cáo CAR công bố thông tin năm 2021", filename: "LPB_CAR_2021_Nam.pdf", path: "docs/banks/LPB_CAR_2021_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / LPBank (LPB)" },
+  { id: "lpb_2022", name: "LPB Báo cáo CAR công bố thông tin năm 2022", filename: "LPB_CAR_2022_Nam.pdf", path: "docs/banks/LPB_CAR_2022_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / LPBank (LPB)" },
+  { id: "lpb_2023", name: "LPB Báo cáo CAR công bố thông tin năm 2023", filename: "LPB_CAR_2023_Nam.pdf", path: "docs/banks/LPB_CAR_2023_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / LPBank (LPB)" },
+  { id: "lpb_2024", name: "LPB Báo cáo CAR công bố thông tin năm 2024", filename: "LPB_CAR_2024_Nam.pdf", path: "docs/banks/LPB_CAR_2024_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / LPBank (LPB)" },
+  { id: "lpb_2025", name: "LPB Báo cáo CAR công bố thông tin năm 2025", filename: "LPB_CAR_2025_Nam.pdf", path: "docs/banks/LPB_CAR_2025_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / LPBank (LPB)" },
+
+  // MSB
+
+  // SeABank
+  { id: "ssb_2020", name: "SSB Báo cáo CAR công bố thông tin năm 2020", filename: "SSB_CAR_2020_Nam.pdf", path: "docs/banks/SSB_CAR_2020_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / SeABank (SSB)" },
+  { id: "ssb_2021", name: "SSB Báo cáo CAR công bố thông tin năm 2021", filename: "SSB_CAR_2021_Nam.pdf", path: "docs/banks/SSB_CAR_2021_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / SeABank (SSB)" },
+  { id: "ssb_2022", name: "SSB Báo cáo CAR công bố thông tin năm 2022", filename: "SSB_CAR_2022_Nam.pdf", path: "docs/banks/SSB_CAR_2022_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / SeABank (SSB)" },
+  { id: "ssb_2023", name: "SSB Báo cáo CAR công bố thông tin năm 2023", filename: "SSB_CAR_2023_Nam.pdf", path: "docs/banks/SSB_CAR_2023_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / SeABank (SSB)" },
+  { id: "ssb_2024", name: "SSB Báo cáo CAR công bố thông tin năm 2024", filename: "SSB_CAR_2024_Nam.pdf", path: "docs/banks/SSB_CAR_2024_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / SeABank (SSB)" },
+  { id: "ssb_2025", name: "SSB Báo cáo CAR công bố thông tin năm 2025", filename: "SSB_CAR_2025_Nam.pdf", path: "docs/banks/SSB_CAR_2025_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / SeABank (SSB)" },
+
+  // OCB
+  { id: "ocb_2019", name: "OCB Báo cáo CAR công bố thông tin năm 2019", filename: "OCB_CAR_2019_Nam.pdf", path: "docs/banks/OCB_CAR_2019_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / OCB (OCB)" },
+  { id: "ocb_2020", name: "OCB Báo cáo CAR công bố thông tin năm 2020", filename: "OCB_CAR_2020_Nam.pdf", path: "docs/banks/OCB_CAR_2020_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / OCB (OCB)" },
+  { id: "ocb_2021", name: "OCB Báo cáo CAR công bố thông tin năm 2021", filename: "OCB_CAR_2021_Nam.pdf", path: "docs/banks/OCB_CAR_2021_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / OCB (OCB)" },
+  { id: "ocb_2022", name: "OCB Báo cáo CAR công bố thông tin năm 2022", filename: "OCB_CAR_2022_Nam.pdf", path: "docs/banks/OCB_CAR_2022_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / OCB (OCB)" },
+  { id: "ocb_2023", name: "OCB Báo cáo CAR công bố thông tin năm 2023", filename: "OCB_CAR_2023_Nam.pdf", path: "docs/banks/OCB_CAR_2023_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / OCB (OCB)" },
+  { id: "ocb_2024", name: "OCB Báo cáo CAR công bố thông tin năm 2024", filename: "OCB_CAR_2024_Nam.pdf", path: "docs/banks/OCB_CAR_2024_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / OCB (OCB)" },
+  { id: "ocb_2025", name: "OCB Báo cáo CAR công bố thông tin năm 2025", filename: "OCB_CAR_2025_Nam.pdf", path: "docs/banks/OCB_CAR_2025_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / OCB (OCB)" },
+
+  // Eximbank
+  { id: "eib_2021", name: "EIB Báo cáo CAR công bố thông tin năm 2021", filename: "EIB_CAR_2021_Nam.pdf", path: "docs/banks/EIB_CAR_2021_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / Eximbank (EIB)" },
+  { id: "eib_2022", name: "EIB Báo cáo CAR công bố thông tin năm 2022", filename: "EIB_CAR_2022_Nam.pdf", path: "docs/banks/EIB_CAR_2022_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / Eximbank (EIB)" },
+  { id: "eib_2023", name: "EIB Báo cáo CAR công bố thông tin năm 2023", filename: "EIB_CAR_2023_Nam.pdf", path: "docs/banks/EIB_CAR_2023_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / Eximbank (EIB)" },
+  { id: "eib_2024", name: "EIB Báo cáo CAR công bố thông tin năm 2024", filename: "EIB_CAR_2024_Nam.pdf", path: "docs/banks/EIB_CAR_2024_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / Eximbank (EIB)" },
+  { id: "eib_2025", name: "EIB Báo cáo CAR công bố thông tin năm 2025", filename: "EIB_CAR_2025_Nam.pdf", path: "docs/banks/EIB_CAR_2025_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / Eximbank (EIB)" },
+
+  // Bac A Bank
+  { id: "bab_2020", name: "BAB Báo cáo CAR công bố thông tin năm 2020", filename: "BAB_CAR_2020_Nam.pdf", path: "docs/banks/BAB_CAR_2020_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / Bac A Bank (BAB)" },
+  { id: "bab_2021", name: "BAB Báo cáo CAR công bố thông tin năm 2021", filename: "BAB_CAR_2021_Nam.pdf", path: "docs/banks/BAB_CAR_2021_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / Bac A Bank (BAB)" },
+  { id: "bab_2022", name: "BAB Báo cáo CAR công bố thông tin năm 2022", filename: "BAB_CAR_2022_Nam.pdf", path: "docs/banks/BAB_CAR_2022_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / Bac A Bank (BAB)" },
+  { id: "bab_2023", name: "BAB Báo cáo CAR công bố thông tin năm 2023", filename: "BAB_CAR_2023_Nam.pdf", path: "docs/banks/BAB_CAR_2023_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / Bac A Bank (BAB)" },
+  { id: "bab_2024", name: "BAB Báo cáo CAR công bố thông tin năm 2024", filename: "BAB_CAR_2024_Nam.pdf", path: "docs/banks/BAB_CAR_2024_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / Bac A Bank (BAB)" },
+  { id: "bab_2025", name: "BAB Báo cáo CAR công bố thông tin năm 2025", filename: "BAB_CAR_2025_Nam.pdf", path: "docs/banks/BAB_CAR_2025_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / Bac A Bank (BAB)" },
+
+  // An Binh Bank
+  { id: "abb_2020", name: "ABB Báo cáo CAR công bố thông tin năm 2020", filename: "ABB_CAR_2020_Nam.pdf", path: "docs/banks/ABB_CAR_2020_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / An Binh Bank (ABB)" },
+  { id: "abb_2021", name: "ABB Báo cáo CAR công bố thông tin năm 2021", filename: "ABB_CAR_2021_Nam.pdf", path: "docs/banks/ABB_CAR_2021_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / An Binh Bank (ABB)" },
+  { id: "abb_2022", name: "ABB Báo cáo CAR công bố thông tin năm 2022", filename: "ABB_CAR_2022_Nam.pdf", path: "docs/banks/ABB_CAR_2022_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / An Binh Bank (ABB)" },
+  { id: "abb_2023", name: "ABB Báo cáo CAR công bố thông tin năm 2023", filename: "ABB_CAR_2023_Nam.pdf", path: "docs/banks/ABB_CAR_2023_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / An Binh Bank (ABB)" },
+  { id: "abb_2024", name: "ABB Báo cáo CAR công bố thông tin năm 2024", filename: "ABB_CAR_2024_Nam.pdf", path: "docs/banks/ABB_CAR_2024_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / An Binh Bank (ABB)" },
+  { id: "abb_2025", name: "ABB Báo cáo CAR công bố thông tin năm 2025", filename: "ABB_CAR_2025_Nam.pdf", path: "docs/banks/ABB_CAR_2025_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / An Binh Bank (ABB)" },
+
+  // Nam A Bank
+  { id: "nab_2020", name: "NAB Báo cáo CAR công bố thông tin năm 2020", filename: "NAB_CAR_2020_Nam.pdf", path: "docs/banks/NAB_CAR_2020_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / Nam A Bank (NAB)" },
+  { id: "nab_2021", name: "NAB Báo cáo CAR công bố thông tin năm 2021", filename: "NAB_CAR_2021_Nam.pdf", path: "docs/banks/NAB_CAR_2021_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / Nam A Bank (NAB)" },
+  { id: "nab_2022", name: "NAB Báo cáo CAR công bố thông tin năm 2022", filename: "NAB_CAR_2022_Nam.pdf", path: "docs/banks/NAB_CAR_2022_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / Nam A Bank (NAB)" },
+  { id: "nab_2023", name: "NAB Báo cáo CAR công bố thông tin năm 2023", filename: "NAB_CAR_2023_Nam.pdf", path: "docs/banks/NAB_CAR_2023_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / Nam A Bank (NAB)" },
+  { id: "nab_2024", name: "NAB Báo cáo CAR công bố thông tin năm 2024", filename: "NAB_CAR_2024_Nam.pdf", path: "docs/banks/NAB_CAR_2024_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / Nam A Bank (NAB)" },
+  { id: "nab_2025", name: "NAB Báo cáo CAR công bố thông tin năm 2025", filename: "NAB_CAR_2025_Nam.pdf", path: "docs/banks/NAB_CAR_2025_Nam.pdf", type: "banks", folder: "Báo cáo CAR Ngân hàng / Nam A Bank (NAB)" }
 ];
 
 class DocumentFinder {
@@ -362,7 +436,31 @@ class DocumentFinder {
         // Trích xuất năm từ tên file hoặc tên hiển thị (tìm chuỗi 4 chữ số, e.g. 1988, 2019)
         const yearMatch = doc.filename.match(/\d{4}/) || doc.name.match(/\d{4}/);
         const year = yearMatch ? yearMatch[0] : "";
-        const displayName = year ? `[${year}] ${doc.name}` : doc.name;
+        
+        let period = "";
+        const fnLower = doc.filename.toLowerCase();
+        if (fnLower.includes("_nam")) {
+          period = "Năm";
+        } else if (fnLower.includes("_6t") || fnLower.includes("_bannien")) {
+          period = "Bán niên";
+        } else if (fnLower.includes("_q1")) {
+          period = "Quý 1";
+        } else if (fnLower.includes("_q3")) {
+          period = "Quý 3";
+        } else if (fnLower.includes("_q2")) {
+          period = "Quý 2";
+        } else if (fnLower.includes("_q4")) {
+          period = "Quý 4";
+        }
+
+        let prefix = "";
+        if (period && year) {
+          prefix = `[${period} - ${year}]`;
+        } else if (year) {
+          prefix = `[${year}]`;
+        }
+        
+        const displayName = prefix ? `${prefix} ${doc.name}` : doc.name;
 
         return `
           <div class="doc-file-item open-btn" data-docpath="${doc.path}" data-docname="${displayName}">

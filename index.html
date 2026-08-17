@@ -938,6 +938,16 @@
                   <option value="STB">Sacombank (STB)</option>
                   <option value="TPB">TPBank (TPB)</option>
                   <option value="HDB">HDBank (HDB)</option>
+                  <option value="SHB">SHB (SHB)</option>
+                  <option value="VIB">VIB (VIB)</option>
+                  <option value="LPB">LPBank (LPB)</option>
+                  <option value="MSB">MSB (MSB)</option>
+                  <option value="SSB">SeABank (SSB)</option>
+                  <option value="OCB">OCB (OCB)</option>
+                  <option value="EIB">Eximbank (EIB)</option>
+                  <option value="BAB">Bac A Bank (BAB)</option>
+                  <option value="ABB">An Binh Bank (ABB)</option>
+                  <option value="NAB">Nam A Bank (NAB)</option>
                 </select>
               </div>
               <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;" id="analysis-year-selectors">
@@ -963,6 +973,7 @@
                 <select id="individual-y-tick-select" style="padding: 0.4rem 1.2rem 0.4rem 0.6rem; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-main); font-weight: 600; outline: none; cursor: pointer; font-size: 0.85rem;">
                   <option value="1">1%</option>
                   <option value="0.1">0.1%</option>
+                  <option value="0.05">5 bps (0.05%)</option>
                   <option value="0.01">1 bps (0.01%)</option>
                 </select>
               </div>
@@ -1016,6 +1027,36 @@
               <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
                 <input type="checkbox" value="HDB" style="accent-color: var(--primary);"> HDBank (HDB)
               </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="SHB" style="accent-color: var(--primary);"> SHB (SHB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="VIB" style="accent-color: var(--primary);"> VIB (VIB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="LPB" style="accent-color: var(--primary);"> LPBank (LPB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="MSB" style="accent-color: var(--primary);"> MSB (MSB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="SSB" style="accent-color: var(--primary);"> SeABank (SSB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="OCB" style="accent-color: var(--primary);"> OCB (OCB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="EIB" style="accent-color: var(--primary);"> Eximbank (EIB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="BAB" style="accent-color: var(--primary);"> Bac A Bank (BAB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="ABB" style="accent-color: var(--primary);"> An Binh Bank (ABB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="NAB" style="accent-color: var(--primary);"> Nam A Bank (NAB)
+              </label>
             </div>
             
             <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 1rem 0;">
@@ -1037,8 +1078,8 @@
               <div style="display: flex; align-items: center; gap: 0.5rem;">
                 <label for="compare-y-scale-select" style="font-weight: 600; color: var(--text-muted); font-size: 0.82rem; text-transform: uppercase;">Trục dọc:</label>
                 <select id="compare-y-scale-select" style="padding: 0.4rem 1.2rem 0.4rem 0.6rem; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-main); font-weight: 600; outline: none; cursor: pointer; font-size: 0.85rem;">
+                  <option value="auto" selected>Tự động (Zoom)</option>
                   <option value="narrow">Cận cảnh (6% - 18%)</option>
-                  <option value="auto">Tự động (Zoom)</option>
                   <option value="zero">Bắt đầu từ 0%</option>
                 </select>
               </div>
@@ -1047,6 +1088,7 @@
                 <select id="compare-y-tick-select" style="padding: 0.4rem 1.2rem 0.4rem 0.6rem; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-main); font-weight: 600; outline: none; cursor: pointer; font-size: 0.85rem;">
                   <option value="1">1%</option>
                   <option value="0.1">0.1%</option>
+                  <option value="0.05">5 bps (0.05%)</option>
                   <option value="0.01">1 bps (0.01%)</option>
                 </select>
               </div>

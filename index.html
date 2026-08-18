@@ -33,12 +33,6 @@
       
       <nav class="nav-menu">
         <li>
-          <a href="#dashboard" class="nav-item active">
-            <i data-lucide="layout-dashboard"></i>
-            <span>Tổng quan (Dashboard)</span>
-          </a>
-        </li>
-        <li>
           <a href="#basel" class="nav-item">
             <i data-lucide="landmark"></i>
             <span>Hiệp ước Basel</span>
@@ -51,9 +45,15 @@
           </a>
         </li>
         <li>
-          <a href="#bank-analysis" class="nav-item">
+          <a href="#bank-analysis" class="nav-item active">
             <i data-lucide="trending-up"></i>
             <span>Phân tích CAR Ngân hàng</span>
+          </a>
+        </li>
+        <li>
+          <a href="#financial-analysis" class="nav-item">
+            <i data-lucide="file-text"></i>
+            <span>Phân tích BCTC</span>
           </a>
         </li>
         <li>
@@ -80,107 +80,7 @@
         <i data-lucide="menu"></i>
       </button>
       
-      <!-- 1. DASHBOARD SECTION -->
-      <section id="dashboard-section" class="content-section">
-        <header>
-          <h1>Học tập & Thực hành Hiệp ước Basel</h1>
-          <p>Tìm hiểu lịch sử tiến hóa, các nguyên tắc cốt lõi và thực hành đo lường tỷ lệ an toàn vốn (CAR) trong hệ thống ngân hàng thương mại.</p>
-        </header>
 
-        <div class="dashboard-grid">
-          <!-- Hero Card -->
-          <div class="intro-card card">
-            <div class="intro-content">
-              <h2>Ủy ban Basel là gì?</h2>
-              <p>
-                Ủy ban Basel về Giám sát Ngân hàng (BCBS - Basel Committee on Banking Supervision) được thành lập năm 1974 bởi Thống đốc Ngân hàng Trung ương nhóm các nước G10. 
-                Ủy ban ban hành các quy định về an toàn vốn ngân hàng nhằm đảm bảo sự ổn định của hệ thống tài chính toàn cầu trước các rủi ro.
-              </p>
-            </div>
-            <div class="intro-illustration">🏦</div>
-          </div>
-
-          <!-- Nav Card 1 -->
-          <div class="menu-card card" data-target="timeline">
-            <div class="menu-card-header">
-              <div class="menu-icon-box"><i data-lucide="milestone"></i></div>
-              <h3>Dòng thời gian tiến hóa</h3>
-            </div>
-            <p>Khám phá lịch sử phát triển từ Basel I (1988), Basel II (2004), Basel III (2010) đến những cải cách Basel IV (2023+).</p>
-            <span class="arrow-link">Khám phá ngay <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i></span>
-          </div>
-
-          <!-- Nav Card 2 -->
-          <div class="menu-card card" data-target="pillars">
-            <div class="menu-card-header">
-              <div class="menu-icon-box"><i data-lucide="columns-3"></i></div>
-              <h3>Các Trụ cột Basel</h3>
-            </div>
-            <p>Tìm hiểu sâu cấu trúc 3 Trụ cột cốt lõi của Basel II & III: Yêu cầu vốn tối thiểu, Giám sát của cơ quan quản lý, và Kỷ luật thị trường.</p>
-            <span class="arrow-link">Xem chi tiết <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i></span>
-          </div>
-
-          <!-- Nav Card 3 -->
-          <div class="menu-card card" data-target="comparison">
-            <div class="menu-card-header">
-              <div class="menu-icon-box"><i data-lucide="git-compare"></i></div>
-              <h3>Bảng so sánh đối chiếu</h3>
-            </div>
-            <p>Xem tóm tắt so sánh trực quan các thay đổi chủ chốt giữa các phiên bản về tỷ lệ vốn, rủi ro điều chỉnh và các tỷ lệ thanh khoản LCR/NSFR.</p>
-            <span class="arrow-link">Xem so sánh <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i></span>
-          </div>
-
-          <!-- Nav Card 4 -->
-          <div class="menu-card card" data-target="calculator">
-            <div class="menu-card-header">
-              <div class="menu-icon-box"><i data-lucide="calculator"></i></div>
-              <h3>Bộ tính CAR mô phỏng</h3>
-            </div>
-            <p>Thực hành nhập số liệu vốn tự có và cơ cấu tài sản rủi ro (RWA) để tự động tính tỷ lệ CAR ngân hàng và đánh giá tuân thủ.</p>
-            <span class="arrow-link">Thực hành tính <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i></span>
-          </div>
-
-          <!-- Nav Card 5 -->
-          <div class="menu-card card" data-target="quiz">
-            <div class="menu-card-header">
-              <div class="menu-icon-box"><i data-lucide="help-circle"></i></div>
-              <h3>Trắc nghiệm kiến thức</h3>
-            </div>
-            <p>Đánh giá lại mức độ hiểu biết của bạn thông qua bộ câu hỏi trắc nghiệm chất lượng kèm giải thích học thuật trực quan chi tiết.</p>
-            <span class="arrow-link">Làm bài test <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i></span>
-          </div>
-
-          <!-- Nav Card 6 -->
-          <div class="menu-card card" data-target="laws">
-            <div class="menu-card-header">
-              <div class="menu-icon-box"><i data-lucide="scale"></i></div>
-              <h3>Luật Ngân hàng VN</h3>
-            </div>
-            <p>Học tập hệ thống pháp luật ngân hàng Việt Nam: Luật Các TCTD 2024, Luật NHNN và các Thông tư an toàn hoạt động của NHNN.</p>
-            <span class="arrow-link">Xem văn bản <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i></span>
-          </div>
-
-          <!-- Nav Card 7 -->
-          <div class="menu-card card" data-target="bank-analysis">
-            <div class="menu-card-header">
-              <div class="menu-icon-box"><i data-lucide="trending-up"></i></div>
-              <h3>Phân tích CAR 2025</h3>
-            </div>
-            <p>Phân tích chi tiết hệ số an toàn vốn thực tế của Techcombank vs Vietcombank năm 2025 và sự liên hệ với các quy định pháp luật Việt Nam & Basel.</p>
-            <span class="arrow-link">Xem phân tích <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i></span>
-          </div>
-
-          <!-- Nav Card 8 -->
-          <div class="menu-card card" data-target="glossary">
-            <div class="menu-card-header">
-              <div class="menu-icon-box"><i data-lucide="book-open"></i></div>
-              <h3>Phụ lục thuật ngữ</h3>
-            </div>
-            <p>Giải nghĩa tường tận tất cả các định nghĩa, thuật ngữ chuyên ngành tài chính ngân hàng và cơ chế đo lường rủi ro theo chuẩn Basel & Việt Nam.</p>
-            <span class="arrow-link">Xem thuật ngữ <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i></span>
-          </div>
-        </div>
-      </section>
 
       <!-- BASEL ACADEMY CONSOLIDATED SECTION -->
       <section id="basel-section" class="content-section hidden">
@@ -904,7 +804,7 @@
       </section>
 
       <!-- 8. BANK ANALYSIS SECTION -->
-      <section id="bank-analysis-section" class="content-section hidden">
+      <section id="bank-analysis-section" class="content-section">
         <div class="section-header">
           <h2>Phân tích & So sánh CAR Ngân hàng</h2>
           <p>Hệ thống phân tích chỉ số an toàn vốn (CAR) của 10 ngân hàng thương mại Việt Nam. Hỗ trợ tra cứu chi tiết từng ngân hàng hoặc so sánh chuỗi thời gian.</p>
@@ -912,22 +812,34 @@
 
         <!-- Sub-tabs navigation -->
         <div class="sub-tabs-container" style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; flex-wrap: wrap;">
-          <button class="sub-tab-btn active" data-subtab="individual">
-            <i data-lucide="building-2"></i> Phân tích Đơn lẻ
+          <button class="sub-tab-btn active" data-subtab="car-analysis">
+            <i data-lucide="landmark"></i> Phân tích CAR
           </button>
-          <button class="sub-tab-btn" data-subtab="compare">
-            <i data-lucide="git-compare"></i> So sánh Đối chiếu
+          <button class="sub-tab-btn" data-subtab="regulatory-ratios">
+            <i data-lucide="clipboard-check"></i> Các Tỷ lệ An toàn khác (BCTC)
           </button>
         </div>
 
-        <!-- PAGE 1: INDIVIDUAL BANK ANALYSIS -->
-        <div id="individual-tab-content" class="sub-tab-panel">
-          <!-- Control box -->
-          <div class="card" style="margin-bottom: 1.5rem;">
-            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
-              <div style="display: flex; align-items: center; gap: 0.75rem;">
-                <label for="analysis-bank-select" style="font-weight: 600; color: var(--text-main); font-size: 0.95rem;">Ngân hàng:</label>
-                <select id="analysis-bank-select" style="padding: 0.5rem 1.5rem 0.5rem 0.75rem; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-main); font-weight: 600; outline: none; cursor: pointer;">
+        <!-- PAGE 1: CAR ANALYSIS -->
+        <div id="car-analysis-tab-content" class="sub-tab-panel">
+          <!-- CAR Sub-tabs navigation -->
+          <div class="car-sub-tabs-container" style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; flex-wrap: wrap;">
+            <button class="car-sub-tab-btn active" data-carsub="individual" style="padding: 0.45rem 1rem; border-radius: 6px; font-weight: 600; font-size: 0.85rem; border: none; background: var(--primary); color: white; cursor: pointer; display: flex; align-items: center; gap: 0.35rem;">
+              <i data-lucide="building-2" style="width:15px;height:15px;"></i> Phân tích Đơn lẻ
+            </button>
+            <button class="car-sub-tab-btn" data-carsub="compare" style="padding: 0.45rem 1rem; border-radius: 6px; font-weight: 600; font-size: 0.85rem; border: none; background: rgba(255,255,255,0.05); color: var(--text-muted); cursor: pointer; margin-left: 0.25rem; display: flex; align-items: center; gap: 0.35rem;">
+              <i data-lucide="git-compare" style="width:15px;height:15px;"></i> So sánh Đối chiếu
+            </button>
+          </div>
+
+          <!-- CAR INDIVIDUAL PANEL -->
+          <div id="car-individual-panel">
+            <!-- Control box -->
+            <div class="card" style="margin-bottom: 1.5rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                  <label for="analysis-bank-select" style="font-weight: 600; color: var(--text-main); font-size: 0.95rem;">Ngân hàng:</label>
+                  <select id="analysis-bank-select" style="padding: 0.5rem 1.5rem 0.5rem 0.75rem; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-main); font-weight: 600; outline: none; cursor: pointer;">
                   <option value="TCB">Techcombank (TCB)</option>
                   <option value="VCB">Vietcombank (VCB)</option>
                   <option value="BID">BIDV (BID)</option>
@@ -949,54 +861,56 @@
                   <option value="ABB">An Binh Bank (ABB)</option>
                   <option value="NAB">Nam A Bank (NAB)</option>
                 </select>
+                </div>
+                <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;" id="analysis-year-selectors">
+                  <button class="year-btn" data-year="2019">2019</button>
+                  <button class="year-btn" data-year="2020">2020</button>
+                  <button class="year-btn" data-year="2021">2021</button>
+                  <button class="year-btn" data-year="2022">2022</button>
+                  <button class="year-btn" data-year="2023">2023</button>
+                  <button class="year-btn" data-year="2024">2024</button>
+                  <button class="year-btn active" data-year="2025">2025</button>
+                  <button class="year-btn" data-year="series"><i data-lucide="trending-up"></i> Time Series</button>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+                  <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <label for="individual-y-scale-select" style="font-weight: 600; color: var(--text-muted); font-size: 0.82rem; text-transform: uppercase;">Trục dọc:</label>
+                    <select id="individual-y-scale-select" style="padding: 0.4rem 1.2rem 0.4rem 0.6rem; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-main); font-weight: 600; outline: none; cursor: pointer; font-size: 0.85rem;">
+                      <option value="auto">Tự động (Zoom)</option>
+                      <option value="zero">Bắt đầu từ 0%</option>
+                      <option value="narrow">Cận cảnh (6% - 18%)</option>
+                    </select>
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <label for="individual-y-tick-select" style="font-weight: 600; color: var(--text-muted); font-size: 0.82rem; text-transform: uppercase;">Bước chia:</label>
+                    <select id="individual-y-tick-select" style="padding: 0.4rem 1.2rem 0.4rem 0.6rem; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-main); font-weight: 600; outline: none; cursor: pointer; font-size: 0.85rem;">
+                      <option value="1">1%</option>
+                      <option value="0.1">0.1%</option>
+                      <option value="0.05">5 bps (0.05%)</option>
+                      <option value="0.01">1 bps (0.01%)</option>
+                    </select>
+                  </div>
+                </div>
               </div>
-              <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;" id="analysis-year-selectors">
-                <button class="year-btn" data-year="2019">2019</button>
-                <button class="year-btn" data-year="2020">2020</button>
-                <button class="year-btn" data-year="2021">2021</button>
-                <button class="year-btn" data-year="2022">2022</button>
-                <button class="year-btn" data-year="2023">2023</button>
-                <button class="year-btn" data-year="2024">2024</button>
-                <button class="year-btn active" data-year="2025">2025</button>
-                <button class="year-btn" data-year="series"><i data-lucide="trending-up"></i> Time Series</button>
-              </div>
-              <div style="display: flex; align-items: center; gap: 0.5rem;">
-                <label for="individual-y-scale-select" style="font-weight: 600; color: var(--text-muted); font-size: 0.82rem; text-transform: uppercase;">Trục dọc:</label>
-                <select id="individual-y-scale-select" style="padding: 0.4rem 1.2rem 0.4rem 0.6rem; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-main); font-weight: 600; outline: none; cursor: pointer; font-size: 0.85rem;">
-                  <option value="auto">Tự động (Zoom)</option>
-                  <option value="zero">Bắt đầu từ 0%</option>
-                  <option value="narrow">Cận cảnh (6% - 18%)</option>
-                </select>
-              </div>
-              <div style="display: flex; align-items: center; gap: 0.5rem;">
-                <label for="individual-y-tick-select" style="font-weight: 600; color: var(--text-muted); font-size: 0.82rem; text-transform: uppercase;">Bước chia:</label>
-                <select id="individual-y-tick-select" style="padding: 0.4rem 1.2rem 0.4rem 0.6rem; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-main); font-weight: 600; outline: none; cursor: pointer; font-size: 0.85rem;">
-                  <option value="1">1%</option>
-                  <option value="0.1">0.1%</option>
-                  <option value="0.05">5 bps (0.05%)</option>
-                  <option value="0.01">1 bps (0.01%)</option>
-                </select>
-              </div>
+            </div>
+
+            <!-- Target Render Container for Individual Analysis -->
+            <div id="individual-analysis-render">
+              <!-- Rendered dynamically by js/analysis.js -->
             </div>
           </div>
 
-          <!-- Target Render Container for Individual Analysis -->
-          <div id="individual-analysis-render">
-            <!-- Rendered dynamically by js/analysis.js -->
-          </div>
-        </div>
-
-        <!-- PAGE 2: MULTI-BANK COMPARISON -->
-        <div id="compare-tab-content" class="sub-tab-panel hidden">
-          <!-- Control box -->
-          <div class="card" style="margin-bottom: 1.5rem;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
-              <h4 style="margin: 0; font-size: 0.95rem; color: var(--text-muted);">Bước 1: Chọn các ngân hàng cần so sánh (tối thiểu 2)</h4>
-              <label style="display: flex; align-items: center; gap: 0.35rem; cursor: pointer; font-weight: 600; font-size: 0.85rem; color: var(--primary);">
-                <input type="checkbox" id="compare-select-all" style="accent-color: var(--primary);"> Chọn tất cả
-              </label>
-            </div>
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 0.75rem; margin-bottom: 1.25rem;" id="compare-banks-checkboxes">
+          <!-- CAR COMPARE PANEL -->
+          <div id="car-compare-panel" class="hidden">
+            <!-- Control box -->
+            <div class="card" style="margin-bottom: 1.5rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+                <h4 style="margin: 0; font-size: 0.95rem; color: var(--text-muted);">Bước 1: Chọn các ngân hàng cần so sánh (tối thiểu 2)</h4>
+                <label style="display: flex; align-items: center; gap: 0.35rem; cursor: pointer; font-weight: 600; font-size: 0.85rem; color: var(--primary);">
+                  <input type="checkbox" id="compare-select-all" style="accent-color: var(--primary);"> Chọn tất cả
+                </label>
+              </div>
+              <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 0.75rem; margin-bottom: 1.25rem;" id="compare-banks-checkboxes">
               <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
                 <input type="checkbox" value="TCB" checked style="accent-color: var(--primary);"> Techcombank (TCB)
               </label>
@@ -1058,13 +972,142 @@
                 <input type="checkbox" value="NAB" style="accent-color: var(--primary);"> Nam A Bank (NAB)
               </label>
             </div>
+              
+              <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 1rem 0;">
+              
+              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+                  <span style="font-weight: 600; color: var(--text-main); font-size: 0.95rem;">Bước 2: Chọn thời kỳ phân tích:</span>
+                  <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;" id="compare-year-selectors">
+                    <button class="year-btn" data-year="2019">2019</button>
+                    <button class="year-btn" data-year="2020">2020</button>
+                    <button class="year-btn" data-year="2021">2021</button>
+                    <button class="year-btn" data-year="2022">2022</button>
+                    <button class="year-btn" data-year="2023">2023</button>
+                    <button class="year-btn" data-year="2024">2024</button>
+                    <button class="year-btn active" data-year="2025">2025</button>
+                    <button class="year-btn" data-year="series"><i data-lucide="trending-up"></i> Time Series</button>
+                  </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+                  <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <label for="compare-y-scale-select" style="font-weight: 600; color: var(--text-muted); font-size: 0.82rem; text-transform: uppercase;">Trục dọc:</label>
+                    <select id="compare-y-scale-select" style="padding: 0.4rem 1.2rem 0.4rem 0.6rem; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-main); font-weight: 600; outline: none; cursor: pointer; font-size: 0.85rem;">
+                      <option value="auto" selected>Tự động (Zoom)</option>
+                      <option value="narrow">Cận cảnh (6% - 18%)</option>
+                      <option value="zero">Bắt đầu từ 0%</option>
+                    </select>
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <label for="compare-y-tick-select" style="font-weight: 600; color: var(--text-muted); font-size: 0.82rem; text-transform: uppercase;">Bước chia:</label>
+                    <select id="compare-y-tick-select" style="padding: 0.4rem 1.2rem 0.4rem 0.6rem; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-main); font-weight: 600; outline: none; cursor: pointer; font-size: 0.85rem;">
+                      <option value="1">1%</option>
+                      <option value="0.1">0.1%</option>
+                      <option value="0.05">5 bps (0.05%)</option>
+                      <option value="0.01">1 bps (0.01%)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Target Render Container for Multi-bank Comparison -->
+            <div id="compare-analysis-render">
+              <!-- Rendered dynamically by js/analysis.js -->
+            </div>
+          </div>
+        </div>
+
+        <!-- PAGE 3: REGULATORY RATIOS ANALYSIS -->
+        <div id="regulatory-ratios-tab-content" class="sub-tab-panel hidden">
+          <!-- Ratio Sub-tabs navigation -->
+          <div class="ratio-sub-tabs-container" style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; flex-wrap: wrap;">
+            <button class="ratio-sub-tab-btn active" data-ratiosub="individual" style="padding: 0.45rem 1rem; border-radius: 6px; font-weight: 600; font-size: 0.85rem; border: none; background: var(--primary); color: white; cursor: pointer; display: flex; align-items: center; gap: 0.35rem;">
+              <i data-lucide="building-2" style="width:15px;height:15px;"></i> Phân tích Đơn lẻ
+            </button>
+            <button class="ratio-sub-tab-btn" data-ratiosub="compare" style="padding: 0.45rem 1rem; border-radius: 6px; font-weight: 600; font-size: 0.85rem; border: none; background: rgba(255,255,255,0.05); color: var(--text-muted); cursor: pointer; margin-left: 0.25rem; display: flex; align-items: center; gap: 0.35rem;">
+              <i data-lucide="git-compare" style="width:15px;height:15px;"></i> So sánh Đối chiếu
+            </button>
+          </div>
+
+          <!-- PAGE 3.1: INDIVIDUAL CONTROLS -->
+          <div id="ratio-individual-controls" class="card" style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <label for="ratio-bank-select" style="font-weight: 600; color: var(--text-main); font-size: 0.95rem;">Ngân hàng:</label>
+                <select id="ratio-bank-select" style="padding: 0.5rem 1.5rem 0.5rem 0.75rem; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-main); font-weight: 600; outline: none; cursor: pointer;">
+                  <option value="TCB">Techcombank (TCB)</option>
+                  <option value="VCB">Vietcombank (VCB)</option>
+                  <option value="BID">BIDV (BID)</option>
+                  <option value="CTG">VietinBank (CTG)</option>
+                  <option value="MBB">MBBank (MBB)</option>
+                  <option value="VPB">VPBank (VPB)</option>
+                  <option value="ACB">ACB (ACB)</option>
+                  <option value="STB">Sacombank (STB)</option>
+                  <option value="TPB">TPBank (TPB)</option>
+                  <option value="HDB">HDBank (HDB)</option>
+                </select>
+              </div>
+              <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;" id="ratio-year-selectors">
+                <button class="year-btn" data-year="2019">2019</button>
+                <button class="year-btn" data-year="2020">2020</button>
+                <button class="year-btn" data-year="2021">2021</button>
+                <button class="year-btn" data-year="2022">2022</button>
+                <button class="year-btn" data-year="2023">2023</button>
+                <button class="year-btn" data-year="2024">2024</button>
+                <button class="year-btn active" data-year="2025">2025</button>
+                <button class="year-btn" data-year="series"><i data-lucide="trending-up"></i> Time Series</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- PAGE 3.2: MULTI-BANK CONTROLS -->
+          <div id="ratio-compare-controls" class="card hidden" style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+              <h4 style="margin: 0; font-size: 0.95rem; color: var(--text-muted);">Bước 1: Chọn các ngân hàng cần so sánh (tối thiểu 2)</h4>
+              <label style="display: flex; align-items: center; gap: 0.35rem; cursor: pointer; font-weight: 600; font-size: 0.85rem; color: var(--primary);">
+                <input type="checkbox" id="ratio-compare-select-all" style="accent-color: var(--primary);"> Chọn tất cả
+              </label>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 0.75rem; margin-bottom: 1.25rem;" id="ratio-compare-banks-checkboxes">
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="TCB" checked style="accent-color: var(--primary);"> Techcombank (TCB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="VCB" checked style="accent-color: var(--primary);"> Vietcombank (VCB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="BID" checked style="accent-color: var(--primary);"> BIDV (BID)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="CTG" style="accent-color: var(--primary);"> VietinBank (CTG)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="MBB" checked style="accent-color: var(--primary);"> MBBank (MBB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="VPB" style="accent-color: var(--primary);"> VPBank (VPB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="ACB" style="accent-color: var(--primary);"> ACB (ACB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="STB" style="accent-color: var(--primary);"> Sacombank (STB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="TPB" style="accent-color: var(--primary);"> TPBank (TPB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="HDB" style="accent-color: var(--primary);"> HDBank (HDB)
+              </label>
+            </div>
             
             <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 1rem 0;">
             
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
               <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
                 <span style="font-weight: 600; color: var(--text-main); font-size: 0.95rem;">Bước 2: Chọn thời kỳ phân tích:</span>
-                <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;" id="compare-year-selectors">
+                <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;" id="ratio-compare-year-selectors">
                   <button class="year-btn" data-year="2019">2019</button>
                   <button class="year-btn" data-year="2020">2020</button>
                   <button class="year-btn" data-year="2021">2021</button>
@@ -1075,29 +1118,179 @@
                   <button class="year-btn" data-year="series"><i data-lucide="trending-up"></i> Time Series</button>
                 </div>
               </div>
-              <div style="display: flex; align-items: center; gap: 0.5rem;">
-                <label for="compare-y-scale-select" style="font-weight: 600; color: var(--text-muted); font-size: 0.82rem; text-transform: uppercase;">Trục dọc:</label>
-                <select id="compare-y-scale-select" style="padding: 0.4rem 1.2rem 0.4rem 0.6rem; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-main); font-weight: 600; outline: none; cursor: pointer; font-size: 0.85rem;">
-                  <option value="auto" selected>Tự động (Zoom)</option>
-                  <option value="narrow">Cận cảnh (6% - 18%)</option>
-                  <option value="zero">Bắt đầu từ 0%</option>
-                </select>
-              </div>
-              <div style="display: flex; align-items: center; gap: 0.5rem;">
-                <label for="compare-y-tick-select" style="font-weight: 600; color: var(--text-muted); font-size: 0.82rem; text-transform: uppercase;">Bước chia:</label>
-                <select id="compare-y-tick-select" style="padding: 0.4rem 1.2rem 0.4rem 0.6rem; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-main); font-weight: 600; outline: none; cursor: pointer; font-size: 0.85rem;">
-                  <option value="1">1%</option>
-                  <option value="0.1">0.1%</option>
-                  <option value="0.05">5 bps (0.05%)</option>
-                  <option value="0.01">1 bps (0.01%)</option>
-                </select>
+              <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <label for="ratio-compare-y-scale-select" style="font-weight: 600; color: var(--text-muted); font-size: 0.82rem; text-transform: uppercase;">Trục dọc:</label>
+                  <select id="ratio-compare-y-scale-select" style="padding: 0.4rem 1.2rem 0.4rem 0.6rem; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-main); font-weight: 600; outline: none; cursor: pointer; font-size: 0.85rem;">
+                    <option value="auto" selected>Tự động (Zoom)</option>
+                    <option value="narrow">Cận cảnh (6% - 18%)</option>
+                    <option value="zero">Bắt đầu từ 0%</option>
+                  </select>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <label for="ratio-compare-y-tick-select" style="font-weight: 600; color: var(--text-muted); font-size: 0.82rem; text-transform: uppercase;">Bước chia:</label>
+                  <select id="ratio-compare-y-tick-select" style="padding: 0.4rem 1.2rem 0.4rem 0.6rem; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-main); font-weight: 600; outline: none; cursor: pointer; font-size: 0.85rem;">
+                    <option value="1">1%</option>
+                    <option value="0.1">0.1%</option>
+                    <option value="0.05">5 bps (0.05%)</option>
+                    <option value="0.01">1 bps (0.01%)</option>
+                  </select>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Target Render Container for Multi-bank Comparison -->
-          <div id="compare-analysis-render">
+          <!-- Target Render Container for Regulatory Ratios -->
+          <div id="ratio-analysis-render">
             <!-- Rendered dynamically by js/analysis.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 8.5. FINANCIAL ANALYSIS SECTION -->
+      <section id="financial-analysis-section" class="content-section hidden">
+        <div class="section-header">
+          <h2>Phân tích Báo cáo Tài chính (BCTC) Ngân hàng</h2>
+          <p>Phân tích Bảng cân đối kế toán, Báo cáo kết quả hoạt động kinh doanh và Báo cáo lưu chuyển tiền tệ của 10 ngân hàng thương mại Việt Nam.</p>
+        </div>
+
+        <!-- Top-level sub-tabs navigation -->
+        <div class="sub-tabs-container" style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; flex-wrap: wrap;">
+          <button class="sub-tab-btn active" data-subtab="financial-analysis">
+            <i data-lucide="file-text"></i> Phân tích BCTC
+          </button>
+          <button class="sub-tab-btn" data-subtab="financial-compare">
+            <i data-lucide="git-compare"></i> So sánh Đối chiếu BCTC
+          </button>
+        </div>
+
+        <!-- PAGE 1: INDIVIDUAL FINANCIAL ANALYSIS -->
+        <div id="financial-analysis-tab-content" class="sub-tab-panel">
+          <!-- Nested sub-tabs navigation -->
+          <div class="financial-sub-tabs-container" style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; flex-wrap: wrap;">
+            <button class="financial-sub-tab-btn active" data-financialsub="balance-sheet" style="padding: 0.45rem 1rem; border-radius: 6px; font-weight: 600; font-size: 0.85rem; border: none; background: var(--primary); color: white; cursor: pointer; display: flex; align-items: center; gap: 0.35rem;">
+              <i data-lucide="scale" style="width:15px;height:15px;"></i> Bảng Cân đối kế toán
+            </button>
+            <button class="financial-sub-tab-btn" data-financialsub="income-statement" style="padding: 0.45rem 1rem; border-radius: 6px; font-weight: 600; font-size: 0.85rem; border: none; background: rgba(255,255,255,0.05); color: var(--text-muted); cursor: pointer; margin-left: 0.25rem; display: flex; align-items: center; gap: 0.35rem;">
+              <i data-lucide="calculator" style="width:15px;height:15px;"></i> Báo cáo Kết quả Kinh doanh
+            </button>
+            <button class="financial-sub-tab-btn" data-financialsub="cash-flow" style="padding: 0.45rem 1rem; border-radius: 6px; font-weight: 600; font-size: 0.85rem; border: none; background: rgba(255,255,255,0.05); color: var(--text-muted); cursor: pointer; margin-left: 0.25rem; display: flex; align-items: center; gap: 0.35rem;">
+              <i data-lucide="wallet" style="width:15px;height:15px;"></i> Báo cáo Lưu chuyển Tiền tệ
+            </button>
+          </div>
+
+          <!-- Controls card -->
+          <div class="card" style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <label for="financial-bank-select" style="font-weight: 600; color: var(--text-main); font-size: 0.95rem;">Ngân hàng:</label>
+                <select id="financial-bank-select" style="padding: 0.5rem 1.5rem 0.5rem 0.75rem; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-main); font-weight: 600; outline: none; cursor: pointer;">
+                  <option value="TCB">Techcombank (TCB)</option>
+                  <option value="VCB">Vietcombank (VCB)</option>
+                  <option value="BID">BIDV (BID)</option>
+                  <option value="CTG">VietinBank (CTG)</option>
+                  <option value="MBB">MBBank (MBB)</option>
+                  <option value="VPB">VPBank (VPB)</option>
+                  <option value="ACB">ACB (ACB)</option>
+                  <option value="STB">Sacombank (STB)</option>
+                  <option value="TPB">TPBank (TPB)</option>
+                  <option value="HDB">HDBank (HDB)</option>
+                </select>
+              </div>
+              <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;" id="financial-year-selectors">
+                <button class="year-btn" data-year="2019">2019</button>
+                <button class="year-btn" data-year="2020">2020</button>
+                <button class="year-btn" data-year="2021">2021</button>
+                <button class="year-btn" data-year="2022">2022</button>
+                <button class="year-btn" data-year="2023">2023</button>
+                <button class="year-btn" data-year="2024">2024</button>
+                <button class="year-btn active" data-year="2025">2025</button>
+                <button class="year-btn" data-year="series"><i data-lucide="trending-up"></i> Time Series</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Target Render Container for Individual Financial Analysis -->
+          <div id="financial-individual-render">
+            <!-- Rendered dynamically by js/financial.js -->
+          </div>
+        </div>
+
+        <!-- PAGE 2: COMPARE FINANCIAL ANALYSIS -->
+        <div id="financial-compare-tab-content" class="sub-tab-panel hidden">
+          <!-- Controls card -->
+          <div class="card" style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+              <h4 style="margin: 0; font-size: 0.95rem; color: var(--text-muted);">Bước 1: Chọn các ngân hàng cần so sánh (tối thiểu 2)</h4>
+              <label style="display: flex; align-items: center; gap: 0.35rem; cursor: pointer; font-weight: 600; font-size: 0.85rem; color: var(--primary);">
+                <input type="checkbox" id="financial-compare-select-all" style="accent-color: var(--primary);"> Chọn tất cả
+              </label>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 0.75rem; margin-bottom: 1.25rem;" id="financial-compare-banks-checkboxes">
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="TCB" checked style="accent-color: var(--primary);"> Techcombank (TCB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="VCB" checked style="accent-color: var(--primary);"> Vietcombank (VCB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="BID" checked style="accent-color: var(--primary);"> BIDV (BID)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="CTG" style="accent-color: var(--primary);"> VietinBank (CTG)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="MBB" checked style="accent-color: var(--primary);"> MBBank (MBB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="VPB" style="accent-color: var(--primary);"> VPBank (VPB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="ACB" style="accent-color: var(--primary);"> ACB (ACB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="STB" style="accent-color: var(--primary);"> Sacombank (STB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="TPB" style="accent-color: var(--primary);"> TPBank (TPB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="HDB" style="accent-color: var(--primary);"> HDBank (HDB)
+              </label>
+            </div>
+            
+            <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 1rem 0;">
+            
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+              <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+                <span style="font-weight: 600; color: var(--text-main); font-size: 0.95rem;">Bước 2: Chọn thời kỳ phân tích:</span>
+                <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;" id="financial-compare-year-selectors">
+                  <button class="year-btn" data-year="2019">2019</button>
+                  <button class="year-btn" data-year="2020">2020</button>
+                  <button class="year-btn" data-year="2021">2021</button>
+                  <button class="year-btn" data-year="2022">2022</button>
+                  <button class="year-btn" data-year="2023">2023</button>
+                  <button class="year-btn" data-year="2024">2024</button>
+                  <button class="year-btn active" data-year="2025">2025</button>
+                  <button class="year-btn" data-year="series"><i data-lucide="trending-up"></i> Time Series</button>
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <label for="financial-compare-y-scale-select" style="font-weight: 600; color: var(--text-muted); font-size: 0.82rem; text-transform: uppercase;">Trục dọc:</label>
+                  <select id="financial-compare-y-scale-select" style="padding: 0.4rem 1.2rem 0.4rem 0.6rem; border: 1px solid var(--border-color); border-radius: 6px; background: var(--card-bg); color: var(--text-main); font-weight: 600; outline: none; cursor: pointer; font-size: 0.85rem;">
+                    <option value="auto" selected>Tự động (Zoom)</option>
+                    <option value="zero">Bắt đầu từ 0</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Target Render Container for Multi-bank Financial Comparison -->
+          <div id="financial-compare-render">
+            <!-- Rendered dynamically by js/financial.js -->
           </div>
         </div>
       </section>
@@ -1397,7 +1590,9 @@
   <script src="js/calculator.js"></script>
   <script src="js/quiz.js"></script>
   <script src="js/laws.js"></script>
+  <script src="js/database.js"></script>
   <script src="js/analysis.js"></script>
+  <script src="js/financial.js"></script>
   <script src="js/glossary_v2.js"></script>
   <script src="js/docfinder.js"></script>
   <script src="js/app.js"></script>

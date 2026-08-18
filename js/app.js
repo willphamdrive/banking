@@ -1,7 +1,7 @@
 // Trình quản trị giao diện chính (Main App Controller)
 class BaselApp {
   constructor() {
-    this.currentTab = "dashboard";
+    this.currentTab = "bank-analysis";
     this.theme = localStorage.getItem("theme") || "dark";
     
     this.initElements();

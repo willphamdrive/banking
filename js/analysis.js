@@ -1,235 +1,9 @@
-// Cơ sở dữ liệu và Logic Phân tích CAR Đơn lẻ & So sánh Đối chiếu (20 Ngân hàng VN, 2019 - 2025)
-// Tích hợp biểu đồ Chart.js tương tác cao và hỗ trợ SVG failover ngoại tuyến
-
-const BANK_NAMES = {
-  TCB: "Techcombank",
-  VCB: "Vietcombank",
-  BID: "BIDV",
-  CTG: "VietinBank",
-  MBB: "MBBank",
-  VPB: "VPBank",
-  ACB: "ACB",
-  STB: "Sacombank",
-  TPB: "TPBank",
-  HDB: "HDBank",
-  SHB: "SHB",
-  VIB: "VIB",
-  LPB: "LPBank",
-  MSB: "MSB",
-  SSB: "SeABank",
-  OCB: "OCB",
-  EIB: "Eximbank",
-  BAB: "Bac A Bank",
-  ABB: "An Binh Bank",
-  NAB: "Nam A Bank"
-};
-
-const BANK_COLORS = {
-  TCB: "#dc2626", // Đỏ đậm (Techcombank)
-  VCB: "#059669", // Xanh lá đậm (Vietcombank)
-  BID: "#1e3a8a", // Xanh navy đậm (BIDV)
-  CTG: "#06b6d4", // Xanh da trời Cyan (VietinBank)
-  MBB: "#2563eb", // Xanh dương Royal (MBBank)
-  VPB: "#10b981", // Xanh lục Mint (VPBank)
-  ACB: "#d946ef", // Hồng cánh sen Magenta (ACB - có độ tương phản cao)
-  STB: "#ea580c", // Cam tươi (Sacombank)
-  TPB: "#7c3aed", // Tím đậm Orchid (TPBank)
-  HDB: "#f59e0b", // Vàng hổ phách Amber (HDBank)
-  SHB: "#b45309", // Nâu hổ phách đậm (SHB)
-  VIB: "#0369a1", // Xanh dương đậm VIB (VIB)
-  LPB: "#b91c1c", // Đỏ cờ LPBank (LPB)
-  MSB: "#c2410c", // Cam đậm MSB (MSB)
-  SSB: "#047857", // Xanh lục đậm SSB (SSB)
-  OCB: "#0e7490", // Xanh teal OCB (OCB)
-  EIB: "#1d4ed8", // Xanh royal EIB (EIB)
-  BAB: "#4d7c0f", // Xanh lá mạ Bac A Bank (BAB)
-  ABB: "#6d28d9", // Tím violet ABB (ABB)
-  NAB: "#a16207"  // Vàng sẫm Nam A Bank (NAB)
-};
-
-// Dữ liệu tài chính thực tế & ước tính hợp lý từ báo cáo CAR 10 Ngân hàng (2019 - 2025)
-const BANK_CAR_DATABASE = {
-  TCB: {
-    2019: { car: 15.50, capital: 70000, rwa: 451000, charter: 34965, pdf: "TCB_CAR_2019_Nam.pdf" },
-    2020: { car: 16.10, capital: 90000, rwa: 559000, charter: 35001, pdf: "TCB_CAR_2020_Nam.pdf" },
-    2021: { car: 15.00, capital: 122000, rwa: 813000, charter: 35049, pdf: "TCB_CAR_2021_Nam.pdf" },
-    2022: { car: 15.20, capital: 151200, rwa: 994700, charter: 35172, pdf: "TCB_CAR_2022_Nam.pdf" },
-    2023: { car: 14.40, capital: 161500, rwa: 1121500, charter: 35229, pdf: "TCB_CAR_2023_Nam.pdf" },
-    2024: { car: 15.00, capital: 165500, rwa: 1103300, charter: 70450, pdf: "TCB_CAR_2024_Nam.pdf" },
-    2025: { car: 14.61, capital: 181870, rwa: 1244531, charter: 70450, pdf: "TCB_CAR_2025_Nam.pdf" }
-  },
-  VCB: {
-    2019: { car: 10.80, capital: 93000, rwa: 861000, charter: 37088, pdf: "VCB_CAR_2019_Nam.pdf" },
-    2020: { car: 11.10, capital: 112000, rwa: 1009000, charter: 37088, pdf: "VCB_CAR_2020_Nam.pdf" },
-    2021: { car: 11.20, capital: 135000, rwa: 1205000, charter: 47325, pdf: "VCB_CAR_2021_Nam.pdf" },
-    2022: { car: 11.50, capital: 153000, rwa: 1330400, charter: 47325, pdf: "VCB_CAR_2022_Nam.pdf" },
-    2023: { car: 11.60, capital: 172338, rwa: 1485600, charter: 55891, pdf: "VCB_CAR_2023_Nam.pdf" },
-    2024: { car: 11.80, capital: 173000, rwa: 1466100, charter: 55891, pdf: "VCB_CAR_2024_Nam.pdf" },
-    2025: { car: 11.70, capital: 175000, rwa: 1495000, charter: 83557, pdf: "VCB_CAR_2025_Nam.pdf" }
-  },
-  BID: {
-    2019: { car: 9.20, capital: 85000, rwa: 923000, charter: 40220, pdf: "BID_CAR_2019_Nam.pdf" },
-    2020: { car: 9.50, capital: 94000, rwa: 989000, charter: 40220, pdf: "BID_CAR_2020_Nam.pdf" },
-    2021: { car: 9.60, capital: 104000, rwa: 1083000, charter: 50585, pdf: "BID_CAR_2021_Nam.pdf" },
-    2022: { car: 9.80, capital: 112000, rwa: 1142800, charter: 50585, pdf: "BID_CAR_2022_Nam.pdf" },
-    2023: { car: 9.90, capital: 123400, rwa: 1246400, charter: 57004, pdf: "BID_CAR_2023_Nam.pdf" },
-    2024: { car: 10.10, capital: 128500, rwa: 1272200, charter: 57004, pdf: "BID_CAR_2024_Nam.pdf" },
-    2025: { car: 10.20, capital: 135000, rwa: 1323500, charter: 70958, pdf: "BID_CAR_2025_Nam.pdf" }
-  },
-  CTG: {
-    2021: { car: 9.00, capital: 90500, rwa: 1005000, charter: 48058, pdf: "CTG_CAR_2021_Nam.pdf" },
-    2022: { car: 9.20, capital: 101000, rwa: 1097800, charter: 48058, pdf: "CTG_CAR_2022_Nam.pdf" },
-    2023: { car: 9.40, capital: 115200, rwa: 1225500, charter: 53700, pdf: "CTG_CAR_2023_Nam.pdf" },
-    2024: { car: 9.60, capital: 120100, rwa: 1251000, charter: 53700, pdf: "CTG_CAR_2024_Nam.pdf" },
-    2025: { car: 9.80, capital: 124000, rwa: 1265300, charter: 53700, pdf: "CTG_CAR_2025_Nam.pdf" }
-  },
-  MBB: {
-    2019: { car: 10.50, capital: 41000, rwa: 390000, charter: 23727, pdf: "MBB_CAR_2019_Nam.pdf" },
-    2020: { car: 10.90, capital: 52000, rwa: 477000, charter: 27987, pdf: "MBB_CAR_2020_Nam.pdf" },
-    2021: { car: 11.10, capital: 68000, rwa: 612000, charter: 37783, pdf: "MBB_CAR_2021_Nam.pdf" },
-    2022: { car: 11.20, capital: 78000, rwa: 696400, charter: 45339, pdf: "MBB_CAR_2022_Nam.pdf" },
-    2023: { car: 11.50, capital: 93400, rwa: 812100, charter: 52141, pdf: "MBB_CAR_2023_Nam.pdf" },
-    2024: { car: 11.60, capital: 98000, rwa: 844800, charter: 52141, pdf: "MBB_CAR_2024_Nam.pdf" },
-    2025: { car: 11.40, capital: 105000, rwa: 921000, charter: 52871, pdf: "MBB_CAR_2025_Nam.pdf" }
-  },
-  VPB: {
-    2019: { car: 11.90, capital: 58000, rwa: 487000, charter: 25299, pdf: "VPB_CAR_2019_Nam.pdf" },
-    2020: { car: 12.10, capital: 70000, rwa: 578000, charter: 25299, pdf: "VPB_CAR_2020_Nam.pdf" },
-    2021: { car: 12.30, capital: 88000, rwa: 715000, charter: 45057, pdf: "VPB_CAR_2021_Nam.pdf" },
-    2022: { car: 12.50, capital: 108000, rwa: 864000, charter: 67434, pdf: "VPB_CAR_2022_Nam.pdf" },
-    2023: { car: 12.30, capital: 128000, rwa: 1040600, charter: 79339, pdf: "VPB_CAR_2023_Nam.pdf" },
-    2024: { car: 12.20, capital: 135000, rwa: 1106500, charter: 79339, pdf: "VPB_CAR_2024_Nam.pdf" },
-    2025: { car: 12.00, capital: 142000, rwa: 1183300, charter: 79339, pdf: "VPB_CAR_2025_Nam.pdf" }
-  },
-  ACB: {
-    2019: { car: 11.20, capital: 40000, rwa: 357000, charter: 16627, pdf: "ACB_CAR_2019_Nam.pdf" },
-    2020: { car: 11.60, capital: 49000, rwa: 422000, charter: 21615, pdf: "ACB_CAR_2020_Nam.pdf" },
-    2021: { car: 11.80, capital: 59000, rwa: 500000, charter: 27019, pdf: "ACB_CAR_2021_Nam.pdf" },
-    2022: { car: 12.20, capital: 65200, rwa: 534400, charter: 33774, pdf: "ACB_CAR_2022_Nam.pdf" },
-    2023: { car: 12.40, capital: 74500, rwa: 600800, charter: 38840, pdf: "ACB_CAR_2023_Nam.pdf" },
-    2024: { car: 12.50, capital: 81200, rwa: 649600, charter: 44666, pdf: "ACB_CAR_2024_Nam.pdf" },
-    2025: { car: 12.30, capital: 88500, rwa: 719500, charter: 44666, pdf: "ACB_CAR_2025_Nam.pdf" }
-  },
-  STB: {
-    2020: { car: 9.10, capital: 31000, rwa: 340000, charter: 18852, pdf: "STB_CAR_2020_Nam.pdf" },
-    2021: { car: 9.30, capital: 36000, rwa: 387000, charter: 18852, pdf: "STB_CAR_2021_Nam.pdf" },
-    2022: { car: 9.40, capital: 43200, rwa: 459500, charter: 18852, pdf: "STB_CAR_2022_Nam.pdf" },
-    2023: { car: 9.60, capital: 51200, rwa: 533300, charter: 18852, pdf: "STB_CAR_2023_Nam.pdf" },
-    2024: { car: 9.80, capital: 55400, rwa: 565300, charter: 18852, pdf: "STB_CAR_2024_Nam.pdf" },
-    2025: { car: 9.90, capital: 61500, rwa: 621200, charter: 18852, pdf: "STB_CAR_2025_Nam.pdf" }
-  },
-  TPB: {
-    2019: { car: 11.50, capital: 19000, rwa: 165000, charter: 8565, pdf: "TPB_CAR_2019_Nam.pdf" },
-    2020: { car: 11.80, capital: 24000, rwa: 203000, charter: 10716, pdf: "TPB_CAR_2020_Nam.pdf" },
-    2021: { car: 12.00, capital: 29000, rwa: 241000, charter: 15817, pdf: "TPB_CAR_2021_Nam.pdf" },
-    2022: { car: 12.10, capital: 31200, rwa: 257800, charter: 15817, pdf: "TPB_CAR_2022_Nam.pdf" },
-    2023: { car: 12.20, capital: 36500, rwa: 299100, charter: 22016, pdf: "TPB_CAR_2023_Nam.pdf" },
-    2024: { car: 11.80, capital: 38200, rwa: 323700, charter: 22016, pdf: "TPB_CAR_2024_Nam.pdf" },
-    2025: { car: 11.60, capital: 42300, rwa: 364600, charter: 22016, pdf: "TPB_CAR_2025_Nam.pdf" }
-  },
-  HDB: {
-    2020: { car: 11.50, capital: 26000, rwa: 226000, charter: 12707, pdf: "HDB_CAR_2020_Nam.pdf" },
-    2021: { car: 12.10, capital: 36000, rwa: 297000, charter: 20072, pdf: "HDB_CAR_2021_Nam.pdf" },
-    2022: { car: 12.40, capital: 41200, rwa: 332200, charter: 25303, pdf: "HDB_CAR_2022_Nam.pdf" },
-    2023: { car: 12.20, capital: 48500, rwa: 397500, charter: 29076, pdf: "HDB_CAR_2023_Nam.pdf" },
-    2024: { car: 12.30, capital: 53200, rwa: 432500, charter: 29076, pdf: "HDB_CAR_2024_Nam.pdf" },
-    2025: { car: 12.10, capital: 61000, rwa: 504100, charter: 34702, pdf: "HDB_CAR_2025_Nam.pdf" }
-  },
-  SHB: {
-    2019: { car: 11.20, capital: 28000, rwa: 250000, charter: 17558, pdf: "SHB_CAR_2019_Nam.pdf" },
-    2020: { car: 11.50, capital: 33000, rwa: 287000, charter: 17570, pdf: "SHB_CAR_2020_Nam.pdf" },
-    2021: { car: 11.80, capital: 42000, rwa: 356000, charter: 26674, pdf: "SHB_CAR_2021_Nam.pdf" },
-    2022: { car: 12.10, capital: 49500, rwa: 409000, charter: 30674, pdf: "SHB_CAR_2022_Nam.pdf" },
-    2023: { car: 12.30, capital: 58000, rwa: 471500, charter: 36194, pdf: "SHB_CAR_2023_Nam.pdf" },
-    2024: { car: 12.50, capital: 63500, rwa: 508000, charter: 36629, pdf: "SHB_CAR_2024_Nam.pdf" },
-    2025: { car: 12.42, capital: 69200, rwa: 557165, charter: 36629, pdf: "SHB_CAR_2025_Nam.pdf" }
-  },
-  VIB: {
-    2019: { car: 11.50, capital: 18000, rwa: 156500, charter: 9245, pdf: "VIB_CAR_2019_Nam.pdf" },
-    2020: { car: 11.80, capital: 22000, rwa: 186400, charter: 11094, pdf: "VIB_CAR_2020_Nam.pdf" },
-    2021: { car: 12.00, capital: 28500, rwa: 237500, charter: 15531, pdf: "VIB_CAR_2021_Nam.pdf" },
-    2022: { car: 12.40, capital: 34500, rwa: 278200, charter: 21077, pdf: "VIB_CAR_2022_Nam.pdf" },
-    2023: { car: 12.60, capital: 41000, rwa: 325400, charter: 25368, pdf: "VIB_CAR_2023_Nam.pdf" },
-    2024: { car: 11.97, capital: 46200, rwa: 385964, charter: 25368, pdf: "VIB_CAR_2024_Nam.pdf" },
-    2025: { car: 12.28, capital: 51300, rwa: 417752, charter: 25368, pdf: "VIB_CAR_2025_Nam.pdf" }
-  },
-  LPB: {
-    2019: { car: 9.80, capital: 15500, rwa: 158000, charter: 9769, pdf: "LPB_CAR_2019_Nam.pdf" },
-    2020: { car: 10.20, capital: 18000, rwa: 176500, charter: 10746, pdf: "LPB_CAR_2020_Nam.pdf" },
-    2021: { car: 10.50, capital: 22500, rwa: 214300, charter: 12036, pdf: "LPB_CAR_2021_Nam.pdf" },
-    2022: { car: 11.20, capital: 29000, rwa: 258900, charter: 17291, pdf: "LPB_CAR_2022_Nam.pdf" },
-    2023: { car: 11.40, capital: 35000, rwa: 307000, charter: 25576, pdf: "LPB_CAR_2023_Nam.pdf" },
-    2024: { car: 13.33, capital: 41200, rwa: 309077, charter: 25576, pdf: "LPB_CAR_2024_Nam.pdf" },
-    2025: { car: 11.65, capital: 47200, rwa: 405150, charter: 25576, pdf: "LPB_CAR_2025_Nam.pdf" }
-  },
-  MSB: {
-    2019: { car: 10.50, capital: 12500, rwa: 119000, charter: 11750, pdf: "MSB_CAR_2019_Nam.pdf" },
-    2020: { car: 10.80, capital: 15000, rwa: 138900, charter: 11750, pdf: "MSB_CAR_2020_Nam.pdf" },
-    2021: { car: 11.50, capital: 20000, rwa: 173900, charter: 15275, pdf: "MSB_CAR_2021_Nam.pdf" },
-    2022: { car: 12.10, capital: 24500, rwa: 202500, charter: 20000, pdf: "MSB_CAR_2022_Nam.pdf" },
-    2023: { car: 12.50, capital: 29500, rwa: 236000, charter: 20000, pdf: "MSB_CAR_2023_Nam.pdf" },
-    2024: { car: 12.20, capital: 33000, rwa: 270500, charter: 26000, pdf: "MSB_CAR_2024_Nam.pdf" },
-    2025: { car: 12.05, capital: 37500, rwa: 311200, charter: 26000, pdf: "MSB_CAR_2025_Nam.pdf" }
-  },
-  SSB: {
-    2019: { car: 10.80, capital: 11000, rwa: 101800, charter: 9369, pdf: "SSB_CAR_2019_Nam.pdf" },
-    2020: { car: 11.20, capital: 14000, rwa: 125000, charter: 12087, pdf: "SSB_CAR_2020_Nam.pdf" },
-    2021: { car: 11.60, capital: 18500, rwa: 159500, charter: 14785, pdf: "SSB_CAR_2021_Nam.pdf" },
-    2022: { car: 12.20, capital: 23000, rwa: 188500, charter: 20403, pdf: "SSB_CAR_2022_Nam.pdf" },
-    2023: { car: 12.60, capital: 28000, rwa: 222200, charter: 24537, pdf: "SSB_CAR_2023_Nam.pdf" },
-    2024: { car: 12.33, capital: 32000, rwa: 259529, charter: 24957, pdf: "SSB_CAR_2024_Nam.pdf" },
-    2025: { car: 12.38, capital: 36500, rwa: 294830, charter: 24957, pdf: "SSB_CAR_2025_Nam.pdf" }
-  },
-  OCB: {
-    2019: { car: 11.20, capital: 12000, rwa: 107000, charter: 7898, pdf: "OCB_CAR_2019_Nam.pdf" },
-    2020: { car: 11.50, capital: 15500, rwa: 134800, charter: 10959, pdf: "OCB_CAR_2020_Nam.pdf" },
-    2021: { car: 12.10, capital: 21000, rwa: 173500, charter: 13699, pdf: "OCB_CAR_2021_Nam.pdf" },
-    2022: { car: 12.80, capital: 26000, rwa: 203100, charter: 13699, pdf: "OCB_CAR_2022_Nam.pdf" },
-    2023: { car: 13.00, capital: 31000, rwa: 238500, charter: 20548, pdf: "OCB_CAR_2023_Nam.pdf" },
-    2024: { car: 12.46, capital: 34500, rwa: 276886, charter: 24658, pdf: "OCB_CAR_2024_Nam.pdf" },
-    2025: { car: 12.15, capital: 38200, rwa: 314400, charter: 24658, pdf: "OCB_CAR_2025_Nam.pdf" }
-  },
-  EIB: {
-    2019: { car: 11.80, capital: 13800, rwa: 116900, charter: 12294, pdf: "EIB_CAR_2019_Nam.pdf" },
-    2020: { car: 12.10, capital: 15200, rwa: 125600, charter: 12294, pdf: "EIB_CAR_2020_Nam.pdf" },
-    2021: { car: 12.40, capital: 17000, rwa: 137100, charter: 12294, pdf: "EIB_CAR_2021_Nam.pdf" },
-    2022: { car: 12.80, capital: 19500, rwa: 152300, charter: 12294, pdf: "EIB_CAR_2022_Nam.pdf" },
-    2023: { car: 13.20, capital: 22000, rwa: 166700, charter: 17402, pdf: "EIB_CAR_2023_Nam.pdf" },
-    2024: { car: 12.90, capital: 24000, rwa: 186000, charter: 17402, pdf: "EIB_CAR_2024_Nam.pdf" },
-    2025: { car: 12.75, capital: 26500, rwa: 207840, charter: 17402, pdf: "EIB_CAR_2025_Nam.pdf" }
-  },
-  BAB: {
-    2019: { car: 9.20, capital: 7500, rwa: 81500, charter: 6500, pdf: "BAB_CAR_2019_Nam.pdf" },
-    2020: { car: 9.40, capital: 8400, rwa: 89300, charter: 7085, pdf: "BAB_CAR_2020_Nam.pdf" },
-    2021: { car: 9.60, capital: 9800, rwa: 102000, charter: 7531, pdf: "BAB_CAR_2021_Nam.pdf" },
-    2022: { car: 9.80, capital: 10800, rwa: 110200, charter: 8131, pdf: "BAB_CAR_2022_Nam.pdf" },
-    2023: { car: 10.20, capital: 12500, rwa: 122500, charter: 8959, pdf: "BAB_CAR_2023_Nam.pdf" },
-    2024: { car: 10.50, capital: 13800, rwa: 131400, charter: 8959, pdf: "BAB_CAR_2024_Nam.pdf" },
-    2025: { car: 10.42, capital: 15200, rwa: 145870, charter: 8959, pdf: "BAB_CAR_2025_Nam.pdf" }
-  },
-  ABB: {
-    2019: { car: 10.80, capital: 9800, rwa: 90700, charter: 5713, pdf: "ABB_CAR_2019_Nam.pdf" },
-    2020: { car: 11.20, capital: 11500, rwa: 102600, charter: 5713, pdf: "ABB_CAR_2020_Nam.pdf" },
-    2021: { car: 11.50, capital: 14000, rwa: 121700, charter: 9409, pdf: "ABB_CAR_2021_Nam.pdf" },
-    2022: { car: 12.10, capital: 16800, rwa: 138800, charter: 9409, pdf: "ABB_CAR_2022_Nam.pdf" },
-    2023: { car: 12.50, capital: 19200, rwa: 153600, charter: 10350, pdf: "ABB_CAR_2023_Nam.pdf" },
-    2024: { car: 12.20, capital: 21000, rwa: 172100, charter: 10350, pdf: "ABB_CAR_2024_Nam.pdf" },
-    2025: { car: 12.05, capital: 23200, rwa: 192530, charter: 10350, pdf: "ABB_CAR_2025_Nam.pdf" }
-  },
-  NAB: {
-    2019: { car: 10.10, capital: 10500, rwa: 103900, charter: 3890, pdf: "NAB_CAR_2019_Nam.pdf" },
-    2020: { car: 10.40, capital: 12200, rwa: 117300, charter: 4564, pdf: "NAB_CAR_2020_Nam.pdf" },
-    2021: { car: 10.80, capital: 15500, rwa: 143500, charter: 6564, pdf: "NAB_CAR_2021_Nam.pdf" },
-    2022: { car: 11.20, capital: 19200, rwa: 171400, charter: 8464, pdf: "NAB_CAR_2022_Nam.pdf" },
-    2023: { car: 11.50, capital: 23500, rwa: 204300, charter: 10580, pdf: "NAB_CAR_2023_Nam.pdf" },
-    2024: { car: 11.80, capital: 27200, rwa: 230500, charter: 13725, pdf: "NAB_CAR_2024_Nam.pdf" },
-    2025: { car: 11.62, capital: 31500, rwa: 271080, charter: 13725, pdf: "NAB_CAR_2025_Nam.pdf" }
-  }
-};
+const BANK_DATABASE = window.BANK_DATABASE;
 
 class BaselAnalysis {
   constructor() {
-    this.currentSubTab = "individual";
+    this.currentSubTab = "car-analysis";
+    this.currentCarSub = "individual";
     
     // Trạng thái Phân tích Đơn lẻ
     this.indBank = "TCB";
@@ -248,6 +22,13 @@ class BaselAnalysis {
     // Quản lý các phiên bản Chart.js active để destroy khi redraw
     this.charts = {};
 
+    // Trạng thái Phân tích các Tỷ lệ An toàn khác
+    this.ratioBank = "TCB";
+    this.ratioYear = "2025";
+    this.currentRatioSub = "individual";
+    this.ratioCompBanks = ["TCB", "VCB", "BID", "MBB"];
+    this.ratioCompYear = "2025";
+
     this.initElements();
     this.bindEvents();
     this.setupChartTheme();
@@ -255,6 +36,7 @@ class BaselAnalysis {
     // Render ban đầu
     this.renderIndividualAnalysis();
     this.renderCompareAnalysis();
+    this.renderRatioAnalysis();
   }
 
   initElements() {
@@ -265,6 +47,11 @@ class BaselAnalysis {
     this.subTabBtns = this.section.querySelectorAll(".sub-tab-btn");
     this.subTabPanels = this.section.querySelectorAll(".sub-tab-panel");
 
+    // CAR Sub-sub-tabs
+    this.carSubTabBtns = this.section.querySelectorAll(".car-sub-tab-btn");
+    this.carIndividualPanel = document.getElementById("car-individual-panel");
+    this.carComparePanel = document.getElementById("car-compare-panel");
+
     // Phân tích Đơn lẻ Controllers
     this.indBankSelect = document.getElementById("analysis-bank-select");
     this.indYearBtns = this.section.querySelectorAll("#analysis-year-selectors .year-btn");
@@ -274,10 +61,23 @@ class BaselAnalysis {
     this.compCheckboxes = this.section.querySelectorAll("#compare-banks-checkboxes input");
     this.compYearBtns = this.section.querySelectorAll("#compare-year-selectors .year-btn");
     this.compRender = document.getElementById("compare-analysis-render");
+
+    // Các Tỷ lệ An toàn khác Controllers
+    this.ratioBankSelect = document.getElementById("ratio-bank-select");
+    this.ratioYearBtns = this.section.querySelectorAll("#ratio-year-selectors .year-btn");
+    this.ratioRender = document.getElementById("ratio-analysis-render");
+
+    this.ratioSubTabBtns = this.section.querySelectorAll(".ratio-sub-tab-btn");
+    this.ratioIndividualControls = document.getElementById("ratio-individual-controls");
+    this.ratioCompareControls = document.getElementById("ratio-compare-controls");
+    this.ratioCompCheckboxes = this.section.querySelectorAll("#ratio-compare-banks-checkboxes input");
+    this.ratioCompYearBtns = this.section.querySelectorAll("#ratio-compare-year-selectors .year-btn");
+    this.ratioCompYScaleSelect = document.getElementById("ratio-compare-y-scale-select");
+    this.ratioCompYTickSelect = document.getElementById("ratio-compare-y-tick-select");
   }
 
   bindEvents() {
-    // 1. Chuyển đổi Sub-tab
+    // 1. Chuyển đổi Sub-tab lớn (Phân tích CAR vs Các Tỷ lệ An toàn khác BCTC)
     this.subTabBtns.forEach(btn => {
       btn.addEventListener("click", () => {
         this.subTabBtns.forEach(b => {
@@ -303,40 +103,84 @@ class BaselAnalysis {
         lucide.createIcons();
         this.renderIndividualAnalysis();
         this.renderCompareAnalysis();
+        this.renderRatioAnalysis();
       });
     });
 
-    // 2. Event Phân tích Đơn lẻ
+    // 1.1. Chuyển đổi Sub-tab nhỏ trong Phân tích CAR
+    this.carSubTabBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        this.carSubTabBtns.forEach(b => {
+          b.style.background = "rgba(255,255,255,0.05)";
+          b.style.color = "var(--text-muted)";
+        });
+        btn.style.background = "var(--primary)";
+        btn.style.color = "white";
+
+        const subTabId = btn.getAttribute("data-carsub");
+        this.currentCarSub = subTabId;
+
+        if (subTabId === "individual") {
+          this.carIndividualPanel.classList.remove("hidden");
+          this.carComparePanel.classList.add("hidden");
+        } else {
+          this.carIndividualPanel.classList.add("hidden");
+          this.carComparePanel.classList.remove("hidden");
+        }
+
+        lucide.createIcons();
+        this.renderIndividualAnalysis();
+        this.renderCompareAnalysis();
+      });
+    });
+
+    // 2. Event Phân tích Đơn lẻ (Đồng bộ với Ratios Đơn lẻ)
     if (this.indBankSelect) {
       this.indBankSelect.addEventListener("change", (e) => {
-        this.indBank = e.target.value;
+        const value = e.target.value;
+        this.indBank = value;
+        this.ratioBank = value;
+        if (this.ratioBankSelect) this.ratioBankSelect.value = value;
         this.renderIndividualAnalysis();
+        this.renderRatioAnalysis();
       });
     }
 
     this.indYearBtns.forEach(btn => {
       btn.addEventListener("click", () => {
-        this.indYearBtns.forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-        this.indYear = btn.getAttribute("data-year");
+        const value = btn.getAttribute("data-year");
+        this.indYear = value;
+        this.ratioYear = value;
+        
+        this.indYearBtns.forEach(b => {
+          if (b.getAttribute("data-year") === value) b.classList.add("active");
+          else b.classList.remove("active");
+        });
+        this.ratioYearBtns.forEach(b => {
+          if (b.getAttribute("data-year") === value) b.classList.add("active");
+          else b.classList.remove("active");
+        });
+
         this.renderIndividualAnalysis();
+        this.renderRatioAnalysis();
       });
     });
 
-    // 3. Event So sánh Đối chiếu
+    // 3. Event So sánh Đối chiếu (Đồng bộ với Ratios So sánh)
     const selectAllCb = document.getElementById("compare-select-all");
     if (selectAllCb) {
       selectAllCb.addEventListener("change", (e) => {
         const isChecked = e.target.checked;
-        this.compCheckboxes.forEach(cb => {
-          cb.checked = isChecked;
-        });
+        this.compCheckboxes.forEach(cb => cb.checked = isChecked);
+        this.ratioCompCheckboxes.forEach(cb => cb.checked = isChecked);
 
         if (!isChecked) {
-          // Nếu bỏ chọn tất cả, giữ lại ít nhất 2 ngân hàng đầu tiên để tránh lỗi (TCB và VCB)
           this.compCheckboxes[0].checked = true;
           this.compCheckboxes[1].checked = true;
-          selectAllCb.checked = false; // Tắt trạng thái Chọn tất cả
+          this.ratioCompCheckboxes[0].checked = true;
+          this.ratioCompCheckboxes[1].checked = true;
+          selectAllCb.checked = false;
+          if (ratioSelectAllCb) ratioSelectAllCb.checked = false;
         }
 
         const checked = Array.from(this.compCheckboxes)
@@ -344,7 +188,9 @@ class BaselAnalysis {
           .map(c => c.value);
 
         this.compBanks = checked;
+        this.ratioCompBanks = checked;
         this.renderCompareAnalysis();
+        this.renderRatioAnalysis();
       });
     }
 
@@ -360,21 +206,36 @@ class BaselAnalysis {
           return;
         }
 
-        if (selectAllCb) {
-          selectAllCb.checked = (checked.length === this.compCheckboxes.length);
-        }
+        this.compCheckboxes.forEach(c => c.checked = checked.includes(c.value));
+        this.ratioCompCheckboxes.forEach(c => c.checked = checked.includes(c.value));
+
+        if (selectAllCb) selectAllCb.checked = (checked.length === this.compCheckboxes.length);
+        if (ratioSelectAllCb) ratioSelectAllCb.checked = (checked.length === this.ratioCompCheckboxes.length);
 
         this.compBanks = checked;
+        this.ratioCompBanks = checked;
         this.renderCompareAnalysis();
+        this.renderRatioAnalysis();
       });
     });
 
     this.compYearBtns.forEach(btn => {
       btn.addEventListener("click", () => {
-        this.compYearBtns.forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-        this.compYear = btn.getAttribute("data-year");
+        const value = btn.getAttribute("data-year");
+        this.compYear = value;
+        this.ratioCompYear = value;
+
+        this.compYearBtns.forEach(b => {
+          if (b.getAttribute("data-year") === value) b.classList.add("active");
+          else b.classList.remove("active");
+        });
+        this.ratioCompYearBtns.forEach(b => {
+          if (b.getAttribute("data-year") === value) b.classList.add("active");
+          else b.classList.remove("active");
+        });
+
         this.renderCompareAnalysis();
+        this.renderRatioAnalysis();
       });
     });
 
@@ -387,12 +248,15 @@ class BaselAnalysis {
       });
     }
 
-    // Lắng nghe sự kiện thay đổi tỷ lệ trục dọc (Y-Scale) - Trang So sánh Đối chiếu
+    // Lắng nghe sự kiện thay đổi tỷ lệ trục dọc (Y-Scale) - Trang So sánh Đối chiếu (Đồng bộ với Ratios)
     const compYScaleSelect = document.getElementById("compare-y-scale-select");
     if (compYScaleSelect) {
       compYScaleSelect.addEventListener("change", (e) => {
-        this.compYScale = e.target.value;
+        const value = e.target.value;
+        this.compYScale = value;
+        if (this.ratioCompYScaleSelect) this.ratioCompYScaleSelect.value = value;
         this.renderCompareAnalysis();
+        this.renderRatioAnalysis();
       });
     }
 
@@ -405,12 +269,15 @@ class BaselAnalysis {
       });
     }
 
-    // Lắng nghe sự kiện thay đổi bước chia tick trục dọc - Trang So sánh Đối chiếu
+    // Lắng nghe sự kiện thay đổi bước chia tick trục dọc - Trang So sánh Đối chiếu (Đồng bộ với Ratios)
     const compYTickSelect = document.getElementById("compare-y-tick-select");
     if (compYTickSelect) {
       compYTickSelect.addEventListener("change", (e) => {
-        this.compYTick = parseFloat(e.target.value);
+        const value = parseFloat(e.target.value);
+        this.compYTick = value;
+        if (this.ratioCompYTickSelect) this.ratioCompYTickSelect.value = value.toString();
         this.renderCompareAnalysis();
+        this.renderRatioAnalysis();
       });
     }
 
@@ -424,7 +291,163 @@ class BaselAnalysis {
           this.setupChartTheme();
           this.renderIndividualAnalysis();
           this.renderCompareAnalysis();
+          this.renderRatioAnalysis();
         }, 100);
+      });
+    }
+
+    // 4. Event Các Tỷ lệ An toàn khác (BCTC)
+    // 4.1. Chuyển đổi Sub-tab nhỏ (Đơn lẻ vs So sánh)
+    this.ratioSubTabBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        this.ratioSubTabBtns.forEach(b => {
+          b.style.background = "rgba(255,255,255,0.05)";
+          b.style.color = "var(--text-muted)";
+        });
+        btn.style.background = "var(--primary)";
+        btn.style.color = "white";
+
+        const subTabId = btn.getAttribute("data-ratiosub");
+        this.currentRatioSub = subTabId;
+
+        if (subTabId === "individual") {
+          this.ratioIndividualControls.classList.remove("hidden");
+          this.ratioCompareControls.classList.add("hidden");
+        } else {
+          this.ratioIndividualControls.classList.add("hidden");
+          this.ratioCompareControls.classList.remove("hidden");
+        }
+        
+        lucide.createIcons();
+        this.renderRatioAnalysis();
+      });
+    });
+
+    // 4.2. Event Đơn lẻ (Đồng bộ với Phân tích đơn lẻ CAR)
+    if (this.ratioBankSelect) {
+      this.ratioBankSelect.addEventListener("change", (e) => {
+        const value = e.target.value;
+        this.indBank = value;
+        this.ratioBank = value;
+        if (this.indBankSelect) this.indBankSelect.value = value;
+        this.renderIndividualAnalysis();
+        this.renderRatioAnalysis();
+      });
+    }
+
+    this.ratioYearBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const value = btn.getAttribute("data-year");
+        this.indYear = value;
+        this.ratioYear = value;
+        
+        this.indYearBtns.forEach(b => {
+          if (b.getAttribute("data-year") === value) b.classList.add("active");
+          else b.classList.remove("active");
+        });
+        this.ratioYearBtns.forEach(b => {
+          if (b.getAttribute("data-year") === value) b.classList.add("active");
+          else b.classList.remove("active");
+        });
+
+        this.renderIndividualAnalysis();
+        this.renderRatioAnalysis();
+      });
+    });
+
+    // 4.3. Event So sánh đối chiếu (Đồng bộ với So sánh đối chiếu CAR)
+    const ratioSelectAllCb = document.getElementById("ratio-compare-select-all");
+    if (ratioSelectAllCb) {
+      ratioSelectAllCb.addEventListener("change", (e) => {
+        const isChecked = e.target.checked;
+        this.compCheckboxes.forEach(cb => cb.checked = isChecked);
+        this.ratioCompCheckboxes.forEach(cb => cb.checked = isChecked);
+
+        if (!isChecked) {
+          this.compCheckboxes[0].checked = true;
+          this.compCheckboxes[1].checked = true;
+          this.ratioCompCheckboxes[0].checked = true;
+          this.ratioCompCheckboxes[1].checked = true;
+          if (selectAllCb) selectAllCb.checked = false;
+          ratioSelectAllCb.checked = false;
+        }
+
+        const checked = Array.from(this.ratioCompCheckboxes)
+          .filter(c => c.checked)
+          .map(c => c.value);
+
+        this.compBanks = checked;
+        this.ratioCompBanks = checked;
+        this.renderCompareAnalysis();
+        this.renderRatioAnalysis();
+      });
+    }
+
+    this.ratioCompCheckboxes.forEach(cb => {
+      cb.addEventListener("change", () => {
+        const checked = Array.from(this.ratioCompCheckboxes)
+          .filter(c => c.checked)
+          .map(c => c.value);
+        
+        if (checked.length < 2) {
+          cb.checked = true;
+          alert("Vui lòng chọn tối thiểu 2 ngân hàng để so sánh đối chiếu!");
+          return;
+        }
+
+        this.compCheckboxes.forEach(c => c.checked = checked.includes(c.value));
+        this.ratioCompCheckboxes.forEach(c => c.checked = checked.includes(c.value));
+
+        if (selectAllCb) selectAllCb.checked = (checked.length === this.compCheckboxes.length);
+        if (ratioSelectAllCb) ratioSelectAllCb.checked = (checked.length === this.ratioCompCheckboxes.length);
+
+        this.compBanks = checked;
+        this.ratioCompBanks = checked;
+        this.renderCompareAnalysis();
+        this.renderRatioAnalysis();
+      });
+    });
+
+    this.ratioCompYearBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const value = btn.getAttribute("data-year");
+        this.compYear = value;
+        this.ratioCompYear = value;
+
+        this.compYearBtns.forEach(b => {
+          if (b.getAttribute("data-year") === value) b.classList.add("active");
+          else b.classList.remove("active");
+        });
+        this.ratioCompYearBtns.forEach(b => {
+          if (b.getAttribute("data-year") === value) b.classList.add("active");
+          else b.classList.remove("active");
+        });
+
+        this.renderCompareAnalysis();
+        this.renderRatioAnalysis();
+      });
+    });
+
+    // 4.4. Event Trục dọc và Bước chia của Ratios
+    if (this.ratioCompYScaleSelect) {
+      this.ratioCompYScaleSelect.addEventListener("change", (e) => {
+        const value = e.target.value;
+        this.compYScale = value;
+        const mainSelect = document.getElementById("compare-y-scale-select");
+        if (mainSelect) mainSelect.value = value;
+        this.renderCompareAnalysis();
+        this.renderRatioAnalysis();
+      });
+    }
+
+    if (this.ratioCompYTickSelect) {
+      this.ratioCompYTickSelect.addEventListener("change", (e) => {
+        const value = parseFloat(e.target.value);
+        this.compYTick = value;
+        const mainSelect = document.getElementById("compare-y-tick-select");
+        if (mainSelect) mainSelect.value = value;
+        this.renderCompareAnalysis();
+        this.renderRatioAnalysis();
       });
     }
   }
@@ -464,6 +487,114 @@ class BaselAnalysis {
     Chart.defaults.color = textThemeColor;
     Chart.defaults.borderColor = gridThemeColor;
     Chart.defaults.font.family = "'Outfit', sans-serif";
+
+    // Hỗ trợ click vào điểm dữ liệu trên chart để mở BCTC
+    Chart.defaults.onClick = (event, elements, chart) => {
+      if (!elements || elements.length === 0) return;
+      const element = elements[0];
+      const chartData = chart.data;
+      const dataset = chartData.datasets[element.datasetIndex];
+      
+      let bank = null;
+      let year = null;
+      
+      const xLabel = chartData.labels[element.index];
+      const isYear = typeof xLabel === 'string' && /^(20\d{2})$/.test(xLabel);
+      
+      const getBankFromLabel = (labelStr) => {
+        if (!labelStr) return null;
+        let found = null;
+        Object.keys(window.BANK_DATABASE).forEach(code => {
+          if (labelStr === code || labelStr.includes(`(${code})`) || labelStr.includes(window.BANK_DATABASE[code].name)) {
+            found = code;
+          }
+        });
+        return found;
+      };
+
+      const isFinancialSection = document.getElementById("financial-analysis-section") && !document.getElementById("financial-analysis-section").classList.contains("hidden");
+      const isBankActive = document.getElementById("bank-analysis-section") && !document.getElementById("bank-analysis-section").classList.contains("hidden");
+
+      if (isFinancialSection) {
+        const finAnalysis = window.financialAnalysis;
+        if (finAnalysis) {
+          if (finAnalysis.currentSubTab === "financial-analysis") {
+            bank = finAnalysis.indBank;
+            year = isYear ? xLabel : finAnalysis.indYear;
+          } else {
+            if (isYear) {
+              year = xLabel;
+              bank = dataset.shortLabel || getBankFromLabel(dataset.label);
+            } else {
+              bank = getBankFromLabel(xLabel);
+              year = finAnalysis.compYear;
+            }
+          }
+        }
+      } else if (isBankActive) {
+        const bAnalysis = window.baselAnalysis;
+        if (bAnalysis) {
+          const isCarTab = bAnalysis.currentSubTab === "car-analysis";
+          if (isCarTab) {
+            if (bAnalysis.currentCarSub === "individual") {
+              bank = bAnalysis.indBank;
+              year = isYear ? xLabel : bAnalysis.indYear;
+            } else {
+              if (isYear) {
+                year = xLabel;
+                bank = dataset.shortLabel || getBankFromLabel(dataset.label);
+              } else {
+                bank = getBankFromLabel(xLabel);
+                year = bAnalysis.compYear;
+              }
+            }
+          } else {
+            // regulatory-ratios
+            if (bAnalysis.currentRatioSub === "individual") {
+              bank = bAnalysis.ratioBank;
+              year = isYear ? xLabel : bAnalysis.ratioYear;
+            } else {
+              if (isYear) {
+                year = xLabel;
+                bank = dataset.shortLabel || getBankFromLabel(dataset.label);
+              } else {
+                bank = getBankFromLabel(xLabel);
+                year = bAnalysis.ratioCompYear;
+              }
+            }
+          }
+        }
+      }
+
+      // Check fallback bank if not found from dataset in Time Series charts
+      if (isYear && !bank) {
+        if (isFinancialSection && window.financialAnalysis) {
+          bank = window.financialAnalysis.indBank;
+        } else if (isBankActive && window.baselAnalysis) {
+          const bAnalysis = window.baselAnalysis;
+          if (bAnalysis.currentSubTab === "car-analysis") {
+            bank = bAnalysis.indBank;
+          } else {
+            bank = bAnalysis.ratioBank;
+          }
+        }
+      }
+
+      if (bank && year && year !== "series") {
+        const bankInfo = window.BANK_DATABASE[bank];
+        if (bankInfo && bankInfo.bctc_files && bankInfo.bctc_files[year]) {
+          const filename = bankInfo.bctc_files[year];
+          if (window.documentFinder) {
+            window.documentFinder.openPdfViewer(`docs/banks_bctc/${filename}`, `${bankInfo.name} - BCTC ${year}`);
+          }
+        }
+      }
+    };
+
+    // Đổi cursor thành pointer khi hover vào cột/điểm trên chart
+    Chart.defaults.onHover = (event, chartElement) => {
+      event.native.target.style.cursor = chartElement[0] ? 'pointer' : 'default';
+    };
   }
 
   // Hủy instance Chart.js cũ để tránh lỗi chồng chéo canvas
@@ -537,6 +668,240 @@ class BaselAnalysis {
         }, 80);
       });
     });
+  }
+
+  attachRatioTableClickHandlers() {
+    // Helper to open PDF
+    const openPdf = (bankCode, year, type = "bctc") => {
+      const bankInfo = BANK_DATABASE[bankCode];
+      if (!bankInfo) return;
+      if (type === "car") {
+        const carFile = bankInfo.car_data && bankInfo.car_data[year] && bankInfo.car_data[year].pdf;
+        if (carFile) {
+          window.documentFinder.openPdfViewer(`docs/banks/${carFile}`, `${bankInfo.name} - Báo cáo CAR năm ${year}`);
+          return;
+        }
+      }
+      // Fallback or explicit BCTC
+      const bctcFile = bankInfo.bctc_files && bankInfo.bctc_files[year];
+      if (bctcFile) {
+        window.documentFinder.openPdfViewer(`docs/banks_bctc/${bctcFile}`, `${bankInfo.name} - BCTC ${year}`);
+      }
+    };
+
+    // 1. CAR Ind Yearly Table
+    const carIndYearly = document.getElementById("car-ind-yearly-table");
+    if (carIndYearly) {
+      const bankInfo = BANK_DATABASE[this.indBank];
+      if (bankInfo) {
+        const rows = carIndYearly.querySelectorAll("tbody tr");
+        rows.forEach((row, rIdx) => {
+          const td = row.cells[1]; // Value column
+          if (td && td.textContent.trim() !== "" && td.textContent.trim() !== "-") {
+            td.style.cursor = "pointer";
+            td.style.textDecoration = "underline dashed var(--primary)";
+            td.addEventListener("click", () => {
+              openPdf(this.indBank, this.indYear, rIdx === 0 ? "car" : "bctc");
+            });
+          }
+        });
+      }
+    }
+
+    // 2. CAR Ind Series Table
+    const carIndSeries = document.getElementById("car-ind-series-table");
+    if (carIndSeries) {
+      const bankInfo = BANK_DATABASE[this.indBank];
+      if (bankInfo) {
+        const rows = carIndSeries.querySelectorAll("tbody tr");
+        rows.forEach(row => {
+          const yearCell = row.cells[0];
+          if (!yearCell) return;
+          const y = yearCell.textContent.trim().replace(/[^0-9]/g, '');
+          
+          for (let i = 0; i < row.cells.length; i++) {
+            const td = row.cells[i];
+            if (td && td.textContent.trim() !== "" && td.textContent.trim() !== "-") {
+              td.style.cursor = "pointer";
+              td.style.textDecoration = "underline dashed var(--primary)";
+              td.addEventListener("click", () => {
+                openPdf(this.indBank, y, (i <= 1) ? "car" : "bctc");
+              });
+            }
+          }
+        });
+      }
+    }
+
+    // 3. CAR Compare Yearly Table (comp-detail-table)
+    const carCompYearly = document.getElementById("comp-detail-table");
+    if (carCompYearly) {
+      const rows = carCompYearly.querySelectorAll("tbody tr");
+      rows.forEach(row => {
+        const bankCell = row.cells[0];
+        if (!bankCell) return;
+        const matches = bankCell.textContent.match(/\(([^)]+)\)/);
+        const bankCode = matches ? matches[1] : null;
+        if (!bankCode) return;
+        
+        for (let i = 0; i < row.cells.length; i++) {
+          const td = row.cells[i];
+          if (td && td.textContent.trim() !== "" && !td.textContent.includes("chưa công bố")) {
+            td.style.cursor = "pointer";
+            td.style.textDecoration = "underline dashed var(--primary)";
+            td.addEventListener("click", () => {
+              openPdf(bankCode, this.compYear, (i <= 1) ? "car" : "bctc");
+            });
+          }
+        }
+      });
+    }
+
+    // 4. CAR Compare Series Table (comp-trend-table)
+    const carCompSeries = document.getElementById("comp-trend-table");
+    if (carCompSeries) {
+      const years = ["2019", "2020", "2021", "2022", "2023", "2024", "2025"];
+      const rows = carCompSeries.querySelectorAll("tbody tr");
+      rows.forEach(row => {
+        const bankCell = row.cells[0];
+        if (!bankCell) return;
+        const matches = bankCell.textContent.match(/\(([^)]+)\)/);
+        const bankCode = matches ? matches[1] : null;
+        if (!bankCode) return;
+        
+        bankCell.style.cursor = "pointer";
+        bankCell.style.textDecoration = "underline dashed var(--primary)";
+        bankCell.addEventListener("click", () => {
+          openPdf(bankCode, "2025", "car");
+        });
+
+        years.forEach((y, yIdx) => {
+          const td = row.cells[yIdx + 1];
+          if (td && td.textContent.trim() !== "" && td.textContent.trim() !== "-") {
+            td.style.cursor = "pointer";
+            td.style.textDecoration = "underline dashed var(--primary)";
+            td.addEventListener("click", () => {
+              openPdf(bankCode, y, "car");
+            });
+          }
+        });
+      });
+    }
+
+    // 5. Ratio Compare Yearly Table
+    const ratioCompYearly = document.getElementById("ratio-comp-detail-table");
+    if (ratioCompYearly) {
+      const rows = ratioCompYearly.querySelectorAll("tbody tr");
+      rows.forEach(row => {
+        const bankCell = row.querySelector("td:nth-child(1)");
+        if (!bankCell) return;
+        const matches = bankCell.textContent.match(/\(([^)]+)\)/);
+        const bankCode = matches ? matches[1] : null;
+        if (!bankCode) return;
+        
+        const bankInfo = BANK_DATABASE[bankCode];
+        if (!bankInfo) return;
+        
+        const bctcFile = bankInfo.bctc_files && bankInfo.bctc_files[this.ratioCompYear];
+        if (bctcFile) {
+          for (let i = 1; i <= 4; i++) {
+            const td = row.cells[i];
+            if (td && td.textContent.trim() !== "" && td.textContent.trim() !== "-") {
+              td.style.cursor = "pointer";
+              td.style.textDecoration = "underline dashed var(--primary)";
+              td.addEventListener("click", () => {
+                openPdf(bankCode, this.ratioCompYear, "bctc");
+              });
+            }
+          }
+          bankCell.style.cursor = "pointer";
+          bankCell.style.textDecoration = "underline dashed var(--primary)";
+          bankCell.addEventListener("click", () => {
+            openPdf(bankCode, this.ratioCompYear, "bctc");
+          });
+        }
+      });
+    }
+
+    // 6. Ratio Compare Series Table
+    const ratioCompSeries = document.getElementById("ratio-comp-series-table");
+    if (ratioCompSeries) {
+      const years = ["2019", "2020", "2021", "2022", "2023", "2024", "2025"];
+      const rows = ratioCompSeries.querySelectorAll("tbody tr");
+      rows.forEach(row => {
+        const bankCell = row.querySelector("td:nth-child(1)");
+        if (!bankCell) return;
+        const matches = bankCell.textContent.match(/\(([^)]+)\)/);
+        const bankCode = matches ? matches[1] : null;
+        if (!bankCode) return;
+        
+        const bankInfo = BANK_DATABASE[bankCode];
+        if (!bankInfo) return;
+        
+        years.forEach((y, yIdx) => {
+          const bctcFile = bankInfo.bctc_files && bankInfo.bctc_files[y];
+          if (bctcFile) {
+            const td = row.cells[yIdx + 1];
+            if (td && td.textContent.trim() !== "" && td.textContent.trim() !== "-") {
+              td.style.cursor = "pointer";
+              td.style.textDecoration = "underline dashed var(--primary)";
+              td.addEventListener("click", () => {
+                openPdf(bankCode, y, "bctc");
+              });
+            }
+          }
+        });
+      });
+    }
+
+    // 7. Ratio Ind Series Table
+    const ratioIndSeries = document.getElementById("ratio-ind-series-table");
+    if (ratioIndSeries) {
+      const bankInfo = BANK_DATABASE[this.ratioBank];
+      if (bankInfo) {
+        const rows = ratioIndSeries.querySelectorAll("tbody tr");
+        rows.forEach(row => {
+          const yearCell = row.querySelector("td:nth-child(1)");
+          if (!yearCell) return;
+          const y = yearCell.textContent.trim().replace(/[^0-9]/g, '');
+          const bctcFile = bankInfo.bctc_files && bankInfo.bctc_files[y];
+          if (bctcFile) {
+            for (let i = 0; i <= 4; i++) {
+              const td = row.cells[i];
+              if (td && td.textContent.trim() !== "" && td.textContent.trim() !== "-") {
+                td.style.cursor = "pointer";
+                td.style.textDecoration = "underline dashed var(--primary)";
+                td.addEventListener("click", () => {
+                  openPdf(this.ratioBank, y, "bctc");
+                });
+              }
+            }
+          }
+        });
+      }
+    }
+
+    // 8. Ratio Ind Yearly Table
+    const ratioIndYearly = document.getElementById("ratio-ind-yearly-table");
+    if (ratioIndYearly) {
+      const bankInfo = BANK_DATABASE[this.ratioBank];
+      if (bankInfo) {
+        const bctcFile = bankInfo.bctc_files && bankInfo.bctc_files[this.ratioYear];
+        if (bctcFile) {
+          const rows = ratioIndYearly.querySelectorAll("tbody tr");
+          rows.forEach(row => {
+            const td = row.cells[2]; // column 3 is actual value
+            if (td && td.textContent.trim() !== "" && td.textContent.trim() !== "-") {
+              td.style.cursor = "pointer";
+              td.style.textDecoration = "underline dashed var(--primary)";
+              td.addEventListener("click", () => {
+                openPdf(this.ratioBank, this.ratioYear, "bctc");
+              });
+            }
+          });
+        }
+      }
+    }
   }
 
   // Custom Chart.js plugin: vẽ tên viết tắt NH tại điểm cuối cùng của mỗi line,
@@ -740,9 +1105,9 @@ class BaselAnalysis {
   renderIndividualAnalysis() {
     if (!this.indRender) return;
 
-    const bankData = BANK_CAR_DATABASE[this.indBank];
-    const bankName = BANK_NAMES[this.indBank];
-    const color = BANK_COLORS[this.indBank];
+    const bankData = BANK_DATABASE[this.indBank].car_data;
+    const bankName = BANK_DATABASE[this.indBank].name;
+    const color = BANK_DATABASE[this.indBank].color;
 
     // Hủy các chart cũ của trang đơn lẻ
     this.destroyChart("indCar");
@@ -851,10 +1216,102 @@ class BaselAnalysis {
               </h3>
               <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0.25rem 0 0 0;">Bạn có thể trực tiếp mở đọc bản PDF báo cáo CAR chính thức cuối năm ${this.indYear} của ${bankName}:</p>
             </div>
-            <button class="source-link-btn open-pdf-analysis-btn" data-docpath="docs/banks/${yearData.pdf}" data-docname="${bankName} - Báo cáo CAR năm ${this.indYear}" style="margin-top: 0; background: ${color}20; border-color: ${color}40; color: ${color}; border: none; cursor: pointer;">
-              Mở file PDF gốc
-            </button>
+            <div style="display: flex; gap: 0.5rem;">
+              <button class="source-link-btn open-pdf-analysis-btn" data-docpath="docs/banks/${yearData.pdf}" data-docname="${bankName} - Báo cáo CAR năm ${this.indYear}" style="margin-top: 0; background: ${color}20; border-color: ${color}40; color: ${color}; border: none; cursor: pointer;">
+                Mở CAR gốc
+              </button>
+              ${(() => {
+                const bctcFile = BANK_DATABASE[this.indBank].bctc_files && BANK_DATABASE[this.indBank].bctc_files[this.indYear];
+                return bctcFile ? `
+                  <button class="source-link-btn open-pdf-analysis-btn" data-docpath="docs/banks_bctc/${bctcFile}" data-docname="${bankName} - Báo cáo tài chính năm ${this.indYear}" style="margin-top: 0; background: var(--primary); border-color: var(--primary); color: white; border: none; cursor: pointer;">
+                    Mở BCTC gốc
+                  </button>
+                ` : '';
+              })()}
+            </div>
           </div>
+        </div>
+
+        <!-- Table -->
+        <div class="card" style="padding: 1.5rem; margin-top: 1.5rem; margin-bottom: 1.5rem;">
+          <h3 style="margin-bottom: 1.25rem; font-size: 1.05rem;"><i data-lucide="table"></i> Bảng Số liệu chi tiết Chỉ số CAR năm ${this.indYear}</h3>
+          <table id="car-ind-yearly-table" class="basel-table" style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+            <thead>
+              <tr style="background: var(--card-header-bg); border-bottom: 2px solid var(--border-color);">
+                <th style="text-align: left; padding: 0.75rem;">Chỉ số phân tích</th>
+                <th style="text-align: right; padding: 0.75rem; width: 150px;">Giá trị</th>
+                <th style="text-align: left; padding: 0.75rem;">Quy chuẩn & Ý nghĩa</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 0.75rem; font-weight: 600;">Hệ số an toàn vốn (CAR)</td>
+                <td style="padding: 0.75rem; text-align: right; font-weight: 700; color: ${isMet ? 'var(--success)' : 'var(--danger)'}; ${(() => {
+                  const bctcFile = BANK_DATABASE[this.indBank].bctc_files && BANK_DATABASE[this.indBank].bctc_files[this.indYear];
+                  return bctcFile ? 'cursor: pointer; text-decoration: underline dashed var(--primary); color: var(--primary);' : '';
+                })()}" ${(() => {
+                  const bctcFile = BANK_DATABASE[this.indBank].bctc_files && BANK_DATABASE[this.indBank].bctc_files[this.indYear];
+                  return bctcFile ? `onclick="window.documentFinder.openPdfViewer('docs/banks_bctc/${bctcFile}', '${bankName} - BCTC ${this.indYear}')"` : '';
+                })()}>${yearData.car.toFixed(2)}%</td>
+                <td style="padding: 0.75rem; color: var(--text-muted);">Tối thiểu 8.00% theo Thông tư 41/2016/TT-NHNN.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 0.75rem; font-weight: 600;">Vốn tự có (Total Capital)</td>
+                <td style="padding: 0.75rem; text-align: right; font-weight: 700; ${(() => {
+                  const bctcFile = BANK_DATABASE[this.indBank].bctc_files && BANK_DATABASE[this.indBank].bctc_files[this.indYear];
+                  return bctcFile ? 'cursor: pointer; text-decoration: underline dashed var(--primary); color: var(--primary);' : '';
+                })()}" ${(() => {
+                  const bctcFile = BANK_DATABASE[this.indBank].bctc_files && BANK_DATABASE[this.indBank].bctc_files[this.indYear];
+                  return bctcFile ? `onclick="window.documentFinder.openPdfViewer('docs/banks_bctc/${bctcFile}', '${bankName} - BCTC ${this.indYear}')"` : '';
+                })()}>${yearData.capital.toLocaleString()} Tỷ</td>
+                <td style="padding: 0.75rem; color: var(--text-muted);">Vốn cấp 1 + Vốn cấp 2 trừ đi các khoản giảm trừ vốn.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 0.75rem; font-weight: 600;">Vốn cấp 1 (Tier 1 Capital)</td>
+                <td style="padding: 0.75rem; text-align: right; font-weight: 700; ${(() => {
+                  const bctcFile = BANK_DATABASE[this.indBank].bctc_files && BANK_DATABASE[this.indBank].bctc_files[this.indYear];
+                  return bctcFile ? 'cursor: pointer; text-decoration: underline dashed var(--primary); color: var(--primary);' : '';
+                })()}" ${(() => {
+                  const bctcFile = BANK_DATABASE[this.indBank].bctc_files && BANK_DATABASE[this.indBank].bctc_files[this.indYear];
+                  return bctcFile ? `onclick="window.documentFinder.openPdfViewer('docs/banks_bctc/${bctcFile}', '${bankName} - BCTC ${this.indYear}')"` : '';
+                })()}>${yearData.tier1 ? yearData.tier1.toLocaleString() + ' Tỷ' : '-'}</td>
+                <td style="padding: 0.75rem; color: var(--text-muted);">Vốn cốt lõi bảo vệ người gửi tiền.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 0.75rem; font-weight: 600;">Vốn cấp 2 (Tier 2 Capital)</td>
+                <td style="padding: 0.75rem; text-align: right; font-weight: 700; ${(() => {
+                  const bctcFile = BANK_DATABASE[this.indBank].bctc_files && BANK_DATABASE[this.indBank].bctc_files[this.indYear];
+                  return bctcFile ? 'cursor: pointer; text-decoration: underline dashed var(--primary); color: var(--primary);' : '';
+                })()}" ${(() => {
+                  const bctcFile = BANK_DATABASE[this.indBank].bctc_files && BANK_DATABASE[this.indBank].bctc_files[this.indYear];
+                  return bctcFile ? `onclick="window.documentFinder.openPdfViewer('docs/banks_bctc/${bctcFile}', '${bankName} - BCTC ${this.indYear}')"` : '';
+                })()}>${yearData.tier2 ? yearData.tier2.toLocaleString() + ' Tỷ' : '-'}</td>
+                <td style="padding: 0.75rem; color: var(--text-muted);">Vốn bổ sung có độ bảo vệ thấp hơn.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 0.75rem; font-weight: 600;">Tổng tài sản tính theo độ rủi ro (RWA)</td>
+                <td style="padding: 0.75rem; text-align: right; font-weight: 700; ${(() => {
+                  const bctcFile = BANK_DATABASE[this.indBank].bctc_files && BANK_DATABASE[this.indBank].bctc_files[this.indYear];
+                  return bctcFile ? 'cursor: pointer; text-decoration: underline dashed var(--primary); color: var(--primary);' : '';
+                })()}" ${(() => {
+                  const bctcFile = BANK_DATABASE[this.indBank].bctc_files && BANK_DATABASE[this.indBank].bctc_files[this.indYear];
+                  return bctcFile ? `onclick="window.documentFinder.openPdfViewer('docs/banks_bctc/${bctcFile}', '${bankName} - BCTC ${this.indYear}')"` : '';
+                })()}>${yearData.rwa.toLocaleString()} Tỷ</td>
+                <td style="padding: 0.75rem; color: var(--text-muted);">Tài sản có nhân trọng số rủi ro (tín dụng, thị trường, hoạt động).</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 0.75rem; font-weight: 600;">Vốn điều lệ (Charter Capital)</td>
+                <td style="padding: 0.75rem; text-align: right; font-weight: 700; ${(() => {
+                  const bctcFile = BANK_DATABASE[this.indBank].bctc_files && BANK_DATABASE[this.indBank].bctc_files[this.indYear];
+                  return bctcFile ? 'cursor: pointer; text-decoration: underline dashed var(--primary); color: var(--primary);' : '';
+                })()}" ${(() => {
+                  const bctcFile = BANK_DATABASE[this.indBank].bctc_files && BANK_DATABASE[this.indBank].bctc_files[this.indYear];
+                  return bctcFile ? `onclick="window.documentFinder.openPdfViewer('docs/banks_bctc/${bctcFile}', '${bankName} - BCTC ${this.indYear}')"` : '';
+                })()}>${yearData.charter.toLocaleString()} Tỷ</td>
+                <td style="padding: 0.75rem; color: var(--text-muted);">Vốn góp chính thức từ các cổ đông sáng lập.</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       `;
 
@@ -869,6 +1326,8 @@ class BaselAnalysis {
       });
 
       this.initIndYearlyCharts(yearData, color, bankName);
+      this.setupSortableTable("car-ind-yearly-table");
+      this.attachRatioTableClickHandlers();
     } else {
       // RENDERING TIME SERIES FOR INDIVIDUAL BANK
       const years = Object.keys(bankData).map(Number).sort();
@@ -910,12 +1369,63 @@ class BaselAnalysis {
                   <span style="font-weight: 700; color: ${color}; font-size: 1.1rem; display: block;">Năm ${yr}</span>
                   <span style="font-size: 0.75rem; color: var(--text-muted);">CAR: ${bankData[yr].car.toFixed(2)}% | Vốn: ${bankData[yr].capital.toLocaleString()} Tỷ</span>
                 </div>
-                <button class="source-link-btn open-pdf-analysis-btn" data-docpath="docs/banks/${bankData[yr].pdf}" data-docname="${bankName} - Báo cáo CAR năm ${yr}" style="margin-top: 0.25rem; font-size: 0.75rem; width: 100%; text-align: center; justify-content: center; background: rgba(255,255,255,0.04); border: none; cursor: pointer;">
-                  Mở PDF
-                </button>
+                <div style="display: flex; gap: 0.25rem; margin-top: 0.25rem; width: 100%;">
+                  <button class="source-link-btn open-pdf-analysis-btn" data-docpath="docs/banks/${bankData[yr].pdf}" data-docname="${bankName} - Báo cáo CAR năm ${yr}" style="font-size: 0.75rem; flex: 1; text-align: center; justify-content: center; background: rgba(255,255,255,0.04); border: none; cursor: pointer;">
+                    Mở CAR
+                  </button>
+                  ${(() => {
+                    const bctcFile = BANK_DATABASE[this.indBank].bctc_files && BANK_DATABASE[this.indBank].bctc_files[yr];
+                    return bctcFile ? `
+                      <button class="source-link-btn open-pdf-analysis-btn" data-docpath="docs/banks_bctc/${bctcFile}" data-docname="${bankName} - Báo cáo tài chính năm ${yr}" style="font-size: 0.75rem; flex: 1; text-align: center; justify-content: center; background: var(--primary); border: none; cursor: pointer; color: white;">
+                        Mở BCTC
+                      </button>
+                    ` : '';
+                  })()}
+                </div>
               </div>
             `).join("")}
           </div>
+        </div>
+
+        <!-- Table detail -->
+        <div class="card" style="padding: 1.5rem; overflow-x: auto; margin-top: 1.5rem;">
+          <h3 style="margin-bottom: 1.25rem; font-size: 1.05rem;"><i data-lucide="table"></i> Diễn biến các Chỉ số CAR qua các năm</h3>
+          <table id="car-ind-series-table" class="basel-table" style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+            <thead>
+              <tr style="background: var(--card-header-bg); border-bottom: 2px solid var(--border-color);">
+                <th style="text-align: left; padding: 0.75rem;">Năm</th>
+                <th style="text-align: right; padding: 0.75rem;">Hệ số CAR (%)</th>
+                <th style="text-align: right; padding: 0.75rem;">Vốn tự có (Tỷ)</th>
+                <th style="text-align: right; padding: 0.75rem;">Vốn cấp 1 (Tỷ)</th>
+                <th style="text-align: right; padding: 0.75rem;">Vốn cấp 2 (Tỷ)</th>
+                <th style="text-align: right; padding: 0.75rem;">Tài sản rủi ro RWA (Tỷ)</th>
+                <th style="text-align: right; padding: 0.75rem;">Vốn điều lệ (Tỷ)</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${years.map(y => {
+                const yrData = bankData[y];
+                if (!yrData) return '';
+                const isMet = yrData.car >= 8.0;
+                const bctcFile = BANK_DATABASE[this.indBank].bctc_files && BANK_DATABASE[this.indBank].bctc_files[y];
+                const cellStyle = bctcFile ? `cursor: pointer; text-decoration: underline dashed var(--primary);` : '';
+                const clickAttr = bctcFile ? `onclick="window.documentFinder.openPdfViewer('docs/banks_bctc/${bctcFile}', '${bankName} - BCTC ${y}')"` : '';
+                return `
+                  <tr style="border-bottom: 1px solid var(--border-color);">
+                    <td style="padding: 0.75rem; font-weight: bold; ${bctcFile ? 'cursor: pointer; text-decoration: underline dashed var(--primary); color: var(--primary);' : ''}" ${bctcFile ? `onclick="window.documentFinder.openPdfViewer('docs/banks_bctc/${bctcFile}', '${bankName} - BCTC ${y}')"` : ''}>
+                      ${bctcFile ? '<i data-lucide="file-text" style="width:13px;height:13px;display:inline-block;vertical-align:middle;margin-right:4px;"></i>' : ''}${y}
+                    </td>
+                    <td style="padding: 0.75rem; text-align: right; font-weight: 700; color: ${isMet ? 'var(--success)' : 'var(--danger)'}; ${cellStyle}" ${clickAttr}>${yrData.car.toFixed(2)}%</td>
+                    <td style="padding: 0.75rem; text-align: right; font-weight: 600; ${cellStyle}" ${clickAttr}>${yrData.capital.toLocaleString()}</td>
+                    <td style="padding: 0.75rem; text-align: right; font-weight: 600; ${cellStyle}" ${clickAttr}>${yrData.tier1 ? yrData.tier1.toLocaleString() : '-'}</td>
+                    <td style="padding: 0.75rem; text-align: right; font-weight: 600; ${cellStyle}" ${clickAttr}>${yrData.tier2 ? yrData.tier2.toLocaleString() : '-'}</td>
+                    <td style="padding: 0.75rem; text-align: right; font-weight: 600; ${cellStyle}" ${clickAttr}>${yrData.rwa.toLocaleString()}</td>
+                    <td style="padding: 0.75rem; text-align: right; font-weight: 600; ${cellStyle}" ${clickAttr}>${yrData.charter.toLocaleString()}</td>
+                  </tr>
+                `;
+              }).join("")}
+            </tbody>
+          </table>
         </div>
       `;
 
@@ -931,6 +1441,8 @@ class BaselAnalysis {
 
       // Khởi tạo các biểu đồ chuỗi thời gian
       this.initIndSeriesCharts(years, bankData, color, bankName);
+      this.setupSortableTable("car-ind-series-table");
+      this.attachRatioTableClickHandlers();
     }
 
     lucide.createIcons();
@@ -1005,12 +1517,12 @@ class BaselAnalysis {
               </thead>
               <tbody>
                 ${selectedBanks.map(b => {
-                  const data = BANK_CAR_DATABASE[b][year];
+                  const data = BANK_DATABASE[b].car_data[year];
                   if (!data) {
                     return `
                       <tr>
-                        <td class="criterion-col" style="border-left: 4px solid ${BANK_COLORS[b]};">
-                          <strong>${BANK_NAMES[b]} (${b})</strong>
+                        <td class="criterion-col" style="border-left: 4px solid ${BANK_DATABASE[b].color};">
+                          <strong>${BANK_DATABASE[b].name} (${b})</strong>
                         </td>
                         <td colspan="4" style="text-align: center; color: var(--text-muted); font-style: italic; font-size: 0.82rem;">Số liệu năm ${year} chưa công bố / không có sẵn</td>
                       </tr>
@@ -1019,8 +1531,8 @@ class BaselAnalysis {
                   const isMet = data.car >= 8.0;
                   return `
                     <tr>
-                      <td class="criterion-col" style="border-left: 4px solid ${BANK_COLORS[b]};">
-                        <strong>${BANK_NAMES[b]} (${b})</strong>
+                      <td class="criterion-col" style="border-left: 4px solid ${BANK_DATABASE[b].color};">
+                        <strong>${BANK_DATABASE[b].name} (${b})</strong>
                       </td>
                       <td style="font-weight: 700; color: ${isMet ? 'var(--success)' : 'var(--danger)'};">${data.car.toFixed(2)}%</td>
                       <td>${data.capital.toLocaleString()}</td>
@@ -1049,6 +1561,7 @@ class BaselAnalysis {
       this.initCompYearlyCharts(selectedBanks, year);
       // Kích hoạt sort cho bảng chi tiết
       this.setupSortableTable('comp-detail-table');
+      this.attachRatioTableClickHandlers();
     } else {
       // RENDERING TIME SERIES TREND FOR MULTIPLE BANKS
       const years = [2019, 2020, 2021, 2022, 2023, 2024, 2025];
@@ -1106,14 +1619,14 @@ class BaselAnalysis {
               <tbody>
                 ${selectedBanks.map(b => {
                   const tds = years.map(y => {
-                    const data = BANK_CAR_DATABASE[b][y];
+                    const data = BANK_DATABASE[b].car_data[y];
                     if (!data) return `<td><span style="color: var(--text-muted); font-size: 0.8rem;">-</span></td>`;
                     const isLatest = y === 2025;
                     return `<td style="${isLatest ? 'font-weight: 700; color: var(--primary);' : ''}">${data.car.toFixed(2)}%</td>`;
                   }).join("");
                   return `
                     <tr>
-                      <td class="criterion-col" style="border-left: 4px solid ${BANK_COLORS[b]};"><strong>${BANK_NAMES[b]} (${b})</strong></td>
+                      <td class="criterion-col" style="border-left: 4px solid ${BANK_DATABASE[b].color};"><strong>${BANK_DATABASE[b].name} (${b})</strong></td>
                       ${tds}
                     </tr>
                   `;
@@ -1127,6 +1640,7 @@ class BaselAnalysis {
       this.initCompSeriesCharts(selectedBanks, years);
       // Kích hoạt sort cho bảng xu hướng
       this.setupSortableTable('comp-trend-table');
+      this.attachRatioTableClickHandlers();
     }
 
     lucide.createIcons();
@@ -1384,15 +1898,15 @@ class BaselAnalysis {
     if (!window.Chart) return;
 
     const labels = banks.map(b => b);
-    const colors = banks.map(b => BANK_COLORS[b]);
+    const colors = banks.map(b => BANK_DATABASE[b].color);
 
     // 1. CAR Comparison
-    const carValues = banks.map(b => BANK_CAR_DATABASE[b][year] ? BANK_CAR_DATABASE[b][year].car : null);
+    const carValues = banks.map(b => BANK_DATABASE[b].car_data[year] ? BANK_DATABASE[b].car_data[year].car : null);
     const carCtx = document.getElementById("chart-comp-yearly-car").getContext("2d");
     this.charts.compYearlyCar = new Chart(carCtx, {
       type: 'bar',
       data: {
-        labels: labels.map(l => BANK_NAMES[l]),
+        labels: labels.map(l => BANK_DATABASE[l].name),
         datasets: [{
           label: 'Tỷ lệ CAR (%)',
           data: carValues,
@@ -1412,12 +1926,12 @@ class BaselAnalysis {
     });
 
     // 2. Charter / RWA Comparison
-    const crValues = banks.map(b => BANK_CAR_DATABASE[b][year] ? (BANK_CAR_DATABASE[b][year].charter / BANK_CAR_DATABASE[b][year].rwa) * 100 : null);
+    const crValues = banks.map(b => BANK_DATABASE[b].car_data[year] ? (BANK_DATABASE[b].car_data[year].charter / BANK_DATABASE[b].car_data[year].rwa) * 100 : null);
     const crCtx = document.getElementById("chart-comp-yearly-charter-rwa").getContext("2d");
     this.charts.compYearlyCharterRwa = new Chart(crCtx, {
       type: 'bar',
       data: {
-        labels: labels.map(l => BANK_NAMES[l]),
+        labels: labels.map(l => BANK_DATABASE[l].name),
         datasets: [{
           label: 'Vốn điều lệ / RWA (%)',
           data: crValues,
@@ -1437,12 +1951,12 @@ class BaselAnalysis {
     });
 
     // 3. Charter / Capital Comparison
-    const ccValues = banks.map(b => BANK_CAR_DATABASE[b][year] ? (BANK_CAR_DATABASE[b][year].charter / BANK_CAR_DATABASE[b][year].capital) * 100 : null);
+    const ccValues = banks.map(b => BANK_DATABASE[b].car_data[year] ? (BANK_DATABASE[b].car_data[year].charter / BANK_DATABASE[b].car_data[year].capital) * 100 : null);
     const ccCtx = document.getElementById("chart-comp-yearly-charter-capital").getContext("2d");
     this.charts.compYearlyCharterCapital = new Chart(ccCtx, {
       type: 'bar',
       data: {
-        labels: labels.map(l => BANK_NAMES[l]),
+        labels: labels.map(l => BANK_DATABASE[l].name),
         datasets: [{
           label: 'Vốn điều lệ / Vốn tự có (%)',
           data: ccValues,
@@ -1462,13 +1976,13 @@ class BaselAnalysis {
     });
 
     // 4. Size (Capital vs RWA) Comparison
-    const capValues = banks.map(b => BANK_CAR_DATABASE[b][year] ? BANK_CAR_DATABASE[b][year].capital : null);
-    const rwaValues = banks.map(b => BANK_CAR_DATABASE[b][year] ? BANK_CAR_DATABASE[b][year].rwa : null);
+    const capValues = banks.map(b => BANK_DATABASE[b].car_data[year] ? BANK_DATABASE[b].car_data[year].capital : null);
+    const rwaValues = banks.map(b => BANK_DATABASE[b].car_data[year] ? BANK_DATABASE[b].car_data[year].rwa : null);
     const sizeCtx = document.getElementById("chart-comp-yearly-size").getContext("2d");
     this.charts.compYearlySize = new Chart(sizeCtx, {
       type: 'bar',
       data: {
-        labels: labels.map(l => BANK_NAMES[l]),
+        labels: labels.map(l => BANK_DATABASE[l].name),
         datasets: [
           {
             label: 'Vốn tự có (Tỷ VND)',
@@ -1505,11 +2019,11 @@ class BaselAnalysis {
 
     // 1. CAR Trend
     const carDatasets = banks.map(b => ({
-      label: BANK_NAMES[b],
+      label: BANK_DATABASE[b].name,
       shortLabel: b,
-      data: years.map(yr => BANK_CAR_DATABASE[b][yr] ? BANK_CAR_DATABASE[b][yr].car : null),
-      borderColor: BANK_COLORS[b],
-      backgroundColor: BANK_COLORS[b] + '10',
+      data: years.map(yr => BANK_DATABASE[b].car_data[yr] ? BANK_DATABASE[b].car_data[yr].car : null),
+      borderColor: BANK_DATABASE[b].color,
+      backgroundColor: BANK_DATABASE[b].color + '10',
       tension: 0.15,
       borderWidth: 2,
       pointRadius: 3,
@@ -1534,7 +2048,7 @@ class BaselAnalysis {
         layout: { padding: { right: 60 } },
         scales: {
           y: this.getYScaleConfig(this.compYScale, this.compYTick, [
-            ...banks.flatMap(b => years.map(yr => BANK_CAR_DATABASE[b][yr] ? BANK_CAR_DATABASE[b][yr].car : null)).filter(v => v !== null),
+            ...banks.flatMap(b => years.map(yr => BANK_DATABASE[b].car_data[yr] ? BANK_DATABASE[b].car_data[yr].car : null)).filter(v => v !== null),
             8
           ])
         },
@@ -1545,11 +2059,11 @@ class BaselAnalysis {
 
     // 2. Charter / RWA Trend
     const crDatasets = banks.map(b => ({
-      label: BANK_NAMES[b],
+      label: BANK_DATABASE[b].name,
       shortLabel: b,
-      data: years.map(yr => BANK_CAR_DATABASE[b][yr] ? (BANK_CAR_DATABASE[b][yr].charter / BANK_CAR_DATABASE[b][yr].rwa) * 100 : null),
-      borderColor: BANK_COLORS[b],
-      backgroundColor: BANK_COLORS[b] + '10',
+      data: years.map(yr => BANK_DATABASE[b].car_data[yr] ? (BANK_DATABASE[b].car_data[yr].charter / BANK_DATABASE[b].car_data[yr].rwa) * 100 : null),
+      borderColor: BANK_DATABASE[b].color,
+      backgroundColor: BANK_DATABASE[b].color + '10',
       tension: 0.15,
       borderWidth: 2,
       pointRadius: 3,
@@ -1565,7 +2079,7 @@ class BaselAnalysis {
         layout: { padding: { right: 60 } },
         scales: {
           y: this.getYScaleConfig(this.compYScale, this.compYTick, [
-            ...banks.flatMap(b => years.map(yr => BANK_CAR_DATABASE[b][yr] ? (BANK_CAR_DATABASE[b][yr].charter / BANK_CAR_DATABASE[b][yr].rwa) * 100 : null)).filter(v => v !== null)
+            ...banks.flatMap(b => years.map(yr => BANK_DATABASE[b].car_data[yr] ? (BANK_DATABASE[b].car_data[yr].charter / BANK_DATABASE[b].car_data[yr].rwa) * 100 : null)).filter(v => v !== null)
           ])
         },
         plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, padding: 10 } } }
@@ -1575,11 +2089,11 @@ class BaselAnalysis {
 
     // 3. Charter / Capital Trend
     const ccDatasets = banks.map(b => ({
-      label: BANK_NAMES[b],
+      label: BANK_DATABASE[b].name,
       shortLabel: b,
-      data: years.map(yr => BANK_CAR_DATABASE[b][yr] ? (BANK_CAR_DATABASE[b][yr].charter / BANK_CAR_DATABASE[b][yr].capital) * 100 : null),
-      borderColor: BANK_COLORS[b],
-      backgroundColor: BANK_COLORS[b] + '10',
+      data: years.map(yr => BANK_DATABASE[b].car_data[yr] ? (BANK_DATABASE[b].car_data[yr].charter / BANK_DATABASE[b].car_data[yr].capital) * 100 : null),
+      borderColor: BANK_DATABASE[b].color,
+      backgroundColor: BANK_DATABASE[b].color + '10',
       tension: 0.15,
       borderWidth: 2,
       pointRadius: 3,
@@ -1595,7 +2109,7 @@ class BaselAnalysis {
         layout: { padding: { right: 60 } },
         scales: {
           y: this.getYScaleConfig(this.compYScale, this.compYTick, [
-            ...banks.flatMap(b => years.map(yr => BANK_CAR_DATABASE[b][yr] ? (BANK_CAR_DATABASE[b][yr].charter / BANK_CAR_DATABASE[b][yr].capital) * 100 : null)).filter(v => v !== null)
+            ...banks.flatMap(b => years.map(yr => BANK_DATABASE[b].car_data[yr] ? (BANK_DATABASE[b].car_data[yr].charter / BANK_DATABASE[b].car_data[yr].capital) * 100 : null)).filter(v => v !== null)
           ])
         },
         plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, padding: 10 } } }
@@ -1605,11 +2119,11 @@ class BaselAnalysis {
 
     // 4. Capital Size Trend
     const capDatasets = banks.map(b => ({
-      label: BANK_NAMES[b],
+      label: BANK_DATABASE[b].name,
       shortLabel: b,
-      data: years.map(yr => BANK_CAR_DATABASE[b][yr] ? BANK_CAR_DATABASE[b][yr].capital : null),
-      borderColor: BANK_COLORS[b],
-      backgroundColor: BANK_COLORS[b] + '10',
+      data: years.map(yr => BANK_DATABASE[b].car_data[yr] ? BANK_DATABASE[b].car_data[yr].capital : null),
+      borderColor: BANK_DATABASE[b].color,
+      backgroundColor: BANK_DATABASE[b].color + '10',
       tension: 0.15,
       borderWidth: 2,
       pointRadius: 3,
@@ -1625,7 +2139,7 @@ class BaselAnalysis {
         layout: { padding: { right: 60 } },
         scales: {
           y: this.getYScaleConfig(this.compYScale, this.compYTick, [
-            ...banks.flatMap(b => years.map(yr => BANK_CAR_DATABASE[b][yr] ? BANK_CAR_DATABASE[b][yr].capital : null)).filter(v => v !== null)
+            ...banks.flatMap(b => years.map(yr => BANK_DATABASE[b].car_data[yr] ? BANK_DATABASE[b].car_data[yr].capital : null)).filter(v => v !== null)
           ])
         },
         plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, padding: 10 } } }
@@ -1635,11 +2149,11 @@ class BaselAnalysis {
 
     // 5. RWA Size Trend
     const rwaDatasets = banks.map(b => ({
-      label: BANK_NAMES[b],
+      label: BANK_DATABASE[b].name,
       shortLabel: b,
-      data: years.map(yr => BANK_CAR_DATABASE[b][yr] ? BANK_CAR_DATABASE[b][yr].rwa : null),
-      borderColor: BANK_COLORS[b],
-      backgroundColor: BANK_COLORS[b] + '10',
+      data: years.map(yr => BANK_DATABASE[b].car_data[yr] ? BANK_DATABASE[b].car_data[yr].rwa : null),
+      borderColor: BANK_DATABASE[b].color,
+      backgroundColor: BANK_DATABASE[b].color + '10',
       tension: 0.15,
       borderWidth: 2,
       pointRadius: 3,
@@ -1655,7 +2169,7 @@ class BaselAnalysis {
         layout: { padding: { right: 60 } },
         scales: {
           y: this.getYScaleConfig(this.compYScale, this.compYTick, [
-            ...banks.flatMap(b => years.map(yr => BANK_CAR_DATABASE[b][yr] ? BANK_CAR_DATABASE[b][yr].rwa : null)).filter(v => v !== null)
+            ...banks.flatMap(b => years.map(yr => BANK_DATABASE[b].car_data[yr] ? BANK_DATABASE[b].car_data[yr].rwa : null)).filter(v => v !== null)
           ])
         },
         plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, padding: 10 } } }
@@ -1846,8 +2360,728 @@ class BaselAnalysis {
       </svg>
     `;
   }
-}
 
+  renderRatioAnalysis() {
+    if (!this.ratioRender) return;
+
+    if (this.currentRatioSub === "individual") {
+      this.renderIndividualRatios();
+    } else {
+      this.renderCompareRatios();
+    }
+  }
+
+  renderIndividualRatios() {
+    const bankName = BANK_DATABASE[this.ratioBank].name;
+    const color = BANK_DATABASE[this.ratioBank].color;
+    const bankData = BANK_DATABASE[this.ratioBank].ratio_data;
+
+    // Hủy các chart đơn lẻ ratios cũ
+    this.destroyChart("indRatioLdr");
+    this.destroyChart("indRatioStml");
+    this.destroyChart("indRatioLrr");
+    this.destroyChart("indRatioNpl");
+
+    if (!bankData) {
+      this.ratioRender.innerHTML = `<div class="card"><p style="color: var(--text-muted);">Không có dữ liệu tỷ lệ hoạt động cho ngân hàng ${this.ratioBank}</p></div>`;
+      return;
+    }
+
+    if (this.ratioYear === "series") {
+      const years = ["2019", "2020", "2021", "2022", "2023", "2024", "2025"];
+
+      this.ratioRender.innerHTML = `
+        <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 2rem;">
+          <!-- Chart LDR -->
+          <div class="card" style="padding: 1.5rem; min-height: 280px; display: flex; flex-direction: column;">
+            <h3 style="margin-bottom: 1rem;"><i data-lucide="percent"></i> Xu hướng LDR - Tỷ lệ Cho vay/Huy động (Trần Luật: 85%)</h3>
+            <div style="flex-grow: 1; position: relative; height: 220px;">
+              <canvas id="chart-ind-ratio-ldr"></canvas>
+            </div>
+          </div>
+
+          <!-- Chart STML -->
+          <div class="card" style="padding: 1.5rem; min-height: 280px; display: flex; flex-direction: column;">
+            <h3 style="margin-bottom: 1rem;"><i data-lucide="percent"></i> Vốn ngắn hạn cho vay Trung - Dài hạn (Giới hạn: 30%)</h3>
+            <div style="flex-grow: 1; position: relative; height: 220px;">
+              <canvas id="chart-ind-ratio-stml"></canvas>
+            </div>
+          </div>
+
+          <!-- Chart LRR -->
+          <div class="card" style="padding: 1.5rem; min-height: 280px; display: flex; flex-direction: column;">
+            <h3 style="margin-bottom: 1rem;"><i data-lucide="percent"></i> Tỷ lệ Dự trữ Thanh khoản (Tối thiểu Luật: 10%)</h3>
+            <div style="flex-grow: 1; position: relative; height: 220px;">
+              <canvas id="chart-ind-ratio-lrr"></canvas>
+            </div>
+          </div>
+
+          <!-- Chart NPL -->
+          <div class="card" style="padding: 1.5rem; min-height: 280px; display: flex; flex-direction: column;">
+            <h3 style="margin-bottom: 1rem;"><i data-lucide="percent"></i> Xu hướng Tỷ lệ Nợ xấu NPL (Ngưỡng cảnh báo: 3%)</h3>
+            <div style="flex-grow: 1; position: relative; height: 220px;">
+              <canvas id="chart-ind-ratio-npl"></canvas>
+            </div>
+          </div>
+
+          <!-- Table -->
+          <div class="card" style="padding: 1.5rem; overflow-x: auto;">
+            <h3 style="margin-bottom: 1.25rem; font-size: 1.05rem;"><i data-lucide="table"></i> Chi tiết Số liệu Chuỗi thời gian Tỷ lệ An toàn BCTC</h3>
+            <table id="ratio-ind-series-table" class="basel-table" style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+              <thead>
+                <tr style="background: var(--card-header-bg); border-bottom: 2px solid var(--border-color);">
+                  <th style="text-align: left; padding: 0.75rem;">Năm</th>
+                  <th style="text-align: right; padding: 0.75rem;">LDR (%) <span style="font-size: 0.72rem; display:block; color:var(--text-muted); font-weight:400;">Trần 85%</span></th>
+                  <th style="text-align: right; padding: 0.75rem;">Vốn ngắn hạn cho vay Trung-Dài (%) <span style="font-size: 0.72rem; display:block; color:var(--text-muted); font-weight:400;">Trần 30%</span></th>
+                  <th style="text-align: right; padding: 0.75rem;">Dự trữ thanh khoản LRR (%) <span style="font-size: 0.72rem; display:block; color:var(--text-muted); font-weight:400;">Sàn 10%</span></th>
+                  <th style="text-align: right; padding: 0.75rem;">Tỷ lệ nợ xấu NPL (%) <span style="font-size: 0.72rem; display:block; color:var(--text-muted); font-weight:400;">Trần 3%</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                ${years.map(y => {
+                  const data = bankData[y];
+                  if (!data) return '';
+                  const isLdrMet = data.ldr <= 85.0;
+                  const isStmlMet = data.stml <= 30.0;
+                  const isLrrMet = data.lrr >= 10.0;
+                  const isNplMet = data.npl <= 3.0;
+                  return `
+                    <tr style="border-bottom: 1px solid var(--border-color);">
+                      <td style="padding: 0.75rem; font-weight: bold;">${y}</td>
+                      <td style="padding: 0.75rem; text-align: right; font-weight: 600; color: ${isLdrMet ? 'var(--success)' : 'var(--danger)'};">${data.ldr.toFixed(2)}%</td>
+                      <td style="padding: 0.75rem; text-align: right; font-weight: 600; color: ${isStmlMet ? 'var(--success)' : 'var(--danger)'};">${data.stml.toFixed(2)}%</td>
+                      <td style="padding: 0.75rem; text-align: right; font-weight: 600; color: ${isLrrMet ? 'var(--success)' : 'var(--danger)'};">${data.lrr.toFixed(2)}%</td>
+                      <td style="padding: 0.75rem; text-align: right; font-weight: 600; color: ${isNplMet ? 'var(--success)' : 'var(--danger)'};">${data.npl.toFixed(2)}%</td>
+                    </tr>
+                  `;
+                }).join("")}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      `;
+      
+      this.initIndRatioTrendCharts(years, bankData, color, bankName);
+      this.setupSortableTable('ratio-ind-series-table');
+      this.attachRatioTableClickHandlers();
+      lucide.createIcons();
+      return;
+    }
+
+    const yearData = bankData[this.ratioYear];
+    if (!yearData) {
+      this.ratioRender.innerHTML = `<div class="card"><p style="color: var(--text-muted);">Không có dữ liệu cho năm ${this.ratioYear}</p></div>`;
+      return;
+    }
+
+    const ldrStatus = yearData.ldr <= 85.0 ? { status: "An toàn", class: "status-safe", color: "var(--success)" } : { status: "Vượt trần", class: "status-danger", color: "var(--danger)" };
+    const ldrPct = Math.min(100, (yearData.ldr / 85.0) * 100);
+
+    const stmlStatus = yearData.stml <= 30.0 ? { status: "An toàn", class: "status-safe", color: "var(--success)" } : { status: "Vượt giới hạn", class: "status-danger", color: "var(--danger)" };
+    const stmlPct = Math.min(100, (yearData.stml / 30.0) * 100);
+
+    const lrrStatus = yearData.lrr >= 10.0 ? { status: "An toàn", class: "status-safe", color: "var(--success)" } : { status: "Dưới hạn mức", class: "status-danger", color: "var(--danger)" };
+    const lrrPct = Math.min(100, (yearData.lrr / 20.0) * 100);
+
+    const nplStatus = yearData.npl <= 3.0 ? { status: "An toàn", class: "status-safe", color: "var(--success)" } : { status: "Nợ xấu cao", class: "status-danger", color: "var(--danger)" };
+    const nplPct = Math.min(100, (yearData.npl / 3.0) * 100);
+
+    const bctcFile = BANK_DATABASE[this.ratioBank].bctc_files && BANK_DATABASE[this.ratioBank].bctc_files[this.ratioYear];
+
+    this.ratioRender.innerHTML = `
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
+        <div class="card ratio-box" style="border-left: 4px solid ${ldrStatus.color};">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.75rem;">
+            <div>
+              <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">LDR - Tỷ lệ Cho vay/Huy động</span>
+              <h2 style="margin: 0.25rem 0; font-size: 2rem; color: var(--text-main);">${yearData.ldr.toFixed(2)}%</h2>
+            </div>
+            <span class="badge ${ldrStatus.class}">${ldrStatus.status}</span>
+          </div>
+          <div class="progress-bar-container" style="background: rgba(255,255,255,0.06); height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 0.75rem;">
+            <div style="width: ${ldrPct}%; height: 100%; background: ${ldrStatus.color}; border-radius: 4px;"></div>
+          </div>
+          <div style="font-size: 0.78rem; color: var(--text-muted); display: flex; justify-content: space-between; font-weight: 600;">
+            <span>Luật tối đa: 85.00%</span>
+            <span>Hiệu suất: ${ldrPct.toFixed(0)}% trần</span>
+          </div>
+          <hr style="border:0; border-top: 1px solid var(--border-color); margin: 0.75rem 0;">
+          <p style="font-size: 0.78rem; color: var(--text-muted); margin: 0; line-height: 1.4;">
+            <strong>Cơ sở pháp lý:</strong> Khoản 4 Điều 22 Thông tư 22/2019/TT-NHNN.<br>
+            <strong>Ý nghĩa:</strong> Đo lường thanh khoản, phản ánh tỷ trọng huy động vốn từ thị trường 1 được đem đi cho vay nền kinh tế.
+          </p>
+        </div>
+
+        <div class="card ratio-box" style="border-left: 4px solid ${stmlStatus.color};">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.75rem;">
+            <div>
+              <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Tỷ lệ Vốn ngắn hạn cho vay Trung-Dài hạn</span>
+              <h2 style="margin: 0.25rem 0; font-size: 2rem; color: var(--text-main);">${yearData.stml.toFixed(2)}%</h2>
+            </div>
+            <span class="badge ${stmlStatus.class}">${stmlStatus.status}</span>
+          </div>
+          <div class="progress-bar-container" style="background: rgba(255,255,255,0.06); height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 0.75rem;">
+            <div style="width: ${stmlPct}%; height: 100%; background: ${stmlStatus.color}; border-radius: 4px;"></div>
+          </div>
+          <div style="font-size: 0.78rem; color: var(--text-muted); display: flex; justify-content: space-between; font-weight: 600;">
+            <span>Luật tối đa: 30.00%</span>
+            <span>Hiệu suất: ${stmlPct.toFixed(0)}% trần</span>
+          </div>
+          <hr style="border:0; border-top: 1px solid var(--border-color); margin: 0.75rem 0;">
+          <p style="font-size: 0.78rem; color: var(--text-muted); margin: 0; line-height: 1.4;">
+            <strong>Cơ sở pháp lý:</strong> Thông tư 22/2023/TT-NHNN sửa đổi Thông tư 41/2016.<br>
+            <strong>Ý nghĩa:</strong> Phòng ngừa rủi ro mất cân đối kỳ hạn, hạn chế dùng nguồn vốn ngắn hạn (dễ rút) tài trợ các dự án dài hạn.
+          </p>
+        </div>
+
+        <div class="card ratio-box" style="border-left: 4px solid ${lrrStatus.color};">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.75rem;">
+            <div>
+              <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">LRR - Dự trữ thanh khoản</span>
+              <h2 style="margin: 0.25rem 0; font-size: 2rem; color: var(--text-main);">${yearData.lrr.toFixed(2)}%</h2>
+            </div>
+            <span class="badge ${lrrStatus.class}">${lrrStatus.status}</span>
+          </div>
+          <div class="progress-bar-container" style="background: rgba(255,255,255,0.06); height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 0.75rem;">
+            <div style="width: ${lrrPct}%; height: 100%; background: ${lrrStatus.color}; border-radius: 4px;"></div>
+          </div>
+          <div style="font-size: 0.78rem; color: var(--text-muted); display: flex; justify-content: space-between; font-weight: 600;">
+            <span>Luật tối thiểu: 10.00%</span>
+            <span>Tích lũy thực tế: ${yearData.lrr.toFixed(2)}%</span>
+          </div>
+          <hr style="border:0; border-top: 1px solid var(--border-color); margin: 0.75rem 0;">
+          <p style="font-size: 0.78rem; color: var(--text-muted); margin: 0; line-height: 1.4;">
+            <strong>Cơ sở pháp lý:</strong> Khoản 2 Điều 22 Thông tư 22/2019/TT-NHNN.<br>
+            <strong>Ý nghĩa:</strong> Đảm bảo ngân hàng luôn nắm giữ đủ lượng tài sản thanh khoản cao (tiền mặt, giấy tờ có giá) dự trữ khẩn cấp.
+          </p>
+        </div>
+
+        <div class="card ratio-box" style="border-left: 4px solid ${nplStatus.color};">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.75rem;">
+            <div>
+              <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Tỷ lệ Nợ xấu (NPL Ratio)</span>
+              <h2 style="margin: 0.25rem 0; font-size: 2rem; color: var(--text-main);">${yearData.npl.toFixed(2)}%</h2>
+            </div>
+            <span class="badge ${nplStatus.class}">${nplStatus.status}</span>
+          </div>
+          <div class="progress-bar-container" style="background: rgba(255,255,255,0.06); height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 0.75rem;">
+            <div style="width: ${nplPct}%; height: 100%; background: ${nplStatus.color}; border-radius: 4px;"></div>
+          </div>
+          <div style="font-size: 0.78rem; color: var(--text-muted); display: flex; justify-content: space-between; font-weight: 600;">
+            <span>Ngưỡng giám sát: 3.00%</span>
+            <span>Tỷ trọng thực tế: ${yearData.npl.toFixed(2)}%</span>
+          </div>
+          <hr style="border:0; border-top: 1px solid var(--border-color); margin: 0.75rem 0;">
+          <p style="font-size: 0.78rem; color: var(--text-muted); margin: 0; line-height: 1.4;">
+            <strong>Cơ sở pháp lý:</strong> Quy định phân loại nợ nhóm 3-5 theo Thông tư 11/2021/TT-NHNN.<br>
+            <strong>Ý nghĩa:</strong> Đánh giá chất lượng tài sản có tín dụng, mức độ rủi ro tín dụng của hoạt động cho vay ngân hàng.
+          </p>
+        </div>
+      </div>
+
+      <!-- Table -->
+      <div class="card" style="padding: 1.5rem; margin-bottom: 1.5rem;">
+        <h3 style="margin-bottom: 1.25rem; font-size: 1.05rem;"><i data-lucide="table"></i> Bảng Tổng hợp Tỷ lệ An toàn năm ${this.ratioYear}</h3>
+        <table id="ratio-ind-yearly-table" class="basel-table" style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+          <thead>
+            <tr style="background: var(--card-header-bg); border-bottom: 2px solid var(--border-color);">
+              <th style="text-align: left; padding: 0.75rem;">Tỷ lệ an toàn</th>
+              <th style="text-align: right; padding: 0.75rem;">Quy chuẩn Luật định</th>
+              <th style="text-align: right; padding: 0.75rem;">Tỷ lệ Thực tế</th>
+              <th style="text-align: center; padding: 0.75rem; width: 140px;">Tuân thủ pháp luật</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <td style="padding: 0.75rem; font-weight: 600;">LDR (Tỷ lệ Cho vay/Huy động)</td>
+              <td style="padding: 0.75rem; text-align: right; color: var(--text-muted);">Tối đa 85.00%</td>
+              <td style="padding: 0.75rem; text-align: right; font-weight: 700; color: ${ldrStatus.color};">${yearData.ldr.toFixed(2)}%</td>
+              <td style="padding: 0.75rem; text-align: center;"><span class="badge ${ldrStatus.class}">${ldrStatus.status}</span></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <td style="padding: 0.75rem; font-weight: 600;">Tỷ lệ vốn ngắn hạn cho vay Trung-Dài hạn</td>
+              <td style="padding: 0.75rem; text-align: right; color: var(--text-muted);">Tối đa 30.00%</td>
+              <td style="padding: 0.75rem; text-align: right; font-weight: 700; color: ${stmlStatus.color};">${yearData.stml.toFixed(2)}%</td>
+              <td style="padding: 0.75rem; text-align: center;"><span class="badge ${stmlStatus.class}">${stmlStatus.status}</span></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <td style="padding: 0.75rem; font-weight: 600;">LRR (Tỷ lệ Dự trữ Thanh khoản)</td>
+              <td style="padding: 0.75rem; text-align: right; color: var(--text-muted);">Tối thiểu 10.00%</td>
+              <td style="padding: 0.75rem; text-align: right; font-weight: 700; color: ${lrrStatus.color};">${yearData.lrr.toFixed(2)}%</td>
+              <td style="padding: 0.75rem; text-align: center;"><span class="badge ${lrrStatus.class}">${lrrStatus.status}</span></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <td style="padding: 0.75rem; font-weight: 600;">Tỷ lệ Nợ xấu (NPL Ratio)</td>
+              <td style="padding: 0.75rem; text-align: right; color: var(--text-muted);">Tối đa 3.00%</td>
+              <td style="padding: 0.75rem; text-align: right; font-weight: 700; color: ${nplStatus.color};">${yearData.npl.toFixed(2)}%</td>
+              <td style="padding: 0.75rem; text-align: center;"><span class="badge ${nplStatus.class}">${nplStatus.status}</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card" style="border-color: rgba(99, 102, 241, 0.2); background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, transparent 100%);">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <h3 style="color: var(--primary); margin: 0; display: flex; align-items: center; gap: 0.5rem; font-size: 1.15rem;">
+              <i data-lucide="file-check"></i> Báo cáo Tài chính (BCTC) Kiểm toán Hợp nhất Năm ${this.ratioYear} (Offline)
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0.25rem 0 0 0;">Bạn có thể trực tiếp mở đọc bản PDF báo cáo tài chính đã kiểm toán tương ứng từ Vietstock:</p>
+          </div>
+          ${bctcFile ? `
+            <button class="source-link-btn open-pdf-analysis-btn" data-docpath="docs/banks_bctc/${bctcFile}" data-docname="${bankName} - Báo cáo tài chính năm ${this.ratioYear}" style="margin-top: 0; background: var(--primary); border-color: var(--primary); color: white; border: none; cursor: pointer;">
+              Mở BCTC kiểm toán
+            </button>
+          ` : `
+            <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">(Chưa tải hoặc chưa có BCTC năm ${this.ratioYear})</span>
+          `}
+        </div>
+      </div>
+    `;
+
+    const pdfBtns = this.ratioRender.querySelectorAll('.open-pdf-analysis-btn');
+    pdfBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (window.documentFinder) {
+          window.documentFinder.openPdfViewer(btn.dataset.docpath, btn.dataset.docname);
+        }
+      });
+    });
+
+    this.setupSortableTable('ratio-ind-yearly-table');
+    this.attachRatioTableClickHandlers();
+    lucide.createIcons();
+  }
+
+  initIndRatioTrendCharts(years, bankData, color, bankName) {
+    const ldrData = years.map(y => bankData[y].ldr);
+    const stmlData = years.map(y => bankData[y].stml);
+    const lrrData = years.map(y => bankData[y].lrr);
+    const nplData = years.map(y => bankData[y].npl);
+
+    if (!window.Chart) return;
+    const endLabelPlugin = this.getEndLabelPlugin();
+
+    // Helper function to create line chart config with reference line dataset
+    const createConfig = (label, data, threshold, thresholdLabel, isMax = true) => {
+      const thresholdColor = isMax ? '#ef4444' : '#10b981';
+      return {
+        type: 'line',
+        data: {
+          labels: years,
+          datasets: [
+            {
+              label: `${label} (${bankName})`,
+              shortLabel: bankName,
+              data: data,
+              borderColor: color,
+              backgroundColor: color + '15',
+              fill: true,
+              tension: 0.15,
+              borderWidth: 3,
+              pointRadius: 5
+            },
+            {
+              label: thresholdLabel,
+              data: Array(years.length).fill(threshold),
+              borderColor: thresholdColor,
+              borderWidth: 1.5,
+              borderDash: [5, 5],
+              pointRadius: 0,
+              fill: false
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          layout: { padding: { right: 90 } },
+          scales: {
+            y: this.getYScaleConfig(this.compYScale, this.compYTick, [...data, threshold])
+          }
+        },
+        plugins: [endLabelPlugin]
+      };
+    };
+
+    this.charts.indRatioLdr = new Chart(document.getElementById("chart-ind-ratio-ldr").getContext("2d"), createConfig("LDR (%)", ldrData, 85.0, "Trần Luật (85%)", true));
+    this.charts.indRatioStml = new Chart(document.getElementById("chart-ind-ratio-stml").getContext("2d"), createConfig("Ngắn hạn cho vay trung-dài (%)", stmlData, 30.0, "Giới hạn (30%)", true));
+    this.charts.indRatioLrr = new Chart(document.getElementById("chart-ind-ratio-lrr").getContext("2d"), createConfig("Dự trữ thanh khoản (%)", lrrData, 10.0, "Sàn Luật (10%)", false));
+    this.charts.indRatioNpl = new Chart(document.getElementById("chart-ind-ratio-npl").getContext("2d"), createConfig("Nợ xấu NPL (%)", nplData, 3.0, "Ngưỡng giám sát (3%)", true));
+  }
+
+  renderCompareRatios() {
+    const selectedBanks = this.ratioCompBanks;
+    const year = this.ratioCompYear;
+
+    // Hủy các chart so sánh ratios cũ
+    this.destroyChart("compRatioLdr");
+    this.destroyChart("compRatioStml");
+    this.destroyChart("compRatioLrr");
+    this.destroyChart("compRatioNpl");
+    this.destroyChart("compRatioYearlyLdr");
+    this.destroyChart("compRatioYearlyStml");
+    this.destroyChart("compRatioYearlyLrr");
+    this.destroyChart("compRatioYearlyNpl");
+
+    if (year === "series") {
+      const years = ["2019", "2020", "2021", "2022", "2023", "2024", "2025"];
+
+      this.ratioRender.innerHTML = `
+        <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 2rem;">
+          <!-- Chart LDR -->
+          <div class="card" style="padding: 1.5rem; min-height: ${this.getChartHeight(this.compYTick) + 80}px; display: flex; flex-direction: column;">
+            <h3 style="margin-bottom: 0.5rem; font-size: 0.95rem;">So sánh Xu hướng LDR - Tỷ lệ Cho vay/Huy động (%)</h3>
+            <div style="flex-grow: 1; position: relative; height: ${this.getChartHeight(this.compYTick)}px;">
+              <canvas id="chart-comp-ratio-trend-ldr"></canvas>
+            </div>
+          </div>
+
+          <!-- Chart STML -->
+          <div class="card" style="padding: 1.5rem; min-height: ${this.getChartHeight(this.compYTick) + 80}px; display: flex; flex-direction: column;">
+            <h3 style="margin-bottom: 0.5rem; font-size: 0.95rem;">So sánh Xu hướng Vốn ngắn hạn cho vay Trung - Dài hạn (%)</h3>
+            <div style="flex-grow: 1; position: relative; height: ${this.getChartHeight(this.compYTick)}px;">
+              <canvas id="chart-comp-ratio-trend-stml"></canvas>
+            </div>
+          </div>
+
+          <!-- Chart LRR -->
+          <div class="card" style="padding: 1.5rem; min-height: ${this.getChartHeight(this.compYTick) + 80}px; display: flex; flex-direction: column;">
+            <h3 style="margin-bottom: 0.5rem; font-size: 0.95rem;">So sánh Xu hướng Tỷ lệ Dự trữ Thanh khoản (%)</h3>
+            <div style="flex-grow: 1; position: relative; height: ${this.getChartHeight(this.compYTick)}px;">
+              <canvas id="chart-comp-ratio-trend-lrr"></canvas>
+            </div>
+          </div>
+
+          <!-- Chart NPL -->
+          <div class="card" style="padding: 1.5rem; min-height: ${this.getChartHeight(this.compYTick) + 80}px; display: flex; flex-direction: column;">
+            <h3 style="margin-bottom: 0.5rem; font-size: 0.95rem;">So sánh Xu hướng Tỷ lệ Nợ xấu NPL (%)</h3>
+            <div style="flex-grow: 1; position: relative; height: ${this.getChartHeight(this.compYTick)}px;">
+              <canvas id="chart-comp-ratio-trend-npl"></canvas>
+            </div>
+          </div>
+        </div>
+      `;
+
+      if (!this.ratioCompareTableMetric) this.ratioCompareTableMetric = "npl";
+
+      // Append Table comparing selected ratio over years
+      this.ratioRender.innerHTML += `
+        <!-- Table detail with toggle buttons -->
+        <div class="card" style="padding: 1.5rem; overflow-x: auto; margin-top: 1.5rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 1rem;">
+            <h3 style="margin: 0; font-size: 1.05rem;"><i data-lucide="table"></i> Chi tiết Số liệu Chuỗi thời gian (%)</h3>
+            <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;">
+              <button class="ratio-metric-toggle-btn" data-metric="ldr" style="padding: 0.4rem 0.85rem; border-radius: 6px; font-weight: 600; font-size: 0.82rem; border: none; cursor: pointer; ${this.ratioCompareTableMetric === 'ldr' ? 'background: var(--primary); color: white;' : 'background: rgba(255,255,255,0.05); color: var(--text-muted);'}">LDR (Trần 85%)</button>
+              <button class="ratio-metric-toggle-btn" data-metric="stml" style="padding: 0.4rem 0.85rem; border-radius: 6px; font-weight: 600; font-size: 0.82rem; border: none; cursor: pointer; ${this.ratioCompareTableMetric === 'stml' ? 'background: var(--primary); color: white;' : 'background: rgba(255,255,255,0.05); color: var(--text-muted);'}">Vốn ngắn hạn (Trần 30%)</button>
+              <button class="ratio-metric-toggle-btn" data-metric="lrr" style="padding: 0.4rem 0.85rem; border-radius: 6px; font-weight: 600; font-size: 0.82rem; border: none; cursor: pointer; ${this.ratioCompareTableMetric === 'lrr' ? 'background: var(--primary); color: white;' : 'background: rgba(255,255,255,0.05); color: var(--text-muted);'}">Dự trữ thanh khoản LRR (Sàn 10%)</button>
+              <button class="ratio-metric-toggle-btn" data-metric="npl" style="padding: 0.4rem 0.85rem; border-radius: 6px; font-weight: 600; font-size: 0.82rem; border: none; cursor: pointer; ${this.ratioCompareTableMetric === 'npl' ? 'background: var(--primary); color: white;' : 'background: rgba(255,255,255,0.05); color: var(--text-muted);'}">Nợ xấu NPL (Trần 3%)</button>
+            </div>
+          </div>
+          <table id="ratio-comp-series-table" class="basel-table" style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+            <thead>
+              <tr style="background: var(--card-header-bg); border-bottom: 2px solid var(--border-color);">
+                <th style="text-align: left; padding: 0.75rem;">Ngân hàng</th>
+                ${years.map(y => `<th style="text-align: right; padding: 0.75rem; min-width: 90px;">${y}</th>`).join("")}
+              </tr>
+            </thead>
+            <tbody>
+              ${selectedBanks.map(b => {
+                const bankInfo = BANK_DATABASE[b];
+                const cells = years.map(y => {
+                  const val = bankInfo.ratio_data[y] ? bankInfo.ratio_data[y][this.ratioCompareTableMetric] : null;
+                  const bctcFile = bankInfo.bctc_files && bankInfo.bctc_files[y];
+                  const limit = this.ratioCompareTableMetric === "lrr" ? 10.0 : (this.ratioCompareTableMetric === "ldr" ? 85.0 : (this.ratioCompareTableMetric === "stml" ? 30.0 : 3.0));
+                  const isMet = this.ratioCompareTableMetric === "lrr" ? (val >= limit) : (val <= limit);
+                  
+                  let cellStyle = `padding: 0.75rem; text-align: right; font-weight: 600; `;
+                  if (val !== null) {
+                    cellStyle += isMet ? 'color: var(--success); ' : 'color: var(--danger); ';
+                    if (bctcFile) {
+                      cellStyle += 'cursor: pointer; text-decoration: underline dashed var(--primary);';
+                    }
+                  }
+                  const clickAttr = (val !== null && bctcFile) ? `onclick="window.documentFinder.openPdfViewer('docs/banks_bctc/${bctcFile}', '${bankInfo.name} - BCTC ${y}')"` : '';
+                  return `<td style="${cellStyle}" ${clickAttr}>${val !== null ? val.toFixed(2) + '%' : '-'}</td>`;
+                }).join("");
+
+                return `
+                  <tr style="border-bottom: 1px solid var(--border-color);">
+                    <td style="padding: 0.75rem; font-weight: 600; display: flex; align-items: center; gap: 0.5rem; border: none;">
+                      <span style="width: 10px; height: 10px; border-radius: 50%; background: ${bankInfo.color};"></span>
+                      ${bankInfo.name} (${b})
+                    </td>
+                    ${cells}
+                  </tr>
+                `;
+              }).join("")}
+            </tbody>
+          </table>
+        </div>
+      `;
+
+      this.initCompRatioTrendCharts(years, selectedBanks);
+      this.setupSortableTable('ratio-comp-series-table');
+      this.attachRatioTableClickHandlers();
+      
+      // Attach click events to toggle buttons
+      const buttons = this.ratioRender.querySelectorAll(".ratio-metric-toggle-btn");
+      buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          this.ratioCompareTableMetric = btn.getAttribute("data-metric");
+          this.renderCompareRatios();
+        });
+      });
+
+      lucide.createIcons();
+      return;
+    }
+
+    // 2. COMPARE YEARLY VIEW
+    this.ratioRender.innerHTML = `
+      <!-- Grid Biểu đồ So sánh Hàng năm -->
+      <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 2rem;">
+        <!-- Chart LDR -->
+        <div class="card" style="padding: 1.5rem; min-height: ${this.getChartHeight(this.compYTick) + 60}px; display: flex; flex-direction: column;">
+          <h3 style="margin-bottom: 1rem; text-align: center; font-size: 0.95rem;">Tỷ lệ LDR (%) các ngân hàng (${year})</h3>
+          <div style="flex-grow: 1; position: relative; height: ${this.getChartHeight(this.compYTick)}px;">
+            <canvas id="chart-comp-ratio-yearly-ldr"></canvas>
+          </div>
+        </div>
+
+        <!-- Chart STML -->
+        <div class="card" style="padding: 1.5rem; min-height: ${this.getChartHeight(this.compYTick) + 60}px; display: flex; flex-direction: column;">
+          <h3 style="margin-bottom: 1rem; text-align: center; font-size: 0.95rem;">Vốn ngắn hạn cho vay trung-dài hạn (%) các ngân hàng (${year})</h3>
+          <div style="flex-grow: 1; position: relative; height: ${this.getChartHeight(this.compYTick)}px;">
+            <canvas id="chart-comp-ratio-yearly-stml"></canvas>
+          </div>
+        </div>
+
+        <!-- Chart LRR -->
+        <div class="card" style="padding: 1.5rem; min-height: ${this.getChartHeight(this.compYTick) + 60}px; display: flex; flex-direction: column;">
+          <h3 style="margin-bottom: 1rem; text-align: center; font-size: 0.95rem;">Tỷ lệ dự trữ thanh khoản LRR (%) các ngân hàng (${year})</h3>
+          <div style="flex-grow: 1; position: relative; height: ${this.getChartHeight(this.compYTick)}px;">
+            <canvas id="chart-comp-ratio-yearly-lrr"></canvas>
+          </div>
+        </div>
+
+        <!-- Chart NPL -->
+        <div class="card" style="padding: 1.5rem; min-height: ${this.getChartHeight(this.compYTick) + 60}px; display: flex; flex-direction: column;">
+          <h3 style="margin-bottom: 1rem; text-align: center; font-size: 0.95rem;">Tỷ lệ nợ xấu NPL (%) các ngân hàng (${year})</h3>
+          <div style="flex-grow: 1; position: relative; height: ${this.getChartHeight(this.compYTick)}px;">
+            <canvas id="chart-comp-ratio-yearly-npl"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bảng đối chiếu so sánh chỉ số -->
+      <div class="card" style="padding: 1.5rem; margin-bottom: 1.5rem;">
+        <h3>Bảng Số liệu Đối chiếu Tỷ lệ An toàn BCTC (${year}) <span style="font-size:0.75rem;font-weight:400;color:var(--text-muted);">— Click cột để sắp xếp</span></h3>
+        <div class="table-responsive" style="margin-top: 1rem;">
+          <table id="ratio-comp-detail-table" class="comparison-table">
+            <thead>
+              <tr>
+                <th>Ngân hàng</th>
+                <th>LDR (%) <span style="font-size: 0.72rem; display:block; color:var(--text-muted); font-weight:400;">Trần 85%</span></th>
+                <th>ST cho vay Trung-Dài (%) <span style="font-size: 0.72rem; display:block; color:var(--text-muted); font-weight:400;">Trần 30%</span></th>
+                <th>Dự trữ thanh khoản (%) <span style="font-size: 0.72rem; display:block; color:var(--text-muted); font-weight:400;">Sàn 10%</span></th>
+                <th>Tỷ lệ nợ xấu NPL (%) <span style="font-size: 0.72rem; display:block; color:var(--text-muted); font-weight:400;">Trần 3%</span></th>
+                <th>Bản BCTC gốc</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${selectedBanks.map(b => {
+                const data = BANK_DATABASE[b].ratio_data[year];
+                if (!data) {
+                  return `
+                    <tr>
+                      <td class="criterion-col" style="border-left: 4px solid ${BANK_DATABASE[b].color};">
+                        <strong>${BANK_DATABASE[b].name} (${b})</strong>
+                      </td>
+                      <td colspan="5" style="text-align: center; color: var(--text-muted); font-style: italic; font-size: 0.82rem;">Số liệu BCTC năm ${year} chưa công bố / không có sẵn</td>
+                    </tr>
+                  `;
+                }
+
+                const isLdrMet = data.ldr <= 85.0;
+                const isStmlMet = data.stml <= 30.0;
+                const isLrrMet = data.lrr >= 10.0;
+                const isNplMet = data.npl <= 3.0;
+
+                const bctcFile = BANK_DATABASE[b].bctc_files && BANK_DATABASE[b].bctc_files[year];
+
+                const cellStyle = bctcFile ? `cursor: pointer; text-decoration: underline dashed var(--primary);` : '';
+                const clickCall = bctcFile ? `onclick="window.documentFinder.openPdfViewer('docs/banks_bctc/${bctcFile}', '${BANK_DATABASE[b].name} - BCTC ${year}')"` : '';
+
+                return `
+                  <tr>
+                    <td class="criterion-col" style="border-left: 4px solid ${BANK_DATABASE[b].color}; ${bctcFile ? 'cursor: pointer; text-decoration: underline dashed var(--primary);' : ''}" ${clickCall}>
+                      <strong>${BANK_DATABASE[b].name} (${b})</strong>
+                    </td>
+                    <td style="font-weight: 700; color: ${isLdrMet ? 'var(--success)' : 'var(--danger)'}; ${cellStyle}" ${clickCall}>${data.ldr.toFixed(2)}%</td>
+                    <td style="font-weight: 700; color: ${isStmlMet ? 'var(--success)' : 'var(--danger)'}; ${cellStyle}" ${clickCall}>${data.stml.toFixed(2)}%</td>
+                    <td style="font-weight: 700; color: ${isLrrMet ? 'var(--success)' : 'var(--danger)'}; ${cellStyle}" ${clickCall}>${data.lrr.toFixed(2)}%</td>
+                    <td style="font-weight: 700; color: ${isNplMet ? 'var(--success)' : 'var(--danger)'}; ${cellStyle}" ${clickCall}>${data.npl.toFixed(2)}%</td>
+                    <td>
+                      ${bctcFile ? `
+                        <button class="source-link-btn open-pdf-analysis-btn" data-docpath="docs/banks_bctc/${bctcFile}" data-docname="${BANK_DATABASE[b].name} - Báo cáo tài chính năm ${year}" style="font-size:0.7rem; padding: 0.25rem 0.5rem; background: var(--primary); border: none; cursor: pointer; color: white;">
+                          Xem BCTC
+                        </button>
+                      ` : '<span style="color:var(--text-muted);font-size:0.75rem;">Chưa có</span>'}
+                    </td>
+                  </tr>
+                `;
+              }).join("")}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    `;
+
+    this.initCompRatioYearlyCharts(selectedBanks, year);
+    this.setupSortableTable('ratio-comp-detail-table');
+    this.attachRatioTableClickHandlers();
+
+    const pdfBtns = this.ratioRender.querySelectorAll('.open-pdf-analysis-btn');
+    pdfBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (window.documentFinder) {
+          window.documentFinder.openPdfViewer(btn.dataset.docpath, btn.dataset.docname);
+        }
+      });
+    });
+
+    this.setupSortableTable('ratio-ind-yearly-table');
+    this.attachRatioTableClickHandlers();
+    lucide.createIcons();
+  }
+
+  initCompRatioTrendCharts(years, selectedBanks) {
+    if (!window.Chart) return;
+    const endLabelPlugin = this.getEndLabelPlugin();
+
+    const createConfig = (labelName, extractFn, threshold, thresholdLabel, isMax = true) => {
+      const thresholdColor = isMax ? '#ef4444' : '#10b981';
+      const datasets = selectedBanks.map(b => {
+        const bankData = BANK_DATABASE[b].ratio_data;
+        return {
+          label: b,
+          shortLabel: b,
+          data: years.map(y => bankData[y] ? extractFn(bankData[y]) : null),
+          borderColor: BANK_DATABASE[b].color,
+          backgroundColor: BANK_DATABASE[b].color + '10',
+          borderWidth: 2.5,
+          pointRadius: 4,
+          tension: 0.15,
+          fill: false
+        };
+      });
+
+      // Thêm đường threshold pháp lý vào datasets
+      datasets.push({
+        label: thresholdLabel,
+        data: Array(years.length).fill(threshold),
+        borderColor: thresholdColor,
+        borderWidth: 1.5,
+        borderDash: [5, 5],
+        pointRadius: 0,
+        fill: false
+      });
+
+      const allDataVals = datasets.flatMap(ds => ds.data).filter(v => v !== null);
+
+      return {
+        type: 'line',
+        data: {
+          labels: years,
+          datasets: datasets
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          layout: { padding: { right: 90 } },
+          scales: {
+            y: this.getYScaleConfig(this.compYScale, this.compYTick, [...allDataVals, threshold])
+          }
+        },
+        plugins: [endLabelPlugin]
+      };
+    };
+
+    this.charts.compRatioLdr = new Chart(document.getElementById("chart-comp-ratio-trend-ldr").getContext("2d"), createConfig("LDR (%)", d => d.ldr, 85.0, "Trần Luật (85%)", true));
+    this.charts.compRatioStml = new Chart(document.getElementById("chart-comp-ratio-trend-stml").getContext("2d"), createConfig("Ngắn hạn cho vay trung-dài (%)", d => d.stml, 30.0, "Giới hạn (30%)", true));
+    this.charts.compRatioLrr = new Chart(document.getElementById("chart-comp-ratio-trend-lrr").getContext("2d"), createConfig("Dự trữ thanh khoản (%)", d => d.lrr, 10.0, "Sàn Luật (10%)", false));
+    this.charts.compRatioNpl = new Chart(document.getElementById("chart-comp-ratio-trend-npl").getContext("2d"), createConfig("Nợ xấu NPL (%)", d => d.npl, 3.0, "Ngưỡng giám sát (3%)", true));
+  }
+
+  // Helper plugin để vẽ đường threshold ngang trên biểu đồ cột (Bar Chart)
+  getThresholdLinePlugin(threshold, label, color) {
+    return {
+      id: 'thresholdLine',
+      afterDraw: (chart) => {
+        const ctx = chart.ctx;
+        const yAxis = chart.scales.y;
+        if (!yAxis) return;
+        const yPos = yAxis.getPixelForValue(threshold);
+        ctx.save();
+        ctx.beginPath();
+        ctx.setLineDash([4, 4]);
+        ctx.lineWidth = 1.5;
+        ctx.strokeStyle = color;
+        ctx.moveTo(chart.chartArea.left, yPos);
+        ctx.lineTo(chart.chartArea.right, yPos);
+        ctx.stroke();
+        ctx.fillStyle = color;
+        ctx.font = 'bold 9px Outfit';
+        ctx.fillText(label, chart.chartArea.right - 90, yPos - 5);
+        ctx.restore();
+      }
+    };
+  }
+
+  initCompRatioYearlyCharts(banks, year) {
+    if (!window.Chart) return;
+
+    const createConfig = (label, extractFn, threshold, thresholdLabel, isMax = true) => {
+      const thresholdColor = isMax ? '#ef4444' : '#10b981';
+      const values = banks.map(b => {
+        const data = BANK_DATABASE[b].ratio_data[year];
+        return data ? extractFn(data) : null;
+      });
+
+      const thresholdPlugin = this.getThresholdLinePlugin(threshold, thresholdLabel, thresholdColor);
+
+      return {
+        type: 'bar',
+        data: {
+          labels: banks,
+          datasets: [{
+            label: label,
+            data: values,
+            backgroundColor: banks.map(b => BANK_DATABASE[b].color),
+            borderRadius: 4
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: { callback: (v) => v.toFixed(1) + '%' }
+            }
+          }
+        },
+        plugins: [thresholdPlugin]
+      };
+    };
+
+    this.charts.compRatioYearlyLdr = new Chart(document.getElementById("chart-comp-ratio-yearly-ldr").getContext("2d"), createConfig("LDR (%)", d => d.ldr, 85.0, "Trần Luật: 85%", true));
+    this.charts.compRatioYearlyStml = new Chart(document.getElementById("chart-comp-ratio-yearly-stml").getContext("2d"), createConfig("Ngắn hạn cho vay trung-dài (%)", d => d.stml, 30.0, "Giới hạn: 30%", true));
+    this.charts.compRatioYearlyLrr = new Chart(document.getElementById("chart-comp-ratio-yearly-lrr").getContext("2d"), createConfig("Dự trữ thanh khoản (%)", d => d.lrr, 10.0, "Sàn Luật: 10%", false));
+    this.charts.compRatioYearlyNpl = new Chart(document.getElementById("chart-comp-ratio-yearly-npl").getContext("2d"), createConfig("Nợ xấu NPL (%)", d => d.npl, 3.0, "Giới hạn: 3%", true));
+  }
+} // end of BaselAnalysis class
 // Khởi chạy
 document.addEventListener("DOMContentLoaded", () => {
   if (document.getElementById("bank-analysis-section")) {

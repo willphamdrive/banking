@@ -1710,3 +1710,55 @@ header p {
 .scenario-btn:active {
   transform: translateY(0);
 }
+
+/* === HEDGE POSTS & INSIGHTS STYLING === */
+.bank-tag {
+  background: var(--primary-glow);
+  color: var(--primary);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.85rem;
+}
+.bank-tag:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+.bank-tag.active-tag {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  box-shadow: 0 0 8px var(--primary-glow);
+}
+.post-card {
+  transition: all 0.25s ease;
+}
+.post-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary);
+}
+.post-card-tag {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.post-card-tag:hover {
+  border-color: var(--primary);
+  color: var(--text-main);
+}
+.post-card-tag.active-tag {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}

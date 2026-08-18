@@ -57,6 +57,12 @@
           </a>
         </li>
         <li>
+          <a href="#hedge-posts" class="nav-item">
+            <i data-lucide="message-square"></i>
+            <span>Phân tích Hedge Posts</span>
+          </a>
+        </li>
+        <li>
           <a href="#glossary" class="nav-item">
             <i data-lucide="book-open"></i>
             <span>Từ điển Thuật ngữ</span>
@@ -1516,6 +1522,70 @@
         </div>
       </section>
 
+      <!-- HEDGE INSIGHTS SECTION -->
+      <section id="hedge-posts-section" class="content-section hidden">
+        <div class="section-header">
+          <h2>Phân tích & Thảo luận vĩ mô (Hedge Posts)</h2>
+          <p>Phân tích sâu các bài viết vĩ mô từ Hedge Academy, tự động làm nổi bật và đối chiếu tương quan với số liệu thực tế của từng ngân hàng.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1.6fr 1fr; gap: 1.5rem; align-items: start; margin-bottom: 2rem;">
+          <!-- Left pane: Posts list -->
+          <div>
+            <div class="card" style="padding: 1.25rem; margin-bottom: 1.5rem;">
+              <div style="display: flex; gap: 1rem; align-items: center; justify-content: space-between; flex-wrap: wrap; margin-bottom: 0.75rem;">
+                <div class="search-input-wrapper" style="position: relative; flex-grow: 1; min-width: 250px;">
+                  <i data-lucide="search" style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--text-muted); width: 18px; height: 18px;"></i>
+                  <input type="text" id="hedge-search-input" placeholder="Tìm kiếm bài viết theo từ khóa..." style="width: 100%; padding: 0.65rem 1rem 0.65rem 2.5rem; background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-main); outline: none;">
+                </div>
+                <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+                  <div style="display: flex; gap: 0.35rem;">
+                    <button class="hedge-filter-btn active law-cat-btn" data-filter="all" style="padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; border: 1px solid var(--border-color); font-weight: 500; font-size: 0.9rem;">Tất cả</button>
+                    <button class="hedge-filter-btn law-cat-btn" data-filter="has_bank" style="padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; border: 1px solid var(--border-color); font-weight: 500; font-size: 0.9rem;">Có nhắc đến Ngân hàng</button>
+                  </div>
+                  <div style="display: flex; gap: 0.35rem; align-items: center;">
+                    <span style="font-size: 0.82rem; color: var(--text-muted); font-weight: 500; margin-left: 0.5rem;">Sắp xếp:</span>
+                    <select id="hedge-sort-select" style="padding: 0.5rem 0.75rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; color: var(--text-main); font-size: 0.88rem; outline: none; cursor: pointer; font-weight: 500;">
+                      <option value="newest" selected>Mới nhất</option>
+                      <option value="oldest">Cũ nhất</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Topic Filters Row -->
+              <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; border-top: 1px solid var(--border-color); padding-top: 0.75rem; margin-top: 0.5rem;">
+                <span style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase;">Chủ đề:</span>
+                <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;" id="hedge-topic-selectors">
+                  <button class="hedge-topic-btn active law-cat-btn" data-topic="all" style="padding: 0.35rem 0.75rem; border-radius: 6px; cursor: pointer; font-size: 0.82rem; font-weight: 500;">Tất cả</button>
+                  <button class="hedge-topic-btn law-cat-btn" data-topic="basel_tt22" style="padding: 0.35rem 0.75rem; border-radius: 6px; cursor: pointer; font-size: 0.82rem; font-weight: 500;">Basel III & TT22</button>
+                  <button class="hedge-topic-btn law-cat-btn" data-topic="interest_macro" style="padding: 0.35rem 0.75rem; border-radius: 6px; cursor: pointer; font-size: 0.82rem; font-weight: 500;">Lãi suất & Vĩ mô</button>
+                  <button class="hedge-topic-btn law-cat-btn" data-topic="sbv" style="padding: 0.35rem 0.75rem; border-radius: 6px; cursor: pointer; font-size: 0.82rem; font-weight: 500;">Điều hành SBV</button>
+                  <button class="hedge-topic-btn law-cat-btn" data-topic="sbv_mistakes" style="padding: 0.35rem 0.75rem; border-radius: 6px; cursor: pointer; font-size: 0.82rem; font-weight: 500;">SBV đã sai gì?</button>
+                  <button class="hedge-topic-btn law-cat-btn" data-topic="exchange_fx" style="padding: 0.35rem 0.75rem; border-radius: 6px; cursor: pointer; font-size: 0.82rem; font-weight: 500;">Tỷ giá & FX</button>
+                  <button class="hedge-topic-btn law-cat-btn" data-topic="deals_corp" style="padding: 0.35rem 0.75rem; border-radius: 6px; cursor: pointer; font-size: 0.82rem; font-weight: 500;">Thương vụ & DN</button>
+                  <button class="hedge-topic-btn law-cat-btn" data-topic="promos_courses" style="padding: 0.35rem 0.75rem; border-radius: 6px; cursor: pointer; font-size: 0.82rem; font-weight: 500;">Ưu đãi & Khóa học</button>
+                  <button class="hedge-topic-btn law-cat-btn" data-topic="cfa_updates" style="padding: 0.35rem 0.75rem; border-radius: 6px; cursor: pointer; font-size: 0.82rem; font-weight: 500;">CFA & Cập nhật</button>
+                  <button class="hedge-topic-btn law-cat-btn" data-topic="other" style="padding: 0.35rem 0.75rem; border-radius: 6px; cursor: pointer; font-size: 0.82rem; font-weight: 500;">Khác</button>
+                </div>
+              </div>
+            </div>
+
+            <div id="hedge-posts-list">
+              <!-- Dynamically populated by js/hedge.js -->
+            </div>
+
+            <!-- Pagination Container -->
+            <div id="hedge-pagination" style="display: flex; justify-content: center; align-items: center; gap: 0.35rem; margin-top: 1.5rem; flex-wrap: wrap; margin-bottom: 2rem;"></div>
+          </div>
+
+          <!-- Right pane: Mapped bank figures -->
+          <div style="position: sticky; top: 1.5rem; max-height: 90vh; overflow-y: auto;" id="hedge-bank-details">
+            <!-- Dynamically populated by js/hedge.js -->
+          </div>
+        </div>
+      </section>
+
     </main>
   </div>
 
@@ -1595,6 +1665,8 @@
   <script src="js/financial.js"></script>
   <script src="js/glossary_v2.js"></script>
   <script src="js/docfinder.js"></script>
+  <script src="js/hedge_posts_data.js"></script>
+  <script src="js/hedge.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

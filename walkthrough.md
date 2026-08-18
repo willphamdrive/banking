@@ -357,5 +357,32 @@ Tôi đã hoàn trả lại cơ chế tương tác mở/đóng của Drawer gi�
         - Hỗ trợ phân tích & phân loại tự động vị trí tương thích với các khối phòng ban Rủi ro/Pháp lý và Công nghệ của App.
         - Xây dựng URL chi tiết trỏ trực tiếp đến bài viết canonical của LPBank: `https://tuyendung.lpbank.com.vn/vi/jobs/[slug]`.
         - Hỗ trợ phân trang và Lazy loading tự động nền các trang kết quả tiếp theo dựa trên thuộc tính `totalPage` trả về từ API.
+    - **Sửa lỗi đồng bộ & CORS**:
+        - Đồng bộ toàn bộ các Header trong request của Proxy trùng khớp 100% với yêu cầu Curl từ trình duyệt (như `sec-ch-ua`, `sec-fetch-mode`, `sec-fetch-site`, `priority`,...).
+        - Sửa lỗi CORS Preflight: Bổ sung `Accept` và `Authorization` vào header `Access-Control-Allow-Headers` trong file `run_app.py` để tránh lỗi trình duyệt chặn các request có thuộc tính headers tùy chỉnh trên môi trường local.
+        - **Khắc phục lỗi Phân loại Nhầm**: Cập nhật hàm `matchKeyword` kiểm tra ranh giới từ riêng biệt (standalone word) đối với từ khóa ngắn như `"it"`. Việc này tránh việc các từ có chứa cụm ký tự `it` (ví dụ: `priority`, `credit`, `deposit`) bị phân loại sai vào nhóm `"it-data"` (Công nghệ & Dữ liệu) và trả chúng về đúng nhóm `"business"` (Đơn vị Kinh doanh).
+
+---
+
+## 🔍 Tự động Cập nhật Bộ lọc Cột theo Kết quả hiện có (Dynamic Faceted Search)
+
+*   **Tính năng**: Các bộ lọc dạng dropdown trong bảng kết quả tìm kiếm tuyển dụng (Ngân hàng, Khối phòng ban, Cấp bậc) tự động cập nhật danh sách tùy chọn và hiển thị số lượng tin phù hợp (Count) theo kết quả tìm kiếm thực tế.
+*   **Chi tiết triển khai**:
+    - **Faceted Search Logic**: Cập nhật hàm `updateFacetedFilters(baseJobs)` để tính toán các tùy chọn khả dụng cho từng cột. Để mang lại trải nghiệm tối ưu, bộ lọc của một cột sẽ được tính dựa trên kết quả lọc của *tất cả các cột khác* (loại trừ chính nó). Điều này giúp:
+        - Dropdown không bao giờ hiển thị tùy chọn dẫn đến kết quả rỗng (0 kết quả).
+        - Người dùng vẫn có thể thay đổi lựa chọn của cột hiện tại mà không bị khóa cứng.
+    - **Hiển thị số lượng (Counts)**: Mỗi option hiển thị thêm số lượng bản ghi tương ứng (ví dụ: `VPBank (12)`, `IT & Công nghệ & Dữ liệu (4)`).
+    - **Khớp dữ liệu Khối phòng ban**: Cải tiến bộ lọc cột "Khối phòng ban" từ việc sử dụng các mã phân loại chung (như `business`, `it-data`, `risk-legal`) sang việc trích xuất và hiển thị các tên phòng ban thực tế từ dữ liệu kết quả (như `Công ty thành viên`, `Thẩm định Tài sản`). Thay đổi này giúp các tùy chọn trong bộ lọc khớp chính xác tuyệt đối với những gì người dùng nhìn thấy trong cột của bảng.
+        - **Phân loại phòng ban động cho MB Bank (MBB)**: Vì API gốc của MB Bank không trả về trường tên phòng ban, hệ thống đã bổ sung bộ lọc từ khóa thông minh để tự động ánh xạ tiêu đề công việc thành các tên phòng ban thực tế (ví dụ: `"Khối Khách hàng Cá nhân"`, `"Khối Khách hàng Doanh nghiệp"`, `"Khối Công nghệ Thông tin"`, `"Khối Thẩm định"`, `"Khối Vận hành"`...) tương tự như các ngân hàng khác.
+    - **Hỗ trợ Chọn nhiều tùy chọn (Multi-select)**: Thay thế các thẻ `<select>` mặc định bằng cấu phần dropdown tùy chỉnh hỗ trợ các ô Checkbox cho phép chọn lọc nhiều Ngân hàng, Khối phòng ban và Cấp bậc đồng thời.
+        - Hiển thị nhãn thông minh trên nút kích hoạt: hiển thị `"Tất cả (N)"` khi không chọn gì, hiển thị danh sách tên nếu chọn ít hơn 2 mục, và hiển thị `"Đã chọn (N)"` nếu chọn nhiều hơn.
+        - Tự động đóng danh sách khi người dùng click chuột ra ngoài vùng chọn (Click-outside closing).
+        - **Tối ưu hóa hiển thị (Visual Enhancements)**:
+            - **Ngăn chặn xuyên thấu chữ (Bleed-through prevention)**: Thay đổi thuộc tính `background` của danh sách thả nổi `.multiselect-dropdown` từ dạng trong suốt (`var(--card-bg)`) sang dạng màu nền vững đặc (`var(--bg-color)`), giúp che khuất hoàn toàn nội dung chữ của các hàng bảng phía sau, đảm bảo khả năng đọc cực tốt trên cả 2 giao diện Light/Dark Mode.
+            - **Cố định kích thước & chống xuống dòng**: Bổ sung `min-width: 240px` và thuộc tính `white-space: nowrap` cho các option để tên phòng ban dài hiển thị trọn vẹn trên một dòng, tăng tính thẩm mỹ cao cấp.
+            - **Chống tràn màn hình**: Dropdown ngoài cùng bên phải ("Cấp bậc") được cấu hình tự động căn lề phải (`right: 0`) để tránh bị tràn khỏi biên bảng hoặc mép màn hình thiết bị.
+            - **Cắt ngắn nhãn nút bấm**: Bổ sung hiệu ứng `text-overflow: ellipsis` cho nút kích hoạt để khi chọn nhiều mục dài, nhãn chữ sẽ tự thu gọn bằng dấu ba chấm thay vì làm vỡ bố cục giao diện.
+    - **Giữ trạng thái đã chọn (State preservation)**: Khi danh sách dữ liệu nền được tải thêm (lazy load) hoặc thay đổi, các giá trị bộ lọc đã chọn trước đó vẫn được giữ nguyên nếu chúng vẫn còn hợp lệ.
+
 
 

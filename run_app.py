@@ -11,7 +11,7 @@ class ProxyHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
         # Bổ sung các header CORS để hỗ trợ gọi từ file://
         self.send_header('Access-Control-Allow-Origin', '*')
         self.send_header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
-        self.send_header('Access-Control-Allow-Headers', 'Content-Type, X-Requested-With')
+        self.send_header('Access-Control-Allow-Headers', 'Content-Type, X-Requested-With, Accept, Authorization')
         super().end_headers()
 
     def do_OPTIONS(self):
@@ -79,7 +79,14 @@ class ProxyHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
                 'accept': 'application/json, text/plain, */*',
                 'accept-language': 'en-US,en;q=0.9,vi;q=0.8',
                 'origin': 'https://tuyendung.lpbank.com.vn',
+                'priority': 'u=1, i',
                 'referer': 'https://tuyendung.lpbank.com.vn/',
+                'sec-ch-ua': '"Not=A?Brand";v="99", "Microsoft Edge";v="151", "Chromium";v="151"',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': '"macOS"',
+                'sec-fetch-dest': 'empty',
+                'sec-fetch-mode': 'cors',
+                'sec-fetch-site': 'cross-site',
                 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36 Edg/151.0.0.0'
             }
             

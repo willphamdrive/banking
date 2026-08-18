@@ -1,6 +1,14 @@
 // Phân hệ quản lý logic màn hình Tuyển dụng (Job Board App Controller)
 // Dữ liệu được tải trực tiếp từ cổng tuyển dụng VPBank & MB Bank sau khi người dùng nhấn Tìm kiếm.
 
+function matchKeyword(str, kw) {
+  if (!str) return false;
+  if (kw === "it") {
+    return str.split(/[^a-z0-9]/).includes("it");
+  }
+  return str.includes(kw);
+}
+
 class BaselJobs {
   constructor() {
     this.jobs = [];
@@ -19,7 +27,7 @@ class BaselJobs {
     this.isLoading = false;
 
     // Bộ lọc theo cột (live)
-    this.colFilter = { title: "", bank: "", dept: "", level: "", deadline: "" };
+    this.colFilter = { title: "", bank: [], dept: [], level: [], deadline: "" };
 
     // Khởi tạo danh sách trống và tải từ server/localStorage
     this.savedJobs = [];
@@ -55,11 +63,11 @@ class BaselJobs {
     this.modalBankName   = document.getElementById("modal-bank-name");
     this.modalApplyBtn   = document.getElementById("job-modal-apply-btn");
 
-    // Column filter inputs
+    // Column filter inputs / custom multiselect elements
     this.cfTitle    = document.getElementById("col-filter-title");
-    this.cfBank     = document.getElementById("col-filter-bank");
-    this.cfDept     = document.getElementById("col-filter-dept");
-    this.cfLevel    = document.getElementById("col-filter-level");
+    this.cfBank     = document.getElementById("multiselect-bank");
+    this.cfDept     = document.getElementById("multiselect-dept");
+    this.cfLevel    = document.getElementById("multiselect-level");
     this.cfDeadline = document.getElementById("col-filter-deadline");
     this.cfClear    = document.getElementById("col-filter-clear");
   }
@@ -181,32 +189,75 @@ class BaselJobs {
       });
     }
 
-    // Column filters — live filter sau khi dữ liệu đã tải
-    const cfInputs = [
-      { el: this.cfTitle,    key: "title",    type: "input" },
-      { el: this.cfBank,     key: "bank",     type: "change" },
-      { el: this.cfDept,     key: "dept",     type: "change" },
-      { el: this.cfLevel,    key: "level",    type: "change" },
-      { el: this.cfDeadline, key: "deadline", type: "change" }
-    ];
-    cfInputs.forEach(({ el, key, type }) => {
-      if (!el) return;
-      el.addEventListener(type, () => {
-        this.colFilter[key] = el.value.trim().toLowerCase();
+    // Toggle custom multiselect dropdowns
+    document.addEventListener("click", (e) => {
+      const trigger = e.target.closest(".multiselect-trigger");
+      if (trigger) {
+        const parent = trigger.parentElement;
+        const dropdown = parent.querySelector(".multiselect-dropdown");
+        const isOpen = dropdown.style.display === "block";
+        // Đóng các dropdown khác
+        document.querySelectorAll(".multiselect-dropdown").forEach(d => d.style.display = "none");
+        // Bật/tắt dropdown hiện tại
+        dropdown.style.display = isOpen ? "none" : "block";
+        e.stopPropagation();
+        return;
+      }
+      
+      // Đóng dropdown khi click ra ngoài
+      if (!e.target.closest(".custom-multiselect")) {
+        document.querySelectorAll(".multiselect-dropdown").forEach(d => d.style.display = "none");
+      }
+    });
+
+    // Lắng nghe sự kiện thay đổi trên các ô input thường
+    if (this.cfTitle) {
+      this.cfTitle.addEventListener("input", () => {
+        this.colFilter.title = this.cfTitle.value.trim().toLowerCase();
         this.currentPage = 1;
         this.applyClientFilters();
+      });
+    }
+    if (this.cfDeadline) {
+      this.cfDeadline.addEventListener("change", () => {
+        this.colFilter.deadline = this.cfDeadline.value.trim().toLowerCase();
+        this.currentPage = 1;
+        this.applyClientFilters();
+      });
+    }
+
+    // Lắng nghe sự kiện thay đổi của các custom multiselect (sử dụng Event Delegation)
+    const multiselects = [
+      { el: this.cfBank,  key: "bank" },
+      { el: this.cfDept,  key: "dept" },
+      { el: this.cfLevel, key: "level" }
+    ];
+    multiselects.forEach(({ el, key }) => {
+      if (!el) return;
+      el.addEventListener("change", (e) => {
+        if (e.target.type === "checkbox") {
+          const checkedCheckboxes = el.querySelectorAll(".multiselect-dropdown input[type='checkbox']:checked");
+          this.colFilter[key] = Array.from(checkedCheckboxes).map(cb => cb.value.toLowerCase());
+          this.currentPage = 1;
+          this.applyClientFilters();
+        }
       });
     });
 
     // Nút Xóa lọc cột
     if (this.cfClear) {
       this.cfClear.addEventListener("click", () => {
-        this.colFilter = { title: "", bank: "", dept: "", level: "", deadline: "" };
+        this.colFilter = { title: "", bank: [], dept: [], level: [], deadline: "" };
         if (this.cfTitle)    this.cfTitle.value    = "";
-        if (this.cfBank)     this.cfBank.value     = "";
-        if (this.cfDept)     this.cfDept.value     = "";
-        if (this.cfLevel)    this.cfLevel.value    = "";
         if (this.cfDeadline) this.cfDeadline.value = "";
+        
+        // Reset checkbox của các multiselect
+        multiselects.forEach(({ el }) => {
+          if (el) {
+            el.querySelectorAll("input[type='checkbox']").forEach(cb => cb.checked = false);
+          }
+        });
+        
         this.currentPage = 1;
         this.applyClientFilters();
       });
@@ -561,7 +612,7 @@ class BaselJobs {
 
       let deptCode = "business";
       if (["rủi ro","pháp chế","tuân thủ","kiểm toán","pháp lý","thu hồi","xử lý nợ","giám sát tín dụng","tố tụng"].some(k => titleLower.includes(k) || deptNameLower.includes(k))) deptCode = "risk-legal";
-      else if (["it","cntt","công nghệ","data","dữ liệu","lập trình","phần mềm","hệ thống","security","developer","tester","analyst","an toàn thông tin","kiến trúc"].some(k => titleLower.includes(k) || deptNameLower.includes(k))) deptCode = "it-data";
+      else if (["it","cntt","công nghệ","data","dữ liệu","lập trình","phần mềm","hệ thống","security","developer","tester","analyst","an toàn thông tin","kiến trúc"].some(k => matchKeyword(titleLower, k) || matchKeyword(deptNameLower, k))) deptCode = "it-data";
 
       let level = "junior-mid", levelName = "Chuyên viên";
       if (["thực tập","tập sự","intern"].some(k => titleLower.includes(k))) { level = "intern"; levelName = "Thực tập sinh / Tập sự"; }
@@ -590,9 +641,35 @@ class BaselJobs {
       const skillTags = job.skillTags || [];
       const skillTagsLower = skillTags.map(s => s.toLowerCase());
 
-      let deptCode = "business", deptName = "Kinh doanh & Vận hành";
-      if (["rủi ro","pháp chế","tuân thủ","kiểm toán","pháp lý","thu hồi","xử lý nợ"].some(k => titleLower.includes(k)) || ["risk management","legal","compliance","audit"].some(k => skillTagsLower.includes(k))) { deptCode = "risk-legal"; deptName = "Pháp chế & Rủi ro"; }
-      else if (["it","cntt","công nghệ","data","dữ liệu","lập trình","phần mềm","hệ thống","security","developer","tester"].some(k => titleLower.includes(k)) || ["it","software development","database","data analysis","cyber security"].some(k => skillTagsLower.includes(k))) { deptCode = "it-data"; deptName = "IT & Công nghệ & Dữ liệu"; }
+      let deptCode = "business", deptName = "Đơn vị Kinh doanh";
+      if (["rủi ro","pháp chế","tuân thủ","kiểm toán","pháp lý","thu hồi","xử lý nợ"].some(k => titleLower.includes(k)) || ["risk management","legal","compliance","audit"].some(k => skillTagsLower.includes(k))) { 
+        deptCode = "risk-legal"; 
+        deptName = "Khối Quản trị Rủi ro & Pháp chế"; 
+      }
+      else if (["it","cntt","công nghệ","data","dữ liệu","lập trình","phần mềm","hệ thống","security","developer","tester"].some(k => matchKeyword(titleLower, k)) || ["it","software development","database","data analysis","cyber security"].some(k => matchKeyword(skillTagsLower.join(" "), k))) { 
+        deptCode = "it-data"; 
+        deptName = "Khối Công nghệ Thông tin"; 
+      }
+      else if (["cá nhân", "khcn", "bán lẻ", "tư vấn khách hàng", "ub"].some(k => titleLower.includes(k))) {
+        deptCode = "business";
+        deptName = "Khối Khách hàng Cá nhân";
+      }
+      else if (["doanh nghiệp", "khdn"].some(k => titleLower.includes(k))) {
+        deptCode = "business";
+        deptName = "Khối Khách hàng Doanh nghiệp";
+      }
+      else if (["thẩm định", "định giá"].some(k => titleLower.includes(k))) {
+        deptCode = "business";
+        deptName = "Khối Thẩm định";
+      }
+      else if (["hỗ trợ"].some(k => titleLower.includes(k))) {
+        deptCode = "business";
+        deptName = "Khối Hỗ trợ Kinh doanh";
+      }
+      else if (["vận hành"].some(k => titleLower.includes(k))) {
+        deptCode = "business";
+        deptName = "Khối Vận hành";
+      }
 
       let level = "junior-mid", levelName = "Chuyên viên";
       if (["thực tập","tập sự","intern","học việc"].some(k => titleLower.includes(k))) { level = "intern"; levelName = "Thực tập sinh / Tập sự"; }
@@ -625,7 +702,7 @@ class BaselJobs {
 
       let deptCode = "business";
       if (["rủi ro","pháp chế","tuân thủ","kiểm toán","pháp lý","thu hồi","xử lý nợ","tố tụng","giám sát tín dụng"].some(k => titleLower.includes(k) || deptNameLower.includes(k))) deptCode = "risk-legal";
-      else if (["it","cntt","công nghệ","data","dữ liệu","lập trình","phần mềm","hệ thống","security","developer","tester","analyst","an toàn thông tin"].some(k => titleLower.includes(k) || deptNameLower.includes(k))) deptCode = "it-data";
+      else if (["it","cntt","công nghệ","data","dữ liệu","lập trình","phần mềm","hệ thống","security","developer","tester","analyst","an toàn thông tin"].some(k => matchKeyword(titleLower, k) || matchKeyword(deptNameLower, k))) deptCode = "it-data";
 
       let level = "junior-mid", levelName = "Chuyên viên";
       const expLower = (job.experience || "").toLowerCase();
@@ -686,7 +763,7 @@ class BaselJobs {
 
       let deptCode = "business";
       if (["rủi ro","pháp chế","tuân thủ","kiểm toán","pháp lý","thu hồi","xử lý nợ","tố tụng","giám sát tín dụng"].some(k => titleLower.includes(k) || deptNameLower.includes(k))) deptCode = "risk-legal";
-      else if (["it","cntt","công nghệ","data","dữ liệu","lập trình","phần mềm","hệ thống","security","developer","tester","analyst","an toàn thông tin"].some(k => titleLower.includes(k) || deptNameLower.includes(k))) deptCode = "it-data";
+      else if (["it","cntt","công nghệ","data","dữ liệu","lập trình","phần mềm","hệ thống","security","developer","tester","analyst","an toàn thông tin"].some(k => matchKeyword(titleLower, k) || matchKeyword(deptNameLower, k))) deptCode = "it-data";
 
       // Lấy cấp bậc từ delta data hoặc từ tiêu đề
       let levelText = "";
@@ -759,6 +836,10 @@ class BaselJobs {
   // ── Lọc phía client (top-bar + column filters) ───────────────────
   applyClientFilters() {
     const baseList = this.selectedBank === "saved" ? this.savedJobs : this.jobs;
+    
+    // Tự động cập nhật các tùy chọn bộ lọc cột theo kết quả hiện tại
+    this.updateFacetedFilters(baseList);
+
     this.filteredJobs = baseList.filter(job => {
       // --- Top-bar filters ---
       const matchBank   = this.selectedBank === "all" || this.selectedBank === "saved" || job.bank === this.selectedBank;
@@ -773,9 +854,9 @@ class BaselJobs {
       // --- Column filters (live) ---
       const cf = this.colFilter;
       const cfTitle    = !cf.title    || job.title.toLowerCase().includes(cf.title);
-      const cfBank     = !cf.bank     || job.bank.toLowerCase()  === cf.bank;
-      const cfDept     = !cf.dept     || job.department          === cf.dept;
-      const cfLevel    = !cf.level    || job.level               === cf.level;
+      const cfBank     = cf.bank.length === 0 || cf.bank.includes(job.bank.toLowerCase());
+      const cfDept     = cf.dept.length === 0 || cf.dept.includes(job.departmentName.toLowerCase());
+      const cfLevel    = cf.level.length === 0 || cf.level.includes(job.level.toLowerCase());
       // Deadline: lọc job có hạn nộp >= ngày chọn
       const cfDeadline = !cf.deadline || (job.deadline && job.deadline >= cf.deadline);
 
@@ -784,6 +865,144 @@ class BaselJobs {
     });
     this.sortJobs();
     this.renderJobsList();
+  }
+
+  updateFacetedFilters(baseJobs) {
+    if (!this.cfBank || !this.cfDept || !this.cfLevel) return;
+
+    // Hàm kiểm tra khớp với tất cả bộ lọc, loại trừ một số bộ lọc cột cụ thể (Faceted Search)
+    const matchesFiltersExcept = (job, excludeFields = []) => {
+      // Top-bar filters
+      const matchBank   = this.selectedBank === "all" || this.selectedBank === "saved" || job.bank === this.selectedBank;
+      const matchDept   = this.selectedDept === "all" || job.department === this.selectedDept;
+      const matchExp    = this.selectedExp  === "all" || job.level     === this.selectedExp;
+      const matchSearch = !this.searchQuery ||
+        job.title.toLowerCase().includes(this.searchQuery) ||
+        job.bank.toLowerCase().includes(this.searchQuery) ||
+        job.departmentName.toLowerCase().includes(this.searchQuery) ||
+        job.location.toLowerCase().includes(this.searchQuery);
+
+      if (!matchBank || !matchDept || !matchExp || !matchSearch) return false;
+
+      // Column filters
+      const cf = this.colFilter;
+      const cTitle    = excludeFields.includes("title")    || !cf.title    || job.title.toLowerCase().includes(cf.title);
+      const cBank     = excludeFields.includes("bank")     || cf.bank.length === 0 || cf.bank.includes(job.bank.toLowerCase());
+      const cDept     = excludeFields.includes("dept")     || cf.dept.length === 0 || cf.dept.includes(job.departmentName.toLowerCase());
+      const cLevel    = excludeFields.includes("level")    || cf.level.length === 0 || cf.level.includes(job.level.toLowerCase());
+      const cDeadline = excludeFields.includes("deadline") || !cf.deadline || (job.deadline && job.deadline >= cf.deadline);
+
+      return cTitle && cBank && cDept && cLevel && cDeadline;
+    };
+
+    // Helper to render dynamic checkboxes inside a multiselect dropdown
+    const renderDropdownItems = (dropdownEl, itemsList, countsObj, selectedArray) => {
+      let html = "";
+      itemsList.forEach(itemVal => {
+        const itemLower = itemVal.toLowerCase();
+        const isChecked = selectedArray.includes(itemLower);
+        const count = countsObj[itemVal] || 0;
+        html += `
+          <label class="multiselect-item">
+            <input type="checkbox" value="${itemVal}" ${isChecked ? "checked" : ""}>
+            <span>${itemVal} (${count})</span>
+          </label>
+        `;
+      });
+      dropdownEl.innerHTML = html;
+    };
+
+    // Helper to update trigger label
+    const updateTriggerLabel = (triggerEl, baseListLength, allCountsObj, selectedArray) => {
+      const labelSpan = triggerEl.querySelector(".trigger-label");
+      if (!labelSpan) return;
+
+      const selectedCount = selectedArray.length;
+      if (selectedCount === 0) {
+        labelSpan.textContent = `Tất cả (${baseListLength})`;
+      } else if (selectedCount <= 2) {
+        // Tìm các tên có hoa thường khớp
+        const casedNames = Object.keys(allCountsObj).filter(k => selectedArray.includes(k.toLowerCase()));
+        labelSpan.textContent = casedNames.length > 0 ? casedNames.join(", ") : `Đã chọn (${selectedCount})`;
+      } else {
+        labelSpan.textContent = `Đã chọn (${selectedCount})`;
+      }
+    };
+
+    // 1. Cập nhật dropdown Ngân hàng
+    const bankJobs = baseJobs.filter(j => matchesFiltersExcept(j, ["bank"]));
+    const bankCounts = {};
+    bankJobs.forEach(j => {
+      if (j.bank) bankCounts[j.bank] = (bankCounts[j.bank] || 0) + 1;
+    });
+    const bankList = Object.keys(bankCounts).sort();
+    const bankDropdown = this.cfBank.querySelector(".multiselect-dropdown");
+    const bankTrigger = this.cfBank.querySelector(".multiselect-trigger");
+    
+    this.colFilter.bank = this.colFilter.bank.filter(b => bankList.some(bl => bl.toLowerCase() === b));
+    renderDropdownItems(bankDropdown, bankList, bankCounts, this.colFilter.bank);
+    updateTriggerLabel(bankTrigger, bankJobs.length, bankCounts, this.colFilter.bank);
+
+    // 2. Cập nhật dropdown Khối phòng ban
+    const deptJobs = baseJobs.filter(j => matchesFiltersExcept(j, ["dept"]));
+    const deptCounts = {};
+    deptJobs.forEach(j => {
+      if (j.departmentName) deptCounts[j.departmentName] = (deptCounts[j.departmentName] || 0) + 1;
+    });
+    const deptList = Object.keys(deptCounts).sort();
+    const deptDropdown = this.cfDept.querySelector(".multiselect-dropdown");
+    const deptTrigger = this.cfDept.querySelector(".multiselect-trigger");
+
+    this.colFilter.dept = this.colFilter.dept.filter(d => deptList.some(dl => dl.toLowerCase() === d));
+    renderDropdownItems(deptDropdown, deptList, deptCounts, this.colFilter.dept);
+    updateTriggerLabel(deptTrigger, deptJobs.length, deptCounts, this.colFilter.dept);
+
+    // 3. Cập nhật dropdown Cấp bậc
+    const levelJobs = baseJobs.filter(j => matchesFiltersExcept(j, ["level"]));
+    const levelCountsByCode = {};
+    const levelNames = {
+      "intern": "Thực tập sinh / Tập sự",
+      "junior-mid": "Chuyên viên",
+      "senior": "Chuyên viên cao cấp",
+      "lead-manager": "Quản lý / Giám đốc"
+    };
+    levelJobs.forEach(j => {
+      if (j.level) levelCountsByCode[j.level] = (levelCountsByCode[j.level] || 0) + 1;
+    });
+    const levelCodes = ["intern", "junior-mid", "senior", "lead-manager"].filter(c => levelCountsByCode[c] !== undefined);
+    const levelDropdown = this.cfLevel.querySelector(".multiselect-dropdown");
+    const levelTrigger = this.cfLevel.querySelector(".multiselect-trigger");
+
+    this.colFilter.level = this.colFilter.level.filter(l => levelCodes.includes(l));
+
+    // Render level checkboxes
+    let levelHtml = "";
+    levelCodes.forEach(code => {
+      const friendlyName = levelNames[code] || code;
+      const count = levelCountsByCode[code] || 0;
+      const isChecked = this.colFilter.level.includes(code.toLowerCase());
+      levelHtml += `
+        <label class="multiselect-item">
+          <input type="checkbox" value="${code}" ${isChecked ? "checked" : ""}>
+          <span>${friendlyName} (${count})</span>
+        </label>
+      `;
+    });
+    levelDropdown.innerHTML = levelHtml;
+
+    // Update level label
+    const levelLabelSpan = levelTrigger.querySelector(".trigger-label");
+    if (levelLabelSpan) {
+      const selectedCount = this.colFilter.level.length;
+      if (selectedCount === 0) {
+        levelLabelSpan.textContent = `Tất cả (${levelJobs.length})`;
+      } else if (selectedCount <= 2) {
+        const friendlySelectedNames = this.colFilter.level.map(l => levelNames[l] || l);
+        levelLabelSpan.textContent = friendlySelectedNames.join(", ");
+      } else {
+        levelLabelSpan.textContent = `Đã chọn (${selectedCount})`;
+      }
+    }
   }
 
   // ── Thống kê ─────────────────────────────────────────────────────

@@ -1833,29 +1833,32 @@
                         style="width:100%;padding:0.35rem 0.5rem 0.35rem 1.75rem;background:rgba(255,255,255,0.04);border:1px solid var(--border-color);border-radius:6px;color:var(--text-main);font-size:0.78rem;outline:none;transition:border-color 0.15s;">
                     </div>
                   </td>
-                  <td style="padding: 0.5rem 1rem;">
-                    <select id="col-filter-bank" style="width:100%;padding:0.35rem 0.4rem;background:rgba(255,255,255,0.04);border:1px solid var(--border-color);border-radius:6px;color:var(--text-main);font-size:0.78rem;outline:none;cursor:pointer;">
-                      <option value="">Tất cả</option>
-                      <option value="VPBank">VPBank</option>
-                      <option value="MB Bank">MB Bank</option>
-                    </select>
+                   <td style="padding: 0.5rem 1rem;">
+                    <div class="custom-multiselect" id="multiselect-bank">
+                      <div class="multiselect-trigger">
+                        <span class="trigger-label">Tất cả</span>
+                        <i data-lucide="chevron-down" style="width: 12px; height: 12px; opacity: 0.7;"></i>
+                      </div>
+                      <div class="multiselect-dropdown"></div>
+                    </div>
                   </td>
                   <td style="padding: 0.5rem 1rem;">
-                    <select id="col-filter-dept" style="width:100%;padding:0.35rem 0.4rem;background:rgba(255,255,255,0.04);border:1px solid var(--border-color);border-radius:6px;color:var(--text-main);font-size:0.78rem;outline:none;cursor:pointer;">
-                      <option value="">Tất cả</option>
-                      <option value="risk-legal">Pháp chế &amp; Rủi ro</option>
-                      <option value="it-data">IT &amp; Công nghệ</option>
-                      <option value="business">Kinh doanh</option>
-                    </select>
+                    <div class="custom-multiselect" id="multiselect-dept">
+                      <div class="multiselect-trigger">
+                        <span class="trigger-label">Tất cả</span>
+                        <i data-lucide="chevron-down" style="width: 12px; height: 12px; opacity: 0.7;"></i>
+                      </div>
+                      <div class="multiselect-dropdown"></div>
+                    </div>
                   </td>
                   <td style="padding: 0.5rem 1rem;">
-                    <select id="col-filter-level" style="width:100%;padding:0.35rem 0.4rem;background:rgba(255,255,255,0.04);border:1px solid var(--border-color);border-radius:6px;color:var(--text-main);font-size:0.78rem;outline:none;cursor:pointer;">
-                      <option value="">Tất cả</option>
-                      <option value="intern">Thực tập sinh</option>
-                      <option value="junior-mid">Nhân viên / CV</option>
-                      <option value="senior">CV cao cấp</option>
-                      <option value="lead-manager">Quản lý</option>
-                    </select>
+                    <div class="custom-multiselect" id="multiselect-level">
+                      <div class="multiselect-trigger">
+                        <span class="trigger-label">Tất cả</span>
+                        <i data-lucide="chevron-down" style="width: 12px; height: 12px; opacity: 0.7;"></i>
+                      </div>
+                      <div class="multiselect-dropdown"></div>
+                    </div>
                   </td>
                   <td style="padding: 0.5rem 1rem;">
                     <input id="col-filter-deadline" type="date"

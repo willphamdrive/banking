@@ -129,7 +129,7 @@ class GlossaryManager {
     if (formula.includes("->")) {
       const steps = formula.split("->").map(s => s.trim());
       return `
-        <div style="display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap; margin-top: 0.25rem;">
+        <div style="display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap;">
           ${steps.map((s, idx) => `
             <span style="font-size: 0.76rem; font-weight: 700; background: rgba(99, 102, 241, 0.08); color: #818cf8; padding: 2px 6px; border-radius: 4px; border: 1px solid rgba(99,102,241,0.15);">${s}</span>
             ${idx < steps.length - 1 ? '<span style="color: var(--text-muted); font-size: 0.75rem; font-weight: 900;">&rarr;</span>' : ''}
@@ -140,20 +140,26 @@ class GlossaryManager {
 
     // Định dạng các toán tử toán học
     const formatSymbols = (text) => {
-      return text
-        .replace(/ \+ /g, ' <span style="color: #10b981; font-weight: bold; margin: 0 2px;">+</span> ')
-        .replace(/ - /g, ' <span style="color: #ef4444; font-weight: bold; margin: 0 2px;">-</span> ')
-        .replace(/ x /g, ' <span style="color: #3b82f6; font-weight: bold; margin: 0 2px;">&times;</span> ')
-        .replace(/ \* /g, ' <span style="color: #3b82f6; font-weight: bold; margin: 0 2px;">&times;</span> ')
-        .replace(/ \>= /g, ' <span style="color: #10b981; font-weight: bold; margin: 0 4px;">&ge;</span> ')
-        .replace(/ \<= /g, ' <span style="color: #ef4444; font-weight: bold; margin: 0 4px;">&le;</span> ');
+      if (!text) return "";
+      let escaped = text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+
+      return escaped
+        .replace(/ \+ /g, ' <span style="color: #10b981; font-weight: bold; margin: 0 4px;">+</span> ')
+        .replace(/ - /g, ' <span style="color: #ef4444; font-weight: bold; margin: 0 4px;">-</span> ')
+        .replace(/ x /g, ' <span style="color: #3b82f6; font-weight: bold; margin: 0 4px;">&times;</span> ')
+        .replace(/ \* /g, ' <span style="color: #3b82f6; font-weight: bold; margin: 0 4px;">&times;</span> ')
+        .replace(/ &gt;= /g, ' <span style="color: #10b981; font-weight: bold; margin: 0 6px;">&ge;</span> ')
+        .replace(/ &lt;= /g, ' <span style="color: #ef4444; font-weight: bold; margin: 0 6px;">&le;</span> ');
     };
 
     // 2. Dạng phân số: LHS = [Numerator / Denominator] Multiplier
     if (formula.includes("=") && formula.includes("[") && formula.includes("]") && formula.includes("/")) {
-      const eqParts = formula.split("=");
-      const lhs = eqParts[0].trim();
-      const rhs = eqParts[1].trim();
+      const eqIdx = formula.indexOf("=");
+      const lhs = formula.substring(0, eqIdx).trim();
+      const rhs = formula.substring(eqIdx + 1).trim();
 
       const bracketStart = rhs.indexOf("[");
       const bracketEnd = rhs.indexOf("]");
@@ -168,14 +174,16 @@ class GlossaryManager {
           const den = inside.substring(slashIdx + 1).trim();
 
           return `
-            <div style="display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap; font-size: 0.8rem; color: var(--text-main); margin-top: 0.25rem;">
+            <div style="display: flex; align-items: center; gap: 0.35rem; font-size: 0.8rem; color: var(--text-main); white-space: nowrap;">
               <span style="font-weight: 700; color: var(--primary);">${lhs}</span>
               <span style="color: var(--text-muted); font-weight: bold;">=</span>
               ${pre ? `<span>${formatSymbols(pre)}</span>` : ""}
-              <div style="display: inline-flex; flex-direction: column; align-items: center; border-left: 1px solid var(--border-color); border-right: 1px solid var(--border-color); padding: 0 6px; background: rgba(255,255,255,0.01); border-radius: 4px;">
-                <span style="border-bottom: 1px solid var(--border-color); padding-bottom: 1px; text-align: center; font-weight: 600; color: var(--text-main); font-size: 0.78rem;">${formatSymbols(num)}</span>
-                <span style="padding-top: 1px; text-align: center; color: var(--text-muted); font-size: 0.74rem;">${formatSymbols(den)}</span>
+              <span style="font-size: 1.5rem; font-weight: 300; color: var(--text-muted); margin: 0 1px; display: inline-flex; align-items: center; line-height: 1;">[</span>
+              <div style="display: inline-flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 2px; vertical-align: middle;">
+                <span style="border-bottom: 1.5px solid var(--border-color); padding-bottom: 2px; text-align: center; font-weight: 600; color: var(--text-main); font-size: 0.78rem; display: block; width: 100%;">${formatSymbols(num)}</span>
+                <span style="padding-top: 2px; text-align: center; color: var(--text-muted); font-size: 0.74rem; display: block; width: 100%;">${formatSymbols(den)}</span>
               </div>
+              <span style="font-size: 1.5rem; font-weight: 300; color: var(--text-muted); margin: 0 1px; display: inline-flex; align-items: center; line-height: 1;">]</span>
               ${post ? `<span>${formatSymbols(post)}</span>` : ""}
             </div>
           `;
@@ -185,19 +193,21 @@ class GlossaryManager {
 
     // 3. Phương trình thường (chứa dấu =)
     if (formula.includes("=")) {
-      const parts = formula.split("=");
+      const eqIdx = formula.indexOf("=");
+      const lhs = formula.substring(0, eqIdx).trim();
+      const rhs = formula.substring(eqIdx + 1).trim();
       return `
-        <div style="font-size: 0.8rem; color: var(--text-main); margin-top: 0.25rem; line-height: 1.4;">
-          <span style="font-weight: 700; color: var(--primary);">${parts[0].trim()}</span>
-          <span style="color: var(--text-muted); font-weight: bold; margin: 0 3px;">=</span>
-          <span>${formatSymbols(parts[1].trim())}</span>
+        <div style="font-size: 0.8rem; color: var(--text-main); line-height: 1.4; white-space: nowrap; display: flex; align-items: center; gap: 0.35rem;">
+          <span style="font-weight: 700; color: var(--primary);">${lhs}</span>
+          <span style="color: var(--text-muted); font-weight: bold;">=</span>
+          <span>${formatSymbols(rhs)}</span>
         </div>
       `;
     }
 
     // Fallback thông thường
     return `
-      <div style="font-size: 0.8rem; color: var(--text-main); margin-top: 0.25rem; font-weight: 500;">
+      <div style="font-size: 0.8rem; color: var(--text-main); font-weight: 500; white-space: nowrap;">
         ${formatSymbols(formula)}
       </div>
     `;
@@ -282,9 +292,11 @@ class GlossaryManager {
         </div>
         <div>
           <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 0.75rem 0; opacity: 0.3;">
-          <div style="background: rgba(99, 102, 241, 0.02); border: 1px solid var(--border-color); border-radius: 8px; padding: 0.75rem 0.85rem; min-height: 52px; display: flex; flex-direction: column; justify-content: center;">
-            <span style="font-size: 0.65rem; color: var(--text-muted); display: block; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; font-weight: 700;">Công thức / Cơ chế:</span>
-            ${this.formatFormula(item.formula)}
+          <div style="background: rgba(99, 102, 241, 0.02); border: 1px solid var(--border-color); border-radius: 8px; padding: 0.85rem 1rem; display: flex; flex-direction: column; gap: 0.5rem; justify-content: center; min-height: 60px;">
+            <span style="font-size: 0.65rem; color: var(--text-muted); display: block; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; margin-bottom: 2px;">Công thức / Cơ chế:</span>
+            <div style="width: 100%; overflow-x: auto; padding-bottom: 4px; scrollbar-width: thin; -ms-overflow-style: none;">
+              ${this.formatFormula(item.formula)}
+            </div>
           </div>
         </div>
       </div>

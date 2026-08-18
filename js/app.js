@@ -63,13 +63,29 @@ class BaselApp {
     if (collapseBtn && expandBtn && appContainer) {
       collapseBtn.addEventListener("click", () => {
         appContainer.classList.add("sidebar-collapsed");
+        appContainer.classList.remove("mobile-sidebar-active");
         expandBtn.classList.remove("hidden");
       });
       expandBtn.addEventListener("click", () => {
         appContainer.classList.remove("sidebar-collapsed");
+        appContainer.classList.add("mobile-sidebar-active");
         expandBtn.classList.add("hidden");
       });
     }
+
+    // Sự kiện đóng sidebar trên mobile khi nhấp ra ngoài
+    document.addEventListener("click", (e) => {
+      if (window.innerWidth <= 768 && appContainer) {
+        const sidebar = document.querySelector(".sidebar");
+        if (sidebar && !sidebar.contains(e.target) && expandBtn && !expandBtn.contains(e.target)) {
+          if (appContainer.classList.contains("mobile-sidebar-active")) {
+            appContainer.classList.add("sidebar-collapsed");
+            appContainer.classList.remove("mobile-sidebar-active");
+            expandBtn.classList.remove("hidden");
+          }
+        }
+      }
+    });
 
     // Sự kiện chuyển sub-tab trong phân hệ Basel
     const baselSubTabBtns = document.querySelectorAll(".sub-tab-btn[data-baseltab]");
@@ -149,6 +165,15 @@ class BaselApp {
         section.classList.add("hidden");
       }
     });
+
+    // Tự động đóng sidebar trên mobile khi chuyển tab
+    const appContainer = document.querySelector(".app-container");
+    const expandBtn = document.getElementById("sidebar-expand-btn");
+    if (appContainer && window.innerWidth <= 768) {
+      appContainer.classList.add("sidebar-collapsed");
+      appContainer.classList.remove("mobile-sidebar-active");
+      if (expandBtn) expandBtn.classList.remove("hidden");
+    }
 
     // Cuộn lên đầu trang
     window.scrollTo({ top: 0, behavior: "smooth" });

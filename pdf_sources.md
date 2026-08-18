@@ -73,5 +73,5 @@ Các tài liệu được trích xuất trực tiếp từ thư mục `files/` d
 
 ## III. Báo cáo Tỷ lệ An toàn Vốn (CAR) của 10 Ngân hàng Việt Nam (2022 - Nay)
 
-Tất cả báo cáo được tải về cục bộ tại thư mục [`docs/banks/`](file:///Users/toanpham/Desktop/Banking/docs/banks). Vui lòng xem chi tiết danh sách tệp tại file thống kê:
-*   [**`docs/banks/README.md`**](file:///Users/toanpham/Desktop/Banking/docs/banks/README.md)
+Tất cả báo cáo được tải về cục bộ tại thư mục [`docs/banks/`](docs/banks). Vui lòng xem chi tiết danh sách tệp tại file thống kê:
+*   [**`docs/banks/README.md`**](docs/banks/README.md)

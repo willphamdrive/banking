@@ -7,33 +7,33 @@ Tôi đã hoàn thành việc tải và lưu trữ ngoại tuyến toàn bộ 10
 ## 📁 Cấu trúc thư mục dự án cập nhật
 
 Ứng dụng hoạt động hoàn toàn ngoại tuyến dưới dạng Single Page Application (SPA):
-- 🌐 [**`index.html`**](file:///Users/toanpham/Desktop/Banking/index.html): Giao diện hiển thị Dashboard, Dòng thời gian, 3 Trụ cột, Máy tính CAR và Thư viện Luật.
-- 🎨 [**`css/style.css`**](file:///Users/toanpham/Desktop/Banking/css/style.css): Hệ thống CSS thiết kế kính mờ (Glassmorphism), Dark/Light Mode.
-- 💾 [**`js/data.js`**](file:///Users/toanpham/Desktop/Banking/js/data.js): Cơ sở dữ liệu lý thuyết và đường dẫn liên kết đến các tệp PDF cục bộ trong thư mục `docs/`.
-- 📁 [**`docs/`**](file:///Users/toanpham/Desktop/Banking/docs): Thư mục lưu trữ offline các tài liệu PDF gốc.
-- ⚖️ [**`js/laws.js`**](file:///Users/toanpham/Desktop/Banking/js/laws.js): Xử lý hiển thị danh mục văn bản và mở tệp PDF cục bộ.
+- 🌐 [**`index.html`**](index.html): Giao diện hiển thị Dashboard, Dòng thời gian, 3 Trụ cột, Máy tính CAR và Thư viện Luật.
+- 🎨 [**`css/style.css`**](css/style.css): Hệ thống CSS thiết kế kính mờ (Glassmorphism), Dark/Light Mode.
+- 💾 [**`js/data.js`**](js/data.js): Cơ sở dữ liệu lý thuyết và đường dẫn liên kết đến các tệp PDF cục bộ trong thư mục `docs/`.
+- 📁 [**`docs/`**](docs): Thư mục lưu trữ offline các tài liệu PDF gốc.
+- ⚖️ [**`js/laws.js`**](js/laws.js): Xử lý hiển thị danh mục văn bản và mở tệp PDF cục bộ.
 
 ---
 
 ## 🛠️ Chi tiết các tài liệu offline đã lưu trữ thành công
 
-Tất cả 10 tệp PDF gốc đã được tải về thành công tại thư mục cục bộ [**`docs/`**](file:///Users/toanpham/Desktop/Banking/docs) với định dạng chuẩn đã xác minh đầu vào:
+Tất cả 10 tệp PDF gốc đã được tải về thành công tại thư mục cục bộ [**`docs/`**](docs) với định dạng chuẩn đã xác minh đầu vào:
 
 ### 1. Hiệp ước Basel Quốc tế (Thư mục cục bộ)
-* 📕 **Basel I (1988)**: [`docs/basel_i.pdf`](file:///Users/toanpham/Desktop/Banking/docs/basel_i.pdf) (Tải trực tiếp từ BIS - 99.1 KB)
-* 📘 **Basel II (2004)**: [`docs/basel_ii.pdf`](file:///Users/toanpham/Desktop/Banking/docs/basel_ii.pdf) (Tải trực tiếp từ BIS - 1.8 MB)
-* 📙 **Basel III (Capital)**: [`docs/basel_iii_capital.pdf`](file:///Users/toanpham/Desktop/Banking/docs/basel_iii_capital.pdf) (Tải trực tiếp từ BIS - 1.2 MB)
-* 📗 **Basel III (Liquidity)**: [`docs/basel_iii_liquidity.pdf`](file:///Users/toanpham/Desktop/Banking/docs/basel_iii_liquidity.pdf) (Tải trực tiếp từ BIS - 431.5 KB)
-* 📕 **Basel IV (2017 Reforms)**: [`docs/basel_iv.pdf`](file:///Users/toanpham/Desktop/Banking/docs/basel_iv.pdf) (Tải trực tiếp từ BIS - 2.9 MB)
+* 📕 **Basel I (1988)**: [`docs/basel_i.pdf`](docs/basel_i.pdf) (Tải trực tiếp từ BIS - 99.1 KB)
+* 📘 **Basel II (2004)**: [`docs/basel_ii.pdf`](docs/basel_ii.pdf) (Tải trực tiếp từ BIS - 1.8 MB)
+* 📙 **Basel III (Capital)**: [`docs/basel_iii_capital.pdf`](docs/basel_iii_capital.pdf) (Tải trực tiếp từ BIS - 1.2 MB)
+* 📗 **Basel III (Liquidity)**: [`docs/basel_iii_liquidity.pdf`](docs/basel_iii_liquidity.pdf) (Tải trực tiếp từ BIS - 431.5 KB)
+* 📕 **Basel IV (2017 Reforms)**: [`docs/basel_iv.pdf`](docs/basel_iv.pdf) (Tải trực tiếp từ BIS - 2.9 MB)
 
 ### 2. Luật Ngân hàng Việt Nam (Thư mục cục bộ)
-* ⚖️ **Luật Các tổ chức tín dụng 2024**: [`docs/luat_tctd_2024.pdf`](file:///Users/toanpham/Desktop/Banking/docs/luat_tctd_2024.pdf) (Tải trực tiếp từ Cổng Bảo hiểm tiền gửi Việt Nam - 2.6 MB)
-* 🏛️ **Luật Ngân hàng Nhà nước VN 2010**: [`docs/luat_nhnn_2010.pdf`](file:///Users/toanpham/Desktop/Banking/docs/luat_nhnn_2010.pdf) (Tải trực tiếp từ Cổng thông tin Gia Lai - 670.3 KB)
-* 📜 **Thông tư 41/2016/TT-NHNN**: [`docs/thong_tu_41_2016.pdf`](file:///Users/toanpham/Desktop/Banking/docs/thong_tu_41_2016.pdf) (Bản gốc ký số tích hợp từ `files/41-nhnn.signed.pdf` - 5.4 MB)
-* 📜 **Thông tư 22/2019/TT-NHNN**: [`docs/thong_tu_22_2019.pdf`](file:///Users/toanpham/Desktop/Banking/docs/thong_tu_22_2019.pdf) (Bản gốc tích hợp từ `files/2019_921 + 922_22-2019-TT-NHNN.pdf` - 1.2 MB)
-* 📜 **Thông tư 11/2021/TT-NHNN**: [`docs/thong_tu_11_2021.pdf`](file:///Users/toanpham/Desktop/Banking/docs/thong_tu_11_2021.pdf) (Bản gốc tích hợp từ `files/11-nhnn.pdf` - 1.6 MB)
-* 📜 **Thông tư 22/2023/TT-NHNN (Mới)**: [`docs/thong_tu_22_2023.pdf`](file:///Users/toanpham/Desktop/Banking/docs/thong_tu_22_2023.pdf) (Bản gốc tích hợp từ `files/22-nhnn.pdf` - 23.7 MB - Sửa đổi bổ sung Thông tư 41/2016 về an toàn vốn)
-* 📜 **Thông tư 14/2025/TT-NHNN (Mới)**: [`docs/thong_tu_14_2025.pdf`](file:///Users/toanpham/Desktop/Banking/docs/thong_tu_14_2025.pdf) (Bản gốc tích hợp từ `files/14-nhnn.pdf` - 11 MB - Quy định tỷ lệ an toàn vốn mới nhất năm 2025)
+* ⚖️ **Luật Các tổ chức tín dụng 2024**: [`docs/luat_tctd_2024.pdf`](docs/luat_tctd_2024.pdf) (Tải trực tiếp từ Cổng Bảo hiểm tiền gửi Việt Nam - 2.6 MB)
+* 🏛️ **Luật Ngân hàng Nhà nước VN 2010**: [`docs/luat_nhnn_2010.pdf`](docs/luat_nhnn_2010.pdf) (Tải trực tiếp từ Cổng thông tin Gia Lai - 670.3 KB)
+* 📜 **Thông tư 41/2016/TT-NHNN**: [`docs/thong_tu_41_2016.pdf`](docs/thong_tu_41_2016.pdf) (Bản gốc ký số tích hợp từ `files/41-nhnn.signed.pdf` - 5.4 MB)
+* 📜 **Thông tư 22/2019/TT-NHNN**: [`docs/thong_tu_22_2019.pdf`](docs/thong_tu_22_2019.pdf) (Bản gốc tích hợp từ `files/2019_921 + 922_22-2019-TT-NHNN.pdf` - 1.2 MB)
+* 📜 **Thông tư 11/2021/TT-NHNN**: [`docs/thong_tu_11_2021.pdf`](docs/thong_tu_11_2021.pdf) (Bản gốc tích hợp từ `files/11-nhnn.pdf` - 1.6 MB)
+* 📜 **Thông tư 22/2023/TT-NHNN (Mới)**: [`docs/thong_tu_22_2023.pdf`](docs/thong_tu_22_2023.pdf) (Bản gốc tích hợp từ `files/22-nhnn.pdf` - 23.7 MB - Sửa đổi bổ sung Thông tư 41/2016 về an toàn vốn)
+* 📜 **Thông tư 14/2025/TT-NHNN (Mới)**: [`docs/thong_tu_14_2025.pdf`](docs/thong_tu_14_2025.pdf) (Bản gốc tích hợp từ `files/14-nhnn.pdf` - 11 MB - Quy định tỷ lệ an toàn vốn mới nhất năm 2025)
 
 
 ---
@@ -52,9 +52,9 @@ Tất cả 10 tệp PDF gốc đã được tải về thành công tại thư m
 Theo yêu cầu bổ sung, tôi đã phân tích cấu trúc đường dẫn máy chủ tài liệu tĩnh của Vietstock (`static2.vietstock.vn`) và xây dựng script tải tự động hàng loạt báo cáo CAR cho 10 ngân hàng thương mại hàng đầu:
 *   **Danh sách Ngân hàng**: Techcombank (TCB), Vietcombank (VCB), BIDV (BID), VietinBank (CTG), MBBank (MBB), VPBank (VPB), ACB, Sacombank (STB), TPBank (TPB), HDBank (HDB).
 *   **Kết quả**: Tải thành công **48 tệp PDF** báo cáo chính thức từ năm 2022 đến nay. Tất cả tệp đã được kiểm tra chữ ký `%PDF` để đảm bảo không gặp lỗi tải trang HTML giả dạng.
-*   **Lưu trữ**: Lưu offline tại thư mục cục bộ [**`docs/banks/`**](file:///Users/toanpham/Desktop/Banking/docs/banks).
-*   **Bảng mục lục**: Được thiết lập chi tiết tại [**`docs/banks/README.md`**](file:///Users/toanpham/Desktop/Banking/docs/banks/README.md) để hỗ trợ tra cứu trực quan và tiện lợi.
-*   **File tổng hợp**: Bổ sung phần tham chiếu trong file tổng hợp [**`pdf_sources.md`**](file:///Users/toanpham/Desktop/Banking/pdf_sources.md).
+*   **Lưu trữ**: Lưu offline tại thư mục cục bộ [**`docs/banks/`**](docs/banks).
+*   **Bảng mục lục**: Được thiết lập chi tiết tại [**`docs/banks/README.md`**](docs/banks/README.md) để hỗ trợ tra cứu trực quan và tiện lợi.
+*   **File tổng hợp**: Bổ sung phần tham chiếu trong file tổng hợp [**`pdf_sources.md`**](pdf_sources.md).
 
 ---
 
@@ -74,14 +74,14 @@ Tôi đã hoàn thành việc tái thiết kế toàn bộ phân hệ phân tíc
     - **Chọn Time Series**: Vẽ biểu đồ nhiều đường xu hướng (Multi-line Chart) thể hiện biến động CAR của các ngân hàng được chọn chạy song hành từ 2022 đến 2025 để phân tích đối chiếu.
 
 ### 2. Công cụ Vẽ biểu đồ SVG Động ngoại tuyến (Dynamic SVG Engine)
-*   Để giữ cho ứng dụng hoạt động **100% ngoại tuyến (Offline)** không phụ thuộc thư viện mạng, tôi đã xây dựng các hàm vẽ biểu đồ SVG tự động trong [`js/analysis.js`](file:///Users/toanpham/Desktop/Banking/js/analysis.js):
+*   Để giữ cho ứng dụng hoạt động **100% ngoại tuyến (Offline)** không phụ thuộc thư viện mạng, tôi đã xây dựng các hàm vẽ biểu đồ SVG tự động trong [`js/analysis.js`](js/analysis.js):
     - `generateSvgSingleBar`: Vẽ thước đo CAR đơn so với mốc 8%.
     - `generateSvgDoubleBarChart`: Vẽ biểu đồ cột đôi Capital vs RWA.
     - `generateSvgMultiBarChart`: Vẽ biểu đồ cột nhóm so sánh nhiều ngân hàng.
     - `generateSvgLineChart`: Vẽ biểu đồ đường đơn/nhiều đường xu hướng qua các năm với các điểm nhấn tọa độ tròn và chú thích huyền thoại (legend).
 
 ### 3. Đồng bộ hóa Phong cách Thiết kế (Styling & CSS)
-*   Cập nhật các quy tắc CSS trong [`css/style.css`](file:///Users/toanpham/Desktop/Banking/css/style.css) để bổ sung hiệu ứng chuyển đổi sub-tab mượt mà, định dạng các checkbox ngân hàng, và bo tròn góc các khối biểu đồ SVG tương thích tốt trên cả hai chế độ giao diện Sáng (Light) và Tối (Dark).
+*   Cập nhật các quy tắc CSS trong [`css/style.css`](css/style.css) để bổ sung hiệu ứng chuyển đổi sub-tab mượt mà, định dạng các checkbox ngân hàng, và bo tròn góc các khối biểu đồ SVG tương thích tốt trên cả hai chế độ giao diện Sáng (Light) và Tối (Dark).
 
 ---
 
@@ -104,7 +104,7 @@ Tôi đã thiết lập thêm một tab phụ lục chuyên dụng để giải 
     - Tổng hợp hơn 12 thuật ngữ tài chính ngân hàng cốt lõi (CAR, RWA, Vốn cấp 1, Vốn cấp 2, LDR, LCR, NSFR, Credit Risk, Market Risk, Operational Risk, NPL, Dự phòng chung/cụ thể, các phiên bản Basel).
     - Mỗi thuật ngữ được hiển thị dưới dạng thẻ (card) có màu viền nổi bật, có giải nghĩa ngắn gọn, giải thích chi tiết ứng dụng thực tế và kèm **công thức/cơ chế tính toán** biểu diễn bằng văn bản tối ưu hóa cho hiển thị ngoại tuyến.
 *   **Lưu trữ & Chạy ngoại tuyến**:
-    - Toàn bộ dữ liệu thuật ngữ được quản lý và xử lý cục bộ trong tệp mã nguồn độc lập [`js/glossary.js`](file:///Users/toanpham/Desktop/Banking/js/glossary.js) mà không cần nạp dữ liệu hay kết nối internet.
+    - Toàn bộ dữ liệu thuật ngữ được quản lý và xử lý cục bộ trong tệp mã nguồn độc lập [`js/glossary.js`](js/glossary.js) mà không cần nạp dữ liệu hay kết nối internet.
 
 ---
 
@@ -186,16 +186,16 @@ Tôi đã thực hiện điều chỉnh và chuẩn hóa tên nhãn hiển thị
     - Một số ngân hàng chưa công bố hoặc có cấu trúc tên tệp khác đã được loại trừ tự động sau khi kiểm duyệt mã phản hồi HTTP và kiểm tra định dạng chữ ký `%PDF`.
 *   **Tích hợp hệ thống**:
     - Tổng số tài liệu trong Thư viện được cập nhật từ **55 tệp** lên **87 tệp** (bao gồm 7 tài liệu luật và 80 tài liệu báo cáo của 10 ngân hàng).
-    - Toàn bộ 32 báo cáo lịch sử mới đã được nạp vào cơ sở dữ liệu `DOCS_DATABASE` của [`js/docfinder.js`](file:///Users/toanpham/Desktop/Banking/js/docfinder.js) và tự động hiển thị trong Cây thư mục gập mở của Trình tra cứu.
-    - Cập nhật mục lục thống kê tệp tin tự động tại [**`docs/banks/README.md`**](file:///Users/toanpham/Desktop/Banking/docs/banks/README.md) bằng script quét dung lượng thực tế của ổ đĩa.
+    - Toàn bộ 32 báo cáo lịch sử mới đã được nạp vào cơ sở dữ liệu `DOCS_DATABASE` của [`js/docfinder.js`](js/docfinder.js) và tự động hiển thị trong Cây thư mục gập mở của Trình tra cứu.
+    - Cập nhật mục lục thống kê tệp tin tự động tại [**`docs/banks/README.md`**](docs/banks/README.md) bằng script quét dung lượng thực tế của ổ đĩa.
 
 ---
 
 ## 📊 Cập nhật dữ liệu CAR lịch sử (2019 - 2021) cho tab CAR
 
 Tôi đã đồng bộ cơ sở dữ liệu phân tích chỉ số tài chính thực tế và cấu trúc điều hướng thời gian trên giao diện tab "Phân tích CAR Ngân hàng":
-*   **Mở rộng Cơ sở dữ liệu**: Nạp toàn bộ dữ liệu CAR, Vốn tự có, Tài sản rủi ro (RWA) và Vốn điều lệ thực tế của 10 ngân hàng thương mại Việt Nam giai đoạn 2019 - 2021 vào `BANK_CAR_DATABASE` trong [`js/analysis.js`](file:///Users/toanpham/Desktop/Banking/js/analysis.js).
-*   **Nâng cấp Giao diện Điều khiển**: Bổ sung các nút bấm năm `2019`, `2020`, `2021` vào cả 2 trang: "Phân tích Đơn lẻ" và "So sánh Đối chiếu" trong [`index.html`](file:///Users/toanpham/Desktop/Banking/index.html).
+*   **Mở rộng Cơ sở dữ liệu**: Nạp toàn bộ dữ liệu CAR, Vốn tự có, Tài sản rủi ro (RWA) và Vốn điều lệ thực tế của 10 ngân hàng thương mại Việt Nam giai đoạn 2019 - 2021 vào `BANK_CAR_DATABASE` trong [`js/analysis.js`](js/analysis.js).
+*   **Nâng cấp Giao diện Điều khiển**: Bổ sung các nút bấm năm `2019`, `2020`, `2021` vào cả 2 trang: "Phân tích Đơn lẻ" và "So sánh Đối chiếu" trong [`index.html`](index.html).
 *   **Tăng tính ổn định và linh hoạt cho Logic**:
     - Thiết kế cơ chế phát hiện các năm trống dữ liệu (như CTG năm 2019, 2020) và hiển thị thông báo phản hồi thân thiện thay vì làm đơ ứng dụng.
     - Tự động bỏ qua các điểm dữ liệu thiếu trên Chart.js và điền giá trị khuyết dạng `-` trên bảng đối chiếu một cách khoa học.
@@ -264,14 +264,14 @@ Tôi đã hoàn trả lại cơ chế tương tác mở/đóng của Drawer gi�
 ## 📚 Tích hợp các văn bản Hiệp ước Basel vào Document Finder
 
 Để hoàn thiện thư viện pháp chế và quản lý rủi ro ngân hàng toàn diện:
-*   **Bổ sung 5 tệp tin Hiệp ước Basel gốc**: Đã nạp đầy đủ thông tin đường dẫn và tên gọi của 5 văn kiện Basel quốc tế vào cơ sở dữ liệu `DOCS_DATABASE` của [`js/docfinder.js`](file:///Users/toanpham/Desktop/Banking/js/docfinder.js):
+*   **Bổ sung 5 tệp tin Hiệp ước Basel gốc**: Đã nạp đầy đủ thông tin đường dẫn và tên gọi của 5 văn kiện Basel quốc tế vào cơ sở dữ liệu `DOCS_DATABASE` của [`js/docfinder.js`](js/docfinder.js):
     - [1988] Basel I - Hiệp ước vốn Basel gốc (`basel_i.pdf`)
     - [2004] Basel II - Hợp nhất quốc tế về đo lường vốn (`basel_ii.pdf`)
     - [2010] Basel III - Khung đo lường vốn tối thiểu toàn cầu (`basel_iii_capital.pdf`)
     - [2013] Basel III - Khung tỷ lệ thanh khoản và đo lường rủi ro (`basel_iii_liquidity.pdf`)
     - [2017] Basel IV - Cải cách cấu trúc tài sản rủi ro sau khủng hoảng (`basel_iv.pdf`)
 *   **Thêm bộ lọc "Hiệp ước Basel"**: 
-    - Thêm nút lọc danh mục riêng biệt `Hiệp ước Basel` (data-cat="basel") trên thanh điều hướng đầu Drawer trong [`index.html`](file:///Users/toanpham/Desktop/Banking/index.html).
+    - Thêm nút lọc danh mục riêng biệt `Hiệp ước Basel` (data-cat="basel") trên thanh điều hướng đầu Drawer trong [`index.html`](index.html).
     - Cấu hình thư mục ảo chuyên biệt mang tên `"Hiệp ước Basel Quốc tế"` hiển thị tách biệt ở đầu danh sách cây thư mục.
 *   **Đồng bộ số lượng và năm**:
     - Nhãn hiển thị trên thanh kéo trượt lề phải cập nhật tăng quy mô từ 87 lên **92 PDFs**.
@@ -314,4 +314,4 @@ Tôi đã hoàn trả lại cơ chế tương tác mở/đóng của Drawer gi�
 
 *   **Vấn đề**: Khi chuyển sang các tab phụ "Bảng so sánh", "Bộ tính CAR" và "Trắc nghiệm", nội dung vùng hiển thị trống trơn.
 *   **Nguyên nhân**: Thẻ `div` của `#pillars-section` bị thiếu mất thẻ đóng `</div>` (chỉ đóng thẻ `.pillars-grid` ở bên trong). Điều này khiến cho cả 3 phân hệ bên dưới bị lồng nhầm làm phần tử con của `#pillars-section`. Khi chuyển tab, `#pillars-section` bị ẩn (thêm class `hidden`), gián tiếp ẩn luôn toàn bộ các phân hệ con lồng sai cấu trúc này.
-*   **Giải pháp**: Thêm thẻ `</div>` đóng chính xác `#pillars-section` tại dòng 262 trong [`index.html`](file:///Users/toanpham/Desktop/Banking/index.html), giúp đưa các tab panel phụ trở về cùng cấp (siblings), khắc phục triệt để lỗi hiển thị trống.
+*   **Giải pháp**: Thêm thẻ `</div>` đóng chính xác `#pillars-section` tại dòng 262 trong [`index.html`](index.html), giúp đưa các tab panel phụ trở về cùng cấp (siblings), khắc phục triệt để lỗi hiển thị trống.

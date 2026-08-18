@@ -11,22 +11,8 @@ class DiscussionInsights {
     this.filterTopic = "all"; 
     this.sortOrder = "newest"; // 'newest' hoặc 'oldest'
     
-    // Danh mục chủ đề của Hedge Academy
-    this.academyTopics = [
-      { code: "all", display: "Tất cả" },
-      { code: "basel_tt22", display: "Basel III & TT22" },
-      { code: "interest_macro", display: "Lãi suất & Vĩ mô" },
-      { code: "sbv", display: "Điều hành SBV" },
-      { code: "sbv_mistakes", display: "SBV đã sai gì?" },
-      { code: "exchange_fx", display: "Tỷ giá & FX" },
-      { code: "deals_corp", display: "Thương vụ & DN" },
-      { code: "promos_courses", display: "Ưu đãi & Khóa học" },
-      { code: "cfa_updates", display: "CFA & Cập nhật" },
-      { code: "other", display: "Khác" }
-    ];
-
-    // Danh mục chủ đề của Trần Quang Nghĩa (bao gồm các tỷ lệ tài chính ngân hàng chi tiết)
-    this.nghiaTopics = [
+    // Danh mục chủ đề đồng bộ cho cả hai tác giả (bao gồm các tỷ lệ tài chính ngân hàng chi tiết)
+    this.topics = [
       { code: "all", display: "Tất cả" },
       { code: "basel_tt22", display: "Basel III & TT22" },
       { code: "ratio_car", display: "Tỷ lệ CAR" },
@@ -36,6 +22,7 @@ class DiscussionInsights {
       { code: "ratio_nim", display: "Biên NIM" },
       { code: "interest_macro", display: "Lãi suất & Vĩ mô" },
       { code: "sbv", display: "Điều hành SBV" },
+      { code: "sbv_mistakes", display: "SBV đã sai gì?" },
       { code: "exchange_fx", display: "Tỷ giá & FX" },
       { code: "deals_corp", display: "Thương vụ & DN" },
       { code: "promos_courses", display: "Ưu đãi & Khóa học" },
@@ -161,6 +148,66 @@ class DiscussionInsights {
         }
       });
     }
+
+    // Sự kiện mở/đóng URL Web Viewer Modal
+    const urlViewer = document.getElementById("url-viewer-modal");
+    const urlViewerContent = document.getElementById("url-viewer-content");
+    const urlViewerIframe = document.getElementById("url-viewer-iframe");
+    const urlViewerClose = document.getElementById("url-viewer-close");
+    const urlViewerTitle = document.getElementById("url-viewer-title");
+    const urlViewerExternal = document.getElementById("url-viewer-external");
+
+    if (urlViewer && urlViewerClose && urlViewerIframe) {
+      const closeUrlViewer = () => {
+        urlViewer.style.opacity = "0";
+        if (urlViewerContent) urlViewerContent.style.transform = "scale(0.95)";
+        setTimeout(() => {
+          urlViewer.style.display = "none";
+          urlViewerIframe.src = ""; // Xóa src để giải phóng tài nguyên và dừng video/audio
+        }, 250);
+      };
+
+      urlViewerClose.addEventListener("click", closeUrlViewer);
+      urlViewer.addEventListener("click", (e) => {
+        if (urlViewerContent && !urlViewerContent.contains(e.target)) {
+          closeUrlViewer();
+        }
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && urlViewer.style.display === "flex") {
+          closeUrlViewer();
+        }
+      });
+
+      // Xuất đối tượng ra window để mở từ bất cứ đâu
+      window.openUrlViewer = (url, title = "Trình xem trang web") => {
+        // Tự động phát hiện các trang chắc chắn chặn nhúng (Facebook, Instagram, Messenger, Telegram...)
+        const lowerUrl = url.toLowerCase();
+        const isBlocked = lowerUrl.includes("facebook.com") || 
+                          lowerUrl.includes("fb.com") || 
+                          lowerUrl.includes("messenger.com") || 
+                          lowerUrl.includes("instagram.com") || 
+                          lowerUrl.includes("t.me") || 
+                          lowerUrl.includes("telegram.org");
+
+        if (isBlocked) {
+          // Mở trực tiếp trong tab mới để tránh hiển thị khung iframe trắng bị lỗi
+          window.open(url, "_blank");
+          return;
+        }
+
+        urlViewerIframe.src = url;
+        if (urlViewerTitle) urlViewerTitle.textContent = title;
+        if (urlViewerExternal) urlViewerExternal.href = url;
+        
+        urlViewer.style.display = "flex";
+        urlViewer.offsetHeight; // Lực kích hoạt reflow để tạo hiệu ứng transition
+        urlViewer.style.opacity = "1";
+        if (urlViewerContent) urlViewerContent.style.transform = "scale(1.0)";
+        lucide.createIcons();
+      };
+    }
   }
 
   // Nhấn vào một ngân hàng để xem chi tiết bên pane phải
@@ -195,9 +242,9 @@ class DiscussionInsights {
     }
   }
 
-  // Trình bày bộ lọc chủ đề động theo tác giả hiện tại
+  // Trình bày bộ lọc chủ đề đồng bộ cho cả hai tác giả
   renderTopicSelectors() {
-    const topics = this.posts === this.academyPosts ? this.academyTopics : this.nghiaTopics;
+    const topics = this.topics;
     const container = document.getElementById("hedge-topic-selectors");
     if (!container) return;
 
@@ -284,6 +331,10 @@ class DiscussionInsights {
       let textHtml = post.text
         .replace(/\n/g, "<br>")
         .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+
+      // Chuyển đổi các URL thô thành thẻ liên kết có thể nhấp được
+      const urlRegex = /(https?:\/\/[^\s<]+)/g;
+      textHtml = textHtml.replace(urlRegex, `<a class="post-url-link" href="$1" data-url="$1" style="color: var(--primary); text-decoration: underline; word-break: break-all; cursor: pointer;">$1</a>`);
 
       // Thay thế các bank code thành các button/tag nhấp chuột được
       post.banks.forEach(bankCode => {
@@ -383,6 +434,17 @@ class DiscussionInsights {
         e.preventDefault();
         const bankCode = tag.getAttribute("data-bank");
         this.selectBank(bankCode);
+      });
+    });
+
+    // Đăng ký sự kiện click vào các URL liên kết trong bài viết để mở popup trong ứng dụng
+    this.postsListContainer.querySelectorAll(".post-url-link").forEach(link => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const url = link.getAttribute("data-url");
+        if (window.openUrlViewer) {
+          window.openUrlViewer(url, url);
+        }
       });
     });
 

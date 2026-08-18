@@ -1,13 +1,48 @@
-// Logic hiển thị và xử lý dữ liệu Phân tích Hedge Posts với phân trang (Pagination) và Lọc theo chủ đề
-class HedgeInsights {
+// Logic hiển thị và xử lý dữ liệu Phân tích & Thảo luận vĩ mô với phân trang và lọc chủ đề chuyên sâu
+class DiscussionInsights {
   constructor() {
-    this.posts = typeof HEDGE_POSTS_DATA !== "undefined" ? HEDGE_POSTS_DATA : [];
+    this.academyPosts = typeof ACADEMY_POSTS_DATA !== "undefined" ? ACADEMY_POSTS_DATA : [];
+    this.nghiaPosts = typeof NGHIA_POSTS_DATA !== "undefined" ? NGHIA_POSTS_DATA : [];
+    
+    this.posts = this.academyPosts; // Mặc định hiển thị Hedge Academy
     this.selectedBank = null;
     this.searchQuery = "";
     this.filterMode = "all"; // 'all' hoặc 'has_bank'
-    this.filterTopic = "all"; // 'all', 'basel_tt22', 'interest_macro', 'exchange_fx', 'deals_corp', 'other'
+    this.filterTopic = "all"; 
     this.sortOrder = "newest"; // 'newest' hoặc 'oldest'
     
+    // Danh mục chủ đề của Hedge Academy
+    this.academyTopics = [
+      { code: "all", display: "Tất cả" },
+      { code: "basel_tt22", display: "Basel III & TT22" },
+      { code: "interest_macro", display: "Lãi suất & Vĩ mô" },
+      { code: "sbv", display: "Điều hành SBV" },
+      { code: "sbv_mistakes", display: "SBV đã sai gì?" },
+      { code: "exchange_fx", display: "Tỷ giá & FX" },
+      { code: "deals_corp", display: "Thương vụ & DN" },
+      { code: "promos_courses", display: "Ưu đãi & Khóa học" },
+      { code: "cfa_updates", display: "CFA & Cập nhật" },
+      { code: "other", display: "Khác" }
+    ];
+
+    // Danh mục chủ đề của Trần Quang Nghĩa (bao gồm các tỷ lệ tài chính ngân hàng chi tiết)
+    this.nghiaTopics = [
+      { code: "all", display: "Tất cả" },
+      { code: "basel_tt22", display: "Basel III & TT22" },
+      { code: "ratio_car", display: "Tỷ lệ CAR" },
+      { code: "ratio_lcr_nsfr", display: "LCR & NSFR" },
+      { code: "ratio_ldr", display: "Tỷ lệ LDR" },
+      { code: "ratio_npl", display: "Nợ xấu NPL" },
+      { code: "ratio_nim", display: "Biên NIM" },
+      { code: "interest_macro", display: "Lãi suất & Vĩ mô" },
+      { code: "sbv", display: "Điều hành SBV" },
+      { code: "exchange_fx", display: "Tỷ giá & FX" },
+      { code: "deals_corp", display: "Thương vụ & DN" },
+      { code: "promos_courses", display: "Ưu đãi & Khóa học" },
+      { code: "cfa_updates", display: "CFA & Cập nhật" },
+      { code: "other", display: "Khác" }
+    ];
+
     // Pagination parameters
     this.currentPage = 1;
     this.postsPerPage = 10; // Hiển thị 10 bài viết mỗi trang
@@ -19,15 +54,55 @@ class HedgeInsights {
 
   initElements() {
     this.postsListContainer = document.getElementById("hedge-posts-list");
-    this.detailsContainer = document.getElementById("hedge-bank-details");
     this.searchInput = document.getElementById("hedge-search-input");
     this.filterBtns = document.querySelectorAll(".hedge-filter-btn");
-    this.topicBtns = document.querySelectorAll(".hedge-topic-btn");
     this.sortSelect = document.getElementById("hedge-sort-select");
     this.paginationContainer = document.getElementById("hedge-pagination");
+    
+    // Sub-tabs author selectors
+    this.subTabBtns = document.querySelectorAll("[data-hedge-sub]");
   }
 
   bindEvents() {
+    // Sự kiện chuyển đổi sub-tab tác giả
+    this.subTabBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        this.subTabBtns.forEach(b => {
+          b.classList.remove("active");
+          b.style.borderBottomColor = "transparent";
+          b.style.color = "var(--text-muted)";
+        });
+        btn.classList.add("active");
+        btn.style.borderBottomColor = "var(--primary)";
+        btn.style.color = "var(--text-main)";
+
+        const sub = btn.getAttribute("data-hedge-sub");
+        if (sub === "academy") {
+          this.posts = this.academyPosts;
+        } else {
+          this.posts = this.nghiaPosts;
+        }
+        
+        // Reset bộ lọc & tìm kiếm khi chuyển tác giả
+        this.currentPage = 1;
+        this.selectedBank = null;
+        this.searchQuery = "";
+        if (this.searchInput) this.searchInput.value = "";
+        this.filterTopic = "all";
+
+        // Reset bộ lọc ngân hàng về 'Tất cả'
+        this.filterBtns.forEach((b, idx) => {
+          if (idx === 0) b.classList.add("active");
+          else b.classList.remove("active");
+        });
+        this.filterMode = "all";
+
+        this.render();
+        this.renderDetails(); // Clear chi tiết ngân hàng bên phải
+        lucide.createIcons();
+      });
+    });
+
     // Sự kiện tìm kiếm bài viết
     if (this.searchInput) {
       this.searchInput.addEventListener("input", (e) => {
@@ -48,16 +123,7 @@ class HedgeInsights {
       });
     });
 
-    // Sự kiện lọc bài viết theo Chủ đề (Topic)
-    this.topicBtns.forEach(btn => {
-      btn.addEventListener("click", () => {
-        this.topicBtns.forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-        this.filterTopic = btn.getAttribute("data-topic");
-        this.currentPage = 1; // Reset về trang 1
-        this.render();
-      });
-    });
+
 
     // Sự kiện sắp xếp bài viết
     if (this.sortSelect) {
@@ -67,21 +133,39 @@ class HedgeInsights {
         this.render();
       });
     }
+
+    // Sự kiện đóng Lightbox xem ảnh lớn
+    const lightbox = document.getElementById("image-lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const lightboxClose = document.getElementById("lightbox-close");
+    
+    if (lightbox && lightboxClose && lightboxImg) {
+      const closeLightbox = () => {
+        lightbox.style.opacity = "0";
+        lightboxImg.style.transform = "scale(0.9)";
+        setTimeout(() => {
+          lightbox.style.display = "none";
+        }, 250);
+      };
+      
+      lightboxClose.addEventListener("click", closeLightbox);
+      lightbox.addEventListener("click", (e) => {
+        if (e.target !== lightboxImg) {
+          closeLightbox();
+        }
+      });
+      
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && lightbox.style.display === "flex") {
+          closeLightbox();
+        }
+      });
+    }
   }
 
   // Nhấn vào một ngân hàng để xem chi tiết bên pane phải
   selectBank(bankCode) {
-    this.selectedBank = bankCode;
-    this.renderDetails();
-    
-    // Highlight tất cả các tag cùng ngân hàng trong danh sách bài viết
-    document.querySelectorAll(".bank-tag").forEach(tag => {
-      if (tag.getAttribute("data-bank") === bankCode) {
-        tag.classList.add("active-tag");
-      } else {
-        tag.classList.remove("active-tag");
-      }
-    });
+    this.viewBankAnalysis(bankCode);
   }
 
   // Khôi phục phân tích số liệu trên biểu đồ chính
@@ -111,9 +195,40 @@ class HedgeInsights {
     }
   }
 
+  // Trình bày bộ lọc chủ đề động theo tác giả hiện tại
+  renderTopicSelectors() {
+    const topics = this.posts === this.academyPosts ? this.academyTopics : this.nghiaTopics;
+    const container = document.getElementById("hedge-topic-selectors");
+    if (!container) return;
+
+    container.innerHTML = topics.map(t => {
+      const activeClass = this.filterTopic === t.code ? "active" : "";
+      return `
+        <button class="hedge-topic-btn law-cat-btn ${activeClass}" data-topic="${t.code}" style="padding: 0.35rem 0.75rem; border-radius: 6px; cursor: pointer; font-size: 0.82rem; font-weight: 500;">
+          ${t.display}
+        </button>
+      `;
+    }).join("");
+
+    // Đăng ký lại sự kiện click cho các nút chủ đề động mới sinh
+    this.topicBtns = container.querySelectorAll(".hedge-topic-btn");
+    this.topicBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        this.topicBtns.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        this.filterTopic = btn.getAttribute("data-topic");
+        this.currentPage = 1; // Reset về trang 1
+        this.render();
+      });
+    });
+  }
+
   // Render danh sách bài viết bên trái
   render() {
     if (!this.postsListContainer) return;
+
+    // Khởi tạo bộ lọc chủ đề động theo tác giả
+    this.renderTopicSelectors();
 
     // Lọc bài viết theo ô tìm kiếm, chế độ lọc ngân hàng và chủ đề
     const filtered = this.posts.filter(post => {
@@ -200,6 +315,56 @@ class HedgeInsights {
             ${textHtml}
           </div>
 
+          <!-- Hiển thị hình ảnh đính kèm (media) nếu có -->
+          ${(() => {
+            if (!post.media || post.media.length === 0) return '';
+            const validMedia = post.media.map(m => m.thumbnail || (m.photo_image ? m.photo_image.uri : null)).filter(url => url);
+            if (validMedia.length === 0) return '';
+            
+            if (validMedia.length === 1) {
+              const imgUrl = validMedia[0];
+              return `
+                <div class="post-media-item" data-full-img="${imgUrl}" style="margin-top: 0.75rem; margin-bottom: 1rem; border-radius: 8px; overflow: hidden; border: 1px solid var(--border-color); background: rgba(0,0,0,0.25); display: flex; justify-content: center; align-items: center; max-height: 480px; width: 100%;">
+                  <img src="${imgUrl}" alt="Attached media" style="max-height: 480px; width: auto; max-width: 100%; object-fit: contain; cursor: pointer; transition: transform 0.25s ease, filter 0.2s ease; display: block;" onmouseover="this.style.transform='scale(1.015)'; this.style.filter='brightness(0.95)'" onmouseout="this.style.transform='scale(1.0)'; this.style.filter='brightness(1.0)'">
+                </div>
+              `;
+            }
+
+            let gridStyle = "display: grid; gap: 6px; margin-top: 0.75rem; margin-bottom: 1rem; border-radius: 8px; overflow: hidden; border: 1px solid var(--border-color); width: 100%;";
+            if (validMedia.length === 2) {
+              gridStyle += "grid-template-columns: 1fr 1fr; max-height: 220px;";
+            } else if (validMedia.length === 3) {
+              gridStyle += "grid-template-columns: 1.5fr 1fr; grid-template-rows: 1fr 1fr; max-height: 280px;";
+            } else {
+              gridStyle += "grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; max-height: 280px;";
+            }
+
+            const mediaItemsHtml = validMedia.slice(0, 4).map((imgUrl, idx) => {
+              let itemStyle = "width: 100%; height: 100%; object-fit: cover; cursor: pointer; transition: transform 0.25s ease, filter 0.2s ease; display: block;";
+              let containerStyle = "overflow: hidden; position: relative; width: 100%; height: 100%;";
+              
+              if (validMedia.length === 3 && idx === 0) {
+                containerStyle += "grid-row: span 2;";
+              }
+
+              const isLast = idx === 3 && validMedia.length > 4;
+              const overlayHtml = isLast ? `
+                <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.2rem; cursor: pointer; pointer-events: none;">
+                  +${validMedia.length - 3}
+                </div>
+              ` : "";
+
+              return `
+                <div style="${containerStyle}" class="post-media-item" data-full-img="${imgUrl}">
+                  <img src="${imgUrl}" alt="Attached media" style="${itemStyle}" onmouseover="this.style.transform='scale(1.03)'; this.style.filter='brightness(0.9)'" onmouseout="this.style.transform='scale(1.0)'; this.style.filter='brightness(1.0)'">
+                  ${overlayHtml}
+                </div>
+              `;
+            }).join("");
+
+            return `<div style="${gridStyle}">${mediaItemsHtml}</div>`;
+          })()}
+
           ${post.banks.length > 0 ? `
             <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; border-top: 1px solid var(--border-color); padding-top: 0.75rem; margin-top: 0.5rem;">
               <span style="font-size: 0.78rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase;">Liên quan:</span>
@@ -218,6 +383,23 @@ class HedgeInsights {
         e.preventDefault();
         const bankCode = tag.getAttribute("data-bank");
         this.selectBank(bankCode);
+      });
+    });
+
+    // Đăng ký sự kiện click vào các hình ảnh để mở Lightbox phóng to
+    this.postsListContainer.querySelectorAll(".post-media-item").forEach(item => {
+      item.addEventListener("click", () => {
+        const fullImgUrl = item.getAttribute("data-full-img");
+        const lightbox = document.getElementById("image-lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+        if (lightbox && lightboxImg && fullImgUrl) {
+          lightboxImg.src = fullImgUrl;
+          lightbox.style.display = "flex";
+          // Trigger reflow
+          lightbox.offsetHeight;
+          lightbox.style.opacity = "1";
+          lightboxImg.style.transform = "scale(1)";
+        }
       });
     });
 
@@ -319,127 +501,10 @@ class HedgeInsights {
     }
   }
 
-  // Render thông tin chi tiết số liệu ngân hàng được chọn bên phải
-  renderDetails() {
-    if (!this.detailsContainer) return;
 
-    if (!this.selectedBank) {
-      this.detailsContainer.innerHTML = `
-        <div style="text-align: center; color: var(--text-muted); padding: 4rem 1.5rem;">
-          <i data-lucide="arrow-left-right" style="width: 48px; height: 48px; margin-bottom: 1rem; opacity: 0.5; color: var(--text-muted);"></i>
-          <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem; color: var(--text-main);">Chưa chọn Ngân hàng</h4>
-          <p style="font-size: 0.82rem; line-height: 1.5;">Nhấp chọn bất kỳ thẻ ngân hàng nào được tô sáng trong danh sách bài viết bên trái để tra cứu số liệu an toàn vốn chi tiết.</p>
-        </div>
-      `;
-      lucide.createIcons();
-      return;
-    }
-
-    const bankCode = this.selectedBank;
-    const bankName = typeof BANK_NAMES !== "undefined" ? BANK_NAMES[bankCode] : bankCode;
-    const bankColor = typeof BANK_COLORS !== "undefined" ? BANK_COLORS[bankCode] : "var(--primary)";
-    const bankDb = typeof BANK_CAR_DATABASE !== "undefined" ? BANK_CAR_DATABASE[bankCode] : null;
-
-    if (!bankDb) {
-      this.detailsContainer.innerHTML = `
-        <div class="card" style="padding: 1.5rem; text-align: center;">
-          <h3 style="color: ${bankColor}; margin-bottom: 0.5rem;">${bankCode} - ${bankName}</h3>
-          <p style="color: var(--text-muted); font-size: 0.85rem;">Không tìm thấy dữ liệu số liệu CAR chi tiết cho ngân hàng này.</p>
-        </div>
-      `;
-      return;
-    }
-
-    // Render bảng số liệu các năm
-    const years = Object.keys(bankDb).sort((a, b) => b - a); // Sắp xếp năm giảm dần
-    const tableRows = years.map(yr => {
-      const data = bankDb[yr];
-      return `
-        <tr>
-          <td style="font-weight: 600; text-align: center;">${yr}</td>
-          <td style="font-weight: 700; color: ${data.car >= 8 ? 'var(--success)' : 'var(--danger)'}; text-align: right;">${data.car.toFixed(2)}%</td>
-          <td style="text-align: right;">${data.capital.toLocaleString()}</td>
-          <td style="text-align: right;">${data.rwa.toLocaleString()}</td>
-        </tr>
-      `;
-    }).join("");
-
-    const latestYear = years[0];
-    const latestData = bankDb[latestYear];
-
-    this.detailsContainer.innerHTML = `
-      <div class="card" style="padding: 1.5rem; border-top: 4px solid ${bankColor};">
-        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
-          <h3 style="margin: 0; color: var(--text-main); font-size: 1.2rem;">${bankCode} - ${bankName}</h3>
-          <span style="font-size: 0.75rem; background: ${bankColor}33; color: ${bankColor}; padding: 0.2rem 0.6rem; border-radius: 12px; font-weight: 600;">Active</span>
-        </div>
-
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1.5rem;">
-          <div style="background: rgba(255,255,255,0.02); padding: 0.75rem; border-radius: 6px; border: 1px solid var(--border-color);">
-            <div style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600;">CAR Mới Nhất (${latestYear})</div>
-            <div style="font-size: 1.35rem; font-weight: 800; color: var(--success); margin-top: 0.25rem;">${latestData.car.toFixed(2)}%</div>
-          </div>
-          <div style="background: rgba(255,255,255,0.02); padding: 0.75rem; border-radius: 6px; border: 1px solid var(--border-color);">
-            <div style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600;">Vốn Tự Có (${latestYear})</div>
-            <div style="font-size: 1.15rem; font-weight: 800; color: var(--text-main); margin-top: 0.25rem;">${latestData.capital.toLocaleString()} <span style="font-size: 0.75rem; font-weight: 500;">Tỷ</span></div>
-          </div>
-        </div>
-
-        <h4 style="margin-bottom: 0.75rem; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; color: var(--text-muted); display: flex; align-items: center; gap: 6px;">
-          <i data-lucide="table" style="width: 14px; height: 14px;"></i>
-          Bảng số liệu lịch sử CAR & Vốn
-        </h4>
-        <div style="overflow-x: auto; margin-bottom: 1.5rem; border: 1px solid var(--border-color); border-radius: 6px;">
-          <table class="financial-table" style="width: 100%; border-collapse: collapse; font-size: 0.82rem;">
-            <thead>
-              <tr style="background: rgba(255,255,255,0.03);">
-                <th style="padding: 0.6rem; border-bottom: 1px solid var(--border-color); text-align: center;">Năm</th>
-                <th style="padding: 0.6rem; border-bottom: 1px solid var(--border-color); text-align: right;">CAR</th>
-                <th style="padding: 0.6rem; border-bottom: 1px solid var(--border-color); text-align: right;">Vốn tự có (Tỷ)</th>
-                <th style="padding: 0.6rem; border-bottom: 1px solid var(--border-color); text-align: right;">RWA (Tỷ)</th>
-              </tr>
-            </thead>
-            <tbody>
-              ${tableRows}
-            </tbody>
-          </table>
-        </div>
-
-        <div style="display: flex; flex-direction: column; gap: 0.65rem;">
-          <button id="btn-goto-analysis" class="btn btn-primary" style="width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 0.6rem;">
-            <i data-lucide="trending-up" style="width: 15px; height: 15px;"></i>
-            <span>Xem Phân tích Biểu đồ CAR</span>
-          </button>
-          
-          <button id="btn-goto-pdf" class="btn btn-outline" style="width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 0.6rem;">
-            <i data-lucide="file-text" style="width: 15px; height: 15px;"></i>
-            <span>Xem Báo cáo CAR Gốc (${latestYear})</span>
-          </button>
-        </div>
-      </div>
-    `;
-
-    // Click chuyển sang tab phân tích biểu đồ CAR
-    const analysisBtn = document.getElementById("btn-goto-analysis");
-    if (analysisBtn) {
-      analysisBtn.addEventListener("click", () => {
-        this.viewBankAnalysis(bankCode);
-      });
-    }
-
-    // Click xem báo cáo gốc PDF
-    const pdfBtn = document.getElementById("btn-goto-pdf");
-    if (pdfBtn) {
-      pdfBtn.addEventListener("click", () => {
-        this.viewOriginalPdf(bankCode, latestYear);
-      });
-    }
-
-    lucide.createIcons();
-  }
 }
 
 // Tự động khởi tạo khi DOM sẵn sàng
 document.addEventListener("DOMContentLoaded", () => {
-  window.hedgeInsights = new HedgeInsights();
+  window.discussionInsights = new DiscussionInsights();
 });

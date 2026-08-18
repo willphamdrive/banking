@@ -4,10 +4,10 @@ class FinancialAnalysis {
     this.currentSubTab = "financial-analysis";
     this.currentFinancialSub = "balance-sheet";
     this.indBank = "TCB";
-    this.indYear = "2025";
+    this.indYear = "series";
     
     this.compBanks = ["TCB", "VCB", "BID", "MBB"];
-    this.compYear = "2025";
+    this.compYear = "series";
     this.compMetric = "total_assets";
     this.compYScale = "auto";
     

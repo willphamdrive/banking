@@ -108,6 +108,141 @@ const GLOSSARY_TERMS = [
     definition: "Các bộ chuẩn mực an toàn vốn và thanh khoản ngân hàng do Ủy ban Basel về Giám sát Ngân hàng (BCBS) ban hành nhằm tăng cường sự ổn định của hệ thống tài chính toàn cầu.",
     explanation: "Basel I (1988) tập trung vào rủi ro tín dụng và CAR tối thiểu 8%. Basel II (2004) đưa ra cấu trúc 3 trụ cột (Vốn tối thiểu, Giám sát, Kỷ luật thị trường) mở rộng rủi ro hoạt động và thị trường. Basel III (2010) siết chặt chất lượng vốn tự có và bổ sung các chỉ số an toàn thanh khoản đề phòng khủng hoảng hệ thống.",
     formula: "Lộ trình tiến hóa: Basel I -> Basel II (3 Trụ cột) -> Basel III (Siết chất lượng vốn & thanh khoản)"
+  },
+  {
+    id: "nim",
+    term: "NIM (Net Interest Margin)",
+    vietnamese: "Biên lãi ròng",
+    category: "vietnam",
+    definition: "Tỷ lệ đo lường sự chênh lệch giữa thu nhập lãi thuần của ngân hàng và lượng tài sản sinh lời trung bình.",
+    explanation: "Chỉ số này phản ánh hiệu quả sử dụng nguồn vốn và biên lợi nhuận của hoạt động tín dụng cốt lõi của ngân hàng thương mại.",
+    formula: "NIM = [Thu nhập lãi thuần / Tài sản sinh lời trung bình] x 100%"
+  },
+  {
+    id: "casa",
+    term: "CASA (Current Account Saving Account)",
+    vietnamese: "Tiền gửi không kỳ hạn",
+    category: "vietnam",
+    definition: "Tỷ lệ tiền gửi không kỳ hạn trong tổng tiền gửi của khách hàng tại ngân hàng thương mại.",
+    explanation: "CASA là nguồn vốn giá rẻ quan trọng giúp ngân hàng tối ưu hóa chi phí vốn (COF), gia tăng NIM và lợi thế cạnh tranh. TCB và MBB thường dẫn đầu về CASA tại Việt Nam.",
+    formula: "Tỷ lệ CASA = [Tiền gửi không kỳ hạn / Tổng tiền gửi khách hàng] x 100%"
+  },
+  {
+    id: "cir",
+    term: "CIR (Cost-to-Income Ratio)",
+    vietnamese: "Tỷ lệ chi phí trên thu nhập",
+    category: "vietnam",
+    definition: "Chỉ số đo lường hiệu quả hoạt động của ngân hàng, tính bằng tỷ lệ chi phí hoạt động so với tổng thu nhập hoạt động.",
+    explanation: "Chỉ số CIR càng thấp chứng tỏ ngân hàng hoạt động càng hiệu quả và quản lý chi phí vận hành tốt.",
+    formula: "CIR = [Chi phí hoạt động / Tổng thu nhập hoạt động] x 100%"
+  },
+  {
+    id: "llcr",
+    term: "LLCR (Loan Loss Coverage Ratio)",
+    vietnamese: "Tỷ lệ bao phủ nợ xấu",
+    category: "vietnam",
+    definition: "Tỷ lệ dự phòng rủi ro tín dụng cụ thể và dự phòng chung của ngân hàng so với tổng dư nợ xấu.",
+    explanation: "Đo lường mức độ dự phòng sẵn có để hấp thụ tổn thất nợ xấu. Tỷ lệ này trên 100% chứng tỏ bộ đệm dự phòng mạnh mẽ.",
+    formula: "LLCR = [Dự phòng rủi ro tín dụng / Tổng nợ xấu (Nhóm 3-5)] x 100%"
+  },
+  {
+    id: "roe",
+    term: "ROE (Return on Equity)",
+    vietnamese: "Tỷ suất lợi nhuận trên vốn chủ sở hữu",
+    category: "vietnam",
+    definition: "Chỉ tiêu tài chính đo lường mức sinh lời của vốn chủ sở hữu tại ngân hàng thương mại.",
+    explanation: "Thể hiện hiệu quả sử dụng nguồn vốn tự có của các cổ đông đầu tư vào ngân hàng.",
+    formula: "ROE = [Lợi nhuận sau thuế / Vốn chủ sở hữu trung bình] x 100%"
+  },
+  {
+    id: "roa",
+    term: "ROA (Return on Assets)",
+    vietnamese: "Tỷ suất lợi nhuận trên tổng tài sản",
+    category: "vietnam",
+    definition: "Chỉ tiêu đo lường hiệu quả sử dụng toàn bộ tài sản sinh lời để tạo ra lợi nhuận của ngân hàng.",
+    explanation: "Đánh giá mức sinh lời trên mỗi đơn vị tài sản mà ngân hàng quản lý.",
+    formula: "ROA = [Lợi nhuận sau thuế / Tổng tài sản trung bình] x 100%"
+  },
+  {
+    id: "omo",
+    term: "OMO (Open Market Operations)",
+    vietnamese: "Nghiệp vụ thị trường mở",
+    category: "vietnam",
+    definition: "Nghiệp vụ mua bán giấy tờ có giá ngắn hạn do Ngân hàng Trung ương (NHNN) thực hiện nhằm điều tiết thanh khoản tiền tệ trên thị trường liên ngân hàng.",
+    explanation: "NHNN sử dụng OMO mua (bơm tiền) hoặc bán (hút tiền) qua các công cụ như tín phiếu (SBV Bill) hoặc hợp đồng mua lại (Repo/Reverse Repo).",
+    formula: "Công cụ điều tiết: Tín phiếu NHNN (Hút thanh khoản) <-> Repo giấy tờ có giá (Bơm thanh khoản)"
+  },
+  {
+    id: "fed",
+    term: "FED (Federal Reserve System)",
+    vietnamese: "Cục Dự trữ Liên bang Mỹ",
+    category: "basel",
+    definition: "Ngân hàng Trung ương của Hoa Kỳ, tổ chức tài chính quyền lực nhất thế giới điều hành chính sách tiền tệ toàn cầu thông qua đồng USD.",
+    explanation: "FOMC là ủy ban ra quyết định lãi suất của FED. Động thái tăng/hạ lãi suất của FED ảnh hưởng sâu sắc đến tỷ giá USD/VND và chính sách tiền tệ của SBV.",
+    formula: "Chính sách: Lãi suất quỹ liên bang (Fed Funds Rate) & Thắt chặt/Nới lỏng định lượng"
+  },
+  {
+    id: "sbv",
+    term: "SBV / NHNN (State Bank of Vietnam)",
+    vietnamese: "Ngân hàng Nhà nước Việt Nam",
+    category: "vietnam",
+    definition: "Cơ quan ngang bộ của Chính phủ, giữ vai trò là Ngân hàng Trung ương của nước Cộng hòa Xã hội Chủ nghĩa Việt Nam.",
+    explanation: "Chịu trách nhiệm phát hành tiền, quản lý dự trữ ngoại hối, điều hành chính sách tiền tệ (lãi suất điều hành, hạn mức tăng trưởng tín dụng) và thanh tra giám sát hệ thống tổ chức tín dụng Việt Nam.",
+    formula: "Mục tiêu: Ổn định giá trị đồng tiền + Đảm bảo an toàn hoạt động ngân hàng + Hỗ trợ tăng trưởng"
+  },
+  {
+    id: "cof",
+    term: "COF (Cost of Funds)",
+    vietnamese: "Chi phí vốn",
+    category: "vietnam",
+    definition: "Tỷ lệ chi phí lãi bình quân gia quyền mà ngân hàng phải chi trả để huy động nguồn vốn từ thị trường.",
+    explanation: "Nguồn vốn huy động bao gồm tiền gửi khách hàng (không kỳ hạn/có kỳ hạn), phát hành giấy tờ có giá, vay liên ngân hàng hoặc vay Ngân hàng Trung ương. Tối ưu hóa CASA giúp hạ COF.",
+    formula: "COF = [Tổng chi phí trả lãi / Tổng nguồn vốn huy động chịu lãi trung bình] x 100%"
+  },
+  {
+    id: "alm",
+    term: "ALM (Asset Liability Management)",
+    vietnamese: "Quản trị Tài sản Nợ - Có",
+    category: "risk",
+    definition: "Hoạt động quản trị rủi ro tài chính nhằm giảm thiểu sự không cân xứng giữa tài sản Có và tài sản Nợ của ngân hàng.",
+    explanation: "Tập trung giải quyết các rủi ro về kỳ hạn (khe hở nhạy cảm lãi suất), rủi ro thanh khoản và rủi ro tỷ giá nhằm bảo vệ biên lợi nhuận lãi thuần (NIM) và giá trị ròng của ngân hàng.",
+    formula: "ALM: Kiểm soát khe hở lãi suất (Interest Rate Gap) & Khe hở thanh khoản (Liquidity Gap)"
+  },
+  {
+    id: "qe_qt",
+    term: "QE & QT (Quantitative Easing & Tightening)",
+    vietnamese: "Nới lỏng & Thắt chặt định lượng",
+    category: "basel",
+    definition: "Các chính sách tiền tệ phi truyền thống của Ngân hàng Trung ương nhằm điều tiết quy mô lượng tiền cung ứng trong nền kinh tế.",
+    explanation: "QE (Nới lỏng): Ngân hàng Trung ương mua trái phiếu chính phủ để bơm tiền ra thị trường. QT (Thắt chặt): Ngân hàng Trung ương bán hoặc dừng tái đầu tư trái phiếu để thu hồi tiền mặt về, thắt chặt thanh khoản hệ thống.",
+    formula: "Bảng cân đối kế toán CB: QE (Mở rộng quy mô tài sản) <-> QT (Thu hẹp quy mô tài sản)"
+  },
+  {
+    id: "ust",
+    term: "UST (US Treasury Bond)",
+    vietnamese: "Trái phiếu Chính phủ Mỹ",
+    category: "basel",
+    definition: "Công cụ nợ do Bộ Tài chính Hoa Kỳ phát hành nhằm tài trợ cho các khoản chi tiêu công của chính phủ Mỹ.",
+    explanation: "Được coi là tài sản phi rủi ro tiêu chuẩn (Risk-free Asset) trên thị trường tài chính toàn cầu và là chỉ báo quan trọng cho lợi suất phi rủi ro tham chiếu khi định giá các loại tài sản khác.",
+    formula: "Lợi suất tham chiếu: UST 10-Year Yield (Chỉ báo lãi suất phi rủi ro dài hạn toàn cầu)"
+  },
+  {
+    id: "dxy",
+    term: "DXY (US Dollar Index)",
+    vietnamese: "Chỉ số sức mạnh đồng đô la Mỹ",
+    category: "basel",
+    definition: "Chỉ số đo lường giá trị tương đối của đồng USD so với rổ gồm 6 loại tiền tệ lớn của các đối tác thương mại của Mỹ.",
+    explanation: "Rổ tiền tệ bao gồm Euro (EUR), Yên Nhật (JPY), Bảng Anh (GBP), Đô la Canada (CAD), Krona Thụy Điển (SEK), và Franc Thụy Sĩ (CHF). DXY tăng mạnh gây áp lực lên tỷ giá USD/VND.",
+    formula: "Rổ tỷ trọng: EUR (57.6%) + JPY (13.6%) + GBP (11.9%) + CAD (9.1%) + SEK (4.2%) + CHF (3.6%)"
+  },
+  {
+    id: "frm",
+    term: "FRM (Financial Risk Manager)",
+    vietnamese: "Chứng chỉ Quản trị rủi ro tài chính",
+    category: "basel",
+    definition: "Chứng chỉ quốc tế uy tín chuyên sâu về năng lực quản trị rủi ro tài chính do Hiệp hội các Chuyên gia Quản trị Rủi ro Toàn cầu (GARP) cấp.",
+    explanation: "Đây là chuẩn mực đào tạo nhân lực trình độ cao cho bộ phận quản trị rủi ro (ALM, tín dụng, thị trường) của các ngân hàng thương mại áp dụng hiệp ước Basel II/III.",
+    formula: "Chuyên môn: Quản trị Rủi ro Tín dụng + Hoạt động + Thị trường + Quản trị thanh khoản và nguồn vốn"
   }
 ];
 

@@ -7,14 +7,14 @@ class BaselAnalysis {
     
     // Trạng thái Phân tích Đơn lẻ
     this.indBank = "TCB";
-    this.indYear = "2025";
+    this.indYear = "series";
     this.indYScale = "auto"; // Mặc định tự động co giãn trục Y
     this.indYTick = 1; // Bước chia tick: 1% mặc định
     this.indMetric = "car"; // Chỉ số phân tích đơn lẻ mặc định: car
     
     // Trạng thái So sánh Đối chiếu
     this.compBanks = ["TCB", "VCB", "BID", "MBB"];
-    this.compYear = "2025";
+    this.compYear = "series";
     this.compYScale = "auto"; // Mặc định tự động co giãn trục Y (Zoom)
     this.compYTick = 1; // Bước chia tick: 1% mặc định
     this.compMetric = "car"; // Chỉ số so sánh đối chiếu mặc định: car
@@ -24,10 +24,10 @@ class BaselAnalysis {
 
     // Trạng thái Phân tích các Tỷ lệ An toàn khác
     this.ratioBank = "TCB";
-    this.ratioYear = "2025";
+    this.ratioYear = "series";
     this.currentRatioSub = "individual";
     this.ratioCompBanks = ["TCB", "VCB", "BID", "MBB"];
-    this.ratioCompYear = "2025";
+    this.ratioCompYear = "series";
 
     this.initElements();
     this.bindEvents();

@@ -1,5 +1,5 @@
 // File tự động sinh từ hedge_posts.json
-const HEDGE_POSTS_DATA = [
+const ACADEMY_POSTS_DATA = [
   {
     "time": "2026-06-16T05:34:48.000Z",
     "timestamp": 1781588088,

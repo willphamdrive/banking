@@ -63,6 +63,12 @@
           </a>
         </li>
         <li>
+          <a href="#jobs" class="nav-item">
+            <i data-lucide="briefcase"></i>
+            <span>Tuyển dụng Ngân hàng</span>
+          </a>
+        </li>
+        <li>
           <a href="#glossary" class="nav-item">
             <i data-lucide="book-open"></i>
             <span>Từ điển Thuật ngữ</span>
@@ -1583,6 +1589,139 @@
         </div>
       </section>
 
+      <!-- 11. JOBS SECTION -->
+      <section id="jobs-section" class="content-section hidden">
+        <div class="section-header">
+          <h2>Tổng hợp Cơ hội Nghề nghiệp tại các Ngân hàng</h2>
+          <p>Khám phá các vị trí tuyển dụng mới nhất, lọc theo ngân hàng và khối phòng ban chuyên môn Pháp chế, Rủi ro, Công nghệ.</p>
+        </div>
+
+        <!-- Thống kê sơ bộ -->
+        <div class="dashboard-grid" style="margin-bottom: 2rem;">
+          <div class="card" style="padding: 1.25rem; margin-bottom: 0; display: flex; align-items: center; gap: 1rem;">
+            <div style="background: var(--primary-glow); padding: 0.75rem; border-radius: 12px; color: var(--primary); display: flex; align-items: center; justify-content: center; width: 44px; height: 44px;">
+              <i data-lucide="briefcase" style="width: 22px; height: 22px;"></i>
+            </div>
+            <div>
+              <span style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600; display: block; margin-bottom: 2px;">Tổng tuyển dụng</span>
+              <h3 id="job-stat-total" style="font-size: 1.4rem; margin: 0; color: var(--text-main); font-weight: 700; line-height: 1.2;">0</h3>
+            </div>
+          </div>
+          <div class="card" style="padding: 1.25rem; margin-bottom: 0; display: flex; align-items: center; gap: 1rem;">
+            <div style="background: rgba(16, 185, 129, 0.12); padding: 0.75rem; border-radius: 12px; color: var(--success); display: flex; align-items: center; justify-content: center; width: 44px; height: 44px;">
+              <i data-lucide="scale" style="width: 22px; height: 22px;"></i>
+            </div>
+            <div>
+              <span style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600; display: block; margin-bottom: 2px;">Pháp chế & Rủi ro</span>
+              <h3 id="job-stat-risk" style="font-size: 1.4rem; margin: 0; color: var(--text-main); font-weight: 700; line-height: 1.2;">0</h3>
+            </div>
+          </div>
+          <div class="card" style="padding: 1.25rem; margin-bottom: 0; display: flex; align-items: center; gap: 1rem;">
+            <div style="background: rgba(245, 158, 11, 0.12); padding: 0.75rem; border-radius: 12px; color: var(--warning); display: flex; align-items: center; justify-content: center; width: 44px; height: 44px;">
+              <i data-lucide="cpu" style="width: 22px; height: 22px;"></i>
+            </div>
+            <div>
+              <span style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600; display: block; margin-bottom: 2px;">IT & Dữ liệu</span>
+              <h3 id="job-stat-it" style="font-size: 1.4rem; margin: 0; color: var(--text-main); font-weight: 700; line-height: 1.2;">0</h3>
+            </div>
+          </div>
+          <div class="card" style="padding: 1.25rem; margin-bottom: 0; display: flex; align-items: center; gap: 1rem;">
+            <div style="background: rgba(239, 68, 68, 0.12); padding: 0.75rem; border-radius: 12px; color: var(--danger); display: flex; align-items: center; justify-content: center; width: 44px; height: 44px;">
+              <i data-lucide="trending-up" style="width: 22px; height: 22px;"></i>
+            </div>
+            <div>
+              <span style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600; display: block; margin-bottom: 2px;">Kinh doanh & Khác</span>
+              <h3 id="job-stat-biz" style="font-size: 1.4rem; margin: 0; color: var(--text-main); font-weight: 700; line-height: 1.2;">0</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bộ lọc & Tìm kiếm -->
+        <div class="card" style="padding: 1.25rem; margin-bottom: 1.5rem;">
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+            <div class="search-input-wrapper" style="position: relative; flex-grow: 1; min-width: 260px;">
+              <i data-lucide="search" style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--text-muted); width: 16px; height: 16px;"></i>
+              <input type="text" id="job-search-input" placeholder="Tìm vị trí tuyển dụng, ngân hàng, địa điểm..." style="width: 100%; padding: 0.55rem 1rem 0.55rem 2.2rem; background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-main); font-size: 0.88rem; outline: none;">
+            </div>
+            <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+              <div style="display: flex; gap: 0.35rem; align-items: center;">
+                <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 500;">Khối:</span>
+                <select id="job-dept-select" style="padding: 0.45rem 0.6rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; color: var(--text-main); font-size: 0.82rem; outline: none; cursor: pointer; font-weight: 500;">
+                  <option value="all">Tất cả Khối</option>
+                  <option value="risk-legal">Pháp chế & Rủi ro</option>
+                  <option value="it-data">IT & Công nghệ & Dữ liệu</option>
+                  <option value="business">Kinh doanh & Vận hành</option>
+                </select>
+              </div>
+              <div style="display: flex; gap: 0.35rem; align-items: center;">
+                <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 500;">Cấp bậc:</span>
+                <select id="job-exp-select" style="padding: 0.45rem 0.6rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; color: var(--text-main); font-size: 0.82rem; outline: none; cursor: pointer; font-weight: 500;">
+                  <option value="all">Tất cả cấp bậc</option>
+                  <option value="intern">Thực tập sinh</option>
+                  <option value="junior-mid">Nhân viên / Chuyên viên</option>
+                  <option value="senior">Chuyên viên cao cấp</option>
+                  <option value="lead-manager">Quản lý / Trưởng nhóm</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lọc nhanh theo ngân hàng -->
+          <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; border-top: 1px solid var(--border-color); padding-top: 0.75rem; margin-top: 0.5rem;">
+            <span style="font-size: 0.75rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.03em;">Ngân hàng:</span>
+            <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;" id="job-bank-filters">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Danh sách dạng Table -->
+        <div class="card" style="padding: 0; overflow: hidden; margin-bottom: 2rem;">
+          <div style="overflow-x: auto;">
+            <table class="jobs-table" style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem;">
+              <thead>
+                <tr style="border-bottom: 1px solid var(--border-color); background: rgba(255, 255, 255, 0.02);">
+                  <th style="padding: 1rem 1.25rem; font-weight: 600; color: var(--text-muted); width: 45%; cursor: pointer; user-select: none;" id="sort-title">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                      <span>Vị trí tuyển dụng</span>
+                      <i data-lucide="arrow-up-down" style="width: 14px; height: 14px;" id="icon-title"></i>
+                    </div>
+                  </th>
+                  <th style="padding: 1rem 1.25rem; font-weight: 600; color: var(--text-muted); cursor: pointer; user-select: none;" id="sort-bank">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                      <span>Ngân hàng</span>
+                      <i data-lucide="arrow-up-down" style="width: 14px; height: 14px;" id="icon-bank"></i>
+                    </div>
+                  </th>
+                  <th style="padding: 1rem 1.25rem; font-weight: 600; color: var(--text-muted); cursor: pointer; user-select: none;" id="sort-dept">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                      <span>Khối phòng ban</span>
+                      <i data-lucide="arrow-up-down" style="width: 14px; height: 14px;" id="icon-dept"></i>
+                    </div>
+                  </th>
+                  <th style="padding: 1rem 1.25rem; font-weight: 600; color: var(--text-muted); cursor: pointer; user-select: none;" id="sort-level">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                      <span>Cấp bậc</span>
+                      <i data-lucide="arrow-up-down" style="width: 14px; height: 14px;" id="icon-level"></i>
+                    </div>
+                  </th>
+                  <th style="padding: 1rem 1.25rem; font-weight: 600; color: var(--text-muted); cursor: pointer; user-select: none;" id="sort-deadline">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                      <span>Hạn nộp</span>
+                      <i data-lucide="arrow-up-down" style="width: 14px; height: 14px;" id="icon-deadline"></i>
+                    </div>
+                  </th>
+                  <th style="padding: 1rem 1.25rem; font-weight: 600; color: var(--text-muted); text-align: right; width: 120px;">Thao tác</th>
+                </tr>
+              </thead>
+              <tbody id="jobs-table-body">
+                <!-- Rendered dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
     </main>
   </div>
 
@@ -1650,6 +1789,93 @@
         <iframe id="pdf-modal-iframe" src="" style="width: 100%; height: 100%; border: none;"></iframe>
       </div>
     </div>
+  <!-- JOB DETAIL MODAL -->
+  <div id="job-detail-modal" class="job-modal hidden">
+    <div class="job-modal-content">
+      <div class="job-modal-header">
+        <div style="display: flex; align-items: center; gap: 1rem; overflow: hidden; width: 85%;">
+          <div id="modal-bank-logo" style="width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.25rem; color: white; flex-shrink: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.25);"></div>
+          <div style="overflow: hidden;">
+            <h3 id="modal-job-title" style="margin: 0; font-size: 1.2rem; color: var(--text-main); font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; letter-spacing: -0.01em;"></h3>
+            <span id="modal-bank-name" style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600; display: block; margin-top: 2px; text-transform: uppercase; letter-spacing: 0.05em;"></span>
+          </div>
+        </div>
+        <button id="job-modal-close-btn" class="doc-drawer-close-btn" style="font-size: 1.8rem; padding: 0 0.5rem; transition: transform 0.2s;" onmouseover="this.style.transform='rotate(90deg)'" onmouseout="this.style.transform='rotate(0)'">&times;</button>
+      </div>
+      <div class="job-modal-body">
+        
+        <!-- Detail Info Grid -->
+        <div class="job-meta-grid">
+          <div class="job-meta-card">
+            <div class="job-meta-card-icon">
+              <i data-lucide="map-pin" style="width: 18px; height: 18px;"></i>
+            </div>
+            <div class="job-meta-card-content">
+              <span class="job-meta-card-label">📍 Địa điểm</span>
+              <span id="modal-job-location" class="job-meta-card-val"></span>
+            </div>
+          </div>
+          <div class="job-meta-card">
+            <div class="job-meta-card-icon" style="background: rgba(16, 185, 129, 0.12); color: var(--success);">
+              <i data-lucide="banknote" style="width: 18px; height: 18px;"></i>
+            </div>
+            <div class="job-meta-card-content">
+              <span class="job-meta-card-label">💵 Mức lương</span>
+              <span id="modal-job-salary" class="job-meta-card-val" style="color: var(--success);"></span>
+            </div>
+          </div>
+          <div class="job-meta-card">
+            <div class="job-meta-card-icon" style="background: rgba(245, 158, 11, 0.12); color: var(--warning);">
+              <i data-lucide="layers" style="width: 18px; height: 18px;"></i>
+            </div>
+            <div class="job-meta-card-content">
+              <span class="job-meta-card-label">🏷️ Khối/Phòng</span>
+              <span id="modal-job-department" class="job-meta-card-val"></span>
+            </div>
+          </div>
+          <div class="job-meta-card">
+            <div class="job-meta-card-icon" style="background: rgba(239, 68, 68, 0.12); color: var(--danger);">
+              <i data-lucide="calendar" style="width: 18px; height: 18px;"></i>
+            </div>
+            <div class="job-meta-card-content">
+              <span class="job-meta-card-label">⏰ Hạn nộp HS</span>
+              <span id="modal-job-deadline" class="job-meta-card-val"></span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Sections -->
+        <div>
+          <h4 class="job-section-title">
+            <i data-lucide="list-todo" style="width: 16px; height: 16px;"></i> Mô tả công việc
+          </h4>
+          <div id="modal-job-desc" class="job-section-body"></div>
+        </div>
+        
+        <div>
+          <h4 class="job-section-title">
+            <i data-lucide="award" style="width: 16px; height: 16px;"></i> Yêu cầu ứng viên
+          </h4>
+          <div id="modal-job-reqs" class="job-section-body"></div>
+        </div>
+        
+        <div>
+          <h4 class="job-section-title">
+            <i data-lucide="gift" style="width: 16px; height: 16px;"></i> Quyền lợi đãi ngộ
+          </h4>
+          <div id="modal-job-benefits" class="job-section-body"></div>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; border-top: 1px solid var(--border-color); padding-top: 1.25rem; margin-top: 1.5rem; gap: 0.75rem;">
+          <a id="job-modal-original-link" href="#" target="_blank" class="btn btn-outline" style="padding: 0.6rem 1.25rem; font-weight: 600; border-radius: 8px; border: 1px solid var(--border-color); background: rgba(255,255,255,0.02); color: var(--text-main); text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; transition: all 0.2s; font-size: 0.9rem;">
+            <i data-lucide="external-link" style="width: 14px; height: 14px;"></i> Xem tin gốc
+          </a>
+          <button id="job-modal-apply-btn" class="btn" style="padding: 0.6rem 1.75rem; font-weight: 700; border-radius: 8px; background: var(--primary); color: white; border: none; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; transition: all 0.2s; font-size: 0.9rem; box-shadow: 0 4px 12px var(--primary-glow);">
+            <i data-lucide="send" style="width: 14px; height: 14px;"></i> Ứng tuyển ngay
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- IMAGE LIGHTBOX MODAL -->
@@ -1699,6 +1925,8 @@
   <script src="js/academy_posts_data.js"></script>
   <script src="js/nghia_posts_data.js"></script>
   <script src="js/discussion.js"></script>
+  <script src="js/jobs_data.js"></script>
+  <script src="js/jobs.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

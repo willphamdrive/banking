@@ -315,3 +315,47 @@ Tôi đã hoàn trả lại cơ chế tương tác mở/đóng của Drawer gi�
 *   **Vấn đề**: Khi chuyển sang các tab phụ "Bảng so sánh", "Bộ tính CAR" và "Trắc nghiệm", nội dung vùng hiển thị trống trơn.
 *   **Nguyên nhân**: Thẻ `div` của `#pillars-section` bị thiếu mất thẻ đóng `</div>` (chỉ đóng thẻ `.pillars-grid` ở bên trong). Điều này khiến cho cả 3 phân hệ bên dưới bị lồng nhầm làm phần tử con của `#pillars-section`. Khi chuyển tab, `#pillars-section` bị ẩn (thêm class `hidden`), gián tiếp ẩn luôn toàn bộ các phân hệ con lồng sai cấu trúc này.
 *   **Giải pháp**: Thêm thẻ `</div>` đóng chính xác `#pillars-section` tại dòng 262 trong [`index.html`](index.html), giúp đưa các tab panel phụ trở về cùng cấp (siblings), khắc phục triệt để lỗi hiển thị trống.
+
+---
+
+## 📈 Sửa lỗi hiển thị danh sách Ngân hàng trong các Tab Phân tích & So sánh
+
+*   **Vấn đề**: Người dùng phản hồi rằng tab CAR chỉ hiển thị 10 ngân hàng, không hiện đủ tất cả các ngân hàng có trong dữ liệu (20 ngân hàng).
+*   **Nguyên nhân**: Danh sách checkbox và dropdown chọn ngân hàng trong mục **Các Tỷ lệ An toàn khác (BCTC)** và **Phân tích BCTC** chỉ được khai báo cứng 10 ngân hàng hàng đầu trong HTML, trong khi trang phân tích chính đã được mở rộng lên 20 ngân hàng.
+*   **Giải pháp**:
+    - Cập nhật danh sách chọn đơn lẻ `#ratio-bank-select` và `#financial-bank-select` để chứa đủ 20 ngân hàng.
+    - Cập nhật danh sách so sánh đối chiếu `#ratio-compare-banks-checkboxes` và `#financial-compare-banks-checkboxes` để hiển thị đủ 20 ngân hàng.
+    - Cập nhật tiêu đề giới thiệu các phân hệ phân tích từ *10 ngân hàng thương mại* thành *20 ngân hàng thương mại*.
+
+---
+
+## 💼 Tích hợp thông tin Tuyển dụng từ ACB (Á Châu Bank)
+
+*   **Tính năng**: Bổ sung nguồn thu thập tin tuyển dụng trực tiếp từ ACB thông qua website `https://www.acbjobs.com.vn`.
+*   **Chi tiết triển khai**:
+    - **Proxy Endpoint**: Bổ sung endpoint `/api/jobs/acb` vào file proxy backend `run_app.py` để gửi request kèm header giả lập trình duyệt, vượt qua các rào cản bảo mật CORS/WAF của website ACB.
+    - **Frontend Integration**:
+        - Thêm nút bộ lọc nhanh ngân hàng **🟠 ACB** vào thanh công cụ tìm kiếm trong `index.html`.
+        - Cập nhật JS logic (`js/jobs.js`) để kết nối API proxy, tải dữ liệu động HTML của trang ACB Jobs và tiến hành phân tích DOM trực tiếp phía client (Client-side HTML Parsing).
+        - Trích xuất thông tin Tiêu đề, Khối phòng ban, Địa điểm làm việc, Yêu cầu kinh nghiệm, Loại hình công việc và Mức lương của từng vị trí từ cấu trúc thẻ `.jobs .item`.
+        - Thực hiện phân loại tự động (Auto-mapping) vị trí theo các khối Pháp chế & Rủi ro (`risk-legal`), CNTT & Dữ liệu (`it-data`) và Kinh doanh để phân tách dữ liệu chuẩn hóa.
+        - Hỗ trợ phân trang và Lazy loading tự động đối với các trang kết quả tiếp theo của ACB khi người dùng nhấn Tìm kiếm.
+        - **Hỗ trợ Đa khu vực/Văn phòng (Multi-office support)**: Hỗ trợ tích hợp đồng thời hai cổng tuyển dụng chính của ACB: Chi nhánh TP. Hồ Chí Minh (`office=3133`) và Văn phòng Hội sở chính (`office=86`). Dữ liệu từ cả hai nguồn được tải song hành và gộp lại tự động mà không lo trùng lặp tin tuyển dụng.
+        - **Chuẩn hóa URL chi tiết (Detail URL Normalization)**: Tự động phát hiện và chuyển đổi các liên kết của tin tuyển dụng thành dạng tuyệt đối đầy đủ tiền tố bảo mật `https://www.acbjobs.com.vn/job/...` (e.g. `https://www.acbjobs.com.vn/job/hcm-giam-docchuyen-vien-quan-he-khach-hang-ca-nhan-53664`) để đảm bảo người dùng click trực tiếp vào tin sẽ mở đúng trang chi tiết của ACB trên trình duyệt.
+
+---
+
+## 💼 Tích hợp thông tin Tuyển dụng từ LPBank (Lộc Phát Bank)
+
+*   **Tính năng**: Bổ sung nguồn tuyển dụng trực tiếp từ LPBank thông qua API của đối tác iviec.vn (`centralize-api-v2.iviec.vn`).
+*   **Chi tiết triển khai**:
+    - **Proxy Endpoint**: Bổ sung endpoint `/api/jobs/lpbank` vào file proxy backend `run_app.py` để forward yêu cầu tới cổng API trung tâm, cấu hình Header origin/referer tương ứng với trang `tuyendung.lpbank.com.vn`.
+    - **Frontend Integration**:
+        - Thêm nút bộ lọc nhanh ngân hàng **🔴 LPBank** (sử dụng màu đỏ thương hiệu) vào thanh công cụ tìm kiếm trong `index.html`.
+        - Cập nhật JS logic (`js/jobs.js`) để kết nối API proxy, lấy dữ liệu JSON chứa tin tuyển dụng.
+        - Trích xuất thông tin: Tên công việc (`job.name`), ID (`job.id`), Slug (`job.slug`), Mức lương (`minSalary`/`maxSalary`), Địa điểm làm việc từ `workingNewAddresses`, và Tên phòng ban (`job_department`) / Cấp bậc (`job_level`) từ thuộc tính `recruitmentDeltaDatas`.
+        - Hỗ trợ phân tích & phân loại tự động vị trí tương thích với các khối phòng ban Rủi ro/Pháp lý và Công nghệ của App.
+        - Xây dựng URL chi tiết trỏ trực tiếp đến bài viết canonical của LPBank: `https://tuyendung.lpbank.com.vn/vi/jobs/[slug]`.
+        - Hỗ trợ phân trang và Lazy loading tự động nền các trang kết quả tiếp theo dựa trên thuộc tính `totalPage` trả về từ API.
+
+

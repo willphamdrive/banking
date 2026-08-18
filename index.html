@@ -45,7 +45,7 @@
           </a>
         </li>
         <li>
-          <a href="#bank-analysis" class="nav-item active">
+          <a href="#bank-analysis" class="nav-item">
             <i data-lucide="trending-up"></i>
             <span>Phân tích CAR Ngân hàng</span>
           </a>
@@ -63,7 +63,7 @@
           </a>
         </li>
         <li>
-          <a href="#jobs" class="nav-item">
+          <a href="#jobs" class="nav-item active">
             <i data-lucide="briefcase"></i>
             <span>Tuyển dụng Ngân hàng</span>
           </a>
@@ -816,10 +816,10 @@
       </section>
 
       <!-- 8. BANK ANALYSIS SECTION -->
-      <section id="bank-analysis-section" class="content-section">
+      <section id="bank-analysis-section" class="content-section hidden">
         <div class="section-header">
           <h2>Phân tích & So sánh CAR Ngân hàng</h2>
-          <p>Hệ thống phân tích chỉ số an toàn vốn (CAR) của 10 ngân hàng thương mại Việt Nam. Hỗ trợ tra cứu chi tiết từng ngân hàng hoặc so sánh chuỗi thời gian.</p>
+          <p>Hệ thống phân tích chỉ số an toàn vốn (CAR) của 20 ngân hàng thương mại Việt Nam. Hỗ trợ tra cứu chi tiết từng ngân hàng hoặc so sánh chuỗi thời gian.</p>
         </div>
 
         <!-- Sub-tabs navigation -->
@@ -1058,6 +1058,16 @@
                   <option value="STB">Sacombank (STB)</option>
                   <option value="TPB">TPBank (TPB)</option>
                   <option value="HDB">HDBank (HDB)</option>
+                  <option value="SHB">SHB (SHB)</option>
+                  <option value="VIB">VIB (VIB)</option>
+                  <option value="LPB">LPBank (LPB)</option>
+                  <option value="MSB">MSB (MSB)</option>
+                  <option value="SSB">SeABank (SSB)</option>
+                  <option value="OCB">OCB (OCB)</option>
+                  <option value="EIB">Eximbank (EIB)</option>
+                  <option value="BAB">Bac A Bank (BAB)</option>
+                  <option value="ABB">An Binh Bank (ABB)</option>
+                  <option value="NAB">Nam A Bank (NAB)</option>
                 </select>
               </div>
               <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;" id="ratio-year-selectors">
@@ -1112,6 +1122,36 @@
               <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
                 <input type="checkbox" value="HDB" style="accent-color: var(--primary);"> HDBank (HDB)
               </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="SHB" style="accent-color: var(--primary);"> SHB (SHB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="VIB" style="accent-color: var(--primary);"> VIB (VIB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="LPB" style="accent-color: var(--primary);"> LPBank (LPB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="MSB" style="accent-color: var(--primary);"> MSB (MSB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="SSB" style="accent-color: var(--primary);"> SeABank (SSB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="OCB" style="accent-color: var(--primary);"> OCB (OCB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="EIB" style="accent-color: var(--primary);"> Eximbank (EIB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="BAB" style="accent-color: var(--primary);"> Bac A Bank (BAB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="ABB" style="accent-color: var(--primary);"> An Binh Bank (ABB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="NAB" style="accent-color: var(--primary);"> Nam A Bank (NAB)
+              </label>
             </div>
             
             <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 1rem 0;">
@@ -1163,7 +1203,7 @@
       <section id="financial-analysis-section" class="content-section hidden">
         <div class="section-header">
           <h2>Phân tích Báo cáo Tài chính (BCTC) Ngân hàng</h2>
-          <p>Phân tích Bảng cân đối kế toán, Báo cáo kết quả hoạt động kinh doanh và Báo cáo lưu chuyển tiền tệ của 10 ngân hàng thương mại Việt Nam.</p>
+          <p>Phân tích Bảng cân đối kế toán, Báo cáo kết quả hoạt động kinh doanh và Báo cáo lưu chuyển tiền tệ của 20 ngân hàng thương mại Việt Nam.</p>
         </div>
 
         <!-- Top-level sub-tabs navigation -->
@@ -1207,6 +1247,16 @@
                   <option value="STB">Sacombank (STB)</option>
                   <option value="TPB">TPBank (TPB)</option>
                   <option value="HDB">HDBank (HDB)</option>
+                  <option value="SHB">SHB (SHB)</option>
+                  <option value="VIB">VIB (VIB)</option>
+                  <option value="LPB">LPBank (LPB)</option>
+                  <option value="MSB">MSB (MSB)</option>
+                  <option value="SSB">SeABank (SSB)</option>
+                  <option value="OCB">OCB (OCB)</option>
+                  <option value="EIB">Eximbank (EIB)</option>
+                  <option value="BAB">Bac A Bank (BAB)</option>
+                  <option value="ABB">An Binh Bank (ABB)</option>
+                  <option value="NAB">Nam A Bank (NAB)</option>
                 </select>
               </div>
               <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;" id="financial-year-selectors">
@@ -1268,6 +1318,36 @@
               </label>
               <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
                 <input type="checkbox" value="HDB" style="accent-color: var(--primary);"> HDBank (HDB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="SHB" style="accent-color: var(--primary);"> SHB (SHB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="VIB" style="accent-color: var(--primary);"> VIB (VIB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="LPB" style="accent-color: var(--primary);"> LPBank (LPB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="MSB" style="accent-color: var(--primary);"> MSB (MSB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="SSB" style="accent-color: var(--primary);"> SeABank (SSB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="OCB" style="accent-color: var(--primary);"> OCB (OCB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="EIB" style="accent-color: var(--primary);"> Eximbank (EIB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="BAB" style="accent-color: var(--primary);"> Bac A Bank (BAB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="ABB" style="accent-color: var(--primary);"> An Binh Bank (ABB)
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                <input type="checkbox" value="NAB" style="accent-color: var(--primary);"> Nam A Bank (NAB)
               </label>
             </div>
             
@@ -1590,7 +1670,7 @@
       </section>
 
       <!-- 11. JOBS SECTION -->
-      <section id="jobs-section" class="content-section hidden">
+      <section id="jobs-section" class="content-section">
         <div class="section-header">
           <h2>Tổng hợp Cơ hội Nghề nghiệp tại các Ngân hàng</h2>
           <p>Khám phá các vị trí tuyển dụng mới nhất, lọc theo ngân hàng và khối phòng ban chuyên môn Pháp chế, Rủi ro, Công nghệ.</p>
@@ -1638,7 +1718,8 @@
 
         <!-- Bộ lọc & Tìm kiếm -->
         <div class="card" style="padding: 1.25rem; margin-bottom: 1.5rem;">
-          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+          <!-- Hàng 1: Ô tìm kiếm + dropdown Khối + Cấp bậc -->
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center; margin-bottom: 0.85rem;">
             <div class="search-input-wrapper" style="position: relative; flex-grow: 1; min-width: 260px;">
               <i data-lucide="search" style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--text-muted); width: 16px; height: 16px;"></i>
               <input type="text" id="job-search-input" placeholder="Tìm vị trí tuyển dụng, ngân hàng, địa điểm..." style="width: 100%; padding: 0.55rem 1rem 0.55rem 2.2rem; background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-main); font-size: 0.88rem; outline: none;">
@@ -1666,17 +1747,47 @@
             </div>
           </div>
 
-          <!-- Lọc nhanh theo ngân hàng -->
-          <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; border-top: 1px solid var(--border-color); padding-top: 0.75rem; margin-top: 0.5rem;">
-            <span style="font-size: 0.75rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.03em;">Ngân hàng:</span>
-            <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;" id="job-bank-filters">
-              <!-- Rendered dynamically -->
+          <!-- Hàng 2: Tag lọc ngân hàng + nút Tìm kiếm -->
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.6rem; border-top: 1px solid var(--border-color); padding-top: 0.75rem;">
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+              <span style="font-size: 0.75rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Ngân hàng:</span>
+              <button id="bank-filter-all" data-bank="all" class="bank-filter-btn bank-active"
+                style="padding: 0.28rem 0.8rem; border-radius: 20px; font-size: 0.78rem; font-weight: 700; cursor: pointer; border: 1.5px solid var(--primary); background: var(--primary); color: white; transition: all 0.15s;">
+                Tất cả
+              </button>
+              <button id="bank-filter-vpb" data-bank="VPBank" class="bank-filter-btn"
+                style="padding: 0.28rem 0.8rem; border-radius: 20px; font-size: 0.78rem; font-weight: 700; cursor: pointer; border: 1.5px solid #10b981; background: transparent; color: #10b981; transition: all 0.15s;">
+                🟢 VPBank
+              </button>
+              <button id="bank-filter-mbb" data-bank="MB Bank" class="bank-filter-btn"
+                style="padding: 0.28rem 0.8rem; border-radius: 20px; font-size: 0.78rem; font-weight: 700; cursor: pointer; border: 1.5px solid #60a5fa; background: transparent; color: #60a5fa; transition: all 0.15s;">
+                🔵 MB Bank
+              </button>
+              <button id="bank-filter-acb" data-bank="ACB" class="bank-filter-btn"
+                style="padding: 0.28rem 0.8rem; border-radius: 20px; font-size: 0.78rem; font-weight: 700; cursor: pointer; border: 1.5px solid #fb923c; background: transparent; color: #fb923c; transition: all 0.15s;">
+                🟠 ACB
+              </button>
+              <button id="bank-filter-lpb" data-bank="LPBank" class="bank-filter-btn"
+                style="padding: 0.28rem 0.8rem; border-radius: 20px; font-size: 0.78rem; font-weight: 700; cursor: pointer; border: 1.5px solid #dc2626; background: transparent; color: #dc2626; transition: all 0.15s;">
+                🔴 LPBank
+              </button>
+              <button id="bank-filter-saved" data-bank="saved" class="bank-filter-btn"
+                style="padding: 0.28rem 0.8rem; border-radius: 20px; font-size: 0.78rem; font-weight: 700; cursor: pointer; border: 1.5px solid #f59e0b; background: transparent; color: #f59e0b; transition: all 0.15s;">
+                ⭐ Đã lưu
+              </button>
             </div>
+            <button id="job-search-btn"
+              style="display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.5rem 1.4rem; background: var(--primary); color: white; border: none; border-radius: 8px; font-size: 0.88rem; font-weight: 700; cursor: pointer; box-shadow: 0 2px 12px rgba(99,102,241,0.4); transition: opacity 0.18s, transform 0.15s;"
+              onmouseover="this.style.opacity='0.88';this.style.transform='translateY(-1px)'"
+              onmouseout="this.style.opacity='1';this.style.transform='translateY(0)'">
+              <i data-lucide="search" style="width: 15px; height: 15px;"></i>
+              Tìm kiếm
+            </button>
           </div>
         </div>
 
         <!-- Danh sách dạng Table -->
-        <div class="card" style="padding: 0; overflow: hidden; margin-bottom: 2rem;">
+        <div class="card" style="padding: 0; overflow: hidden; margin-bottom: 1.5rem;">
           <div style="overflow-x: auto;">
             <table class="jobs-table" style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem;">
               <thead>
@@ -1713,11 +1824,85 @@
                   </th>
                   <th style="padding: 1rem 1.25rem; font-weight: 600; color: var(--text-muted); text-align: right; width: 120px;">Thao tác</th>
                 </tr>
+                <!-- Hàng filter theo cột -->
+                <tr id="col-filter-row" style="background: rgba(255,255,255,0.015); border-bottom: 2px solid var(--border-color);">
+                  <td style="padding: 0.5rem 1rem;">
+                    <div style="position: relative;">
+                      <i data-lucide="search" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);width:12px;height:12px;color:var(--text-muted);pointer-events:none;"></i>
+                      <input id="col-filter-title" type="text" placeholder="Lọc vị trí..." autocomplete="off"
+                        style="width:100%;padding:0.35rem 0.5rem 0.35rem 1.75rem;background:rgba(255,255,255,0.04);border:1px solid var(--border-color);border-radius:6px;color:var(--text-main);font-size:0.78rem;outline:none;transition:border-color 0.15s;">
+                    </div>
+                  </td>
+                  <td style="padding: 0.5rem 1rem;">
+                    <select id="col-filter-bank" style="width:100%;padding:0.35rem 0.4rem;background:rgba(255,255,255,0.04);border:1px solid var(--border-color);border-radius:6px;color:var(--text-main);font-size:0.78rem;outline:none;cursor:pointer;">
+                      <option value="">Tất cả</option>
+                      <option value="VPBank">VPBank</option>
+                      <option value="MB Bank">MB Bank</option>
+                    </select>
+                  </td>
+                  <td style="padding: 0.5rem 1rem;">
+                    <select id="col-filter-dept" style="width:100%;padding:0.35rem 0.4rem;background:rgba(255,255,255,0.04);border:1px solid var(--border-color);border-radius:6px;color:var(--text-main);font-size:0.78rem;outline:none;cursor:pointer;">
+                      <option value="">Tất cả</option>
+                      <option value="risk-legal">Pháp chế &amp; Rủi ro</option>
+                      <option value="it-data">IT &amp; Công nghệ</option>
+                      <option value="business">Kinh doanh</option>
+                    </select>
+                  </td>
+                  <td style="padding: 0.5rem 1rem;">
+                    <select id="col-filter-level" style="width:100%;padding:0.35rem 0.4rem;background:rgba(255,255,255,0.04);border:1px solid var(--border-color);border-radius:6px;color:var(--text-main);font-size:0.78rem;outline:none;cursor:pointer;">
+                      <option value="">Tất cả</option>
+                      <option value="intern">Thực tập sinh</option>
+                      <option value="junior-mid">Nhân viên / CV</option>
+                      <option value="senior">CV cao cấp</option>
+                      <option value="lead-manager">Quản lý</option>
+                    </select>
+                  </td>
+                  <td style="padding: 0.5rem 1rem;">
+                    <input id="col-filter-deadline" type="date"
+                      style="width:100%;padding:0.32rem 0.4rem;background:rgba(255,255,255,0.04);border:1px solid var(--border-color);border-radius:6px;color:var(--text-main);font-size:0.78rem;outline:none;cursor:pointer;color-scheme:dark;">
+                  </td>
+                  <td style="padding: 0.5rem 1rem; text-align: right;">
+                    <button id="col-filter-clear" title="Xóa tất cả bộ lọc cột"
+                      style="padding:0.3rem 0.55rem;font-size:0.72rem;font-weight:600;border:1px solid var(--border-color);background:transparent;color:var(--text-muted);border-radius:6px;cursor:pointer;display:inline-flex;align-items:center;gap:4px;transition:all 0.15s;"
+                      onmouseover="this.style.borderColor='var(--primary)';this.style.color='var(--primary)'"
+                      onmouseout="this.style.borderColor='var(--border-color)';this.style.color='var(--text-muted)'">
+                      <i data-lucide="x" style="width:11px;height:11px;"></i> Xóa lọc
+                    </button>
+                  </td>
+                </tr>
               </thead>
+
               <tbody id="jobs-table-body">
-                <!-- Rendered dynamically -->
+                <tr>
+                  <td colspan="6" style="text-align: center; padding: 4rem 1.5rem; color: var(--text-muted);">
+                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem;">
+                      <i data-lucide="search" style="width: 44px; height: 44px; opacity: 0.35;"></i>
+                      <div style="font-weight: 600; font-size: 0.95rem; color: var(--text-main);">Chọn tiêu chí và nhấn Tìm kiếm</div>
+                      <span style="font-size: 0.8rem; max-width: 400px; line-height: 1.5; opacity: 0.8;">Chọn Ngân hàng, Khối phòng ban, Cấp bậc mong muốn rồi nhấn nút <strong>Tìm kiếm</strong> để tải danh sách công việc mới nhất.</span>
+                    </div>
+                  </td>
+                </tr>
               </tbody>
             </table>
+          </div>
+        </div>
+
+        <!-- Thanh phân trang (Pagination Bar) -->
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding: 0.5rem 0.25rem; margin-bottom: 2rem;">
+          <div style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.85rem; color: var(--text-muted);">
+            <span id="pagination-info"></span>
+            <div style="display: flex; align-items: center; gap: 0.35rem;">
+              <span>Số dòng:</span>
+              <select id="job-limit-select" style="padding: 0.25rem 0.4rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; color: var(--text-main); font-size: 0.82rem; outline: none; cursor: pointer; font-weight: 500;">
+                <option value="10">10</option>
+                <option value="25" selected>25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+              </select>
+            </div>
+          </div>
+          <div style="display: flex; gap: 0.35rem; align-items: center;" id="job-pagination-controls">
+            <!-- Rendered dynamically -->
           </div>
         </div>
       </section>
@@ -1925,7 +2110,6 @@
   <script src="js/academy_posts_data.js"></script>
   <script src="js/nghia_posts_data.js"></script>
   <script src="js/discussion.js"></script>
-  <script src="js/jobs_data.js"></script>
   <script src="js/jobs.js"></script>
   <script src="js/app.js"></script>
 </body>

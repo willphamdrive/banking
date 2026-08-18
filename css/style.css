@@ -259,7 +259,7 @@ button, input, select {
   margin-left: 280px;
   flex-grow: 1;
   padding: 2.5rem 3rem;
-  max-width: 1300px;
+  max-width: 100%;
 }
 
 header {
@@ -2146,5 +2146,15 @@ header p {
 .job-section-body li {
   margin-bottom: 0.45rem;
 }
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-spin {
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
 
 

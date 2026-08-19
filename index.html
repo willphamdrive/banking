@@ -2224,7 +2224,7 @@
               <thead>
                 <tr style="border-bottom: 1px solid var(--border-color); background: rgba(255, 255, 255, 0.02);">
                   <th
-                    style="padding: 1rem 1.25rem; font-weight: 600; color: var(--text-muted); width: 45%; cursor: pointer; user-select: none;"
+                    style="padding: 1rem 1.25rem; font-weight: 600; color: var(--text-muted); width: 32%; cursor: pointer; user-select: none;"
                     id="sort-title">
                     <div style="display: flex; align-items: center; gap: 0.5rem;">
                       <span>Vị trí tuyển dụng</span>
@@ -2257,6 +2257,22 @@
                   </th>
                   <th
                     style="padding: 1rem 1.25rem; font-weight: 600; color: var(--text-muted); cursor: pointer; user-select: none;"
+                    id="sort-area">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                      <span>Khu vực</span>
+                      <i data-lucide="arrow-up-down" style="width: 14px; height: 14px;" id="icon-area"></i>
+                    </div>
+                  </th>
+                  <th
+                    style="padding: 1rem 1.25rem; font-weight: 600; color: var(--text-muted); cursor: pointer; user-select: none;"
+                    id="sort-location">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                      <span>Địa điểm</span>
+                      <i data-lucide="arrow-up-down" style="width: 14px; height: 14px;" id="icon-location"></i>
+                    </div>
+                  </th>
+                  <th
+                    style="padding: 1rem 1.25rem; font-weight: 600; color: var(--text-muted); cursor: pointer; user-select: none;"
                     id="sort-deadline">
                     <div style="display: flex; align-items: center; gap: 0.5rem;">
                       <span>Hạn nộp</span>
@@ -2266,7 +2282,7 @@
                   <th
                     style="padding: 1rem 1.25rem; font-weight: 600; color: var(--text-muted); text-align: right; width: 120px;">
                     Thao tác</th>
-                </tr>
+                  </tr>
                 <!-- Hàng filter theo cột -->
                 <tr id="col-filter-row"
                   style="background: rgba(255,255,255,0.015); border-bottom: 2px solid var(--border-color);">
@@ -2298,6 +2314,24 @@
                   </td>
                   <td style="padding: 0.5rem 1rem;">
                     <div class="custom-multiselect" id="multiselect-level">
+                      <div class="multiselect-trigger">
+                        <span class="trigger-label">Tất cả</span>
+                        <i data-lucide="chevron-down" style="width: 12px; height: 12px; opacity: 0.7;"></i>
+                      </div>
+                      <div class="multiselect-dropdown"></div>
+                    </div>
+                  </td>
+                  <td style="padding: 0.5rem 1rem;">
+                    <div class="custom-multiselect" id="multiselect-area">
+                      <div class="multiselect-trigger">
+                        <span class="trigger-label">Tất cả</span>
+                        <i data-lucide="chevron-down" style="width: 12px; height: 12px; opacity: 0.7;"></i>
+                      </div>
+                      <div class="multiselect-dropdown"></div>
+                    </div>
+                  </td>
+                  <td style="padding: 0.5rem 1rem;">
+                    <div class="custom-multiselect" id="multiselect-location">
                       <div class="multiselect-trigger">
                         <span class="trigger-label">Tất cả</span>
                         <i data-lucide="chevron-down" style="width: 12px; height: 12px; opacity: 0.7;"></i>

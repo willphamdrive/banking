@@ -1,87 +1,5 @@
 [
   {
-    "id": "job-vpb-4695",
-    "title": "CG phát triển sản phẩm thẻ - TA189",
-    "bank": "VPBank",
-    "bankCode": "VPB",
-    "logoColor": "linear-gradient(135deg,#059669 0%,#047857 100%)",
-    "department": "business",
-    "departmentName": "Khối Khách hàng cá nhân",
-    "location": "TP. Hồ Chí Minh",
-    "salary": "Thỏa thuận",
-    "level": "junior-mid",
-    "levelName": "Chuyên viên",
-    "deadline": "2026-10-31",
-    "tags": [
-      "VPBank TP.HCM",
-      "CMNV"
-    ],
-    "hrEmail": "tuyendung@vpbank.com.vn",
-    "originalUrl": "https://tuyendung.vpbank.com.vn/job/CG-ph%C3%A1t-tri%E1%BB%83n-s%E1%BA%A3n-ph%E1%BA%A9m-th%E1%BA%BB-TA189/4695-vi_VN"
-  },
-  {
-    "id": "job-mbb-69cccd515872bf1517e29a31",
-    "title": "Chuyên viên Khách hàng Cá nhân - CN. Phú Xuân - Xã Nhà Bè, Hồ Chí Minh",
-    "bank": "MB Bank",
-    "bankCode": "MBB",
-    "logoColor": "linear-gradient(135deg,#1e40af 0%,#1d4ed8 100%)",
-    "department": "risk-legal",
-    "departmentName": "Pháp chế & Rủi ro",
-    "location": "TP. Hồ Chí Minh",
-    "salary": "Thỏa thuận",
-    "level": "junior-mid",
-    "levelName": "Chuyên viên",
-    "deadline": "2026-08-25",
-    "tags": [
-      "MB Bank TP.HCM",
-      "Banking",
-      "Banking Relationship Management"
-    ],
-    "hrEmail": "hr.contact@mbbank.com.vn",
-    "originalUrl": "https://careers.mbbank.com.vn/list-of-posts/detail-list-of-posts?id=69cccd515872bf1517e29a31&workGroupId=11258"
-  },
-  {
-    "id": "job-mbb-6a3e00c6f19ec45f587552c5",
-    "title": "Chuyên viên Khách hàng Cá nhân - Khu vực Bình Thạnh - TP. Hồ Chí Minh",
-    "bank": "MB Bank",
-    "bankCode": "MBB",
-    "logoColor": "linear-gradient(135deg,#1e40af 0%,#1d4ed8 100%)",
-    "department": "risk-legal",
-    "departmentName": "Pháp chế & Rủi ro",
-    "location": "TP. Hồ Chí Minh",
-    "salary": "Thỏa thuận",
-    "level": "junior-mid",
-    "levelName": "Chuyên viên",
-    "deadline": "2026-09-04",
-    "tags": [
-      "MB Bank TP.HCM",
-      "Banking",
-      "Banking Relationship Management"
-    ],
-    "hrEmail": "hr.contact@mbbank.com.vn",
-    "originalUrl": "https://careers.mbbank.com.vn/list-of-posts/detail-list-of-posts?id=6a3e00c6f19ec45f587552c5&workGroupId=11258"
-  },
-  {
-    "id": "job-vpb-6401",
-    "title": "Chuyên Viên Cao Cấp Kiểm Toán - Phòng Kiểm Toán Phía Nam - HCM - TA118",
-    "bank": "VPBank",
-    "bankCode": "VPB",
-    "logoColor": "linear-gradient(135deg,#059669 0%,#047857 100%)",
-    "department": "risk-legal",
-    "departmentName": "Khối Kiểm toán Nội bộ",
-    "location": "TP. Hồ Chí Minh",
-    "salary": "Thỏa thuận",
-    "level": "senior",
-    "levelName": "Chuyên viên cao cấp",
-    "deadline": "2026-10-31",
-    "tags": [
-      "VPBank TP.HCM",
-      "CMNV"
-    ],
-    "hrEmail": "tuyendung@vpbank.com.vn",
-    "originalUrl": "https://tuyendung.vpbank.com.vn/job/Chuy%C3%AAn-Vi%C3%AAn-Cao-C%E1%BA%A5p-Ki%E1%BB%83m-To%C3%A1n-Ph%C3%B2ng-Ki%E1%BB%83m-To%C3%A1n-Ph%C3%ADa-Nam-HCM-TA118/6401-vi_VN"
-  },
-  {
     "id": "job-acb-39343",
     "title": "HO - Chuyên viên Xây Dựng Mô Hình & Định Lượng",
     "bank": "ACB",
@@ -100,6 +18,93 @@
       "Toàn thời gian"
     ],
     "hrEmail": "tuyendung@acb.com.vn",
-    "originalUrl": "https://www.acbjobs.com.vn/job/ho-chuyen-vien-xay-dung-mo-hinh-dinh-luong-39343"
+    "originalUrl": "https://www.acbjobs.com.vn/job/ho-chuyen-vien-xay-dung-mo-hinh-dinh-luong-39343",
+    "area": "Hội sở"
+  },
+  {
+    "id": "job-bvb-40281",
+    "title": "New Plus Banker - Thực tập sinh tiềm năng",
+    "bank": "BVBank",
+    "bankCode": "BVB",
+    "logoColor": "linear-gradient(135deg,#0369a1 0%,#0284c7 100%)",
+    "department": "business",
+    "departmentName": "Hội sở",
+    "location": "Toàn quốc",
+    "salary": "Thỏa thuận",
+    "level": "intern",
+    "levelName": "Thực tập sinh / Tập sự",
+    "deadline": "2026-12-31",
+    "tags": [
+      "BVBank",
+      "Toàn thời gian"
+    ],
+    "hrEmail": "tuyendung@bvbank.com.vn",
+    "originalUrl": "https://bvbank.talent.vn/job/new-plus-banker-thuc-tap-sinh-tiem-nang-40281",
+    "area": "Toàn quốc"
+  },
+  {
+    "id": "job-tpb-01000000-b1f8-ce4d-7bac-08ded295d265",
+    "title": "Tập sự KHDN tiềm năng",
+    "bank": "TPBank",
+    "bankCode": "TPB",
+    "logoColor": "linear-gradient(135deg,#7c3aed 0%,#a78bfa 100%)",
+    "department": "business",
+    "departmentName": "Các Đơn vị kinh doanh",
+    "location": "Hồ Chí Minh, Đồng Nai",
+    "salary": "Thỏa thuận",
+    "level": "intern",
+    "levelName": "Thực tập sinh / Tập sự",
+    "deadline": "2026-10-31",
+    "tags": [
+      "TPBank",
+      "Hồ Chí Minh"
+    ],
+    "hrEmail": "tuyendung@tpb.vn",
+    "originalUrl": "https://tuyendung.tpb.vn/vi/jobs/RZa3JP",
+    "area": "Hồ Chí Minh, Đồng Nai"
+  },
+  {
+    "id": "job-mbb-69cccdbd5872bf1517e29d59",
+    "title": "Chuyên viên Tập sự Khách hàng Cá nhân - CN. Quang Trung - Phường Gò Vấp, Hồ Chí Minh",
+    "bank": "MB Bank",
+    "bankCode": "MBB",
+    "logoColor": "linear-gradient(135deg,#1e40af 0%,#1d4ed8 100%)",
+    "department": "risk-legal",
+    "departmentName": "Khối Quản trị Rủi ro & Pháp chế",
+    "location": "TP. Hồ Chí Minh",
+    "salary": "Thỏa thuận",
+    "level": "intern",
+    "levelName": "Thực tập sinh / Tập sự",
+    "deadline": "2026-08-25",
+    "tags": [
+      "MB Bank TP.HCM",
+      "Banking",
+      "Business Development"
+    ],
+    "hrEmail": "hr.contact@mbbank.com.vn",
+    "originalUrl": "https://careers.mbbank.com.vn/list-of-posts/detail-list-of-posts?id=69cccdbd5872bf1517e29d59&workGroupId=11258",
+    "area": "CN. Quang Trung - Phường Gò Vấp, Hồ Chí Minh"
+  },
+  {
+    "id": "job-acb-54624",
+    "title": "The Next Banker 2026 (Đợt trải nghiệm T09/2026)",
+    "bank": "ACB",
+    "bankCode": "ACB",
+    "logoColor": "linear-gradient(135deg,#fb923c 0%,#f97316 100%)",
+    "department": "business",
+    "departmentName": "Event ACB",
+    "location": "TP. Hồ Chí Minh",
+    "salary": "class=\"icon -ap icon-dot-single\"> Thương lượng",
+    "level": "junior-mid",
+    "levelName": "Chuyên viên",
+    "deadline": "2026-10-31",
+    "tags": [
+      "ACB TP.HCM",
+      "Experience",
+      "Toàn thời gian"
+    ],
+    "hrEmail": "tuyendung@acb.com.vn",
+    "originalUrl": "https://www.acbjobs.com.vn/job/the-next-banker-2026-dot-trai-nghiem-t092026-54624",
+    "area": "TP. Hồ Chí Minh"
   }
 ]

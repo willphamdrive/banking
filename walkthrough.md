@@ -539,3 +539,50 @@ Tôi đã hoàn thành tích hợp dữ liệu tuyển dụng của Vikki Bank v
    - Tích hợp Vikki Bank vào bộ lazy loading pagination ngầm.
 4. **Cập nhật tập lệnh cào offline `save_jobs_db.py`**:
    - Tích hợp Vikki Bank vào quy trình cào tự động (quét trang 1 và 2) và lưu trữ offline vào trường `vikki` trong tệp `jobs_database.json`.
+---
+
+## 📍 Bổ sung Cột Địa điểm & Bộ lọc Multiselect thông minh
+Tôi đã bổ sung cột **Địa điểm** vào bảng hiển thị kết quả việc làm và tối ưu hóa tính năng trích xuất, bộ lọc thông tin:
+1. **Trích xuất Địa điểm Thông minh (`js/jobs.js`)**:
+   - Bổ sung hàm helper `extractLocationFromTitle` tự động quyét và phân tích tiêu đề tuyển dụng (`title`) để trích xuất vị trí làm việc cụ thể trước (ví dụ: quét các từ khóa như "Hà Nội", "Hải Phòng", "Vĩnh Long", "HCM"...). Nếu không tìm thấy trong tiêu đề, hàm sẽ tự động phân tích và chuẩn hóa từ các trường thông tin khu vực địa lý dự phòng trong kết quả cào về.
+2. **Giao diện bảng & Bộ lọc Multiselect (`index.html`)**:
+   - Thêm cột `Địa điểm` vào tiêu đề bảng `<thead>` có hỗ trợ sắp xếp.
+   - **Tối ưu hóa bộ lọc**: Thay thế ô nhập text đơn giản bằng một **custom multiselect dropdown** (`#multiselect-location`) tương thích với các cột khác. Bộ lọc này tự động thống kê số lượng công việc theo từng địa điểm thực tế có trong danh sách (Faceted Search) và hỗ trợ chọn lọc nhiều địa điểm cùng lúc.
+   - Điều chỉnh chiều rộng cột vị trí tuyển dụng từ `45%` xuống `32%` để đảm bảo bảng cân đối và gọn gàng.
+3. **Logic xử lý hiển thị & lọc (`js/jobs.js`)**:
+   - Gắn kết `cfLocation` với dropdown chọn địa điểm và lưu danh sách lựa chọn vào `colFilter.location` dưới dạng mảng.
+   - Cập nhật hàm `applyClientFilters` và `updateFacetedFilters` sử dụng phương thức `some()` để lọc chính xác khi các công việc có nhiều địa điểm (cách nhau bởi dấu phẩy) khớp với bất kỳ vị trí nào được chọn.
+   - Tích hợp cột `Địa điểm` (`job.location`) vào hàm vẽ danh sách `renderJobsList` và tăng số lượng `colspan` của hàng thông báo trống từ 6 lên 7.
+   - Bổ sung cấu hình sắp xếp `{ id: "sort-location", col: "location" }` để hỗ trợ sắp xếp danh sách công việc theo địa điểm tăng/giảm dần khi nhấn vào tiêu đề cột.
+
+---
+
+## 🛠️ Khắc phục Lỗi Xem Chi tiết LPBank (LPB)
+- **Vấn đề**: Khi bấm nút "Chi tiết" trên công việc của LPBank, trình duyệt mở trang trắng (`about:blank`).
+- **Nguyên nhân**: Trong hàm xử lý chuẩn hóa dữ liệu `processRawLPBJobs` ở tệp [`js/jobs.js`](file:///Users/toanpham/Desktop/Banking/js/jobs.js), thuộc tính `originalUrl` của LPBank mặc dù đã được tạo cấu trúc từ `job.slug` nhưng bị bỏ sót không gán vào đối tượng trả về, khiến liên kết của công việc LPBank khi render bị `undefined`.
+- **Giải pháp**: Đã bổ sung gán trường `originalUrl` vào trong đối tượng trả về của `processRawLPBJobs` và chạy lại `save_jobs_db.py` để đồng bộ dữ liệu snapshot mới nhất.
+
+---
+
+## 🗺️ Bổ sung Cột Khu vực & Bộ lọc Multiselect động
+Tôi đã triển khai cột **Khu vực** (Area) mới bên cạnh cột Địa điểm để chi tiết hóa địa danh, chi nhánh làm việc:
+1. **Thuật toán Trích xuất Khu vực Tự động (`extractArea`)**:
+   - Tự động nhận diện cấu trúc ngoặc vuông `[...]` ở đầu tiêu đề (ví dụ: `[Chi nhánh Chợ Lớn]`) để tách thành khu vực `"Chi nhánh Chợ Lớn"`.
+   - Nhận diện các cấu trúc ngoặc đơn `(...)` chứa thông tin chi nhánh (ví dụ: `(CN Chợ Lớn)`).
+   - Tự động cắt các phần phân tách bởi dấu gạch ngang `-` để lấy phần chi nhánh, phòng giao dịch đứng sau (ví dụ: `Chuyên viên KHCN - CN. Bình Tân - Phường An Lạc...` -> `"CN. Bình Tân - Phường An Lạc, Hồ Chí Minh"`).
+   - Tự động nhận diện và chuẩn hóa các trường thông tin Hội sở/HO (ví dụ: `HỘI SỞ - CHUYÊN VIÊN AN NINH...` -> `"Hội sở"`).
+2. **Giao diện & Bộ lọc Cột kết hợp (`index.html`)**:
+   - Thêm cột `Khu vực` hỗ trợ sắp xếp vào tiêu đề bảng `<thead>`.
+   - Bổ sung ô bộ chọn custom multiselect `#multiselect-area` vào thanh bộ lọc nhanh tại hàng lọc để hỗ trợ tìm kiếm và chọn nhiều khu vực cùng lúc.
+   - Tăng `colspan` của hàng thông báo trống trong `renderJobsList` lên `8` để ôm trọn toàn bộ cột của bảng.
+3. **Kết hợp Bộ lọc Đồng bộ**:
+   - Tích hợp điều kiện lọc `cfArea` vào hàm lọc client. Toàn bộ các bộ lọc cột (Vị trí, Ngân hàng, Khối phòng ban, Cấp bậc, Khu vực, Địa điểm, Hạn nộp) hoạt động liên kết đồng hành với nhau qua toán tử `&&`, cho phép người dùng lọc chính xác tối đa (e.g. Xem chuyên viên, khối IT, tại Hội sở, của MB Bank ở Hà Nội).
+
+---
+
+## 🔘 Nút Chọn nhanh Tất cả / Bỏ chọn Tất cả cho các bộ lọc cột
+Tôi đã tối ưu hóa trải nghiệm tương tác với các dropdown bộ lọc bằng cách thêm các nút hành động nhanh:
+1. **Giao diện Dropdown Actions**:
+   - Prepend một thanh hành động nhỏ chứa hai nút **Chọn tất cả** | **Bỏ chọn** ở đầu mỗi danh sách thả xuống của bộ lọc multiselect (Ngân hàng, Khối phòng ban, Cấp bậc, Khu vực, Địa điểm).
+2. **Xử lý sự kiện click nhanh (`js/jobs.js`)**:
+   - Lắng nghe sự kiện click trên các nút này để lập tức check/uncheck toàn bộ các ô checkbox của dropdown tương ứng, đồng thời cập nhật tức thì mảng trạng thái lọc trong `colFilter` và kích hoạt hàm render lại bảng.

@@ -9,6 +9,105 @@ function matchKeyword(str, kw) {
   return str.includes(kw);
 }
 
+function extractLocationFromTitle(title, fallbackLoc) {
+  if (!title) return fallbackLoc || "TP. Hồ Chí Minh";
+  const titleUpper = title.toUpperCase();
+  
+  const locMap = [
+    { keywords: ["HỒ CHÍ MINH", "TP.HCM", "TPHCM", "HCM", "SÀI GÒN"], norm: "TP. Hồ Chí Minh" },
+    { keywords: ["HÀ NỘI", "HN"], norm: "Hà Nội" },
+    { keywords: ["HẢI PHÒNG", "HP"], norm: "Hải Phòng" },
+    { keywords: ["ĐÀ NẴNG", "ĐN"], norm: "Đà Nẵng" },
+    { keywords: ["CẦN THƠ", "CT"], norm: "Cần Thơ" },
+    { keywords: ["VĨNH LONG", "VL"], norm: "Vĩnh Long" },
+    { keywords: ["BÌNH DƯƠNG", "BD"], norm: "Bình Dương" },
+    { keywords: ["ĐỒNG NAI", "ĐN2"], norm: "Đồng Nai" },
+    { keywords: ["VŨNG TÀU", "BRVT"], norm: "Vũng Tàu" },
+    { keywords: ["LONG AN", "LA"], norm: "Long An" },
+    { keywords: ["AN GIANG", "AG"], norm: "An Giang" },
+    { keywords: ["ĐỒNG THÁP", "ĐT"], norm: "Đồng Tháp" },
+    { keywords: ["TIỀN GIANG", "TG"], norm: "Tiền Giang" },
+    { keywords: ["BẾN TRE", "BT"], norm: "Bến Tre" },
+    { keywords: ["TÂY NINH", "TN"], norm: "Tây Ninh" },
+    { keywords: ["KIÊN GIANG", "KG"], norm: "Kiên Giang" },
+    { keywords: ["CÀ MAU", "CM"], norm: "Cà Mau" },
+    { keywords: ["KHÁNH HÒA", "NHA TRANG", "KH"], norm: "Nha Trang" },
+    { keywords: ["LÂM ĐỒNG", "ĐÀ LẠT", "LĐ"], norm: "Lâm Đồng" },
+    { keywords: ["ĐẮK LẮK", "BUÔN MA THUỘT", "ĐL"], norm: "Đắk Lắk" },
+    { keywords: ["GIA LAI", "GL"], norm: "Gia Lai" },
+    { keywords: ["BÌNH THUẬN", "PHAN THIẾT", "BT1"], norm: "Bình Thuận" },
+    { keywords: ["BÌNH ĐỊNH", "QUY NHƠN", "BĐ"], norm: "Bình Định" },
+    { keywords: ["QUẢNG NAM", "TAM KỲ", "QN1"], norm: "Quảng Nam" },
+    { keywords: ["QUẢNG NGÃI", "QNG"], norm: "Quảng Ngãi" },
+    { keywords: ["THỪA THIÊN HUẾ", "HUẾ", "TTH"], norm: "Thừa Thiên Huế" },
+    { keywords: ["VINH", "NGHỆ AN", "NA"], norm: "Nghệ An" },
+    { keywords: ["THANH HÓA", "TH"], norm: "Thanh Hóa" },
+    { keywords: ["BẮC NINH", "BN"], norm: "Bắc Ninh" },
+    { keywords: ["BẮC GIANG", "BG"], norm: "Bắc Giang" },
+    { keywords: ["THÁI NGUYÊN", "TN1"], norm: "Thái Nguyên" },
+    { keywords: ["QUẢNG NINH", "HẠ LONG", "QN"], norm: "Quảng Ninh" },
+    { keywords: ["HẢI DƯƠNG", "HD"], norm: "Hải Dương" },
+    { keywords: ["HƯNG YÊN", "HY"], norm: "Hưng Yên" },
+    { keywords: ["VĨNH PHÚC", "VP"], norm: "Vĩnh Phúc" },
+    { keywords: ["PHÚ THỌ", "VIỆT TRÌ", "PT"], norm: "Phú Thọ" }
+  ];
+
+  for (const item of locMap) {
+    for (const kw of item.keywords) {
+      const regex = new RegExp("(^|[^a-zA-Z0-9À-ỹ])" + kw + "([^a-zA-Z0-9À-ỹ]|$)", "i");
+      if (regex.test(titleUpper)) {
+        return item.norm;
+      }
+    }
+  }
+
+  if (fallbackLoc) {
+    const cleanLoc = fallbackLoc.trim();
+    const cleanUpper = cleanLoc.toUpperCase();
+    for (const item of locMap) {
+      for (const kw of item.keywords) {
+        if (cleanUpper.includes(kw)) return item.norm;
+      }
+    }
+    return cleanLoc;
+  }
+  
+  return "TP. Hồ Chí Minh";
+}
+
+function extractArea(title, bank, facility) {
+  if (!title) return facility || "Hội sở";
+  
+  // 1. Check brackets [Khu vực/Chi nhánh]
+  const matchBrackets = title.match(/\[([^\]]+)\]/);
+  if (matchBrackets) {
+    return matchBrackets[1].trim();
+  }
+
+  // 2. Check parentheses (CN Chợ Lớn)
+  const matchParens = title.match(/\((cn\.[^)]+|chi nhánh[^)]+|hội sở[^)]+|pgd[^)]+)\)/i);
+  if (matchParens) {
+    return matchParens[1].trim();
+  }
+
+  const parts = title.split("-").map(p => p.trim());
+  
+  // 3. If first part is "Hội sở" or "HO" or "Trụ sở chính"
+  if (parts[0] && /^(hội sở|ho|trụ sở chính)$/i.test(parts[0])) {
+    return "Hội sở";
+  }
+  
+  // 4. Find if any part contains branch info
+  const idx = parts.findIndex(p => /^(cn\.|chi nhánh|pgd|phòng giao dịch|khu vực|vùng|trung tâm|tỉnh)/i.test(p));
+  if (idx !== -1) {
+    return parts.slice(idx).join(" - ");
+  }
+
+  if (facility) return facility;
+  
+  return "Hội sở";
+}
+
 class BaselJobs {
   constructor() {
     this.jobs = [];
@@ -27,7 +126,7 @@ class BaselJobs {
     this.isLoading = false;
 
     // Bộ lọc theo cột (live)
-    this.colFilter = { title: "", bank: [], dept: [], level: [], deadline: "" };
+    this.colFilter = { title: "", bank: [], dept: [], level: [], deadline: "", location: [], area: [] };
 
     // Khởi tạo danh sách trống và tải từ server/localStorage
     this.savedJobs = [];
@@ -89,6 +188,8 @@ class BaselJobs {
     this.cfBank     = document.getElementById("multiselect-bank");
     this.cfDept     = document.getElementById("multiselect-dept");
     this.cfLevel    = document.getElementById("multiselect-level");
+    this.cfArea     = document.getElementById("multiselect-area");
+    this.cfLocation = document.getElementById("multiselect-location");
     this.cfDeadline = document.getElementById("col-filter-deadline");
     this.cfClear    = document.getElementById("col-filter-clear");
   }
@@ -179,6 +280,8 @@ class BaselJobs {
       { id: "sort-bank",     col: "bank" },
       { id: "sort-dept",     col: "departmentName" },
       { id: "sort-level",    col: "levelName" },
+      { id: "sort-area",     col: "area" },
+      { id: "sort-location", col: "location" },
       { id: "sort-deadline", col: "deadline" }
     ];
     headers.forEach(h => {
@@ -261,12 +364,36 @@ class BaselJobs {
 
     // Lắng nghe sự kiện thay đổi của các custom multiselect (sử dụng Event Delegation)
     const multiselects = [
-      { el: this.cfBank,  key: "bank" },
-      { el: this.cfDept,  key: "dept" },
-      { el: this.cfLevel, key: "level" }
+      { el: this.cfBank,     key: "bank" },
+      { el: this.cfDept,     key: "dept" },
+      { el: this.cfLevel,    key: "level" },
+      { el: this.cfArea,     key: "area" },
+      { el: this.cfLocation, key: "location" }
     ];
     multiselects.forEach(({ el, key }) => {
       if (!el) return;
+      
+      // Lắng nghe hành động click chọn nhanh tất cả / bỏ chọn tất cả
+      el.addEventListener("click", (e) => {
+        if (e.target.classList.contains("select-all")) {
+          e.preventDefault();
+          e.stopPropagation();
+          const checkboxes = el.querySelectorAll(".multiselect-dropdown input[type='checkbox']");
+          checkboxes.forEach(cb => cb.checked = true);
+          this.colFilter[key] = Array.from(checkboxes).map(cb => cb.value.toLowerCase());
+          this.currentPage = 1;
+          this.applyClientFilters();
+        } else if (e.target.classList.contains("deselect-all")) {
+          e.preventDefault();
+          e.stopPropagation();
+          const checkboxes = el.querySelectorAll(".multiselect-dropdown input[type='checkbox']");
+          checkboxes.forEach(cb => cb.checked = false);
+          this.colFilter[key] = [];
+          this.currentPage = 1;
+          this.applyClientFilters();
+        }
+      });
+
       el.addEventListener("change", (e) => {
         if (e.target.type === "checkbox") {
           const checkedCheckboxes = el.querySelectorAll(".multiselect-dropdown input[type='checkbox']:checked");
@@ -280,7 +407,7 @@ class BaselJobs {
     // Nút Xóa lọc cột
     if (this.cfClear) {
       this.cfClear.addEventListener("click", () => {
-        this.colFilter = { title: "", bank: [], dept: [], level: [], deadline: "" };
+        this.colFilter = { title: "", bank: [], dept: [], level: [], location: [], area: [], deadline: "" };
         if (this.cfTitle)    this.cfTitle.value    = "";
         if (this.cfDeadline) this.cfDeadline.value = "";
         
@@ -521,6 +648,9 @@ class BaselJobs {
   addUniqueJobs(jobList) {
     if (!jobList || !jobList.length) return;
     jobList.forEach(job => {
+      if (!job.area) {
+        job.area = extractArea(job.title, job.bank, job.location);
+      }
       // Chỉ push nếu id của job chưa tồn tại trong this.jobs
       if (!this.jobs.some(j => j.id === job.id)) {
         this.jobs.push(job);
@@ -1144,7 +1274,7 @@ class BaselJobs {
       const stream = job.cust_FO_CareerStream || [];
       if (stream[0]) tags.push(stream[0]);
 
-      return { id: `job-vpb-${rawId || idx}`, title, bank: "VPBank", bankCode: "VPB", logoColor: "linear-gradient(135deg,#059669 0%,#047857 100%)", department: deptCode, departmentName: deptName, location: "TP. Hồ Chí Minh", salary: "Thỏa thuận", level, levelName, deadline, tags, hrEmail: "tuyendung@vpbank.com.vn", originalUrl };
+      return { id: `job-vpb-${rawId || idx}`, title, bank: "VPBank", bankCode: "VPB", logoColor: "linear-gradient(135deg,#059669 0%,#047857 100%)", department: deptCode, departmentName: deptName, location: extractLocationFromTitle(title, "TP. Hồ Chí Minh"), salary: "Thỏa thuận", level, levelName, deadline, tags, hrEmail: "tuyendung@vpbank.com.vn", originalUrl };
     });
   }
 
@@ -1201,7 +1331,7 @@ class BaselJobs {
 
       const workGroupId = job.workGroupId || "";
       const originalUrl = `https://careers.mbbank.com.vn/list-of-posts/detail-list-of-posts?id=${job.id}&workGroupId=${workGroupId}`;
-      return { id: `job-mbb-${job.id || idx}`, title, bank: "MB Bank", bankCode: "MBB", logoColor: "linear-gradient(135deg,#1e40af 0%,#1d4ed8 100%)", department: deptCode, departmentName: deptName, location: "TP. Hồ Chí Minh", salary: "Thỏa thuận", level, levelName, deadline, tags, hrEmail: "hr.contact@mbbank.com.vn", originalUrl };
+      return { id: `job-mbb-${job.id || idx}`, title, bank: "MB Bank", bankCode: "MBB", logoColor: "linear-gradient(135deg,#1e40af 0%,#1d4ed8 100%)", department: deptCode, departmentName: deptName, location: extractLocationFromTitle(title, "TP. Hồ Chí Minh"), salary: "Thỏa thuận", level, levelName, deadline, tags, hrEmail: "hr.contact@mbbank.com.vn", originalUrl };
 
     });
   }
@@ -1246,7 +1376,7 @@ class BaselJobs {
         logoColor: "linear-gradient(135deg,#fb923c 0%,#f97316 100%)", 
         department: deptCode, 
         departmentName: deptName, 
-        location: job.location || "TP. Hồ Chí Minh", 
+        location: extractLocationFromTitle(title, job.location), 
         salary: job.salary || "Thỏa thuận", 
         level, 
         levelName, 
@@ -1336,13 +1466,14 @@ class BaselJobs {
         logoColor: "linear-gradient(135deg,#dc2626 0%,#facc15 100%)", 
         department: deptCode, 
         departmentName: deptName, 
-        location, 
+        location: extractLocationFromTitle(title, location), 
         salary, 
         level, 
         levelName, 
         deadline, 
         tags, 
         hrEmail: "tuyendung@lpbank.com.vn", 
+        originalUrl 
       };
     });
   }
@@ -1384,7 +1515,7 @@ class BaselJobs {
         logoColor: "linear-gradient(135deg,#0284c7 0%,#0369a1 100%)", 
         department: deptCode, 
         departmentName: deptName, 
-        location: job.location || "TP. Hồ Chí Minh", 
+        location: extractLocationFromTitle(title, job.location), 
         salary: "Thỏa thuận", 
         level, 
         levelName, 
@@ -1469,7 +1600,7 @@ class BaselJobs {
         logoColor: "linear-gradient(135deg,#7c3aed 0%,#a78bfa 100%)", 
         department: deptCode, 
         departmentName: deptName, 
-        location, 
+        location: extractLocationFromTitle(title, location), 
         salary, 
         level, 
         levelName, 
@@ -1532,7 +1663,7 @@ class BaselJobs {
         logoColor: "linear-gradient(135deg,#f97316 0%,#ea580c 100%)", 
         department: deptCode, 
         departmentName: deptName, 
-        location, 
+        location: extractLocationFromTitle(title, location), 
         salary, 
         level, 
         levelName, 
@@ -1631,7 +1762,7 @@ class BaselJobs {
         logoColor: "linear-gradient(135deg,#eab308 0%,#d97706 100%)", 
         department: deptCode, 
         departmentName: deptName, 
-        location, 
+        location: extractLocationFromTitle(title, location), 
         salary, 
         level, 
         levelName, 
@@ -1687,7 +1818,7 @@ class BaselJobs {
         logoColor: "linear-gradient(135deg,#0369a1 0%,#0284c7 100%)", // Ocean Blue representing BVBank
         department: deptCode, 
         departmentName: deptName, 
-        location, 
+        location: extractLocationFromTitle(title, location), 
         salary, 
         level, 
         levelName, 
@@ -1742,7 +1873,7 @@ class BaselJobs {
         logoColor: "linear-gradient(135deg,#db2777 0%,#9d174d 100%)", // Pink representing Vikki Bank
         department: deptCode, 
         departmentName: deptName, 
-        location, 
+        location: extractLocationFromTitle(title, location), 
         salary, 
         level, 
         levelName, 
@@ -1778,18 +1909,20 @@ class BaselJobs {
       const cfBank     = cf.bank.length === 0 || cf.bank.includes(job.bank.toLowerCase());
       const cfDept     = cf.dept.length === 0 || cf.dept.includes(job.departmentName.toLowerCase());
       const cfLevel    = cf.level.length === 0 || cf.level.includes(job.level.toLowerCase());
+      const cfArea     = cf.area.length === 0 || cf.area.includes((job.area || "").toLowerCase());
+      const cfLoc      = cf.location.length === 0 || cf.location.some(locVal => job.location.toLowerCase().includes(locVal));
       // Deadline: lọc job có hạn nộp >= ngày chọn
       const cfDeadline = !cf.deadline || (job.deadline && job.deadline >= cf.deadline);
 
       return matchBank && matchDept && matchExp && matchSearch
-          && cfTitle && cfBank && cfDept && cfLevel && cfDeadline;
+          && cfTitle && cfBank && cfDept && cfLevel && cfArea && cfLoc && cfDeadline;
     });
     this.sortJobs();
     this.renderJobsList();
   }
 
   updateFacetedFilters(baseJobs) {
-    if (!this.cfBank || !this.cfDept || !this.cfLevel) return;
+    if (!this.cfBank || !this.cfDept || !this.cfLevel || !this.cfLocation || !this.cfArea) return;
 
     // Hàm kiểm tra khớp với tất cả bộ lọc, loại trừ một số bộ lọc cột cụ thể (Faceted Search)
     const matchesFiltersExcept = (job, excludeFields = []) => {
@@ -1811,14 +1944,22 @@ class BaselJobs {
       const cBank     = excludeFields.includes("bank")     || cf.bank.length === 0 || cf.bank.includes(job.bank.toLowerCase());
       const cDept     = excludeFields.includes("dept")     || cf.dept.length === 0 || cf.dept.includes(job.departmentName.toLowerCase());
       const cLevel    = excludeFields.includes("level")    || cf.level.length === 0 || cf.level.includes(job.level.toLowerCase());
+      const cArea     = excludeFields.includes("area")     || cf.area.length === 0 || cf.area.includes((job.area || "").toLowerCase());
+      const cLoc      = excludeFields.includes("location") || cf.location.length === 0 || cf.location.some(locVal => job.location.toLowerCase().includes(locVal));
       const cDeadline = excludeFields.includes("deadline") || !cf.deadline || (job.deadline && job.deadline >= cf.deadline);
 
-      return cTitle && cBank && cDept && cLevel && cDeadline;
+      return cTitle && cBank && cDept && cLevel && cArea && cLoc && cDeadline;
     };
 
     // Helper to render dynamic checkboxes inside a multiselect dropdown
     const renderDropdownItems = (dropdownEl, itemsList, countsObj, selectedArray) => {
-      let html = "";
+      let html = `
+        <div class="multiselect-actions" style="padding: 0.35rem 0.55rem; display: flex; gap: 0.75rem; border-bottom: 1px solid var(--border-color); margin-bottom: 0.35rem; align-items: center;">
+          <button type="button" class="select-all" style="background: transparent; border: none; color: var(--primary); font-size: 0.72rem; font-weight: 600; cursor: pointer; padding: 0; outline: none; transition: opacity 0.15s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">Chọn tất cả</button>
+          <span style="color: var(--border-color); font-size: 0.72rem;">|</span>
+          <button type="button" class="deselect-all" style="background: transparent; border: none; color: var(--text-muted); font-size: 0.72rem; font-weight: 600; cursor: pointer; padding: 0; outline: none; transition: opacity 0.15s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">Bỏ chọn</button>
+        </div>
+      `;
       itemsList.forEach(itemVal => {
         const itemLower = itemVal.toLowerCase();
         const isChecked = selectedArray.includes(itemLower);
@@ -1897,7 +2038,13 @@ class BaselJobs {
     this.colFilter.level = this.colFilter.level.filter(l => levelCodes.includes(l));
 
     // Render level checkboxes
-    let levelHtml = "";
+    let levelHtml = `
+      <div class="multiselect-actions" style="padding: 0.35rem 0.55rem; display: flex; gap: 0.75rem; border-bottom: 1px solid var(--border-color); margin-bottom: 0.35rem; align-items: center;">
+        <button type="button" class="select-all" style="background: transparent; border: none; color: var(--primary); font-size: 0.72rem; font-weight: 600; cursor: pointer; padding: 0; outline: none; transition: opacity 0.15s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">Chọn tất cả</button>
+        <span style="color: var(--border-color); font-size: 0.72rem;">|</span>
+        <button type="button" class="deselect-all" style="background: transparent; border: none; color: var(--text-muted); font-size: 0.72rem; font-weight: 600; cursor: pointer; padding: 0; outline: none; transition: opacity 0.15s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">Bỏ chọn</button>
+      </div>
+    `;
     levelCodes.forEach(code => {
       const friendlyName = levelNames[code] || code;
       const count = levelCountsByCode[code] || 0;
@@ -1924,6 +2071,39 @@ class BaselJobs {
         levelLabelSpan.textContent = `Đã chọn (${selectedCount})`;
       }
     }
+
+    // 4. Cập nhật dropdown Địa điểm
+    const locJobs = baseJobs.filter(j => matchesFiltersExcept(j, ["location"]));
+    const locCounts = {};
+    locJobs.forEach(j => {
+      if (j.location) {
+        const parts = j.location.split(",").map(p => p.trim()).filter(Boolean);
+        parts.forEach(p => {
+          locCounts[p] = (locCounts[p] || 0) + 1;
+        });
+      }
+    });
+    const locList = Object.keys(locCounts).sort();
+    const locDropdown = this.cfLocation.querySelector(".multiselect-dropdown");
+    const locTrigger = this.cfLocation.querySelector(".multiselect-trigger");
+    
+    this.colFilter.location = this.colFilter.location.filter(l => locList.some(ll => ll.toLowerCase() === l));
+    renderDropdownItems(locDropdown, locList, locCounts, this.colFilter.location);
+    updateTriggerLabel(locTrigger, locJobs.length, locCounts, this.colFilter.location);
+
+    // 5. Cập nhật dropdown Khu vực
+    const areaJobs = baseJobs.filter(j => matchesFiltersExcept(j, ["area"]));
+    const areaCounts = {};
+    areaJobs.forEach(j => {
+      if (j.area) areaCounts[j.area] = (areaCounts[j.area] || 0) + 1;
+    });
+    const areaList = Object.keys(areaCounts).sort();
+    const areaDropdown = this.cfArea.querySelector(".multiselect-dropdown");
+    const areaTrigger = this.cfArea.querySelector(".multiselect-trigger");
+    
+    this.colFilter.area = this.colFilter.area.filter(a => areaList.some(al => al.toLowerCase() === a));
+    renderDropdownItems(areaDropdown, areaList, areaCounts, this.colFilter.area);
+    updateTriggerLabel(areaTrigger, areaJobs.length, areaCounts, this.colFilter.area);
   }
 
   // ── Thống kê ─────────────────────────────────────────────────────
@@ -1942,7 +2122,7 @@ class BaselJobs {
       const vA = a[col] || "", vB = b[col] || "";
       return (typeof vA === "string" ? vA.localeCompare(vB, "vi") : (vA < vB ? -1 : vA > vB ? 1 : 0)) * dir;
     });
-    const idMap = { title: "icon-title", bank: "icon-bank", departmentName: "icon-dept", levelName: "icon-level", deadline: "icon-deadline" };
+    const idMap = { title: "icon-title", bank: "icon-bank", departmentName: "icon-dept", levelName: "icon-level", area: "icon-area", location: "icon-location", deadline: "icon-deadline" };
     Object.entries(idMap).forEach(([h, id]) => {
       const el = document.getElementById(id);
       if (el) el.setAttribute("data-lucide", h === col ? (dir === 1 ? "arrow-up" : "arrow-down") : "arrow-up-down");
@@ -1956,7 +2136,7 @@ class BaselJobs {
 
     if (this.filteredJobs.length === 0) {
       this.tableBody.innerHTML = `
-        <tr><td colspan="6" style="text-align:center;padding:3rem;color:var(--text-muted);">
+        <tr><td colspan="8" style="text-align:center;padding:3rem;color:var(--text-muted);">
           <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;">
             <i data-lucide="search-slash" style="width:44px;height:44px;opacity:0.5;"></i>
             <p style="font-size:0.95rem;font-weight:600;margin:0;">Không tìm thấy vị trí phù hợp.</p>
@@ -2003,6 +2183,8 @@ class BaselJobs {
           <td data-label="Cấp bậc" style="padding:0.85rem 1.25rem;font-size:0.82rem;">
             <span class="badge" style="background:rgba(255,255,255,0.03);color:var(--text-main);border:1px solid var(--border-color);padding:0.2rem 0.45rem;border-radius:4px;font-weight:500;">${job.levelName}</span>
           </td>
+          <td data-label="Khu vực" style="padding:0.85rem 1.25rem;font-size:0.82rem;color:var(--text-muted);">${job.area || "Hội sở"}</td>
+          <td data-label="Địa điểm" style="padding:0.85rem 1.25rem;font-size:0.82rem;color:var(--text-muted);">${job.location}</td>
           <td data-label="Hạn nộp" style="padding:0.85rem 1.25rem;font-size:0.82rem;color:var(--text-muted);font-weight:500;">${this.formatDate(job.deadline)}</td>
           <td data-label="Thao tác" style="padding:0.85rem 1.25rem;text-align:right;">
             <div style="display:flex;gap:0.35rem;justify-content:flex-end;align-items:center;">
@@ -2029,6 +2211,9 @@ class BaselJobs {
       const res = await fetch(url);
       if (res.ok) {
         this.savedJobs = await res.json();
+        this.savedJobs.forEach(job => {
+          if (!job.area) job.area = extractArea(job.title, job.bank, job.location);
+        });
         // Rerender tab saved nếu đang active
         if (this.selectedBank === "saved") {
           this.applyClientFilters();
@@ -2038,6 +2223,9 @@ class BaselJobs {
       console.warn("Không thể tải danh sách đã lưu từ server local, dùng localStorage tạm thời:", e);
       try {
         this.savedJobs = JSON.parse(localStorage.getItem("basel_saved_jobs")) || [];
+        this.savedJobs.forEach(job => {
+          if (!job.area) job.area = extractArea(job.title, job.bank, job.location);
+        });
       } catch (_) {
         this.savedJobs = [];
       }

@@ -66,6 +66,77 @@ class ProxyHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
                 self.send_response(500)
                 self.end_headers()
                 self.wfile.write(str(e).encode('utf-8'))
+        elif self.path.startswith('/api/jobs/bvbank'):
+            query_string = ""
+            if '?' in self.path:
+                query_string = self.path.split('?', 1)[1]
+            
+            target_url = "https://bvbank.talent.vn/jobs"
+            if query_string:
+                target_url += "?" + query_string
+                
+            headers = {
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+                'Accept-Language': 'en-US,en;q=0.9,vi;q=0.8',
+                'Connection': 'keep-alive',
+                'Referer': 'https://bvbank.talent.vn/home?office=5322&return=1',
+                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36 Edg/151.0.0.0',
+                'sec-ch-ua': '"Not=A?Brand";v="99", "Microsoft Edge";v="151", "Chromium";v="151"',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': '"macOS"'
+            }
+            cookies = {
+                'talentssid': 'f91a3db2ae85bdea46918d2f9db34cf5',
+                'lang_talent': 'vi'
+            }
+            
+            try:
+                resp = requests.get(target_url, headers=headers, cookies=cookies, timeout=15)
+                self.send_response(resp.status_code)
+                self.send_header('Content-Type', 'text/html; charset=utf-8')
+                self.send_header('Content-Length', str(len(resp.content)))
+                self.send_header('Connection', 'close')
+                self.end_headers()
+                self.wfile.write(resp.content)
+            except Exception as e:
+                self.send_response(500)
+                self.end_headers()
+                self.wfile.write(str(e).encode('utf-8'))
+        elif self.path.startswith('/api/jobs/vikki'):
+            query_string = ""
+            if '?' in self.path:
+                query_string = self.path.split('?', 1)[1]
+            
+            target_url = "https://vikkibank.vn/tuyen-dung/"
+            if query_string:
+                target_url += "?" + query_string
+                
+            headers = {
+                'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+                'accept-language': 'en-US,en;q=0.9,vi;q=0.8',
+                'referer': 'https://vikkibank.vn/tuyen-dung/',
+                'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36 Edg/151.0.0.0',
+                'sec-ch-ua': '"Not=A?Brand";v="99", "Microsoft Edge";v="151", "Chromium";v="151"',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': '"macOS"'
+            }
+            cookies = {
+                'pll_language': 'vi',
+                '_wpfuuid': '95f89a92-983b-4f8e-8680-137183df0189'
+            }
+            
+            try:
+                resp = requests.get(target_url, headers=headers, cookies=cookies, timeout=15)
+                self.send_response(resp.status_code)
+                self.send_header('Content-Type', 'text/html; charset=utf-8')
+                self.send_header('Content-Length', str(len(resp.content)))
+                self.send_header('Connection', 'close')
+                self.end_headers()
+                self.wfile.write(resp.content)
+            except Exception as e:
+                self.send_response(500)
+                self.end_headers()
+                self.wfile.write(str(e).encode('utf-8'))
         elif self.path.startswith('/api/jobs/lpbank'):
             query_string = ""
             if '?' in self.path:
@@ -117,6 +188,42 @@ class ProxyHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
                 'origin': 'https://tuyendung.tpb.vn',
                 'priority': 'u=1, i',
                 'referer': 'https://tuyendung.tpb.vn/',
+                'sec-ch-ua': '"Not=A?Brand";v="99", "Microsoft Edge";v="151", "Chromium";v="151"',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': '"macOS"',
+                'sec-fetch-dest': 'empty',
+                'sec-fetch-mode': 'cors',
+                'sec-fetch-site': 'cross-site',
+                'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36 Edg/151.0.0.0'
+            }
+            
+            try:
+                resp = requests.get(target_url, headers=headers, timeout=15)
+                self.send_response(resp.status_code)
+                self.send_header('Content-Type', 'application/json; charset=utf-8')
+                self.send_header('Content-Length', str(len(resp.content)))
+                self.send_header('Connection', 'close')
+                self.end_headers()
+                self.wfile.write(resp.content)
+            except Exception as e:
+                self.send_response(500)
+                self.end_headers()
+                self.wfile.write(str(e).encode('utf-8'))
+        elif self.path.startswith('/api/jobs/namabank'):
+            query_string = ""
+            if '?' in self.path:
+                query_string = self.path.split('?', 1)[1]
+            
+            target_url = "https://centralize-api-v2.iviec.vn/api/recruitment/Recruitment/GetRecruitmentsByDomain"
+            if query_string:
+                target_url += "?" + query_string
+                
+            headers = {
+                'accept': 'application/json, text/plain, */*',
+                'accept-language': 'en-US,en;q=0.9,vi;q=0.8',
+                'origin': 'https://tuyendung.namabank.com.vn',
+                'priority': 'u=1, i',
+                'referer': 'https://tuyendung.namabank.com.vn/',
                 'sec-ch-ua': '"Not=A?Brand";v="99", "Microsoft Edge";v="151", "Chromium";v="151"',
                 'sec-ch-ua-mobile': '?0',
                 'sec-ch-ua-platform': '"macOS"',

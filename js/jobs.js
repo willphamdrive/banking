@@ -130,6 +130,9 @@ class BaselJobs {
           else if (bk === "Sacombank") { b.style.borderColor = "#0284c7"; b.style.color = "#0284c7"; }
           else if (bk === "TPBank")   { b.style.borderColor = "#7c3aed"; b.style.color = "#7c3aed"; }
           else if (bk === "HDBank")   { b.style.borderColor = "#ea580c"; b.style.color = "#ea580c"; }
+          else if (bk === "Nam A Bank")  { b.style.borderColor = "#eab308"; b.style.color = "#eab308"; }
+          else if (bk === "BVBank")  { b.style.borderColor = "#025b96"; b.style.color = "#025b96"; }
+          else if (bk === "Vikki Bank")  { b.style.borderColor = "#db2777"; b.style.color = "#db2777"; }
           else if (bk === "saved")  { b.style.borderColor = "#f59e0b"; b.style.color = "#f59e0b"; }
         });
         // Active nút được chọn
@@ -143,6 +146,9 @@ class BaselJobs {
         else if (bank === "Sacombank") { btn.style.background = "#0284c7"; btn.style.borderColor = "#0284c7"; btn.style.color = "white"; }
         else if (bank === "TPBank")   { btn.style.background = "#7c3aed"; btn.style.borderColor = "#7c3aed"; btn.style.color = "white"; }
         else if (bank === "HDBank")   { btn.style.background = "#ea580c"; btn.style.borderColor = "#ea580c"; btn.style.color = "white"; }
+        else if (bank === "Nam A Bank")  { btn.style.background = "#eab308"; btn.style.borderColor = "#eab308"; btn.style.color = "white"; }
+        else if (bank === "BVBank")  { btn.style.background = "#025b96"; btn.style.borderColor = "#025b96"; btn.style.color = "white"; }
+        else if (bank === "Vikki Bank")  { btn.style.background = "#db2777"; btn.style.borderColor = "#db2777"; btn.style.color = "white"; }
         else if (bank === "saved")  { btn.style.background = "#f59e0b"; btn.style.borderColor = "#f59e0b"; btn.style.color = "white"; }
         
         // Lọc ngay lập tức
@@ -307,7 +313,7 @@ class BaselJobs {
           <div style="display:flex;flex-direction:column;align-items:center;gap:1rem;">
             <i data-lucide="loader-2" class="animate-spin" style="width:32px;height:32px;color:var(--primary);"></i>
             <div style="font-weight:600;font-size:0.95rem;color:var(--text-main);">Đang kết nối cổng tuyển dụng...</div>
-            <span style="font-size:0.8rem;opacity:0.8;">Đang tải dữ liệu mới nhất từ VPBank, MB Bank, ACB, LPBank & HDBank...</span>
+            <span style="font-size:0.8rem;opacity:0.8;">Đang tải dữ liệu mới nhất từ VPBank, MB Bank, ACB, LPBank, HDBank, Nam A Bank & BVBank...</span>
           </div>
         </td>
       </tr>`;
@@ -322,12 +328,15 @@ class BaselJobs {
       const needSTB = (this.selectedBank === "all" || this.selectedBank === "Sacombank");
       const needTPB = (this.selectedBank === "all" || this.selectedBank === "TPBank");
       const needHDB = (this.selectedBank === "all" || this.selectedBank === "HDBank");
+      const needNAB = (this.selectedBank === "all" || this.selectedBank === "Nam A Bank");
+      const needBVB = (this.selectedBank === "all" || this.selectedBank === "BVBank");
+      const needVIK = (this.selectedBank === "all" || this.selectedBank === "Vikki Bank");
 
-      let vpbRaw = [], mbbRaw = [], acbHcmRaw = [], acbHoRaw = [], lpbRaw = [], stbRaw = [], tpbRaw = [], hdbRaw = [];
-      let totalMbbPages = 1, totalAcbHcmPages = 1, totalAcbHoPages = 1, totalLpbPages = 1, totalTpbPages = 1, totalHdbPages = 1;
+      let vpbRaw = [], mbbRaw = [], acbHcmRaw = [], acbHoRaw = [], lpbRaw = [], stbRaw = [], tpbRaw = [], hdbRaw = [], nabRaw = [], bvbRaw = [], vikkiRaw = [];
+      let totalVpbPages = 1, totalMbbPages = 1, totalAcbHcmPages = 1, totalAcbHoPages = 1, totalLpbPages = 1, totalStbPages = 1, totalTpbPages = 1, totalHdbPages = 1, totalNabPages = 1, totalBvbPages = 1, totalVikkiPages = 1;
 
       const fetches = [];
-      if (needVPB) fetches.push(this.fetchLivePageFromVPB(0).then(r => ({ src: "VPB", data: r })).catch(() => ({ src: "VPB", data: [] })));
+      if (needVPB) fetches.push(this.fetchLivePageFromVPB(0).then(r => ({ src: "VPB", data: r })).catch(() => ({ src: "VPB", data: null })));
       if (needMBB) fetches.push(this.fetchLiveMBBPage(1).then(r => ({ src: "MBB", data: r })).catch(() => ({ src: "MBB", data: null })));
       if (needACB) {
         fetches.push(this.fetchLiveACBPage(1, 3133).then(r => ({ src: "ACB_HCM", data: r })).catch(() => ({ src: "ACB_HCM", data: null })));
@@ -337,6 +346,9 @@ class BaselJobs {
       if (needSTB) fetches.push(this.fetchLiveSTBPage(1).then(r => ({ src: "STB", data: r })).catch(() => ({ src: "STB", data: null })));
       if (needTPB) fetches.push(this.fetchLiveTPBPage(1).then(r => ({ src: "TPB", data: r })).catch(() => ({ src: "TPB", data: null })));
       if (needHDB) fetches.push(this.fetchLiveHDBPage(1).then(r => ({ src: "HDB", data: r })).catch(() => ({ src: "HDB", data: null })));
+      if (needNAB) fetches.push(this.fetchLiveNABPage(1).then(r => ({ src: "NAB", data: r })).catch(() => ({ src: "NAB", data: null })));
+      if (needBVB) fetches.push(this.fetchLiveBVBPage(1).then(r => ({ src: "BVB", data: r })).catch(() => ({ src: "BVB", data: null })));
+      if (needVIK) fetches.push(this.fetchLiveVikkiPage(1).then(r => ({ src: "VIK", data: r })).catch(() => ({ src: "VIK", data: null })));
 
       const results = await Promise.all(fetches);
       
@@ -344,7 +356,10 @@ class BaselJobs {
       if (sessionId !== this.searchSessionId) return;
 
       results.forEach(r => {
-        if (r.src === "VPB") vpbRaw = r.data || [];
+        if (r.src === "VPB" && r.data) {
+          vpbRaw = r.data.jobs || [];
+          totalVpbPages = Math.ceil((r.data.totalJobs || 0) / 10) || 1;
+        }
         if (r.src === "MBB" && r.data) {
           mbbRaw = r.data.content || [];
           totalMbbPages = r.data.totalPages || 1;
@@ -363,6 +378,7 @@ class BaselJobs {
         }
         if (r.src === "STB" && r.data) {
           stbRaw = r.data.jobs || [];
+          totalStbPages = r.data.totalPages || 1;
         }
         if (r.src === "TPB" && r.data) {
           tpbRaw = r.data.items || [];
@@ -371,6 +387,18 @@ class BaselJobs {
         if (r.src === "HDB" && r.data) {
           hdbRaw = r.data || [];
           totalHdbPages = 3;
+        }
+        if (r.src === "NAB" && r.data) {
+          nabRaw = r.data.items || [];
+          totalNabPages = r.data.totalPage || 1;
+        }
+        if (r.src === "BVB" && r.data) {
+          bvbRaw = r.data.jobs || [];
+          totalBvbPages = r.data.totalPages || 1;
+        }
+        if (r.src === "VIK" && r.data) {
+          vikkiRaw = r.data.jobs || [];
+          totalVikkiPages = r.data.totalPages || 1;
         }
       });
 
@@ -382,6 +410,9 @@ class BaselJobs {
       const stbJobs = this.processRawSTBJobs(stbRaw);
       const tpbJobs = this.processRawTPBJobs(tpbRaw);
       const hdbJobs = this.processRawHDBJobs(hdbRaw);
+      const nabJobs = this.processRawNABJobs(nabRaw);
+      const bvbJobs = this.processRawBVBJobs(bvbRaw);
+      const vikkiJobs = this.processRawVikkiJobs(vikkiRaw);
 
       this.jobs = [];
       this.addUniqueJobs(vpbJobs);
@@ -392,6 +423,9 @@ class BaselJobs {
       this.addUniqueJobs(stbJobs);
       this.addUniqueJobs(tpbJobs);
       this.addUniqueJobs(hdbJobs);
+      this.addUniqueJobs(nabJobs);
+      this.addUniqueJobs(bvbJobs);
+      this.addUniqueJobs(vikkiJobs);
 
       // Nếu không lấy được bất cứ công việc nào từ live (ví dụ: bị chặn CORS / Mixed Content trên GitHub Pages)
       if (this.jobs.length === 0) {
@@ -404,7 +438,7 @@ class BaselJobs {
       this.renderJobsList();
 
       // Lazy load các trang còn lại trong nền
-      this.lazyLoadRemainingPages(needVPB, needMBB, needACB, needLPB, needSTB, needTPB, needHDB, totalMbbPages, totalAcbHcmPages, totalAcbHoPages, totalLpbPages, 3, totalTpbPages, totalHdbPages, sessionId);
+      this.lazyLoadRemainingPages(needVPB, needMBB, needACB, needLPB, needSTB, needTPB, needHDB, needNAB, needBVB, needVIK, totalVpbPages, totalMbbPages, totalAcbHcmPages, totalAcbHoPages, totalLpbPages, totalStbPages, totalTpbPages, totalHdbPages, totalNabPages, totalBvbPages, totalVikkiPages, sessionId);
     } catch (err) {
       console.warn("Lỗi tải trực tuyến, chuyển sang nạp cơ sở dữ liệu tuyển dụng offline fallback:", err);
       if (sessionId === this.searchSessionId) {
@@ -422,6 +456,9 @@ class BaselJobs {
           const needSTB = (this.selectedBank === "all" || this.selectedBank === "Sacombank");
           const needTPB = (this.selectedBank === "all" || this.selectedBank === "TPBank");
           const needHDB = (this.selectedBank === "all" || this.selectedBank === "HDBank");
+          const needNAB = (this.selectedBank === "all" || this.selectedBank === "Nam A Bank");
+          const needBVB = (this.selectedBank === "all" || this.selectedBank === "BVBank");
+          const needVIK = (this.selectedBank === "all" || this.selectedBank === "Vikki Bank");
 
           let vpbRaw = needVPB ? (fallbackData.vpb || []) : [];
           let mbbRaw = needMBB ? (fallbackData.mbb?.content || []) : [];
@@ -431,6 +468,12 @@ class BaselJobs {
           let stbRaw = needSTB ? (this.parseStbHtml(fallbackData.stb?.html || "").jobs || []) : [];
           let tpbRaw = needTPB ? (fallbackData.tpb?.items || []) : [];
           let hdbRaw = needHDB ? (fallbackData.hdb || []) : [];
+          let nabRaw = needNAB ? (fallbackData.nab?.items || []) : [];
+          let bvbRaw = needBVB ? (this.parseBvbHtml(fallbackData.bvb?.html || "").jobs || []) : [];
+          let vikkiRaw = needVIK ? [
+            ...(this.parseVikkiHtml(fallbackData.vikki?.html1 || "").jobs || []),
+            ...(this.parseVikkiHtml(fallbackData.vikki?.html2 || "").jobs || [])
+          ] : [];
 
           const vpbJobs = this.processRawJobs(vpbRaw);
           const mbbJobs = this.processRawMBBJobs(mbbRaw);
@@ -440,6 +483,9 @@ class BaselJobs {
           const stbJobs = this.processRawSTBJobs(stbRaw);
           const tpbJobs = this.processRawTPBJobs(tpbRaw);
           const hdbJobs = this.processRawHDBJobs(hdbRaw);
+          const nabJobs = this.processRawNABJobs(nabRaw);
+          const bvbJobs = this.processRawBVBJobs(bvbRaw);
+          const vikkiJobs = this.processRawVikkiJobs(vikkiRaw);
 
           this.jobs = [];
           this.addUniqueJobs(vpbJobs);
@@ -450,6 +496,9 @@ class BaselJobs {
           this.addUniqueJobs(stbJobs);
           this.addUniqueJobs(tpbJobs);
           this.addUniqueJobs(hdbJobs);
+          this.addUniqueJobs(nabJobs);
+          this.addUniqueJobs(bvbJobs);
+          this.addUniqueJobs(vikkiJobs);
 
           this.applyClientFilters();
           this.renderStats();
@@ -503,8 +552,8 @@ class BaselJobs {
       lucide.createIcons();
     }
   }
-  async lazyLoadRemainingPages(needVPB, needMBB, needACB, needLPB, needSTB, needTPB, needHDB, totalMbbPages, totalAcbHcmPages, totalAcbHoPages, totalLpbPages, totalStbPages, totalTpbPages, totalHdbPages, sessionId) {
-    const vpbPages = needVPB ? Array.from({ length: 16 }, (_, i) => ({ bank: "VPB", page: i + 1 })) : [];
+  async lazyLoadRemainingPages(needVPB, needMBB, needACB, needLPB, needSTB, needTPB, needHDB, needNAB, needBVB, needVIK, totalVpbPages, totalMbbPages, totalAcbHcmPages, totalAcbHoPages, totalLpbPages, totalStbPages, totalTpbPages, totalHdbPages, totalNabPages, totalBvbPages, totalVikkiPages, sessionId) {
+    const vpbPages = needVPB ? Array.from({ length: totalVpbPages - 1 }, (_, i) => ({ bank: "VPB", page: i + 1 })) : [];
     const mbbPages = needMBB ? Array.from({ length: totalMbbPages - 1 }, (_, i) => ({ bank: "MBB", page: i + 2 })) : [];
     const acbHcmPages = needACB ? Array.from({ length: totalAcbHcmPages - 1 }, (_, i) => ({ bank: "ACB_HCM", page: i + 2 })) : [];
     const acbHoPages = needACB ? Array.from({ length: totalAcbHoPages - 1 }, (_, i) => ({ bank: "ACB_HO", page: i + 2 })) : [];
@@ -512,9 +561,12 @@ class BaselJobs {
     const stbPages = needSTB ? Array.from({ length: totalStbPages - 1 }, (_, i) => ({ bank: "STB", page: i + 2 })) : [];
     const tpbPages = needTPB ? Array.from({ length: totalTpbPages - 1 }, (_, i) => ({ bank: "TPB", page: i + 2 })) : [];
     const hdbPages = needHDB ? Array.from({ length: totalHdbPages - 1 }, (_, i) => ({ bank: "HDB", page: i + 2 })) : [];
+    const nabPages = needNAB ? Array.from({ length: totalNabPages - 1 }, (_, i) => ({ bank: "NAB", page: i + 2 })) : [];
+    const bvbPages = needBVB ? Array.from({ length: totalBvbPages - 1 }, (_, i) => ({ bank: "BVB", page: i + 2 })) : [];
+    const vikkiPages = needVIK ? Array.from({ length: totalVikkiPages - 1 }, (_, i) => ({ bank: "VIK", page: i + 2 })) : [];
 
     const allPages = [];
-    const maxLen = Math.max(vpbPages.length, mbbPages.length, acbHcmPages.length, acbHoPages.length, lpbPages.length, stbPages.length, tpbPages.length, hdbPages.length);
+    const maxLen = Math.max(vpbPages.length, mbbPages.length, acbHcmPages.length, acbHoPages.length, lpbPages.length, stbPages.length, tpbPages.length, hdbPages.length, nabPages.length, bvbPages.length, vikkiPages.length);
     for (let i = 0; i < maxLen; i++) {
       if (i < vpbPages.length) allPages.push(vpbPages[i]);
       if (i < mbbPages.length) allPages.push(mbbPages[i]);
@@ -524,6 +576,9 @@ class BaselJobs {
       if (i < stbPages.length) allPages.push(stbPages[i]);
       if (i < tpbPages.length) allPages.push(tpbPages[i]);
       if (i < hdbPages.length) allPages.push(hdbPages[i]);
+      if (i < nabPages.length) allPages.push(nabPages[i]);
+      if (i < bvbPages.length) allPages.push(bvbPages[i]);
+      if (i < vikkiPages.length) allPages.push(vikkiPages[i]);
     }
 
     const batchSize = 4;
@@ -535,7 +590,7 @@ class BaselJobs {
       const promises = batch.map(item => {
         if (item.bank === "VPB") {
           return this.fetchLivePageFromVPB(item.page)
-            .then(raw => ({ bank: "VPB", raw }))
+            .then(data => ({ bank: "VPB", raw: data.jobs || [] }))
             .catch(() => ({ bank: "VPB", raw: [] }));
         } else if (item.bank === "MBB") {
           return this.fetchLiveMBBPage(item.page)
@@ -561,6 +616,18 @@ class BaselJobs {
           return this.fetchLiveHDBPage(item.page)
             .then(data => ({ bank: "HDB", raw: data || [] }))
             .catch(() => ({ bank: "HDB", raw: [] }));
+        } else if (item.bank === "NAB") {
+          return this.fetchLiveNABPage(item.page)
+            .then(data => ({ bank: "NAB", raw: data.items || [] }))
+            .catch(() => ({ bank: "NAB", raw: [] }));
+        } else if (item.bank === "BVB") {
+          return this.fetchLiveBVBPage(item.page)
+            .then(data => ({ bank: "BVB", raw: data.jobs || [] }))
+            .catch(() => ({ bank: "BVB", raw: [] }));
+        } else if (item.bank === "VIK") {
+          return this.fetchLiveVikkiPage(item.page)
+            .then(data => ({ bank: "VIK", raw: data.jobs || [] }))
+            .catch(() => ({ bank: "VIK", raw: [] }));
         } else {
           return this.fetchLiveTPBPage(item.page)
             .then(data => ({ bank: "TPB", raw: data.items || [] }))
@@ -583,6 +650,9 @@ class BaselJobs {
             else if (res.bank === "LPB") newJobs.push(...this.processRawLPBJobs(res.raw));
             else if (res.bank === "STB") newJobs.push(...this.processRawSTBJobs(res.raw));
             else if (res.bank === "HDB") newJobs.push(...this.processRawHDBJobs(res.raw));
+            else if (res.bank === "NAB") newJobs.push(...this.processRawNABJobs(res.raw));
+            else if (res.bank === "BVB") newJobs.push(...this.processRawBVBJobs(res.raw));
+            else if (res.bank === "VIK") newJobs.push(...this.processRawVikkiJobs(res.raw));
             else newJobs.push(...this.processRawTPBJobs(res.raw));
           }
         });
@@ -623,7 +693,10 @@ class BaselJobs {
     });
     if (!res.ok) throw new Error(`VPB HTTP ${res.status}`);
     const data = await res.json();
-    return (data.jobSearchResult || []).map(item => item.response || {});
+    return {
+      jobs: (data.jobSearchResult || []).map(item => item.response || {}),
+      totalJobs: data.totalJobs || 0
+    };
   }
 
   async fetchLiveMBBPage(page) {
@@ -747,6 +820,121 @@ class BaselJobs {
     return { jobs, totalPages };
   }
 
+  parseBvbHtml(htmlText) {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(htmlText, "text/html");
+    
+    const jobs = [];
+    const items = doc.querySelectorAll(".jobs .item");
+    items.forEach(item => {
+      const titleEl = item.querySelector(".title a");
+      if (!titleEl) return;
+      const title = titleEl.textContent.trim();
+      let hrefAttr = titleEl.getAttribute("href") || "";
+      let originalUrl = hrefAttr;
+      if (originalUrl && !originalUrl.startsWith("http")) {
+        originalUrl = "https://bvbank.talent.vn" + (originalUrl.startsWith("/") ? "" : "/") + originalUrl;
+      }
+      
+      const infoDivs = item.querySelectorAll(".info");
+      let department = "Kinh doanh & Khác";
+      let location = "TP. Hồ Chí Minh";
+      
+      if (infoDivs[0]) {
+        const firstInfoText = infoDivs[0].innerHTML.split("<span")[0] || "";
+        department = firstInfoText.replace(/&nbsp;/g, "").trim();
+        
+        const links = infoDivs[0].querySelectorAll("a");
+        if (links.length > 0) {
+          location = Array.from(links).map(link => link.textContent.trim().replace(/;\s*$/, "")).filter(Boolean).join(", ");
+        }
+      }
+      
+      let type = "Toàn thời gian";
+      let salary = "Thương lượng";
+      if (infoDivs[1]) {
+        const text = infoDivs[1].textContent.trim();
+        if (text.includes("Thương lượng")) {
+          salary = "Thỏa thuận";
+        }
+        if (text.includes("Toàn thời gian")) {
+          type = "Toàn thời gian";
+        } else if (text.includes("Bán thời gian")) {
+          type = "Bán thời gian";
+        }
+      }
+      
+      const idMatch = originalUrl.match(/-(\d+)$/);
+      const id = idMatch ? idMatch[1] : Math.random().toString(36).substr(2, 9);
+      
+      jobs.push({
+        id, title, department, location, type, salary, originalUrl
+      });
+    });
+
+    let totalPages = 1;
+    const pagDiv = doc.querySelector(".__pag");
+    if (pagDiv) {
+      const pagLinks = pagDiv.querySelectorAll("a.pag");
+      const pages = [];
+      pagLinks.forEach(a => {
+        const href = a.getAttribute("href") || "";
+        const m = href.match(/page=(\d+)/);
+        if (m) pages.push(parseInt(m[1], 10));
+      });
+      if (pages.length > 0) totalPages = Math.max(...pages);
+    }
+
+    return { jobs, totalPages };
+  }
+
+  parseVikkiHtml(htmlText) {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(htmlText, "text/html");
+    
+    const jobs = [];
+    const items = doc.querySelectorAll(".slide-content");
+    items.forEach(item => {
+      const titleEl = item.querySelector(".slide-entry-title a");
+      if (!titleEl) return;
+      const title = titleEl.textContent.trim();
+      const originalUrl = titleEl.getAttribute("href") || "";
+      
+      let location = "TP. Hồ Chí Minh";
+      const excerptEl = item.querySelector(".slide-entry-excerpt");
+      if (excerptEl) {
+        const text = excerptEl.textContent.trim();
+        if (text.includes("Khu vực:")) {
+          location = text.replace("Khu vực:", "").trim();
+        }
+      }
+      
+      let dateText = "";
+      const timeEl = item.querySelector(".slide-meta-time");
+      if (timeEl) {
+        dateText = timeEl.textContent.trim();
+      }
+      
+      const slugMatch = originalUrl.match(/vikkibank\.vn\/([^\/]+)\/?$/);
+      const id = slugMatch ? slugMatch[1] : Math.random().toString(36).substr(2, 9);
+      
+      jobs.push({
+        id, title, location, dateText, originalUrl
+      });
+    });
+
+    let totalPages = 1;
+    const metaEl = doc.querySelector(".pagination-meta");
+    if (metaEl) {
+      const match = metaEl.textContent.match(/of\s+(\d+)/);
+      if (match) {
+        totalPages = parseInt(match[1], 10);
+      }
+    }
+
+    return { jobs, totalPages };
+  }
+
   async fetchLiveLPBPage(page) {
     const qs = `DeltaDataLocation=01000000-6ba6-4a0b-c110-08de81da9f2e&pageIndex=${page}&pageSize=10&Domain=tuyendung.lpbank.com.vn`;
     let baseUrl = this.resolveApiUrl(`/api/jobs/lpbank?${qs}`, `https://centralize-api-v2.iviec.vn/api/recruitment/Recruitment/GetRecruitmentsByDomain?${qs}`);
@@ -818,7 +1006,18 @@ class BaselJobs {
         id, title, facility: facility || "Hội sở", department, location, originalUrl
       });
     });
-    return { jobs };
+
+    let totalPages = 1;
+    const labelEl = doc.querySelector("#tile-search-results-label");
+    if (labelEl) {
+      const match = labelEl.textContent.match(/(?:trong\s+s[ốố]\s+|of\s+)(\d+)/i);
+      if (match) {
+        const totalJobs = parseInt(match[1], 10);
+        totalPages = Math.ceil(totalJobs / 20) || 1;
+      }
+    }
+
+    return { jobs, totalPages };
   }
 
   async fetchLiveTPBPage(page) {
@@ -865,6 +1064,56 @@ class BaselJobs {
     if (!res.ok) throw new Error(`HDBank HTTP ${res.status}`);
     const data = await res.json();
     return data.dataItem || [];
+  }
+
+  async fetchLiveNABPage(page) {
+    const qs = `DeltaDataLocation=01000000-55fa-2a14-5f5b-08ddff0fd568&pageIndex=${page}&pageSize=10&Domain=tuyendung.namabank.com.vn`;
+    let baseUrl = this.resolveApiUrl(`/api/jobs/namabank?${qs}`, `https://centralize-api-v2.iviec.vn/api/recruitment/Recruitment/GetRecruitmentsByDomain?${qs}`);
+    if (baseUrl.startsWith("http://localhost:8000")) {
+      try {
+        const t = await fetch("http://localhost:8000/api/jobs/namabank", { method: "OPTIONS" });
+        if (!t.ok) baseUrl = `https://centralize-api-v2.iviec.vn/api/recruitment/Recruitment/GetRecruitmentsByDomain?${qs}`;
+      } catch (_) {
+        baseUrl = `https://centralize-api-v2.iviec.vn/api/recruitment/Recruitment/GetRecruitmentsByDomain?${qs}`;
+      }
+    }
+    const res = await fetch(baseUrl, { headers: { "Accept": "application/json" } });
+    if (!res.ok) throw new Error(`NamABank HTTP ${res.status}`);
+    return await res.json();
+  }
+
+  async fetchLiveBVBPage(page) {
+    const qs = `location=&type=&dept=&return=1&page=${page}`;
+    let baseUrl = this.resolveApiUrl(`/api/jobs/bvbank?${qs}`, `https://bvbank.talent.vn/jobs?${qs}`);
+    if (baseUrl.startsWith("http://localhost:8000")) {
+      try {
+        const t = await fetch("http://localhost:8000/api/jobs/bvbank", { method: "OPTIONS" });
+        if (!t.ok) baseUrl = `https://bvbank.talent.vn/jobs?${qs}`;
+      } catch (_) {
+        baseUrl = `https://bvbank.talent.vn/jobs?${qs}`;
+      }
+    }
+    const res = await fetch(baseUrl);
+    if (!res.ok) throw new Error(`BVBank HTTP ${res.status}`);
+    const htmlText = await res.text();
+    return this.parseBvbHtml(htmlText);
+  }
+
+  async fetchLiveVikkiPage(page) {
+    const qs = `avia-element-paging=${page}`;
+    let baseUrl = this.resolveApiUrl(`/api/jobs/vikki?${qs}`, `https://vikkibank.vn/tuyen-dung/?${qs}`);
+    if (baseUrl.startsWith("http://localhost:8000")) {
+      try {
+        const t = await fetch("http://localhost:8000/api/jobs/vikki", { method: "OPTIONS" });
+        if (!t.ok) baseUrl = `https://vikkibank.vn/tuyen-dung/?${qs}`;
+      } catch (_) {
+        baseUrl = `https://vikkibank.vn/tuyen-dung/?${qs}`;
+      }
+    }
+    const res = await fetch(baseUrl);
+    if (!res.ok) throw new Error(`Vikki HTTP ${res.status}`);
+    const htmlText = await res.text();
+    return this.parseVikkiHtml(htmlText);
   }
 
   // ── Xử lý dữ liệu VPBank ─────────────────────────────────────────
@@ -1307,6 +1556,202 @@ class BaselJobs {
       .replace(/\-\-+/g, '-')
       .replace(/^-+/, '')
       .replace(/-+$/, '');
+  }
+
+  processRawNABJobs(rawJobs) {
+    if (!rawJobs) return [];
+    return rawJobs.map((job, idx) => {
+      const title = (job.name || "").trim();
+      const titleLower = title.toLowerCase();
+      
+      let deptName = "Kinh doanh & Khác";
+      const deptData = (job.recruitmentDeltaDatas || []).find(d => d.workspaceDeltaDataKey === "job_department");
+      if (deptData && deptData.workspaceDeltaDataValue) {
+        try {
+          const parsed = JSON.parse(deptData.workspaceDeltaDataValue);
+          if (parsed.name_VN) deptName = parsed.name_VN.trim();
+        } catch (_) {}
+      }
+      const deptNameLower = deptName.toLowerCase();
+
+      let deptCode = "business";
+      if (["rủi ro","pháp chế","tuân thủ","kiểm toán","pháp lý","thu hồi","xử lý nợ","tố tụng","giám sát tín dụng"].some(k => titleLower.includes(k) || deptNameLower.includes(k))) deptCode = "risk-legal";
+      else if (["it","cntt","công nghệ","data","dữ liệu","lập trình","phần mềm","hệ thống","security","developer","tester","analyst","an toàn thông tin"].some(k => matchKeyword(titleLower, k) || matchKeyword(deptNameLower, k))) deptCode = "it-data";
+
+      let levelText = "";
+      const levelData = (job.recruitmentDeltaDatas || []).find(d => d.workspaceDeltaDataKey === "job_level");
+      if (levelData && levelData.workspaceDeltaDataValue) {
+        try {
+          const parsed = JSON.parse(levelData.workspaceDeltaDataValue);
+          if (parsed.name_VN) levelText = parsed.name_VN.trim();
+        } catch (_) {}
+      }
+      
+      const checkText = (title + " " + levelText).toLowerCase();
+      let level = "junior-mid", levelName = "Chuyên viên";
+      if (["fresh", "học việc", "thực tập", "tập sự", "intern"].some(k => checkText.includes(k))) { 
+        level = "intern"; 
+        levelName = "Thực tập sinh / Tập sự"; 
+      } else if (["manager", "trưởng nhóm", "trưởng phòng", "quản lý", "giám đốc", "lead", "head", "director"].some(k => checkText.includes(k))) { 
+        level = "lead-manager"; 
+        levelName = "Quản lý / Giám đốc"; 
+      } else if (["chuyên viên cao cấp","cvcc","senior","chuyên gia","chủ trì"].some(k => checkText.includes(k))) { 
+        level = "senior"; 
+        levelName = "Chuyên viên cao cấp"; 
+      }
+
+      let location = "TP. Hồ Chí Minh";
+      if (job.workingNewAddresses && job.workingNewAddresses.length > 0) {
+        location = job.workingNewAddresses.map(addr => addr.provinceName).filter(Boolean).join(", ");
+      }
+
+      let salary = "Thỏa thuận";
+      if (job.minSalary || job.maxSalary) {
+        if (job.minSalary && job.maxSalary) {
+          salary = `${Math.round(job.minSalary/1000000)} - ${Math.round(job.maxSalary/1000000)} triệu`;
+        } else if (job.minSalary) {
+          salary = `Từ ${Math.round(job.minSalary/1000000)} triệu`;
+        } else {
+          salary = `Đến ${Math.round(job.maxSalary/1000000)} triệu`;
+        }
+      }
+
+      const deadline = "2026-12-31"; 
+
+      const tags = ["Nam A Bank"];
+      if (location) tags.push(location.split(",")[0].trim());
+      
+      const originalUrl = `https://tuyendung.namabank.com.vn/vi/jobs/${job.slug}`;
+
+      return { 
+        id: `job-nab-${job.id || job.slug || idx}`, 
+        title, 
+        bank: "Nam A Bank", 
+        bankCode: "NAB", 
+        logoColor: "linear-gradient(135deg,#eab308 0%,#d97706 100%)", 
+        department: deptCode, 
+        departmentName: deptName, 
+        location, 
+        salary, 
+        level, 
+        levelName, 
+        deadline, 
+        tags, 
+        hrEmail: "tuyendung@namabank.com.vn", 
+        originalUrl 
+      };
+    });
+  }
+
+  processRawBVBJobs(rawJobs) {
+    if (!rawJobs) return [];
+    return rawJobs.map((job, idx) => {
+      const title = (job.title || "").trim();
+      const titleLower = title.toLowerCase();
+      const location = job.location || "TP. Hồ Chí Minh";
+      const deptName = job.department || "Kinh doanh & Khác";
+      const deptNameLower = deptName.toLowerCase();
+
+      let deptCode = "business";
+      if (["rủi ro","pháp chế","tuân thủ","kiểm toán","pháp lý","thu hồi","xử lý nợ","giám sát tín dụng","tố tụng"].some(k => titleLower.includes(k) || deptNameLower.includes(k))) {
+        deptCode = "risk-legal";
+      } else if (["it","cntt","công nghệ","data","dữ liệu","lập trình","phần mềm","hệ thống","security","developer","tester","analyst","an toàn thông tin","kiến trúc"].some(k => matchKeyword(titleLower, k) || matchKeyword(deptNameLower, k))) {
+        deptCode = "it-data";
+      }
+
+      let level = "junior-mid", levelName = "Chuyên viên";
+      if (["thực tập","tập sự","intern"].some(k => titleLower.includes(k))) { 
+        level = "intern"; 
+        levelName = "Thực tập sinh / Tập sự"; 
+      } else if (["chuyên viên cao cấp","cvcc","senior","chuyên gia"].some(k => titleLower.includes(k))) { 
+        level = "senior"; 
+        levelName = "Chuyên viên cao cấp"; 
+      } else if (["trưởng nhóm","trưởng phòng","quản lý","giám đốc","lead","manager","head","director","trưởng bộ phận"].some(k => titleLower.includes(k))) { 
+        level = "lead-manager"; 
+        levelName = "Quản lý / Giám đốc"; 
+      }
+
+      const deadline = "2026-12-31"; // Default
+      const rawId = job.id;
+      const originalUrl = job.originalUrl;
+      const salary = job.salary || "Thỏa thuận";
+      
+      const tags = ["BVBank"];
+      if (job.type) tags.push(job.type);
+
+      return { 
+        id: `job-bvb-${rawId || idx}`, 
+        title, 
+        bank: "BVBank", 
+        bankCode: "BVB", 
+        logoColor: "linear-gradient(135deg,#0369a1 0%,#0284c7 100%)", // Ocean Blue representing BVBank
+        department: deptCode, 
+        departmentName: deptName, 
+        location, 
+        salary, 
+        level, 
+        levelName, 
+        deadline, 
+        tags, 
+        hrEmail: "tuyendung@bvbank.com.vn", 
+        originalUrl 
+      };
+    });
+  }
+
+  processRawVikkiJobs(rawJobs) {
+    if (!rawJobs) return [];
+    return rawJobs.map((job, idx) => {
+      const title = (job.title || "").trim();
+      const titleLower = title.toLowerCase();
+      const location = job.location || "TP. Hồ Chí Minh";
+      const deptName = "Nghiệp vụ ngân hàng";
+      
+      let deptCode = "business";
+      if (["rủi ro","pháp chế","tuân thủ","kiểm toán","pháp lý","thu hồi","xử lý nợ","giám sát tín dụng","tố tụng","kiểm soát"].some(k => titleLower.includes(k))) {
+        deptCode = "risk-legal";
+      } else if (["it","cntt","công nghệ","data","dữ liệu","lập trình","phần mềm","hệ thống","security","developer","tester","analyst","an toàn thông tin","mạng","viễn thông"].some(k => matchKeyword(titleLower, k))) {
+        deptCode = "it-data";
+      }
+
+      let level = "junior-mid", levelName = "Chuyên viên";
+      if (["thực tập","tập sự","intern","học việc"].some(k => titleLower.includes(k))) { 
+        level = "intern"; 
+        levelName = "Thực tập sinh / Tập sự"; 
+      } else if (["chuyên viên cao cấp","cvcc","senior","chuyên gia","qlcc"].some(k => titleLower.includes(k))) { 
+        level = "senior"; 
+        levelName = "Chuyên viên cao cấp"; 
+      } else if (["trưởng nhóm","trưởng phòng","quản lý","giám đốc","lead","manager","head","director","trưởng bộ phận"].some(k => titleLower.includes(k))) { 
+        level = "lead-manager"; 
+        levelName = "Quản lý / Giám đốc"; 
+      }
+
+      const deadline = job.dateText ? `Đăng ngày ${job.dateText}` : "2026-12-31"; 
+      const rawId = job.id;
+      const originalUrl = job.originalUrl;
+      const salary = "Thỏa thuận";
+      
+      const tags = ["Vikki Bank"];
+      if (location) tags.push(location.split(",")[0].trim());
+
+      return { 
+        id: `job-vikki-${rawId || idx}`, 
+        title, 
+        bank: "Vikki Bank", 
+        bankCode: "Vikki", 
+        logoColor: "linear-gradient(135deg,#db2777 0%,#9d174d 100%)", // Pink representing Vikki Bank
+        department: deptCode, 
+        departmentName: deptName, 
+        location, 
+        salary, 
+        level, 
+        levelName, 
+        deadline, 
+        tags, 
+        hrEmail: "tuyendung@vikkibank.vn", 
+        originalUrl 
+      };
+    });
   }
 
   // ── Lọc phía client (top-bar + column filters) ───────────────────

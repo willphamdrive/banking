@@ -154,6 +154,48 @@ def main():
         except Exception as e:
             print(f"Lỗi HDB page {page}: {e}")
 
+    # 9. NamABank (pages 1 and 2)
+    nab_items = []
+    for page in [1, 2]:
+        try:
+            qs = f"DeltaDataLocation=01000000-55fa-2a14-5f5b-08ddff0fd568&pageIndex={page}&pageSize=10&Domain=tuyendung.namabank.com.vn"
+            with urllib.request.urlopen(f"http://localhost:8000/api/jobs/namabank?{qs}", timeout=10) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+                page_jobs = data.get("items", [])
+                nab_items.extend(page_jobs)
+                print(f"NAB page {page}: Tải thành công {len(page_jobs)} việc làm.")
+        except Exception as e:
+            print(f"Lỗi NAB page {page}: {e}")
+
+    # 10. BVBank (page 1)
+    bvb_html = ""
+    try:
+        url = "http://localhost:8000/api/jobs/bvbank?location=&type=&dept=&return=1&page=1"
+        with urllib.request.urlopen(url, timeout=10) as resp:
+            bvb_html = resp.read().decode("utf-8")
+            print(f"BVB page 1 HTML: Tải thành công (Độ dài: {len(bvb_html)} ký tự).")
+    except Exception as e:
+        print(f"Lỗi BVB: {e}")
+
+    # 11. Vikki Bank (pages 1 and 2)
+    vikki_html_1 = ""
+    vikki_html_2 = ""
+    try:
+        url_1 = "http://localhost:8000/api/jobs/vikki?avia-element-paging=1"
+        with urllib.request.urlopen(url_1, timeout=10) as resp:
+            vikki_html_1 = resp.read().decode("utf-8")
+            print(f"Vikki page 1 HTML: Tải thành công (Độ dài: {len(vikki_html_1)} ký tự).")
+    except Exception as e:
+        print(f"Lỗi Vikki page 1: {e}")
+        
+    try:
+        url_2 = "http://localhost:8000/api/jobs/vikki?avia-element-paging=2"
+        with urllib.request.urlopen(url_2, timeout=10) as resp:
+            vikki_html_2 = resp.read().decode("utf-8")
+            print(f"Vikki page 2 HTML: Tải thành công (Độ dài: {len(vikki_html_2)} ký tự).")
+    except Exception as e:
+        print(f"Lỗi Vikki page 2: {e}")
+
     # Tạo cấu trúc lưu trữ
     result = {
         "vpb": vpb_jobs,
@@ -180,7 +222,19 @@ def main():
             "items": tpb_items,
             "totalPage": 2
         },
-        "hdb": hdb_jobs
+        "hdb": hdb_jobs,
+        "nab": {
+            "items": nab_items,
+            "totalPage": 2
+        },
+        "bvb": {
+            "html": bvb_html
+        },
+        "vikki": {
+            "html1": vikki_html_1,
+            "html2": vikki_html_2,
+            "totalPage": 2
+        }
     }
     
     output_path = "/Users/toanpham/Desktop/banking/jobs_database.json"

@@ -488,3 +488,54 @@ Tôi đã phân tích cấu trúc và bổ sung thành công ngân hàng HDBank 
 4. **Cập nhật tập lệnh cào offline `save_jobs_db.py`**:
    - Tích hợp HDBank vào quy trình cào dữ liệu tự động, lưu trực tiếp dữ liệu dạng JSON vào trường `hdb` trong cơ sở dữ liệu offline `jobs_database.json` và đồng bộ tự động lên GitHub qua Git commands.
 
+---
+
+## 🟡 Tích hợp Dữ liệu Tuyển dụng Nam A Bank (NAB)
+Tôi đã hoàn thành tích hợp dữ liệu tuyển dụng của Nam A Bank (NAB) vào phân hệ Tuyển dụng:
+1. **Proxy API trong `run_app.py`**:
+   - Bổ sung định tuyến `/api/jobs/namabank` để chuyển tiếp yêu cầu đến API của Nam A Bank trên hệ thống đối tác iViec (`https://centralize-api-v2.iviec.vn/api/recruitment/Recruitment/GetRecruitmentsByDomain`), mang các tham số `DeltaDataLocation` và `Domain` đặc thù của Nam A Bank.
+2. **Hiển thị giao diện trong `index.html`**:
+   - Thêm nút lọc ngân hàng **🟡 Nam A Bank** với màu vàng thương hiệu (`#eab308`) vào thanh bộ lọc nhanh các ngân hàng.
+3. **Logic cào & xử lý dữ liệu trong `js/jobs.js`**:
+   - Thêm phương thức `fetchLiveNABPage` gọi qua server proxy.
+   - Thêm phương thức `processRawNABJobs` chuẩn hóa dữ liệu:
+     - Tạo liên kết chi tiết tin tuyển dụng: `https://tuyendung.namabank.com.vn/vi/jobs/{slug}`.
+     - Phân loại thông minh các khối phòng ban (Rủi ro/CNTT/Kinh doanh) và cấp bậc công việc.
+   - Tích hợp Nam A Bank vào bộ lazy loading pagination ngầm.
+4. **Cập nhật tập lệnh cào offline `save_jobs_db.py`**:
+   - Tích hợp Nam A Bank vào quy trình cào tự động và lưu trữ offline vào tệp `jobs_database.json`.
+
+---
+
+## 🔵 Tích hợp Dữ liệu Tuyển dụng BVBank (BVB)
+Tôi đã hoàn thành tích hợp dữ liệu tuyển dụng của BVBank (Bản Việt) vào phân hệ Tuyển dụng:
+1. **Proxy API trong `run_app.py`**:
+   - Bổ sung định tuyến `/api/jobs/bvbank` để chuyển tiếp yêu cầu đến API tuyển dụng Base Talent của Bản Việt Bank (`https://bvbank.talent.vn/jobs`), sử dụng Cookie định danh và các Header cần thiết để vượt qua các lớp bảo mật API.
+2. **Hiển thị giao diện trong `index.html`**:
+   - Thêm nút lọc ngân hàng **🔵 BVBank** với màu xanh đậm đại diện (`#025b96`) kế bên bộ lọc Nam A Bank.
+3. **Logic cào & xử lý dữ liệu trong `js/jobs.js`**:
+   - Thêm phương thức `fetchLiveBVBPage` và bộ phân tách DOM HTML `parseBvbHtml` tương tự như ACB để phân tách danh sách tin từ Base Talent.
+   - Thêm phương thức `processRawBVBJobs` chuẩn hóa dữ liệu:
+     - Tạo liên kết chi tiết tin tuyển dụng: `https://bvbank.talent.vn/job/{slug-id}`.
+     - Phân loại thông minh khối phòng ban và cấp bậc công việc.
+   - Tích hợp BVBank vào bộ lazy loading pagination ngầm.
+4. **Cập nhật tập lệnh cào offline `save_jobs_db.py`**:
+   - Tích hợp BVBank vào quy trình cào tự động và lưu trữ offline vào trường `bvb` trong tệp `jobs_database.json`.
+
+---
+
+## 🌸 Tích hợp Dữ liệu Tuyển dụng Vikki Bank (Vikki)
+Tôi đã hoàn thành tích hợp dữ liệu tuyển dụng của Vikki Bank vào phân hệ Tuyển dụng:
+1. **Proxy API trong `run_app.py`**:
+   - Bổ sung định tuyến `/api/jobs/vikki` chuyển tiếp yêu cầu đến trang tuyển dụng Enfold WordPress của Vikki Bank (`https://vikkibank.vn/tuyen-dung/`), sử dụng tham số `avia-element-paging=X` để phân trang và Cookies, Headers tương thích.
+2. **Hiển thị giao diện trong `index.html`**:
+   - Thêm nút lọc ngân hàng **🌸 Vikki Bank** với màu hồng đặc trưng (`#db2777`) kế bên bộ lọc BVBank.
+3. **Logic cào & xử lý dữ liệu trong `js/jobs.js`**:
+   - Thêm phương thức `fetchLiveVikkiPage` gọi API và `parseVikkiHtml` phân tách cấu trúc HTML slide của Enfold theme để thu thập danh sách tin tuyển dụng.
+   - Thêm phương thức `processRawVikkiJobs` chuẩn hóa dữ liệu:
+     - Tạo liên kết tin tuyển dụng: `https://vikkibank.vn/{slug}/`.
+     - Trích xuất thông tin khu vực/vị trí làm việc từ đoạn mô tả tóm tắt.
+     - Phân loại thông minh khối phòng ban và cấp bậc công việc.
+   - Tích hợp Vikki Bank vào bộ lazy loading pagination ngầm.
+4. **Cập nhật tập lệnh cào offline `save_jobs_db.py`**:
+   - Tích hợp Vikki Bank vào quy trình cào tự động (quét trang 1 và 2) và lưu trữ offline vào trường `vikki` trong tệp `jobs_database.json`.

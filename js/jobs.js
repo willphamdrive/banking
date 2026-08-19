@@ -127,6 +127,8 @@ class BaselJobs {
           else if (bk === "MB Bank") { b.style.borderColor = "#60a5fa"; b.style.color = "#60a5fa"; }
           else if (bk === "ACB")     { b.style.borderColor = "#fb923c"; b.style.color = "#fb923c"; }
           else if (bk === "LPBank")  { b.style.borderColor = "#dc2626"; b.style.color = "#dc2626"; }
+          else if (bk === "Sacombank") { b.style.borderColor = "#0284c7"; b.style.color = "#0284c7"; }
+          else if (bk === "TPBank")   { b.style.borderColor = "#7c3aed"; b.style.color = "#7c3aed"; }
           else if (bk === "saved")  { b.style.borderColor = "#f59e0b"; b.style.color = "#f59e0b"; }
         });
         // Active nút được chọn
@@ -137,6 +139,8 @@ class BaselJobs {
         else if (bank === "MB Bank") { btn.style.background = "#60a5fa"; btn.style.color = "white"; }
         else if (bank === "ACB")     { btn.style.background = "#fb923c"; btn.style.borderColor = "#fb923c"; btn.style.color = "white"; }
         else if (bank === "LPBank")  { btn.style.background = "#dc2626"; btn.style.borderColor = "#dc2626"; btn.style.color = "white"; }
+        else if (bank === "Sacombank") { btn.style.background = "#0284c7"; btn.style.borderColor = "#0284c7"; btn.style.color = "white"; }
+        else if (bank === "TPBank")   { btn.style.background = "#7c3aed"; btn.style.borderColor = "#7c3aed"; btn.style.color = "white"; }
         else if (bank === "saved")  { btn.style.background = "#f59e0b"; btn.style.borderColor = "#f59e0b"; btn.style.color = "white"; }
         
         // Lọc ngay lập tức
@@ -313,9 +317,11 @@ class BaselJobs {
       const needMBB = (this.selectedBank === "all" || this.selectedBank === "MB Bank");
       const needACB = (this.selectedBank === "all" || this.selectedBank === "ACB");
       const needLPB = (this.selectedBank === "all" || this.selectedBank === "LPBank");
+      const needSTB = (this.selectedBank === "all" || this.selectedBank === "Sacombank");
+      const needTPB = (this.selectedBank === "all" || this.selectedBank === "TPBank");
 
-      let vpbRaw = [], mbbRaw = [], acbHcmRaw = [], acbHoRaw = [], lpbRaw = [];
-      let totalMbbPages = 1, totalAcbHcmPages = 1, totalAcbHoPages = 1, totalLpbPages = 1;
+      let vpbRaw = [], mbbRaw = [], acbHcmRaw = [], acbHoRaw = [], lpbRaw = [], stbRaw = [], tpbRaw = [];
+      let totalMbbPages = 1, totalAcbHcmPages = 1, totalAcbHoPages = 1, totalLpbPages = 1, totalTpbPages = 1;
 
       const fetches = [];
       if (needVPB) fetches.push(this.fetchLivePageFromVPB(0).then(r => ({ src: "VPB", data: r })).catch(() => ({ src: "VPB", data: [] })));
@@ -325,6 +331,8 @@ class BaselJobs {
         fetches.push(this.fetchLiveACBPage(1, 86).then(r => ({ src: "ACB_HO", data: r })).catch(() => ({ src: "ACB_HO", data: null })));
       }
       if (needLPB) fetches.push(this.fetchLiveLPBPage(1).then(r => ({ src: "LPB", data: r })).catch(() => ({ src: "LPB", data: null })));
+      if (needSTB) fetches.push(this.fetchLiveSTBPage(1).then(r => ({ src: "STB", data: r })).catch(() => ({ src: "STB", data: null })));
+      if (needTPB) fetches.push(this.fetchLiveTPBPage(1).then(r => ({ src: "TPB", data: r })).catch(() => ({ src: "TPB", data: null })));
 
       const results = await Promise.all(fetches);
       
@@ -349,6 +357,13 @@ class BaselJobs {
           lpbRaw = r.data.items || [];
           totalLpbPages = r.data.totalPage || 1;
         }
+        if (r.src === "STB" && r.data) {
+          stbRaw = r.data.jobs || [];
+        }
+        if (r.src === "TPB" && r.data) {
+          tpbRaw = r.data.items || [];
+          totalTpbPages = r.data.totalPage || 1;
+        }
       });
 
       const vpbJobs = this.processRawJobs(vpbRaw);
@@ -356,6 +371,8 @@ class BaselJobs {
       const acbHcmJobs = this.processRawACBJobs(acbHcmRaw);
       const acbHoJobs = this.processRawACBJobs(acbHoRaw);
       const lpbJobs = this.processRawLPBJobs(lpbRaw);
+      const stbJobs = this.processRawSTBJobs(stbRaw);
+      const tpbJobs = this.processRawTPBJobs(tpbRaw);
 
       this.jobs = [];
       this.addUniqueJobs(vpbJobs);
@@ -363,6 +380,8 @@ class BaselJobs {
       this.addUniqueJobs(acbHcmJobs);
       this.addUniqueJobs(acbHoJobs);
       this.addUniqueJobs(lpbJobs);
+      this.addUniqueJobs(stbJobs);
+      this.addUniqueJobs(tpbJobs);
 
       // Nếu không lấy được bất cứ công việc nào từ live (ví dụ: bị chặn CORS / Mixed Content trên GitHub Pages)
       if (this.jobs.length === 0) {
@@ -375,7 +394,7 @@ class BaselJobs {
       this.renderJobsList();
 
       // Lazy load các trang còn lại trong nền
-      this.lazyLoadRemainingPages(needVPB, needMBB, needACB, needLPB, totalMbbPages, totalAcbHcmPages, totalAcbHoPages, totalLpbPages, sessionId);
+      this.lazyLoadRemainingPages(needVPB, needMBB, needACB, needLPB, needSTB, needTPB, totalMbbPages, totalAcbHcmPages, totalAcbHoPages, totalLpbPages, 3, totalTpbPages, sessionId);
     } catch (err) {
       console.warn("Lỗi tải trực tuyến, chuyển sang nạp cơ sở dữ liệu tuyển dụng offline fallback:", err);
       if (sessionId === this.searchSessionId) {
@@ -390,18 +409,24 @@ class BaselJobs {
           const needMBB = (this.selectedBank === "all" || this.selectedBank === "MB Bank");
           const needACB = (this.selectedBank === "all" || this.selectedBank === "ACB");
           const needLPB = (this.selectedBank === "all" || this.selectedBank === "LPBank");
+          const needSTB = (this.selectedBank === "all" || this.selectedBank === "Sacombank");
+          const needTPB = (this.selectedBank === "all" || this.selectedBank === "TPBank");
 
           let vpbRaw = needVPB ? (fallbackData.vpb || []) : [];
           let mbbRaw = needMBB ? (fallbackData.mbb?.content || []) : [];
           let acbHcmRaw = needACB ? (this.parseAcbHtml(fallbackData.acb_hcm?.html || "").jobs || []) : [];
           let acbHoRaw = needACB ? (this.parseAcbHtml(fallbackData.acb_ho?.html || "").jobs || []) : [];
           let lpbRaw = needLPB ? (fallbackData.lpb?.items || []) : [];
+          let stbRaw = needSTB ? (this.parseStbHtml(fallbackData.stb?.html || "").jobs || []) : [];
+          let tpbRaw = needTPB ? (fallbackData.tpb?.items || []) : [];
 
           const vpbJobs = this.processRawJobs(vpbRaw);
           const mbbJobs = this.processRawMBBJobs(mbbRaw);
           const acbHcmJobs = this.processRawACBJobs(acbHcmRaw);
           const acbHoJobs = this.processRawACBJobs(acbHoRaw);
           const lpbJobs = this.processRawLPBJobs(lpbRaw);
+          const stbJobs = this.processRawSTBJobs(stbRaw);
+          const tpbJobs = this.processRawTPBJobs(tpbRaw);
 
           this.jobs = [];
           this.addUniqueJobs(vpbJobs);
@@ -409,6 +434,8 @@ class BaselJobs {
           this.addUniqueJobs(acbHcmJobs);
           this.addUniqueJobs(acbHoJobs);
           this.addUniqueJobs(lpbJobs);
+          this.addUniqueJobs(stbJobs);
+          this.addUniqueJobs(tpbJobs);
 
           this.applyClientFilters();
           this.renderStats();
@@ -462,21 +489,25 @@ class BaselJobs {
       lucide.createIcons();
     }
   }
-  async lazyLoadRemainingPages(needVPB, needMBB, needACB, needLPB, totalMbbPages, totalAcbHcmPages, totalAcbHoPages, totalLpbPages, sessionId) {
+  async lazyLoadRemainingPages(needVPB, needMBB, needACB, needLPB, needSTB, needTPB, totalMbbPages, totalAcbHcmPages, totalAcbHoPages, totalLpbPages, totalStbPages, totalTpbPages, sessionId) {
     const vpbPages = needVPB ? Array.from({ length: 16 }, (_, i) => ({ bank: "VPB", page: i + 1 })) : [];
     const mbbPages = needMBB ? Array.from({ length: totalMbbPages - 1 }, (_, i) => ({ bank: "MBB", page: i + 2 })) : [];
     const acbHcmPages = needACB ? Array.from({ length: totalAcbHcmPages - 1 }, (_, i) => ({ bank: "ACB_HCM", page: i + 2 })) : [];
     const acbHoPages = needACB ? Array.from({ length: totalAcbHoPages - 1 }, (_, i) => ({ bank: "ACB_HO", page: i + 2 })) : [];
     const lpbPages = needLPB ? Array.from({ length: totalLpbPages - 1 }, (_, i) => ({ bank: "LPB", page: i + 2 })) : [];
+    const stbPages = needSTB ? Array.from({ length: totalStbPages - 1 }, (_, i) => ({ bank: "STB", page: i + 2 })) : [];
+    const tpbPages = needTPB ? Array.from({ length: totalTpbPages - 1 }, (_, i) => ({ bank: "TPB", page: i + 2 })) : [];
 
     const allPages = [];
-    const maxLen = Math.max(vpbPages.length, mbbPages.length, acbHcmPages.length, acbHoPages.length, lpbPages.length);
+    const maxLen = Math.max(vpbPages.length, mbbPages.length, acbHcmPages.length, acbHoPages.length, lpbPages.length, stbPages.length, tpbPages.length);
     for (let i = 0; i < maxLen; i++) {
       if (i < vpbPages.length) allPages.push(vpbPages[i]);
       if (i < mbbPages.length) allPages.push(mbbPages[i]);
       if (i < acbHcmPages.length) allPages.push(acbHcmPages[i]);
       if (i < acbHoPages.length) allPages.push(acbHoPages[i]);
       if (i < lpbPages.length) allPages.push(lpbPages[i]);
+      if (i < stbPages.length) allPages.push(stbPages[i]);
+      if (i < tpbPages.length) allPages.push(tpbPages[i]);
     }
 
     const batchSize = 4;
@@ -502,10 +533,18 @@ class BaselJobs {
           return this.fetchLiveACBPage(item.page, 86)
             .then(data => ({ bank: "ACB", raw: data.jobs || [] }))
             .catch(() => ({ bank: "ACB", raw: [] }));
-        } else {
+        } else if (item.bank === "LPB") {
           return this.fetchLiveLPBPage(item.page)
             .then(data => ({ bank: "LPB", raw: data.items || [] }))
             .catch(() => ({ bank: "LPB", raw: [] }));
+        } else if (item.bank === "STB") {
+          return this.fetchLiveSTBPage(item.page)
+            .then(data => ({ bank: "STB", raw: data.jobs || [] }))
+            .catch(() => ({ bank: "STB", raw: [] }));
+        } else {
+          return this.fetchLiveTPBPage(item.page)
+            .then(data => ({ bank: "TPB", raw: data.items || [] }))
+            .catch(() => ({ bank: "TPB", raw: [] }));
         }
       });
 
@@ -521,7 +560,9 @@ class BaselJobs {
             if (res.bank === "VPB") newJobs.push(...this.processRawJobs(res.raw));
             else if (res.bank === "MBB") newJobs.push(...this.processRawMBBJobs(res.raw));
             else if (res.bank === "ACB") newJobs.push(...this.processRawACBJobs(res.raw));
-            else newJobs.push(...this.processRawLPBJobs(res.raw));
+            else if (res.bank === "LPB") newJobs.push(...this.processRawLPBJobs(res.raw));
+            else if (res.bank === "STB") newJobs.push(...this.processRawSTBJobs(res.raw));
+            else newJobs.push(...this.processRawTPBJobs(res.raw));
           }
         });
         if (newJobs.length > 0) {
@@ -699,6 +740,79 @@ class BaselJobs {
     }
     const res = await fetch(baseUrl, { headers: { "Accept": "application/json" } });
     if (!res.ok) throw new Error(`LPBank HTTP ${res.status}`);
+    return await res.json();
+  }
+
+  async fetchLiveSTBPage(page) {
+    const startrow = (page - 1) * 20;
+    const qs = startrow > 0 ? `startrow=${startrow}` : "";
+    let baseUrl = this.resolveApiUrl(qs ? `/api/jobs/sacombank?${qs}` : "/api/jobs/sacombank", qs ? `https://sacombankcareer.com/tile-search-results/category/628544/&${qs}` : "https://sacombankcareer.com/go/V%E1%BB%8A-TR%C3%8D-T%E1%BA%A0I-H%E1%BB%98I-S%E1%BB%9E/628544/");
+    if (baseUrl.startsWith("http://localhost:8000")) {
+      try {
+        const t = await fetch("http://localhost:8000/api/jobs/sacombank", { method: "OPTIONS" });
+        if (!t.ok) baseUrl = qs ? `https://sacombankcareer.com/tile-search-results/category/628544/&${qs}` : "https://sacombankcareer.com/go/V%E1%BB%8A-TR%C3%8D-T%E1%BA%A0I-H%E1%BB%98I-S%E1%BB%9E/628544/";
+      } catch (_) {
+        baseUrl = qs ? `https://sacombankcareer.com/tile-search-results/category/628544/&${qs}` : "https://sacombankcareer.com/go/V%E1%BB%8A-TR%C3%8D-T%E1%BA%A0I-H%E1%BB%98I-S%E1%BB%9E/628544/";
+      }
+    }
+    const res = await fetch(baseUrl);
+    if (!res.ok) throw new Error(`STB HTTP ${res.status}`);
+    const htmlText = await res.text();
+    return this.parseStbHtml(htmlText);
+  }
+
+  parseStbHtml(htmlText) {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(htmlText, "text/html");
+    const jobs = [];
+    const items = doc.querySelectorAll("li.job-tile");
+    items.forEach(item => {
+      const titleEl = item.querySelector("a.jobTitle-link");
+      if (!titleEl) return;
+      const title = titleEl.textContent.trim();
+      let id = "";
+      const classes = item.getAttribute("class") || "";
+      const idMatch = classes.match(/job-id-(\d+)/);
+      if (idMatch) {
+        id = idMatch[1];
+      } else {
+        id = Math.random().toString(36).substring(2, 9);
+      }
+      
+      const facilityEl = item.querySelector(".section-field.facility div, .section-field.facility span + div");
+      const facility = facilityEl ? facilityEl.textContent.trim() : "";
+      
+      const deptEl = item.querySelector(".section-field.department div, .section-field.department span + div");
+      const department = deptEl ? deptEl.textContent.trim() : "Kinh doanh & Vận hành";
+      
+      const locEl = item.querySelector(".section-field.location div, .section-field.location span + div");
+      const location = locEl ? locEl.textContent.trim() : "TP. Hồ Chí Minh";
+
+      // Tạo URL động dựa trên title, facility/location và id
+      const cleanCombined = ((facility && facility !== "Hội sở") ? facility.trim() + " " : "") + title.trim();
+      const slug = cleanCombined.replace(/[\s/]+/g, "-").replace(/-+/g, "-").replace(/^-+|-+$/g, "");
+      const originalUrl = `https://sacombankcareer.com/job/${slug}/${id}/`;
+      
+      jobs.push({
+        id, title, facility: facility || "Hội sở", department, location, originalUrl
+      });
+    });
+    return { jobs };
+  }
+
+  async fetchLiveTPBPage(page) {
+    const qs = `DeltaDataLocation=01000000-8233-ea27-774b-08ddec65d5a3&pageIndex=${page}&pageSize=10&Domain=tuyendung.tpb.vn`;
+    let baseUrl = this.resolveApiUrl(`/api/jobs/tpbank?${qs}`, `https://centralize-api-v2.iviec.vn/api/recruitment/Recruitment/GetRecruitmentsByDomain?${qs}`);
+    if (baseUrl.startsWith("http://localhost:8000")) {
+      try {
+        const t = await fetch("http://localhost:8000/api/jobs/tpbank", { method: "OPTIONS" });
+        if (!t.ok) baseUrl = `https://centralize-api-v2.iviec.vn/api/recruitment/Recruitment/GetRecruitmentsByDomain?${qs}`;
+      } catch (_) {
+        baseUrl = `https://centralize-api-v2.iviec.vn/api/recruitment/Recruitment/GetRecruitmentsByDomain?${qs}`;
+      }
+    }
+    const res = await fetch(baseUrl, { headers: { "Accept": "application/json" } });
+    if (!res.ok) throw new Error(`TPBank HTTP ${res.status}`);
     return await res.json();
   }
 
@@ -929,6 +1043,139 @@ class BaselJobs {
         deadline, 
         tags, 
         hrEmail: "tuyendung@lpbank.com.vn", 
+      };
+    });
+  }
+
+  processRawSTBJobs(rawJobs) {
+    if (!rawJobs) return [];
+    return rawJobs.map((job, idx) => {
+      const title = job.title;
+      const titleLower = title.toLowerCase();
+      const deptName = job.department || "Kinh doanh & Vận hành";
+      const deptNameLower = deptName.toLowerCase();
+
+      let deptCode = "business";
+      if (["rủi ro","pháp chế","tuân thủ","kiểm toán","pháp lý","thu hồi","xử lý nợ","tố tụng","giám sát tín dụng"].some(k => titleLower.includes(k) || deptNameLower.includes(k))) deptCode = "risk-legal";
+      else if (["it","cntt","công nghệ","data","dữ liệu","lập trình","phần mềm","hệ thống","security","developer","tester","analyst","an toàn thông tin"].some(k => matchKeyword(titleLower, k) || matchKeyword(deptNameLower, k))) deptCode = "it-data";
+
+      let level = "junior-mid", levelName = "Chuyên viên";
+      if (["fresh", "học việc", "thực tập", "tập sự", "intern"].some(k => titleLower.includes(k))) { 
+        level = "intern"; 
+        levelName = "Thực tập sinh / Tập sự"; 
+      } else if (["manager", "trưởng nhóm", "trưởng phòng", "quản lý", "giám đốc", "lead", "head", "director"].some(k => titleLower.includes(k))) { 
+        level = "lead-manager"; 
+        levelName = "Quản lý / Giám đốc"; 
+      } else if (["chuyên viên cao cấp","cvcc","senior","chuyên gia","chủ trì"].some(k => titleLower.includes(k))) { 
+        level = "senior"; 
+        levelName = "Chuyên viên cao cấp"; 
+      }
+
+      const deadline = "2026-10-31"; 
+
+      const tags = ["Sacombank Hội sở"];
+      if (job.facility) tags.push(job.facility);
+
+      return { 
+        id: `job-stb-${job.id || idx}`, 
+        title, 
+        bank: "Sacombank", 
+        bankCode: "STB", 
+        logoColor: "linear-gradient(135deg,#0284c7 0%,#0369a1 100%)", 
+        department: deptCode, 
+        departmentName: deptName, 
+        location: job.location || "TP. Hồ Chí Minh", 
+        salary: "Thỏa thuận", 
+        level, 
+        levelName, 
+        deadline, 
+        tags, 
+        hrEmail: "tuyendung@sacombank.com", 
+        originalUrl: job.originalUrl 
+      };
+    });
+  }
+
+  processRawTPBJobs(rawJobs) {
+    if (!rawJobs) return [];
+    return rawJobs.map((job, idx) => {
+      const title = (job.name || "").trim();
+      const titleLower = title.toLowerCase();
+      
+      let deptName = "Kinh doanh & Vận hành";
+      const deptData = (job.recruitmentDeltaDatas || []).find(d => d.workspaceDeltaDataKey === "job_department");
+      if (deptData && deptData.workspaceDeltaDataValue) {
+        try {
+          const parsed = JSON.parse(deptData.workspaceDeltaDataValue);
+          if (parsed.name_VN) deptName = parsed.name_VN.trim();
+        } catch (_) {}
+      }
+      const deptNameLower = deptName.toLowerCase();
+
+      let deptCode = "business";
+      if (["rủi ro","pháp chế","tuân thủ","kiểm toán","pháp lý","thu hồi","xử lý nợ","tố tụng","giám sát tín dụng"].some(k => titleLower.includes(k) || deptNameLower.includes(k))) deptCode = "risk-legal";
+      else if (["it","cntt","công nghệ","data","dữ liệu","lập trình","phần mềm","hệ thống","security","developer","tester","analyst","an toàn thông tin"].some(k => matchKeyword(titleLower, k) || matchKeyword(deptNameLower, k))) deptCode = "it-data";
+
+      let levelText = "";
+      const levelData = (job.recruitmentDeltaDatas || []).find(d => d.workspaceDeltaDataKey === "job_level");
+      if (levelData && levelData.workspaceDeltaDataValue) {
+        try {
+          const parsed = JSON.parse(levelData.workspaceDeltaDataValue);
+          if (parsed.name_VN) levelText = parsed.name_VN.trim();
+        } catch (_) {}
+      }
+      
+      const checkText = (title + " " + levelText).toLowerCase();
+      let level = "junior-mid", levelName = "Chuyên viên";
+      if (["fresh", "học việc", "thực tập", "tập sự", "intern"].some(k => checkText.includes(k))) { 
+        level = "intern"; 
+        levelName = "Thực tập sinh / Tập sự"; 
+      } else if (["manager", "trưởng nhóm", "trưởng phòng", "quản lý", "giám đốc", "lead", "head", "director"].some(k => checkText.includes(k))) { 
+        level = "lead-manager"; 
+        levelName = "Quản lý / Giám đốc"; 
+      } else if (["chuyên viên cao cấp","cvcc","senior","chuyên gia","chủ trì"].some(k => checkText.includes(k))) { 
+        level = "senior"; 
+        levelName = "Chuyên viên cao cấp"; 
+      }
+
+      let location = "TP. Hồ Chí Minh";
+      if (job.workingNewAddresses && job.workingNewAddresses.length > 0) {
+        location = job.workingNewAddresses.map(addr => addr.provinceName).filter(Boolean).join(", ");
+      }
+
+      let salary = "Thỏa thuận";
+      if (job.minSalary || job.maxSalary) {
+        if (job.minSalary && job.maxSalary) {
+          salary = `${Math.round(job.minSalary/1000000)} - ${Math.round(job.maxSalary/1000000)} triệu`;
+        } else if (job.minSalary) {
+          salary = `Từ ${Math.round(job.minSalary/1000000)} triệu`;
+        } else {
+          salary = `Đến ${Math.round(job.maxSalary/1000000)} triệu`;
+        }
+      }
+
+      const deadline = "2026-10-31"; 
+
+      const tags = ["TPBank"];
+      if (location) tags.push(location.split(",")[0].trim());
+      
+      const originalUrl = `https://tuyendung.tpb.vn/vi/jobs/${job.slug}`;
+
+      return { 
+        id: `job-tpb-${job.id || job.slug || idx}`, 
+        title, 
+        bank: "TPBank", 
+        bankCode: "TPB", 
+        logoColor: "linear-gradient(135deg,#7c3aed 0%,#a78bfa 100%)", 
+        department: deptCode, 
+        departmentName: deptName, 
+        location, 
+        salary, 
+        level, 
+        levelName, 
+        deadline, 
+        tags, 
+        hrEmail: "tuyendung@tpb.vn", 
         originalUrl 
       };
     });

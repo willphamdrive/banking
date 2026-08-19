@@ -103,6 +103,37 @@ def main():
         except Exception as e:
             print(f"Lỗi LPB page {page}: {e}")
 
+    # 6. Sacombank
+    stb_html_parts = []
+    try:
+        with urllib.request.urlopen("http://localhost:8000/api/jobs/sacombank", timeout=15) as resp:
+            stb_html_parts.append(resp.read().decode("utf-8"))
+            print("Sacombank page 1: Tải thành công.")
+    except Exception as e:
+        print(f"Lỗi Sacombank page 1: {e}")
+        
+    for startrow in [20, 40]:
+        try:
+            with urllib.request.urlopen(f"http://localhost:8000/api/jobs/sacombank?startrow={startrow}", timeout=15) as resp:
+                stb_html_parts.append(resp.read().decode("utf-8"))
+                print(f"Sacombank startrow {startrow}: Tải thành công.")
+        except Exception as e:
+            print(f"Lỗi Sacombank startrow {startrow}: {e}")
+    stb_html = "\n".join(stb_html_parts)
+
+    # 7. TPBank (pages 1 and 2)
+    tpb_items = []
+    for page in [1, 2]:
+        try:
+            qs = f"DeltaDataLocation=01000000-8233-ea27-774b-08ddec65d5a3&pageIndex={page}&pageSize=10&Domain=tuyendung.tpb.vn"
+            with urllib.request.urlopen(f"http://localhost:8000/api/jobs/tpbank?{qs}", timeout=10) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+                page_jobs = data.get("items", [])
+                tpb_items.extend(page_jobs)
+                print(f"TPB page {page}: Tải thành công {len(page_jobs)} việc làm.")
+        except Exception as e:
+            print(f"Lỗi TPB page {page}: {e}")
+
     # Tạo cấu trúc lưu trữ
     result = {
         "vpb": vpb_jobs,
@@ -120,6 +151,13 @@ def main():
         },
         "lpb": {
             "items": lpb_items,
+            "totalPage": 2
+        },
+        "stb": {
+            "html": stb_html
+        },
+        "tpb": {
+            "items": tpb_items,
             "totalPage": 2
         }
     }

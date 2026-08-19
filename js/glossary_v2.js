@@ -47,6 +47,15 @@ const GLOSSARY_TERMS = [
     formula: "LDR = [Tổng dư nợ cho vay / (Huy động thị trường 1 + Phát hành giấy tờ có giá)] x 100% <= 85%"
   },
   {
+    id: "sfl",
+    term: "SFL (Short-term Funds for Medium/Long-term Loans)",
+    vietnamese: "Tỷ lệ nguồn vốn ngắn hạn cho vay trung và dài hạn",
+    category: "vietnam",
+    definition: "Tỷ lệ an toàn thanh khoản quy định nhằm hạn chế rủi ro chênh lệch kỳ hạn (Maturity Mismatch), kiểm soát việc ngân hàng dùng vốn huy động ngắn hạn để cho vay trung và dài hạn.",
+    explanation: "Được quản lý theo lộ trình siết chặt của Ngân hàng Nhà nước để tăng cường tính ổn định của hệ thống ngân hàng (trần giới hạn tối đa hiện tại áp dụng là 30%). Theo quy định điều chỉnh linh hoạt gần đây của NHNN, tỷ lệ này có thể được điều chỉnh tăng lên để hỗ trợ tăng trưởng tín dụng tùy theo tình hình kinh tế.",
+    formula: "SFL = [Dư nợ cho vay trung dài hạn từ nguồn vốn ngắn hạn / Nguồn vốn ngắn hạn huy động] x 100% <= 30%"
+  },
+  {
     id: "lcr",
     term: "LCR (Liquidity Coverage Ratio)",
     vietnamese: "Tỷ lệ khả năng chi trả thanh khoản",
@@ -227,6 +236,15 @@ const GLOSSARY_TERMS = [
     formula: "Lợi suất tham chiếu: UST 10-Year Yield (Chỉ báo lãi suất phi rủi ro dài hạn toàn cầu)"
   },
   {
+    id: "tga",
+    term: "TGA (Treasury General Account)",
+    vietnamese: "Tài khoản Tổng kho bạc Mỹ",
+    category: "basel",
+    definition: "Tài khoản thanh toán chính của Bộ Tài chính Hoa Kỳ được mở trực tiếp tại Cục Dự trữ Liên bang Mỹ (Fed).",
+    explanation: "Được sử dụng để quản lý các dòng tiền thu (thuế, tiền bán trái phiếu) và chi (chi tiêu công, trả nợ) của chính phủ Mỹ. Số dư TGA có tác động ngược chiều trực tiếp đến thanh khoản (lượng tiền dự trữ) của các ngân hàng thương mại trên hệ thống tài chính.",
+    formula: "Hệ quả thanh khoản: TGA tăng -> Dự trữ NHTM giảm (Hút tiền) | TGA giảm -> Dự trữ NHTM tăng (Bơm tiền)"
+  },
+  {
     id: "dxy",
     term: "DXY (US Dollar Index)",
     vietnamese: "Chỉ số sức mạnh đồng đô la Mỹ",
@@ -243,6 +261,33 @@ const GLOSSARY_TERMS = [
     definition: "Chứng chỉ quốc tế uy tín chuyên sâu về năng lực quản trị rủi ro tài chính do Hiệp hội các Chuyên gia Quản trị Rủi ro Toàn cầu (GARP) cấp.",
     explanation: "Đây là chuẩn mực đào tạo nhân lực trình độ cao cho bộ phận quản trị rủi ro (ALM, tín dụng, thị trường) của các ngân hàng thương mại áp dụng hiệp ước Basel II/III.",
     formula: "Chuyên môn: Quản trị Rủi ro Tín dụng + Hoạt động + Thị trường + Quản trị thanh khoản và nguồn vốn"
+  },
+  {
+    id: "hpr",
+    term: "HPR (Holding Period Return)",
+    vietnamese: "Lợi suất nắm giữ",
+    category: "risk",
+    definition: "Tỷ suất sinh lời tổng thể của một tài sản hoặc danh mục đầu tư trong toàn bộ khoảng thời gian được nắm giữ bởi nhà đầu tư.",
+    explanation: "Đo lường sự gia tăng giá trị vốn đầu tư ban đầu cộng thêm bất kỳ khoản thu nhập phát sinh nào (cổ tức, tiền lãi) nhận được trong kỳ nắm giữ, chia cho giá trị đầu tư ban đầu.",
+    formula: "HPR = [(Giá trị cuối kỳ - Giá trị đầu kỳ) + Thu nhập phát sinh] / Giá trị đầu kỳ x 100%"
+  },
+  {
+    id: "cp",
+    term: "CP (Counterparty)",
+    vietnamese: "Đối tác giao dịch",
+    category: "risk",
+    definition: "Tổ chức hoặc cá nhân tham gia vào bên đối ứng của một giao dịch tài chính hoặc hợp đồng phái sinh (thường là ngân hàng hoặc tổ chức tài chính cung cấp sản phẩm).",
+    explanation: "Trong quản trị rủi ro, rủi ro đối tác (Counterparty Credit Risk - CCR) là rủi ro đối tác không thực hiện nghĩa vụ thanh toán trước khi hợp đồng đáo hạn (ví dụ như trong các giao dịch FX Hedging).",
+    formula: "Rủi ro đối tác: CCR = EAD (Dư nợ tại thời điểm vỡ nợ) x PD (Xác suất vỡ nợ đối tác) x LGD (Tỷ lệ tổn thất)"
+  },
+  {
+    id: "tarf",
+    term: "TARF (Target Redemption Forward) / FX Target",
+    vietnamese: "Hợp đồng kỳ hạn mục tiêu",
+    category: "risk",
+    definition: "Một sản phẩm cấu trúc FX phái sinh phức tạp dành cho doanh nghiệp để phòng ngừa rủi ro tỷ giá (FX hedging), có cơ chế lợi nhuận giới hạn nhưng nghĩa vụ lỗ không giới hạn.",
+    explanation: "Được thiết kế bất đối xứng: Khi lợi nhuận tích lũy của khách hàng đạt mức mục tiêu (Target), hợp đồng sẽ tự động chấm dứt (gõ cửa ra - Knock-out). Ngược lại, nếu tỷ giá biến động bất lợi, khách hàng buộc phải tiếp tục mua/bán FX với tỷ giá xấu hơn thị trường và khối lượng nhân đôi mà không có giới hạn cắt lỗ, dẫn đến việc đối tác giao dịch (CP) thu lợi nhuận cực lớn còn khách hàng chịu lỗ nặng.",
+    formula: "Cơ chế: Tích lũy lãi đạt Target -> Hợp đồng tự hủy | Lỗ -> Thực hiện bắt buộc x2 khối lượng"
   }
 ];
 

@@ -432,5 +432,41 @@ Tôi đã hoàn trả lại cơ chế tương tác mở/đóng của Drawer gi�
         - **Giải pháp**: Xây dựng cơ chế tự động phân giải `resolveApiUrl(relativeUrl)` trong [`js/jobs.js`](file:///Users/toanpham/Desktop/banking/js/jobs.js). Thuật toán sẽ tự động nhận diện nếu hostname là một địa chỉ IP nội bộ (LAN IP) và đang chạy trên giao thức HTTP, từ đó sử dụng chính địa chỉ IP của máy tính làm địa chỉ Proxy. Giúp thiết bị di động kết nối và tải dữ liệu tuyển dụng thành công 100% thông qua máy chủ Proxy local.
             - *Bổ sung xử lý HTTPS (GitHub Pages)*: Khi chạy ứng dụng thực tế trên trang web được mã hóa HTTPS (`https://willphamdrive.github.io/banking/`), việc gọi trực tiếp đến Proxy HTTP local (`http://localhost:8000`) sẽ bị trình duyệt chặn hoàn toàn do cơ chế **Mixed Content** (nội dung hỗn hợp không an toàn). Để khắc phục, thuật toán đã bổ sung cơ chế tự động định tuyến các request qua cổng dịch vụ Proxy HTTPS công cộng bảo mật **`https://corsproxy.io/?`** đối với các origin chạy giao thức HTTPS. Phương án này giải quyết triệt để vấn đề CORS và Mixed Content, giúp thiết bị di động truy cập trực tiếp từ URL GitHub Pages vẫn có thể tải dữ liệu việc làm bình thường.
 
+---
+
+## 💼 Tích hợp Dữ liệu Tuyển dụng Sacombank (Hội sở)
+
+Tôi đã phân tích cấu trúc và bổ sung thành công ngân hàng Sacombank (STB) vào phân hệ Tuyển dụng:
+
+1. **Proxy API trong `run_app.py`**:
+   - Bổ sung endpoint `/api/jobs/sacombank` để proxy các yêu cầu gọi dữ liệu từ trang tuyển dụng Sacombank (`https://sacombankcareer.com/go/V%E1%BB%8A-TR%C3%8D-T%E1%BA%A0I-H%E1%BB%98I-S%E1%BB%9E/628544/`) nhằm tránh lỗi CORS mà không cần duy trì cookie tĩnh.
+   - Thêm bộ định tuyến `/job/` để tự động chuyển tiếp và proxy bất kỳ đường dẫn chi tiết tin tuyển dụng nào của Sacombank (ví dụ: `/job/T%E1%BB%89nh-V%C4%A9nh-Long-...`) giúp mở xem chi tiết không bị lỗi CORS/Mixed Content.
+2. **Xử lý hiển thị trong `index.html`**:
+   - Bổ sung nút lọc ngân hàng **🔵 Sacombank** vào thanh bộ lọc để hỗ trợ xem và tìm kiếm riêng các công việc thuộc Sacombank.
+3. **Logic tải & phân tích dữ liệu trong `js/jobs.js`**:
+   - Bổ sung phương thức `fetchLiveSTBPage` để gọi API proxy. Hỗ trợ truyền tham số `startrow` để tải phân trang (ví dụ: `startrow=20`, `startrow=40`...) giúp nạp toàn bộ danh sách tuyển dụng Sacombank (57 công việc).
+   - Viết hàm `parseStbHtml` sử dụng `DOMParser` để bóc tách thông tin vị trí, khối phòng ban, khu vực, id và liên kết gốc của từng tin tuyển dụng trên trang SuccessFactors của Sacombank. Triển khai thuật toán **sinh URL động** (`https://sacombankcareer.com/job/{slug}/{id}/`) từ thông tin tiêu đề (`title`), khu vực (`facility`), và mã định danh (`id`) của tin tuyển dụng bằng cách thay thế các khoảng trắng và dấu gạch chéo bằng dấu gạch ngang (`-`), dọn dẹp các ký tự trùng lặp và loại bỏ các dấu gạch dư thừa ở đầu/cuối chuỗi để đảm bảo liên kết chi tiết luôn được tạo chính xác và ổn định.
+   - Thêm phương thức `processRawSTBJobs` để chuẩn hóa các thuộc tính công việc về mô hình chung (quy định logo màu xanh dương `STB`, tự động phân loại khối công nghệ thông tin `it-data`, khối rủi ro pháp lý `risk-legal`, hoặc nghiệp vụ kinh doanh `business`).
+4. **Cập nhật tập lệnh cào dữ liệu offline `save_jobs_db.py`**:
+   - Tích hợp cào phân trang Sacombank bằng cách tải ghép nối các trang startrow khác nhau, lưu trữ offline gộp vào tệp `jobs_database.json`, hỗ trợ chế độ xem offline đầy đủ kết quả khi không kết nối mạng.
+
+---
+
+## 🟣 Tích hợp Dữ liệu Tuyển dụng TPBank (TPB)
+
+Tôi đã hoàn thành tích hợp dữ liệu tuyển dụng của TPBank (TPB) vào phân hệ Tuyển dụng:
+
+1. **Proxy API trong `run_app.py`**:
+   - Bổ sung endpoint `/api/jobs/tpbank` để proxy các yêu cầu gọi dữ liệu từ API tuyển dụng TPBank trên nền tảng iViec (`https://centralize-api-v2.iviec.vn/api/recruitment/Recruitment/GetRecruitmentsByDomain`) nhằm tránh lỗi CORS.
+2. **Xử lý hiển thị trong `index.html`**:
+   - Bổ sung nút lọc ngân hàng **🟣 TPBank** vào thanh công cụ để lọc và xem danh sách tin tuyển dụng của TPBank.
+3. **Logic tải & phân tích dữ liệu trong `js/jobs.js`**:
+   - Bổ sung phương thức `fetchLiveTPBPage` gọi API qua server proxy.
+   - Thêm phương thức `processRawTPBJobs` để chuẩn hóa các thuộc tính công việc từ dữ liệu API iViec về mô hình dữ liệu chung của ứng dụng, phân loại chính xác các khối CNTT (`it-data`), Quản trị rủi ro & Pháp chế (`risk-legal`), hoặc Nghiệp vụ kinh doanh (`business`).
+4. **Cập nhật tập lệnh cào dữ liệu offline `save_jobs_db.py`**:
+   - Tích hợp TPBank vào quy trình tải dữ liệu kết hợp và lưu trữ offline vào tệp `jobs_database.json` tương tự như LPBank.
+
+
+
 
 

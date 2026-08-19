@@ -102,6 +102,42 @@ class ProxyHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
                 self.send_response(500)
                 self.end_headers()
                 self.wfile.write(str(e).encode('utf-8'))
+        elif self.path.startswith('/api/jobs/tpbank'):
+            query_string = ""
+            if '?' in self.path:
+                query_string = self.path.split('?', 1)[1]
+            
+            target_url = "https://centralize-api-v2.iviec.vn/api/recruitment/Recruitment/GetRecruitmentsByDomain"
+            if query_string:
+                target_url += "?" + query_string
+                
+            headers = {
+                'accept': 'application/json, text/plain, */*',
+                'accept-language': 'en-US,en;q=0.9,vi;q=0.8',
+                'origin': 'https://tuyendung.tpb.vn',
+                'priority': 'u=1, i',
+                'referer': 'https://tuyendung.tpb.vn/',
+                'sec-ch-ua': '"Not=A?Brand";v="99", "Microsoft Edge";v="151", "Chromium";v="151"',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': '"macOS"',
+                'sec-fetch-dest': 'empty',
+                'sec-fetch-mode': 'cors',
+                'sec-fetch-site': 'cross-site',
+                'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36 Edg/151.0.0.0'
+            }
+            
+            try:
+                resp = requests.get(target_url, headers=headers, timeout=15)
+                self.send_response(resp.status_code)
+                self.send_header('Content-Type', 'application/json; charset=utf-8')
+                self.send_header('Content-Length', str(len(resp.content)))
+                self.send_header('Connection', 'close')
+                self.end_headers()
+                self.wfile.write(resp.content)
+            except Exception as e:
+                self.send_response(500)
+                self.end_headers()
+                self.wfile.write(str(e).encode('utf-8'))
         elif self.path.startswith('/api/jobs/mbbank'):
             query_string = ""
             if '?' in self.path:
@@ -135,6 +171,70 @@ class ProxyHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
                 for key, val in resp.headers.items():
                     if key.lower() not in ['content-encoding', 'transfer-encoding', 'content-length', 'connection']:
                         self.send_header(key, val)
+                self.send_header('Content-Length', str(len(resp.content)))
+                self.send_header('Connection', 'close')
+                self.end_headers()
+                self.wfile.write(resp.content)
+            except Exception as e:
+                self.send_response(500)
+                self.end_headers()
+                self.wfile.write(str(e).encode('utf-8'))
+        elif self.path.startswith('/api/jobs/sacombank'):
+            query_string = ""
+            if '?' in self.path:
+                query_string = self.path.split('?', 1)[1]
+            
+            startrow = 0
+            if 'startrow=' in query_string:
+                try:
+                    parts = query_string.split('startrow=')
+                    if len(parts) > 1:
+                        startrow = int(parts[1].split('&')[0])
+                except ValueError:
+                    startrow = 0
+                    
+            if startrow > 0:
+                target_url = f"https://sacombankcareer.com/tile-search-results/category/628544/&startrow={startrow}"
+            else:
+                target_url = "https://sacombankcareer.com/go/V%E1%BB%8A-TR%C3%8D-T%E1%BA%A0I-H%E1%BB%98I-S%E1%BB%9E/628544/"
+
+            headers = {
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+                'Accept-Language': 'en-US,en;q=0.9,vi;q=0.8',
+                'Connection': 'keep-alive',
+                'Referer': 'https://sacombankcareer.com/go/V%E1%BB%8A-TR%C3%8D-T%E1%BA%A0I-H%E1%BB%98I-S%E1%BB%9E/628544/',
+                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36 Edg/151.0.0.0',
+                'sec-ch-ua': '"Not=A?Brand";v="99", "Microsoft Edge";v="151", "Chromium";v="151"',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': '"macOS"'
+            }
+            try:
+                resp = requests.get(target_url, headers=headers, timeout=15)
+                self.send_response(resp.status_code)
+                self.send_header('Content-Type', 'text/html; charset=utf-8')
+                self.send_header('Content-Length', str(len(resp.content)))
+                self.send_header('Connection', 'close')
+                self.end_headers()
+                self.wfile.write(resp.content)
+            except Exception as e:
+                self.send_response(500)
+                self.end_headers()
+                self.wfile.write(str(e).encode('utf-8'))
+        elif self.path.startswith('/job/'):
+            target_url = "https://sacombankcareer.com" + self.path
+            headers = {
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+                'Accept-Language': 'en-US,en;q=0.9,vi;q=0.8',
+                'Connection': 'keep-alive',
+                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36 Edg/151.0.0.0',
+                'sec-ch-ua': '"Not=A?Brand";v="99", "Microsoft Edge";v="151", "Chromium";v="151"',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': '"macOS"'
+            }
+            try:
+                resp = requests.get(target_url, headers=headers, timeout=15)
+                self.send_response(resp.status_code)
+                self.send_header('Content-Type', 'text/html; charset=utf-8')
                 self.send_header('Content-Length', str(len(resp.content)))
                 self.send_header('Connection', 'close')
                 self.end_headers()

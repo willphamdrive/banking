@@ -411,6 +411,7 @@ Tôi đã hoàn trả lại cơ chế tương tác mở/đóng của Drawer gi�
     - **Tối ưu hóa Điều hướng (Navigation)**:
         - **Lớp phủ nền mờ (Backdrop Blur Overlay)**: Bổ sung lớp phủ nền `.app-container::before` tự động kích hoạt làm mờ và tối vùng nội dung chính khi mở menu sidebar trên thiết bị di động. Giúp tập trung thị giác vào thanh điều hướng và đóng nhanh sidebar khi chạm vào vùng ngoài.
         - **Tối ưu nút kích hoạt Menu**: Cấu hình nút hamburger với màu nền đặc (`var(--bg-color)`) và đổ bóng đậm rõ nét để không bị lẫn với các phần tử tiêu đề nằm phía dưới.
+        - **Sửa lỗi nút Hamburger biến mất (Navigation Visibility Fix)**: Khắc phục lỗi nút mở rộng Menu (Hamburger button) bị ẩn mặc định trên thiết bị di động do mang class `.hidden` của phiên bản Desktop khi chưa nhấn Collapse. Đã cấu hình ghi đè CSS để luôn hiển thị nút mở Menu trên thiết bị di động (`display: flex !important;`) và chỉ ẩn đi khi Menu Sidebar đang được mở rộng trực tiếp (`.mobile-sidebar-active`).
     - **Tối ưu hóa Trình tìm kiếm tài liệu (Document Finder)**:
         - **Mở rộng toàn màn hình (Full-width drawer)**: Trên màn hình điện thoại di động (`max-width: 480px`), ngăn chứa Document Finder (`.doc-finder-drawer`) được mở rộng 100% chiều ngang màn hình thay vì giữ kích thước cố định 380px, mang lại không gian cuộn và tra cứu tài liệu thoải mái nhất.
         - **Căn chỉnh lại Tab tài liệu nổi**: Tinh chỉnh vị trí và độ mờ của `.floating-doc-tab` ở cạnh phải màn hình để không che lấp các yếu tố giao diện quan trọng khác trên điện thoại.

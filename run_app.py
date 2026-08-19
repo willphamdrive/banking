@@ -264,6 +264,41 @@ class ProxyHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
                 self.send_response(500)
                 self.end_headers()
                 self.wfile.write(str(e).encode('utf-8'))
+        elif self.path == '/api/jobs/hdbank':
+            content_length = int(self.headers.get('Content-Length', 0))
+            post_data = self.rfile.read(content_length)
+            
+            target_url = "https://proxyapi.hdbank.com.vn/CVT_HDBank/api/v1/job/search"
+            headers = {
+                'accept': 'application/json, text/plain, */*',
+                'accept-language': 'en-US,en;q=0.9,vi;q=0.8',
+                'content-type': 'application/json;charset=UTF-8',
+                'origin': 'https://career.hdbank.com.vn',
+                'priority': 'u=1, i',
+                'referer': 'https://career.hdbank.com.vn/',
+                'sec-ch-ua': '"Not=A?Brand";v="99", "Microsoft Edge";v="151", "Chromium";v="151"',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': '"macOS"',
+                'sec-fetch-dest': 'empty',
+                'sec-fetch-mode': 'cors',
+                'sec-fetch-site': 'same-site',
+                'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36 Edg/151.0.0.0'
+            }
+            
+            try:
+                resp = requests.post(target_url, headers=headers, data=post_data, timeout=15)
+                self.send_response(resp.status_code)
+                for key, val in resp.headers.items():
+                    if key.lower() not in ['content-encoding', 'transfer-encoding', 'content-length', 'connection']:
+                        self.send_header(key, val)
+                self.send_header('Content-Length', str(len(resp.content)))
+                self.send_header('Connection', 'close')
+                self.end_headers()
+                self.wfile.write(resp.content)
+            except Exception as e:
+                self.send_response(500)
+                self.end_headers()
+                self.wfile.write(str(e).encode('utf-8'))
         elif self.path == '/api/jobs':
             content_length = int(self.headers.get('Content-Length', 0))
             post_data = self.rfile.read(content_length)

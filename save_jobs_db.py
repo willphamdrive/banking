@@ -134,6 +134,26 @@ def main():
         except Exception as e:
             print(f"Lỗi TPB page {page}: {e}")
 
+    # 8. HDBank (pages 1 and 2)
+    hdb_jobs = []
+    for page in [1, 2]:
+        try:
+            req = urllib.request.Request(
+                "http://localhost:8000/api/jobs/hdbank",
+                data=json.dumps({
+                    "DataHeader": [{"P2": "", "P3": "", "P4": None, "P5": str(page - 1), "P6": "", "P7": "", "P10": "", "P11": ""}],
+                    "LangID": "241"
+                }).encode("utf-8"),
+                headers={"Content-Type": "application/json;charset=UTF-8"}
+            )
+            with urllib.request.urlopen(req, timeout=10) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+                page_jobs = data.get("dataItem", [])
+                hdb_jobs.extend(page_jobs)
+                print(f"HDB page {page}: Tải thành công {len(page_jobs)} việc làm.")
+        except Exception as e:
+            print(f"Lỗi HDB page {page}: {e}")
+
     # Tạo cấu trúc lưu trữ
     result = {
         "vpb": vpb_jobs,
@@ -159,7 +179,8 @@ def main():
         "tpb": {
             "items": tpb_items,
             "totalPage": 2
-        }
+        },
+        "hdb": hdb_jobs
     }
     
     output_path = "/Users/toanpham/Desktop/banking/jobs_database.json"

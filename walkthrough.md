@@ -466,7 +466,25 @@ Tôi đã hoàn thành tích hợp dữ liệu tuyển dụng của TPBank (TPB)
 4. **Cập nhật tập lệnh cào dữ liệu offline `save_jobs_db.py`**:
    - Tích hợp TPBank vào quy trình tải dữ liệu kết hợp và lưu trữ offline vào tệp `jobs_database.json` tương tự như LPBank.
 
+---
 
+## 🏷️ Cài đặt Chủ đề Mặc định cho Macro Discussion
+- **Hedge Academy (Page 1)**: Cấu hình chủ đề **"SBV đã sai gì?"** (`sbv_mistakes`) làm chủ đề hoạt động mặc định khi tải trang và khi người dùng click chuyển từ tác giả khác quay về Page 1.
+- **Trần Quang Nghĩa (Page 2)**: Khi chuyển sang Page 2, chủ đề hoạt động mặc định là **"Tất cả"** (`all`) để hiển thị toàn bộ kho bài viết đa dạng của tác giả.
 
+---
 
+## 🟠 Tích hợp Dữ liệu Tuyển dụng HDBank (HDB)
+Tôi đã phân tích cấu trúc và bổ sung thành công ngân hàng HDBank vào hệ thống Tuyển dụng:
+1. **Proxy API trong `run_app.py`**:
+   - Bổ sung định tuyến POST `/api/jobs/hdbank` để chuyển tiếp yêu cầu cào dữ liệu đến API chính thức của HDBank: `https://proxyapi.hdbank.com.vn/CVT_HDBank/api/v1/job/search`, hỗ trợ đầy đủ các Header CORS và payload tùy chỉnh.
+2. **Hiển thị giao diện trong `index.html`**:
+   - Thêm nút lọc ngân hàng **🟠 HDBank** vào bộ lọc ngân hàng chính với màu cam thương hiệu (`#ea580c`).
+3. **Logic cào & xử lý dữ liệu trong `js/jobs.js`**:
+   - Bổ sung phương thức `fetchLiveHDBPage` hỗ trợ phân trang và gửi payload POST dạng JSON.
+   - Thêm logic `processRawHDBJobs` để chuẩn hóa các thuộc tính công việc:
+     - Tạo liên kết chi tiết tin tuyển dụng trực tiếp theo chuẩn HDBank bằng mã định danh: `https://career.hdbank.com.vn/jobdetail/{id}` (ví dụ: `https://career.hdbank.com.vn/jobdetail/890`).
+     - Phân loại khối phòng ban thông minh: Pháp lý/Rủi ro (`risk-legal`), Công nghệ (`it-data`), hoặc Kinh doanh (`business`).
+4. **Cập nhật tập lệnh cào offline `save_jobs_db.py`**:
+   - Tích hợp HDBank vào quy trình cào dữ liệu tự động, lưu trực tiếp dữ liệu dạng JSON vào trường `hdb` trong cơ sở dữ liệu offline `jobs_database.json` và đồng bộ tự động lên GitHub qua Git commands.
 

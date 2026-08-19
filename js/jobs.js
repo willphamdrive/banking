@@ -129,6 +129,7 @@ class BaselJobs {
           else if (bk === "LPBank")  { b.style.borderColor = "#dc2626"; b.style.color = "#dc2626"; }
           else if (bk === "Sacombank") { b.style.borderColor = "#0284c7"; b.style.color = "#0284c7"; }
           else if (bk === "TPBank")   { b.style.borderColor = "#7c3aed"; b.style.color = "#7c3aed"; }
+          else if (bk === "HDBank")   { b.style.borderColor = "#ea580c"; b.style.color = "#ea580c"; }
           else if (bk === "saved")  { b.style.borderColor = "#f59e0b"; b.style.color = "#f59e0b"; }
         });
         // Active nút được chọn
@@ -141,6 +142,7 @@ class BaselJobs {
         else if (bank === "LPBank")  { btn.style.background = "#dc2626"; btn.style.borderColor = "#dc2626"; btn.style.color = "white"; }
         else if (bank === "Sacombank") { btn.style.background = "#0284c7"; btn.style.borderColor = "#0284c7"; btn.style.color = "white"; }
         else if (bank === "TPBank")   { btn.style.background = "#7c3aed"; btn.style.borderColor = "#7c3aed"; btn.style.color = "white"; }
+        else if (bank === "HDBank")   { btn.style.background = "#ea580c"; btn.style.borderColor = "#ea580c"; btn.style.color = "white"; }
         else if (bank === "saved")  { btn.style.background = "#f59e0b"; btn.style.borderColor = "#f59e0b"; btn.style.color = "white"; }
         
         // Lọc ngay lập tức
@@ -305,7 +307,7 @@ class BaselJobs {
           <div style="display:flex;flex-direction:column;align-items:center;gap:1rem;">
             <i data-lucide="loader-2" class="animate-spin" style="width:32px;height:32px;color:var(--primary);"></i>
             <div style="font-weight:600;font-size:0.95rem;color:var(--text-main);">Đang kết nối cổng tuyển dụng...</div>
-            <span style="font-size:0.8rem;opacity:0.8;">Đang tải dữ liệu mới nhất từ VPBank, MB Bank, ACB & LPBank...</span>
+            <span style="font-size:0.8rem;opacity:0.8;">Đang tải dữ liệu mới nhất từ VPBank, MB Bank, ACB, LPBank & HDBank...</span>
           </div>
         </td>
       </tr>`;
@@ -319,9 +321,10 @@ class BaselJobs {
       const needLPB = (this.selectedBank === "all" || this.selectedBank === "LPBank");
       const needSTB = (this.selectedBank === "all" || this.selectedBank === "Sacombank");
       const needTPB = (this.selectedBank === "all" || this.selectedBank === "TPBank");
+      const needHDB = (this.selectedBank === "all" || this.selectedBank === "HDBank");
 
-      let vpbRaw = [], mbbRaw = [], acbHcmRaw = [], acbHoRaw = [], lpbRaw = [], stbRaw = [], tpbRaw = [];
-      let totalMbbPages = 1, totalAcbHcmPages = 1, totalAcbHoPages = 1, totalLpbPages = 1, totalTpbPages = 1;
+      let vpbRaw = [], mbbRaw = [], acbHcmRaw = [], acbHoRaw = [], lpbRaw = [], stbRaw = [], tpbRaw = [], hdbRaw = [];
+      let totalMbbPages = 1, totalAcbHcmPages = 1, totalAcbHoPages = 1, totalLpbPages = 1, totalTpbPages = 1, totalHdbPages = 1;
 
       const fetches = [];
       if (needVPB) fetches.push(this.fetchLivePageFromVPB(0).then(r => ({ src: "VPB", data: r })).catch(() => ({ src: "VPB", data: [] })));
@@ -333,6 +336,7 @@ class BaselJobs {
       if (needLPB) fetches.push(this.fetchLiveLPBPage(1).then(r => ({ src: "LPB", data: r })).catch(() => ({ src: "LPB", data: null })));
       if (needSTB) fetches.push(this.fetchLiveSTBPage(1).then(r => ({ src: "STB", data: r })).catch(() => ({ src: "STB", data: null })));
       if (needTPB) fetches.push(this.fetchLiveTPBPage(1).then(r => ({ src: "TPB", data: r })).catch(() => ({ src: "TPB", data: null })));
+      if (needHDB) fetches.push(this.fetchLiveHDBPage(1).then(r => ({ src: "HDB", data: r })).catch(() => ({ src: "HDB", data: null })));
 
       const results = await Promise.all(fetches);
       
@@ -364,6 +368,10 @@ class BaselJobs {
           tpbRaw = r.data.items || [];
           totalTpbPages = r.data.totalPage || 1;
         }
+        if (r.src === "HDB" && r.data) {
+          hdbRaw = r.data || [];
+          totalHdbPages = 3;
+        }
       });
 
       const vpbJobs = this.processRawJobs(vpbRaw);
@@ -373,6 +381,7 @@ class BaselJobs {
       const lpbJobs = this.processRawLPBJobs(lpbRaw);
       const stbJobs = this.processRawSTBJobs(stbRaw);
       const tpbJobs = this.processRawTPBJobs(tpbRaw);
+      const hdbJobs = this.processRawHDBJobs(hdbRaw);
 
       this.jobs = [];
       this.addUniqueJobs(vpbJobs);
@@ -382,6 +391,7 @@ class BaselJobs {
       this.addUniqueJobs(lpbJobs);
       this.addUniqueJobs(stbJobs);
       this.addUniqueJobs(tpbJobs);
+      this.addUniqueJobs(hdbJobs);
 
       // Nếu không lấy được bất cứ công việc nào từ live (ví dụ: bị chặn CORS / Mixed Content trên GitHub Pages)
       if (this.jobs.length === 0) {
@@ -394,7 +404,7 @@ class BaselJobs {
       this.renderJobsList();
 
       // Lazy load các trang còn lại trong nền
-      this.lazyLoadRemainingPages(needVPB, needMBB, needACB, needLPB, needSTB, needTPB, totalMbbPages, totalAcbHcmPages, totalAcbHoPages, totalLpbPages, 3, totalTpbPages, sessionId);
+      this.lazyLoadRemainingPages(needVPB, needMBB, needACB, needLPB, needSTB, needTPB, needHDB, totalMbbPages, totalAcbHcmPages, totalAcbHoPages, totalLpbPages, 3, totalTpbPages, totalHdbPages, sessionId);
     } catch (err) {
       console.warn("Lỗi tải trực tuyến, chuyển sang nạp cơ sở dữ liệu tuyển dụng offline fallback:", err);
       if (sessionId === this.searchSessionId) {
@@ -411,6 +421,7 @@ class BaselJobs {
           const needLPB = (this.selectedBank === "all" || this.selectedBank === "LPBank");
           const needSTB = (this.selectedBank === "all" || this.selectedBank === "Sacombank");
           const needTPB = (this.selectedBank === "all" || this.selectedBank === "TPBank");
+          const needHDB = (this.selectedBank === "all" || this.selectedBank === "HDBank");
 
           let vpbRaw = needVPB ? (fallbackData.vpb || []) : [];
           let mbbRaw = needMBB ? (fallbackData.mbb?.content || []) : [];
@@ -419,6 +430,7 @@ class BaselJobs {
           let lpbRaw = needLPB ? (fallbackData.lpb?.items || []) : [];
           let stbRaw = needSTB ? (this.parseStbHtml(fallbackData.stb?.html || "").jobs || []) : [];
           let tpbRaw = needTPB ? (fallbackData.tpb?.items || []) : [];
+          let hdbRaw = needHDB ? (fallbackData.hdb || []) : [];
 
           const vpbJobs = this.processRawJobs(vpbRaw);
           const mbbJobs = this.processRawMBBJobs(mbbRaw);
@@ -427,6 +439,7 @@ class BaselJobs {
           const lpbJobs = this.processRawLPBJobs(lpbRaw);
           const stbJobs = this.processRawSTBJobs(stbRaw);
           const tpbJobs = this.processRawTPBJobs(tpbRaw);
+          const hdbJobs = this.processRawHDBJobs(hdbRaw);
 
           this.jobs = [];
           this.addUniqueJobs(vpbJobs);
@@ -436,6 +449,7 @@ class BaselJobs {
           this.addUniqueJobs(lpbJobs);
           this.addUniqueJobs(stbJobs);
           this.addUniqueJobs(tpbJobs);
+          this.addUniqueJobs(hdbJobs);
 
           this.applyClientFilters();
           this.renderStats();
@@ -489,7 +503,7 @@ class BaselJobs {
       lucide.createIcons();
     }
   }
-  async lazyLoadRemainingPages(needVPB, needMBB, needACB, needLPB, needSTB, needTPB, totalMbbPages, totalAcbHcmPages, totalAcbHoPages, totalLpbPages, totalStbPages, totalTpbPages, sessionId) {
+  async lazyLoadRemainingPages(needVPB, needMBB, needACB, needLPB, needSTB, needTPB, needHDB, totalMbbPages, totalAcbHcmPages, totalAcbHoPages, totalLpbPages, totalStbPages, totalTpbPages, totalHdbPages, sessionId) {
     const vpbPages = needVPB ? Array.from({ length: 16 }, (_, i) => ({ bank: "VPB", page: i + 1 })) : [];
     const mbbPages = needMBB ? Array.from({ length: totalMbbPages - 1 }, (_, i) => ({ bank: "MBB", page: i + 2 })) : [];
     const acbHcmPages = needACB ? Array.from({ length: totalAcbHcmPages - 1 }, (_, i) => ({ bank: "ACB_HCM", page: i + 2 })) : [];
@@ -497,9 +511,10 @@ class BaselJobs {
     const lpbPages = needLPB ? Array.from({ length: totalLpbPages - 1 }, (_, i) => ({ bank: "LPB", page: i + 2 })) : [];
     const stbPages = needSTB ? Array.from({ length: totalStbPages - 1 }, (_, i) => ({ bank: "STB", page: i + 2 })) : [];
     const tpbPages = needTPB ? Array.from({ length: totalTpbPages - 1 }, (_, i) => ({ bank: "TPB", page: i + 2 })) : [];
+    const hdbPages = needHDB ? Array.from({ length: totalHdbPages - 1 }, (_, i) => ({ bank: "HDB", page: i + 2 })) : [];
 
     const allPages = [];
-    const maxLen = Math.max(vpbPages.length, mbbPages.length, acbHcmPages.length, acbHoPages.length, lpbPages.length, stbPages.length, tpbPages.length);
+    const maxLen = Math.max(vpbPages.length, mbbPages.length, acbHcmPages.length, acbHoPages.length, lpbPages.length, stbPages.length, tpbPages.length, hdbPages.length);
     for (let i = 0; i < maxLen; i++) {
       if (i < vpbPages.length) allPages.push(vpbPages[i]);
       if (i < mbbPages.length) allPages.push(mbbPages[i]);
@@ -508,6 +523,7 @@ class BaselJobs {
       if (i < lpbPages.length) allPages.push(lpbPages[i]);
       if (i < stbPages.length) allPages.push(stbPages[i]);
       if (i < tpbPages.length) allPages.push(tpbPages[i]);
+      if (i < hdbPages.length) allPages.push(hdbPages[i]);
     }
 
     const batchSize = 4;
@@ -541,6 +557,10 @@ class BaselJobs {
           return this.fetchLiveSTBPage(item.page)
             .then(data => ({ bank: "STB", raw: data.jobs || [] }))
             .catch(() => ({ bank: "STB", raw: [] }));
+        } else if (item.bank === "HDB") {
+          return this.fetchLiveHDBPage(item.page)
+            .then(data => ({ bank: "HDB", raw: data || [] }))
+            .catch(() => ({ bank: "HDB", raw: [] }));
         } else {
           return this.fetchLiveTPBPage(item.page)
             .then(data => ({ bank: "TPB", raw: data.items || [] }))
@@ -562,6 +582,7 @@ class BaselJobs {
             else if (res.bank === "ACB") newJobs.push(...this.processRawACBJobs(res.raw));
             else if (res.bank === "LPB") newJobs.push(...this.processRawLPBJobs(res.raw));
             else if (res.bank === "STB") newJobs.push(...this.processRawSTBJobs(res.raw));
+            else if (res.bank === "HDB") newJobs.push(...this.processRawHDBJobs(res.raw));
             else newJobs.push(...this.processRawTPBJobs(res.raw));
           }
         });
@@ -814,6 +835,36 @@ class BaselJobs {
     const res = await fetch(baseUrl, { headers: { "Accept": "application/json" } });
     if (!res.ok) throw new Error(`TPBank HTTP ${res.status}`);
     return await res.json();
+  }
+
+  async fetchLiveHDBPage(page) {
+    const p5Val = (page - 1).toString();
+    let baseUrl = this.resolveApiUrl("/api/jobs/hdbank", "https://proxyapi.hdbank.com.vn/CVT_HDBank/api/v1/job/search");
+    if (baseUrl.startsWith("http://localhost:8000")) {
+      try {
+        const t = await fetch("http://localhost:8000/api/jobs/hdbank", { method: "OPTIONS" });
+        if (!t.ok) baseUrl = "https://proxyapi.hdbank.com.vn/CVT_HDBank/api/v1/job/search";
+      } catch (_) {
+        baseUrl = "https://proxyapi.hdbank.com.vn/CVT_HDBank/api/v1/job/search";
+      }
+    }
+
+    const payload = {
+      DataHeader: [{"P2": "", "P3": "", "P4": null, "P5": p5Val, "P6": "", "P7": "", "P10": "", "P11": ""}],
+      LangID: "241"
+    };
+
+    const res = await fetch(baseUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json, text/plain, */*"
+      },
+      body: JSON.stringify(payload)
+    });
+    if (!res.ok) throw new Error(`HDBank HTTP ${res.status}`);
+    const data = await res.json();
+    return data.dataItem || [];
   }
 
   // ── Xử lý dữ liệu VPBank ─────────────────────────────────────────
@@ -1179,6 +1230,83 @@ class BaselJobs {
         originalUrl 
       };
     });
+  }
+
+  processRawHDBJobs(rawJobs) {
+    if (!rawJobs) return [];
+    return rawJobs.map((job, idx) => {
+      const title = (job.jobtitlename || "").trim();
+      const titleLower = title.toLowerCase();
+      const workplacename = job.workplacename || "TP. Hồ Chí Minh";
+      const location = job.locationname || workplacename;
+      const deptName = job.carreername || "Kinh doanh & Khác";
+      const deptNameLower = deptName.toLowerCase();
+
+      let deptCode = "business";
+      if (["rủi ro","pháp chế","tuân thủ","kiểm toán","pháp lý","thu hồi","xử lý nợ","giám sát tín dụng","tố tụng"].some(k => titleLower.includes(k) || deptNameLower.includes(k))) {
+        deptCode = "risk-legal";
+      } else if (["it","cntt","công nghệ","data","dữ liệu","lập trình","phần mềm","hệ thống","security","developer","tester","analyst","an toàn thông tin","kiến trúc"].some(k => matchKeyword(titleLower, k) || matchKeyword(deptNameLower, k))) {
+        deptCode = "it-data";
+      }
+
+      let level = "junior-mid", levelName = "Chuyên viên";
+      const jobgradename = job.jobgradename || "Nhân viên";
+      const jobgradenameLower = jobgradename.toLowerCase();
+      if (["thực tập","tập sự","intern"].some(k => titleLower.includes(k) || jobgradenameLower.includes(k))) { 
+        level = "intern"; 
+        levelName = "Thực tập sinh / Tập sự"; 
+      } else if (["chuyên viên cao cấp","cvcc","senior","chuyên gia"].some(k => titleLower.includes(k) || jobgradenameLower.includes(k))) { 
+        level = "senior"; 
+        levelName = "Chuyên viên cao cấp"; 
+      } else if (["trưởng nhóm","trưởng phòng","quản lý","giám đốc","lead","manager","head","director","trưởng bộ phận"].some(k => titleLower.includes(k) || jobgradenameLower.includes(k))) { 
+        level = "lead-manager"; 
+        levelName = "Quản lý / Giám đốc"; 
+      }
+
+      let deadline = job.enddate || "2026-12-31";
+      const m = deadline.match(/(\d{2})\/(\d{2})\/(\d{4})/);
+      if (m) deadline = `${m[3]}-${m[2]}-${m[1]}`;
+
+      const rawId = job.id;
+      const originalUrl = `https://career.hdbank.com.vn/jobdetail/${rawId}`;
+      
+      const salary = job.salaryinfo || "Thỏa thuận";
+      
+      const tags = ["HDBank"];
+      if (job.emptypename) tags.push(job.emptypename);
+
+      return { 
+        id: `job-hdb-${rawId || idx}`, 
+        title, 
+        bank: "HDBank", 
+        bankCode: "HDB", 
+        logoColor: "linear-gradient(135deg,#f97316 0%,#ea580c 100%)", 
+        department: deptCode, 
+        departmentName: deptName, 
+        location, 
+        salary, 
+        level, 
+        levelName, 
+        deadline, 
+        tags, 
+        hrEmail: "tuyendung@hdbank.com.vn", 
+        originalUrl 
+      };
+    });
+  }
+
+  slugify(text) {
+    if (!text) return "";
+    return text.toString().toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/đ/g, "d")
+      .replace(/Đ/g, "d")
+      .replace(/\s+/g, '-')
+      .replace(/[^\w\-]+/g, '')
+      .replace(/\-\-+/g, '-')
+      .replace(/^-+/, '')
+      .replace(/-+$/, '');
   }
 
   // ── Lọc phía client (top-bar + column filters) ───────────────────

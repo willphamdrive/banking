@@ -665,6 +665,13 @@ class DocumentFinder {
 
   // Phương thức mở hộp thoại nhúng xem PDF trực tiếp
   openPdfViewer(path, name) {
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+    if (isMobile) {
+      // Trên thiết bị di động, mở trực tiếp PDF trong tab mới để tránh các lỗi render iframe của trình duyệt di động (đặc biệt là iOS WebKit)
+      window.open(path, '_blank');
+      return;
+    }
+
     const modal = document.getElementById("pdf-viewer-modal");
     const title = document.getElementById("pdf-modal-title");
     const iframe = document.getElementById("pdf-modal-iframe");

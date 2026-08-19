@@ -384,5 +384,42 @@ Tôi đã hoàn trả lại cơ chế tương tác mở/đóng của Drawer gi�
             - **Cắt ngắn nhãn nút bấm**: Bổ sung hiệu ứng `text-overflow: ellipsis` cho nút kích hoạt để khi chọn nhiều mục dài, nhãn chữ sẽ tự thu gọn bằng dấu ba chấm thay vì làm vỡ bố cục giao diện.
     - **Giữ trạng thái đã chọn (State preservation)**: Khi danh sách dữ liệu nền được tải thêm (lazy load) hoặc thay đổi, các giá trị bộ lọc đã chọn trước đó vẫn được giữ nguyên nếu chúng vẫn còn hợp lệ.
 
+---
+
+## 🏷️ Cập nhật Tên Subpage (Author Tabs)
+
+*   **Tính năng**: Đổi tên các subpages/tabs lọc tác giả trong phần "Phân tích & Thảo luận vĩ mô" để đơn giản hóa giao diện.
+*   **Chi tiết triển khai**:
+    - Cập nhật trong file [`index.html`](file:///Users/toanpham/Desktop/banking/index.html):
+        - Đổi tab **Hedge Academy** thành **Page 1**.
+        - Đổi tab **Trần Quang Nghĩa** thành **Page 2**.
+
+---
+
+## 📱 Tối ưu hóa Giao diện Tương thích Di động (Responsive Layout)
+
+*   **Tính năng**: Đảm bảo toàn bộ ứng dụng hiển thị và hoạt động mượt mà khi truy cập bằng trình duyệt web trên điện thoại di động.
+*   **Chi tiết triển khai**:
+    - **Chuyển đổi bảng tuyển dụng thành danh sách thẻ (Table-to-Card list)**:
+        - Trên màn hình nhỏ (`max-width: 768px`), bảng tuyển dụng tự động ẩn các tiêu đề bảng truyền thống.
+        - Mỗi dòng trong bảng được chuyển thành một "Thẻ thông tin" (Card) độc lập, tự co giãn, căn lề và sử dụng các thuộc tính nhãn giả lập (`data-label`) để hiển thị thông tin dạng khóa-giá trị gọn gàng.
+        - Các nút chức năng (Bookmark, Chi tiết) được gom nhóm thẩm mỹ ở chân thẻ.
+    - **Chuyển đổi bộ lọc cột thành bảng tùy chọn dạng lưới**:
+        - Hàng bộ lọc cột (`#col-filter-row`) tự động biến đổi thành một lưới 2 cột ở đầu danh sách.
+        - Ô tìm kiếm từ khóa vị trí chiếm trọn chiều rộng để người dùng dễ thao tác bằng ngón tay.
+        - Các dropdown bộ lọc được căn lề tự động chống tràn màn hình (`#multiselect-dept` căn phải, `#multiselect-level` căn trái).
+    - **Tối ưu hóa Điều hướng (Navigation)**:
+        - **Lớp phủ nền mờ (Backdrop Blur Overlay)**: Bổ sung lớp phủ nền `.app-container::before` tự động kích hoạt làm mờ và tối vùng nội dung chính khi mở menu sidebar trên thiết bị di động. Giúp tập trung thị giác vào thanh điều hướng và đóng nhanh sidebar khi chạm vào vùng ngoài.
+        - **Tối ưu nút kích hoạt Menu**: Cấu hình nút hamburger với màu nền đặc (`var(--bg-color)`) và đổ bóng đậm rõ nét để không bị lẫn với các phần tử tiêu đề nằm phía dưới.
+    - **Tối ưu hóa Trình tìm kiếm tài liệu (Document Finder)**:
+        - **Mở rộng toàn màn hình (Full-width drawer)**: Trên màn hình điện thoại di động (`max-width: 480px`), ngăn chứa Document Finder (`.doc-finder-drawer`) được mở rộng 100% chiều ngang màn hình thay vì giữ kích thước cố định 380px, mang lại không gian cuộn và tra cứu tài liệu thoải mái nhất.
+        - **Căn chỉnh lại Tab tài liệu nổi**: Tinh chỉnh vị trí và độ mờ của `.floating-doc-tab` ở cạnh phải màn hình để không che lấp các yếu tố giao diện quan trọng khác trên điện thoại.
+    - **Áp dụng Responsive toàn diện cho tất cả các trang & Cấu phần (Tabs, Calculator, Tables)**:
+        - **Cuộn ngang danh sách Tabs (Horizontal Swipable Tabs)**: Các thanh tab con (Sub-tabs) trên tất cả các trang (Hiệp ước Basel, Phân tích CAR, Phân tích BCTC, Tài liệu) được chuyển đổi thành cơ chế cuộn ngang mượt mà (`overflow-x: auto; flex-wrap: nowrap;`) thay vì ngắt dòng lộn xộn. Giúp giao diện mobile giữ vững bố cục ngang đồng đều, hiện đại.
+        - **Tự động xếp chồng dòng nhập liệu (Stacked form rows)**: Chuyển cấu trúc 2 cột của các dòng nhập liệu trong bộ tính toán CAR (`.form-row`) thành xếp chồng 1 cột trên màn hình di động, giúp các thanh trượt và ô nhập số liệu hiển thị to rõ, không bị bóp méo.
+        - **Tinh giản khoảng cách Card & Tiêu đề**: Co gọn padding và bo góc các `.card` trên mobile (`1.25rem` và `12px` border-radius) để tận dụng tối đa không gian trống trên màn hình nhỏ.
+        - **Giới hạn tỷ lệ an toàn 1 cột (LDR, CAR limits)**: Lưới hiển thị các tỷ lệ an toàn ngân hàng ở VN (`.ratios-grid`) tự động co từ 2 cột về 1 cột trên màn hình điện thoại để tránh tràn chữ.
+        - **Cố định chiều rộng tối thiểu cho Bảng so sánh (Comparison horizontal scroll)**: Thêm chiều rộng tối thiểu `750px` cho bảng so sánh Basel I-IV để đảm bảo các dữ liệu text phong phú không bị bó hẹp trong chiều rộng màn hình dọc của mobile.
+
 
 

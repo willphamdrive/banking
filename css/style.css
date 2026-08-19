@@ -1097,6 +1097,24 @@ header p {
     flex-direction: column;
   }
 
+  /* Sidebar backdrop overlay on mobile */
+  .app-container::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 998;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  .app-container.mobile-sidebar-active::before {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
   .sidebar {
     position: fixed;
     top: 0;
@@ -1125,6 +1143,30 @@ header p {
     left: 1.25rem;
     top: 1.25rem;
     z-index: 999;
+    background: var(--bg-color) !important;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Document Finder Floating Tab adjustments for mobile */
+  .floating-doc-tab {
+    opacity: 0.85 !important;
+    transform: translateX(26px) !important;
+    top: 80% !important;
+  }
+  .floating-doc-tab:hover {
+    transform: translateX(0) !important;
+    opacity: 1 !important;
+  }
+
+  /* Document Finder Drawer full width on mobile */
+  .doc-finder-drawer {
+    width: 100% !important;
+    right: -100% !important;
+    border-left: none !important;
+  }
+  .doc-finder-drawer.open {
+    right: 0 !important;
   }
 
   /* Adjust spacing in dashboard grids & headers for mobile */
@@ -1160,6 +1202,160 @@ header p {
   .timeline-badge {
     left: 15px !important;
     right: auto !important;
+  }
+
+  /* Responsive Jobs Table to Card List on mobile */
+  .jobs-table {
+    border: none !important;
+  }
+  .jobs-table thead {
+    display: block !important;
+    border-bottom: none !important;
+  }
+  /* Hide the actual header titles row */
+  .jobs-table thead tr:first-child {
+    display: none !important;
+  }
+  /* Convert column filter row to a 2-column flex/grid box */
+  #col-filter-row {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 12px;
+    margin-bottom: 1.25rem;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  #col-filter-row td {
+    display: block !important;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+  #col-filter-row td:first-child {
+    grid-column: span 2;
+  }
+  #col-filter-row td:last-child {
+    grid-column: span 2;
+    display: flex !important;
+    justify-content: flex-end;
+  }
+  #col-filter-row td::before {
+    display: none !important;
+  }
+  /* Convert body rows to cards */
+  .jobs-table tbody,
+  .jobs-table tr,
+  .jobs-table td {
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+  .jobs-table tbody tr {
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: var(--shadow-sm);
+  }
+  .jobs-table tbody tr:last-child {
+    margin-bottom: 0;
+  }
+  .jobs-table tbody td {
+    padding: 0.5rem 0 !important;
+    border-bottom: none !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .jobs-table tbody td:first-child {
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding-bottom: 0.75rem !important;
+    margin-bottom: 0.25rem;
+  }
+  .jobs-table tbody td:first-child::before {
+    display: none !important;
+  }
+  .jobs-table tbody td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .jobs-table tbody td[data-label="Thao tác"] {
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding-top: 0.75rem !important;
+    margin-top: 0.25rem;
+    justify-content: flex-end !important;
+  }
+  .jobs-table tbody td[data-label="Thao tác"]::before {
+    display: none !important;
+  }
+  /* Mobile dropdown alignment adjustments to prevent screen overflow */
+  #multiselect-dept .multiselect-dropdown {
+    left: auto !important;
+    right: 0 !important;
+  }
+  #multiselect-level .multiselect-dropdown {
+    left: 0 !important;
+    right: auto !important;
+  }
+
+  /* --- General Responsive Upgrades for all tabs/pages --- */
+  
+  /* Horizontal scroll for sub tabs instead of ugly wrapping */
+  .sub-tabs-container, 
+  .car-sub-tabs-container, 
+  .financial-sub-tabs-container,
+  .doc-categories-pills {
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+    padding-bottom: 0.6rem !important;
+    gap: 0.4rem !important;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+  }
+  .sub-tab-btn, 
+  .car-sub-tab-btn, 
+  .financial-sub-tab-btn,
+  .doc-pill-btn {
+    flex-shrink: 0 !important;
+    padding: 0.45rem 0.85rem !important;
+    font-size: 0.82rem !important;
+  }
+
+  /* Form row stacks on mobile */
+  .form-row {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
+
+  /* Compact card paddings on mobile */
+  .card {
+    padding: 1.25rem !important;
+    border-radius: 12px !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  /* Ratios grid becomes 1 column on smaller mobile screens */
+  .ratios-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
+
+  /* Prevent comparison table columns from shrinking too much */
+  .comparison-table {
+    min-width: 750px !important;
   }
 }
 

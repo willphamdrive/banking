@@ -1068,22 +1068,22 @@ class BaselJobs {
 
       return `
         <tr style="border-bottom:1px solid var(--border-color);">
-          <td style="padding:0.85rem 1.25rem;">
+          <td data-label="Vị trí tuyển dụng" style="padding:0.85rem 1.25rem;">
             <div style="font-weight:600;color:var(--text-main);font-size:0.9rem;margin-bottom:0.3rem;cursor:pointer;" class="open-job-detail-link" data-id="${job.id}">${job.title}</div>
             <div style="display:flex;flex-wrap:wrap;gap:0.25rem;">${tagsHtml}</div>
           </td>
-          <td style="padding:0.85rem 1.25rem;">
+          <td data-label="Ngân hàng" style="padding:0.85rem 1.25rem;">
             <div style="display:flex;align-items:center;gap:0.5rem;">
               <div style="background:${job.logoColor};width:26px;height:26px;font-size:0.65rem;font-weight:700;border-radius:5px;display:flex;align-items:center;justify-content:center;color:white;">${job.bankCode}</div>
               <span style="font-weight:600;font-size:0.82rem;">${job.bank}</span>
             </div>
           </td>
-          <td style="padding:0.85rem 1.25rem;color:var(--text-muted);font-size:0.82rem;">${job.departmentName}</td>
-          <td style="padding:0.85rem 1.25rem;font-size:0.82rem;">
+          <td data-label="Khối phòng ban" style="padding:0.85rem 1.25rem;color:var(--text-muted);font-size:0.82rem;">${job.departmentName}</td>
+          <td data-label="Cấp bậc" style="padding:0.85rem 1.25rem;font-size:0.82rem;">
             <span class="badge" style="background:rgba(255,255,255,0.03);color:var(--text-main);border:1px solid var(--border-color);padding:0.2rem 0.45rem;border-radius:4px;font-weight:500;">${job.levelName}</span>
           </td>
-          <td style="padding:0.85rem 1.25rem;font-size:0.82rem;color:var(--text-muted);font-weight:500;">${this.formatDate(job.deadline)}</td>
-          <td style="padding:0.85rem 1.25rem;text-align:right;">
+          <td data-label="Hạn nộp" style="padding:0.85rem 1.25rem;font-size:0.82rem;color:var(--text-muted);font-weight:500;">${this.formatDate(job.deadline)}</td>
+          <td data-label="Thao tác" style="padding:0.85rem 1.25rem;text-align:right;">
             <div style="display:flex;gap:0.35rem;justify-content:flex-end;align-items:center;">
               <button class="save-job-btn" data-id="${job.id}" title="${isSaved ? "Hủy lưu công việc" : "Lưu công việc"}" 
                 style="padding:0.35rem;font-size:0.75rem;display:inline-flex;align-items:center;background:transparent;border:1px solid var(--border-color);border-radius:6px;color:${isSaved ? "#f59e0b" : "var(--text-muted)"};cursor:pointer;transition:all 0.15s;">

@@ -40,7 +40,7 @@ class BaselJobs {
     // Không tự động load — chờ người dùng nhấn Tìm kiếm
   }
 
-  resolveApiUrl(relativeUrl) {
+  resolveApiUrl(relativeUrl, originalUrl) {
     const hn = window.location.hostname;
     const isLocal = hn === "localhost" || 
                     hn === "127.0.0.1" || 
@@ -50,6 +50,13 @@ class BaselJobs {
     if (isLocal && window.location.protocol.startsWith("http")) {
       return relativeUrl;
     }
+    
+    // If the origin is HTTPS (such as willphamdrive.github.io), we MUST use an HTTPS CORS proxy.
+    // Otherwise, browser Mixed Content policy will block calls to http://localhost:8000.
+    if (window.location.protocol === "https:" && originalUrl) {
+      return "https://corsproxy.io/?" + encodeURIComponent(originalUrl);
+    }
+    
     const proxyHost = (/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/.test(hn)) ? `http://${window.location.host}` : "http://localhost:8000";
     return proxyHost + relativeUrl;
   }
@@ -458,7 +465,7 @@ class BaselJobs {
   }
   // ── Gọi API ──────────────────────────────────────────────────────
   async fetchLivePageFromVPB(page) {
-    let baseUrl = this.resolveApiUrl("/api/jobs");
+    let baseUrl = this.resolveApiUrl("/api/jobs", "https://tuyendung.vpbank.com.vn/services/recruiting/v1/jobs");
     // Fallback to live URL if proxy is not local and not running
     if (baseUrl.startsWith("http://localhost:8000")) {
       try {
@@ -485,7 +492,7 @@ class BaselJobs {
 
   async fetchLiveMBBPage(page) {
     const qs = `workGroupId=&name=&skillTags=&city=TX701&size=15&page=${page}&type=TX105&region=&subRegion=&typicalSkills=&currentProvinceCode=&permanentProvinceCode=`;
-    let baseUrl = this.resolveApiUrl(`/api/jobs/mbbank?${qs}`);
+    let baseUrl = this.resolveApiUrl(`/api/jobs/mbbank?${qs}`, `https://careers.mbbank.com.vn/libra-job-management/public/recruitment-news?${qs}`);
     // Fallback to live URL if proxy is not local and not running
     if (baseUrl.startsWith("http://localhost:8000")) {
       try {
@@ -502,7 +509,7 @@ class BaselJobs {
 
   async fetchLiveACBPage(page, officeId = 3133) {
     const qs = `office=${officeId}&return=1&page=${page}`;
-    let baseUrl = this.resolveApiUrl(`/api/jobs/acb?${qs}`);
+    let baseUrl = this.resolveApiUrl(`/api/jobs/acb?${qs}`, `https://www.acbjobs.com.vn/jobs?${qs}`);
     // Fallback to live URL if proxy is not local and not running
     if (baseUrl.startsWith("http://localhost:8000")) {
       try {
@@ -604,7 +611,7 @@ class BaselJobs {
 
   async fetchLiveLPBPage(page) {
     const qs = `DeltaDataLocation=01000000-6ba6-4a0b-c110-08de81da9f2e&pageIndex=${page}&pageSize=10&Domain=tuyendung.lpbank.com.vn`;
-    let baseUrl = this.resolveApiUrl(`/api/jobs/lpbank?${qs}`);
+    let baseUrl = this.resolveApiUrl(`/api/jobs/lpbank?${qs}`, `https://centralize-api-v2.iviec.vn/api/recruitment/Recruitment/GetRecruitmentsByDomain?${qs}`);
     // Fallback to live URL if proxy is not local and not running
     if (baseUrl.startsWith("http://localhost:8000")) {
       try {

@@ -1156,11 +1156,11 @@ header p {
   /* Document Finder Floating Tab adjustments for mobile */
   .floating-doc-tab {
     opacity: 0.85 !important;
-    transform: translateX(26px) !important;
-    top: 80% !important;
+    transform: translateY(-50%) translateX(26px) !important;
+    top: 50% !important;
   }
   .floating-doc-tab:hover {
-    transform: translateX(0) !important;
+    transform: translateY(-50%) translateX(0) !important;
     opacity: 1 !important;
   }
 
@@ -2431,6 +2431,27 @@ header p {
   width: 14px;
   height: 14px;
   flex-shrink: 0;
+}
+
+/* Mobile Override to ensure the Hamburger Button is ALWAYS visible on mobile */
+@media (max-width: 768px) {
+  #sidebar-expand-btn,
+  #sidebar-expand-btn.hidden,
+  .main-sidebar-toggle-btn,
+  .main-sidebar-toggle-btn.hidden {
+    display: flex !important;
+    left: 1.25rem !important;
+    top: 1.25rem !important;
+    z-index: 999 !important;
+    background: var(--bg-color) !important;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
+  }
+
+  .app-container.mobile-sidebar-active #sidebar-expand-btn,
+  .app-container.mobile-sidebar-active .main-sidebar-toggle-btn {
+    display: none !important;
+  }
 }
 
 

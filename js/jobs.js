@@ -73,6 +73,83 @@ function extractLocationFromTitle(title, fallbackLoc) {
   }
   
   return "TP. Hồ Chí Minh";
+}function classifyDepartment(title, rawDeptName = "", skillTags = []) {
+  const titleLower = title.toLowerCase();
+  const deptLower = (rawDeptName || "").toLowerCase();
+  const skillsStr = skillTags.map(s => s.toLowerCase()).join(" ");
+
+  // 1. Kiểm tra ưu tiên tuyệt đối cho Công nghệ thông tin / IT / Dữ liệu
+  const isIT = [
+    "it", "cntt", "công nghệ", "data", "dữ liệu", "lập trình", "phần mềm", "hệ thống", 
+    "security", "developer", "tester", "analyst", "an toàn thông tin", "an ninh mạng", 
+    "devops", "cloud", "cyber", "ai", "mạng", "phần cứng", "infrastructure", "infra",
+    "solutions architect", "database", "cybersecurity"
+  ].some(k => {
+    if (k === "it") {
+      return /\bit\b/i.test(titleLower) || /\bit\b/i.test(deptLower) || /\bit\b/i.test(skillsStr);
+    }
+    return titleLower.includes(k) || deptLower.includes(k) || skillsStr.includes(k);
+  });
+
+  if (isIT) {
+    return {
+      code: "it-data",
+      name: "Khối Công nghệ Thông tin"
+    };
+  }
+
+  // 2. Định nghĩa các từ khóa kinh doanh/bán lẻ/quan hệ khách hàng để tránh bị kéo nhầm vào rủi ro do tag kỹ năng
+  const isBusinessOverride = [
+    "khách hàng cá nhân", "khcn", "bán lẻ", "retail", "tư vấn khách hàng", "giao dịch viên", 
+    "teller", "quan hệ khách hàng", "khdn", "doanh nghiệp", "sme", "phát triển kinh doanh", 
+    "kinh doanh", "sales", "telesales", "tín dụng", "đvkd", "chi nhánh", "chuyên viên khách hàng", 
+    "prm", "priority", "môi giới", "kinh doanh", "bán hàng", "hub", "khách hàng ưu tiên", "chăm sóc khách hàng"
+  ].some(k => titleLower.includes(k));
+
+  // 3. Kiểm tra Quản trị Rủi ro & Pháp chế & Kiểm toán
+  const isRiskLegal = [
+    "rủi ro", "pháp chế", "tuân thủ", "kiểm toán", "pháp lý", "thu hồi", "xử lý nợ", 
+    "tố tụng", "giám sát tín dụng", "compliance", "audit", "risk management", "legal", 
+    "control", "kiểm soát", "tra soát"
+  ].some(k => {
+    if (isBusinessOverride && !titleLower.includes("rủi ro") && !titleLower.includes("pháp chế") && !titleLower.includes("pháp lý")) {
+      return false;
+    }
+    return titleLower.includes(k) || deptLower.includes(k) || skillsStr.includes(k);
+  });
+
+  if (isRiskLegal) {
+    return {
+      code: "risk-legal",
+      name: "Khối Quản trị Rủi ro & Pháp chế"
+    };
+  }
+
+  // 4. Nếu không thuộc 2 khối trên, mặc định là Kinh doanh & Vận hành hoặc lấy theo rawDeptName nếu nó hợp lý
+  let cleanDeptName = rawDeptName ? rawDeptName.trim() : "";
+  
+  if (isBusinessOverride && (cleanDeptName === "Ban Kiểm soát" || cleanDeptName.includes("Kiểm toán") || cleanDeptName.includes("Rủi ro") || cleanDeptName.includes("Pháp chế"))) {
+    cleanDeptName = "Khối Bán lẻ & Kinh doanh";
+  }
+
+  if (!cleanDeptName || cleanDeptName === "Kinh doanh & Khác" || cleanDeptName === "Đơn vị Kinh doanh" || cleanDeptName === "Kinh doanh & Vận hành") {
+    if (titleLower.includes("vận hành")) {
+      cleanDeptName = "Khối Vận hành";
+    } else if (titleLower.includes("thẩm định") || titleLower.includes("định giá")) {
+      cleanDeptName = "Khối Thẩm định";
+    } else if (titleLower.includes("hỗ trợ")) {
+      cleanDeptName = "Khối Hỗ trợ Kinh doanh";
+    } else if (isBusinessOverride) {
+      cleanDeptName = "Khối Khách hàng Cá nhân";
+    } else {
+      cleanDeptName = "Khối Bán lẻ & Kinh doanh";
+    }
+  }
+
+  return {
+    code: "business",
+    name: cleanDeptName
+  };
 }
 
 function extractArea(title, bank, facility) {
@@ -1252,12 +1329,10 @@ class BaselJobs {
       const title = (job.unifiedStandardTitle || "").trim();
       const titleLower = title.toLowerCase();
       const buList = job.businessUnit_obj || [];
-      const deptName = buList[0] || "Kinh doanh & Khác";
-      const deptNameLower = deptName.toLowerCase();
-
-      let deptCode = "business";
-      if (["rủi ro","pháp chế","tuân thủ","kiểm toán","pháp lý","thu hồi","xử lý nợ","giám sát tín dụng","tố tụng"].some(k => titleLower.includes(k) || deptNameLower.includes(k))) deptCode = "risk-legal";
-      else if (["it","cntt","công nghệ","data","dữ liệu","lập trình","phần mềm","hệ thống","security","developer","tester","analyst","an toàn thông tin","kiến trúc"].some(k => matchKeyword(titleLower, k) || matchKeyword(deptNameLower, k))) deptCode = "it-data";
+      const rawDeptName = buList[0] || "Kinh doanh & Khác";
+      const classified = classifyDepartment(title, rawDeptName);
+      const deptCode = classified.code;
+      const deptName = classified.name;
 
       let level = "junior-mid", levelName = "Chuyên viên";
       if (["thực tập","tập sự","intern"].some(k => titleLower.includes(k))) { level = "intern"; levelName = "Thực tập sinh / Tập sự"; }
@@ -1284,37 +1359,10 @@ class BaselJobs {
       const title = (job.name || "").trim();
       const titleLower = title.toLowerCase();
       const skillTags = job.skillTags || [];
-      const skillTagsLower = skillTags.map(s => s.toLowerCase());
 
-      let deptCode = "business", deptName = "Đơn vị Kinh doanh";
-      if (["rủi ro","pháp chế","tuân thủ","kiểm toán","pháp lý","thu hồi","xử lý nợ"].some(k => titleLower.includes(k)) || ["risk management","legal","compliance","audit"].some(k => skillTagsLower.includes(k))) { 
-        deptCode = "risk-legal"; 
-        deptName = "Khối Quản trị Rủi ro & Pháp chế"; 
-      }
-      else if (["it","cntt","công nghệ","data","dữ liệu","lập trình","phần mềm","hệ thống","security","developer","tester"].some(k => matchKeyword(titleLower, k)) || ["it","software development","database","data analysis","cyber security"].some(k => matchKeyword(skillTagsLower.join(" "), k))) { 
-        deptCode = "it-data"; 
-        deptName = "Khối Công nghệ Thông tin"; 
-      }
-      else if (["cá nhân", "khcn", "bán lẻ", "tư vấn khách hàng", "ub"].some(k => titleLower.includes(k))) {
-        deptCode = "business";
-        deptName = "Khối Khách hàng Cá nhân";
-      }
-      else if (["doanh nghiệp", "khdn"].some(k => titleLower.includes(k))) {
-        deptCode = "business";
-        deptName = "Khối Khách hàng Doanh nghiệp";
-      }
-      else if (["thẩm định", "định giá"].some(k => titleLower.includes(k))) {
-        deptCode = "business";
-        deptName = "Khối Thẩm định";
-      }
-      else if (["hỗ trợ"].some(k => titleLower.includes(k))) {
-        deptCode = "business";
-        deptName = "Khối Hỗ trợ Kinh doanh";
-      }
-      else if (["vận hành"].some(k => titleLower.includes(k))) {
-        deptCode = "business";
-        deptName = "Khối Vận hành";
-      }
+      const classified = classifyDepartment(title, "", skillTags);
+      const deptCode = classified.code;
+      const deptName = classified.name;
 
       let level = "junior-mid", levelName = "Chuyên viên";
       if (["thực tập","tập sự","intern","học việc"].some(k => titleLower.includes(k))) { level = "intern"; levelName = "Thực tập sinh / Tập sự"; }
@@ -1533,19 +1581,18 @@ class BaselJobs {
       const title = (job.name || "").trim();
       const titleLower = title.toLowerCase();
       
-      let deptName = "Kinh doanh & Vận hành";
+      let rawDeptName = "Kinh doanh & Vận hành";
       const deptData = (job.recruitmentDeltaDatas || []).find(d => d.workspaceDeltaDataKey === "job_department");
       if (deptData && deptData.workspaceDeltaDataValue) {
         try {
           const parsed = JSON.parse(deptData.workspaceDeltaDataValue);
-          if (parsed.name_VN) deptName = parsed.name_VN.trim();
+          if (parsed.name_VN) rawDeptName = parsed.name_VN.trim();
         } catch (_) {}
       }
-      const deptNameLower = deptName.toLowerCase();
 
-      let deptCode = "business";
-      if (["rủi ro","pháp chế","tuân thủ","kiểm toán","pháp lý","thu hồi","xử lý nợ","tố tụng","giám sát tín dụng"].some(k => titleLower.includes(k) || deptNameLower.includes(k))) deptCode = "risk-legal";
-      else if (["it","cntt","công nghệ","data","dữ liệu","lập trình","phần mềm","hệ thống","security","developer","tester","analyst","an toàn thông tin"].some(k => matchKeyword(titleLower, k) || matchKeyword(deptNameLower, k))) deptCode = "it-data";
+      const classified = classifyDepartment(title, rawDeptName);
+      const deptCode = classified.code;
+      const deptName = classified.name;
 
       let levelText = "";
       const levelData = (job.recruitmentDeltaDatas || []).find(d => d.workspaceDeltaDataKey === "job_level");
@@ -1895,7 +1942,7 @@ class BaselJobs {
     this.filteredJobs = baseList.filter(job => {
       // --- Top-bar filters ---
       const matchBank   = this.selectedBank === "all" || this.selectedBank === "saved" || job.bank === this.selectedBank;
-      const matchDept   = this.selectedDept === "all" || job.department === this.selectedDept;
+      const matchDept   = this.selectedDept === "all" || job.departmentName === this.selectedDept;
       const matchExp    = this.selectedExp  === "all" || job.level     === this.selectedExp;
       const matchSearch = !this.searchQuery ||
         job.title.toLowerCase().includes(this.searchQuery) ||
@@ -1928,7 +1975,7 @@ class BaselJobs {
     const matchesFiltersExcept = (job, excludeFields = []) => {
       // Top-bar filters
       const matchBank   = this.selectedBank === "all" || this.selectedBank === "saved" || job.bank === this.selectedBank;
-      const matchDept   = this.selectedDept === "all" || job.department === this.selectedDept;
+      const matchDept   = this.selectedDept === "all" || job.departmentName === this.selectedDept;
       const matchExp    = this.selectedExp  === "all" || job.level     === this.selectedExp;
       const matchSearch = !this.searchQuery ||
         job.title.toLowerCase().includes(this.searchQuery) ||
@@ -2106,13 +2153,155 @@ class BaselJobs {
     updateTriggerLabel(areaTrigger, areaJobs.length, areaCounts, this.colFilter.area);
   }
 
-  // ── Thống kê ─────────────────────────────────────────────────────
   renderStats() {
-    if (!this.statTotal) return;
-    this.statTotal.innerText = this.jobs.length;
-    this.statRisk.innerText  = this.jobs.filter(j => j.department === "risk-legal").length;
-    this.statIt.innerText    = this.jobs.filter(j => j.department === "it-data").length;
-    this.statBiz.innerText   = this.jobs.filter(j => j.department === "business").length;
+    // 1. Cập nhật dropdown Khối trên thanh công cụ tìm kiếm
+    this.populateTopDeptSelect();
+
+    // 1. Cập nhật thẻ Tổng tuyển dụng ở góc trái
+    const totalEl = document.getElementById("job-stat-total");
+    const list = this.filteredJobs || this.jobs;
+    if (totalEl) {
+      totalEl.innerText = list.length;
+    }
+
+    // 2. Tính toán số lượng của các departmentName thực tế từ danh sách công việc sau khi lọc
+    const deptCounts = {};
+    list.forEach(j => {
+      const name = j.departmentName || "Kinh doanh & Khác";
+      deptCounts[name] = (deptCounts[name] || 0) + 1;
+    });
+
+    // Sắp xếp các phòng ban theo số lượng tuyển dụng giảm dần
+    const sortedDepts = Object.entries(deptCounts).sort((a, b) => b[1] - a[1]);
+
+    const labels = sortedDepts.map(d => d[0]);
+    const counts = sortedDepts.map(d => d[1]);
+
+    // 3. Khởi tạo / Cập nhật biểu đồ cột ngang bằng Chart.js
+    const canvas = document.getElementById("jobs-dept-chart");
+    if (!canvas) return;
+
+    // Hủy chart cũ nếu đã tồn tại trước đó để tránh trùng dữ liệu
+    if (this.deptChart) {
+      this.deptChart.destroy();
+    }
+    // Tự động điều chỉnh chiều cao của wrapper chứa canvas biểu đồ dựa trên số lượng khối phòng ban
+    const wrapper = document.getElementById("jobs-dept-chart-wrapper");
+    const height = Math.max(180, labels.length * 36);
+    if (wrapper) {
+      wrapper.style.height = height + "px";
+    }
+
+    if (list.length === 0) {
+      // Nếu không có kết quả, xóa trắng canvas
+      const ctx = canvas.getContext("2d");
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      return;
+    }
+
+    const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+    const gridColor = isDark ? "rgba(255, 255, 255, 0.08)" : "rgba(0, 0, 0, 0.08)";
+    const textColor = isDark ? "#94a3b8" : "#64748b";
+    
+    // Gradient màu cột
+    const ctx = canvas.getContext("2d");
+    const gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
+    gradient.addColorStop(0, "rgba(59, 130, 246, 0.3)");
+    gradient.addColorStop(1, "rgba(59, 130, 246, 0.85)");
+
+    this.deptChart = new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: labels,
+        datasets: [{
+          label: "Số vị trí tuyển dụng",
+          data: counts,
+          backgroundColor: gradient,
+          borderColor: "#3b82f6",
+          borderWidth: 1.5,
+          borderRadius: 4,
+          barThickness: 16
+        }]
+      },
+      options: {
+        indexAxis: "y", // Chuyển cột dọc thành cột ngang
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false
+          },
+          tooltip: {
+            backgroundColor: isDark ? "#1e293b" : "#ffffff",
+            titleColor: isDark ? "#f8fafc" : "#0f172a",
+            bodyColor: isDark ? "#cbd5e1" : "#334155",
+            borderColor: isDark ? "#475569" : "#cbd5e1",
+            borderWidth: 1,
+            padding: 10,
+            cornerRadius: 8
+          }
+        },
+        scales: {
+          x: {
+            grid: {
+              color: gridColor,
+              drawBorder: false
+            },
+            ticks: {
+              color: textColor,
+              font: {
+                family: "'Inter', sans-serif",
+                size: 10
+              }
+            }
+          },
+          y: {
+            grid: {
+              display: false
+            },
+            ticks: {
+              color: isDark ? "#cbd5e1" : "#334155",
+              font: {
+                family: "'Inter', sans-serif",
+                size: 10,
+                weight: "500"
+              }
+            }
+          }
+        }
+      }
+    });
+  }
+
+  populateTopDeptSelect() {
+    if (!this.deptSelect) return;
+    
+    // Lưu lại giá trị đang chọn hiện tại
+    const currentValue = this.selectedDept || "all";
+    
+    // Tìm các departmentName duy nhất từ toàn bộ danh sách tuyển dụng
+    const depts = new Set();
+    this.jobs.forEach(j => {
+      if (j.departmentName) depts.add(j.departmentName);
+    });
+    
+    const sortedDepts = Array.from(depts).sort();
+    
+    // Tạo lại các tùy chọn cho dropdown
+    let html = '<option value="all">Tất cả Khối</option>';
+    sortedDepts.forEach(d => {
+      html += `<option value="${d}">${d}</option>`;
+    });
+    
+    this.deptSelect.innerHTML = html;
+    
+    // Khôi phục giá trị đang chọn trước đó nếu giá trị vẫn tồn tại
+    if (sortedDepts.includes(currentValue)) {
+      this.deptSelect.value = currentValue;
+    } else {
+      this.deptSelect.value = "all";
+      this.selectedDept = "all";
+    }
   }
 
   // ── Sắp xếp ──────────────────────────────────────────────────────

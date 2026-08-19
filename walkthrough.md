@@ -656,3 +656,178 @@ Tôi đã phát triển bộ nút nổi (Floating Buttons) thông minh ở góc 
    - Nút **To the End** chỉ hiện diện khi người dùng còn cách đáy trang hơn `200px` (tự ẩn đi khi đã cuộn tới chân trang).
 3. **Hiệu ứng cuộn mượt (Smooth Scroll)**:
    - Sử dụng API `window.scrollTo({ behavior: 'smooth' })` mang lại trải nghiệm cuộn trang êm ái và tự nhiên.
+---
+
+## 📍 Bổ sung Cột Địa điểm & Bộ lọc Multiselect thông minh
+Tôi đã bổ sung cột **Địa điểm** vào bảng hiển thị kết quả việc làm và tối ưu hóa tính năng trích xuất, bộ lọc thông tin:
+1. **Trích xuất Địa điểm Thông minh (`js/jobs.js`)**:
+   - Bổ sung hàm helper `extractLocationFromTitle` tự động quyét và phân tích tiêu đề tuyển dụng (`title`) để trích xuất vị trí làm việc cụ thể trước (ví dụ: quét các từ khóa như "Hà Nội", "Hải Phòng", "Vĩnh Long", "HCM"...). Nếu không tìm thấy trong tiêu đề, hàm sẽ tự động phân tích và chuẩn hóa từ các trường thông tin khu vực địa lý dự phòng trong kết quả cào về.
+2. **Giao diện bảng & Bộ lọc Multiselect (`index.html`)**:
+   - Thêm cột `Địa điểm` vào tiêu đề bảng `<thead>` có hỗ trợ sắp xếp.
+   - **Tối ưu hóa bộ lọc**: Thay thế ô nhập text đơn giản bằng một **custom multiselect dropdown** (`#multiselect-location`) tương thích với các cột khác. Bộ lọc này tự động thống kê số lượng công việc theo từng địa điểm thực tế có trong danh sách (Faceted Search) và hỗ trợ chọn lọc nhiều địa điểm cùng lúc.
+   - Điều chỉnh chiều rộng cột vị trí tuyển dụng từ `45%` xuống `32%` để đảm bảo bảng cân đối và gọn gàng.
+3. **Logic xử lý hiển thị & lọc (`js/jobs.js`)**:
+   - Gắn kết `cfLocation` với dropdown chọn địa điểm và lưu danh sách lựa chọn vào `colFilter.location` dưới dạng mảng.
+   - Cập nhật hàm `applyClientFilters` and `updateFacetedFilters` sử dụng phương thức `some()` để lọc chính xác khi các công việc có nhiều địa điểm (cách nhau bởi dấu phẩy) khớp với bất kỳ vị trí nào được chọn.
+   - Tích hợp cột `Địa điểm` (`job.location`) vào hàm vẽ danh sách `renderJobsList` và tăng số lượng `colspan` của hàng thông báo trống từ 6 lên 7.
+   - Bổ sung cấu hình sắp xếp `{ id: "sort-location", col: "location" }` để hỗ trợ sắp xếp danh sách công việc theo địa điểm tăng/giảm dần khi nhấn vào tiêu đề cột.
+
+---
+
+## 🛠️ Khắc phục Lỗi Xem Chi tiết LPBank (LPB)
+- **Vấn đề**: Khi bấm nút "Chi tiết" trên công việc của LPBank, trình duyệt mở trang trắng (`about:blank`).
+- **Nguyên nhân**: Trong hàm xử lý chuẩn hóa dữ liệu `processRawLPBJobs` ở tệp [`js/jobs.js`](file:///Users/toanpham/Desktop/Banking/js/jobs.js), thuộc tính `originalUrl` của LPBank mặc dù đã được tạo cấu trúc từ `job.slug` nhưng bị bỏ sót không gán vào đối tượng trả về, khiến liên kết của công việc LPBank khi render bị `undefined`.
+- **Giải pháp**: Đã bổ sung gán trường `originalUrl` vào trong đối tượng trả về của `processRawLPBJobs` và chạy lại `save_jobs_db.py` để đồng bộ dữ liệu snapshot mới nhất.
+
+---
+
+## 🗺️ Bổ sung Cột Khu vực & Bộ lọc Multiselect động
+Tôi đã triển khai cột **Khu vực** (Area) mới bên cạnh cột Địa điểm để chi tiết hóa địa danh, chi nhánh làm việc:
+1. **Thuật toán Trích xuất Khu vực Tự động (`extractArea`)**:
+   - Tự động nhận diện cấu trúc ngoặc vuông `[...]` ở đầu tiêu đề (ví dụ: `[Chi nhánh Chợ Lớn]`) để tách thành khu vực `"Chi nhánh Chợ Lớn"`.
+   - Nhận diện các cấu trúc ngoặc đơn `(...)` chứa thông tin chi nhánh (ví dụ: `(CN Chợ Lớn)`).
+   - Tự động cắt các phần phân tách bởi dấu gạch ngang `-` để lấy phần chi nhánh, phòng giao dịch đứng sau (ví dụ: `Chuyên viên KHCN - CN. Bình Tân - Phường An Lạc...` -> `"CN. Bình Tân - Phường An Lạc, Hồ Chí Minh"`).
+   - Tự động nhận diện và chuẩn hóa các trường thông tin Hội sở/HO (ví dụ: `HỘI SỞ - CHUYÊN VIÊN AN NINH...` -> `"Hội sở"`).
+2. **Giao diện & Bộ lọc Cột kết hợp (`index.html`)**:
+   - Thêm cột `Khu vực` hỗ trợ sắp xếp vào tiêu đề bảng `<thead>`.
+   - Bổ sung ô bộ chọn custom multiselect `#multiselect-area` vào thanh bộ lọc nhanh tại hàng lọc để hỗ trợ tìm kiếm và chọn nhiều khu vực cùng lúc.
+   - Tăng `colspan` của hàng thông báo trống trong `renderJobsList` lên `8` để ôm trọn toàn bộ cột của bảng.
+3. **Kết hợp Bộ lọc Đồng bộ**:
+   - Tích hợp điều kiện lọc `cfArea` vào hàm lọc client. Toàn bộ các bộ lọc cột (Vị trí, Ngân hàng, Khối phòng ban, Cấp bậc, Khu vực, Địa điểm, Hạn nộp) hoạt động liên kết đồng hành với nhau qua toán tử `&&`, cho phép người dùng lọc chính xác tối đa (e.g. Xem chuyên viên, khối IT, tại Hội sở, của MB Bank ở Hà Nội).
+
+---
+
+## 🔘 Nút Chọn nhanh Tất cả / Bỏ chọn Tất cả cho các bộ lọc cột
+Tôi đã tối ưu hóa trải nghiệm tương tác với các dropdown bộ lọc bằng cách thêm các nút hành động nhanh:
+1. **Giao diện Dropdown Actions**:
+   - Prepend một thanh hành động nhỏ chứa hai nút **Chọn tất cả** | **Bỏ chọn** ở đầu mỗi danh sách thả xuống của bộ lọc multiselect (Ngân hàng, Khối phòng ban, Cấp bậc, Khu vực, Địa điểm).
+2. **Xử lý sự kiện click nhanh (`js/jobs.js`)**:
+   - Lắng nghe sự kiện click trên các nút này để lập tức check/uncheck toàn bộ các ô checkbox của dropdown tương ứng, đồng thời cập nhật tức thì mảng trạng thái lọc trong `colFilter` và kích hoạt hàm render lại bảng.
+
+---
+
+## 🖼️ Tích hợp Hình ảnh & Media đính kèm cho các Bài viết Page 1 (Hedge Academy)
+Tôi đã bổ sung hình ảnh minh họa cho các bài đăng vĩ mô của Page 1 từ nguồn dữ liệu thô thu được từ các tệp JSON scraper:
+1. **Đồng bộ dữ liệu đa nguồn**:
+   - Triển khai script Python quét qua 3 file dữ liệu cào thô (`dataset_facebook-posts-scraper_*.json`) để ánh xạ trường `media` (chứa các hình ảnh, tỷ lệ kích thước và URL CDN của Facebook) khớp vào các file dữ liệu sạch `hedge_posts.json`, `hedge_posts_2.json`, và `hedge_posts_3.json`.
+2. **Cập nhật dữ liệu runtime của Ứng dụng**:
+   - Khôi phục và đóng gói toàn bộ danh sách bài viết đã có media mới vào tệp JavaScript tĩnh [`js/academy_posts_data.js`](file:///Users/toanpham/Desktop/Banking/js/academy_posts_data.js) nhằm cung cấp trực tiếp cho module hiển thị `ACADEMY_POSTS_DATA`.
+   - Giúp nâng cấp giao diện phần "Thảo luận vĩ mô" hiển thị đầy đủ hình ảnh gốc đi kèm bài viết (hỗ trợ hiển thị ảnh đơn lẻ và ảnh dạng lưới 2, 3, 4 tấm lồng ghép cực kỳ trực quan).
+
+---
+
+## 🚀 Thêm nút Floating cuộn nhanh trang: Back to Top & To the End
+Tôi đã phát triển bộ nút nổi (Floating Buttons) thông minh ở góc dưới bên phải màn hình để tăng tốc độ điều hướng trang web của người dùng:
+1. **Giao diện Nổi trực quan**:
+   - Thiết kế hai nút tròn xếp gọn (`#floating-nav-buttons`) bao gồm **Back to Top** (Mũi tên lên) và **To the End** (Mũi tên xuống).
+   - Tích hợp hiệu ứng hover mượt mà (`translateY` và đổi màu viền sang tông chủ đạo `var(--primary)`).
+2. **Hiển thị thông minh dựa trên hành vi cuộn**:
+   - Nút **Back to Top** chỉ hiện diện khi người dùng đã cuộn xuống qua `200px` (tránh che chắn tiêu đề khi đang ở đầu trang).
+   - Nút **To the End** chỉ hiện diện khi người dùng còn cách đáy trang hơn `200px` (tự ẩn đi khi đã cuộn tới chân trang).
+3. **Hiệu ứng cuộn mượt (Smooth Scroll)**:
+   - Sử dụng API `window.scrollTo({ behavior: 'smooth' })` mang lại trải nghiệm cuộn trang êm ái và tự nhiên.
+
+---
+
+## 📖 Bổ sung Thuật ngữ QIS và AMC vào Từ điển
+Tôi đã cập nhật hai thuật ngữ chuyên ngành quan trọng vào cơ sở dữ liệu từ điển hỗ trợ tra cứu:
+1. **Quantitative Impact Study (QIS)**:
+   - Định nghĩa: Nghiên cứu đánh giá định lượng tác động tài chính của các quy chuẩn quản lý rủi ro hoặc an toàn vốn mới (như Basel III) trước khi ban hành chính thức.
+   - Thêm vào phân mục: `basel` trong tệp [`js/glossary_v2.js`](file:///Users/toanpham/Desktop/Banking/js/glossary_v2.js).
+2. **Asset Management Company (AMC)**:
+   - Định nghĩa: Công ty quản lý tài sản, chuyên tiếp nhận, quản lý, xử lý và thu hồi nợ xấu cũng như tài sản bảo đảm cho các ngân hàng thương mại để làm sạch bảng cân đối kế toán.
+   - Thêm vào phân mục: `vietnam` trong tệp [`js/glossary_v2.js`](file:///Users/toanpham/Desktop/Banking/js/glossary_v2.js).
+
+---
+
+## 💡 Liên kết các Thuật ngữ trong Bài viết vĩ mô với Từ điển bằng Tooltip
+Tôi đã tích hợp phân hệ hiển thị định nghĩa nhanh (Tooltip) của các thuật ngữ chuyên ngành xuất hiện trong bài đăng vĩ mô:
+1. **Thuật toán quét & thay thế thông minh (`js/discussion.js`)**:
+   - Phát triển phương thức `highlightGlossaryTerms(text)` sử dụng Regular Expression để tự động tìm kiếm các thuật ngữ viết tắt (như CAR, RWA, LCR, NSFR, QIS, AMC, LDR, SFL) trong bài đăng.
+   - Thuật toán sắp xếp từ khóa theo chiều dài giảm dần và áp dụng cơ chế loại trừ thông minh bằng regex để tránh bọc đè thẻ HTML hoặc thay thế các thuộc tính thẻ (như class, href, data-id).
+2. **Giao diện Tooltip CSS thuần (Zero-JS Hover)**:
+   - Thêm các quy chuẩn CSS giả lập cho `.glossary-term-tooltip` sử dụng phần tử phụ `::after` kết hợp thuộc tính `attr(data-term-title)` và `attr(data-term-def)`.
+   - Tooltip hiển thị trơn tru với hiệu ứng chuyển động mượt, có cấu trúc màu sắc tương phản cao hỗ trợ người dùng đọc nhanh định nghĩa ngay khi di chuột vào thuật ngữ viết tắt trong bài viết.
+3. **Cơ chế Bẻ gãy Bộ nhớ đệm (Cache Busting)**:
+   - Gắn thêm mã phiên bản `?v=1.0.3` vào cuối đường dẫn nạp của các tệp `js/glossary_v2.js`, `js/discussion.js`, `js/jobs.js` và `js/app.js` trong tệp [`index.html`](file:///Users/toanpham/Desktop/Banking/index.html). Việc này bắt buộc trình duyệt tải trực tiếp các sửa đổi mới từ ổ đĩa thay vì sử dụng phiên bản lưu cache cũ.
+
+---
+
+## 📊 Tự động Cập nhật Thống kê & Bộ lọc Khối phòng ban Động theo Kết quả
+Tôi đã loại bỏ các cấu trúc dữ liệu tĩnh cứng nhắc và nâng cấp bộ chỉ số đo lường khối phòng ban:
+1. **Bảng Thống kê Khối Động (`jobs-stats-grid`)**:
+   - Đổi thẻ HTML container `#jobs-stats-grid` để hỗ trợ render động từ Javascript.
+   - Khi dữ liệu việc làm được nạp hoặc cập nhật, ứng dụng tự động nhóm và đếm tần suất xuất hiện của các tên phòng ban (`departmentName`) trong thực tế.
+   - Tự động hiển thị Tổng số lượng tuyển dụng cùng với Top 3 Khối phòng ban có số lượng vị trí tuyển dụng lớn nhất hiện tại dưới dạng các thẻ chỉ báo trực quan.
+2. **Dropdown Bộ lọc Khối Động (`job-dept-select`)**:
+   - Lọc bỏ các `<option>` tĩnh trong [`index.html`](file:///Users/toanpham/Desktop/Banking/index.html).
+   - Hàm `populateTopDeptSelect` tự động lấy các khối phòng ban duy nhất có trong danh sách kết quả, sắp xếp theo bảng chữ cái và dựng lại các tùy chọn tìm kiếm của bộ lọc trên thanh tìm kiếm hàng đầu.
+   - Cập nhật logic lọc (`matchDept`) để so khớp trực tiếp theo tên phòng ban (`job.departmentName`) giúp hoạt động lọc hoạt động chính xác tuyệt đối.
+
+---
+
+## 🔍 Sửa lỗi Ánh xạ Khối phòng ban chuẩn xác cho các Vị trí Tuyển dụng
+Tôi đã khắc phục triệt để lỗi phân loại sai lệch khối phòng ban của một số công việc (như các công việc Tập sự thuộc Khối Bán lẻ của TPBank và MB Bank bị phân nhầm vào Ban Kiểm soát hoặc Khối Rủi ro):
+1. **Xây dựng Thuật toán Phân loại Hợp nhất (`classifyDepartment`)**:
+   - Triển khai một hàm phân loại trung tâm thông minh dựa trên quy tắc (Rule-based) để kiểm tra chéo giữa: Tiêu đề công việc (`title`), Tên phòng ban gốc từ API (`rawDeptName`), và các Tag kỹ năng đi kèm (`skillTags`).
+2. **Xử lý Đè Quyền Kinh doanh/Bán lẻ (Business Override)**:
+   - Nhận diện các công việc chứa từ khóa liên quan đến kinh doanh/bán lẻ như `"khách hàng cá nhân"`, `"khcn"`, `"bán lẻ"`, `"tư vấn"`, `"quan hệ khách hàng"`, `"giao dịch viên"`, `"teller"`, `"doanh nghiệp"`, `"tín dụng"`,... để thiết lập thuộc tính đè (Override), tránh việc hệ thống kéo nhầm các vị trí này vào nhóm Rủi ro/Pháp chế khi tin tuyển dụng đính kèm tag kỹ năng dạng *"Risk Management"* hay *"Audit"*.
+3. **Chuẩn hóa Tên Khối Phòng ban**:
+   - Tự động thay thế các tên phòng ban bị sai lệch gốc hoặc quá chung chung (như `"Ban Kiểm soát"`, `"Kinh doanh & Khác"`) thành tên chuẩn hóa rõ ràng như `"Khối Khách hàng Cá nhân"`, `"Khối Khách hàng Doanh nghiệp"`, `"Khối Thẩm định"`, `"Khối Vận hành"` để bộ lọc động hiển thị chính xác và sạch đẹp nhất.
+
+---
+
+## ⚡ Đồng bộ Chỉ số Thống kê Động khớp với Kết quả Lọc Hiện tại
+- **Vấn đề**: Các thẻ thống kê ở phía trên luôn hiển thị tổng số lượng của toàn bộ cơ sở dữ liệu chưa lọc (ví dụ luôn hiện Tổng tuyển dụng: 765), không thay đổi theo từ khóa tìm kiếm hay các bộ lọc đang kích hoạt.
+- **Giải pháp**: Đã điều chỉnh hàm `renderStats()` trong [`js/jobs.js`](file:///Users/toanpham/Desktop/Banking/js/jobs.js) để tính toán số lượng của các Khối phòng ban dựa trên danh sách đã lọc hiện thời (`this.filteredJobs`). Bây giờ, khi người dùng thay đổi bất kỳ bộ lọc nào (Lọc theo Ngân hàng, Địa điểm, Cấp bậc, Từ khóa...), các thẻ thống kê Khối phía trên sẽ lập tức cập nhật số lượng động khớp hoàn toàn với kết quả hiển thị thực tế dưới bảng.
+- **Hiển thị đầy đủ tất cả các Khối**: Loại bỏ giới hạn hiển thị Top 3 khối. Giờ đây toàn bộ các khối phòng ban xuất hiện trong kết quả trả về đều sẽ có một thẻ thống kê chi tiết tương ứng, kèm theo cơ chế phối màu tuần hoàn đẹp mắt.
+- **Thanh cuộn ngang Thống kê Khối (Scrollable Block)**: Đóng gói tất cả các thẻ thống kê Khối phòng ban vào một khối có thanh cuộn ngang độc lập (`overflow-x: auto` và cố định `flex: 0 0 280px` cho mỗi thẻ). Điều này giúp bảo toàn diện tích dọc của giao diện khi kết quả trả về có quá nhiều Khối phòng ban khác nhau, đồng thời hỗ trợ cử chỉ vuốt mượt mà trên thiết bị di động.
+
+---
+
+## 📈 Trực quan hóa Thống kê Khối phòng ban bằng Biểu đồ Cột ngang (Chart.js)
+Tôi đã nâng tầm giao diện báo cáo tuyển dụng bằng việc tích hợp biểu đồ trực quan:
+1. **Cấu trúc Layout 2 cột Hiện đại (`index.html`)**:
+   - Thay thế toàn bộ thanh cuộn ngang các card cũ thành layout 2 cột:
+     - **Cột trái (280px)**: Thẻ số liệu lớn nổi bật hiển thị **Tổng tuyển dụng** (`#job-stat-total`) của kết quả hiện tại.
+     - **Cột phải (flex-grow)**: Khung vẽ biểu đồ (`canvas` id `#jobs-dept-chart`) được bao bọc trong card nền kính tối giản.
+2. **Tích hợp Biểu đồ Cột Ngang Động (`js/jobs.js`)**:
+   - Sử dụng thư viện **Chart.js** để vẽ biểu đồ cột ngang phân phối số lượng tuyển dụng theo từng Khối phòng ban.
+   - Cơ chế tự động giải phóng bộ nhớ (`this.deptChart.destroy()`) được gọi mỗi khi dữ liệu hoặc bộ lọc thay đổi, ngăn ngừa triệt để lỗi vẽ đè hoặc rác canvas.
+   - **Tối ưu hóa giao diện đa nền (Theme Compatibility)**:
+     - Tự động phát hiện theme hiện tại (Sáng/Tối) để tinh chỉnh màu sắc nhãn chữ (`textColor`) và lưới tọa độ (`gridColor`) phù hợp.
+     - Áp dụng hiệu ứng tô màu chuyển sắc (Linear Gradient) từ xanh dương mờ đến xanh dương đậm cho các cột, đi kèm bo góc cột (`borderRadius`) và hộp gợi ý (Tooltip) thiết kế bo góc, đổ bóng bóng mượt.
+3. **Tách rời Biểu đồ trong Box cuộn dọc (Scrollable Chart Block)**:
+   - Nhằm duy trì thiết kế cân đối cố định chiều cao của phần tổng hợp trên giao diện máy tính (`220px`), tôi đã tạo một block cuộn dọc chuyên biệt cho biểu đồ:
+     - Đặt thẻ `<canvas>` vào trong một wrapper có định danh `#jobs-dept-chart-wrapper`.
+     - Tệp [`index.html`](file:///Users/toanpham/Desktop/Banking/index.html) quy định card bao bọc ngoài luôn giữ chiều cao tĩnh `220px` kết hợp thuộc tính **`overflow-y: auto`**.
+     - Tệp [`js/jobs.js`](file:///Users/toanpham/Desktop/Banking/js/jobs.js) sẽ tự động tính toán và dãn độ cao của riêng wrapper phía trong dựa theo số lượng khối phòng ban: `wrapper.style.height = Math.max(180, labels.length * 36) + "px";`.
+     - Khi số lượng phòng ban tăng nhiều (cần chiều cao lớn hơn 220px), phần biểu đồ sẽ tự động dãn dài và tạo ra thanh cuộn dọc mượt mà bên trong card biểu đồ, vừa giúp xem đầy đủ nhãn phòng ban vừa không chiếm diện tích của giao diện tổng thể.
+
+---
+
+## 🗂️ Đóng gói Bảng Kết quả tuyển dụng trong Khung cuộn dọc chuyên biệt (Scrollable Table Block)
+Tôi đã tối ưu hóa trải nghiệm điều hướng bảng bằng cơ chế cuộn độc lập:
+1. **Giới hạn chiều cao & Cuộn dọc bảng (`index.html`)**:
+   - Thay thế thẻ bọc bảng từ chỉ cuộn ngang thành **`max-height: 520px; overflow: auto;`**. Điều này giúp khóa độ cao tối đa của vùng hiển thị bảng kết quả ở mức 520px. Nếu danh sách công việc hiển thị dài (khi hiển thị 25 hoặc 50 dòng kết quả), bảng sẽ tự tạo thanh cuộn dọc nội bộ mượt mà thay vì đẩy chân trang xuống quá sâu.
+2. **Cố định hàng Tiêu đề bảng (Sticky Table Header) & Hàng lọc cột (Sticky Filters Row) (`css/style.css`)**:
+   - Bổ sung thuộc tính **`position: sticky;`** cho cả 2 hàng đầu bảng:
+     - **Hàng tiêu đề cột (`.jobs-table th`)**: Giữ cố định ở sát mép trên cùng (`top: 0`), tăng thứ tự hiển thị `z-index: 12`.
+     - **Hàng bộ lọc cột (`tr#col-filter-row td`)**: Giữ cố định ở ngay phía dưới hàng tiêu đề cột (`top: 49px`), thiết lập `z-index: 11`.
+   - **Tô màu nền che phủ (Opaque Background)**: Cả hai hàng đều được gán `background: var(--card-bg);` (màu nền của thẻ Card). Điều này đảm bảo khi người dùng cuộn nội dung bảng, các hàng dữ liệu việc làm sẽ trượt ẩn gọn gàng phía sau hàng tiêu đề và hàng lọc cột mà không gây ra hiện tượng đè chữ hay lộ vân văn bản chồng chéo.
+
+---
+
+## 🛡️ Sửa lỗi Đè chữ (Overlay) khi cuộn bảng do nền trong suốt
+- **Vấn đề**: Do ứng dụng thiết kế theo phong cách Glassmorphic (kính mờ), biến màu nền thẻ card `--card-bg` có độ trong suốt cao (`rgba(31, 41, 55, 0.45)` ở theme tối và `rgba(255, 255, 255, 0.7)` ở theme sáng). Khi áp dụng cho hàng tiêu đề (`th`) và hàng lọc (`td`) cố định, nội dung bảng cuộn lên sẽ hiển thị xuyên qua nền kính mờ này, tạo nên sự đè lấn chữ rất khó đọc.
+- **Giải pháp**: 
+  - Tạo thêm biến màu nền đục 100% (**`--card-solid-bg`**) trong file [`css/style.css`](file:///Users/toanpham/Desktop/Banking/css/style.css): nhận giá trị `#151c2c` (đối với theme tối) và `#ffffff` (đối với theme sáng).
+  - Cập nhật lại thuộc tính `background` của `.jobs-table th` và `.jobs-table tr#col-filter-row td` sử dụng biến màu đục `--card-solid-bg` này. Giờ đây, khi các hàng dữ liệu việc làm cuộn lên, chúng sẽ trượt gọn gàng hoàn toàn dưới hai hàng cố định này mà không bị lộ chữ xuyên nền.
+
+---
+
+## ⚓ Khắc phục lỗi Sticky Header & Sticky Filters Row hoạt động không ổn định
+- **Vấn đề**: Thuộc tính `position: sticky` trên các ô tiêu đề (`th`) và bộ lọc (`td`) hoạt động không ổn định trên một số trình duyệt (bị trượt mất dòng filter khi cuộn) do bảng sử dụng thuộc tính `border-collapse: collapse;` làm triệt tiêu hành vi cố định vị trí của trình duyệt.
+- **Giải pháp**:
+  - Chuyển đổi định dạng bảng trong cả [`index.html`](file:///Users/toanpham/Desktop/Banking/index.html) và [`css/style.css`](file:///Users/toanpham/Desktop/Banking/css/style.css) từ `border-collapse: collapse;` sang **`border-collapse: separate; border-spacing: 0;`**.
+  - Việc này giúp cố định 100% dòng Tiêu đề và dòng Bộ lọc cột luôn đồng hành bám dính ở phía trên cùng, hoàn toàn không bị trượt mất hoặc bị cuộn đi khi người dùng lướt xem kết quả việc làm.

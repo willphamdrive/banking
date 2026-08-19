@@ -56,6 +56,15 @@ const GLOSSARY_TERMS = [
     formula: "SFL = [Dư nợ cho vay trung dài hạn từ nguồn vốn ngắn hạn / Nguồn vốn ngắn hạn huy động] x 100% <= 30%"
   },
   {
+    id: "amc",
+    term: "AMC (Asset Management Company)",
+    vietnamese: "Công ty quản lý tài sản",
+    category: "vietnam",
+    definition: "Công ty chuyên thực hiện chức năng tiếp nhận, quản lý, xử lý và thu hồi nợ xấu cũng như các tài sản bảo đảm để làm sạch bảng cân đối kế toán cho ngân hàng.",
+    explanation: "Tại Việt Nam, các ngân hàng thương mại thường thành lập công ty con AMC riêng (ví dụ: MB AMC, VietinBank AMC). Ở cấp quốc gia, VAMC (Vietnam Asset Management Company) đóng vai trò là công ty quản lý tài sản đặc biệt do Ngân hàng Nhà nước thành lập nhằm mua lại nợ xấu của các tổ chức tín dụng bằng trái phiếu đặc biệt.",
+    formula: "Hoạt động theo quy định của Luật Các tổ chức tín dụng và các quy chế xử lý nợ xấu hiện hành."
+  },
+  {
     id: "lcr",
     term: "LCR (Liquidity Coverage Ratio)",
     vietnamese: "Tỷ lệ khả năng chi trả thanh khoản",
@@ -72,6 +81,15 @@ const GLOSSARY_TERMS = [
     definition: "Chỉ số an toàn thanh khoản dài hạn theo chuẩn Basel III nhằm đảm bảo cấu trúc nguồn vốn của ngân hàng có tính bền vững trong vòng 1 năm.",
     explanation: "Ngân hàng phải hạn chế việc lấy nguồn vốn ngắn hạn có tính biến động cao để tài trợ cho các tài sản dài hạn (như các khoản cho vay mua nhà dài hạn).",
     formula: "NSFR = [Nguồn vốn ổn định thực tế (ASF) / Nguồn vốn ổn định yêu cầu (RSF)] x 100% >= 100%"
+  },
+  {
+    id: "qis",
+    term: "QIS (Quantitative Impact Study)",
+    vietnamese: "Nghiên cứu tác động định lượng",
+    category: "basel",
+    definition: "Quá trình thu thập dữ liệu và thử nghiệm thực tế do Ủy ban Basel hoặc Ngân hàng Nhà nước tổ chức để đánh giá tác động tài chính của các quy định an toàn vốn mới trước khi ban hành chính thức.",
+    explanation: "QIS giúp cơ quan quản lý đo lường sự thay đổi về yêu cầu vốn tối thiểu, tỷ lệ an toàn vốn (CAR) và các chỉ số thanh khoản của hệ thống ngân hàng khi áp dụng các chuẩn mực mới (như Basel III hoặc dự thảo Thông tư mới). Dữ liệu phản hồi từ QIS được dùng để căn chỉnh hệ số rủi ro và lộ trình áp dụng phù hợp với thực tế.",
+    formula: "Được thực hiện định kỳ qua các bảng tính mẫu (Templates) gửi đến các ngân hàng thương mại tham gia thử nghiệm."
   },
   {
     id: "creditrisk",

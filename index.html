@@ -65,6 +65,42 @@
         opacity: 1 !important;
         pointer-events: auto !important;
       }
+      /* Tooltip style */
+      .glossary-term-tooltip {
+        border-bottom: 1.5px dashed var(--primary);
+        cursor: help;
+        color: var(--text-main);
+        font-weight: 500;
+        position: relative;
+        display: inline-block;
+      }
+      .glossary-term-tooltip::after {
+        content: attr(data-term-title) ": " attr(data-term-def);
+        position: absolute;
+        bottom: 125%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #1e293b;
+        color: #f8fafc;
+        border: 1px solid #475569;
+        padding: 0.5rem 0.75rem;
+        border-radius: 8px;
+        font-size: 0.75rem;
+        font-weight: normal;
+        line-height: 1.4;
+        white-space: normal;
+        width: 260px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+        z-index: 99999;
+        text-align: left;
+      }
+      .glossary-term-tooltip:hover::after {
+        opacity: 1;
+        transform: translateX(-50%) translateY(-2px);
+      }
     }
   </style>
 
@@ -2055,62 +2091,22 @@
             Công nghệ.</p>
         </div>
 
-        <!-- Thống kê sơ bộ -->
-        <div class="dashboard-grid" style="margin-bottom: 2rem;">
-          <div class="card" style="padding: 1.25rem; margin-bottom: 0; display: flex; align-items: center; gap: 1rem;">
-            <div
-              style="background: var(--primary-glow); padding: 0.75rem; border-radius: 12px; color: var(--primary); display: flex; align-items: center; justify-content: center; width: 44px; height: 44px;">
-              <i data-lucide="briefcase" style="width: 22px; height: 22px;"></i>
+        <!-- Thống kê sơ bộ dạng biểu đồ -->
+        <div id="jobs-stats-grid" style="display: grid; grid-template-columns: 280px 1fr; gap: 1.5rem; margin-bottom: 2rem; min-height: 220px; align-items: stretch;">
+          <!-- Total Card -->
+          <div class="card" style="padding: 1.5rem; margin-bottom: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; text-align: center;">
+            <div style="background: var(--primary-glow); padding: 1rem; border-radius: 50%; color: var(--primary); display: flex; align-items: center; justify-content: center; width: 64px; height: 64px;">
+              <i data-lucide="briefcase" style="width: 32px; height: 32px;"></i>
             </div>
             <div>
-              <span
-                style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600; display: block; margin-bottom: 2px;">Tổng
-                tuyển dụng</span>
-              <h3 id="job-stat-total"
-                style="font-size: 1.4rem; margin: 0; color: var(--text-main); font-weight: 700; line-height: 1.2;">0
-              </h3>
+              <span style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600; display: block; margin-bottom: 4px;">Tổng tuyển dụng</span>
+              <h3 id="job-stat-total" style="font-size: 2.2rem; margin: 0; color: var(--text-main); font-weight: 800; line-height: 1.2;">0</h3>
             </div>
           </div>
-          <div class="card" style="padding: 1.25rem; margin-bottom: 0; display: flex; align-items: center; gap: 1rem;">
-            <div
-              style="background: rgba(16, 185, 129, 0.12); padding: 0.75rem; border-radius: 12px; color: var(--success); display: flex; align-items: center; justify-content: center; width: 44px; height: 44px;">
-              <i data-lucide="scale" style="width: 22px; height: 22px;"></i>
-            </div>
-            <div>
-              <span
-                style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600; display: block; margin-bottom: 2px;">Pháp
-                chế & Rủi ro</span>
-              <h3 id="job-stat-risk"
-                style="font-size: 1.4rem; margin: 0; color: var(--text-main); font-weight: 700; line-height: 1.2;">0
-              </h3>
-            </div>
-          </div>
-          <div class="card" style="padding: 1.25rem; margin-bottom: 0; display: flex; align-items: center; gap: 1rem;">
-            <div
-              style="background: rgba(245, 158, 11, 0.12); padding: 0.75rem; border-radius: 12px; color: var(--warning); display: flex; align-items: center; justify-content: center; width: 44px; height: 44px;">
-              <i data-lucide="cpu" style="width: 22px; height: 22px;"></i>
-            </div>
-            <div>
-              <span
-                style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600; display: block; margin-bottom: 2px;">IT
-                & Dữ liệu</span>
-              <h3 id="job-stat-it"
-                style="font-size: 1.4rem; margin: 0; color: var(--text-main); font-weight: 700; line-height: 1.2;">0
-              </h3>
-            </div>
-          </div>
-          <div class="card" style="padding: 1.25rem; margin-bottom: 0; display: flex; align-items: center; gap: 1rem;">
-            <div
-              style="background: rgba(239, 68, 68, 0.12); padding: 0.75rem; border-radius: 12px; color: var(--danger); display: flex; align-items: center; justify-content: center; width: 44px; height: 44px;">
-              <i data-lucide="trending-up" style="width: 22px; height: 22px;"></i>
-            </div>
-            <div>
-              <span
-                style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600; display: block; margin-bottom: 2px;">Kinh
-                doanh & Khác</span>
-              <h3 id="job-stat-biz"
-                style="font-size: 1.4rem; margin: 0; color: var(--text-main); font-weight: 700; line-height: 1.2;">0
-              </h3>
+          <!-- Chart Card -->
+          <div class="card" style="padding: 1.25rem 0.5rem 1.25rem 1.25rem; margin-bottom: 0; height: 220px; overflow-y: auto; scrollbar-width: thin; -webkit-overflow-scrolling: touch; position: relative;">
+            <div id="jobs-dept-chart-wrapper" style="width: 100%; height: 180px; position: relative;">
+              <canvas id="jobs-dept-chart" style="width: 100%; height: 100%;"></canvas>
             </div>
           </div>
         </div>
@@ -2218,9 +2214,9 @@
 
         <!-- Danh sách dạng Table -->
         <div class="card" style="padding: 0; overflow: hidden; margin-bottom: 1.5rem;">
-          <div style="overflow-x: auto;">
+          <div style="max-height: 520px; overflow: auto; scrollbar-width: thin; -webkit-overflow-scrolling: touch;">
             <table class="jobs-table"
-              style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem;">
+              style="width: 100%; border-collapse: separate; border-spacing: 0; text-align: left; font-size: 0.9rem;">
               <thead>
                 <tr style="border-bottom: 1px solid var(--border-color); background: rgba(255, 255, 255, 0.02);">
                   <th
@@ -2634,13 +2630,13 @@
     <script src="js/database.js"></script>
     <script src="js/analysis.js"></script>
     <script src="js/financial.js"></script>
-    <script src="js/glossary_v2.js"></script>
+    <script src="js/glossary_v2.js?v=1.0.3"></script>
     <script src="js/docfinder.js"></script>
     <script src="js/academy_posts_data.js"></script>
     <script src="js/nghia_posts_data.js"></script>
-    <script src="js/discussion.js"></script>
-    <script src="js/jobs.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/discussion.js?v=1.0.3"></script>
+    <script src="js/jobs.js?v=1.0.3"></script>
+    <script src="js/app.js?v=1.0.3"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const btnTop = document.getElementById("btn-back-to-top");

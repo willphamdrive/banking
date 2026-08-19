@@ -344,6 +344,9 @@ class DiscussionInsights {
         textHtml = textHtml.replace(reg, `<span class="bank-tag" data-bank="${bankCode}">$1</span>`);
       });
 
+      // Tích hợp liên hệ các thuật ngữ với Từ điển bằng Tooltip
+      textHtml = this.highlightGlossaryTerms(textHtml);
+
       // Các tag ngân hàng ở chân bài viết
       const tagsHtml = post.banks.map(bankCode => {
         const activeClass = this.selectedBank === bankCode ? "active-tag" : "";
@@ -564,7 +567,42 @@ class DiscussionInsights {
     }
   }
 
+  highlightGlossaryTerms(text) {
+    if (typeof GLOSSARY_TERMS === "undefined" || !GLOSSARY_TERMS || GLOSSARY_TERMS.length === 0) {
+      return text;
+    }
 
+    let result = text;
+    const termMappings = [];
+    GLOSSARY_TERMS.forEach(item => {
+      const match = item.term.match(/^([A-Z0-9\/]+)\b/i);
+      if (match) {
+        const acronym = match[1];
+        termMappings.push({
+          keyword: acronym,
+          item: item
+        });
+      }
+    });
+
+    // Sắp xếp các từ khóa theo độ dài giảm dần để tránh thay thế đè cụm từ ngắn
+    termMappings.sort((a, b) => b.keyword.length - a.keyword.length);
+
+    termMappings.forEach(mapping => {
+      const kw = mapping.keyword;
+      const definition = mapping.item.definition;
+      const termTitle = mapping.item.term;
+
+      // Tránh thay thế các từ khóa bên trong các thẻ HTML (VD: href, class, data-id)
+      const regex = new RegExp(`(<[^>]*>)|\\b(${kw})\\b`, "gi");
+      result = result.replace(regex, (match, p1, p2) => {
+        if (p1) return match; // Thẻ HTML, bỏ qua
+        return `<span class="glossary-term-tooltip" data-term-id="${mapping.item.id}" data-term-title="${termTitle}" data-term-def="${definition}">${match}</span>`;
+      });
+    });
+
+    return result;
+  }
 }
 
 // Tự động khởi tạo khi DOM sẵn sàng

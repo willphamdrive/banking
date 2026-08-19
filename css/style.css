@@ -39,6 +39,7 @@
   --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
   --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
   --glass-blur: blur(16px);
+  --card-solid-bg: #151c2c;
 }
 
 [data-theme="light"] {
@@ -47,6 +48,7 @@
   --bg-gradient: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
   --sidebar-bg: rgba(255, 255, 255, 0.85);
   --card-bg: rgba(255, 255, 255, 0.7);
+  --card-solid-bg: #ffffff;
   --card-hover: rgba(255, 255, 255, 0.9);
   --border-color: rgba(209, 213, 219, 0.7);
   --text-main: #1f2937;
@@ -2140,12 +2142,25 @@ header p {
 /* Table Layout for Jobs */
 .jobs-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
 }
 
 .jobs-table th {
+  position: sticky;
+  top: 0;
+  background: var(--card-solid-bg);
+  z-index: 12;
   border-bottom: 1px solid var(--border-color);
   transition: all 0.2s ease;
+}
+
+.jobs-table tr#col-filter-row td {
+  position: sticky;
+  top: 49px;
+  background: var(--card-solid-bg);
+  z-index: 11;
+  border-bottom: 2px solid var(--border-color);
 }
 
 .jobs-table th:hover {

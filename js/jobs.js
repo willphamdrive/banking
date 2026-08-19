@@ -40,6 +40,20 @@ class BaselJobs {
     // Không tự động load — chờ người dùng nhấn Tìm kiếm
   }
 
+  resolveApiUrl(relativeUrl) {
+    const hn = window.location.hostname;
+    const isLocal = hn === "localhost" || 
+                    hn === "127.0.0.1" || 
+                    /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/.test(hn) || 
+                    hn.endsWith(".local");
+
+    if (isLocal && window.location.protocol.startsWith("http")) {
+      return relativeUrl;
+    }
+    const proxyHost = (/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/.test(hn)) ? `http://${window.location.host}` : "http://localhost:8000";
+    return proxyHost + relativeUrl;
+  }
+
   initElements() {
     this.searchInput    = document.getElementById("job-search-input");
     this.deptSelect     = document.getElementById("job-dept-select");
@@ -444,14 +458,15 @@ class BaselJobs {
   }
   // ── Gọi API ──────────────────────────────────────────────────────
   async fetchLivePageFromVPB(page) {
-    let baseUrl = "https://tuyendung.vpbank.com.vn/services/recruiting/v1/jobs";
-    if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
-      baseUrl = "/api/jobs";
-    } else {
+    let baseUrl = this.resolveApiUrl("/api/jobs");
+    // Fallback to live URL if proxy is not local and not running
+    if (baseUrl.startsWith("http://localhost:8000")) {
       try {
         const t = await fetch("http://localhost:8000/api/jobs", { method: "OPTIONS" });
-        if (t.ok) baseUrl = "http://localhost:8000/api/jobs";
-      } catch (_) {}
+        if (!t.ok) baseUrl = "https://tuyendung.vpbank.com.vn/services/recruiting/v1/jobs";
+      } catch (_) {
+        baseUrl = "https://tuyendung.vpbank.com.vn/services/recruiting/v1/jobs";
+      }
     }
 
     const payload = {
@@ -470,14 +485,15 @@ class BaselJobs {
 
   async fetchLiveMBBPage(page) {
     const qs = `workGroupId=&name=&skillTags=&city=TX701&size=15&page=${page}&type=TX105&region=&subRegion=&typicalSkills=&currentProvinceCode=&permanentProvinceCode=`;
-    let baseUrl = `https://careers.mbbank.com.vn/libra-job-management/public/recruitment-news?${qs}`;
-    if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
-      baseUrl = `/api/jobs/mbbank?${qs}`;
-    } else {
+    let baseUrl = this.resolveApiUrl(`/api/jobs/mbbank?${qs}`);
+    // Fallback to live URL if proxy is not local and not running
+    if (baseUrl.startsWith("http://localhost:8000")) {
       try {
         const t = await fetch("http://localhost:8000/api/jobs/mbbank", { method: "OPTIONS" });
-        if (t.ok) baseUrl = `http://localhost:8000/api/jobs/mbbank?${qs}`;
-      } catch (_) {}
+        if (!t.ok) baseUrl = `https://careers.mbbank.com.vn/libra-job-management/public/recruitment-news?${qs}`;
+      } catch (_) {
+        baseUrl = `https://careers.mbbank.com.vn/libra-job-management/public/recruitment-news?${qs}`;
+      }
     }
     const res = await fetch(baseUrl, { headers: { "Accept": "application/json" } });
     if (!res.ok) throw new Error(`MBB HTTP ${res.status}`);
@@ -486,14 +502,15 @@ class BaselJobs {
 
   async fetchLiveACBPage(page, officeId = 3133) {
     const qs = `office=${officeId}&return=1&page=${page}`;
-    let baseUrl = `https://www.acbjobs.com.vn/jobs?${qs}`;
-    if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
-      baseUrl = `/api/jobs/acb?${qs}`;
-    } else {
+    let baseUrl = this.resolveApiUrl(`/api/jobs/acb?${qs}`);
+    // Fallback to live URL if proxy is not local and not running
+    if (baseUrl.startsWith("http://localhost:8000")) {
       try {
         const t = await fetch("http://localhost:8000/api/jobs/acb", { method: "OPTIONS" });
-        if (t.ok) baseUrl = `http://localhost:8000/api/jobs/acb?${qs}`;
-      } catch (_) {}
+        if (!t.ok) baseUrl = `https://www.acbjobs.com.vn/jobs?${qs}`;
+      } catch (_) {
+        baseUrl = `https://www.acbjobs.com.vn/jobs?${qs}`;
+      }
     }
     const res = await fetch(baseUrl);
     if (!res.ok) throw new Error(`ACB HTTP ${res.status}`);
@@ -587,14 +604,15 @@ class BaselJobs {
 
   async fetchLiveLPBPage(page) {
     const qs = `DeltaDataLocation=01000000-6ba6-4a0b-c110-08de81da9f2e&pageIndex=${page}&pageSize=10&Domain=tuyendung.lpbank.com.vn`;
-    let baseUrl = `https://centralize-api-v2.iviec.vn/api/recruitment/Recruitment/GetRecruitmentsByDomain?${qs}`;
-    if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
-      baseUrl = `/api/jobs/lpbank?${qs}`;
-    } else {
+    let baseUrl = this.resolveApiUrl(`/api/jobs/lpbank?${qs}`);
+    // Fallback to live URL if proxy is not local and not running
+    if (baseUrl.startsWith("http://localhost:8000")) {
       try {
         const t = await fetch("http://localhost:8000/api/jobs/lpbank", { method: "OPTIONS" });
-        if (t.ok) baseUrl = `http://localhost:8000/api/jobs/lpbank?${qs}`;
-      } catch (_) {}
+        if (!t.ok) baseUrl = `https://centralize-api-v2.iviec.vn/api/recruitment/Recruitment/GetRecruitmentsByDomain?${qs}`;
+      } catch (_) {
+        baseUrl = `https://centralize-api-v2.iviec.vn/api/recruitment/Recruitment/GetRecruitmentsByDomain?${qs}`;
+      }
     }
     const res = await fetch(baseUrl, { headers: { "Accept": "application/json" } });
     if (!res.ok) throw new Error(`LPBank HTTP ${res.status}`);
@@ -1104,10 +1122,7 @@ class BaselJobs {
   // ── Logic lưu công việc (Đồng bộ Local File .json & LocalStorage) ─
   async loadSavedJobsFromServer() {
     try {
-      let url = "/api/saved-jobs";
-      if (window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1") {
-        url = "http://localhost:8000/api/saved-jobs";
-      }
+      const url = this.resolveApiUrl("/api/saved-jobs");
       const res = await fetch(url);
       if (res.ok) {
         this.savedJobs = await res.json();
@@ -1144,10 +1159,7 @@ class BaselJobs {
     
     // Gửi yêu cầu lưu lên server local để ghi vào file .json
     try {
-      let url = "/api/saved-jobs";
-      if (window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1") {
-        url = "http://localhost:8000/api/saved-jobs";
-      }
+      const url = this.resolveApiUrl("/api/saved-jobs");
       await fetch(url, {
         method: "POST",
         headers: { "Content-Type": "application/json" },

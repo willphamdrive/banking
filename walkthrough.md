@@ -421,6 +421,9 @@ Tôi đã hoàn trả lại cơ chế tương tác mở/đóng của Drawer gi�
         - **Tinh giản khoảng cách Card & Tiêu đề**: Co gọn padding và bo góc các `.card` trên mobile (`1.25rem` và `12px` border-radius) để tận dụng tối đa không gian trống trên màn hình nhỏ.
         - **Giới hạn tỷ lệ an toàn 1 cột (LDR, CAR limits)**: Lưới hiển thị các tỷ lệ an toàn ngân hàng ở VN (`.ratios-grid`) tự động co từ 2 cột về 1 cột trên màn hình điện thoại để tránh tràn chữ.
         - **Cố định chiều rộng tối thiểu cho Bảng so sánh (Comparison horizontal scroll)**: Thêm chiều rộng tối thiểu `750px` cho bảng so sánh Basel I-IV để đảm bảo các dữ liệu text phong phú không bị bó hẹp trong chiều rộng màn hình dọc của mobile.
+    - **Sửa lỗi gọi dữ liệu tuyển dụng trên Mobile (Local Network API Resolution Fix)**:
+        - **Vấn đề**: Khi truy cập ứng dụng từ thiết bị di động trong cùng mạng LAN qua địa chỉ IP của máy tính (ví dụ: `http://192.168.1.5:8000`), frontend không khớp điều kiện `localhost` nên đã chuyển tiếp gọi API trực tiếp đến các máy chủ ngân hàng, dẫn đến lỗi CORS. Đồng thời, việc fallback cứng về `http://localhost:8000` cũng thất bại vì `localhost` trên điện thoại đại diện cho chính nó.
+        - **Giải pháp**: Xây dựng cơ chế tự động phân giải `resolveApiUrl(relativeUrl)` trong [`js/jobs.js`](file:///Users/toanpham/Desktop/banking/js/jobs.js). Thuật toán sẽ tự động nhận diện nếu hostname là một địa chỉ IP nội bộ (LAN IP) và đang chạy trên giao thức HTTP, từ đó sử dụng chính địa chỉ IP của máy tính làm địa chỉ Proxy. Giúp thiết bị di động kết nối và tải dữ liệu tuyển dụng thành công 100% thông qua máy chủ Proxy local.
 
 
 

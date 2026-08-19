@@ -8,7 +8,7 @@ class DiscussionInsights {
     this.selectedBank = null;
     this.searchQuery = "";
     this.filterMode = "all"; // 'all' hoặc 'has_bank'
-    this.filterTopic = "all";
+    this.filterTopic = "sbv_mistakes";
     this.sortOrder = "newest"; // 'newest' hoặc 'oldest'
 
     // Danh mục chủ đề đồng bộ cho cả hai tác giả (bao gồm các tỷ lệ tài chính ngân hàng chi tiết)
@@ -66,8 +66,10 @@ class DiscussionInsights {
         const sub = btn.getAttribute("data-hedge-sub");
         if (sub === "academy") {
           this.posts = this.academyPosts;
+          this.filterTopic = "sbv_mistakes";
         } else {
           this.posts = this.nghiaPosts;
+          this.filterTopic = "all";
         }
 
         // Reset bộ lọc & tìm kiếm khi chuyển tác giả
@@ -75,7 +77,6 @@ class DiscussionInsights {
         this.selectedBank = null;
         this.searchQuery = "";
         if (this.searchInput) this.searchInput.value = "";
-        this.filterTopic = "all";
 
         // Reset bộ lọc ngân hàng về 'Tất cả'
         this.filterBtns.forEach((b, idx) => {

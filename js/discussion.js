@@ -3,14 +3,14 @@ class DiscussionInsights {
   constructor() {
     this.academyPosts = typeof ACADEMY_POSTS_DATA !== "undefined" ? ACADEMY_POSTS_DATA : [];
     this.nghiaPosts = typeof NGHIA_POSTS_DATA !== "undefined" ? NGHIA_POSTS_DATA : [];
-    
-    this.posts = this.academyPosts; // Mặc định hiển thị Hedge Academy
+
+    this.posts = this.academyPosts; // Mặc định hiển thị
     this.selectedBank = null;
     this.searchQuery = "";
     this.filterMode = "all"; // 'all' hoặc 'has_bank'
-    this.filterTopic = "all"; 
+    this.filterTopic = "all";
     this.sortOrder = "newest"; // 'newest' hoặc 'oldest'
-    
+
     // Danh mục chủ đề đồng bộ cho cả hai tác giả (bao gồm các tỷ lệ tài chính ngân hàng chi tiết)
     this.topics = [
       { code: "all", display: "Tất cả" },
@@ -33,7 +33,7 @@ class DiscussionInsights {
     // Pagination parameters
     this.currentPage = 1;
     this.postsPerPage = 10; // Hiển thị 10 bài viết mỗi trang
-    
+
     this.initElements();
     this.bindEvents();
     this.render();
@@ -45,7 +45,7 @@ class DiscussionInsights {
     this.filterBtns = document.querySelectorAll(".hedge-filter-btn");
     this.sortSelect = document.getElementById("hedge-sort-select");
     this.paginationContainer = document.getElementById("hedge-pagination");
-    
+
     // Sub-tabs author selectors
     this.subTabBtns = document.querySelectorAll("[data-hedge-sub]");
   }
@@ -69,7 +69,7 @@ class DiscussionInsights {
         } else {
           this.posts = this.nghiaPosts;
         }
-        
+
         // Reset bộ lọc & tìm kiếm khi chuyển tác giả
         this.currentPage = 1;
         this.selectedBank = null;
@@ -125,7 +125,7 @@ class DiscussionInsights {
     const lightbox = document.getElementById("image-lightbox");
     const lightboxImg = document.getElementById("lightbox-img");
     const lightboxClose = document.getElementById("lightbox-close");
-    
+
     if (lightbox && lightboxClose && lightboxImg) {
       const closeLightbox = () => {
         lightbox.style.opacity = "0";
@@ -134,14 +134,14 @@ class DiscussionInsights {
           lightbox.style.display = "none";
         }, 250);
       };
-      
+
       lightboxClose.addEventListener("click", closeLightbox);
       lightbox.addEventListener("click", (e) => {
         if (e.target !== lightboxImg) {
           closeLightbox();
         }
       });
-      
+
       document.addEventListener("keydown", (e) => {
         if (e.key === "Escape" && lightbox.style.display === "flex") {
           closeLightbox();
@@ -184,12 +184,12 @@ class DiscussionInsights {
       window.openUrlViewer = (url, title = "Trình xem trang web") => {
         // Tự động phát hiện các trang chắc chắn chặn nhúng (Facebook, Instagram, Messenger, Telegram...)
         const lowerUrl = url.toLowerCase();
-        const isBlocked = lowerUrl.includes("facebook.com") || 
-                          lowerUrl.includes("fb.com") || 
-                          lowerUrl.includes("messenger.com") || 
-                          lowerUrl.includes("instagram.com") || 
-                          lowerUrl.includes("t.me") || 
-                          lowerUrl.includes("telegram.org");
+        const isBlocked = lowerUrl.includes("facebook.com") ||
+          lowerUrl.includes("fb.com") ||
+          lowerUrl.includes("messenger.com") ||
+          lowerUrl.includes("instagram.com") ||
+          lowerUrl.includes("t.me") ||
+          lowerUrl.includes("telegram.org");
 
         if (isBlocked) {
           // Mở trực tiếp trong tab mới để tránh hiển thị khung iframe trắng bị lỗi
@@ -200,7 +200,7 @@ class DiscussionInsights {
         urlViewerIframe.src = url;
         if (urlViewerTitle) urlViewerTitle.textContent = title;
         if (urlViewerExternal) urlViewerExternal.href = url;
-        
+
         urlViewer.style.display = "flex";
         urlViewer.offsetHeight; // Lực kích hoạt reflow để tạo hiệu ứng transition
         urlViewer.style.opacity = "1";
@@ -368,53 +368,53 @@ class DiscussionInsights {
 
           <!-- Hiển thị hình ảnh đính kèm (media) nếu có -->
           ${(() => {
-            if (!post.media || post.media.length === 0) return '';
-            const validMedia = post.media.map(m => m.thumbnail || (m.photo_image ? m.photo_image.uri : null)).filter(url => url);
-            if (validMedia.length === 0) return '';
-            
-            if (validMedia.length === 1) {
-              const imgUrl = validMedia[0];
-              return `
+          if (!post.media || post.media.length === 0) return '';
+          const validMedia = post.media.map(m => m.thumbnail || (m.photo_image ? m.photo_image.uri : null)).filter(url => url);
+          if (validMedia.length === 0) return '';
+
+          if (validMedia.length === 1) {
+            const imgUrl = validMedia[0];
+            return `
                 <div class="post-media-item" data-full-img="${imgUrl}" style="margin-top: 0.75rem; margin-bottom: 1rem; border-radius: 8px; overflow: hidden; border: 1px solid var(--border-color); background: rgba(0,0,0,0.25); display: flex; justify-content: center; align-items: center; max-height: 480px; width: 100%;">
                   <img src="${imgUrl}" alt="Attached media" style="max-height: 480px; width: auto; max-width: 100%; object-fit: contain; cursor: pointer; transition: transform 0.25s ease, filter 0.2s ease; display: block;" onmouseover="this.style.transform='scale(1.015)'; this.style.filter='brightness(0.95)'" onmouseout="this.style.transform='scale(1.0)'; this.style.filter='brightness(1.0)'">
                 </div>
               `;
+          }
+
+          let gridStyle = "display: grid; gap: 6px; margin-top: 0.75rem; margin-bottom: 1rem; border-radius: 8px; overflow: hidden; border: 1px solid var(--border-color); width: 100%;";
+          if (validMedia.length === 2) {
+            gridStyle += "grid-template-columns: 1fr 1fr; max-height: 220px;";
+          } else if (validMedia.length === 3) {
+            gridStyle += "grid-template-columns: 1.5fr 1fr; grid-template-rows: 1fr 1fr; max-height: 280px;";
+          } else {
+            gridStyle += "grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; max-height: 280px;";
+          }
+
+          const mediaItemsHtml = validMedia.slice(0, 4).map((imgUrl, idx) => {
+            let itemStyle = "width: 100%; height: 100%; object-fit: cover; cursor: pointer; transition: transform 0.25s ease, filter 0.2s ease; display: block;";
+            let containerStyle = "overflow: hidden; position: relative; width: 100%; height: 100%;";
+
+            if (validMedia.length === 3 && idx === 0) {
+              containerStyle += "grid-row: span 2;";
             }
 
-            let gridStyle = "display: grid; gap: 6px; margin-top: 0.75rem; margin-bottom: 1rem; border-radius: 8px; overflow: hidden; border: 1px solid var(--border-color); width: 100%;";
-            if (validMedia.length === 2) {
-              gridStyle += "grid-template-columns: 1fr 1fr; max-height: 220px;";
-            } else if (validMedia.length === 3) {
-              gridStyle += "grid-template-columns: 1.5fr 1fr; grid-template-rows: 1fr 1fr; max-height: 280px;";
-            } else {
-              gridStyle += "grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; max-height: 280px;";
-            }
-
-            const mediaItemsHtml = validMedia.slice(0, 4).map((imgUrl, idx) => {
-              let itemStyle = "width: 100%; height: 100%; object-fit: cover; cursor: pointer; transition: transform 0.25s ease, filter 0.2s ease; display: block;";
-              let containerStyle = "overflow: hidden; position: relative; width: 100%; height: 100%;";
-              
-              if (validMedia.length === 3 && idx === 0) {
-                containerStyle += "grid-row: span 2;";
-              }
-
-              const isLast = idx === 3 && validMedia.length > 4;
-              const overlayHtml = isLast ? `
+            const isLast = idx === 3 && validMedia.length > 4;
+            const overlayHtml = isLast ? `
                 <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.2rem; cursor: pointer; pointer-events: none;">
                   +${validMedia.length - 3}
                 </div>
               ` : "";
 
-              return `
+            return `
                 <div style="${containerStyle}" class="post-media-item" data-full-img="${imgUrl}">
                   <img src="${imgUrl}" alt="Attached media" style="${itemStyle}" onmouseover="this.style.transform='scale(1.03)'; this.style.filter='brightness(0.9)'" onmouseout="this.style.transform='scale(1.0)'; this.style.filter='brightness(1.0)'">
                   ${overlayHtml}
                 </div>
               `;
-            }).join("");
+          }).join("");
 
-            return `<div style="${gridStyle}">${mediaItemsHtml}</div>`;
-          })()}
+          return `<div style="${gridStyle}">${mediaItemsHtml}</div>`;
+        })()}
 
           ${post.banks.length > 0 ? `
             <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; border-top: 1px solid var(--border-color); padding-top: 0.75rem; margin-top: 0.5rem;">

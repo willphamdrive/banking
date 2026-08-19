@@ -1,76 +1,136 @@
 import urllib.request
 import json
 import traceback
+import subprocess
+import sys
+import os
+
+def run_git_commands():
+    try:
+        print("\n=== Đang tự động commit và push lên GitHub ===")
+        # Di chuyển vào đúng thư mục dự án
+        project_dir = "/Users/toanpham/Desktop/banking"
+        os.chdir(project_dir)
+        
+        # Git Add
+        subprocess.run(["git", "add", "jobs_database.json"], check=True)
+        
+        # Kiểm tra xem có thay đổi nào để commit không
+        status = subprocess.run(["git", "status", "--porcelain", "jobs_database.json"], capture_output=True, text=True, check=True)
+        if not status.stdout.strip():
+            print("Không có thay đổi mới trong dữ liệu tuyển dụng. Bỏ qua commit & push.")
+            return
+            
+        # Git Commit
+        subprocess.run(["git", "commit", "-m", "Auto-update jobs database snapshot [automated]"], check=True)
+        
+        # Git Push
+        subprocess.run(["git", "push"], check=True)
+        print("Đã push thành công dữ liệu mới lên GitHub Pages! Trang web sẽ cập nhật sau vài phút.")
+    except Exception as e:
+        print(f"Lỗi khi thực hiện lệnh Git: {e}", file=sys.stderr)
 
 def main():
-    print("Fetching jobs from local server...")
+    print("Đang khởi động cào dữ liệu từ server local proxy...")
     
-    # 1. VPBank
+    # 1. VPBank (Fetch pages 0 and 1)
     vpb_jobs = []
-    try:
-        req = urllib.request.Request(
-            "http://localhost:8000/api/jobs",
-            data=json.dumps({
-                "locale": "vi_VN",
-                "keywords": "",
-                "location": "",
-                "pageNumber": 0,
-                "facetFilters": { "sfstd_jobLocation_obj": ["Hồ Chí Minh"] },
-                "sortBy": "recent"
-            }).encode("utf-8"),
-            headers={"Content-Type": "application/json"}
-        )
-        with urllib.request.urlopen(req, timeout=10) as resp:
-            data = json.loads(resp.read().decode("utf-8"))
-            vpb_jobs = data.get("jobSearchResult", [])
-            print(f"Fetched {len(vpb_jobs)} VPB jobs.")
-    except Exception as e:
-        print(f"Error fetching VPB: {e}")
+    for page in [0, 1]:
+        try:
+            req = urllib.request.Request(
+                "http://localhost:8000/api/jobs",
+                data=json.dumps({
+                    "locale": "vi_VN",
+                    "keywords": "",
+                    "location": "",
+                    "pageNumber": page,
+                    "facetFilters": { "sfstd_jobLocation_obj": ["Hồ Chí Minh"] },
+                    "sortBy": "recent"
+                }).encode("utf-8"),
+                headers={"Content-Type": "application/json"}
+            )
+            with urllib.request.urlopen(req, timeout=10) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+                page_jobs = data.get("jobSearchResult", [])
+                vpb_jobs.extend(page_jobs)
+                print(f"VPB page {page}: Tải thành công {len(page_jobs)} việc làm.")
+        except Exception as e:
+            print(f"Lỗi VPB page {page}: {e}")
         
-    # 2. MBBank
-    mbb_jobs = {}
-    try:
-        qs = "workGroupId=&name=&skillTags=&city=TX701&size=15&page=1&type=TX105&region=&subRegion=&typicalSkills=&currentProvinceCode=&permanentProvinceCode="
-        with urllib.request.urlopen(f"http://localhost:8000/api/jobs/mbbank?{qs}", timeout=10) as resp:
-            mbb_jobs = json.loads(resp.read().decode("utf-8"))
-            print(f"Fetched MBB page: {len(mbb_jobs.get('content', []))} jobs.")
-    except Exception as e:
-        print(f"Error fetching MBB: {e}")
+    # 2. MBBank (Fetch pages 1 and 2)
+    mbb_content = []
+    for page in [1, 2]:
+        try:
+            qs = f"workGroupId=&name=&skillTags=&city=TX701&size=15&page={page}&type=TX105&region=&subRegion=&typicalSkills=&currentProvinceCode=&permanentProvinceCode="
+            with urllib.request.urlopen(f"http://localhost:8000/api/jobs/mbbank?{qs}", timeout=10) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+                page_jobs = data.get("content", [])
+                mbb_content.extend(page_jobs)
+                print(f"MBB page {page}: Tải thành công {len(page_jobs)} việc làm.")
+        except Exception as e:
+            print(f"Lỗi MBB page {page}: {e}")
 
-    # 3. ACB HCM
-    acb_hcm = {}
+    # 3. ACB HCM (office = 3133)
+    acb_hcm_html = ""
     try:
         qs = "office=3133&return=1&page=1"
         with urllib.request.urlopen(f"http://localhost:8000/api/jobs/acb?{qs}", timeout=10) as resp:
-            # Note: ACB returns HTML text, we don't parse HTML in python easily unless we do regex or simple extraction,
-            # but wait, we can just save the raw html or we can let the python scraper run the parse.
-            # Wait, let's see. Let's just download the raw html response!
-            raw_html = resp.read().decode("utf-8")
-            acb_hcm = {"html": raw_html}
-            print(f"Fetched ACB HCM HTML length: {len(raw_html)}.")
+            acb_hcm_html = resp.read().decode("utf-8")
+            print(f"ACB HCM HTML: Tải thành công (Độ dài: {len(acb_hcm_html)} ký tự).")
     except Exception as e:
-        print(f"Error fetching ACB: {e}")
+        print(f"Lỗi ACB HCM: {e}")
 
-    # 4. LPBank
-    lpb_jobs = {}
+    # 4. ACB HO (office = 86)
+    acb_ho_html = ""
     try:
-        qs = "DeltaDataLocation=01000000-6ba6-4a0b-c110-08de81da9f2e&pageIndex=1&pageSize=10&Domain=tuyendung.lpbank.com.vn"
-        with urllib.request.urlopen(f"http://localhost:8000/api/jobs/lpbank?{qs}", timeout=10) as resp:
-            lpb_jobs = json.loads(resp.read().decode("utf-8"))
-            print(f"Fetched LPB jobs: {len(lpb_jobs.get('items', []))} jobs.")
+        qs = "office=86&return=1&page=1"
+        with urllib.request.urlopen(f"http://localhost:8000/api/jobs/acb?{qs}", timeout=10) as resp:
+            acb_ho_html = resp.read().decode("utf-8")
+            print(f"ACB HO HTML: Tải thành công (Độ dài: {len(acb_ho_html)} ký tự).")
     except Exception as e:
-        print(f"Error fetching LPB: {e}")
+        print(f"Lỗi ACB HO: {e}")
 
-    # Save to a temporary python raw database file in scratch directory
+    # 5. LPBank (pages 1 and 2)
+    lpb_items = []
+    for page in [1, 2]:
+        try:
+            qs = f"DeltaDataLocation=01000000-6ba6-4a0b-c110-08de81da9f2e&pageIndex={page}&pageSize=10&Domain=tuyendung.lpbank.com.vn"
+            with urllib.request.urlopen(f"http://localhost:8000/api/jobs/lpbank?{qs}", timeout=10) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+                page_jobs = data.get("items", [])
+                lpb_items.extend(page_jobs)
+                print(f"LPB page {page}: Tải thành công {len(page_jobs)} việc làm.")
+        except Exception as e:
+            print(f"Lỗi LPB page {page}: {e}")
+
+    # Tạo cấu trúc lưu trữ
     result = {
         "vpb": vpb_jobs,
-        "mbb": mbb_jobs,
-        "acb_hcm": acb_hcm,
-        "lpb": lpb_jobs
+        "mbb": {
+            "content": mbb_content,
+            "totalPages": 2
+        },
+        "acb_hcm": {
+            "html": acb_hcm_html,
+            "totalPages": 1
+        },
+        "acb_ho": {
+            "html": acb_ho_html,
+            "totalPages": 1
+        },
+        "lpb": {
+            "items": lpb_items,
+            "totalPage": 2
+        }
     }
-    with open("/Users/toanpham/Desktop/banking/scratch_raw_jobs.json", "w", encoding="utf-8") as f:
+    
+    output_path = "/Users/toanpham/Desktop/banking/jobs_database.json"
+    with open(output_path, "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False, indent=2)
-    print("Done. Saved to scratch_raw_jobs.json.")
+    print(f"Đã lưu cơ sở dữ liệu kết hợp vào: {output_path}")
+
+    # Thực hiện commit và push lên Github
+    run_git_commands()
 
 if __name__ == '__main__':
     main()

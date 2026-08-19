@@ -290,6 +290,10 @@ class BaselJobs {
     if (!this.tableBody || this.isLoading) return;
     this.isLoading = true;
 
+    // Dọn dẹp badge offline cũ nếu có
+    const oldBadge = document.getElementById("offline-jobs-badge");
+    if (oldBadge) oldBadge.remove();
+
     // Hiển thị skeleton loading
     this.tableBody.innerHTML = `
       <tr>
@@ -360,6 +364,11 @@ class BaselJobs {
       this.addUniqueJobs(acbHoJobs);
       this.addUniqueJobs(lpbJobs);
 
+      // Nếu không lấy được bất cứ công việc nào từ live (ví dụ: bị chặn CORS / Mixed Content trên GitHub Pages)
+      if (this.jobs.length === 0) {
+        throw new Error("Không có dữ liệu trả về từ live endpoints.");
+      }
+
       this.applyClientFilters();
       this.renderStats();
       this.sortJobs();
@@ -368,9 +377,49 @@ class BaselJobs {
       // Lazy load các trang còn lại trong nền
       this.lazyLoadRemainingPages(needVPB, needMBB, needACB, needLPB, totalMbbPages, totalAcbHcmPages, totalAcbHoPages, totalLpbPages, sessionId);
     } catch (err) {
-      console.error("Lỗi tải dữ liệu:", err);
+      console.warn("Lỗi tải trực tuyến, chuyển sang nạp cơ sở dữ liệu tuyển dụng offline fallback:", err);
       if (sessionId === this.searchSessionId) {
-        this.showCoresError();
+        try {
+          const fallbackRes = await fetch("jobs_database.json");
+          if (!fallbackRes.ok) throw new Error("Không thể tải file database offline.");
+          const fallbackData = await fallbackRes.json();
+          
+          if (sessionId !== this.searchSessionId) return;
+
+          const needVPB = (this.selectedBank === "all" || this.selectedBank === "VPBank");
+          const needMBB = (this.selectedBank === "all" || this.selectedBank === "MB Bank");
+          const needACB = (this.selectedBank === "all" || this.selectedBank === "ACB");
+          const needLPB = (this.selectedBank === "all" || this.selectedBank === "LPBank");
+
+          let vpbRaw = needVPB ? (fallbackData.vpb || []) : [];
+          let mbbRaw = needMBB ? (fallbackData.mbb?.content || []) : [];
+          let acbHcmRaw = needACB ? (this.parseAcbHtml(fallbackData.acb_hcm?.html || "").jobs || []) : [];
+          let acbHoRaw = needACB ? (this.parseAcbHtml(fallbackData.acb_ho?.html || "").jobs || []) : [];
+          let lpbRaw = needLPB ? (fallbackData.lpb?.items || []) : [];
+
+          const vpbJobs = this.processRawJobs(vpbRaw);
+          const mbbJobs = this.processRawMBBJobs(mbbRaw);
+          const acbHcmJobs = this.processRawACBJobs(acbHcmRaw);
+          const acbHoJobs = this.processRawACBJobs(acbHoRaw);
+          const lpbJobs = this.processRawLPBJobs(lpbRaw);
+
+          this.jobs = [];
+          this.addUniqueJobs(vpbJobs);
+          this.addUniqueJobs(mbbJobs);
+          this.addUniqueJobs(acbHcmJobs);
+          this.addUniqueJobs(acbHoJobs);
+          this.addUniqueJobs(lpbJobs);
+
+          this.applyClientFilters();
+          this.renderStats();
+          this.sortJobs();
+          this.renderJobsList();
+          
+          this.showOfflineNotification();
+        } catch (fallbackErr) {
+          console.error("Lỗi nạp database offline:", fallbackErr);
+          this.showCoresError();
+        }
       }
     } finally {
       if (sessionId === this.searchSessionId) {
@@ -387,6 +436,31 @@ class BaselJobs {
         this.jobs.push(job);
       }
     });
+  }
+
+  showOfflineNotification() {
+    const header = document.querySelector("#jobs-section .section-header");
+    if (header && !document.getElementById("offline-jobs-badge")) {
+      const badge = document.createElement("div");
+      badge.id = "offline-jobs-badge";
+      badge.style.display = "inline-flex";
+      badge.style.alignItems = "center";
+      badge.style.gap = "0.35rem";
+      badge.style.background = "rgba(245, 158, 11, 0.12)";
+      badge.style.color = "var(--warning)";
+      badge.style.border = "1px solid rgba(245, 158, 11, 0.25)";
+      badge.style.padding = "0.35rem 0.75rem";
+      badge.style.borderRadius = "20px";
+      badge.style.fontSize = "0.78rem";
+      badge.style.fontWeight = "600";
+      badge.style.marginTop = "0.75rem";
+      badge.innerHTML = `
+        <i data-lucide="wifi-off" style="width: 14px; height: 14px;"></i>
+        Chế độ Lưu trữ: Đang hiển thị dữ liệu tuyển dụng offline (Mạng yếu hoặc bị chặn CORS/Mixed Content trên GitHub Pages)
+      `;
+      header.appendChild(badge);
+      lucide.createIcons();
+    }
   }
   async lazyLoadRemainingPages(needVPB, needMBB, needACB, needLPB, totalMbbPages, totalAcbHcmPages, totalAcbHoPages, totalLpbPages, sessionId) {
     const vpbPages = needVPB ? Array.from({ length: 16 }, (_, i) => ({ bank: "VPB", page: i + 1 })) : [];
@@ -522,8 +596,10 @@ class BaselJobs {
     const res = await fetch(baseUrl);
     if (!res.ok) throw new Error(`ACB HTTP ${res.status}`);
     const htmlText = await res.text();
-    
-    // Parse HTML on client side
+    return this.parseAcbHtml(htmlText);
+  }
+
+  parseAcbHtml(htmlText) {
     const parser = new DOMParser();
     const doc = parser.parseFromString(htmlText, "text/html");
     

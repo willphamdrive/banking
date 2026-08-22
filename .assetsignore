@@ -1,0 +1,30 @@
+# Ignore node_modules and other build dependencies
+node_modules/
+package-lock.json
+package.json
+wrangler.json
+
+# Ignore version control and IDE settings
+.git/
+.github/
+.idea/
+.vscode/
+.DS_Store
+
+# Ignore Python scripts and virtual environments
+.venv/
+venv/
+env/
+__pycache__/
+*.py
+*.pyc
+
+# Ignore backend worker files
+worker.js
+
+# Ignore large raw data/scraper files not needed by the frontend
+dataset_facebook-posts-scraper_*.json
+hedge_posts*.json
+tqn.json
+scratch_raw_jobs.json
+scratch/

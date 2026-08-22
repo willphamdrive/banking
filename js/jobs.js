@@ -223,13 +223,19 @@ class BaselJobs {
                     /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/.test(hn) || 
                     hn.endsWith(".local");
 
-    if (isLocal && window.location.protocol.startsWith("http")) {
+    // If running on Cloudflare Pages or custom domain deployed with Pages Functions support, use relative URLs directly.
+    const isPages = hn.endsWith(".pages.dev") || (!hn.includes("github.io") && window.location.protocol.startsWith("http"));
+
+    if ((isLocal || isPages) && window.location.protocol.startsWith("http")) {
       return relativeUrl;
     }
     
     // If the origin is HTTPS (such as willphamdrive.github.io), we MUST use an HTTPS CORS proxy.
     // Otherwise, browser Mixed Content policy will block calls to http://localhost:8000.
     if (window.location.protocol === "https:" && originalUrl) {
+      if (relativeUrl.startsWith("/api/saved-jobs")) {
+        return relativeUrl;
+      }
       return "https://corsproxy.io/?" + encodeURIComponent(originalUrl);
     }
     

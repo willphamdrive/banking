@@ -6,11 +6,5 @@
   "assets": {
     "directory": "dist",
     "binding": "ASSETS"
-  },
-  "kv_namespaces": [
-    {
-      "binding": "SAVED_JOBS",
-      "id": "placeholder_for_saved_jobs_kv_id"
-    }
-  ]
+  }
 }

@@ -1,0 +1,202 @@
+export async function onRequestGet(context) {
+  // Try to read from KV if bound
+  if (context.env.SAVED_JOBS) {
+    try {
+      const list = await context.env.SAVED_JOBS.get("jobs_list");
+      if (list) {
+        return new Response(list, {
+          headers: {
+            "Content-Type": "application/json; charset=utf-8",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+            "Access-Control-Allow-Headers": "Content-Type"
+          }
+        });
+      }
+    } catch (e) {
+      console.error("Error reading from SAVED_JOBS KV:", e);
+    }
+  }
+
+  // Initial/default saved jobs list fallback
+  const defaultJobs = [
+    {
+      "id": "job-acb-39343",
+      "title": "HO - Chuyên viên Xây Dựng Mô Hình & Định Lượng",
+      "bank": "ACB",
+      "bankCode": "ACB",
+      "logoColor": "linear-gradient(135deg,#fb923c 0%,#f97316 100%)",
+      "department": "risk-legal",
+      "departmentName": "Khối Quản lý Rủi ro",
+      "location": "Hội sở (Tp. HCM)",
+      "salary": "Thương lượng",
+      "level": "junior-mid",
+      "levelName": "Chuyên viên",
+      "deadline": "2026-10-31",
+      "tags": [
+        "ACB TP.HCM",
+        "Experience",
+        "Toàn thời gian"
+      ],
+      "hrEmail": "tuyendung@acb.com.vn",
+      "originalUrl": "https://www.acbjobs.com.vn/job/ho-chuyen-vien-xay-dung-mo-hinh-dinh-luong-39343",
+      "area": "Hội sở"
+    },
+    {
+      "id": "job-bvb-40281",
+      "title": "New Plus Banker - Thực tập sinh tiềm năng",
+      "bank": "BVBank",
+      "bankCode": "BVB",
+      "logoColor": "linear-gradient(135deg,#0369a1 0%,#0284c7 100%)",
+      "department": "business",
+      "departmentName": "Hội sở",
+      "location": "Toàn quốc",
+      "salary": "Thỏa thuận",
+      "level": "intern",
+      "levelName": "Thực tập sinh / Tập sự",
+      "deadline": "2026-12-31",
+      "tags": [
+        "BVBank",
+        "Toàn thời gian"
+      ],
+      "hrEmail": "tuyendung@bvbank.com.vn",
+      "originalUrl": "https://bvbank.talent.vn/job/new-plus-banker-thuc-tap-sinh-tiem-nang-40281",
+      "area": "Toàn quốc"
+    },
+    {
+      "id": "job-tpb-01000000-b1f8-ce4d-7bac-08ded295d265",
+      "title": "Tập sự KHDN tiềm năng",
+      "bank": "TPBank",
+      "bankCode": "TPB",
+      "logoColor": "linear-gradient(135deg,#7c3aed 0%,#a78bfa 100%)",
+      "department": "business",
+      "departmentName": "Các Đơn vị kinh doanh",
+      "location": "Hồ Chí Minh, Đồng Nai",
+      "salary": "Thỏa thuận",
+      "level": "intern",
+      "levelName": "Thực tập sinh / Tập sự",
+      "deadline": "2026-10-31",
+      "tags": [
+        "TPBank",
+        "Hồ Chí Minh"
+      ],
+      "hrEmail": "tuyendung@tpb.vn",
+      "originalUrl": "https://tuyendung.tpb.vn/vi/jobs/RZa3JP",
+      "area": "Hồ Chí Minh, Đồng Nai"
+    },
+    {
+      "id": "job-mbb-69cccdbd5872bf1517e29d59",
+      "title": "Chuyên viên Tập sự Khách hàng Cá nhân - CN. Quang Trung - Phường Gò Vấp, Hồ Chí Minh",
+      "bank": "MB Bank",
+      "bankCode": "MBB",
+      "logoColor": "linear-gradient(135deg,#1e40af 0%,#1d4ed8 100%)",
+      "department": "risk-legal",
+      "departmentName": "Khối Quản trị Rủi ro & Pháp chế",
+      "location": "TP. Hồ Chí Minh",
+      "salary": "Thỏa thuận",
+      "level": "intern",
+      "levelName": "Thực tập sinh / Tập sự",
+      "deadline": "2026-08-25",
+      "tags": [
+        "MB Bank TP.HCM",
+        "Banking",
+        "Business Development"
+      ],
+      "hrEmail": "hr.contact@mbbank.com.vn",
+      "originalUrl": "https://careers.mbbank.com.vn/list-of-posts/detail-list-of-posts?id=69cccdbd5872bf1517e29d59&workGroupId=11258",
+      "area": "CN. Quang Trung - Phường Gò Vấp, Hồ Chí Minh"
+    },
+    {
+      "id": "job-acb-54624",
+      "title": "The Next Banker 2026 (Đợt trải nghiệm T09/2026)",
+      "bank": "ACB",
+      "bankCode": "ACB",
+      "logoColor": "linear-gradient(135deg,#fb923c 0%,#f97316 100%)",
+      "department": "business",
+      "departmentName": "Event ACB",
+      "location": "TP. Hồ Chí Minh",
+      "salary": "Thương lượng",
+      "level": "junior-mid",
+      "levelName": "Chuyên viên",
+      "deadline": "2026-10-31",
+      "tags": [
+        "ACB TP.HCM",
+        "Experience",
+        "Toàn thời gian"
+      ],
+      "hrEmail": "tuyendung@acb.com.vn",
+      "originalUrl": "https://www.acbjobs.com.vn/job/the-next-banker-2026-dot-trai-nghiem-t092026-54624",
+      "area": "TP. Hồ Chí Minh"
+    },
+    {
+      "id": "job-tpb-01000000-4513-6ea4-1000-08def2ab8973",
+      "title": "(ĐVKD) - Tập sự tiềm năng Khách hàng Cá nhân",
+      "bank": "TPBank",
+      "bankCode": "TPB",
+      "logoColor": "linear-gradient(135deg,#7c3aed 0%,#a78bfa 100%)",
+      "department": "business",
+      "departmentName": "Khối Bán lẻ & Kinh doanh",
+      "location": "TP. Hồ Chí Minh",
+      "salary": "6 - 14 triệu",
+      "level": "intern",
+      "levelName": "Thực tập sinh / Tập sự",
+      "deadline": "2026-10-31",
+      "tags": [
+        "TPBank",
+        "Hồ Chí Minh"
+      ],
+      "hrEmail": "tuyendung@tpb.vn",
+      "originalUrl": "https://tuyendung.tpb.vn/vi/jobs/qzNOrq",
+      "area": "TP. Hồ Chí Minh"
+    }
+  ];
+
+  return new Response(JSON.stringify(defaultJobs, null, 2), {
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type"
+    }
+  });
+}
+
+export async function onRequestPost(context) {
+  try {
+    const list = await context.request.json();
+    if (context.env.SAVED_JOBS) {
+      await context.env.SAVED_JOBS.put("jobs_list", JSON.stringify(list));
+      return new Response(JSON.stringify({ status: "success" }), {
+        headers: {
+          "Content-Type": "application/json; charset=utf-8",
+          "Access-Control-Allow-Origin": "*"
+        }
+      });
+    }
+    return new Response(JSON.stringify({ status: "success", note: "No KV bound, using local storage fallback on client" }), {
+      headers: {
+        "Content-Type": "application/json; charset=utf-8",
+        "Access-Control-Allow-Origin": "*"
+      }
+    });
+  } catch (err) {
+    return new Response(JSON.stringify({ error: err.message }), {
+      status: 500,
+      headers: {
+        "Content-Type": "application/json; charset=utf-8",
+        "Access-Control-Allow-Origin": "*"
+      }
+    });
+  }
+}
+
+export async function onRequestOptions(context) {
+  return new Response(null, {
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type",
+      "Access-Control-Max-Age": "86400"
+    }
+  });
+}

@@ -1,0 +1,25 @@
+# Build output
+dist/
+
+# Dependencies
+node_modules/
+package-lock.json
+
+# Python virtual environment and cache
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+
+# IDEs and OS files
+.idea/
+.vscode/
+.DS_Store
+
+# Scraper temporary/large files
+dataset_facebook-posts-scraper_*.json
+hedge_posts*.json
+tqn.json
+scratch_raw_jobs.json
+scratch/

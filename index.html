@@ -65,42 +65,43 @@
         opacity: 1 !important;
         pointer-events: auto !important;
       }
-      /* Tooltip style */
-      .glossary-term-tooltip {
-        border-bottom: 1.5px dashed var(--primary);
-        cursor: help;
-        color: var(--text-main);
-        font-weight: 500;
-        position: relative;
-        display: inline-block;
-      }
-      .glossary-term-tooltip::after {
-        content: attr(data-term-title) ": " attr(data-term-def);
-        position: absolute;
-        bottom: 125%;
-        left: 50%;
-        transform: translateX(-50%);
-        background: #1e293b;
-        color: #f8fafc;
-        border: 1px solid #475569;
-        padding: 0.5rem 0.75rem;
-        border-radius: 8px;
-        font-size: 0.75rem;
-        font-weight: normal;
-        line-height: 1.4;
-        white-space: normal;
-        width: 260px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.2s ease, transform 0.2s ease;
-        z-index: 99999;
-        text-align: left;
-      }
-      .glossary-term-tooltip:hover::after {
-        opacity: 1;
-        transform: translateX(-50%) translateY(-2px);
-      }
+    }
+
+    /* Tooltip style */
+    .glossary-term-tooltip {
+      border-bottom: 1.5px dashed var(--primary);
+      cursor: help;
+      color: var(--text-main);
+      font-weight: 500;
+      position: relative;
+      display: inline-block;
+    }
+    .glossary-term-tooltip::after {
+      content: attr(data-term-title) ": " attr(data-term-def);
+      position: absolute;
+      bottom: 125%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #1e293b;
+      color: #f8fafc;
+      border: 1px solid #475569;
+      padding: 0.5rem 0.75rem;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      font-weight: normal;
+      line-height: 1.4;
+      white-space: normal;
+      width: 260px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      z-index: 99999;
+      text-align: left;
+    }
+    .glossary-term-tooltip:hover::after {
+      opacity: 1;
+      transform: translateX(-50%) translateY(-2px);
     }
   </style>
 

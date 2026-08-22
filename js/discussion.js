@@ -572,16 +572,66 @@ class DiscussionInsights {
       return text;
     }
 
+    // Bản đồ định nghĩa từ khóa chính xác cho từng thuật ngữ để tránh nhận diện sai
+    const termKeywords = {
+      car: ["CAR"],
+      rwa: ["RWA"],
+      tier1: ["Vốn cấp 1", "Tier 1"],
+      tier2: ["Vốn cấp 2", "Tier 2"],
+      ldr: ["LDR"],
+      sfl: ["SFL"],
+      amc: ["AMC"],
+      lcr: ["LCR"],
+      nsfr: ["NSFR"],
+      qis: ["QIS"],
+      creditrisk: ["Credit Risk", "Rủi ro tín dụng"],
+      marketrisk: ["Market Risk", "Rủi ro thị trường"],
+      operationalrisk: ["Operational Risk", "Rủi ro hoạt động"],
+      npl: ["NPL"],
+      basel: ["Basel", "Hiệp ước Basel"],
+      nim: ["NIM"],
+      casa: ["CASA"],
+      cir: ["CIR"],
+      llcr: ["LLCR"],
+      roe: ["ROE"],
+      roa: ["ROA"],
+      omo: ["OMO", "Thị trường mở"],
+      fed: ["FED", "Fed"],
+      sbv: ["SBV", "NHNN"],
+      cof: ["COF"],
+      alm: ["ALM"],
+      qe_qt: ["QE & QT", "QE", "QT"],
+      ust: ["UST"],
+      tga: ["TGA"],
+      dxy: ["DXY"],
+      frm: ["FRM"],
+      hpr: ["HPR"],
+      cp: ["Counterparty", "đối tác giao dịch"], // Không khớp "CP" độc lập vì dễ trùng với "Cổ phần" / "Chính phủ"
+      tarf: ["TARF"]
+    };
+
     let result = text;
     const termMappings = [];
+
     GLOSSARY_TERMS.forEach(item => {
-      const match = item.term.match(/^([A-Z0-9\/]+)\b/i);
-      if (match) {
-        const acronym = match[1];
-        termMappings.push({
-          keyword: acronym,
-          item: item
+      // Sử dụng danh sách từ khóa tường minh nếu có cấu hình
+      const keywords = termKeywords[item.id];
+      if (keywords) {
+        keywords.forEach(kw => {
+          termMappings.push({
+            keyword: kw,
+            item: item
+          });
         });
+      } else {
+        // Fallback tự động nhưng an toàn: chỉ lấy từ viết tắt viết hoa từ 2 ký tự trở lên
+        const match = item.term.match(/^([A-Z]{2,})\b/);
+        if (match) {
+          termMappings.push({
+            keyword: match[1],
+            item: item
+          });
+        }
       }
     });
 
@@ -593,11 +643,23 @@ class DiscussionInsights {
       const definition = mapping.item.definition;
       const termTitle = mapping.item.term;
 
-      // Tránh thay thế các từ khóa bên trong các thẻ HTML (VD: href, class, data-id)
-      const regex = new RegExp(`(<[^>]*>)|\\b(${kw})\\b`, "gi");
-      result = result.replace(regex, (match, p1, p2) => {
-        if (p1) return match; // Thẻ HTML, bỏ qua
-        return `<span class="glossary-term-tooltip" data-term-id="${mapping.item.id}" data-term-title="${termTitle}" data-term-def="${definition}">${match}</span>`;
+      const escapedKw = kw.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+      
+      // Biểu thức regex tìm kiếm từ khóa an toàn:
+      // Group 1: khớp các thẻ span tooltip đã có để bỏ qua, tránh lồng nhau
+      // Group 2: khớp các thẻ HTML thông thường để bỏ qua
+      // Group 3: khớp từ khóa độc lập nằm ngoài thẻ HTML (hỗ trợ tiếng Việt có dấu làm word boundary)
+      const regex = new RegExp(`(<span class="glossary-term-tooltip"[^>]*>[\\s\\S]*?<\\/span>)|(<[^>]*>)|(?:^|[^a-zA-Z0-9_ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚÝỲÝỶỸỴàáâãèéêìíòóôõùúýỳýỷỹỵĂăĐđĨĩŨũƠơƯưẠạẢảẤấẦầẨẩẪẫẬậẮắẰằẲẳẴẵẶặẸẹẺẻẼẽẾếỀềỂểỄễỆệỈỉỊịỌọỎỏỐốỒồỔổỖỗỘộỚớỜờỞởỠỡỢợỤụỦủỨứỪừỬửỮữỰự])(${escapedKw})(?:$|[^a-zA-Z0-9_ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚÝỲÝỶỸỴàáâãèéêìíòóôõùúýỳýỷỹỵĂăĐđĨĩŨũƠơƯưẠạẢảẤấẦầẨẩẪẫẬậẮắẰằẲẳẴẵẶặẸẹẺẻẼẽẾếỀềỂểỄễỆệỈỉỊịỌọỎỏỐốỒồỔổỖỗỘộỚớỜờỞởỠỡỢợỤụỦủỨứỪừỬửỮữỰự])`, "gi");
+
+      result = result.replace(regex, (match, p1, p2, p3) => {
+        if (p1 || p2) return match; // Bỏ qua nếu thuộc thẻ HTML hoặc span đã được xử lý
+        
+        // p3 là từ khóa trùng khớp
+        const startIndex = match.indexOf(p3);
+        const prefix = match.substring(0, startIndex);
+        const suffix = match.substring(startIndex + p3.length);
+        
+        return `${prefix}<span class="glossary-term-tooltip" data-term-id="${mapping.item.id}" data-term-title="${termTitle}" data-term-def="${definition}">${p3}</span>${suffix}`;
       });
     });
 

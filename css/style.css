@@ -39,6 +39,7 @@
   --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
   --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
   --glass-blur: blur(16px);
+  --card-solid-bg: #151c2c;
 }
 
 [data-theme="light"] {
@@ -47,6 +48,7 @@
   --bg-gradient: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
   --sidebar-bg: rgba(255, 255, 255, 0.85);
   --card-bg: rgba(255, 255, 255, 0.7);
+  --card-solid-bg: #ffffff;
   --card-hover: rgba(255, 255, 255, 0.9);
   --border-color: rgba(209, 213, 219, 0.7);
   --text-main: #1f2937;
@@ -259,7 +261,7 @@ button, input, select {
   margin-left: 280px;
   flex-grow: 1;
   padding: 2.5rem 3rem;
-  max-width: 1300px;
+  max-width: 100%;
 }
 
 header {
@@ -1097,22 +1099,96 @@ header p {
     flex-direction: column;
   }
 
+  /* Sidebar backdrop overlay on mobile */
+  .app-container::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 998;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  .app-container.mobile-sidebar-active::before {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
   .sidebar {
-    width: 100%;
-    position: relative;
-    border-right: none;
-    border-bottom: 1px solid var(--border-color);
-    padding: 1.5rem;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 280px;
+    height: 100vh;
+    z-index: 1000;
+    transform: translateX(-100%);
+    border-right: 1px solid var(--border-color);
+    box-shadow: var(--shadow-lg);
   }
   
-  .logo-container {
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
+  .app-container.mobile-sidebar-active .sidebar {
+    transform: translateX(0);
   }
 
   .main-content {
-    margin-left: 0;
-    padding: 1.5rem;
+    margin-left: 0 !important;
+    padding: 1.25rem !important;
+    padding-top: 5.5rem !important; /* Space for mobile floating expand button */
+  }
+
+  .main-sidebar-toggle-btn,
+  .main-sidebar-toggle-btn.hidden {
+    display: flex !important;
+    left: 1.25rem;
+    top: 1.25rem;
+    z-index: 999;
+    background: var(--bg-color) !important;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  }
+
+  .app-container.mobile-sidebar-active .main-sidebar-toggle-btn {
+    display: none !important;
+  }
+
+  /* Document Finder Floating Tab adjustments for mobile */
+  .floating-doc-tab {
+    opacity: 0.85 !important;
+    transform: translateY(-50%) translateX(26px) !important;
+    top: 50% !important;
+  }
+  .floating-doc-tab:hover {
+    transform: translateY(-50%) translateX(0) !important;
+    opacity: 1 !important;
+  }
+
+  /* Document Finder Drawer full width on mobile */
+  .doc-finder-drawer {
+    width: 100% !important;
+    right: -100% !important;
+    border-left: none !important;
+  }
+  .doc-finder-drawer.open {
+    right: 0 !important;
+  }
+
+  /* Adjust spacing in dashboard grids & headers for mobile */
+  .section-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .intro-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .intro-content {
+    max-width: 100%;
   }
 
   /* Timeline ở chế độ di động: biến thành 1 cột bên phải */
@@ -1134,4 +1210,1264 @@ header p {
     left: 15px !important;
     right: auto !important;
   }
+
+  /* Responsive Jobs Table to Card List on mobile */
+  .jobs-table {
+    border: none !important;
+  }
+  .jobs-table thead {
+    display: block !important;
+    border-bottom: none !important;
+  }
+  /* Hide the actual header titles row */
+  .jobs-table thead tr:first-child {
+    display: none !important;
+  }
+  /* Convert column filter row to a 2-column flex/grid box */
+  #col-filter-row {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 12px;
+    margin-bottom: 1.25rem;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  #col-filter-row td {
+    display: block !important;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+  #col-filter-row td:first-child {
+    grid-column: span 2;
+  }
+  #col-filter-row td:last-child {
+    grid-column: span 2;
+    display: flex !important;
+    justify-content: flex-end;
+  }
+  #col-filter-row td::before {
+    display: none !important;
+  }
+  /* Convert body rows to cards */
+  .jobs-table tbody,
+  .jobs-table tr,
+  .jobs-table td {
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+  .jobs-table tbody tr {
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: var(--shadow-sm);
+  }
+  .jobs-table tbody tr:last-child {
+    margin-bottom: 0;
+  }
+  .jobs-table tbody td {
+    padding: 0.5rem 0 !important;
+    border-bottom: none !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .jobs-table tbody td:first-child {
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding-bottom: 0.75rem !important;
+    margin-bottom: 0.25rem;
+  }
+  .jobs-table tbody td:first-child::before {
+    display: none !important;
+  }
+  .jobs-table tbody td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .jobs-table tbody td[data-label="Thao tác"] {
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding-top: 0.75rem !important;
+    margin-top: 0.25rem;
+    justify-content: flex-end !important;
+  }
+  .jobs-table tbody td[data-label="Thao tác"]::before {
+    display: none !important;
+  }
+  /* Mobile dropdown alignment adjustments to prevent screen overflow */
+  #multiselect-dept .multiselect-dropdown {
+    left: auto !important;
+    right: 0 !important;
+  }
+  #multiselect-level .multiselect-dropdown {
+    left: 0 !important;
+    right: auto !important;
+  }
+
+  /* --- General Responsive Upgrades for all tabs/pages --- */
+  
+  /* Horizontal scroll for sub tabs instead of ugly wrapping */
+  .sub-tabs-container, 
+  .car-sub-tabs-container, 
+  .financial-sub-tabs-container,
+  .doc-categories-pills {
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+    padding-bottom: 0.6rem !important;
+    gap: 0.4rem !important;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+  }
+  .sub-tab-btn, 
+  .car-sub-tab-btn, 
+  .financial-sub-tab-btn,
+  .doc-pill-btn {
+    flex-shrink: 0 !important;
+    padding: 0.45rem 0.85rem !important;
+    font-size: 0.82rem !important;
+  }
+
+  /* Form row stacks on mobile */
+  .form-row {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
+
+  /* Compact card paddings on mobile */
+  .card {
+    padding: 1.25rem !important;
+    border-radius: 12px !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  /* Ratios grid becomes 1 column on smaller mobile screens */
+  .ratios-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
+
+  /* Prevent comparison table columns from shrinking too much */
+  .comparison-table {
+    min-width: 750px !important;
+  }
 }
+
+/* VIETNAMESE LAWS STYLING */
+.law-card {
+  transition: all 0.3s ease;
+}
+.law-card:hover {
+  transform: translateY(-2px);
+  background: var(--card-hover);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+}
+.law-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.law-code-badge {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  font-family: 'Outfit', sans-serif;
+}
+.badge-law {
+  background: var(--primary-glow);
+  color: var(--primary);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+}
+.badge-circular {
+  background: var(--warning-bg);
+  color: var(--warning);
+  border: 1px solid var(--warning-border);
+}
+.badge-decree {
+  background: rgba(59, 130, 246, 0.15);
+  color: #3b82f6;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+.law-effect-date {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+.law-card-title {
+  font-size: 1.3rem;
+  color: var(--text-main);
+  margin-bottom: 0.75rem;
+}
+.law-card-summary {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+.law-card-highlights {
+  background: rgba(255, 255, 255, 0.015);
+  border-left: 3px solid var(--primary);
+  padding: 0.75rem 1rem;
+  border-radius: 0 8px 8px 0;
+  margin-top: 1rem;
+}
+[data-theme="light"] .law-card-highlights {
+  background: rgba(0, 0, 0, 0.01);
+}
+.law-card-highlights h4 {
+  font-size: 0.92rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-main);
+}
+.law-card-highlights ul {
+  padding-left: 1.2rem;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+.law-card-highlights ul li {
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+
+/* Category Filter Buttons in Laws Tab */
+.law-cat-btn {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+.law-cat-btn:hover {
+  background: var(--card-hover);
+  color: var(--text-main);
+  border-color: var(--primary);
+}
+.law-cat-btn.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  box-shadow: 0 4px 12px var(--primary-glow);
+}
+
+/* Source Document Link Button */
+.source-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  color: var(--primary);
+  padding: 0.45rem 1rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 1.25rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  width: fit-content;
+}
+[data-theme="light"] .source-link-btn {
+  background: rgba(0, 0, 0, 0.03);
+}
+.source-link-btn:hover {
+  background: var(--primary);
+  color: white !important;
+  border-color: var(--primary);
+  box-shadow: 0 4px 10px var(--primary-glow);
+}
+.source-link-btn i {
+  flex-shrink: 0;
+}
+
+/* === PHÂN HỆ PHÂN TÍCH CAR TCB vs VCB === */
+.analysis-toggle-container .tab-btn {
+  transition: all 0.25s ease;
+}
+.analysis-toggle-container .tab-btn.active {
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
+}
+.analysis-accordion-item {
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  transition: all 0.25s ease;
+}
+.analysis-accordion-item:hover {
+  border-color: var(--primary) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+.analysis-stat-row hr {
+  opacity: 0.3;
+}
+
+/* Sub-tabs & Controllers cho Phân tích CAR Redesign */
+.sub-tab-btn {
+  padding: 0.65rem 1.25rem;
+  border: none;
+  background: none;
+  color: var(--text-muted);
+  font-weight: 600;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.sub-tab-btn.active {
+  color: var(--text-main);
+  border-bottom-color: var(--primary);
+}
+.sub-tab-btn:hover {
+  color: var(--text-main);
+}
+.sub-tab-panel.hidden {
+  display: none !important;
+}
+
+.year-btn {
+  padding: 0.45rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--card-bg);
+  color: var(--text-muted);
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.year-btn.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
+}
+.year-btn:hover {
+  color: var(--text-main);
+  border-color: var(--primary);
+}
+
+/* Styled Checkboxes cho Multi-bank compare */
+#compare-banks-checkboxes label {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+#compare-banks-checkboxes label:hover {
+  border-color: var(--primary);
+  background: rgba(255, 255, 255, 0.04);
+}
+#compare-banks-checkboxes input[type="checkbox"]:checked + label {
+  border-color: var(--primary);
+  background: rgba(99, 102, 241, 0.05);
+}
+
+/* === TOGGLE SIDEBAR STYLING === */
+.app-container {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.sidebar {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.main-content {
+  transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1), padding-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Collapsed state rules */
+.app-container.sidebar-collapsed .sidebar {
+  transform: translateX(-280px);
+}
+.app-container.sidebar-collapsed .main-content {
+  margin-left: 0;
+  padding-left: 5rem; /* Space for expand button */
+}
+
+.sidebar-toggle-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0.35rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+.sidebar-toggle-btn:hover {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.main-sidebar-toggle-btn {
+  position: fixed;
+  left: 1.5rem;
+  top: 1.5rem;
+  z-index: 101; /* Must be above sidebar index if needed, or sidebar is hidden */
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+}
+.main-sidebar-toggle-btn:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  transform: scale(1.05);
+}
+.main-sidebar-toggle-btn.hidden {
+  display: none !important;
+}
+
+/* === DOCUMENT FINDER DRAWER STYLING === */
+.floating-doc-tab {
+  position: fixed;
+  right: 0;
+  top: 30%;
+  z-index: 1002;
+  background: #1e293b;
+  color: white;
+  border: 1px solid var(--border-color);
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  padding: 1rem 0.45rem;
+  cursor: pointer;
+  box-shadow: -4px 0 15px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 44px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(32px);
+  opacity: 0.65;
+}
+.floating-doc-tab span {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #f8fafc;
+}
+.floating-doc-tab:hover {
+  background: var(--primary);
+  transform: translateX(0);
+  opacity: 1;
+}
+.floating-doc-tab i {
+  color: #f8fafc;
+}
+
+.doc-finder-drawer {
+  position: fixed;
+  right: -400px;
+  top: 0;
+  bottom: 0;
+  width: 380px;
+  background: var(--card-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-left: 1px solid var(--border-color);
+  z-index: 1003;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -6px 0 25px rgba(0, 0, 0, 0.3);
+  transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.doc-finder-drawer.open {
+  right: 0;
+}
+
+.doc-drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.75rem;
+}
+
+.doc-drawer-close-btn {
+  font-size: 1.6rem;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 0.25rem;
+  transition: color 0.2s;
+}
+.doc-drawer-close-btn:hover {
+  color: var(--text-main);
+}
+
+.doc-pill-btn {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.doc-pill-btn.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
+}
+.doc-pill-btn:hover {
+  border-color: var(--primary);
+  color: var(--text-main);
+}
+
+/* Styled Folder Tree Nodes */
+.doc-folder-node {
+  margin-bottom: 0.65rem;
+}
+
+.doc-folder-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.45rem 0.6rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.doc-folder-header:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: var(--primary);
+}
+
+.doc-folder-content {
+  padding-left: 1rem;
+  margin-top: 0.35rem;
+  border-left: 1px dashed rgba(255, 255, 255, 0.06);
+}
+.doc-folder-content.collapsed {
+  display: none !important;
+}
+
+.doc-file-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.45rem 0.5rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  margin-bottom: 0.25rem;
+  cursor: pointer;
+}
+.doc-file-item:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.doc-action-btn {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+.doc-action-btn.pin-btn {
+  color: var(--text-muted);
+}
+.doc-action-btn.pin-btn.pinned {
+  color: #eab308 !important; /* Gold yellow */
+}
+.doc-action-btn.open-btn {
+  color: var(--primary);
+}
+.doc-action-btn.open-btn:hover {
+  color: var(--success);
+}
+.doc-action-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* === PDF VIEW MODAL STYLING === */
+.pdf-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  transition: opacity 0.25s ease;
+}
+.pdf-modal-content {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  width: 90vw;
+  height: 90vh;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  animation: pdfModalFadeIn 0.3s ease;
+}
+@keyframes pdfModalFadeIn {
+  from { transform: scale(0.96); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.pdf-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+.pdf-modal-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--text-main);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 70%;
+}
+.pdf-modal-body {
+  flex-grow: 1;
+  background: #27272a;
+  border-radius: 0 0 12px 12px;
+  overflow: hidden;
+}
+
+/* === BASEL COMPARISON TABLE COL HIGHLIGHT === */
+.comparison-table td.col-highlight,
+.comparison-table th.col-highlight {
+  background-color: rgba(99, 102, 241, 0.04) !important;
+  transition: background-color 0.15s ease;
+}
+.comparison-table td.col-active,
+.comparison-table th.col-active {
+  background-color: rgba(99, 102, 241, 0.08) !important;
+  border-left: 1px dashed var(--primary) !important;
+  border-right: 1px dashed var(--primary) !important;
+}
+
+/* === SCENARIO SIMULATION BUTTONS === */
+.scenario-btn {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.scenario-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  filter: brightness(1.1);
+}
+.scenario-btn:active {
+  transform: translateY(0);
+}
+
+/* === HEDGE POSTS & INSIGHTS STYLING === */
+.bank-tag {
+  background: var(--primary-glow);
+  color: var(--primary);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.85rem;
+}
+.bank-tag:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+.bank-tag.active-tag {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  box-shadow: 0 0 8px var(--primary-glow);
+}
+.post-card {
+  transition: all 0.25s ease;
+}
+.post-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary);
+}
+.post-card-tag {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.post-card-tag:hover {
+  border-color: var(--primary);
+  color: var(--text-main);
+}
+.post-card-tag.active-tag {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* === JOB BOARD STYLING === */
+.job-card {
+  background: var(--card-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.job-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--success));
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-lg);
+}
+
+.job-card:hover::before {
+  opacity: 1;
+}
+
+.job-bank-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.job-bank-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.job-card-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.job-card-title:hover {
+  color: var(--primary);
+}
+
+.job-details-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin: 1rem 0;
+  padding: 0.75rem 0;
+  border-top: 1px dashed var(--border-color);
+  border-bottom: 1px dashed var(--border-color);
+}
+
+.job-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.job-detail-item i {
+  color: var(--primary);
+  width: 14px;
+  height: 14px;
+}
+
+.job-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 1.25rem;
+}
+
+.job-tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.job-tag-urgent {
+  background: var(--danger-bg);
+  color: var(--danger);
+  border: 1px solid var(--danger-border);
+}
+
+.job-tag-remote {
+  background: var(--primary-glow);
+  color: var(--primary);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.job-tag-high-salary {
+  background: var(--success-bg);
+  color: var(--success);
+  border: 1px solid var(--success-border);
+}
+
+.job-tag-default {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+}
+
+.job-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.job-deadline-text {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.job-action-btn {
+  padding: 0.45rem 1rem;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border: 1px solid var(--border-color);
+  background: transparent;
+  color: var(--text-main);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.job-action-btn:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  box-shadow: 0 4px 12px var(--primary-glow);
+}
+
+/* Table Layout for Jobs */
+.jobs-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.jobs-table th {
+  position: sticky;
+  top: 0;
+  background: var(--card-solid-bg);
+  z-index: 12;
+  border-bottom: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+}
+
+.jobs-table tr#col-filter-row td {
+  position: sticky;
+  top: 49px;
+  background: var(--card-solid-bg);
+  z-index: 11;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.jobs-table th:hover {
+  color: var(--text-main) !important;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.jobs-table th i {
+  color: var(--text-muted);
+  transition: all 0.2s ease;
+}
+
+.jobs-table th:hover i {
+  color: var(--text-main) !important;
+}
+
+.jobs-table tbody tr {
+  border-bottom: 1px solid var(--border-color);
+  transition: all 0.25s ease;
+}
+
+.jobs-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.02) !important;
+}
+
+.jobs-table td {
+  padding: 0.85rem 1.25rem;
+  vertical-align: middle;
+  color: var(--text-main);
+}
+
+/* Pagination Buttons */
+.page-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 32px;
+  padding: 0 8px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.page-btn:hover:not(:disabled) {
+  border-color: var(--primary);
+  background: var(--primary-glow);
+  color: var(--primary);
+}
+
+.page-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.page-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* === JOB DETAIL MODAL ENHANCEMENT === */
+.job-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2500;
+  opacity: 1;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.job-modal.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.job-modal.hidden .job-modal-content {
+  transform: scale(0.95) translateY(15px);
+}
+
+.job-modal-content {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  transform: scale(1) translateY(0);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.job-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.job-modal-body {
+  padding: 1.5rem;
+  overflow-y: auto;
+  text-align: left;
+  background: var(--bg-color);
+  color: var(--text-main);
+  flex-grow: 1;
+  max-height: calc(85vh - 70px);
+}
+
+/* Detail Grid Card in Modal */
+.job-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+}
+
+.job-meta-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.job-meta-card-icon {
+  background: var(--primary-glow);
+  color: var(--primary);
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.job-meta-card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.job-meta-card-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.job-meta-card-val {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* Job detail section content list */
+.job-section-title {
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--primary);
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.35rem;
+}
+
+.job-section-body {
+  line-height: 1.6;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.job-section-body ul {
+  padding-left: 1.25rem;
+  margin: 0;
+}
+
+.job-section-body li {
+  margin-bottom: 0.45rem;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-spin {
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
+/* Custom Multiselect */
+.custom-multiselect {
+  position: relative;
+  width: 100%;
+}
+.multiselect-trigger {
+  width: 100%;
+  padding: 0.35rem 0.5rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-main);
+  font-size: 0.78rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  transition: border-color 0.15s;
+}
+.multiselect-trigger:hover {
+  border-color: var(--primary);
+}
+.multiselect-trigger .trigger-label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 14px);
+  display: block;
+}
+.multiselect-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 240px;
+  max-width: 320px;
+  margin-top: 4px;
+  background: var(--bg-color); /* Solid theme background, prevents underlying text bleed-through */
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: var(--shadow-lg);
+  z-index: 100;
+  max-height: 250px;
+  overflow-y: auto;
+  padding: 0.45rem;
+}
+#multiselect-level .multiselect-dropdown {
+  left: auto;
+  right: 0; /* Align rightmost dropdown to right to prevent screen overflow */
+}
+.multiselect-item {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.4rem 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  user-select: none;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap; /* Prevent option text wrapping */
+}
+.multiselect-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-main);
+}
+.multiselect-item input[type="checkbox"] {
+  cursor: pointer;
+  accent-color: var(--primary);
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+/* Mobile Override to ensure the Hamburger Button is ALWAYS visible on mobile */
+@media (max-width: 768px) {
+  #sidebar-expand-btn,
+  #sidebar-expand-btn.hidden,
+  .main-sidebar-toggle-btn,
+  .main-sidebar-toggle-btn.hidden {
+    display: flex !important;
+    left: 1.25rem !important;
+    top: 1.25rem !important;
+    z-index: 999 !important;
+    background: var(--bg-color) !important;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
+  }
+
+  .app-container.mobile-sidebar-active #sidebar-expand-btn,
+  .app-container.mobile-sidebar-active .main-sidebar-toggle-btn {
+    display: none !important;
+  }
+}
+
+
+

@@ -1,0 +1,8409 @@
+// File tự động sinh từ tqn.json
+const NGHIA_POSTS_DATA = [
+  {
+    "time": "2026-08-13T07:56:45.000Z",
+    "timestamp": 1786607805,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0ESGfuJrEKwwpvJfXMLq45HPUaG3BUfCy4WuYdTeoN6SSTAvQ3wsSfuKNuxU3CBGml",
+    "text": "Hoan hô đồng chí PĐ\nẤn cho lãi suất chạy về tới đâu?",
+    "banks": [],
+    "topic": "interest_macro",
+    "media": [
+      {
+        "thumbnail": "https://scontent-msp1-1.xx.fbcdn.net/v/t39.99422-6/769375199_1333322438993096_4385077763144133040_n.png?stp=dst-jpg_tt6&cstp=mx665x432&ctp=s665x432&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=yjvbIj-EgeoQ7kNvwErfmA0&_nc_oc=AdryedsncSki9elliqB_grSpMqhDD2xAHrbxV0ZLaYkUvMY26hNtm-GWOK7uZUYOqx4&_nc_zt=14&_nc_ht=scontent-msp1-1.xx&_nc_gid=qVSs3p2dYvJMubkBX6RamQ&_nc_ss=72289&oh=00_AQGgiceionjOKmaowaS3DvGTV6LCQK_dyzFHUc5ZMLMbKg&oe=6A89E845",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF604220",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-msp1-1.xx.fbcdn.net/v/t39.99422-6/769375199_1333322438993096_4385077763144133040_n.png?stp=dst-jpg_tt6&cstp=mx665x432&ctp=s665x432&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=yjvbIj-EgeoQ7kNvwErfmA0&_nc_oc=AdryedsncSki9elliqB_grSpMqhDD2xAHrbxV0ZLaYkUvMY26hNtm-GWOK7uZUYOqx4&_nc_zt=14&_nc_ht=scontent-msp1-1.xx&_nc_gid=qVSs3p2dYvJMubkBX6RamQ&_nc_ss=72289&oh=00_AQGgiceionjOKmaowaS3DvGTV6LCQK_dyzFHUc5ZMLMbKg&oe=6A89E845",
+          "height": 432,
+          "width": 665
+        },
+        "url": "https://www.facebook.com/photo/?fbid=28170594085914997&set=a.2029578063776623",
+        "id": "28170594085914997",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjgxNzA1OTQ0MTI1ODE2MzE="
+        },
+        "ocrText": "May be an image of one or more people, newsroom and text"
+      }
+    ]
+  },
+  {
+    "time": "2026-08-13T05:50:53.000Z",
+    "timestamp": 1786600253,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02cMasfLpW3bh4XGjTwJ4GKkqS3eJYpgZJ18a1aa6tANbKENFSq42F7GWaxt3X3ZNTl",
+    "text": "Đã có nguyên nhân gốc rễ, đợi giải pháp gốc rễ truyền dẫn.\n\nNgoan:",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-msp1-1.xx.fbcdn.net/v/t39.99422-6/773572710_1706671173742632_2711155732393735212_n.png?stp=dst-jpg_tt6&cstp=mx495x241&ctp=s495x241&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ieitW7kANiIQ7kNvwFh5tki&_nc_oc=AdpKTbHMWFUOOoE_mQigfmQSwH95qUBqwwh8m_wIH4CBO-014WIUOiPqilhBcpR58fE&_nc_zt=14&_nc_ht=scontent-msp1-1.xx&_nc_gid=qVSs3p2dYvJMubkBX6RamQ&_nc_ss=72289&oh=00_AQEJv3P4RdkHc9l4VGu099Q8DJyla-lV0uXVkPp0delWOA&oe=6A89F4E8",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-msp1-1.xx.fbcdn.net/v/t39.99422-6/773572710_1706671173742632_2711155732393735212_n.png?stp=dst-jpg_tt6&cstp=mx495x241&ctp=s495x241&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ieitW7kANiIQ7kNvwFh5tki&_nc_oc=AdpKTbHMWFUOOoE_mQigfmQSwH95qUBqwwh8m_wIH4CBO-014WIUOiPqilhBcpR58fE&_nc_zt=14&_nc_ht=scontent-msp1-1.xx&_nc_gid=qVSs3p2dYvJMubkBX6RamQ&_nc_ss=72289&oh=00_AQEJv3P4RdkHc9l4VGu099Q8DJyla-lV0uXVkPp0delWOA&oe=6A89F4E8",
+          "height": 241,
+          "width": 495
+        },
+        "url": "https://www.facebook.com/photo/?fbid=28169580012683071&set=a.2029578063776623",
+        "id": "28169580012683071",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjgxNjk1ODAyOTYwMTYzNzY="
+        },
+        "ocrText": "May be an image of text"
+      }
+    ]
+  },
+  {
+    "time": "2026-08-11T03:56:19.000Z",
+    "timestamp": 1786420579,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid07fSaX5Ro9CK1xC26GJ7KbAFbwv3isP9bASiQSFj6MmgtRTnoWy4yUKK3x3rKKJ6hl",
+    "text": "Thật ra điều này là chuyện bình thường ở bank, như ... cân đường hạt thóc, kk, chỉ khác ở sự phân hóa phù hợp với từng bank.\nTại sao nhấn mạnh sự phù hợp, vì chủ tút... trong nửa trăm NH có thể làm, thì chủ tút chọn lấy ví dụ là VCB :-d",
+    "banks": [
+      "VCB"
+    ],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2026-08-07T03:58:44.000Z",
+    "timestamp": 1786075124,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02RauL25jdmZ79eisM9sCUrfFKWpqfZbJyLKb2LzMENBmLoxjAGkF8iJ5rYsa14Ur1l",
+    "text": "Flexibility as a function, right?",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lga3-2.xx.fbcdn.net/v/t39.99422-6/768016866_1435490298398215_4649435691588509669_n.png?stp=dst-jpg_tt6&cstp=mx720x661&ctp=p552x414&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=psj1z9bgtlYQ7kNvwFZt93R&_nc_oc=Ado18PyOL07SBWmpk007KpX2b3SLbZxo76Y9C8G22awiedUeOA_TMIZpZmGUus6uZ0s&_nc_zt=14&_nc_ht=scontent-lga3-2.xx&_nc_gid=AFTk8fpvac1PfyBVsZXIMg&_nc_ss=72289&oh=00_AQEJgK4feRby_FJoolQhsVLt871_xOXpdXvGHHBdje_5EA&oe=6A8A0962",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lga3-2.xx.fbcdn.net/v/t39.99422-6/768016866_1435490298398215_4649435691588509669_n.png?stp=dst-jpg_tt6&cstp=mx720x661&ctp=p552x414&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=psj1z9bgtlYQ7kNvwFZt93R&_nc_oc=Ado18PyOL07SBWmpk007KpX2b3SLbZxo76Y9C8G22awiedUeOA_TMIZpZmGUus6uZ0s&_nc_zt=14&_nc_ht=scontent-lga3-2.xx&_nc_gid=AFTk8fpvac1PfyBVsZXIMg&_nc_ss=72289&oh=00_AQEJgK4feRby_FJoolQhsVLt871_xOXpdXvGHHBdje_5EA&oe=6A8A0962",
+          "height": 507,
+          "width": 552
+        },
+        "url": "https://www.facebook.com/photo/?fbid=28093887520252321&set=a.2029578063776623",
+        "id": "28093887520252321",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjgwOTM4ODc4MzM1ODU2MjM="
+        },
+        "ocrText": "May be an image of text that says 'Lo ngại việc áp dụng tùy nghi \"tỷ lệ an toàn khác\" đối với ngân hàng Theo Anh Phương THỨ6, 07/08/2026, 06:37 f Nghe đọc bài 3:33 3:33 1.00x~ Nữ miền Bắc Một số đại biểu Quốc hội bày tỏ lo ngại quy định Ngân hàng Nhà nước \"Aρ dụng một hoặc một số tỷ lệ an toàn khác so với mức quy định để thực hiện yêu cầu phát triển kinh tế- xã hội\" là khá chung chung.'"
+      }
+    ]
+  },
+  {
+    "time": "2026-08-05T03:13:24.000Z",
+    "timestamp": 1785899604,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02Erd8oHFovLpss8MJ5q9H1bhrEdN1JWoZm9ec9BySUiqgM1k2N21jSqJQYdjsopj5l",
+    "text": "Việc kết hợp thêm kênh tài trợ U cho phía JP, Fed đang skew to expansion B/S dù có thể là ngắn hạn, đặt trong bối cảnh lạm phát trên mục tiêu và các bất định. Có thể cú push của Bessent và Treasury gần đây trong joint Interventions với JP càng làm Fed khó xử. Dù muốn dù không, BS cũng phìn to theo các cách ít explicit hơn. (Recall: Warsh: let the market think and talk, market: ++steepening... :-d)\n\n1/Fed: RMP + Reinvestment + UST centric (long-end): not a QE but... QE.\n2/Trea: CMP (Cash management purchase programe)\n\n2bis/Joint Yentervention, (but sell EJ instead of UJ!):\nDirect: BoJ sell UJ Tokyo banks\nAgent: BoJ sell UJ - FRBNY - sell UJ US banks\nJoint: BoJ sell UJ + US Treasury/FRBNY sell XJ\nFunding: MoF/BoJ using fx swap lines/Fima repo - FRBNY (JPY, UST for USD funding). Intl' USD supply facilities bruh bruh. Kênh khác thì sell UST :-d. Hiện tìm marginal buyers cũng khó khăn, hoặc Fed steps in as B(uyer)oLR.\n\n---> Fed + Treasury: not QE, but a QE  +... QE lite. Kk\n\nP/s: có điểm lạ là các cơ chế tài trợ USD quốc tế của Fed hiện hành chủ yếu là liquidity ngắn hạn, vét kho có 2 tools hiện hữu (đặc biệt sau co-vid) fx swap và UST repo (fima), và sinh ra không nhằm mục tiêu tài trợ cho việc can thiệp Fx của đối tác. Có lẽ JP đặc biệt hơn. Thị trường vẫn xem xét mức độ thay đổi, bởi tính ngắn hạn của 2 tools này có ảnh hưởng đến expectations của thị trường mức độ bền vững của Yentervention. Với repo thì chủ yếu là qua đêm/7 ngày (và có giới hạn, i.e 60b/cp), trong khi swap lại chỉ 7 ngày (có thể lên 84 ngày). Có điều, thỏa thuận fx swap line Fed-BoJ (UJ) là không giới hạn. Nếu vì một số mục tiêu của cả Treasury và JP mà Fed nâng kỳ hạn hoặc... rolling liên tục, hoặc QE lite tiếp tục...\n\nPps: Roll liên tục thì cũng không mới, vd SBV OMO, hơn 1 năm qua, rolling rolling, thi thoảng đẩy lên 91d cho ổn định chút... kk",
+    "banks": [],
+    "topic": "cfa_updates",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-6/766071994_28067809546193452_7697930553309868171_n.jpg?stp=dst-jpg_tt6&cstp=mx720x139&ctp=s720x139&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=LW2R9_ReDsQQ7kNvwGdNw8v&_nc_oc=AdrVycvMTTTOR6hHaDmyi5GZlN7DbvQ4Nhywj9yVwKw35CngZ8zW8z_yLaG2oPVXLLU&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=AFTk8fpvac1PfyBVsZXIMg&_nc_ss=72289&oh=00_AQFqPG8r5JPWHvzu_z3e58umhhBP8J18BrNaoT7IUZRYHw&oe=6A89FD79",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-6/766071994_28067809546193452_7697930553309868171_n.jpg?stp=dst-jpg_tt6&cstp=mx720x139&ctp=s720x139&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=LW2R9_ReDsQQ7kNvwGdNw8v&_nc_oc=AdrVycvMTTTOR6hHaDmyi5GZlN7DbvQ4Nhywj9yVwKw35CngZ8zW8z_yLaG2oPVXLLU&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=AFTk8fpvac1PfyBVsZXIMg&_nc_ss=72289&oh=00_AQFqPG8r5JPWHvzu_z3e58umhhBP8J18BrNaoT7IUZRYHw&oe=6A89FD79",
+          "height": 139,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=28067809486193458&set=a.2029578063776623",
+        "id": "28067809486193458",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjgwNjc4MDk4MTYxOTM0MjU="
+        },
+        "ocrText": "May be an image of text that says 'Adding Reserves Collateral: Own Issuance US TGA Repo Absorbing Reserves Own SRF Int'l Int Issuance Repo FX swap lines TGA drawdown ON RRP FIMA RP FX swap line FIMA ON dr drawdown RRP'"
+      }
+    ]
+  },
+  {
+    "time": "2026-08-04T13:40:05.000Z",
+    "timestamp": 1785850805,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0sXGod47HVXNHfwMj9bVCJBiz4HsdHA3sjtniQihqKWavk8Z8Wq3BtS6go3i7TeXVl",
+    "text": "Pipeline 4th",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lga3-3.xx.fbcdn.net/v/t39.99422-6/763961737_1072063625506497_6021949832293510919_n.png?stp=dst-jpg_tt6&cstp=mx1080x528&ctp=s1080x528&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=9gGAZgDE4ScQ7kNvwH3Ek_p&_nc_oc=AdqHHmhXquCTzgAqdRbTUIQwtu23kXZP64t-yU4wUDUALE1ap2XKU5lbsyvVVDE9OJE&_nc_zt=14&_nc_ht=scontent-lga3-3.xx&_nc_gid=AFTk8fpvac1PfyBVsZXIMg&_nc_ss=72289&oh=00_AQEdYqxHzWlvUIF3huytHfH9G-hadkYQ6SDxvPolrfnVKg&oe=6A8A0987",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF252525",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lga3-3.xx.fbcdn.net/v/t39.99422-6/763961737_1072063625506497_6021949832293510919_n.png?stp=dst-jpg_tt6&cstp=mx1080x528&ctp=s1080x528&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=9gGAZgDE4ScQ7kNvwH3Ek_p&_nc_oc=AdqHHmhXquCTzgAqdRbTUIQwtu23kXZP64t-yU4wUDUALE1ap2XKU5lbsyvVVDE9OJE&_nc_zt=14&_nc_ht=scontent-lga3-3.xx&_nc_gid=AFTk8fpvac1PfyBVsZXIMg&_nc_ss=72289&oh=00_AQEdYqxHzWlvUIF3huytHfH9G-hadkYQ6SDxvPolrfnVKg&oe=6A8A0987",
+          "height": 528,
+          "width": 1080
+        },
+        "url": "https://www.facebook.com/photo/?fbid=28060403210267419&set=a.2029578063776623",
+        "id": "28060403210267419",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjgwNjA0MDM1OTAyNjczODE="
+        },
+        "ocrText": "May be an image of text that says 'Treasury Deposits Kho bạc Nhà nước điều tiết gần 780.000 tỷ đồng hỗ trợ thanh khoản hệ thống ngân hàng (GMI+)) (VNF)- bạc Nhà nước dang dưa khoáng dòng từ nguồn ngân quỳ nhà nước thời nhàn rồi vào thống ngân hàng thông qua tiền gửi hạn nghiệp mua bán lại trái phiếu Chính thái này phần cải thiện thanh khoản, thêm dư hoạt động kinh chính vừa પા પੰ bản 115S7/RTC-KRNN Kho bạc Nhà nước Ngân hàng Nhà πиός việc ngăn hàng thương chính, việc ซุนส่ท được thực hiện nguyên dụng quỳ nhà nước ngân sách thời ương'"
+      }
+    ]
+  },
+  {
+    "time": "2026-08-02T11:10:07.000Z",
+    "timestamp": 1785669007,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid031hgUVTRCjn6PBP5dU2QfTVCcenGJiVDPXiBqAn11rXrrntPMabCnZW7CBYuJsuhAl",
+    "text": "LCR: Liquidity, Concentration, and...",
+    "banks": [],
+    "topic": "ratio_lcr_nsfr",
+    "media": [
+      {
+        "thumbnail": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.99422-6/762944003_1796436661709097_6970349255778978075_n.png?stp=dst-jpg_tt6&cstp=mx720x799&ctp=s565x565&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=T5UwLdjB9jwQ7kNvwFw3cBG&_nc_oc=AdrG90kWKmvdmVXcsyPsC99Ex6ZbPAHOxdvdCv7iWAZRAP31EexippzPSKOFsjUTyqaAtTImVsIL57msGMpTlugT&_nc_zt=14&_nc_ht=scontent-iad6-1.xx&_nc_gid=OMXbtNxmtD0s0qfXmgCzmw&_nc_ss=72289&oh=00_AQHfmqNb44H1ewi-tjAaAmFtwvaBgh_8Nnd3Do-sQ9fJ4Q&oe=6A89DCA6",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.99422-6/762944003_1796436661709097_6970349255778978075_n.png?stp=dst-jpg_tt6&cstp=mx720x799&ctp=s565x565&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=T5UwLdjB9jwQ7kNvwFw3cBG&_nc_oc=AdrG90kWKmvdmVXcsyPsC99Ex6ZbPAHOxdvdCv7iWAZRAP31EexippzPSKOFsjUTyqaAtTImVsIL57msGMpTlugT&_nc_zt=14&_nc_ht=scontent-iad6-1.xx&_nc_gid=OMXbtNxmtD0s0qfXmgCzmw&_nc_ss=72289&oh=00_AQHfmqNb44H1ewi-tjAaAmFtwvaBgh_8Nnd3Do-sQ9fJ4Q&oe=6A89DCA6",
+          "height": 565,
+          "width": 509
+        },
+        "url": "https://www.facebook.com/photo/?fbid=28036542112653529&set=a.2029578063776623",
+        "id": "28036542112653529",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjgwMzY1NDIzNTU5ODY4Mzg="
+        },
+        "ocrText": "May be an image of ‎text that says '‎Xuất hiện nhiều lô trái phiếu lãi suất 'khủng' Theo Việt Linh CHỦ NHẬT 02/08/2026, 07:50 f Nghe đọc bài 3:33 1.00xv Nữ miền Bắc Thị trường trái phiếu doanh nghiệp đang ghi nhận sự xuất hiện nhiều hơn những lô trái phiếu có lãi suất lên tới hai con số. Đáng chú وَلَا không chỉ các doanh nghiệp bất động sản quen thuộc mà cả những doanh nghiệp mới thành lập cũng chấp nhận mức chi phí vốn cao để huy động hàng nghìn tỷ đồng.‎'‎"
+      }
+    ]
+  },
+  {
+    "time": "2026-07-28T01:40:18.000Z",
+    "timestamp": 1785202818,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0379Qak8iYpKWK6vnQgHKsWY5xkFs6RVWue89oMu4mUXGCXmxEmwD57Y4Xfkvz1Tmtl",
+    "text": "Nhiều khả năng CN sẽ gia nhập CLB high income năm nay (theo chuẩn WB), họ đã ở upper-middle 16 năm + lower middle 11 năm. Gđ từ 2000s thế giới đã chứng kiến sự tăng trưởng và phát triển vũ bão, góp phần định hình lại toàn cầu...",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.99422-6/757602930_3640766922730536_7000026952439842877_n.png?stp=dst-jpg_tt6&cstp=mx1456x1337&ctp=p552x414&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=I-UKPrybtMwQ7kNvwHBrOnY&_nc_oc=AdqQw_KAnwttsYbLeZBsAK3p00qvb0GpAUbzimrgMR5MEUIsFq0MDt4IL8LZi2MG3Auw2REw3Z_6KJO1I6O6Wy0L&_nc_zt=14&_nc_ht=scontent-iad6-1.xx&_nc_gid=OMXbtNxmtD0s0qfXmgCzmw&_nc_ss=72289&oh=00_AQF4FN6LSbPp3CmcB2ix1fT3GLGYmNrqPzu_PzL-kyG2lQ&oe=6A89E4B9",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.99422-6/757602930_3640766922730536_7000026952439842877_n.png?stp=dst-jpg_tt6&cstp=mx1456x1337&ctp=p552x414&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=I-UKPrybtMwQ7kNvwHBrOnY&_nc_oc=AdqQw_KAnwttsYbLeZBsAK3p00qvb0GpAUbzimrgMR5MEUIsFq0MDt4IL8LZi2MG3Auw2REw3Z_6KJO1I6O6Wy0L&_nc_zt=14&_nc_ht=scontent-iad6-1.xx&_nc_gid=OMXbtNxmtD0s0qfXmgCzmw&_nc_ss=72289&oh=00_AQF4FN6LSbPp3CmcB2ix1fT3GLGYmNrqPzu_PzL-kyG2lQ&oe=6A89E4B9",
+          "height": 507,
+          "width": 552
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27973175892323485&set=a.2029578063776623",
+        "id": "27973175892323485",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6Mjc5NzMxNzYyNTg5OTAxMTU="
+        },
+        "ocrText": "May be a graphic of map and text"
+      }
+    ]
+  },
+  {
+    "time": "2026-07-28T01:05:23.000Z",
+    "timestamp": 1785200723,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02pecmzZV3NNTusB6KNNzGGePd6gvmUvw3Lvva7pkF7MjLexXFesWinLvwY9UPW34Sl",
+    "text": "Lãnh đạo phải có năng lực xây dựng và dẫn dắt 1team vững mạnh.\n\nHình: BrandsVietnam.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.99422-6/758635934_1372785268329834_3692057948496630771_n.png?stp=dst-jpg_tt6&cstp=mx2048x1685&ctp=s640x640&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=zqSqt1MOQhAQ7kNvwE7qerT&_nc_oc=AdorA8bSirpPP_STl3rFIlIDc71plQASRRGcC8BKpQYSZNY6KgD21J_31NvS147LCansfI9UQDZjby6X6AM5gSOv&_nc_zt=14&_nc_ht=scontent-iad6-1.xx&_nc_gid=OMXbtNxmtD0s0qfXmgCzmw&_nc_ss=72289&oh=00_AQHudVcV39TGECk6uT24fbA1ReCKKnXTLYQlSIIoLf6S8A&oe=6A89E812",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.99422-6/758635934_1372785268329834_3692057948496630771_n.png?stp=dst-jpg_tt6&cstp=mx2048x1685&ctp=s640x640&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=zqSqt1MOQhAQ7kNvwE7qerT&_nc_oc=AdorA8bSirpPP_STl3rFIlIDc71plQASRRGcC8BKpQYSZNY6KgD21J_31NvS147LCansfI9UQDZjby6X6AM5gSOv&_nc_zt=14&_nc_ht=scontent-iad6-1.xx&_nc_gid=OMXbtNxmtD0s0qfXmgCzmw&_nc_ss=72289&oh=00_AQHudVcV39TGECk6uT24fbA1ReCKKnXTLYQlSIIoLf6S8A&oe=6A89E812",
+          "height": 527,
+          "width": 640
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27972911915683216&set=a.2029578063776623",
+        "id": "27972911915683216",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6Mjc5NzI5MTIyNjkwMTY1MTQ="
+        },
+        "ocrText": "May be a doodle of text that says 'Dạ oke chi, để em discuss with Ty team rồi báo chị liền ạ! my team: BR BRANDS NDS VIETINAM Claude perplexity'"
+      }
+    ]
+  },
+  {
+    "time": "2026-07-27T13:30:19.000Z",
+    "timestamp": 1785159019,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid031Uo1tJihMJwsrQVZWmenndYHbxB36HFreZQdWCkks2oSniSr849AjF3rg9f6jpfrl",
+    "text": "Năm nay thêm vàng, kc.",
+    "banks": [],
+    "topic": "deals_corp",
+    "media": []
+  },
+  {
+    "time": "2026-07-25T03:58:20.000Z",
+    "timestamp": 1784951900,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0347oEdUk3qPeToDXbJTcFjLkb82gYPGXkfkhjzoePgWTP5mnkgdSFqhy4K91zHxEHl",
+    "text": "Fill the gap",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-hou1-1.xx.fbcdn.net/v/t39.99422-6/754462910_1328697159020242_6310077038247211634_n.png?stp=dst-jpg_tt6&cstp=mx720x1272&ctp=p526x296&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=pIEnjtrJ0e0Q7kNvwHO6p2c&_nc_oc=AdoerYsLtkQgY-ZssvmN_jxcYXjBKzyniOaW3wLJmPE-n3AC2xT9hfdQ9KYC1k9Tnks&_nc_zt=14&_nc_ht=scontent-hou1-1.xx&_nc_gid=9w5ji_7P5Tq-TmiUpPdUKA&_nc_ss=72289&oh=00_AQEpB3qVb34cjrijfoDRWoQdrqSNN0-iaa8cAHLWo8yxpw&oe=6A89F4E5",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-hou1-1.xx.fbcdn.net/v/t39.99422-6/754462910_1328697159020242_6310077038247211634_n.png?stp=dst-jpg_tt6&cstp=mx720x1272&ctp=p526x296&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=pIEnjtrJ0e0Q7kNvwHO6p2c&_nc_oc=AdoerYsLtkQgY-ZssvmN_jxcYXjBKzyniOaW3wLJmPE-n3AC2xT9hfdQ9KYC1k9Tnks&_nc_zt=14&_nc_ht=scontent-hou1-1.xx&_nc_gid=9w5ji_7P5Tq-TmiUpPdUKA&_nc_ss=72289&oh=00_AQEpB3qVb34cjrijfoDRWoQdrqSNN0-iaa8cAHLWo8yxpw&oe=6A89F4E5",
+          "height": 929,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27942197748754633&set=a.2029578063776623",
+        "id": "27942197748754633",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6Mjc5NDIxOTgxNTg3NTQ1OTI="
+        },
+        "ocrText": "May be an image of text that says 'Vướng mắc: inh Quy vướng NĐ hiên việc đầu đặc không nhân giao dich rộng nên DTNHNN vào vàng gập phụ bắt vàng được chính dịch nào thể cuộc chiến phụ hưởng trọng hưởng chẳn của mỗi thiên không chịu hỗ ngân ương thế giới. sản chính vàng thường mức cac chiều phiều. hinh tăng thấp. khủng như: khoản trợ nhắm trên NHNN không giữ NHNN lệch hạch toán vàng đinh hiện giữa p động đầu loại tắc sinh và (như nhập, đầu lệch phi hoat quan vàng trên trưởng quốc cần được DTNH chính thức tính toán sbv.gov.vn/documen'"
+      }
+    ]
+  },
+  {
+    "time": "2026-07-24T12:51:26.000Z",
+    "timestamp": 1784897486,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid022ZUu5rqVfm54fTzXFMEm6rNBYVy4iuPj1XHqGhL9X8FVBmZERmPWFN7j3muT2Ryel",
+    "text": "YTW, GTI\n\nSource: El-Arian",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-hou1-1.xx.fbcdn.net/v/t39.99422-6/756441325_2412803229128138_8742420859566675811_n.png?stp=dst-jpg_tt6&cstp=mx1206x817&ctp=p180x540&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=nlmC4MLP8OkQ7kNvwHsxkcW&_nc_oc=Adqrn3t7DnqjTfK5BM6OCh0Tp6vqCmNhi1kZ7sW7bQwLZcTPT7s4jviO_iCrdo9_lvQ&_nc_zt=14&_nc_ht=scontent-hou1-1.xx&_nc_gid=9w5ji_7P5Tq-TmiUpPdUKA&_nc_ss=72289&oh=00_AQFu-KyrXqIcLAXEYiOEkgFycBEZldnOjaiwPfdxrnDxVA&oe=6A89ECF4",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF000000",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-hou1-1.xx.fbcdn.net/v/t39.99422-6/756441325_2412803229128138_8742420859566675811_n.png?stp=dst-jpg_tt6&cstp=mx1206x817&ctp=p180x540&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=nlmC4MLP8OkQ7kNvwHsxkcW&_nc_oc=Adqrn3t7DnqjTfK5BM6OCh0Tp6vqCmNhi1kZ7sW7bQwLZcTPT7s4jviO_iCrdo9_lvQ&_nc_zt=14&_nc_ht=scontent-hou1-1.xx&_nc_gid=9w5ji_7P5Tq-TmiUpPdUKA&_nc_ss=72289&oh=00_AQFu-KyrXqIcLAXEYiOEkgFycBEZldnOjaiwPfdxrnDxVA&oe=6A89ECF4",
+          "height": 540,
+          "width": 797
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27934990252808716&set=a.2029578063776623",
+        "id": "27934990252808716",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6Mjc5MzQ5OTA2NDk0NzUzNDM="
+        },
+        "ocrText": "May be an image of text that says 'Global Bond Yields Are Surging Selloff pushes average borrowing costs to highest since financial crisis Yield to worst on Bloomberg Global Treasury Index 5% 4 3 2 2008 2010 2012 Source: Bloomberg 2014 2016 2018 2020 2022 0 0 2024 2026 Bloomberg'"
+      }
+    ]
+  },
+  {
+    "time": "2026-07-23T13:18:07.000Z",
+    "timestamp": 1784812687,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02suSZRjnGgVLAeZZhmTdorJkMJYj9BFqRp7EGrtmzX219isjLMsGosjSHEGSKFrvNl",
+    "text": "Mấy bạn viết báo đôi khi không rõ hoặc viết chút giật gân, nhưng GS sao lại không tìm hiểu kỹ hoặc làm rõ mà hùa theo như vậy!",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-mia5-1.xx.fbcdn.net/v/t39.99422-6/754201844_868568562689150_7115457203736654778_n.png?stp=dst-jpg_tt6&cstp=mx720x506&ctp=s720x506&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=BpV5Ra9QWRsQ7kNvwFLscGs&_nc_oc=AdpFuWJ6_rabNX60s0OCcEvz1NNe8Yit14DxuuFVZ0QcoU0OgE8flPAI0RZ2dr2sv0PQ_w0wOZWrYuKrYKmGrpi7&_nc_zt=14&_nc_ht=scontent-mia5-1.xx&_nc_gid=xy9r6qT2tuOgk2YGRoolrg&_nc_ss=72289&oh=00_AQFoFWc_Ucf2tBPxNa6LZ2JhL8oaRM8ngypOMnAKgmTMSw&oe=6A89E8AA",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-mia5-1.xx.fbcdn.net/v/t39.99422-6/754201844_868568562689150_7115457203736654778_n.png?stp=dst-jpg_tt6&cstp=mx720x506&ctp=s720x506&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=BpV5Ra9QWRsQ7kNvwFLscGs&_nc_oc=AdpFuWJ6_rabNX60s0OCcEvz1NNe8Yit14DxuuFVZ0QcoU0OgE8flPAI0RZ2dr2sv0PQ_w0wOZWrYuKrYKmGrpi7&_nc_zt=14&_nc_ht=scontent-mia5-1.xx&_nc_gid=xy9r6qT2tuOgk2YGRoolrg&_nc_ss=72289&oh=00_AQFoFWc_Ucf2tBPxNa6LZ2JhL8oaRM8ngypOMnAKgmTMSw&oe=6A89E8AA",
+          "height": 506,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27923135840660824&set=a.2029578063776623",
+        "id": "27923135840660824",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6Mjc5MjI4MjYyMzQwMjUxMTg="
+        },
+        "ocrText": "May be an image of text that says '2h Bà con đem vàng đi kiểm tra chưa? HIỆP ờ với \"kho\" 170.876 viên đá quý ủa SJC có giá vốn chỉ khoảng 6. viên'"
+      }
+    ]
+  },
+  {
+    "time": "2026-07-22T02:04:33.000Z",
+    "timestamp": 1784685873,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid06Nxgt6LbqEDhe6JzUgKoK1y9kNSfmVQnHDzQiBVUzM7SNKFuTZUUMvRFbGobvk1cl",
+    "text": "Tuần này Ms có bản phân tích (kết hợp historical analogy) khá đặc sắc. Kịch bản được ưa thích nhất của họ là... Stay long risk, but own convexity.\nNghe có vẻ là một paradox, nhưng xoay vần lịch sử vẫn không thiếu những bài học.\nVới MS họ tiếp tục bet vào long risk, với sự hỗ trợ của theme \"Corporate aggression\" (liên hệ, thì VN đang ...)\nTuy nhiên, khả năng biến động lớn từ các cú shock (3 drivers) lên rất cao. \nNghĩa là, cuộc chiến giữa gamma versus theta thì họ chọn gamma (long convexity) hay chiến lược riding the volatility wave, hơn là thu theta mỗi ngày qua short option (theta/decay là chi phí thời).\nTheo bạn thì \"Stay long risk (nghe như lỡ ngh-i-ện rồi), but own convexity\" thì long gì [equity, bond,...?] và riding volatility gì [equity or FICC options..., cái này lại tùy vào độ nhạy của các drivers đối với cái gì là lớn nhất.\nThe Odyssey:",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-mia3-3.xx.fbcdn.net/v/t39.99422-6/754159983_1052569367704567_4195622158262220547_n.png?stp=dst-jpg_tt6&cstp=mx601x433&ctp=s601x433&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=iGBU2_27f3QQ7kNvwGfhPpH&_nc_oc=AdonrrR1Vx4u57hXIFnKVbUuzTUv52BpZ7velJQe_7X-rVLwyy-IlpvF6KxYWmI_TRUiXKzBZjw9O0CHB2dIFabi&_nc_zt=14&_nc_ht=scontent-mia3-3.xx&_nc_gid=xy9r6qT2tuOgk2YGRoolrg&_nc_ss=72289&oh=00_AQGjV9wNHJnUvDRXB3U2DirTuIhMtjGaK9IGpazVKR1aIA&oe=6A89E4BF",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-mia3-3.xx.fbcdn.net/v/t39.99422-6/754159983_1052569367704567_4195622158262220547_n.png?stp=dst-jpg_tt6&cstp=mx601x433&ctp=s601x433&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=iGBU2_27f3QQ7kNvwGfhPpH&_nc_oc=AdonrrR1Vx4u57hXIFnKVbUuzTUv52BpZ7velJQe_7X-rVLwyy-IlpvF6KxYWmI_TRUiXKzBZjw9O0CHB2dIFabi&_nc_zt=14&_nc_ht=scontent-mia3-3.xx&_nc_gid=xy9r6qT2tuOgk2YGRoolrg&_nc_ss=72289&oh=00_AQGjV9wNHJnUvDRXB3U2DirTuIhMtjGaK9IGpazVKR1aIA&oe=6A89E4BF",
+          "height": 433,
+          "width": 601
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27905040259137049&set=a.2029578063776623",
+        "id": "27905040259137049",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6Mjc5MDUwNDA2MjU4MDM2Nzk="
+        },
+        "ocrText": "May be a doodle of text that says 'A LAND WAR IN ASIA MINOR? 1,000 SHIPS? A IO-YEAR CAMPAIGN? I DON'T THINK THE BOND MARKET IS GOING TO LIKE THIS AT ALL... C MMeP NO Sp SOYMND HION 整真'"
+      }
+    ]
+  },
+  {
+    "time": "2026-07-20T01:18:54.000Z",
+    "timestamp": 1784510334,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid028zypGz2ih2GSfTFm6EGSaAFxXeyvx76jgKNCXuBFy5A3EsJM9Lpp2f1yGEyjTVzJl",
+    "text": "Congrats to Spain.",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2026-07-18T14:39:52.000Z",
+    "timestamp": 1784385592,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid04muwJBfX2B7TyS9jgoLMBLu5vvffg2NjxQxK53ic11eAz7fEUeTeAd9yRBp1mVmdl",
+    "text": "Hôm nay Thống đốc NHNN có phát biểu \"Khi thiếu hụt vốn, đương nhiên lãi suất nâng cao\".\nVậy như thế nào thì đủ?\nMột nửa câu chuyện sau nhanh và mạnh, thường có độ trễ, là hiệu quả của sự phán bổ và sử dụng vốn.",
+    "banks": [],
+    "topic": "interest_macro",
+    "media": []
+  },
+  {
+    "time": "2026-07-16T06:19:31.000Z",
+    "timestamp": 1784182771,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02HX3g5rT8dij71hUuTFQoX8w36ocaxWnJamhctA4Pb22Q1K87oHr3rRxWVYkShX3Zl",
+    "text": "Pressure chút thì làm lại ha, easing hơn. Kk\n\nThrowback oldversion:",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lga3-1.xx.fbcdn.net/v/t39.99422-6/747931544_1054215733720113_658209336763265342_n.png?stp=dst-jpg_tt6&cstp=mx2048x1536&ctp=s720x720&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=4Dvq6JddI8sQ7kNvwHrW6Mn&_nc_oc=Adq7eunwNQMbt65415IeFKXKljFwgxwVkQPqA78gK4bidpO2xC4t5M2mI3QXUBw7dWE&_nc_zt=14&_nc_ht=scontent-lga3-1.xx&_nc_gid=LF4aPMoVHRn6roOt1YTRLw&_nc_ss=72289&oh=00_AQHZjKR_-dZrp2xMxmrwn-wFstTn58LEbTFnV9zX180m-g&oe=6A89E356",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lga3-1.xx.fbcdn.net/v/t39.99422-6/747931544_1054215733720113_658209336763265342_n.png?stp=dst-jpg_tt6&cstp=mx2048x1536&ctp=s720x720&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=4Dvq6JddI8sQ7kNvwHrW6Mn&_nc_oc=Adq7eunwNQMbt65415IeFKXKljFwgxwVkQPqA78gK4bidpO2xC4t5M2mI3QXUBw7dWE&_nc_zt=14&_nc_ht=scontent-lga3-1.xx&_nc_gid=LF4aPMoVHRn6roOt1YTRLw&_nc_ss=72289&oh=00_AQHZjKR_-dZrp2xMxmrwn-wFstTn58LEbTFnV9zX180m-g&oe=6A89E356",
+          "height": 540,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27840020568972352&set=a.2029578063776623",
+        "id": "27840020568972352",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6Mjc4NDAwMjA4NzU2Mzg5ODg="
+        },
+        "ocrText": "May be an image of text"
+      }
+    ]
+  },
+  {
+    "time": "2026-07-15T05:24:07.000Z",
+    "timestamp": 1784093047,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02Wnegi44vrg8A57tuEHDuHWQdgBguDM8BDDfF3uY5fZDA1eqWnuQ3LjGzazfrRSq5l",
+    "text": "Banking... kk\nMấy ku cậu này mà có tí lúa mạch vào nữa thì khỏi phải nói. \n\nCũng là may mắn trúng giai đoạn thú vị.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lga3-2.xx.fbcdn.net/v/t39.99422-6/748331474_1713732169955832_2869365704077283427_n.png?stp=dst-jpg_tt6&cstp=mx720x263&ctp=s720x263&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=B8OcnWf-2xgQ7kNvwFdTRqN&_nc_oc=AdqjOKodMhfVPPEkV_aIuIYdBS3PrYbTyInRo_noltFIovcak78Q_FagppwTDUtjPeU&_nc_zt=14&_nc_ht=scontent-lga3-2.xx&_nc_gid=LF4aPMoVHRn6roOt1YTRLw&_nc_ss=72289&oh=00_AQG3i27HbItEbJz2CFx54lNfIGcQtJKBOZitepXiQMzL0A&oe=6A89FEF6",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lga3-2.xx.fbcdn.net/v/t39.99422-6/748331474_1713732169955832_2869365704077283427_n.png?stp=dst-jpg_tt6&cstp=mx720x263&ctp=s720x263&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=B8OcnWf-2xgQ7kNvwFdTRqN&_nc_oc=AdqjOKodMhfVPPEkV_aIuIYdBS3PrYbTyInRo_noltFIovcak78Q_FagppwTDUtjPeU&_nc_zt=14&_nc_ht=scontent-lga3-2.xx&_nc_gid=LF4aPMoVHRn6roOt1YTRLw&_nc_ss=72289&oh=00_AQG3i27HbItEbJz2CFx54lNfIGcQtJKBOZitepXiQMzL0A&oe=6A89FEF6",
+          "height": 263,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27828390806801995&set=a.2029578063776623",
+        "id": "27828390806801995",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6Mjc4MjgzOTEwNjM0Njg2MzY="
+        },
+        "ocrText": "May be an image of text that says 'thời kì nhiều thách thức ha anh Trăn trở vậy nhóc, mới 10 năm hơn kinh nghiệm mà đã hình thành ký ức nền tảng cho những băn khoăn thời cuộc rồi sao?'"
+      }
+    ]
+  },
+  {
+    "time": "2026-07-14T01:38:58.000Z",
+    "timestamp": 1783993138,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02twqQzHRqkRQ2HgxRhFceUXCa1EKBPnKyPdAj2NFr6h9xVEv3utw8f7UQb8TDR5ezl",
+    "text": "Đây là một đặc điểm trong bức tranh cạnh tranh hdv. \"Chiến lược\" phân bổ dòng tiền gửi cũng đã thích nghi hơn những giai đoạn trước đây. Với tổ chức cũng vậy, đặc biệt non-operational deposit (các hđ tiền gửi).\nSự phát triển (sơ khai) của các sản phẩm liên quan  tiền gửi (wpm, shadow savings instruments và cả  “structured” shadow credit) cũng góp phần làm đa dạngvaf hấp dẫn hơn.\nVới các sản phẩm, công cụ hdv thông thường, thì đơn giản nhất - tùy điều kiện có thể rút trước hạn, bán sổ, tái vay và gửi lại hoặc structure qua fx, ...\nVới NH, cof không chỉ dừng lại ở interest expense, mà còn \"opex\", fx,... làm \"nóng ran\" cả balance sheet, dù có muốn hay không thì cũng khó giảm xuống một khi tại vùng marginal của các giới hạn...",
+    "banks": [],
+    "topic": "cfa_updates",
+    "media": [
+      {
+        "thumbnail": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.99422-6/747409291_1326101592974287_42335584961784828_n.png?stp=dst-jpg_tt6&cstp=mx720x264&ctp=s720x264&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=vwytievez9EQ7kNvwGVk_xg&_nc_oc=AdrIxO475VJmHoVu_UiGrzlUY6F8qg4YPX5nPSLN4OVhZ5azvQ1hNZjD6aOr4WtDVB0&_nc_zt=14&_nc_ht=scontent-iad6-1.xx&_nc_gid=QQy6F3dyBtqzLOK0pUqLug&_nc_ss=72289&oh=00_AQFe4X4z2KYOZiHOMk2nd_o-WdUvTokRCinKXM4KId8Ggw&oe=6A89F24E",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.99422-6/747409291_1326101592974287_42335584961784828_n.png?stp=dst-jpg_tt6&cstp=mx720x264&ctp=s720x264&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=vwytievez9EQ7kNvwGVk_xg&_nc_oc=AdrIxO475VJmHoVu_UiGrzlUY6F8qg4YPX5nPSLN4OVhZ5azvQ1hNZjD6aOr4WtDVB0&_nc_zt=14&_nc_ht=scontent-iad6-1.xx&_nc_gid=QQy6F3dyBtqzLOK0pUqLug&_nc_ss=72289&oh=00_AQFe4X4z2KYOZiHOMk2nd_o-WdUvTokRCinKXM4KId8Ggw&oe=6A89F24E",
+          "height": 264,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27816559757985100&set=a.2029578063776623",
+        "id": "27816559757985100",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6Mjc4MTY1NjAwNzQ2NTE3MzU="
+        },
+        "ocrText": "May be an image of text that says 'Lãi suất tiết kiệm lên 9%/năm, người gửi tiền nhấp nhổm đáo hạn ngân hàng này để gửi ngân hàng khác Minh Vy- THỨ2, 13/07/2026, 15:43'"
+      }
+    ]
+  },
+  {
+    "time": "2026-07-13T02:07:38.000Z",
+    "timestamp": 1783908458,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0uzEEH7RAtaHGpAXeKX791FpUgHsdpr9syUWC7wcf5QSAa9JyGuJeaCgzGqfo1nNHl",
+    "text": "Years ago",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2026-07-12T04:56:29.000Z",
+    "timestamp": 1783832189,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0RUgLfkceHTjyWLxA22wfGLcZ1h7LDXwpxVioRm1CwLpD2gpRxDN6L3JuqEPwNjhZl",
+    "text": "Tinh tế và đẳng cấp thật sự. Cũng không phải bắt đầu bằng đưa ủy bảo kiểm tra vào mà (KW có khả năng) quy tụ đội hình toàn sao trong công cuộc tái thiết. \nĐặc biệt hơn nữa, trong các nhóm, \"bố trí\" các cây đại thụ có thể tạo nên các cuộc đối đầu hấp dẫn. Như trong nhóm Balance sheet policy, inflation framework hay Productivity & Job (AI, như Andressen vs Jones). \nVề Balance sheet policy có Rajan vs Stein (cụ này thì thường xuyên cổ vũ mở rộng BS/QE như là một giải pháp cho ổn định...) và vs Kevin. \nNhóm Inflation framework có 2 \"hệ tư tưởng\" nổi bật, Mankiw vs Sargent.\nCó lẽ nhóm Communication có mức độ hội tụ cao nhất và KW muốn \"nổ\" đầu tiên, tạo quick-win và dấu ấn. Fraga (Brasil) và đặc biệt là King (cựu BoE) người cũng đặt nền tảng cho fan-chart (cùng monetary report) để \"chiến\" với dot-plot và SEP của Fed. Mình thì thích kiểu của King hơn (các bạn xem các báo cáo). Cả  3 đều hướng đến sự minh bạch, ngắn gọn, trọng tâm và giảm thiểu tính cá nhân/cam kết (dễ dẫn đến được hiểu) như \"ngầm định\" hoặc công khai ... kiểu Odyssean forward guidance vs Delphic communication... Không hiểu họ sẽ \"đá bay\" dot plot hay cải tiến hoặc dùng kiểu của King... trong uncertainty management. \nNhóm data thì không phải bàn cãi, chỉ là yêu cầu bắt buộc (cũng phù hợp với định hướng KW) nhưng các nhân vật có tính độc lập cao, i.e. 9 trị, cùng với nhóm AI, công nghệ.)",
+    "banks": [],
+    "topic": "interest_macro",
+    "media": [
+      {
+        "thumbnail": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.99422-6/743841607_998831822961023_3696812294504921186_n.png?stp=dst-jpg_tt6&cstp=mx720x429&ctp=s720x429&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=adNXhXoiM5YQ7kNvwGOESv9&_nc_oc=AdrME5m2QImt8lVHNAnYIw5MLGmkLtDB44eP9jSE7Q80ici4mQBrGJOleZr-ZtgYD78&_nc_zt=14&_nc_ht=scontent-iad6-1.xx&_nc_gid=QQy6F3dyBtqzLOK0pUqLug&_nc_ss=72289&oh=00_AQGEsySNvygzX4ii2c6IyQTWQpUmj4OwPwHVL1RzamY1ug&oe=6A89ED48",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF000000",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.99422-6/743841607_998831822961023_3696812294504921186_n.png?stp=dst-jpg_tt6&cstp=mx720x429&ctp=s720x429&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=adNXhXoiM5YQ7kNvwGOESv9&_nc_oc=AdrME5m2QImt8lVHNAnYIw5MLGmkLtDB44eP9jSE7Q80ici4mQBrGJOleZr-ZtgYD78&_nc_zt=14&_nc_ht=scontent-iad6-1.xx&_nc_gid=QQy6F3dyBtqzLOK0pUqLug&_nc_ss=72289&oh=00_AQGEsySNvygzX4ii2c6IyQTWQpUmj4OwPwHVL1RzamY1ug&oe=6A89ED48",
+          "height": 429,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27797279986579744&set=a.2029578063776623",
+        "id": "27797279986579744",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6Mjc3OTcyODAzMDMyNDYzNzk="
+        },
+        "ocrText": "May be an image of text"
+      }
+    ]
+  },
+  {
+    "time": "2026-07-09T02:25:36.000Z",
+    "timestamp": 1783563936,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02zvpkJb9QhSNfM9BALBPSwZAmRArpiuASQujnK2bHZ3usYHmZp1VR4zWiEfEgsjYl",
+    "text": ":-d",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2026-07-08T04:36:48.000Z",
+    "timestamp": 1783485408,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0D8b5crpQy4wneKopfm2cEXt6gtLhm4o4Xuk1Jh2ACV7mpR2HALo7CdJ8bCEYRKxYl",
+    "text": "Cảm ơn BS.\n\nNguyên tắc cốt lõi: thành khẩn và không chống trả.\nNguyên tắc nền tảng: lỗi là của ta.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.99422-6/737494139_1757843802111580_2318996936673703375_n.png?stp=dst-jpg_tt6&cstp=mx904x1280&ctp=s720x720&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=V0-9jtfv-nsQ7kNvwGryBrz&_nc_oc=AdoUdxB7epEKQ1kM0T2KbJ0W7_YiYCComS78XJy5wyA9xwiywMcNeAPb_n1_KOQffmEM8em3vGZAXrln_1QysQBR&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=O0PHwAxV6vuhnR6_JXI2vQ&_nc_ss=72289&oh=00_AQGJ1hn-MA8-7s7ZIj313QTLpBVTst_hfM-tMj87u8B4zA&oe=6A89FDA6",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFD9D9D9",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.99422-6/737494139_1757843802111580_2318996936673703375_n.png?stp=dst-jpg_tt6&cstp=mx904x1280&ctp=s720x720&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=V0-9jtfv-nsQ7kNvwGryBrz&_nc_oc=AdoUdxB7epEKQ1kM0T2KbJ0W7_YiYCComS78XJy5wyA9xwiywMcNeAPb_n1_KOQffmEM8em3vGZAXrln_1QysQBR&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=O0PHwAxV6vuhnR6_JXI2vQ&_nc_ss=72289&oh=00_AQGJ1hn-MA8-7s7ZIj313QTLpBVTst_hfM-tMj87u8B4zA&oe=6A89FDA6",
+          "height": 720,
+          "width": 509
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27756354420672301&set=a.2029578063776623",
+        "id": "27756354420672301",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6Mjc3NTYzNTQ2NTQwMDU2MTE="
+        },
+        "ocrText": "May be an image of map and text"
+      }
+    ]
+  },
+  {
+    "time": "2026-07-05T13:55:18.000Z",
+    "timestamp": 1783259718,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0WciLLqHboiAXzVBk33u3fAuFXAa5Xc5PhTxw4mmD5KHSJMsibFHiawAUrFyfQUYUl",
+    "text": "Dạo này nghe nói tân thống đốc nhắc chuyện hạ lãi suất 4 lần trong mấy tháng, lãi suất có vẻ chưa nghe?\n\nPs. Từ đầu tháng 7, thấy lượng note chụp màn hình bài báo giảm hẳn, đúng là lười post lại, nhất là mấy bài cà khịa/bình luận vui vui :-d",
+    "banks": [],
+    "topic": "interest_macro",
+    "media": [
+      {
+        "thumbnail": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.99422-6/736384477_1647674810701549_1328208491757211673_n.png?stp=dst-jpg_tt6&cstp=mx718x489&ctp=s718x489&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=lhxBX8NYROcQ7kNvwHaRJFX&_nc_oc=Adozb1t42ClnlHT2UtDD2o6y97sdWsmmh8wwmrVGZNm3FZks6vo8usQy_uEfBeuTT75eIhJyKcf4_6r1uxWZQN3O&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=O0PHwAxV6vuhnR6_JXI2vQ&_nc_ss=72289&oh=00_AQHm3brsq_LDn_tUkwzvgl60KDUnvqhNiMNuIlMa2xM2fQ&oe=6A89F309",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.99422-6/736384477_1647674810701549_1328208491757211673_n.png?stp=dst-jpg_tt6&cstp=mx718x489&ctp=s718x489&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=lhxBX8NYROcQ7kNvwHaRJFX&_nc_oc=Adozb1t42ClnlHT2UtDD2o6y97sdWsmmh8wwmrVGZNm3FZks6vo8usQy_uEfBeuTT75eIhJyKcf4_6r1uxWZQN3O&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=O0PHwAxV6vuhnR6_JXI2vQ&_nc_ss=72289&oh=00_AQHm3brsq_LDn_tUkwzvgl60KDUnvqhNiMNuIlMa2xM2fQ&oe=6A89F309",
+          "height": 489,
+          "width": 718
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27727637173544026&set=a.2029578063776623",
+        "id": "27727637173544026",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6Mjc3Mjc2Mzc1MjY4NzczMjQ="
+        },
+        "ocrText": "May be an image of text that says 'FOMC Statement Word Count 1000 900 800 700 600 500 400 300 സർഗാതപസ്നവ.സ് บาา/ 2002 2004 2006 2008 2010 hmadha/h June 131 werds VS. pril 341 words 2012 200 2014 2016 2018 2020 2022 100 2024 2026 Source: BMO CM & Macrobond'"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-28T11:11:52.000Z",
+    "timestamp": 1782645112,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02UntSwE3pnVQQxuSq4UBST7rhRD4pFqKZahZ2UvzmyCCkxdgiZZ9ksdJT38TQZvyTl",
+    "text": "Flexibility as a function, cont. Kk",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.99422-6/734387669_3962666540703213_1770503706291770475_n.png?stp=dst-jpg_tt6&cstp=mx720x1245&ctp=p526x296&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=nT6yp-oZR1gQ7kNvwGHrDy-&_nc_oc=Adohf9UvVaUUKqOYbLrVjKDdJCgLOlxnta_WpagFQZbuVekOT4kMnoGzQzMCJUqi2C4gj8GHa-phiK1tmEJPP_G-&_nc_zt=14&_nc_ht=scontent-atl3-3.xx&_nc_gid=GmQcH6QLEImgs7kMax-bPg&_nc_ss=72289&oh=00_AQEBKgs2ckygWvLBYgvk4JiQvv7WEs7yBwhg8gCftRzA8w&oe=6A8A0DB1",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.99422-6/734387669_3962666540703213_1770503706291770475_n.png?stp=dst-jpg_tt6&cstp=mx720x1245&ctp=p526x296&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=nT6yp-oZR1gQ7kNvwGHrDy-&_nc_oc=Adohf9UvVaUUKqOYbLrVjKDdJCgLOlxnta_WpagFQZbuVekOT4kMnoGzQzMCJUqi2C4gj8GHa-phiK1tmEJPP_G-&_nc_zt=14&_nc_ht=scontent-atl3-3.xx&_nc_gid=GmQcH6QLEImgs7kMax-bPg&_nc_ss=72289&oh=00_AQEBKgs2ckygWvLBYgvk4JiQvv7WEs7yBwhg8gCftRzA8w&oe=6A8A0DB1",
+          "height": 910,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27646278118346599&set=a.2029578063776623",
+        "id": "27646278118346599",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6Mjc2NDYyNzg0MTE2Nzk5MDM="
+        },
+        "ocrText": "May be an image of text"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-25T02:32:30.000Z",
+    "timestamp": 1782354750,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0uGHviXEpEcAtRux6z1PnTFMdTMXJrW1Xiu7ezYMkcgEqprqgomRNot92TgjM4QMol",
+    "text": "Investment-led, fiscal impulse, and...",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.99422-6/730069607_2187041238755176_1078418525764125022_n.png?stp=dst-jpg_tt6&cstp=mx720x928&ctp=p526x296&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=xRmuYP_84nsQ7kNvwGf3vxH&_nc_oc=AdoEr6TEu54ZYxTUJ0QIbc40ysabQ7Os_tOKqwV0vPRCqkvACsaDNdMQUzVn4EVcmAio15io0A6OPfwRmhQOWjHC&_nc_zt=14&_nc_ht=scontent-atl3-1.xx&_nc_gid=GmQcH6QLEImgs7kMax-bPg&_nc_ss=72289&oh=00_AQGz4KxrQmj7FW3PeaTKropCyldDm_Wml09_ao4ttKVVIg&oe=6A89E10A",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.99422-6/730069607_2187041238755176_1078418525764125022_n.png?stp=dst-jpg_tt6&cstp=mx720x928&ctp=p526x296&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=xRmuYP_84nsQ7kNvwGf3vxH&_nc_oc=AdoEr6TEu54ZYxTUJ0QIbc40ysabQ7Os_tOKqwV0vPRCqkvACsaDNdMQUzVn4EVcmAio15io0A6OPfwRmhQOWjHC&_nc_zt=14&_nc_ht=scontent-atl3-1.xx&_nc_gid=GmQcH6QLEImgs7kMax-bPg&_nc_ss=72289&oh=00_AQGz4KxrQmj7FW3PeaTKropCyldDm_Wml09_ao4ttKVVIg&oe=6A89E10A",
+          "height": 678,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27607940838846994&set=a.2029578063776623",
+        "id": "27607940838846994",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6Mjc2MDc5NDEwODIxODAzMDM="
+        },
+        "ocrText": "May be an image of text"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-23T15:01:32.000Z",
+    "timestamp": 1782226892,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0A6sNgmT3DdaW4f3BhAyp1oaMZnhaH9ardEZsnwgVXjfXoy8ZCdC4tNKQDVXRZfqyl",
+    "text": "Flexibility as a function, 4th pipeline.\n\nCái giả định này nếu xảy ra cũng hay, hay hơn nữa là kết hợp với điều chỉnh tỷ lệ tính vào Ldr. :-d",
+    "banks": [],
+    "topic": "ratio_ldr",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.99422-6/730275320_884794854087351_7065733973692295289_n.png?stp=dst-jpg_tt6&cstp=mx1752x2048&ctp=s590x590&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=pBxK3sr0F54Q7kNvwGLs1Ew&_nc_oc=AdrbBaa7WURoIaxkzyO_p5wjotkG4BzjDZGk4659yqDJ5Zg3lR6s7iyHBLIajBmqWFwaij0GhDFr5K_-DfXjzAeS&_nc_zt=14&_nc_ht=scontent-atl3-1.xx&_nc_gid=GmQcH6QLEImgs7kMax-bPg&_nc_ss=72289&oh=00_AQFtOBSmBdGUpyRKn8wDCA7E7TQl-0Hw-q95Ut3XYdtuhA&oe=6A89DDEF",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF252525",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.99422-6/730275320_884794854087351_7065733973692295289_n.png?stp=dst-jpg_tt6&cstp=mx1752x2048&ctp=s590x590&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=pBxK3sr0F54Q7kNvwGLs1Ew&_nc_oc=AdrbBaa7WURoIaxkzyO_p5wjotkG4BzjDZGk4659yqDJ5Zg3lR6s7iyHBLIajBmqWFwaij0GhDFr5K_-DfXjzAeS&_nc_zt=14&_nc_ht=scontent-atl3-1.xx&_nc_gid=GmQcH6QLEImgs7kMax-bPg&_nc_ss=72289&oh=00_AQFtOBSmBdGUpyRKn8wDCA7E7TQl-0Hw-q95Ut3XYdtuhA&oe=6A89DDEF",
+          "height": 590,
+          "width": 505
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27591851000455978&set=a.2029578063776623",
+        "id": "27591851000455978",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6Mjc1OTE4NTEzNjA0NTU5NDI="
+        },
+        "ocrText": "May be an image of text that says 'The Treasury deposit levels at the Treasury Deposit, VND Tril. Big4 Banks indicate a 1.3- 1.2K- G Assumption2 1.1K- 1K- 900 Assumption1 800 700- 600 Incremental 500 Treasury expandedceiling, expanded ~>25%Avr.Citad 25% Avr.Citad 400 300 200 100 Asmpt2 ncremental Depositbase ase LDRDeposit base basetak taken into account (Asmpt1) 2018 2019 2020 2021 *Aлo tincluding 2022 2023 2024 RO (repo) 55k kasof 2025 2026'"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-23T14:12:54.000Z",
+    "timestamp": 1782223974,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0VttLjDDvEprPmbJ1fgNVkxZsBb9YHtE17V4Gt2DQv1YEUZFZhZEB6x9tmLos1gARl",
+    "text": "Cũng hay :-d, cấp \"room\" tín dụng thuộc phạm vi qđ của NHNN, mười mấy năm nay luôn hướng đến mục tiêu linh hoạt, an toàn, hiệu quả, dựa trên đánh giá các chỉ tiêu abc, xyz và nhấn mạnh, đề cao, hướng đến tính minh bạch... vân vân mây mây.\nLần này vẫn flexibility as a function, tăng room nhưng không phải tăng room mà lại là tăng room nên các NHTM khác không cần thắc mắc chuyện tăng room vì không phải tăng room... mà là ngoài room. \nKiểm soát qua room không đồng nhất với mục tiêu tăng trưởng tín dụng trong năm, vì có thêm ngoài room. \n[Thật ra thì bên cạnh \"gói room\" mà báo chí hay đưa tin (vd 25 NH nhận room) đó cũng mới là một phần trong tổng chỉ tiêu tăng trưởng tín dụng trong năm được phân bổ, một số phần còn lại không nhỏ là dành cho một cơ số gần 1 chục NH ngoài nhóm trên - tính trên điểm % trong tổng mức tăng trưởng mục tiêu.]\n\nVậy tạm thời gói \"ngoài room\" là khoảng vài trăm k tỷ (phân kỳ chủ yếu 4-5 năm). \nQuản lý room (theo qđql room) đã lên mức thượng thừa. :-d\n\nP/s. Tôi lại nhớ chuyện chém gió của mấy chuyên gia về lộ trình bỏ room 4-5 năm trước.",
+    "banks": [],
+    "topic": "sbv",
+    "media": [
+      {
+        "thumbnail": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.99422-6/729161182_1342851131370177_5698632823432413250_n.png?stp=dst-jpg_tt6&cstp=mx720x896&ctp=s640x640&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=DjymPBIgFCQQ7kNvwEqpvvB&_nc_oc=Adph4BFBRu6zDod7AKtshkxo-5XyEV2-ytdicCiypesxP3Kv6GyFvrf3kMmpeG0mQLL7JEEv9f93DzOs0rPOFS-D&_nc_zt=14&_nc_ht=scontent-iad6-1.xx&_nc_gid=i4WbzEiVNtezqlpyl10GOA&_nc_ss=72289&oh=00_AQEZH-K48dM8_qV-pbiiTDJxMPeTCw4H5FflZR1yCjUKHg&oe=6A8A09FB",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.99422-6/729161182_1342851131370177_5698632823432413250_n.png?stp=dst-jpg_tt6&cstp=mx720x896&ctp=s640x640&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=DjymPBIgFCQQ7kNvwEqpvvB&_nc_oc=Adph4BFBRu6zDod7AKtshkxo-5XyEV2-ytdicCiypesxP3Kv6GyFvrf3kMmpeG0mQLL7JEEv9f93DzOs0rPOFS-D&_nc_zt=14&_nc_ht=scontent-iad6-1.xx&_nc_gid=i4WbzEiVNtezqlpyl10GOA&_nc_ss=72289&oh=00_AQEZH-K48dM8_qV-pbiiTDJxMPeTCw4H5FflZR1yCjUKHg&oe=6A8A09FB",
+          "height": 640,
+          "width": 514
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27591417640499314&set=a.2029578063776623",
+        "id": "27591417640499314",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6Mjc1OTE0MTgwMjM4MzI2MDk="
+        },
+        "ocrText": "May be an image of text"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-22T13:01:25.000Z",
+    "timestamp": 1782133285,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid022LbVMBRBxbDfVrg6RcpYJVZZeCcLm3sfB8dtjfxeGQAAaz8tFy6PuEEVhFqQbNRDl",
+    "text": "Khỏe rồi! flexibility as a function. \nThậm chí có lúc sẽ trở thành ..., khi biến... thành một tool, nên đặt tên là gì nhỉ, monetarized treasury deposit tool? \nKk = cách turn ++ or -- cái tỷ lệ.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.99422-6/728607556_1558202508989387_205537054734163426_n.png?stp=dst-jpg_tt6&cstp=mx720x225&ctp=s720x225&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=SEe0QEIr4WYQ7kNvwHH-fV-&_nc_oc=AdrfbnTn5DbeffE56xLyTnfYvOFoT1t0zB77rfOVybvJdJdeNTTz2cFnx4fC2YhM436uDCE7Uclcgd7zA1KNBbzz&_nc_zt=14&_nc_ht=scontent-iad6-1.xx&_nc_gid=i4WbzEiVNtezqlpyl10GOA&_nc_ss=72289&oh=00_AQFzb4da6sfuGZKz6ZNdmZhqDOefBc-6HMvMOjfd2XkALA&oe=6A89E515",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFEFEFE",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.99422-6/728607556_1558202508989387_205537054734163426_n.png?stp=dst-jpg_tt6&cstp=mx720x225&ctp=s720x225&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=SEe0QEIr4WYQ7kNvwHH-fV-&_nc_oc=AdrfbnTn5DbeffE56xLyTnfYvOFoT1t0zB77rfOVybvJdJdeNTTz2cFnx4fC2YhM436uDCE7Uclcgd7zA1KNBbzz&_nc_zt=14&_nc_ht=scontent-iad6-1.xx&_nc_gid=i4WbzEiVNtezqlpyl10GOA&_nc_ss=72289&oh=00_AQFzb4da6sfuGZKz6ZNdmZhqDOefBc-6HMvMOjfd2XkALA&oe=6A89E515",
+          "height": 225,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27578578508449894&set=a.2029578063776623",
+        "id": "27578578508449894",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6Mjc1Nzg1Nzg4MTE3ODMxOTc="
+        },
+        "ocrText": "May be an image of text"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-19T09:08:35.000Z",
+    "timestamp": 1781860115,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid025mMgcoPukXP5BKJowPAcDwExJKiNXsJt5vyquNTmE39g1YHFj9ccrSMdCX1jE8fvl",
+    "text": "So, what?\n\nP/s. Năm nay (H1, ytd), tín dụng U tăng >> 10x tiền gửi U, có time sẽ biên tình huống \"tạo tiền\" và imbalance từ USD, và cách ghi nhận trên cđtt các khoản, ví dụ, offshore funding vs nostro và các khoản cho vay bằng ngoại tệ...",
+    "banks": [],
+    "topic": "exchange_fx",
+    "media": [
+      {
+        "thumbnail": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.99422-6/726495286_803188159428998_4253762720534786288_n.png?stp=dst-jpg_tt6&cstp=mx486x386&ctp=s486x386&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=7jvsaNkEFmsQ7kNvwFOixxJ&_nc_oc=AdqVvHZh-AOYrzsaC2fwk1mWOQT__kLOxy2ZAt3pZKZ3yNHejMkqHmCDgDky4G6xqOg7EBge3AnBuFDWuDjFvyUO&_nc_zt=14&_nc_ht=scontent-iad6-1.xx&_nc_gid=i4WbzEiVNtezqlpyl10GOA&_nc_ss=72289&oh=00_AQFwZfWSX5_-bfWcMTybc72DudS9TRRVz7bTcIiXYPdKdQ&oe=6A8A0328",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.99422-6/726495286_803188159428998_4253762720534786288_n.png?stp=dst-jpg_tt6&cstp=mx486x386&ctp=s486x386&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=7jvsaNkEFmsQ7kNvwFOixxJ&_nc_oc=AdqVvHZh-AOYrzsaC2fwk1mWOQT__kLOxy2ZAt3pZKZ3yNHejMkqHmCDgDky4G6xqOg7EBge3AnBuFDWuDjFvyUO&_nc_zt=14&_nc_ht=scontent-iad6-1.xx&_nc_gid=i4WbzEiVNtezqlpyl10GOA&_nc_ss=72289&oh=00_AQFwZfWSX5_-bfWcMTybc72DudS9TRRVz7bTcIiXYPdKdQ&oe=6A8A0328",
+          "height": 386,
+          "width": 486
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27541574582150287&set=a.2029578063776623",
+        "id": "27541574582150287",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6Mjc1NDE1NzQ4MDIxNTAyNjU="
+        },
+        "ocrText": "May be an image of text"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-17T14:50:48.000Z",
+    "timestamp": 1781707848,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0TRPCHfrxXLbY1fvbxUWtV4peP2UfXe25Sb7HL2ZtxDr9RySXNVE7wZNKjtmdx9nql",
+    "text": "Tuy dài ngắn có lúc khác nhau\nNhưng câu chuyện lúc nào cũng vậy.\n\nReg. SFMLR: Tỷ lệ tối đa của nguồn vốn ngắn hạn được sử dụng để cho vay trung hạn và dài hạn.\n\nP/s. Trước thời ông Thúy thì thời ông Tuấn (các \"QĐ đã có những giới hạn chi tiết hơn cho các nhóm NH theo SOE vs POE. Tất nhiên, tỷ lệ này, cùng LDR và CAR được sửa đổi nhiều nhất, và bản chất cấu trúc các tỷ lệ thay đổi (sửa đổi), nên sự so sánh tỷ lệ theo thời gian chỉ hợp lý trong quảng cáo hiệu lực đồng nhất hoặc phải điều chỉnh.",
+    "banks": [],
+    "topic": "ratio_car",
+    "media": [
+      {
+        "thumbnail": "https://scontent.fcps3-1.fna.fbcdn.net/v/t39.99422-6/723960988_895281226157762_2725154120065087148_n.png?stp=dst-jpg_tt6&cstp=mx1645x2048&ctp=s640x640&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=217YTmBnj1YQ7kNvwEZ9pG8&_nc_oc=AdrjCJl4690k6Y0FhL6y1_Hehid_b2I4qOeBrdv0LTL_Cy8SxDXFk6vxyvkQGk6_SFhJ2IlKtmXtDFvRPOJ_xiI3&_nc_zt=14&_nc_ht=scontent.fcps3-1.fna&_nc_gid=rLAFLDNqiS9Y3l9HIt3Png&_nc_ss=7d289&oh=00_AQEMC7I5gsKx5hy5ImSPC9-mUpMzkyEKjoRwsO2KxsTXmQ&oe=6A8A0B37",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF252525",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent.fcps3-1.fna.fbcdn.net/v/t39.99422-6/723960988_895281226157762_2725154120065087148_n.png?stp=dst-jpg_tt6&cstp=mx1645x2048&ctp=s640x640&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=217YTmBnj1YQ7kNvwEZ9pG8&_nc_oc=AdrjCJl4690k6Y0FhL6y1_Hehid_b2I4qOeBrdv0LTL_Cy8SxDXFk6vxyvkQGk6_SFhJ2IlKtmXtDFvRPOJ_xiI3&_nc_zt=14&_nc_ht=scontent.fcps3-1.fna&_nc_gid=rLAFLDNqiS9Y3l9HIt3Png&_nc_ss=7d289&oh=00_AQEMC7I5gsKx5hy5ImSPC9-mUpMzkyEKjoRwsO2KxsTXmQ&oe=6A8A0B37",
+          "height": 640,
+          "width": 514
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27525187000455712&set=a.2029578063776623",
+        "id": "27525187000455712",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6Mjc1MTg5NjczMTEwNzc2ODE="
+        },
+        "ocrText": "May be an image of text that says 'The SFMLR experiment: decade-long de-long... marked by relaxation and recalibration... SFMLR R Max, including TTxx 2026 60 58 56 TT36 54 52 50 48 46 44 42 40 38 36 QD457 TT19 ٥ Txx TTxx2026(expct.) 2026 (expct.) TT16 T06 34 32 30 28 TT22 I TT08 26 子 J 24 15 QD381 22 QD297 20 2000 2005 2010 ' 2015 2020 2025'"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-16T10:19:33.000Z",
+    "timestamp": 1781605173,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0s21F2jqggzPQAZFhF1ePesqRBhrQYGGi2prnuTdk7PQ2Q2ZyHrsne73tQaDEn4TTl",
+    "text": "Quy mô?",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent.fcps4-1.fna.fbcdn.net/v/t39.99422-6/724568861_1744522836577538_3706088239447003549_n.png?stp=dst-jpg_tt6&cstp=mx720x605&ctp=s600x600&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=GVPMiUIvBH4Q7kNvwFXa78D&_nc_oc=AdoLJVG3BmaVc2lZ99XOYQgETp78Teq0r82Se4DOLabWW74tCCr-oPhUugrLoepICO7k4ErFH7KZ1jElr6ff3ewM&_nc_zt=14&_nc_ht=scontent.fcps4-1.fna&_nc_gid=rLAFLDNqiS9Y3l9HIt3Png&_nc_ss=7d289&oh=00_AQE5eLGcjaXsU983nfquFq-x0I4p8PVIF_dMbXF4kyUHtQ&oe=6A8A0BC5",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent.fcps4-1.fna.fbcdn.net/v/t39.99422-6/724568861_1744522836577538_3706088239447003549_n.png?stp=dst-jpg_tt6&cstp=mx720x605&ctp=s600x600&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=GVPMiUIvBH4Q7kNvwFXa78D&_nc_oc=AdoLJVG3BmaVc2lZ99XOYQgETp78Teq0r82Se4DOLabWW74tCCr-oPhUugrLoepICO7k4ErFH7KZ1jElr6ff3ewM&_nc_zt=14&_nc_ht=scontent.fcps4-1.fna&_nc_gid=rLAFLDNqiS9Y3l9HIt3Png&_nc_ss=7d289&oh=00_AQE5eLGcjaXsU983nfquFq-x0I4p8PVIF_dMbXF4kyUHtQ&oe=6A8A0BC5",
+          "height": 504,
+          "width": 600
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27504064275901318&set=a.2029578063776623",
+        "id": "27504064275901318",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6Mjc1MDQwNjQ2MzU5MDEyODI="
+        },
+        "ocrText": "May be an image of text that says 'Home Tin mới New Market BẤT ĐỘNG SẢN Watch list Mrộng Mở rộng Ty phú Phạm Nhật Vượng chỉ đạo \"nóng\": Vinhomes dừng hoàn toàn việc mở rộng u đất dự án tại Việt Nam, không độc chiếm thị trường, dành sân cho các doanh nghiệp khác Dương Dương THỨ3,1 16/06/2026, 17:03'"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-16T02:59:11.000Z",
+    "timestamp": 1781578751,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0sZTTqsZgDsTsYXdZjjGmQnjonqPcdeEwzn6QyKW8MsswkxR2day1aEcfkFzkyBG1l",
+    "text": "Trong POE \"Big4\" có 2 NH luôn rất hấp dẫn để theo dõi, tất nhiên một phần vì disclosures thuộc nhóm tốt nhất, một phần vì những chuyển biến gần đây và mục tiêu thay đổi. \nNhư NH bên dưới, tiếp tục tiến lên ở một số hạng mục và capital intensity hơn (vs NH còn lại cố gắng lighter balance sheet và cap consumption)...\nCapital consumption (demand) khá mạnh vs Capital supply. Chủ yếu đến từ delta density và vol --> delta CAR âm CAR giảm (vẫn >> target, economic và regulatory requirements), nhưng RoRWA tiếp tục duy trì...\nΔCredit RWA~Volume+Density\nTrong đó risk-based real estate account ~ 28.4% CRWA (vs ~23% Exposure).\nDelta Density ~Structure+Migration+Methodology+Stress, sẽ thú vị trong thời gian tới theo tiến trình transition thì methodology có làm thay đổi gì ko, và có thể migration effect nữa chưa biết theo hướng nào :-d.",
+    "banks": [],
+    "topic": "ratio_car",
+    "media": [
+      {
+        "thumbnail": "https://scontent.fcps4-1.fna.fbcdn.net/v/t39.99422-6/725214366_1677385793485918_3910255745809838091_n.png?stp=dst-jpg_tt6&cstp=mx621x373&ctp=s621x373&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=RfD_W0DMBBkQ7kNvwFDTSLz&_nc_oc=AdowyUG072RR4UPikQH5fwIRas7KXvrDgn0-C42pPMCN5FseDST-uiYjLDmAn_hp6kZLVt14slWMDDankCCWqsjd&_nc_zt=14&_nc_ht=scontent.fcps4-1.fna&_nc_gid=rLAFLDNqiS9Y3l9HIt3Png&_nc_ss=7d289&oh=00_AQFmuW6yS6NDYagYQVmDkPh4aJEzxH5AP8jV9Vc9vcgcqA&oe=6A89F7D0",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent.fcps4-1.fna.fbcdn.net/v/t39.99422-6/725214366_1677385793485918_3910255745809838091_n.png?stp=dst-jpg_tt6&cstp=mx621x373&ctp=s621x373&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=RfD_W0DMBBkQ7kNvwFDTSLz&_nc_oc=AdowyUG072RR4UPikQH5fwIRas7KXvrDgn0-C42pPMCN5FseDST-uiYjLDmAn_hp6kZLVt14slWMDDankCCWqsjd&_nc_zt=14&_nc_ht=scontent.fcps4-1.fna&_nc_gid=rLAFLDNqiS9Y3l9HIt3Png&_nc_ss=7d289&oh=00_AQFmuW6yS6NDYagYQVmDkPh4aJEzxH5AP8jV9Vc9vcgcqA&oe=6A89F7D0",
+          "height": 373,
+          "width": 621
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27500413892933023&set=a.2029578063776623",
+        "id": "27500413892933023",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6Mjc1MDA0MTQxNTYyNjYzMzA="
+        },
+        "ocrText": "May be an image of text"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-13T01:54:33.000Z",
+    "timestamp": 1781315673,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02VFrzVHUA6KZazZ3XZJTE2innkPw3YvxoGM2SKC7mW1dZHN65MEVxPf26iUXek3Ctl",
+    "text": "Mấy bạn ở BoK cũng đang tìm giải thích cho việc tại sao CA và BoT ngon vậy mà tỷ giá toang tụi bây ơi. :-d\n\nỞ chỗ khác thì... phù phù thôi vậy cũng được rồi, fingers crossed.",
+    "banks": [],
+    "topic": "exchange_fx",
+    "media": [
+      {
+        "thumbnail": "https://scontent.fric1-2.fna.fbcdn.net/v/t39.99422-6/722637831_2071737877060000_3220179287356521233_n.png?stp=dst-jpg_tt6&cstp=mx720x267&ctp=s720x267&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=wyJurAerIKcQ7kNvwEvvDRw&_nc_oc=AdoZehQD98SHFZ03OcvMNihJFWd00ss2HT_DpIrYzr3h5N-YUpKe7ODiBpaJr12cCKY&_nc_zt=14&_nc_ht=scontent.fric1-2.fna&_nc_gid=_z4EyaRozzmzpH3irvoaGQ&_nc_ss=72289&oh=00_AQE2G54Pmxin4MAu4W_7UG3u9ToJn0ZHYDB29L0Qz8dReQ&oe=6A89ED9B",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent.fric1-2.fna.fbcdn.net/v/t39.99422-6/722637831_2071737877060000_3220179287356521233_n.png?stp=dst-jpg_tt6&cstp=mx720x267&ctp=s720x267&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=wyJurAerIKcQ7kNvwEvvDRw&_nc_oc=AdoZehQD98SHFZ03OcvMNihJFWd00ss2HT_DpIrYzr3h5N-YUpKe7ODiBpaJr12cCKY&_nc_zt=14&_nc_ht=scontent.fric1-2.fna&_nc_gid=_z4EyaRozzmzpH3irvoaGQ&_nc_ss=72289&oh=00_AQE2G54Pmxin4MAu4W_7UG3u9ToJn0ZHYDB29L0Qz8dReQ&oe=6A89ED9B",
+          "height": 267,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27463023413338738&set=a.2029578063776623",
+        "id": "27463023413338738",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6Mjc0NjMwMjM3MzY2NzIwMzk="
+        },
+        "ocrText": "May be an image of text"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-12T02:37:42.000Z",
+    "timestamp": 1781231862,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0E22UvKJGEEnVP9YsjFYEQMuSbEC5ViufjJLa55gHN8at6hRiNZrUSByvtMnqQF9ul",
+    "text": "Case này cũng thú vị, ace xã đoàn NH Ấn đang kêu gọi sửa đổi một số quy định trong áp dụng Basel. Trong quản trị NH hiện đại, balance sheet capacity management là core, đầu tiên phải hiểu đặc tính by nature, by regulatory, by guidance... và còn tùy thuộc vào môi trường thay đổi, của các thành phần khi xuất hiện trên bảng cđkt. \nĐơn giản như nghe là cung tiền, là tiền gửi, huy động, nhưng characteristics rất khác nhau...\nTrường hợp bên dưới của các NH Ấn là sự dịch chuyển (mang tính structural change) đã thách thức cấu trúc BS hiện tại, khiến NH không đủ không gian để tăng trưởng tín dụng, thậm chí có thể có negative carry (tức lỗ) và xói mòn khả năng sinh lợi nếu NFI không đủ bù đắp. \nVề kỹ thuật, sự bùng nổ của xu hướng sản phẩm và công cụ của các mutual funds, các financial services biz, dòng tiền retail savers (retail deposit) shift qua các sp này, dẫn đến đặc tính đã thay đổi: from retail deposit to financial services biz deposit, run-off factor có thể đổi từ 5% lên 100% tùy thêm đặc điểm cụ thể. Với LCR, độ nhạy theo run-off rates lớn khiến NH vừa phải tăng cường HQLAs, vừa phải phân bổ/giới hạn lại tăng trưởng credit như đã nói. \nVới internat LCR min 110% chẳng hạn, no room to accquire credit, mỗi đồng tiền gửi dạng này thu hút được, incremental HQLA là 1.1 đồng, negative carry và negative IEA, ALM breakeven credit yield require cao hơn... ảnh hưởng đến chính Industry này và real eco.\nHiện tượng \"xào chẻ\" dùng kỹ thuật nắn label tiền gửi (từ wholesale qua retail, từ short qua long...) có thể diễn ra... để đối phó. Các kỹ thuật inflate BS (tăng có, tăng nợ sẽ tốn kém).\n\nP/s. VN cũng đang sửa và có thể đưa vào vận hành Basel 3, các NH cũng đang tích cực góp ý. :-d",
+    "banks": [],
+    "topic": "ratio_lcr_nsfr",
+    "media": [
+      {
+        "thumbnail": "https://scontent.fric1-2.fna.fbcdn.net/v/t39.30808-6/720873997_27450751307899282_3119843444712565619_n.jpg?stp=dst-jpg_tt6&cstp=mx720x139&ctp=s720x139&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=f8DGNs67CTEQ7kNvwFs25kA&_nc_oc=AdqPdrPBdjGnDAmLLEuAVpqMH5kWjq3BMrpEoUCg4bPZSPkQzDMsundOFoB9vU8j1vo&_nc_zt=23&_nc_ht=scontent.fric1-2.fna&_nc_gid=_z4EyaRozzmzpH3irvoaGQ&_nc_ss=72289&oh=00_AQGNPYF2KAKtODw33PlMtiIVUBme-rSO220lNMl9Bn7PhA&oe=6A89FBEC",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent.fric1-2.fna.fbcdn.net/v/t39.30808-6/720873997_27450751307899282_3119843444712565619_n.jpg?stp=dst-jpg_tt6&cstp=mx720x139&ctp=s720x139&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=f8DGNs67CTEQ7kNvwFs25kA&_nc_oc=AdqPdrPBdjGnDAmLLEuAVpqMH5kWjq3BMrpEoUCg4bPZSPkQzDMsundOFoB9vU8j1vo&_nc_zt=23&_nc_ht=scontent.fric1-2.fna&_nc_gid=_z4EyaRozzmzpH3irvoaGQ&_nc_ss=72289&oh=00_AQGNPYF2KAKtODw33PlMtiIVUBme-rSO220lNMl9Bn7PhA&oe=6A89FBEC",
+          "height": 139,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27450751257899287&set=a.2029578063776623",
+        "id": "27450751257899287",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6Mjc0NTA3NTE1OTEyMzI1ODc="
+        },
+        "ocrText": "May be an image of money and text that says 'Banks urge RBI to relax LCR norms on institutional deposits'"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-11T03:57:21.000Z",
+    "timestamp": 1781150241,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0FUSopyi3rcnHWTY4CQzEPKZpWEyESegeqbWB1XDFRnFcTuLsa86pdajvu23wqX47l",
+    "text": "One out of Big4, latest... >83.4\n\nP/s. Các bạn chuyên cân chắc cũng căng thẳng, quy mô hơn 2 triệu, vào \"đèn đỏ đậm\" rồi thì chỉ cần \"lệch\" vài chục k ở cả 2 side (i.e tín dụng hoặc tiền gửi) cũng có thể hit qđngay.",
+    "banks": [],
+    "topic": "interest_macro",
+    "media": [
+      {
+        "thumbnail": "https://scontent.fric1-2.fna.fbcdn.net/v/t39.99422-6/721404019_2099782497615147_1483526860687499985_n.png?stp=dst-jpg_tt6&cstp=mx720x270&ctp=s720x270&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=8_eCuHRygG4Q7kNvwHuNKaK&_nc_oc=AdqRFn15mpJo-rzqNKIR2FN-9wqSh2iQBfF6xVrEBMPEgs2Ms64n1Qg1mausoMJ5PSo&_nc_zt=14&_nc_ht=scontent.fric1-2.fna&_nc_gid=_z4EyaRozzmzpH3irvoaGQ&_nc_ss=72289&oh=00_AQED_DIwjCB3neRDOz9HEQq_70GVNhWqDIpr2z9kBYuAcw&oe=6A8A02A6",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent.fric1-2.fna.fbcdn.net/v/t39.99422-6/721404019_2099782497615147_1483526860687499985_n.png?stp=dst-jpg_tt6&cstp=mx720x270&ctp=s720x270&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=8_eCuHRygG4Q7kNvwHuNKaK&_nc_oc=AdqRFn15mpJo-rzqNKIR2FN-9wqSh2iQBfF6xVrEBMPEgs2Ms64n1Qg1mausoMJ5PSo&_nc_zt=14&_nc_ht=scontent.fric1-2.fna&_nc_gid=_z4EyaRozzmzpH3irvoaGQ&_nc_ss=72289&oh=00_AQED_DIwjCB3neRDOz9HEQq_70GVNhWqDIpr2z9kBYuAcw&oe=6A8A02A6",
+          "height": 270,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27438061555834924&set=a.2029578063776623",
+        "id": "27438061555834924",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6Mjc0MzgwNjE4NzkxNjgyMjU="
+        },
+        "ocrText": "May be an image of text"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-10T01:32:55.000Z",
+    "timestamp": 1781055175,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid023Y41NqnkZd9nVWrM4mcsKMBvaJemA23hUW7cEjNCJJ9iqJdSu1ZL8bvvfoTJd8HAl",
+    "text": "Years ago",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2026-06-09T04:38:03.000Z",
+    "timestamp": 1780979883,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0KE6qkttt6ZaHWcBkkexG52SVwda7JizneUPe8UNrkwUoxAGG9tc1UB5pyk7yqW9Sl",
+    "text": "Giá vàng trong nước kể từ 2009 đến nay có mấy pha giảm - tính trong 90 ngày, lần này... như hình.\nCộng hưởng giá U parallel market, gap giảm rất nhanh (vs giá thế giới) nhưng chưa âm...",
+    "banks": [],
+    "topic": "deals_corp",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lga3-3.xx.fbcdn.net/v/t39.99422-6/719900471_1461300155682181_8441106501171329167_n.png?stp=dst-jpg_tt6&cstp=mx1000x1186&ctp=s600x600&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=HyiIrAsmnb4Q7kNvwFe7oBu&_nc_oc=AdoLPAbQPFHE--cShtLaJUNkFYPQq5-1WDae2r8pAO4dsU4b_Q3X62BLR1krHHoRYbE&_nc_zt=14&_nc_ht=scontent-lga3-3.xx&_nc_gid=Q0-0n3vY7ZNFUWeOifhXzQ&_nc_ss=72289&oh=00_AQF0yTZ-RlGd1WEUTgqn05Sw-gM1dXHxhRIvhUbsnusW7Q&oe=6A89EF9A",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF252525",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lga3-3.xx.fbcdn.net/v/t39.99422-6/719900471_1461300155682181_8441106501171329167_n.png?stp=dst-jpg_tt6&cstp=mx1000x1186&ctp=s600x600&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=HyiIrAsmnb4Q7kNvwFe7oBu&_nc_oc=AdoLPAbQPFHE--cShtLaJUNkFYPQq5-1WDae2r8pAO4dsU4b_Q3X62BLR1krHHoRYbE&_nc_zt=14&_nc_ht=scontent-lga3-3.xx&_nc_gid=Q0-0n3vY7ZNFUWeOifhXzQ&_nc_ss=72289&oh=00_AQF0yTZ-RlGd1WEUTgqn05Sw-gM1dXHxhRIvhUbsnusW7Q&oe=6A89EF9A",
+          "height": 600,
+          "width": 506
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27412049731769440&set=a.2029578063776623",
+        "id": "27412049731769440",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6Mjc0MTIwNTAyOTE3NjkzODQ="
+        },
+        "ocrText": "May be an image of text that says 'Gold prices DD, XAUVND, 90d window Normalized 100 = Peak (t0) 100 96 94 92 2022 90 2009 88 2020 2013 2013Jan Jan 86 84 - 2013 2013May May 2024 76- 74 0 0 #Day from #Dayfromt0 to 15 30 45 2026 60 75 90'"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-04T02:21:52.000Z",
+    "timestamp": 1780539712,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0326wdbPY6eGSnPsHeKJXRg6RWyZhRodPYWUjSCRjkdy3d8YcY6X42HiMyA1PcLVU6l",
+    "text": "Nể mấy cụ \"nắn\" ra các đường này. \nGrowth in TFP bao phủ cho giải thích tăng trưởng output (bên cạnh capital intensity và labor component).\nQuan điểm driven surge in productivity that is disinflationary hiện vẫn rất thách thức, ít nhất ở bằng chứng cụ thể để thuyết phục hỗ trợ cho lower rates, hoặc phải chờ đợi (delay) cho đến khi cân bằng hơn (risk balance), i.e khi lạm phát gần mục tiêu hơn hoặc đổi measures... :-d\n\nProductivity gains (như via output/hour worked) cũng như impact thị trường lao động (AI relatively) chưa cho thấy bức tranh rõ ràng. \n\nNhưng ở demand side, via wealth effects is real, theo một chart khác, của BCA.",
+    "banks": [],
+    "topic": "interest_macro",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-6/715990073_27350183264622754_8030556465750632906_n.jpg?stp=dst-jpg_tt6&cstp=mx477x751&ctp=s477x751&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kAn25oXQL84Q7kNvwH13inb&_nc_oc=AdpVITKDV4jIimNtQ3ZeBOnuMCB95X0a2vqzp5UU24KJrSKPzkP4ugMC6AGINGWSSbk&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=Q0-0n3vY7ZNFUWeOifhXzQ&_nc_ss=72289&oh=00_AQEms0pjTn0owrt8PQeSXHsHaDu24840kbr5sszYiClwRQ&oe=6A8A02AE",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-6/715990073_27350183264622754_8030556465750632906_n.jpg?stp=dst-jpg_tt6&cstp=mx477x751&ctp=s477x751&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kAn25oXQL84Q7kNvwH13inb&_nc_oc=AdpVITKDV4jIimNtQ3ZeBOnuMCB95X0a2vqzp5UU24KJrSKPzkP4ugMC6AGINGWSSbk&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=Q0-0n3vY7ZNFUWeOifhXzQ&_nc_ss=72289&oh=00_AQEms0pjTn0owrt8PQeSXHsHaDu24840kbr5sszYiClwRQ&oe=6A8A02AE",
+          "height": 751,
+          "width": 477
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27350183231289424&set=a.2029578063776623",
+        "id": "27350183231289424",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjczNTAxODM1MzEyODkzOTQ="
+        },
+        "ocrText": "May be an image of text that says 'CHART II-6 It Is Understandable Why Kevin Warsh Is Excited About AI % 4.0 US 10-YEAR GROWTH RATE IN: REAL PER CAPITA GDP (LS) TOTAL FACTOR PRODUCTIVITY\"* (RS) 3.5 3.0 3.0 TFP and real GDP growth are closely aligned 2.5 2.5 2.0 2.0 1.5 1.5 1.0 1.0 0.5 0.5 © Bca Research 2026 0.0 1960 1970 1980 2000 -0.5 1990 2010 2020 SERIES SHOWN ASA A10-YEAR ANNUALIZED RATE OF CHANGE SOURCE: BE \"SERIES SHOWN AS A10-YEAR MOVING AVERAGE OF QUARTERLY ANNUALIZED GROWTH RATE SOURCE: SAN FRANCISCO FED.'"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-03T09:17:57.000Z",
+    "timestamp": 1780478277,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid029DeagVaaP7iQqLJjRH5iN9hWznBdKPHBLLFvgRyMzsYA6Pi9X45t5J6zBVjN2ycRl",
+    "text": "Vậy log-log hoặc xấp xỉ là trong dài hạn, \ng_RE ~ g_GDP (real) + R_inflation. :d\nSắp tới tăng ga đá số 2 con số trong một giai đoạn 5-10 năm, cộng thêm lạm phát thì chưa biết sao nữa, nếu lạm phát cao quá thì có lẽ dài hạn phải đo tầm 20-30 năm tiếp theo.\nCác bạn thấy nó giống một identity khác...:-d\nViết vui một chút. \nBài viết về bác PCD rất hay!",
+    "banks": [],
+    "topic": "interest_macro",
+    "media": [
+      {
+        "description": {
+          "delight_ranges": [],
+          "image_ranges": [],
+          "inline_style_ranges": [],
+          "aggregated_ranges": [],
+          "ranges": [],
+          "color_ranges": [],
+          "text": "When this happens, it's usually because the owner only shared it with a small group of people, changed who can see it or it's been deleted."
+        },
+        "title_with_entities": {
+          "delight_ranges": [],
+          "image_ranges": [],
+          "inline_style_ranges": [],
+          "aggregated_ranges": [],
+          "ranges": [],
+          "color_ranges": [],
+          "text": "This content isn't available right now"
+        }
+      }
+    ]
+  },
+  {
+    "time": "2026-06-03T04:18:23.000Z",
+    "timestamp": 1780460303,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0zMNu48Xrgu5KQy3EvFApQSqpwFowBF5jF4mwu6Ww4bSyq5z72gAr72zafjpoCFKJl",
+    "text": "Mức tăng giá cả đã chuyển vào tiêu dùng cuối đóng góp đến gần 50% tốc độ tăng trưởng chung, trong khi tăng trưởng thực vẫn ở mức thấp trong nhiều năm. \nĐặt trong bối cảnh, gánh nặng kép (dual-pressure) đang hiện diện: giá cả (cost of living) và lãi vay. Phần tư bị hit nặng nhất có lẽ là wage earners * mortgage * credit card ...\nTrong một phạm vi nhất định, thuế gắn với dthu sẽ inflate lên.\nCP có thể cần thúc đẩy các giải pháp nhằm giảm nhẹ...\nP/s. Chứng sĩ thì thêm rổ ck và margin. Jff. :-d",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent.fhsv1-1.fna.fbcdn.net/v/t39.30808-6/716762746_27337938489180565_1413689800301494795_n.jpg?stp=dst-jpg_tt6&cstp=mx720x539&ctp=s720x539&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=frrf49vhp6oQ7kNvwH8TYxj&_nc_oc=AdrPH_inwSG2MutNLV3OrKkNG9hYjD7G2ZFnGFRRqtBwB-gdJDk47SD8BISZhEnPfPk&_nc_zt=23&_nc_ht=scontent.fhsv1-1.fna&_nc_gid=sRc-9kXCiGN1sACSz8XJAw&_nc_ss=72289&oh=00_AQGo5GhoK0K5mak7Nw478hcICxzD_UuQGgOlFrlHTFIQmg&oe=6A89F072",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent.fhsv1-1.fna.fbcdn.net/v/t39.30808-6/716762746_27337938489180565_1413689800301494795_n.jpg?stp=dst-jpg_tt6&cstp=mx720x539&ctp=s720x539&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=frrf49vhp6oQ7kNvwH8TYxj&_nc_oc=AdrPH_inwSG2MutNLV3OrKkNG9hYjD7G2ZFnGFRRqtBwB-gdJDk47SD8BISZhEnPfPk&_nc_zt=23&_nc_ht=scontent.fhsv1-1.fna&_nc_gid=sRc-9kXCiGN1sACSz8XJAw&_nc_ss=72289&oh=00_AQGo5GhoK0K5mak7Nw478hcICxzD_UuQGgOlFrlHTFIQmg&oe=6A89F072",
+          "height": 539,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27337938452513902&set=a.2029578063776623",
+        "id": "27337938452513902",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjczMzc5Mzg4NTkxODA1Mjg="
+        },
+        "ocrText": "May be an image of text"
+      }
+    ]
+  },
+  {
+    "time": "2026-06-02T07:06:13.000Z",
+    "timestamp": 1780383973,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid032CjLt8Y9r2D4xRA53k8kYnc5TSocMvgcjamJBLpeS2CeU6RBxjy576UmwdP6xBNJl",
+    "text": "",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2026-06-02T02:52:52.000Z",
+    "timestamp": 1780368772,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02RNzuHzUCaSNx5LXW4nvmcrAwC6aUomoU8fBfBfqExNnV1Y3zNmRmvLyBhTpmVtbKl",
+    "text": "Look through temporary price shocks? \n\nBài báo bên dưới trở nên thú vị, gợi nhớ lại một note mấy năm trước, cũng là từ Nick - lần gần nhất mang tính chấn động là hàm ý rằng một cú jumbo hike là chuyện có thể, đó là năm 2022. \nKevin đang tìm kiếm điều gì? Cũng từ Fed, lại thông qua Nick Timiraos, a \"Fed Whisperer\".\nLần này, đánh dấu Fed/KV ra tín hiệu thực sự bắt tay vào việc - dù kết quả còn tùy, hoặc đóng vai trò như một phép thử.\n\nCác NHTW từ lâu đã phải cố gắng phân biệt giữa cú sốc giá cả và lạm phát thực sự, đâu mới là underlying inflation? Thông thường, họ muốn loại bỏ những thứ gây nhiễu khỏi dữ liệu, ở Fed cũng vậy, tôi không nhớ có bao nhiêu loại thước đo được các nhà KT ở các Fed thành viên phát triển (và public, và các bạn có thể dễ dàng tìm thấy cùng với nguyên nhân, sự cần thiết phải loại bỏ...) Điều đó hợp lý. \nGiá dầu tăng không nhất thiết là lạm phát. Thuế quan tăng không tự động tạo ra một vòng xoáy giá-lương. Một container đắt hơn không có nghĩa là toàn bộ nền kinh tế đang mất neo kỳ vọng.\n\nNhưng đôi khi, thứ bị loại bỏ lại chính là điều người dân đang phải trả tiền cho mỗi ngày, chi phí không biến mất chỉ vì mô hình coi đó là ngoại lệ... Người dân liệu có đang \"sống\" trong một chỉ số trimmed mean.\n\nCác NHTW đều muốn và tin rằng mình đã tìm ra cách phân biệt giữa cú sốc tạm thời và lạm phát dai dẳng. Một số đúng. Lịch sử cũng cho thấy bài học sai lầm lớn có thể bắt đầu bằng việc giải thích tại sao lần này lạm phát \"không thực sự là lạm phát\". Một số trở thành chương mở đầu của cuộc khủng hoảng kế tiếp.\n\nTệ hơn nữa, đó là tâm lý bi quan - dẫn đến sự xói mòn niềm tin khi một thể chế đang đặt trước quá nhiều thách thức hiện nay - ai sẽ bảo vệ? Một thước đo lạm phát tốt hơn, hay một định nghĩa lạm phát dễ chịu hơn? Một tín hiệu tốt hơn về lạm phát, hay một lý do để không nhìn thấy nó? Hay thậm chí, quyết định câu chuyện nào về lạm phát được phép trở thành sự thật.\n\nDù là \"bỏ qua\" hay điều chỉnh, thì khoảng trống về quan điểm về tolerance for inflation có thể thay đổi, nhưng đổi ở NHTW, còn \"hấp thụ\" nó sẽ ở phía còn lại và bất cân xứng... \n\nUy tín của NHTW có thể được xem là một hàng hóa công cộng. Khi nó bị đánh mất, không còn ai là người chiến thắng.\n\n[GDP] Growth may flatter the wealthy. Inflation may punish the poor. But credibility belongs to either. Once lost, everyone pays.\n...\nVới market, bond market chẳng hạn, đó là một sự xoay trục, từ điều thị trường muốn biết không phải Fed đang nhìn vào chỉ số nào, nhưng điều thị trường e ngại, sau cú trimmed, không phải là những gì còn lại, mà những gì đã bỏ qua, là Fed đang bỏ qua điều gì. Điều này khác với bối cảnh 2022 và phần lớn các sự thay đổi mang tính bước ngoặt trong chính sách - thị trường đều hoài nghi: họ [Fed] đang biết điều gì chúng ta chưa biết. \n...\nLiệu sẽ có cuộc đối đầu giữa các phái, i.e. Price level vs persistent monetary phenomenon?...",
+    "banks": [],
+    "topic": "interest_macro",
+    "media": [
+      {
+        "thumbnail": "https://scontent-hou1-1.xx.fbcdn.net/v/t39.30808-6/711474749_27322998180674596_188976831530680964_n.jpg?stp=dst-jpg_tt6&cstp=mx720x889&ctp=s640x640&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=fB9YXXqVu_gQ7kNvwG7hhiN&_nc_oc=AdpgSFNwkoGe7ZhhQ4gAtkB_V8HxeFwJ0V2n8B8A3_571-kLm8y_0rKp_NpfB0fmlQwtH6ZWLeiK7NcxVw10VX3Q&_nc_zt=23&_nc_ht=scontent-hou1-1.xx&_nc_gid=uvG1uA8lit0UNnFISpbu3Q&_nc_ss=72289&oh=00_AQG4wDj7mfZ7JtMdJ3uIJzfvxJNYlQidnmur0qoEShrIlw&oe=6A89F4A7",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-hou1-1.xx.fbcdn.net/v/t39.30808-6/711474749_27322998180674596_188976831530680964_n.jpg?stp=dst-jpg_tt6&cstp=mx720x889&ctp=s640x640&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=fB9YXXqVu_gQ7kNvwG7hhiN&_nc_oc=AdpgSFNwkoGe7ZhhQ4gAtkB_V8HxeFwJ0V2n8B8A3_571-kLm8y_0rKp_NpfB0fmlQwtH6ZWLeiK7NcxVw10VX3Q&_nc_zt=23&_nc_ht=scontent-hou1-1.xx&_nc_gid=uvG1uA8lit0UNnFISpbu3Q&_nc_ss=72289&oh=00_AQG4wDj7mfZ7JtMdJ3uIJzfvxJNYlQidnmur0qoEShrIlw&oe=6A89F4A7",
+          "height": 640,
+          "width": 518
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27322998134007934&set=a.2029578063776623",
+        "id": "27322998134007934",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjczMjI5OTg0NTA2NzQ1Njk="
+        },
+        "ocrText": "May be an image of text"
+      }
+    ]
+  },
+  {
+    "time": "2026-05-30T07:42:48.000Z",
+    "timestamp": 1780126968,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0Y7yMCmKXaEyz6Ve8daXAjchiBdP119EaUgPEXynsdTPQju32q1do7CgujKBhXiEkl",
+    "text": "Minh bạch và tốc độ hơn (tôi thích từ tốc độ, chứ kịp thời chưa hẳn đã tốc độ nếu link ... die hoặc quay vòng. Kk)\n\nHôm trước xem bạn Lào (tây) công bố rất nhanh, đầy đủ đến bất ngờ trong mấy nước ĐNA.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-hou1-1.xx.fbcdn.net/v/t39.30808-6/710478462_27284578814516533_3361810758227970373_n.jpg?stp=dst-jpg_tt6&cstp=mx1179x1371&ctp=s590x590&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=fwlhMKNmKUcQ7kNvwGim_Pt&_nc_oc=Ado8pn8bL6wuWCYRDsjal2c8YKCu4yX7HDQTNb6ie0V5kvcLfoY92sYzhWKuB3lEXGqNFyFQcyWHERB45GHqMd_7&_nc_zt=23&_nc_ht=scontent-hou1-1.xx&_nc_gid=uvG1uA8lit0UNnFISpbu3Q&_nc_ss=72289&oh=00_AQFMf8x-DP-2ZN2SG41AWAOvogLHyB1rtKig-Tumm9EKsw&oe=6A89EFE7",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-hou1-1.xx.fbcdn.net/v/t39.30808-6/710478462_27284578814516533_3361810758227970373_n.jpg?stp=dst-jpg_tt6&cstp=mx1179x1371&ctp=s590x590&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=fwlhMKNmKUcQ7kNvwGim_Pt&_nc_oc=Ado8pn8bL6wuWCYRDsjal2c8YKCu4yX7HDQTNb6ie0V5kvcLfoY92sYzhWKuB3lEXGqNFyFQcyWHERB45GHqMd_7&_nc_zt=23&_nc_ht=scontent-hou1-1.xx&_nc_gid=uvG1uA8lit0UNnFISpbu3Q&_nc_ss=72289&oh=00_AQFMf8x-DP-2ZN2SG41AWAOvogLHyB1rtKig-Tumm9EKsw&oe=6A89EFE7",
+          "height": 590,
+          "width": 507
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27284578781183203&set=a.2029578063776623",
+        "id": "27284578781183203",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjcyODQ1NzkxMjc4NDk4MzU="
+        },
+        "ocrText": "May be an image of text that says 'NHNN sắp công bố số liệu mua ngoại tệ và dự trữ ngoại hối Minh Nhật 30/05/2026 11:15 (GMT+7) (VNF) NHNN cam kết công bố số liệu mua ngoại tệ ròng dương ( gồm giao dịch giao ngay và kỳ hạn) hàng năm, độ trễ 03 tháng cùng số liệu dự trữ ngoại hối và vị thế kỳ hạn từ năm 2027. Mới đây, đây, Ngân hàng Nhà nước (NHNN) đã đưa tuyên bố chung về tiền tệ giữa NHNN và Bộ Tài chính My.'"
+      }
+    ]
+  },
+  {
+    "time": "2026-05-30T07:36:49.000Z",
+    "timestamp": 1780126609,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02qTMoqJWaiAyh1zMYhrfqhsMj8warNj2hPbMcuSGC8WSJu3aNoQ6TqKDFeqUUG1mKl",
+    "text": "Phân loại sâu hơn...\n\nP: dư nợ đối với các dự án NOXH, bđs KCN CX\nƯớc tính đến 28 Feb.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-hou1-1.xx.fbcdn.net/v/t39.30808-6/711473762_27284522147855533_7885581928364560679_n.jpg?stp=dst-jpg_tt6&cstp=mx1240x1062&ctp=s590x590&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=XwZgplnvQYAQ7kNvwEZgG0j&_nc_oc=AdpXr_EXbrDzDnpJQC1t6UJjSrMSJbZVrxDv0UAygFM_jBUDhUdLVdP2LyK8cJjQKxfIAeGbIB5CJTc-ggal6Zeh&_nc_zt=23&_nc_ht=scontent-hou1-1.xx&_nc_gid=uvG1uA8lit0UNnFISpbu3Q&_nc_ss=72289&oh=00_AQHwNIb-EJLNg2YQm9XZ1odCOrh-UsXoiue-74dR5_mQVw&oe=6A89F276",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-hou1-1.xx.fbcdn.net/v/t39.30808-6/711473762_27284522147855533_7885581928364560679_n.jpg?stp=dst-jpg_tt6&cstp=mx1240x1062&ctp=s590x590&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=XwZgplnvQYAQ7kNvwEZgG0j&_nc_oc=AdpXr_EXbrDzDnpJQC1t6UJjSrMSJbZVrxDv0UAygFM_jBUDhUdLVdP2LyK8cJjQKxfIAeGbIB5CJTc-ggal6Zeh&_nc_zt=23&_nc_ht=scontent-hou1-1.xx&_nc_gid=uvG1uA8lit0UNnFISpbu3Q&_nc_ss=72289&oh=00_AQHwNIb-EJLNg2YQm9XZ1odCOrh-UsXoiue-74dR5_mQVw&oe=6A89F276",
+          "height": 505,
+          "width": 590
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27284522117855536&set=a.2029578063776623",
+        "id": "27284522117855536",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjcyODQ1MjI1MTQ1MjIxNjM="
+        },
+        "ocrText": "May be an image of ‎text that says '‎Credit to Real Estate |-Excluding... EOP Balance (Tril. VND) RE Business RE Consumer RE 4500- RE Others REP 4000 P* Balance 3500 31 Dec-25: 4,740 3000 2500 2000 1500 1000 Separated data Business Consumer not available before 2016 500 0 2010 '11 '12 '13 '14 '15 '16 '17 '18 '19 Source: SBV, MC. 2025Q4 balance as of 31 Dec, 2026Q1 as of 28 Feb. '20 س '21 '22 2122'23'24'24'25'26 '23 '24 '24 '25 '26‎'‎"
+      }
+    ]
+  },
+  {
+    "time": "2026-05-29T16:16:21.000Z",
+    "timestamp": 1780071381,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0iAcETzqARcsvXzaeyTxohDtLGuHFjRWgYy3cFxxDDQF1w9GavKrozS3CSSU8DFTxl",
+    "text": "Per SBV :-d",
+    "banks": [],
+    "topic": "sbv",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/708979526_27275201805454234_4024167237084669447_n.jpg?stp=dst-jpg_tt6&cstp=mx720x673&ctp=p552x414&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=DZtN2y5dIrIQ7kNvwH-PDOM&_nc_oc=AdpPXs-y-ampiIoVrW8rBs18r1MzbUPVAz3fDcCgpRVODChC6HmaHuHEMdsFHdyucgM&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=6UB4TtQtSi25wF5Z9c7JIg&_nc_ss=72289&oh=00_AQG-P5yR1_aoeEF7J5iY-_WvY64jxg7PlKRKWv1p4VgN_A&oe=6A89ECF1",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/708979526_27275201805454234_4024167237084669447_n.jpg?stp=dst-jpg_tt6&cstp=mx720x673&ctp=p552x414&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=DZtN2y5dIrIQ7kNvwH-PDOM&_nc_oc=AdpPXs-y-ampiIoVrW8rBs18r1MzbUPVAz3fDcCgpRVODChC6HmaHuHEMdsFHdyucgM&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=6UB4TtQtSi25wF5Z9c7JIg&_nc_ss=72289&oh=00_AQG-P5yR1_aoeEF7J5iY-_WvY64jxg7PlKRKWv1p4VgN_A&oe=6A89ECF1",
+          "height": 516,
+          "width": 552
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27275201732120908&set=a.2029578063776623",
+        "id": "27275201732120908",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjcyNzUyMDIzMDIxMjA4NTE="
+        },
+        "ocrText": "May be an image of text"
+      }
+    ]
+  },
+  {
+    "time": "2026-05-28T07:46:13.000Z",
+    "timestamp": 1779954373,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0jsSfuQsCbpC4vRssQerHKmJSJwzDYEahW5bVXiFh4MtHkGWMCPzbASv9TvqVbzJ6l",
+    "text": "Household Consumption :-d",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/709056675_27255741207400294_6421649405127214692_n.jpg?stp=dst-jpg_tt6&cstp=mx720x765&ctp=p180x540&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=B3qTG_D3UcYQ7kNvwFLbfmT&_nc_oc=AdrQ5iPCESs6qNxYWXG27RayBvRB-TvbDv3nkVfZk8tYpSiA59ZjEBnsC0YS_qJNUPQ&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=6UB4TtQtSi25wF5Z9c7JIg&_nc_ss=72289&oh=00_AQFVebcSllqeaksZu27ggeueEgVG_YImbd3zW77Dm9KOAQ&oe=6A89FCC6",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/709056675_27255741207400294_6421649405127214692_n.jpg?stp=dst-jpg_tt6&cstp=mx720x765&ctp=p180x540&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=B3qTG_D3UcYQ7kNvwFLbfmT&_nc_oc=AdrQ5iPCESs6qNxYWXG27RayBvRB-TvbDv3nkVfZk8tYpSiA59ZjEBnsC0YS_qJNUPQ&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=6UB4TtQtSi25wF5Z9c7JIg&_nc_ss=72289&oh=00_AQFVebcSllqeaksZu27ggeueEgVG_YImbd3zW77Dm9KOAQ&oe=6A89FCC6",
+          "height": 540,
+          "width": 508
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27255741184066963&set=a.2029578063776623",
+        "id": "27255741184066963",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjcyNTU3NDE0MzA3MzM2MDU="
+        },
+        "ocrText": "May be an image of text that says 'Phó Thủ tướng: NHNN cần kích thích tiêu dùng thông qua cho vay, tạo điều kiện cho người dân mở rộng chi tiêu 07：45 28/05/2026 Chia sẻ Phó Thủ tướng yêu cầu, Ngân hàng Nhà nước có vai trò quan trọng đối với kích thích tiêu dùng thông qua cho vay tiêu dùng, thanh toán không dùng tiền mặt và các chính sách tín dụng, tạo điều kiện thuận lợi cho người dân tiếp cận vốn và mở rộng chi tiêu.'"
+      }
+    ]
+  },
+  {
+    "time": "2026-05-27T16:16:06.000Z",
+    "timestamp": 1779898566,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0c2FnNh8Z9tc4epvJmVeoLj2iB4HNJrLaeQbHDjxRJ7MXZBn4sxNmdkzkHZg5artdl",
+    "text": "Kk",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/707855825_27246779451629803_9180984141342236127_n.jpg?stp=dst-jpg_tt6&cstp=mx720x847&ctp=s590x590&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ox4hUMfgHgAQ7kNvwHXIpW2&_nc_oc=AdqNJbQZsQZwPgeQ4H6KRCkDc1kHnFSjERfAne-wL73WqbDlm3IjA_1pkdJUbzyv-fY&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=6UB4TtQtSi25wF5Z9c7JIg&_nc_ss=72289&oh=00_AQH5w4ZgAaG7JIpw-ROABrIXhDt-NjOoTl01qxlfa9JUrA&oe=6A89E7E0",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/707855825_27246779451629803_9180984141342236127_n.jpg?stp=dst-jpg_tt6&cstp=mx720x847&ctp=s590x590&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ox4hUMfgHgAQ7kNvwHXIpW2&_nc_oc=AdqNJbQZsQZwPgeQ4H6KRCkDc1kHnFSjERfAne-wL73WqbDlm3IjA_1pkdJUbzyv-fY&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=6UB4TtQtSi25wF5Z9c7JIg&_nc_ss=72289&oh=00_AQH5w4ZgAaG7JIpw-ROABrIXhDt-NjOoTl01qxlfa9JUrA&oe=6A89E7E0",
+          "height": 590,
+          "width": 502
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27246779414963140&set=a.2029578063776623",
+        "id": "27246779414963140",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjcyNDY3Nzk3MzQ5NjMxMDg="
+        },
+        "ocrText": "May be an image of text that says 'm.cafef.vn vn Facebook DOANH DOANHNGHIỆP NGHIỆP Hạ thời gian 'đổi vàng' xuống 3 năm, Vinhomes khẳng định dù giá vàng tăng nóng tới đâu cũng không thể sập Tuấn Khôi- THỨ 27/05/2026, 17:52 f Nghe đọc bài 6:47 1.00xv Nữ miền Bắc Vinhomes không mạo hiểm với tài sản của khách hàng hay chính vận mệnh của mình, CEO Vinhomes Nguyễn Thu Hằng nói.'"
+      }
+    ]
+  },
+  {
+    "time": "2026-05-26T01:56:28.000Z",
+    "timestamp": 1779760588,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02pUTfxUeuC9WuzMtHcoKuuXRg2No1woFJDqKZeLG4VMJicB8Lq4K5ExDeGLxA8HSfl",
+    "text": "Haha, bác Giang Le nêu một vài vấn đề quan trọng nhưng khá hài hước vì người ta cứ phải nghĩ theo chiều hướng khác, trong đó có vấn đề mình nhắc đến nhiều lần như vàng, tiền \"trong dân\" có đổi không. Riêng tác động tiêu dùng thì mình không đồng ý, đúng hơn là cần rõ hơn, vì nó phụ thuộc MPC, khuynh hướng tiêu dùng biên, người mua vàng (có tiền, có ý định phân bổ vào vàng) chưa hẳn đã giảm tiêu dùng, người bán cũng vậy, chưa hẳn tăng tiêu dùng. \nTrở lại lượng vàng, tiền ở trên thì note hôm qua mình để ngõ chữ \"nếu...\" Đến đây lại nghĩ đến chuyện buồn cười khác là có bạn hỏi cung tiền tăng khi nào (tức trả lời nếu điều gì xảy ra), thì mình có trả lời, \"không khéo thì lượng vàng trong dân nó vẫn vậy, thậm chí sôi động hơn khi tính hấp dẫn của nó tăng lên\". :-d Vẫn vậy là thế nào? Là vì như bác Giang nói, bên bán, bên mua ở khu vực household và DN chuyển từ người này qua người kia. NH có mua thì phải tuân thủ quy định và trạng thái (nếu không bán được...) hoặc cuối cùng bán cho SBV (hoặc cho SBV vay) hoặc XK mới giảm lượng vàng. \n[Về cơ chế, nếu SBV mua thì ví dụ gần gần nhất là như mua USD thôi (dân bán U qua NH, đại lý. SBV mua lại, hoặc SBV muốn huy động thì thông qua phát hành gold CD hay chứng chỉ tiền gửi vàng - một hình thức mà trước đây các NH triển khai, với goldCD khi được issue bởi SBV thì tổ chức nắm CD này thậm chí thuận lợi hơn trong việc monetize ví dụ thông qua thị trường quốc tế để huy động/vay USD backed bằng paper gold CD, trong khi gold physical vẫn ở trong kho trong nước). \nCòn hơn thập kỷ qua thì chủ yếu SBV bán vàng ra để tăng cung cho thị trường]. Lượng tiền cũng vậy, có thể tăng khi NH, SBV mua hoặc XK... Tiền cũng tăng khi tăng cho vay dựa trên gold backed - cái chuỗi collateral... tăng. Monetizing tiếp.",
+    "banks": [],
+    "topic": "deals_corp",
+    "media": [
+      {
+        "description": {
+          "delight_ranges": [],
+          "image_ranges": [],
+          "inline_style_ranges": [],
+          "aggregated_ranges": [],
+          "ranges": [],
+          "color_ranges": [],
+          "text": "When this happens, it's usually because the owner only shared it with a small group of people, changed who can see it or it's been deleted."
+        },
+        "title_with_entities": {
+          "delight_ranges": [],
+          "image_ranges": [],
+          "inline_style_ranges": [],
+          "aggregated_ranges": [],
+          "ranges": [],
+          "color_ranges": [],
+          "text": "This content isn't available right now"
+        }
+      }
+    ]
+  },
+  {
+    "time": "2026-05-26T01:03:06.000Z",
+    "timestamp": 1779757386,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02NVMvgtx9XmRuFbQP8DJgAHN9e6avg1tPgCmX5iDsRiaHRe8ipTMtgh7Vs8odeRcCl",
+    "text": "Giờ ra lại vàng có lãi (implied, fixed income/ generate income flow), publicly\n\nNgoài lề, riêng các giao kết trong giao dịch tiền tệ, ngoại hối, giá rất nghiêm ngặt, việc cam kết một mức giá phải tuân thủ các điều kiện cho phép.",
+    "banks": [],
+    "topic": "exchange_fx",
+    "media": []
+  },
+  {
+    "time": "2026-05-25T03:27:56.000Z",
+    "timestamp": 1779679676,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0KcVMEScgQyuj4r8X9PGXVivpEa8riUKF5musmBfi396Pj5Q1sh6BLX1sBD83iRB6l",
+    "text": "Cũng thú vị, độc đáo. \nCũng monetizing... vàng\nCũng bạch hóa một phần vàng, bởi vàng vốn có tính cơ động và đặc tính \"để gầm giường\" - đây là đặc tính đặc sắc lâu đời, giờ lại thêm lựa chọn.\nDeal này thậm chí có thể tăng cung tiền VND nếu ...\nTrong mấy chục đặc tính gắn với giao dịch, vàng bị cấm dùng thanh toán; cấm hđv, cho vay (với NH), còn một số gd khác thì thuộc loại có điều kiện. \nMà cũng vì vậy, nên cần đảo qua nhiều khúc của cấu trúc.\nCấu trúc bên dưới nếu thời gian đến đáo hạn, xác suất chuyển đổi giảm xuống và tỷ lệ chuyển đổi ->0% thì nó lại trở thành cấu trúc quen thuộc trc đây...\n\nP/s. Thuế liên quan chuyển đổi, không chuyển đổi, chuyển nhượng hđ (trước chuyển đổi), hoặc sau chuyển đổi (vd muốn bán lại nhà)... cũng lưu ý.",
+    "banks": [],
+    "topic": "deals_corp",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-6/707678713_27216233974684351_8058215122257716241_n.jpg?stp=dst-jpg_tt6&cstp=mx611x559&ctp=p552x414&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=HeCwwgyNXzwQ7kNvwGWbH_m&_nc_oc=Ado8Nm7Zv3f10X56h_K3KjBoHZjGavFtmKf9N_2SAvi6OBFEPOYnxX6k19kcb-bNWcU&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=potDHZSsXeRhp_9cV-Qn5Q&_nc_ss=72289&oh=00_AQGmv4cbojmgDN157kqHjk4sBfvGd1MjhmT0_5NHea1-Hw&oe=6A89E9AF",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-6/707678713_27216233974684351_8058215122257716241_n.jpg?stp=dst-jpg_tt6&cstp=mx611x559&ctp=p552x414&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=HeCwwgyNXzwQ7kNvwGWbH_m&_nc_oc=Ado8Nm7Zv3f10X56h_K3KjBoHZjGavFtmKf9N_2SAvi6OBFEPOYnxX6k19kcb-bNWcU&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=potDHZSsXeRhp_9cV-Qn5Q&_nc_ss=72289&oh=00_AQGmv4cbojmgDN157kqHjk4sBfvGd1MjhmT0_5NHea1-Hw&oe=6A89E9AF",
+          "height": 505,
+          "width": 552
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27216233951351020&set=a.2029578063776623",
+        "id": "27216233951351020",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjcyMTYwNjk3MDQ3MDA3Nzg="
+        },
+        "ocrText": "May be an image of text"
+      }
+    ]
+  },
+  {
+    "time": "2026-05-24T03:29:20.000Z",
+    "timestamp": 1779593360,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0pv1xSMoRhhWxeoZ7MG9xfFjkd3MmrecEhy8JVSFhMqmWCjBDJw3WKj8tTNgTcyx3l",
+    "text": "Sự phát triển của các sản phẩm cấu trúc (financial engineering), đặc biệt từ trước GFC với MBS, sau GFC thì các constraints được triển khai theo lộ trình liên tục khiến các hình thức khác của của quá trình bên dưới được khai thác (để lách, tránh, khai thác các quy định của PL, các giới hạn và đặc tính của từng loại tài sản, gần nhất là Basel iii với collateral lending, repo, collateral swaps và rehypothecation (tái thế chấp, tái tài trợ, collateralized để tạo collateral chains)\n\nCấu trúc bên dưới có thể áp dụng với các assets nói chung bao gồm cả trái phiếu, vàng, bđs, quyền bđs, quyền từ HSTD (như mortgage)... có lãi (income flow) hoặc không, hoặc Implied interest rate), sự phức tạp sẽ cao hơn khi kết hợp với các quyền chọn (vd như được quyền thực hiện hợp đồng tại giá...).\n\nSwaption (Swaps + Options) + Rehypothecation\n\nVấn đề lớn nhất, vẫn là, margin (khi giá underlying asset biến động), liquidity và unwind, đặc biệt unwind. Quá trình unwind của mấy cấu trúc này phức tạp bởi vì thường các assets xuất hiện trong cấu trúc thường bị hạn chế bởi bởi các hạn chế/quy định mà vốn là động lực để phát triển cấu trúc này nếu không muốn nói rằng, khi gặp vấn đề, lịch sử cho thấy chỉ giải quyết được khi có LoLR và/hoặc BoLR (Buyer of last resort).\nTuy nhiên, bước đầu, sẽ tạo ra cái gọi là collateral chain, collateral multiplier và tăng độ rộng ảo và velocity của collateral của thị trường tài sản. \n\nVới một số ts, có thể kích thích nhu cầu tăng lên để tham gia vào quá trình (nhiều lựa chọn hoặc đang phân vân hoặc đang có sẵn ts), vd người ta (bên không bị hạn chế) có thể tăng mua ts A, rồi dùng nó để làm cấu trúc B, từ B lại làm cấu trúc với C... Gần nhất vẫn là như trái phiếu, vàng, và bitcoin.",
+    "banks": [],
+    "topic": "deals_corp",
+    "media": []
+  },
+  {
+    "time": "2026-05-22T02:22:04.000Z",
+    "timestamp": 1779416524,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid031mPp57SSTsTYvUNQdgo1u1MosYa4idUwQV9nQrVfSRSdd3d9DSumzDiHNKEQBaP4l",
+    "text": "Tình cờ bắt gặp meme hình trên X, thử làm tới một chút nữa, tôi đề xuất luôn khuôn khổ điều hành mới, dù gì tay Thống đốc mới cũng không ưa mấy cái tùy nghi, thậm chí Warsh từ lâu đã ủng hộ chính sách nên dựa trên quy tắc rõ ràng và tiếp cận kỹ luật hơn. Cũng như Treasury hay UST là một phần quan trọng trong kỷ nguyên mới.\nVậy nên chúng ta chỉ giao tiếp chính thông qua Chiều cao, Cân nặng và Yield gap thôi. Cụ thể: Chair cao --> tightening bias, Chair nặng --> credibility premium , Yield kỳ trước --> inertia.\n\nXin lỗi cụ Taylor trước, bắt đầu:\n\nTừ Taylor-style feedback form viết lại thành...  Monetary Anthropometric Rule (MAR), phát biểu một phát như sau:\n\nY = Y* + α(η−η*) + γ(ω−ω*), trong đó:\n\nY: equilibrium Treasury yield \nY*: neutral yield \nη*: Fed Chair Stature Index (height) \nη*: neutral stature \nω: Fed Chair Mass Index (weight) \nω*: neutral mass \nα: stature transmission coefficient \nγ: mass credibility coefficient \n\nThay tham số vào:\nY = 4.25 + 0.61(η−71) + 0.015(ω−170)\n\nChuẩn hóa thành gap form, định nghĩa:\nη~ = (η−η*)/σ_η,\nω~= (ω−ω*)σ_ω\nThì\n\nY = Y* + λη~ + κω~ \n\nλ chính là Stature Elasticity of Yield và κ là Mass Premium Coefficient.\n\nHoặc, Y = Y* + λη~ + κω~ + χ\n\nVói χ là ... Chair Aura Premium (tức giải thích phần còn lại của yield không giải thích được bởi chiều cao và cân nặng).\n\nVậy tình hình là gì? Khá là căng, thách thức mới cho KV tân chủ tịch: \n\nLong-end yields respond not only to macro fundamentals but also to anthropometric deviations captured by the stature gap η~ and mass gap ω~. :-d\n\n[Bài viết vui, không nên áp dụng.]\n\nP/s. Có bạn nào thử hình dung đến ở ... nơi nào đó không?",
+    "banks": [],
+    "topic": "interest_macro",
+    "media": [
+      {
+        "thumbnail": "https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/703824133_27183397407968008_2584478398360793723_n.jpg?stp=dst-jpg_tt6&cstp=mx1650x953&ctp=p180x540&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=OT4jlR_6JxsQ7kNvwF_dnnD&_nc_oc=Adp22xS6wT0sVNcotLPdE6ocoxdPqYjqz0tXyfjlO1oHF2R_lM0U-n3oTmgF4Si-NCw&_nc_zt=23&_nc_ht=scontent-dfw5-1.xx&_nc_gid=p2U8h8v68jOjy11zpfe5hQ&_nc_ss=72289&oh=00_AQHJAKRmApurIOkaSYv4dfx_BHvDRTb_jgGI4Pn4Hq9efA&oe=6A89F986",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFEBECEE",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/703824133_27183397407968008_2584478398360793723_n.jpg?stp=dst-jpg_tt6&cstp=mx1650x953&ctp=p180x540&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=OT4jlR_6JxsQ7kNvwF_dnnD&_nc_oc=Adp22xS6wT0sVNcotLPdE6ocoxdPqYjqz0tXyfjlO1oHF2R_lM0U-n3oTmgF4Si-NCw&_nc_zt=23&_nc_ht=scontent-dfw5-1.xx&_nc_gid=p2U8h8v68jOjy11zpfe5hQ&_nc_ss=72289&oh=00_AQHJAKRmApurIOkaSYv4dfx_BHvDRTb_jgGI4Pn4Hq9efA&oe=6A89F986",
+          "height": 540,
+          "width": 935
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27183397381301344&set=a.2029578063776623",
+        "id": "27183397381301344",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjcxODMzOTc2NTc5Njc5ODM="
+        },
+        "ocrText": "May be a graphic of text"
+      }
+    ]
+  },
+  {
+    "time": "2026-05-19T14:41:44.000Z",
+    "timestamp": 1779201704,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02rWBx4Bu3pD5YyMxQ9FWpaNKeKDeAquh9NmjbwLQF3gWxTHc1stUhHensQaYKJ8C9l",
+    "text": "Yields++ across the curve \n\nSource: El-Erian",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-dfw6-1.xx.fbcdn.net/v/t39.30808-6/701581125_27152919194349163_3903138166133842009_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx816x943&ctp=s590x590&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=063im_YHlX8Q7kNvwH9l8cB&_nc_oc=Adr1ojq6TaAtCdDmSN4yp8biCNIMjxDOvtsVUFsw2H_p8CENHhGwKveiWqUY2lH9EUM&_nc_zt=23&_nc_ht=scontent-dfw6-1.xx&_nc_gid=p2U8h8v68jOjy11zpfe5hQ&_nc_ss=72289&oh=00_AQG6-FbbCCbEgtHpOcuQ30749ocfrj5lvJSTkGg4bEEmTQ&oe=6A89EE40",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF141414",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-dfw6-1.xx.fbcdn.net/v/t39.30808-6/701581125_27152919194349163_3903138166133842009_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx816x943&ctp=s590x590&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=063im_YHlX8Q7kNvwH9l8cB&_nc_oc=Adr1ojq6TaAtCdDmSN4yp8biCNIMjxDOvtsVUFsw2H_p8CENHhGwKveiWqUY2lH9EUM&_nc_zt=23&_nc_ht=scontent-dfw6-1.xx&_nc_gid=p2U8h8v68jOjy11zpfe5hQ&_nc_ss=72289&oh=00_AQG6-FbbCCbEgtHpOcuQ30749ocfrj5lvJSTkGg4bEEmTQ&oe=6A89EE40",
+          "height": 590,
+          "width": 511
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27152919157682500&set=a.2029578063776623",
+        "id": "27152919157682500",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjcxNTI5MTk0MTQzNDkxNDE="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-05-17T05:10:23.000Z",
+    "timestamp": 1778994623,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid03zNc6uabjKPiyUQJURim2nLybkWmoGqHmbRKcH9Yv7hhmRYfK4PRosokg8nnaTHWl",
+    "text": "Lại swing",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/699544990_27123500400624376_4014199549621112303_n.jpg?stp=dst-jpg_tt6&cstp=mx720x469&ctp=s720x469&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=La0L8ShHkBMQ7kNvwGeUhB1&_nc_oc=AdroBPwxwHrN0z4oiyaHLCmggPorsltCTWczE9CWkuY0YiG1jOUliEPNpgbLpzWxx9w&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=p7TZcgzbE9pUCdLNYVC26w&_nc_ss=72289&oh=00_AQEHLUcqHoVDbZK0ff1uGdoTWAxOoSYJy_WwwAE3hDl8IQ&oe=6A8A07BD",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF000000",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/699544990_27123500400624376_4014199549621112303_n.jpg?stp=dst-jpg_tt6&cstp=mx720x469&ctp=s720x469&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=La0L8ShHkBMQ7kNvwGeUhB1&_nc_oc=AdroBPwxwHrN0z4oiyaHLCmggPorsltCTWczE9CWkuY0YiG1jOUliEPNpgbLpzWxx9w&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=p7TZcgzbE9pUCdLNYVC26w&_nc_ss=72289&oh=00_AQEHLUcqHoVDbZK0ff1uGdoTWAxOoSYJy_WwwAE3hDl8IQ&oe=6A8A07BD",
+          "height": 469,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27123500327291050&set=a.2029578063776623",
+        "id": "27123500327291050",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjcxMjM1MDA3MjcyOTEwMTA="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-05-17T02:49:50.000Z",
+    "timestamp": 1778986190,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0nJDQuR5bRnNdP7Qt5CYhuggjqNZQRfF1wPRPnQ9uiVvHusHHMj1Qqmuuz7uEFFHZl",
+    "text": "Mình cũng rất ấn tượng với câu nói \"We are navigating by the stars under cloudy skies\", thời điểm đó nó đủ mạnh mẽ để đập tan những hoài nghi về vị thế (vốn bị xem thường về xuất thân vốn không phải dân ...) và gắn kết hơn với giới Econ, bảo vệ mạnh mẽ cho lập trường của cụ. Nhưng xa hơn, có lẽ sau này người ta sẽ nhắc đến cụ khi, cũng có lẽ thôi, cụ điều hành dựa trên quan điểm rộng, dựa trên tổng thể toàn bộ điều kiện tài chính (Financial conditions, hoặc broad FCI) hơn là khía cạnh hẹp (mà/vốn tùy điều kiện khiến thị trường đã đẩy priced quá mức dựa trên các biến động ngắn hạn chi phối). Cũng chính vì vậy, nó trở nên bị behind the curve trong cuộc chiến lạm phát trước đây. \nCũng vì vậy, giới CB cũng có thêm sự thận trọng và cảm hứng để \"phản tỉnh\" với mệnh đề: monetary policy as an endogenous...\n... với phản tỉnh trên, mình nghĩ VN cũng phải thận trọng xem xét, đặc biệt khi nói đến những vấn đề như \"dư địa\" cstt, vị thế good/bad để đối phó với..., để bước vào, để vươn... :-d",
+    "banks": [],
+    "topic": "interest_macro",
+    "media": [
+      {
+        "description": {
+          "delight_ranges": [],
+          "image_ranges": [],
+          "inline_style_ranges": [],
+          "aggregated_ranges": [],
+          "ranges": [],
+          "color_ranges": [],
+          "text": "When this happens, it's usually because the owner only shared it with a small group of people, changed who can see it or it's been deleted."
+        },
+        "title_with_entities": {
+          "delight_ranges": [],
+          "image_ranges": [],
+          "inline_style_ranges": [],
+          "aggregated_ranges": [],
+          "ranges": [],
+          "color_ranges": [],
+          "text": "This content isn't available right now"
+        }
+      }
+    ]
+  },
+  {
+    "time": "2026-05-11T01:26:52.000Z",
+    "timestamp": 1778462812,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0LLKNHJKTpZjXsRW6KQ4NpfdYsoEcBKu7SKxCpVbuAGUoXkxFnzqz9iD72E348irQl",
+    "text": "Years ago",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2026-05-11T01:22:16.000Z",
+    "timestamp": 1778462536,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0MXmtJxh2RQXcfWQs9Ypf23o1q2Zqt8Svkyez86Pyvqc2vx2cfT4LRf4iw9fRyiAil",
+    "text": "Một cảnh báo đầy tính khiêu khích bước vào thời kỳ mới, nơi balance sheet inflation được nuôi dưỡng từ sự đan xen giữa tùy nghi - linh hoạt (như hai mặt của một đồng xu), cùng sự mong manh của các giả định (assumptions), nếu không được dẫn dắt bởi một hệ thống dựa trên các luật lệ và quy tắc mạnh mẽ và minh bạch.",
+    "banks": [],
+    "topic": "cfa_updates",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/691728180_27043251371982613_8237454449721664721_n.jpg?stp=dst-jpg_tt6&cstp=mx720x616&ctp=s590x590&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=LZseRwQUtLUQ7kNvwFfUXUv&_nc_oc=AdpVeXbH91GTCmBlCoWfGW98AxB5nlH4-AzCGG1ZQnKebS3BbkwLrFkcQ-_ED67mCHI&_nc_zt=23&_nc_ht=scontent-lga3-2.xx&_nc_gid=Xpndp6MMyU0PkmGPSplBvQ&_nc_ss=72289&oh=00_AQH4X1GP77GQ93U5EAizgf4EgIvLr1MNH1nd-ibUSTqXLw&oe=6A89E946",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/691728180_27043251371982613_8237454449721664721_n.jpg?stp=dst-jpg_tt6&cstp=mx720x616&ctp=s590x590&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=LZseRwQUtLUQ7kNvwFfUXUv&_nc_oc=AdpVeXbH91GTCmBlCoWfGW98AxB5nlH4-AzCGG1ZQnKebS3BbkwLrFkcQ-_ED67mCHI&_nc_zt=23&_nc_ht=scontent-lga3-2.xx&_nc_gid=Xpndp6MMyU0PkmGPSplBvQ&_nc_ss=72289&oh=00_AQH4X1GP77GQ93U5EAizgf4EgIvLr1MNH1nd-ibUSTqXLw&oe=6A89E946",
+          "height": 505,
+          "width": 590
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27043251338649283&set=a.2029578063776623",
+        "id": "27043251338649283",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjcwNDMyNTE2MTE5ODI1ODk="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-05-09T14:18:20.000Z",
+    "timestamp": 1778336300,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid037PiMtgb2S1qdUn6fhnDoS7P54Q4TsXaXDWWnZuBDwdVoMC1BxCtYXKrgb8Wrrscyl",
+    "text": "Interesting! Các NHTW và chính phủ nước ngoài tăng cường nắm giữ trái phiếu chính phủ Malaysia. Khi được các bên đánh giá yields tương đối, ổn định, thanh khoản khá tốt, Fx perf. quá hấp dẫn, vị thế tốt trong bối cảnh ...toàn cầu, + diversification reserves...\n\nUpdate: các nhà đầu tư quốc tế đã mua ròng gần 1 tỷ U trái phiếu chính phủ trong tháng 4.",
+    "banks": [],
+    "topic": "ratio_lcr_nsfr",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/692054292_27026744526966631_7269310121881512729_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x616&ctp=p180x540&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=aJlkz5JDNrUQ7kNvwHctNd1&_nc_oc=AdouYcWQWe09TFakn1i4PnDJ8P14fSmX1GWIn_LSv1jWIvkojWFjnTA7ohmnlynumh4&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=Xpndp6MMyU0PkmGPSplBvQ&_nc_ss=72289&oh=00_AQFI63pGnXJhU6V6YNJlzuvgQJUWzb7yvf978UHoXnKVIg&oe=6A89D740",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/692054292_27026744526966631_7269310121881512729_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x616&ctp=p180x540&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=aJlkz5JDNrUQ7kNvwHctNd1&_nc_oc=AdouYcWQWe09TFakn1i4PnDJ8P14fSmX1GWIn_LSv1jWIvkojWFjnTA7ohmnlynumh4&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=Xpndp6MMyU0PkmGPSplBvQ&_nc_ss=72289&oh=00_AQFI63pGnXJhU6V6YNJlzuvgQJUWzb7yvf978UHoXnKVIg&oe=6A89D740",
+          "height": 540,
+          "width": 947
+        },
+        "url": "https://www.facebook.com/photo/?fbid=27026744483633302&set=a.2029578063776623",
+        "id": "27026744483633302",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjcwMjY3NDQ4NTAyOTk5MzI="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-05-07T00:59:48.000Z",
+    "timestamp": 1778115588,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02UGXYWtEUhLwCsxYcH8EZYiRg9sHVUN3c61C9fRe7RNJDtZDpxKj3sEoGYPEvzU5Bl",
+    "text": "Haha. Convergence... around a narrow ratings range.\nLack of high-yield marrkt functioning.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/694006214_26994809416826809_7411332442836067257_n.jpg?stp=dst-jpg_tt6&cstp=mx720x533&ctp=s720x533&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=YecC4BU7_hwQ7kNvwE_nDGp&_nc_oc=AdqW25aUJpHCFaQYqcpMC98qz33-8KUqZABZ4A0k5cX_8_m4Qk_298eRI4zNbEpN0v4&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=Xpndp6MMyU0PkmGPSplBvQ&_nc_ss=72289&oh=00_AQHNcyWefrA8meNVNYZdJMYcOe8mzjZn0J2Ac1gNpKGaaA&oe=6A89EF11",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/694006214_26994809416826809_7411332442836067257_n.jpg?stp=dst-jpg_tt6&cstp=mx720x533&ctp=s720x533&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=YecC4BU7_hwQ7kNvwE_nDGp&_nc_oc=AdqW25aUJpHCFaQYqcpMC98qz33-8KUqZABZ4A0k5cX_8_m4Qk_298eRI4zNbEpN0v4&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=Xpndp6MMyU0PkmGPSplBvQ&_nc_ss=72289&oh=00_AQHNcyWefrA8meNVNYZdJMYcOe8mzjZn0J2Ac1gNpKGaaA&oe=6A89EF11",
+          "height": 533,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26994809363493481&set=a.2029578063776623",
+        "id": "26994809363493481",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY5OTQ4MDk4MTY4MjY3Njk="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-05-06T02:03:11.000Z",
+    "timestamp": 1778032991,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02EkBPn661JjrDkrvqu5QPLA4XjtSDSjVPFetxKGgac2CyG7DaoT4KeR8jwat4CY8Cl",
+    "text": "Yentervention: Một số bank lớn đang question liệu Fx intervention của MoF có chịu sự hạn chế khi sử dụng hết dư địa theo quy tắc đối với chế độ tỷ giá Free Floating rate thì không có sự can thiệp, hoặc can thiệp rất hạn chế: 3×3 (3 đợt × 3 ngày liên tục × 6 tháng), hoặc phải phân loại lại từ free floating xuống floating. \nTuy nhiên đây chỉ là rule phân loại của IMF và MoF sẽ không thể hàm ý rằng chịu sự hạn chế này. Bình luận của Nakajima từ Mizuho:",
+    "banks": [],
+    "topic": "exchange_fx",
+    "media": [
+      {
+        "thumbnail": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/687835336_26983456287962122_5011173971139854106_n.jpg?stp=dst-jpg_tt6&cstp=mx720x398&ctp=s720x398&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=UwG2-jDe-XMQ7kNvwHncgo9&_nc_oc=Adr4OX074ObI1uEm8FZCN86Xdl4J4wrzR6V0JcsQGDOgsB2LTNLj87usFxtm5cKFS9w&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=529TgJOSyy_8wTmVxjzN4A&_nc_ss=72289&oh=00_AQFiye6dB586G_pc4ny1uLG6BN04bzPlg1ja253bNsK8kg&oe=6A89D7A3",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/687835336_26983456287962122_5011173971139854106_n.jpg?stp=dst-jpg_tt6&cstp=mx720x398&ctp=s720x398&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=UwG2-jDe-XMQ7kNvwHncgo9&_nc_oc=Adr4OX074ObI1uEm8FZCN86Xdl4J4wrzR6V0JcsQGDOgsB2LTNLj87usFxtm5cKFS9w&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=529TgJOSyy_8wTmVxjzN4A&_nc_ss=72289&oh=00_AQFiye6dB586G_pc4ny1uLG6BN04bzPlg1ja253bNsK8kg&oe=6A89D7A3",
+          "height": 398,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26983456244628793&set=a.2029578063776623",
+        "id": "26983456244628793",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY5ODM0NTY2MDQ2Mjg3NTc="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-05-05T03:24:44.000Z",
+    "timestamp": 1777951484,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid025BW5wyRmxav4RFZ3twV23TWtn6Ni2ibKPngci4gjBxBToTnZTajwbgTM7c41yiPql",
+    "text": "4% \"Bible\" curve",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/687064897_26972745582366526_6645358654011343322_n.jpg?stp=dst-jpg_tt6&cstp=mx720x1121&ctp=p526x296&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=66-lXV-NW6UQ7kNvwHg4oy-&_nc_oc=AdrYHAOSReNZjHNtdvwRHd1h8KgD23tXanwY-ih85VoCiCUylp_giBlLtIBB_Bhzk6g&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=529TgJOSyy_8wTmVxjzN4A&_nc_ss=72289&oh=00_AQGx7In5AX9XLNIpc2R47H1wSZ2WyRDVA-GjborUl1Cahg&oe=6A89E079",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/687064897_26972745582366526_6645358654011343322_n.jpg?stp=dst-jpg_tt6&cstp=mx720x1121&ctp=p526x296&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=66-lXV-NW6UQ7kNvwHg4oy-&_nc_oc=AdrYHAOSReNZjHNtdvwRHd1h8KgD23tXanwY-ih85VoCiCUylp_giBlLtIBB_Bhzk6g&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=529TgJOSyy_8wTmVxjzN4A&_nc_ss=72289&oh=00_AQGx7In5AX9XLNIpc2R47H1wSZ2WyRDVA-GjborUl1Cahg&oe=6A89E079",
+          "height": 819,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26972745555699862&set=a.2029578063776623",
+        "id": "26972745555699862",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY5NzI3NDU4MzIzNjY1MDE="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-05-04T03:14:10.000Z",
+    "timestamp": 1777864450,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02H3xo9bH2Q47ZqLvY1vDLQm16FhQwNRHEuVen3Sy9488tfg916drwbGVbae6w9DfUl",
+    "text": "PMI April, prices and margin",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/686940305_26961801800127571_8330583165863225016_n.jpg?stp=dst-jpg_tt6&cstp=mx720x521&ctp=s720x521&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=8kbfgjNFubMQ7kNvwEXsBzj&_nc_oc=AdqA9zbZES0LuXosMnN3nRUSSKSfyBOngJlrJ-HjJsE9KO33lFUmCMWFuvtN5U7LwnU&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=529TgJOSyy_8wTmVxjzN4A&_nc_ss=72289&oh=00_AQEmV-Zb8ek4FvKH_8bTp_kzX7uH_UbdgX89Hmb8K6qi7w&oe=6A89F396",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/686940305_26961801800127571_8330583165863225016_n.jpg?stp=dst-jpg_tt6&cstp=mx720x521&ctp=s720x521&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=8kbfgjNFubMQ7kNvwEXsBzj&_nc_oc=AdqA9zbZES0LuXosMnN3nRUSSKSfyBOngJlrJ-HjJsE9KO33lFUmCMWFuvtN5U7LwnU&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=529TgJOSyy_8wTmVxjzN4A&_nc_ss=72289&oh=00_AQEmV-Zb8ek4FvKH_8bTp_kzX7uH_UbdgX89Hmb8K6qi7w&oe=6A89F396",
+          "height": 521,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26961801746794243&set=a.2029578063776623",
+        "id": "26961801746794243",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY5NjE4MDIwMDM0NjA4ODQ="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-05-03T12:10:59.000Z",
+    "timestamp": 1777810259,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0HE1bqTcTEw8M1WoivGitu3ZU3aZaApTBng2eCc5qef1BmShCFhrRAQi4dcpk2hRdl",
+    "text": "JPY: 160 Yentervention: double kill.\nThiết chế can thiệp trên thị trường ngoại hối (FX Intervention) của Nhật Bản khá là thú vị, như trước đây tôi có đề cập, chịu trách nhiệm thực thi thuộc về bộ Tài chính (MoF) và hạch toán trên bảng cđkt của họ thông qua Government's Foreign Exchange Fund Special Account (FEFSA), sau khi tham vấn và phối hợp với NHTW (BoJ). Chính vì điều này, nên cơ chế của hành động can thiệp thường được cấu trúc sao cho tạo ra một trạng thái \"neutral\" đối với NHTW (\"nước sông không phạm nước giếng\"), cụ thể ở đây là delta MB = 0, tức trạng thái hoàn toàn sterilized. \nNhư chúng ta đã biết, sterilization là nghiệp vụ trả/đảo ngược MB trở về trạng thái ban đầu hoặc theo định hướng, mục tiêu nào đó,... vd nếu NHTW mua Fx/bán nội tệ thì sẽ tạo ra +delta MB, sau đó \"khử\" bằng cách thực hiện nghiệp vụ, vd (nhưng không giới hạn) như phát hành central bank bills với nội tệ chẳng hạn, tạo -delta MB... \nVì ở Nhật BoJ không thực thi, mà MoF, cụ thể là thông qua FEFSA.\nHôm 30Apr MoF và BoJ phối hợp can thiệp, một trong những điều đặc sắc nhất của họ là... OMO (open mouth operation) - các phát biểu (hăm he, đe, nẹt gì đó) - intensified verbal intervention, rồi...a lê hup thực hiện). UJ có phiên biến động hơn 3%. Dựa trên quan sát tài khoản thanh toán (giống như TGA vậy), thì ước tính cú này khoảng 5.4 nghìn tỷ Y, lớn thứ 3 kể từ 2022.\nNhưng không dừng ở đó, thiết kế vốn tạo ra neutral MB, nhưng như nói ở trên, chỉ gọi là \"thường\" như vậy thôi. Vì nó là một quá trình, và bảng cđkt cũng như trạng thái của các bên như CB, NHTM, Treasury,... ghi nhận theo accumulative acct, i.e accumulative MB. \nTrở lại Fx Intervention vừa qua, MoF bán U mua J. Cân đối của các bên sẽ như hình bên dưới, khi kết thúc. \nTuy nhiên, nghệ thuật ở chỗ (và cả sự phối hợp với BoJ), MoF sau khi thu Yen (+Yen Account/TGA tại CB, họ chưa vội hoặc làm chậm lại quá trình Redemption operations (dùng nguồn Yen này để mua lại nợ - FB hay Financing Bills/Bonds). Tức là...accumulative MB vẫn âm cho đến khi hoạt động Redemption hoàn tất, nếu càng lâu thì càng tạo áp lực lên đồng nội tệ (thắt chặt JPY liquidity và upward pressure on money market rates., kết hợp BoJ) tạo ra double kill lên UJ (đặc biệt mấy anh short Yen...), tức là (time lag) timing art của họ - tùy điều kiện thị trường. \n\nP/s. Nói chi tiết hơn một chút, đó là MoF thông qua FEFSA để thực hiện can thiệp, thì cơ chế financing cho operations sẽ là tạo fund USD và/hoặc JPY. Chẳng hạn ban đầu là họ có cđkt asset[TGA, USD reserves] và liab[FB] cùng với các swaps nào đó. Khi họ can thiệp, như trên là sell U buy J, khi đó làm tăng TGA (+delta TGA) --> [+TGA, -USD]; sau đó họ sẽ dùng đúng khoản +delta TGA để mua lại FB thông qua nghiệp vụ RO --> trở lại trạng thái TGA ban đầu nhưng giảm tài sản USD và giảm nợ nội tệ [TGA, -USD] và [-FB]. Kết quả như hình, dự trữ của hệ thống FI (banks) được \"trả\" lại như ban đầu, cđkt của NHTW cũng vậy. Tuy nhiên market thì...",
+    "banks": [],
+    "topic": "cfa_updates",
+    "media": [
+      {
+        "thumbnail": "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/687968082_26955182357456182_684654690389050507_n.jpg?stp=dst-jpg_tt6&cstp=mx720x849&ctp=s590x590&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=zHlMQ-Adcs0Q7kNvwGtkebk&_nc_oc=Adpotf5vtHddRXHxZ9y7Tld5g7mszZbik1Ia9jAefJsufzi9DnCitS9hIFR-NeQFzOo&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=Vp7p6T0DJYx-jR7FiY0caQ&_nc_ss=72289&oh=00_AQH690MxtHseK24szFr8zD4deyakxmtR8Dwk6ECp4TBcjQ&oe=6A8A0593",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/687968082_26955182357456182_684654690389050507_n.jpg?stp=dst-jpg_tt6&cstp=mx720x849&ctp=s590x590&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=zHlMQ-Adcs0Q7kNvwGtkebk&_nc_oc=Adpotf5vtHddRXHxZ9y7Tld5g7mszZbik1Ia9jAefJsufzi9DnCitS9hIFR-NeQFzOo&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=Vp7p6T0DJYx-jR7FiY0caQ&_nc_ss=72289&oh=00_AQH690MxtHseK24szFr8zD4deyakxmtR8Dwk6ECp4TBcjQ&oe=6A8A0593",
+          "height": 590,
+          "width": 500
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26955182337456184&set=a.2029578063776623",
+        "id": "26955182337456184",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY5NTUxODI3MDA3ODk0ODE="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-05-02T05:15:37.000Z",
+    "timestamp": 1777698937,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02Uh6jeV3maZCaXf3ThhSrN5gx96oUTXMkWZzNBL5v4hxxo3vpeyjWeNZESqeeph4Ml",
+    "text": "Vị vũ trù mưu.\nHay nhỉ!",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/687843201_26941881658786252_7935257101685759561_n.jpg?stp=dst-jpg_tt6&cstp=mx720x561&ctp=p180x540&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=DlSyNPB6_rUQ7kNvwHww2z9&_nc_oc=AdpB5MaB94tU1ea52eKvKucZRtwKbxvit9ckAJzvOE3PHu0ST7dfHyi6UhnyB7e292E&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=Vp7p6T0DJYx-jR7FiY0caQ&_nc_ss=72289&oh=00_AQFByDj467vR5IenbxpJXKTb7j2hZ34WzywNr-HX_UcFvQ&oe=6A8A0978",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/687843201_26941881658786252_7935257101685759561_n.jpg?stp=dst-jpg_tt6&cstp=mx720x561&ctp=p180x540&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=DlSyNPB6_rUQ7kNvwHww2z9&_nc_oc=AdpB5MaB94tU1ea52eKvKucZRtwKbxvit9ckAJzvOE3PHu0ST7dfHyi6UhnyB7e292E&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=Vp7p6T0DJYx-jR7FiY0caQ&_nc_ss=72289&oh=00_AQFByDj467vR5IenbxpJXKTb7j2hZ34WzywNr-HX_UcFvQ&oe=6A8A0978",
+          "height": 540,
+          "width": 693
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26941881628786255&set=a.2029578063776623",
+        "id": "26941881628786255",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY5NDE4ODE4NDIxMTk1Njc="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-05-02T04:13:39.000Z",
+    "timestamp": 1777695219,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02Nq25bNoadrXGobHMCrXZ6Ru5okktgapzsZJV7nX5fzHMDL317NCKaQAPwHXRaoZyl",
+    "text": "OmG, chủ đề ntn mà cụ cũng tham gia chém gió dài dằng dẵng.\nĐọc thông tin thì hóa ra cụ xưa làm ở viện CLNH!",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/687037002_26941426985498386_3520351033473173176_n.jpg?stp=dst-jpg_tt6&cstp=mx720x840&ctp=s590x590&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=t8DX7jv5nvwQ7kNvwERu-S_&_nc_oc=Adpfah8rkaJt0HzvuQGuAgcKNYYQEtl4yQ-XTaz7ajNmtIVXiWxlRCftBiH-7BIhLQg&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=Vp7p6T0DJYx-jR7FiY0caQ&_nc_ss=72289&oh=00_AQEI04J-TEM0J8q1n_zsgEdWfKwv0U92VDOkSDvZTEUSCQ&oe=6A89EAAC",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/687037002_26941426985498386_3520351033473173176_n.jpg?stp=dst-jpg_tt6&cstp=mx720x840&ctp=s590x590&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=t8DX7jv5nvwQ7kNvwERu-S_&_nc_oc=Adpfah8rkaJt0HzvuQGuAgcKNYYQEtl4yQ-XTaz7ajNmtIVXiWxlRCftBiH-7BIhLQg&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=Vp7p6T0DJYx-jR7FiY0caQ&_nc_ss=72289&oh=00_AQEI04J-TEM0J8q1n_zsgEdWfKwv0U92VDOkSDvZTEUSCQ&oe=6A89EAAC",
+          "height": 590,
+          "width": 506
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26941426972165054&set=a.2029578063776623",
+        "id": "26941426972165054",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY5NDE0MjcyMjg4MzE2OTU="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-04-29T06:29:14.000Z",
+    "timestamp": 1777444154,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0uaK6KCQjFhM3J2EKBUMEkQFAwstU8F7MHE6Kb38RiCQzChP39ocZPocbrYMZu9KEl",
+    "text": "Wave number...",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/683340072_26908090715498680_5239157356168806281_n.jpg?stp=dst-jpg_tt6&cstp=mx720x721&ctp=p526x296&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=hUNNot_cJJkQ7kNvwFFM3gI&_nc_oc=AdrbzRhw6X7c2NmxBEPz-Z_QU6jxzyQ0yTLLFFzxBZa6PzB6pVzlMYPWugrKbmlkZCg&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=tvjGuzFDtS7FqvIbKDZieA&_nc_ss=72289&oh=00_AQG4w0LFGYHotb4g_JOUwDZePzaoZgg8ZHhInkvlxB0FvQ&oe=6A89FA90",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/683340072_26908090715498680_5239157356168806281_n.jpg?stp=dst-jpg_tt6&cstp=mx720x721&ctp=p526x296&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=hUNNot_cJJkQ7kNvwFFM3gI&_nc_oc=AdrbzRhw6X7c2NmxBEPz-Z_QU6jxzyQ0yTLLFFzxBZa6PzB6pVzlMYPWugrKbmlkZCg&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=tvjGuzFDtS7FqvIbKDZieA&_nc_ss=72289&oh=00_AQG4w0LFGYHotb4g_JOUwDZePzaoZgg8ZHhInkvlxB0FvQ&oe=6A89FA90",
+          "height": 527,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26908090672165351&set=a.2029578063776623",
+        "id": "26908090672165351",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY5MDgwOTA5MDU0OTg2NjE="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-04-29T04:23:51.000Z",
+    "timestamp": 1777436631,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid024fUAF1EepEAfnTh83zn9yR2gFVxrrQqfiKoCuzfF8g4QxmWnXr3YKySsiPDpbXkSl",
+    "text": "Mỗi unit of funding khi xuất hiện trên BS đều có vị trí của nó. Câu hỏi tuyển dụng ALM: bạn đề xuất tỷ lệ phân bổ (allocation) nguồn này như thế nào đối với cho vay và hoạt động khác? Trên quan điểm Basel iii (i.e sovereign non-operational deposit, lcr and nsfr deployment, negative hqla carry...), và basel ix (SBV) Kk. Và từ đó đề xuất tỷ lệ được tính vào \"deposit base\" cho vay cho SBV thay cho tình trạng mò mẫm điều chỉnh...\n\nGiả sử, Interbank rates ON 5.0, 1m-3m 7-7.3\n\"KBNN\" 1m-3m flat @4.75., OMO flat 4.5\nHQLA average yielding @4.0, Short-term loans (>1m - 6m) 6.5, all p.a, thì allocation cụ thể (currently) ntn.",
+    "banks": [],
+    "topic": "ratio_lcr_nsfr",
+    "media": [
+      {
+        "thumbnail": "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/680640868_26907077542266664_3662280199122582961_n.jpg?stp=dst-jpg_tt6&cstp=mx454x90&ctp=s454x90&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=lJhjitzntnEQ7kNvwGz6vCW&_nc_oc=Adrf2LKa1JNb5TyuRL1wmqOtL5iHntpS5--Kahjs9REjxJRUAcdznCNhWHldd5Fitpk&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=tvjGuzFDtS7FqvIbKDZieA&_nc_ss=72289&oh=00_AQG0IYT32_LOR-cux_rxDPazspJKELZyYgNE1JVuGli6hA&oe=6A89EFAD",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/680640868_26907077542266664_3662280199122582961_n.jpg?stp=dst-jpg_tt6&cstp=mx454x90&ctp=s454x90&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=lJhjitzntnEQ7kNvwGz6vCW&_nc_oc=Adrf2LKa1JNb5TyuRL1wmqOtL5iHntpS5--Kahjs9REjxJRUAcdznCNhWHldd5Fitpk&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=tvjGuzFDtS7FqvIbKDZieA&_nc_ss=72289&oh=00_AQG0IYT32_LOR-cux_rxDPazspJKELZyYgNE1JVuGli6hA&oe=6A89EFAD",
+          "height": 90,
+          "width": 454
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26907077505600001&set=a.2029578063776623",
+        "id": "26907077505600001",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY5MDcwNzc3NDU1OTk5Nzc="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-04-28T04:56:56.000Z",
+    "timestamp": 1777352216,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02nFhh4mTiUy1pxCLzLHLP8SZLLxsghXaXfiHjcFDQ4R9sxfuyCvXUWpBkwgG8Zh9Zl",
+    "text": "Đường lối tân thống đốc, chủ tịch.\n\nNghe đồn để tăng cường ổn định ktvm, kiểm soát lạm phát, thúc đẩy tăng trưởng kinh tế nhanh, mạnh, bền vững, bao phủ, độc đáo,... Kevin Warsh dự kiến đưa vào sử dụng hệ thống Adaptive CPI Control. (Jff :-d)",
+    "banks": [],
+    "topic": "cfa_updates",
+    "media": [
+      {
+        "thumbnail": "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/679384548_26895286373445781_4179165613472815978_n.jpg?stp=dst-jpg_tt6&cstp=mx1032x759&ctp=s720x720&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=XoDYGl1JTFYQ7kNvwGBJNwy&_nc_oc=AdqO8uX8NRpwAe7TnenNb2HWFWBYkicyHIHPjnQ0xU9xHe1HifdAgpPlfKLLzk6Gbl8&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=tvjGuzFDtS7FqvIbKDZieA&_nc_ss=72289&oh=00_AQHc64jQCGEo0M9N8RZ7Nrk4_PcdRMh7_epDll-3LPnLZQ&oe=6A8A0979",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF081D38",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/679384548_26895286373445781_4179165613472815978_n.jpg?stp=dst-jpg_tt6&cstp=mx1032x759&ctp=s720x720&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=XoDYGl1JTFYQ7kNvwGBJNwy&_nc_oc=AdqO8uX8NRpwAe7TnenNb2HWFWBYkicyHIHPjnQ0xU9xHe1HifdAgpPlfKLLzk6Gbl8&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=tvjGuzFDtS7FqvIbKDZieA&_nc_ss=72289&oh=00_AQHc64jQCGEo0M9N8RZ7Nrk4_PcdRMh7_epDll-3LPnLZQ&oe=6A8A0979",
+          "height": 530,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26895286333445785&set=a.2029578063776623",
+        "id": "26895286333445785",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY4OTUyODY2MTM0NDU3NTc="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-04-26T12:53:44.000Z",
+    "timestamp": 1777208024,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02xBTXDERYrBBgWkJVpUZEgu97hff1jw31AjgstLZaoX9zPjLVxguNJf8cS4a7RTsNl",
+    "text": "",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2026-04-24T06:00:13.000Z",
+    "timestamp": 1777010413,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0MFW6GmEc6QE7dLhAyB64d4A6VTXX7fAw9hpNaKP6UqFyE9kq9hoRcj3cdogvXhkcl",
+    "text": "Vươn mình.\nThis is not about bonds-it’s about RMB becoming a funding currency at the margin.\nTức tự tạo được funding advantage (như EUR hồi xưa hoặc phổ biến như JPY): liquidity + segmentation + policy divergence...\nGiả lập một Balance sheet \"treo\" tại trung tâm tài chính HK chẳng hạn, khi đó, BS: L: Dim sum, panda vân vân mây mây\nA: USD earning asset chẳng hạn.\nDerivatives: swaps /ccs\nPnL cơ bản thì carry at cost base dim sum + basis + ...\n\nRisks = f()...",
+    "banks": [],
+    "topic": "exchange_fx",
+    "media": [
+      {
+        "thumbnail": "https://scontent-dfw6-1.xx.fbcdn.net/v/t39.30808-6/676790365_26846705444970541_74009130083928830_n.jpg?stp=dst-jpg_tt6&cstp=mx720x688&ctp=p526x296&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=I3-c4uGIvDUQ7kNvwGYnyCH&_nc_oc=Adqv06J3DwYu7utjPq6uIFnyUoMLAHOt9-cYeShYTrv-LaDLGmqJjKogyBcnSuWdZQM&_nc_zt=23&_nc_ht=scontent-dfw6-1.xx&_nc_gid=yIzvoKJ7JjAKAjzo2w5tuQ&_nc_ss=72289&oh=00_AQFHg4GVWjWunVESlFNtOMhKS-41lfsvg0w0QAaD7GPgNA&oe=6A89F2E2",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFF1E4",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-dfw6-1.xx.fbcdn.net/v/t39.30808-6/676790365_26846705444970541_74009130083928830_n.jpg?stp=dst-jpg_tt6&cstp=mx720x688&ctp=p526x296&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=I3-c4uGIvDUQ7kNvwGYnyCH&_nc_oc=Adqv06J3DwYu7utjPq6uIFnyUoMLAHOt9-cYeShYTrv-LaDLGmqJjKogyBcnSuWdZQM&_nc_zt=23&_nc_ht=scontent-dfw6-1.xx&_nc_gid=yIzvoKJ7JjAKAjzo2w5tuQ&_nc_ss=72289&oh=00_AQFHg4GVWjWunVESlFNtOMhKS-41lfsvg0w0QAaD7GPgNA&oe=6A89F2E2",
+          "height": 503,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26846705418303877&set=a.2029578063776623",
+        "id": "26846705418303877",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY4NDY3MDU3MjQ5NzA1MTM="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-04-21T01:06:07.000Z",
+    "timestamp": 1776733567,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02n4Zc26Uhngh2s3xTdHfJW3ca49k5E5qKDG6V2SqX4hiYy1fDZPETuUPwRJ6NrNN2l",
+    "text": "Cũng hơn 1 quý chưa xong.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "description": {
+          "delight_ranges": [],
+          "image_ranges": [],
+          "inline_style_ranges": [],
+          "aggregated_ranges": [],
+          "ranges": [],
+          "color_ranges": [],
+          "text": "When this happens, it's usually because the owner only shared it with a small group of people, changed who can see it or it's been deleted."
+        },
+        "title_with_entities": {
+          "delight_ranges": [],
+          "image_ranges": [],
+          "inline_style_ranges": [],
+          "aggregated_ranges": [],
+          "ranges": [],
+          "color_ranges": [],
+          "text": "This content isn't available right now"
+        }
+      }
+    ]
+  },
+  {
+    "time": "2026-04-21T00:59:18.000Z",
+    "timestamp": 1776733158,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02bEc2tkkbfXqTM6wLFUGZu1C5iRR3L7kAJg8kLmGVBt8WuSC1q9e1qu9JKokmpgitl",
+    "text": "",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2026-04-20T03:14:10.000Z",
+    "timestamp": 1776654850,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0Bx7YbnbisoJ98gN9aQKqnESHHUFNxSWLQPupvdXMrj22MSznZFNUko6cXFzLVbxZl",
+    "text": "Kiều hối khu vực sôi động HCMC",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-mia3-2.xx.fbcdn.net/v/t39.30808-6/677195394_26799817326326020_3179493917339073301_n.jpg?stp=dst-jpg_tt6&cstp=mx680x722&ctp=p180x540&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=OcKvgjaWekMQ7kNvwFYe19t&_nc_oc=AdoQNWuS5E0qsr3hmAFCFOoe-ES6cXr2vyjsUvAIa6BLuVRQhgDawn5urCOd-oWx58c&_nc_zt=23&_nc_ht=scontent-mia3-2.xx&_nc_gid=TudVKRCbHSy4SN8zmWZkig&_nc_ss=72289&oh=00_AQFQRPoX_gZyYXJw3u4f5f0tKTOdvgbBz20HKA33rGuWHA&oe=6A8A0507",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF252525",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-mia3-2.xx.fbcdn.net/v/t39.30808-6/677195394_26799817326326020_3179493917339073301_n.jpg?stp=dst-jpg_tt6&cstp=mx680x722&ctp=p180x540&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=OcKvgjaWekMQ7kNvwFYe19t&_nc_oc=AdoQNWuS5E0qsr3hmAFCFOoe-ES6cXr2vyjsUvAIa6BLuVRQhgDawn5urCOd-oWx58c&_nc_zt=23&_nc_ht=scontent-mia3-2.xx&_nc_gid=TudVKRCbHSy4SN8zmWZkig&_nc_ss=72289&oh=00_AQFQRPoX_gZyYXJw3u4f5f0tKTOdvgbBz20HKA33rGuWHA&oe=6A8A0507",
+          "height": 540,
+          "width": 509
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26799817299659356&set=a.2029578063776623",
+        "id": "26799817299659356",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY3OTk4MTc1MzI5OTI2NjY="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-04-16T02:32:35.000Z",
+    "timestamp": 1776306755,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0puacuYnKzAA1UrD6EoufCg81UhCYKLdbKGk9zfmLQ7rPywM71y7Pmfz2qVbQHLH3l",
+    "text": "Thú vị. Loại bỏ? Như thế nào? \"Lấy hết\", với khách hàng thì không thể \"loại bỏ\". Kk\nCòn về quản trị mục tiêu, có thể dùng rất nhiều các đo lường và giải pháp khác nhau.\nTại sao phải có phân loại và đo lường, để có chính sách giá và phân bổ. Vậy không phải \"loại bỏ\" mà có chính sách có differentiation một cách phù hợp, ở đây là dựa trên mức độ hữu ích toàn trình của nguồn vốn casa.\nVậy, cụ thể hơn, mục tiêu là:\n- Có cost-benefit driven differentiation chứ không phải loại bỏ đi.\n- Tăng casa ratio (cái ratio này cũng vô vàn cách đo)\n- Tăng sticky ratio (cũng nhiều measures)\nNhân (productive) 3 thứ lại thành matrix xx...\nCó bộ score... rồi kpi các kiểu con đà điểu.\n\n- Thêm chút màu sắc FTP CASA cho nó hấp dẫn (cụ thể là incentives cho BUs).\nThật ra phải có đường gạch nối đến kết quả cuối cùng mà nói chuyện, chứ có định luật diminishing of...\nCụ thể là... \"When a measure becomes a target, it ceases to be a good measure\" (aka Goodhart's Law) :-d\n\n3 điểm trên làm rõ mà không loại bỏ.\n\"Sticky\" mà tăng cao đc thì nó lợi nhiều thứ.\nChẳng hạn tăng NIM leverage bền vững và tăng cạnh tranh trong cs giá đối với asset side.\nTăng natural hedging cho BB.\nTheo đuổi Basel III, các thứ run-off rates trong outflows, có HQLAs phù hợp. \nCác thứ trong NSFR (A/RSF), cái này có khi lại giảm bớt tactical deal các thứ. Hehe \nV.v.\n\nMTB cũng vậy, không loại bỏ mà làm rõ, làm tăng. MTB -> với New cust là một bộ chỉ số quan trọng.",
+    "banks": [],
+    "topic": "ratio_lcr_nsfr",
+    "media": [
+      {
+        "thumbnail": "https://scontent-mia5-2.xx.fbcdn.net/v/t39.30808-6/672228227_26757953887179031_8928493786627570299_n.jpg?stp=dst-jpg_tt6&cstp=mx720x590&ctp=s640x640&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=wJ4nyjmYAi0Q7kNvwG5vm8_&_nc_oc=Adr-UsPv7sZukU_rVSehWwezvJSBgx7WbyM4Cx3qrzj4FBfT7AQ7ODcZxNzDSojKHRE&_nc_zt=23&_nc_ht=scontent-mia5-2.xx&_nc_gid=TudVKRCbHSy4SN8zmWZkig&_nc_ss=72289&oh=00_AQHSyJkqZsgpgexLgZojAGctXnhKM0SyKgcJfTtwgMXhLQ&oe=6A8A01FA",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-mia5-2.xx.fbcdn.net/v/t39.30808-6/672228227_26757953887179031_8928493786627570299_n.jpg?stp=dst-jpg_tt6&cstp=mx720x590&ctp=s640x640&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=wJ4nyjmYAi0Q7kNvwG5vm8_&_nc_oc=Adr-UsPv7sZukU_rVSehWwezvJSBgx7WbyM4Cx3qrzj4FBfT7AQ7ODcZxNzDSojKHRE&_nc_zt=23&_nc_ht=scontent-mia5-2.xx&_nc_gid=TudVKRCbHSy4SN8zmWZkig&_nc_ss=72289&oh=00_AQHSyJkqZsgpgexLgZojAGctXnhKM0SyKgcJfTtwgMXhLQ&oe=6A8A01FA",
+          "height": 524,
+          "width": 640
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26757953837179036&set=a.2029578063776623",
+        "id": "26757953837179036",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY3NTc5NTQyMzM4NDU2NjM="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-04-15T02:10:03.000Z",
+    "timestamp": 1776219003,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0wFcpxYEpbGsqdP7X1BuRs6FPQ6taFKY9iPGRJo3CPYYase2mm2jm2FBrL8jeMMYbl",
+    "text": "Nhân tiện nhắc lại swap facility một chút (cái này của SBV, khác với swaps nói trong post trước), hôm qua anh Quang (VT CSTT) họp báo đánh giá swap này là mang tính đột phá. Cứ cho là đột phá (chắc ý là xưa nay hiếm) thì nó cũng thể hiện những giới hạn và weakness trong functioning... \nVậy capacity của swaps này khoảng bao nhiêu %BS? Thật ra đây là câu hỏi mình nhận được trong mấy tháng trước (trong chuỗi 4pipelines adding VND...)\nCó 4 cách để ước tính (ước tính thôi)... như USD LCR, bid to winning ratio vs accepted amt,...\n\nP/s. Câu hỏi không kém hấp dẫn tiếp là làm sao công cụ TCV cởi và mở hơn. Kk",
+    "banks": [
+      "BID"
+    ],
+    "topic": "ratio_lcr_nsfr",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/670226048_26747316498242770_8391681128043549270_n.jpg?stp=dst-jpg_tt6&cstp=mx720x655&ctp=p552x414&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=UrM0UC-A6O0Q7kNvwGwlhRj&_nc_oc=AdqK6Tnonq2V7qA5t8u0Gc98GVM_lmKsMQl3jPxty8-tTteHe4AY84bnj3dJi9rjxb4&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=z6wYgGCBYaqPzzrKCmKV5w&_nc_ss=72289&oh=00_AQF-rhKRGnisDH_QyTNtKX6QSGS1p_fnJU8KGtSB0t5neQ&oe=6A89EADE",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/670226048_26747316498242770_8391681128043549270_n.jpg?stp=dst-jpg_tt6&cstp=mx720x655&ctp=p552x414&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=UrM0UC-A6O0Q7kNvwGwlhRj&_nc_oc=AdqK6Tnonq2V7qA5t8u0Gc98GVM_lmKsMQl3jPxty8-tTteHe4AY84bnj3dJi9rjxb4&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=z6wYgGCBYaqPzzrKCmKV5w&_nc_ss=72289&oh=00_AQF-rhKRGnisDH_QyTNtKX6QSGS1p_fnJU8KGtSB0t5neQ&oe=6A89EADE",
+          "height": 502,
+          "width": 552
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26747316474909439&set=a.2029578063776623",
+        "id": "26747316474909439",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY3NDczMTY3MDE1NzYwODM="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-04-15T01:27:26.000Z",
+    "timestamp": 1776216446,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02rx58Lz8XznMmb6CvddwEQDMfFs1omCaZEsDHo5DkrTFPHCjNRmA74yDPnQoWLvgtl",
+    "text": "Lướt vài thông tin trích dẫn của một số bên (như ctck) thấy sử dụng lại số liệu này từ SBV (hình bên dưới), nhưng hình như có sự nhầm lẫn khi sử dụng lại, đây không phải là LDR của hệ thống như cách tính toán thông thường, mà đây là LDR VND. Họ nhấn mạnh LDR VND bởi sự gia tăng bất cân xứng và tạo ra sự chênh lệch ngày càng lớn. Đây cũng là một trong những điểm mình có nêu, ví dụ một phần được tài trợ từ Fx thông qua swaps sweet chẳng hạn. Nghĩa là nó liên quan nhiều thứ khi mở rộng BS.\nNhân tiện, bạn thấy dòng tóm tắt trong bảng bên dưới có gì ngồ ngộ không? Nếu nó ngồ ngộ thì giải pháp sẽ rất thú vị. :-d",
+    "banks": [],
+    "topic": "ratio_ldr",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/671338672_26747031134937973_3258008826996978264_n.jpg?stp=dst-jpg_tt6&cstp=mx720x228&ctp=s720x228&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=LWFgsYHQYsoQ7kNvwEGxXZj&_nc_oc=AdqPJL4UZcha9QnrAEu6GJnoPxcSUWnyJqke9u7DyWiSN5wKBpsszhiaUNN_sK7eWps&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=z6wYgGCBYaqPzzrKCmKV5w&_nc_ss=72289&oh=00_AQFSbUhhnvy7AoTDKDjafzG9mN6J_XHgDaQrcuWmpskiGQ&oe=6A89F7C4",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/671338672_26747031134937973_3258008826996978264_n.jpg?stp=dst-jpg_tt6&cstp=mx720x228&ctp=s720x228&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=LWFgsYHQYsoQ7kNvwEGxXZj&_nc_oc=AdqPJL4UZcha9QnrAEu6GJnoPxcSUWnyJqke9u7DyWiSN5wKBpsszhiaUNN_sK7eWps&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=z6wYgGCBYaqPzzrKCmKV5w&_nc_ss=72289&oh=00_AQFSbUhhnvy7AoTDKDjafzG9mN6J_XHgDaQrcuWmpskiGQ&oe=6A89F7C4",
+          "height": 228,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26747031094937977&set=a.2029578063776623",
+        "id": "26747031094937977",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY3NDcwMzEzMDgyNzEyODk="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-04-14T10:39:37.000Z",
+    "timestamp": 1776163177,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0apMuNz6nzy9QQKU8HEDndtVgR4hzkA975vy36drrcJ4MCSYMTmDDGwbAWQReiQs6l",
+    "text": "Who blinks first.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/671971840_26740583755582711_7813789302463989457_n.jpg?stp=dst-jpg_tt6&cstp=mx720x327&ctp=s720x327&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=CLPtBy28YIsQ7kNvwGYBClZ&_nc_oc=Ado674WnbjQl_pG-afdVSpyfZZ2q3jYy3OqPPnUIbJCFUhbzWmZy5YAHKSkEhZT_U5Y&_nc_zt=23&_nc_ht=scontent-lga3-2.xx&_nc_gid=z6wYgGCBYaqPzzrKCmKV5w&_nc_ss=72289&oh=00_AQGGQE4DTXtzMZQU3H4wV7mWDIwo4SqD4gBaA-0QngVphg&oe=6A89E24A",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/671971840_26740583755582711_7813789302463989457_n.jpg?stp=dst-jpg_tt6&cstp=mx720x327&ctp=s720x327&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=CLPtBy28YIsQ7kNvwGYBClZ&_nc_oc=Ado674WnbjQl_pG-afdVSpyfZZ2q3jYy3OqPPnUIbJCFUhbzWmZy5YAHKSkEhZT_U5Y&_nc_zt=23&_nc_ht=scontent-lga3-2.xx&_nc_gid=z6wYgGCBYaqPzzrKCmKV5w&_nc_ss=72289&oh=00_AQGGQE4DTXtzMZQU3H4wV7mWDIwo4SqD4gBaA-0QngVphg&oe=6A89E24A",
+          "height": 327,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26740583728916047&set=a.2029578063776623",
+        "id": "26740583728916047",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY3NDA1ODM5NzU1ODI2ODk="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-04-14T05:41:29.000Z",
+    "timestamp": 1776145289,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02CXy5oPfhEpbLozqWdXa5BQrjS2FFsjJmuVBqPjMrXtGhw8LWRUwzriEZWNAyUGdPl",
+    "text": "Securities lending cũng gần bằng gđ 2022-23",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/672459109_26738429739131446_7623331439877246617_n.jpg?stp=dst-jpg_tt6&cstp=mx720x816&ctp=s590x590&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=h-0Fpc_Kzl4Q7kNvwFhPO05&_nc_oc=AdqyNF_95sWlsQC8bc1vvsblxQS3lCzy0mWv21wYj8l6hZMztBfNZHQ_Ob2UPC22jDg&_nc_zt=23&_nc_ht=scontent-dfw5-1.xx&_nc_gid=5tGtY5fAybpm4Uz7R3D44g&_nc_ss=72289&oh=00_AQFfaTvoQWMcDZlV9XXJkn77oN2PIHbS-5TW8SpnQONSOA&oe=6A89D690",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/672459109_26738429739131446_7623331439877246617_n.jpg?stp=dst-jpg_tt6&cstp=mx720x816&ctp=s590x590&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=h-0Fpc_Kzl4Q7kNvwFhPO05&_nc_oc=AdqyNF_95sWlsQC8bc1vvsblxQS3lCzy0mWv21wYj8l6hZMztBfNZHQ_Ob2UPC22jDg&_nc_zt=23&_nc_ht=scontent-dfw5-1.xx&_nc_gid=5tGtY5fAybpm4Uz7R3D44g&_nc_ss=72289&oh=00_AQFfaTvoQWMcDZlV9XXJkn77oN2PIHbS-5TW8SpnQONSOA&oe=6A89D690",
+          "height": 590,
+          "width": 521
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26738429715798115&set=a.2029578063776623",
+        "id": "26738429715798115",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY3Mzg0Mjk5MDI0NjQ3NjM="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-04-11T15:29:51.000Z",
+    "timestamp": 1775921391,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0S1av17Cs1i27xWRUJX6ZcuB54GPztjL9yTDUsTLDHwBbVdJq37iG4h6zQrW41gVBl",
+    "text": "Mình mô phỏng lại dữ liệu từ cuộc họp NHNN với các NHTM hôm 9 Apr, theo một cách ALM hay làm, cho khoảng thời gian lãi suất tăng khá mạnh vừa qua, từ q4 2025 - q1 2026.\nTrực quan thì tốc độ tăng ls cho vay mới khá sát với tốc độ tăng ls tiền gửi, tuy nhiên nhanh hơn vào giai đoạn sau (q1-2026), có phải vì credit demand cao trong khi NH bị giới hạn tín dụng (room q1) -> NH chọn đẩy Ls cho vay mới cao hơn, cũng như tạo sự linh hoạt trong định ls và deal với KH mới, cũ sau đó (nhiều NH mở quãng quyết định ls cho vay rộng cho ĐVKD đối với nhiều nhóm NH, vd chênh lệch lớn giữa các nhóm ...VIP vs VVVVIP :-d). Tất nhiên đây là dữ liệu toàn ngành, nên chưa hẳn các NH đều có chiến lược giống nhau. \n\nSau 6 tháng Marginal CoF (toàn curve) tăng x ppt truyền dẫn vào toàn danh mục deposit (Deposit IBL on BB) tăng 0.y ppt, tức > 1/3 sau 6mth, mức độ ~35%. \n\nVì sao?\nCó tương tự với Marginal lending rates vào Loan IEA không?\n\nNH không những giữ ổn định mà còn tăng nhẹ interest rate spread bình quân trên sổ. Câu hỏi đặt ra là... delta rate spread tăng lên (hai đường gạch bên dưới) với mức độ khoảng 1/3 chênh lệch Marginal YIEA và CoF sau 6 tháng có chuyển thành delta NIM (một phần hoặc toàn bộ) được không? Phụ thuộc vào điều kiện nào?\n\nNếu ls huy động bq giảm 0.5ppt, thì có thể trình giảm ls cho vay mới khoảng bao nhiêu? Kk",
+    "banks": [],
+    "topic": "ratio_nim",
+    "media": [
+      {
+        "thumbnail": "https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/669638585_26711804375127316_6952215464555434943_n.jpg?stp=dst-jpg_tt6&cstp=mx940x959&ctp=p526x296&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=fZIDNLsK2TcQ7kNvwEtLbkT&_nc_oc=AdqjxZ5atiFtxotrMTcicEiFT3ykLdKqrIIAjZrX8r146WyHnZVBsfC2a-maDqQFl9c&_nc_zt=23&_nc_ht=scontent-dfw5-1.xx&_nc_gid=5tGtY5fAybpm4Uz7R3D44g&_nc_ss=72289&oh=00_AQGxLvAFuRMmWAx9mW_u1HA36dMI7xggcsUevW-3RlaHAA&oe=6A89F201",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF252525",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/669638585_26711804375127316_6952215464555434943_n.jpg?stp=dst-jpg_tt6&cstp=mx940x959&ctp=p526x296&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=fZIDNLsK2TcQ7kNvwEtLbkT&_nc_oc=AdqjxZ5atiFtxotrMTcicEiFT3ykLdKqrIIAjZrX8r146WyHnZVBsfC2a-maDqQFl9c&_nc_zt=23&_nc_ht=scontent-dfw5-1.xx&_nc_gid=5tGtY5fAybpm4Uz7R3D44g&_nc_ss=72289&oh=00_AQGxLvAFuRMmWAx9mW_u1HA36dMI7xggcsUevW-3RlaHAA&oe=6A89F201",
+          "height": 537,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26711804335127320&set=a.2029578063776623",
+        "id": "26711804335127320",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY3MTE4MDQ3ODE3OTM5NDI="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-04-11T04:32:34.000Z",
+    "timestamp": 1775881954,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid031de5tirSYq9pwQ1kZkUUsKLQy4EjimmcMgqbesaDvJDFbQ91NsWasoTazeueUGVyl",
+    "text": "Một vài điểm cần chú ý khi tính funding gap đặc biệt là số tuyệt đối trong một giai đoạn. Một vài thống kê thật ra chưa phản ánh được mức độ thay đổi gap (dẫn đến áp lực...), vì thật ra... nó còn lớn hơn trong uses - sources.\nĐó là phải adjustment cho các written-off assets (vd NPA/NPL), vốn khá lớn trong giai đoạn vừa rồi và chuyển từ gđ trước qua.",
+    "banks": [],
+    "topic": "ratio_npl",
+    "media": []
+  },
+  {
+    "time": "2026-04-11T03:28:28.000Z",
+    "timestamp": 1775878108,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02Pw8Ds7CBkajhCiG49jrxeRHnFWo6qr47S5A5wZetCp1zZrn1GnHmSUp3By7FyeaFl",
+    "text": "Đây là một trong những hạng mục gây bất ngờ nhất trong bc tháng 3 và Q1 vừa qua, và consumption trong GDP, trong bối cảnh GDP lao đi với tốc độ cao. \nXem lại dữ liệu, không chỉ tháng 3 spike đột biến gánh Q1 (dù một số đóng góp % vào tăng trưởng retail sales chậm lại như du lịch - vốn là động lực của 2 tháng đầu năm) mà hóa ra dữ liệu tháng 2 được điều chỉnh cao lên - cũng với mức đột biến (hình như là top max trong chuỗi revised-deviation, điều chỉnh cao vs tăng trưởng trước đó), bạn thử check số liệu xem.\n\nP/s. Một số bạn có hỏi liệu khi GDP được tính toán phản ánh đầy đủ hơn hoạt động của nền kinh tế, như đưa nhiều thành phần chưa được thống kê vào... có làm tốc độ tăng cao hơn không như một số bên cho rằng làm vậy để tăng cao hơn. Câu trả lời đơn giản là chưa biết. Nguyên tắc có thể làm quy mô GDP cao hơn, nhưng tốc độ tăng real thì growth rate thì còn phụ thuộc vào tốc độ tăng và đóng góp của yếu tố mới. Các phương pháp thông kê, ước lượng sẽ điều chỉnh để cam so cam, táo so táo, chứ không so táo vs cam kiểu lấy quy mô sau to hơn so với quy mô trước đây nhỏ để có số tăng trưởng cao. Chơi vậy ai chơi lại. Kk\n\nPps. Một số thông lệ thống kê, có thể công bố thêm control group, các chỉ tiêu như exclude Autos Sales...",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/668497317_26706606595647094_8500781066833755030_n.jpg?stp=dst-jpg_tt6&cstp=mx720x371&ctp=s720x371&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=rju3ioFSmI0Q7kNvwHKgL3L&_nc_oc=AdrGorVJsQd1mMrs0Y1O1v7MglaCRKmxElT9WqTywFq_bxx_t52Ota-46SV7ihT88YM&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=X_eWsz5tXI2xPY0Bxx2tQQ&_nc_ss=72289&oh=00_AQGYg1LA27uOQHRPn99zlWcnIwbMehGwO612vhdWQ6ND8w&oe=6A8A008F",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/668497317_26706606595647094_8500781066833755030_n.jpg?stp=dst-jpg_tt6&cstp=mx720x371&ctp=s720x371&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=rju3ioFSmI0Q7kNvwHKgL3L&_nc_oc=AdrGorVJsQd1mMrs0Y1O1v7MglaCRKmxElT9WqTywFq_bxx_t52Ota-46SV7ihT88YM&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=X_eWsz5tXI2xPY0Bxx2tQQ&_nc_ss=72289&oh=00_AQGYg1LA27uOQHRPn99zlWcnIwbMehGwO612vhdWQ6ND8w&oe=6A8A008F",
+          "height": 371,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26706606555647098&set=a.2029578063776623",
+        "id": "26706606555647098",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY3MDY2MDY4Njg5ODA0MDA="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-04-10T05:25:58.000Z",
+    "timestamp": 1775798758,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0ty9SBU76eDEHirt99vbBwpBcZ1hv9fVjVZ95Dt7Kez8k8zrbQoFPt8vuLZCZxt7jl",
+    "text": "Dự tuyệt vời. Đặt cạnh dự phóng ... 120b Fx Reserves (BoP đột biến) ngay trong năm nay của một CTCK thành cặp bài trùng giải quyết hầu hết các vấn đề, nếu mà thành hiện thực có lẽ SBV cũng thở phào phần nào, kế hoạch vay nợ (đb là phát hành tp USD) của Treasury cũng tự tin hơn. Kk \nBig bet on the future.",
+    "banks": [],
+    "topic": "exchange_fx",
+    "media": [
+      {
+        "thumbnail": "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/668521314_26696875473286873_8281764868417251238_n.jpg?stp=dst-jpg_tt6&cstp=mx720x1023&ctp=s720x720&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=9IKsX8BBvP4Q7kNvwFPBV21&_nc_oc=Adr-bwFg11H8syVi_Ivo-UAep7uhQDwFBgHkPXMIXOxvN-K1k0JJUwDsBlqN1_6DJU8&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=X_eWsz5tXI2xPY0Bxx2tQQ&_nc_ss=72289&oh=00_AQEGrfyuV8RO_JqtVCLROWYEvneMgYgKe2M8oWXXvt0P-w&oe=6A8A0D5D",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/668521314_26696875473286873_8281764868417251238_n.jpg?stp=dst-jpg_tt6&cstp=mx720x1023&ctp=s720x720&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=9IKsX8BBvP4Q7kNvwFPBV21&_nc_oc=Adr-bwFg11H8syVi_Ivo-UAep7uhQDwFBgHkPXMIXOxvN-K1k0JJUwDsBlqN1_6DJU8&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=X_eWsz5tXI2xPY0Bxx2tQQ&_nc_ss=72289&oh=00_AQEGrfyuV8RO_JqtVCLROWYEvneMgYgKe2M8oWXXvt0P-w&oe=6A8A0D5D",
+          "height": 720,
+          "width": 507
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26696875433286877&set=a.2029578063776623",
+        "id": "26696875433286877",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY2OTY4NzU2ODMyODY4NTI="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-04-09T13:13:05.000Z",
+    "timestamp": 1775740385,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0nCD4HWD6Cy1eBAbG3zHQBkc6CC4soGtXQVo1DN8WCkXybJTVBYemy4siQWx2NP8El",
+    "text": "Coordination-constrained competitive equilibrium...\n\nKk. Làm gợi nhớ cuộc họp 11/2022.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/667120766_26689938877313866_5724121727510461857_n.jpg?stp=dst-jpg_tt6&cstp=mx719x549&ctp=p180x540&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=FR-FG5XYXa8Q7kNvwFUURPm&_nc_oc=AdoZLi9ToV8rPytURxhzkvkE3s6al-n1Y15pD-_WZ3NlXHAeEbk9MStWQtGZn6J51ZI&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=X_eWsz5tXI2xPY0Bxx2tQQ&_nc_ss=72289&oh=00_AQG7Uk1lg6xfrahAs5i3Cm89M1UGtQ6y_nEhvCizNyqPqQ&oe=6A8A0673",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/667120766_26689938877313866_5724121727510461857_n.jpg?stp=dst-jpg_tt6&cstp=mx719x549&ctp=p180x540&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=FR-FG5XYXa8Q7kNvwFUURPm&_nc_oc=AdoZLi9ToV8rPytURxhzkvkE3s6al-n1Y15pD-_WZ3NlXHAeEbk9MStWQtGZn6J51ZI&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=X_eWsz5tXI2xPY0Bxx2tQQ&_nc_ss=72289&oh=00_AQG7Uk1lg6xfrahAs5i3Cm89M1UGtQ6y_nEhvCizNyqPqQ&oe=6A8A0673",
+          "height": 540,
+          "width": 707
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26689938820647205&set=a.2029578063776623",
+        "id": "26689938820647205",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY2ODk5MzkyMDA2NDcxNjc="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-04-09T08:00:05.000Z",
+    "timestamp": 1775721605,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid04cXDozQ12L3c6Y4o3KmbSRp6MkAiKQKimDrvRkAMzkuNF5wDzMBNYr8T2Xa955ZFl",
+    "text": "Throwback \nHigher deploy..., higher MLT LDR, higher VND LDR...",
+    "banks": [],
+    "topic": "ratio_ldr",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-6/667410010_26687711037536650_3360613374095083044_n.jpg?stp=dst-jpg_tt6&cstp=mx1247x451&ctp=s1247x451&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=5cMwccb1Zn8Q7kNvwHkohBP&_nc_oc=Adp0SjP0I8cn0O2CK7LvjLlXJ_rvRuJuuZsKt74LploWc8T1X7lTMtmC1T3cF6ufItk&_nc_zt=23&_nc_ht=scontent-lax3-1.xx&_nc_gid=CJbIu9Fl46d2jqrGg7llDw&_nc_ss=72289&oh=00_AQHf7zrESw2Ehh9JUj4OpOdvQQW5q0AY0S_T6AELWjNTmw&oe=6A89E14C",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-6/667410010_26687711037536650_3360613374095083044_n.jpg?stp=dst-jpg_tt6&cstp=mx1247x451&ctp=s1247x451&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=5cMwccb1Zn8Q7kNvwHkohBP&_nc_oc=Adp0SjP0I8cn0O2CK7LvjLlXJ_rvRuJuuZsKt74LploWc8T1X7lTMtmC1T3cF6ufItk&_nc_zt=23&_nc_ht=scontent-lax3-1.xx&_nc_gid=CJbIu9Fl46d2jqrGg7llDw&_nc_ss=72289&oh=00_AQHf7zrESw2Ehh9JUj4OpOdvQQW5q0AY0S_T6AELWjNTmw&oe=6A89E14C",
+          "height": 451,
+          "width": 1247
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26687711014203319&set=a.2029578063776623",
+        "id": "26687711014203319",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY2ODc3MTEyNzA4Njk5NjA="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-04-08T09:31:53.000Z",
+    "timestamp": 1775640713,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid034X4PjQrwjnmDGezfCVbcqAkAbLLwUeDsDMna6qwYGAbisr8UxiMp3h816rT4kpCVl",
+    "text": "Fx, Interest, Interventions. Cont.",
+    "banks": [],
+    "topic": "exchange_fx",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lax3-2.xx.fbcdn.net/v/t39.30808-6/663151097_26678078911833196_1171837688280085167_n.jpg?stp=dst-jpg_tt6&cstp=mx1240x1082&ctp=s590x590&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=-7SDkmtYOmkQ7kNvwEGIPpy&_nc_oc=AdpEmMATdzHlX92TXhIKwE1Ffo-GJJsKBrbY4zzeVjSHTvhtIp1SRnMAbwFk4YZ_-gg&_nc_zt=23&_nc_ht=scontent-lax3-2.xx&_nc_gid=CJbIu9Fl46d2jqrGg7llDw&_nc_ss=72289&oh=00_AQFu8xRfm1eefgbQtRM_GfANoYAopAoTH7372kpHQHOWxg&oe=6A89F516",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF252525",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lax3-2.xx.fbcdn.net/v/t39.30808-6/663151097_26678078911833196_1171837688280085167_n.jpg?stp=dst-jpg_tt6&cstp=mx1240x1082&ctp=s590x590&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=-7SDkmtYOmkQ7kNvwEGIPpy&_nc_oc=AdpEmMATdzHlX92TXhIKwE1Ffo-GJJsKBrbY4zzeVjSHTvhtIp1SRnMAbwFk4YZ_-gg&_nc_zt=23&_nc_ht=scontent-lax3-2.xx&_nc_gid=CJbIu9Fl46d2jqrGg7llDw&_nc_ss=72289&oh=00_AQFu8xRfm1eefgbQtRM_GfANoYAopAoTH7372kpHQHOWxg&oe=6A89F516",
+          "height": 515,
+          "width": 590
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26678078878499866&set=a.2029578063776623",
+        "id": "26678078878499866",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY2NzgwNzkxMzE4MzMxNzQ="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-04-06T11:08:21.000Z",
+    "timestamp": 1775473701,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid026bdPpNzJ6B18KiQEMHQjV5mgR5GD8yypa2mVzRUEM27ZJm39uis9KnnZ4TJknpSxl",
+    "text": "LCR. Cũng thú vị. Ứng xử với mấy khoản\n-Dual/multicurrency deposits. VN thì hai cái LCR khác.\n-Mấy khoản Forward, swaps, open maturities. Cân... \n-HQLA (L1) lending...",
+    "banks": [],
+    "topic": "ratio_lcr_nsfr",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lax3-2.xx.fbcdn.net/v/t39.30808-6/661876745_26657767673864320_2899312468783513962_n.jpg?stp=dst-jpg_tt6&cstp=mx697x860&ctp=s640x640&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=DVoh2eRUat8Q7kNvwGcHKC3&_nc_oc=Adp2gY7pUVEqTH03bQKA2feKNzsuQ980FqUDJUjir4KKV7AoAV1nkITTrNwkL-vuP3s&_nc_zt=23&_nc_ht=scontent-lax3-2.xx&_nc_gid=CJbIu9Fl46d2jqrGg7llDw&_nc_ss=72289&oh=00_AQET43AHa9DmrsiWCqDLVJUhIa_Cz1ZBD_A2woxpvNB1OQ&oe=6A8A0AFF",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lax3-2.xx.fbcdn.net/v/t39.30808-6/661876745_26657767673864320_2899312468783513962_n.jpg?stp=dst-jpg_tt6&cstp=mx697x860&ctp=s640x640&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=DVoh2eRUat8Q7kNvwGcHKC3&_nc_oc=Adp2gY7pUVEqTH03bQKA2feKNzsuQ980FqUDJUjir4KKV7AoAV1nkITTrNwkL-vuP3s&_nc_zt=23&_nc_ht=scontent-lax3-2.xx&_nc_gid=CJbIu9Fl46d2jqrGg7llDw&_nc_ss=72289&oh=00_AQET43AHa9DmrsiWCqDLVJUhIa_Cz1ZBD_A2woxpvNB1OQ&oe=6A8A0AFF",
+          "height": 640,
+          "width": 519
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26657767633864324&set=a.2029578063776623",
+        "id": "26657767633864324",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY2NTc3Njc5NDA1MzA5NjA="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-04-04T16:04:08.000Z",
+    "timestamp": 1775318648,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid021ZbnCSpwdfpGEcuLKZbTq4TjcXR7xthZQXwHHQ6EJZ1w9DfKFZjuwq3tkL5DSskZl",
+    "text": "BS Dispatch. Cont. \nThrowback. Trước khi đến với phần tiếp theo về Drain Reserves, như hôm trước có nói sơ, ví dụ [Aggregate Non-borrowed Reserves hay NBR trở nên thâm hụt (âm) tích lũy lớn và kéo dài (ngay cả khi trước/không điều chỉnh các hoạt động reserves absorption nếu có của CB.], thì các bạn nghĩ chart bên dưới đến nay thì khoản nào cao lên, khoản nào thấp xuống, cof tương ứng?",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/666474661_26639153239059097_5907501242504766834_n.jpg?stp=dst-jpg_tt6&cstp=mx1240x1452&ctp=s590x590&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Fpj3rGEYQaEQ7kNvwG18RFA&_nc_oc=Adro89cM6-BGY7DXG8PgvqYKZxaPXfgw7H1CLifxzBAjvj-wzsEiRB_6rY9Q1qc0014&_nc_zt=23&_nc_ht=scontent-lga3-2.xx&_nc_gid=C_0VPZbl-29wpbPhxGe5YQ&_nc_ss=72289&oh=00_AQHBjb_0dTXVxRqk7U7aeeCNAAE6XPrKOFA-DMYSsTZ0Zw&oe=6A89E0BF",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/666474661_26639153239059097_5907501242504766834_n.jpg?stp=dst-jpg_tt6&cstp=mx1240x1452&ctp=s590x590&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Fpj3rGEYQaEQ7kNvwG18RFA&_nc_oc=Adro89cM6-BGY7DXG8PgvqYKZxaPXfgw7H1CLifxzBAjvj-wzsEiRB_6rY9Q1qc0014&_nc_zt=23&_nc_ht=scontent-lga3-2.xx&_nc_gid=C_0VPZbl-29wpbPhxGe5YQ&_nc_ss=72289&oh=00_AQHBjb_0dTXVxRqk7U7aeeCNAAE6XPrKOFA-DMYSsTZ0Zw&oe=6A89E0BF",
+          "height": 590,
+          "width": 504
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26639153192392435&set=a.2029578063776623",
+        "id": "26639153192392435",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY2MzkxNTM1MTIzOTI0MDM="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-04-04T14:03:26.000Z",
+    "timestamp": 1775311406,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid08AvosoCwoMtNz7vK9yyhXHz4spzTH6ienEuMvYXqrVRkXrLdfoJwDtkdYR5sP7S7l",
+    "text": "Ngạc nhiên thứ hai, cùng một bài báo về tiền trong dân, một chuyên gia, thành viên HĐTV CSTT, sau bao tư vấn giờ lại bàn chuyện trăm năm.\n\nLàm tôi nhớ đến tranh luận về \"dài hạn\" (thế nào là dài hạn?) trong kinh tế học và ... Keynes. Zachary Carter trong cuốn tiểu sử Keynes có đoạn rất hay:\n\n“Bất chấp tất cả, chúng ta lại thấy mình quay trở lại với Keynes [...], mà vì chúng ta đang ở đây, ngay bây giờ, không có nơi nào để đi ngoài tương lai. Về lâu dài, tất cả chúng ta đều sẽ chết. Nhưng về lâu dài, hầu như mọi thứ đều có thể xảy ra.”\n\nHình không liên quan, chôm trên mạng. Nếu đặt caption thì... trong dài hạn mọi thứ đều mất dấu.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/663148806_26638113535829734_7119102834674407962_n.jpg?stp=dst-jpg_tt6&cstp=mx1345x1176&ctp=s590x590&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=MmdjKElyF70Q7kNvwFiVzsI&_nc_oc=AdpHTqrFoFd8ZbOQPVgVK9onDpmZwK088-qCnoBbQPSiZV_o0E5FbId1EUNZhqThZRM&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=C_0VPZbl-29wpbPhxGe5YQ&_nc_ss=72289&oh=00_AQEln3qGI3R-isyqLBKcMRTGBp0yhHTf6vY9Dpz7DEiCDA&oe=6A89EE14",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFECECEC",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/663148806_26638113535829734_7119102834674407962_n.jpg?stp=dst-jpg_tt6&cstp=mx1345x1176&ctp=s590x590&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=MmdjKElyF70Q7kNvwFiVzsI&_nc_oc=AdpHTqrFoFd8ZbOQPVgVK9onDpmZwK088-qCnoBbQPSiZV_o0E5FbId1EUNZhqThZRM&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=C_0VPZbl-29wpbPhxGe5YQ&_nc_ss=72289&oh=00_AQEln3qGI3R-isyqLBKcMRTGBp0yhHTf6vY9Dpz7DEiCDA&oe=6A89EE14",
+          "height": 516,
+          "width": 590
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26638113499163071&set=a.2029578063776623",
+        "id": "26638113499163071",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY2MzgxMTM4NDI0OTYzNzA="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-04-04T13:35:50.000Z",
+    "timestamp": 1775309750,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0hxNobJJQT1jqbh36CdtPaJxjHCtF39XharHGLxzUQpgkcgFwMXGhDZHRAfs7d2Ril",
+    "text": "Lại câu chuyện tiền, vàng trong dân.\nMấy hôm nay một vài bạn lại gửi bài báo về phát biểu của một vị mới (mình khá ngạc nhiên), còn trước đây thì nhiều. :-d\n\nTiền trong dân vs. tài sản của dân. \nCái sự nói không khéo hoặc nhầm lẫn tai hại dẫn đến một hiện tượng kéo dài cả thập kỷ và vẫn không tạo ra được sản phẩm hay cơ chế nào cho xã hội, lại còn mang tiếng ... ăn rồi cứ xăm soi túi tiền và tài sản của người dân.\n\nHiểu đúng mới có thể tạo sản phẩm và cơ chế để người dân/các tổ chức có nguồn lực tự nguyện tham gia theo nhu cầu, khẩu vị, trong phạm vi kiểm soát được rủi ro. \n\nChủ đề nhầm lẫn này tôi không nhớ nói đến bao nhiêu lần, đặc biệt là tiền gửi, trong đó nhắc lại tiền trong dân thì có thể chỉ ở các dạng: tiền gửi ở NH (đã được sử dụng), tiền mặt cất ở gầm giường (một phần ủ, một phần dùng giao dịch - transaction money), và, nếu có có thể tiền để ở nước ngoài (offshore).\nHuy động tiền chỉ ở các dạng đó, hoặc kéo về như kéo đám mây...\n\nCòn vàng? Trước đây khác (như tiền, và tạo tiền ngay trên cđkt của NH, as currency), nhưng hiện nay thì không, mà nó là tài sản. Mưu cầu nắm giữ, tích lũy tài sản vàng cũng như bđs, trái phiếu, cổ phiếu, làm kinh doanh (góp vốn), etf, bảo hiểm...; dù vàng nó carry âm. Phân bổ tài sản của người dân, hộ gia đình được pháp luật bảo vệ, chính là cái tạo nên bảng cđkt của hộ gia đình tùy theo năng lực và khẩu vị, tất nhiên nó bao gồm cả bên nợ - như vay NH để mua nhà. Khi các hộ gia đình/người dân giao dịch với nhau qua mua bán thì tiền không đổi, chỉ chuyển từ người này qua người khác, thay đổi là cơ cấu tài sản và nguồn phân bổ của họ.\n\nCâu chuyện đúng và hợp lý - như khắp nơi trên thế giới, là làm sao tận dụng nguồn lực (tài sản) khi có thể (available, eligible asset as collateral, asset, hoặc asset monetizing,...)\nTrên góc nhìn ts và mục tiêu huy động nguồn lực tài sản (not \"tiền\", tiền là mấy điểm đã đề cập ở trên) phù hợp với nhu cầu người dân và nền kinh tế.\n\nThường thấy nhất:\nVí dụ các bên có thể vay tạm lô trái phiếu để làm nguồn.\nMượn collateral như mớ sổ đỏ, trái phiếu, cổ phiếu.,... để làm nguồn, làm credit (tsbđ trong giao kết với NH, đối tác, PE, PC...)\nSecurities lending/collateral lending\nMột số nơi, ngay cả mortgage có equity đủ vẫn tiếp tục cho \"chiến đấu\" tiếp.\nVay tạm mớ cổ phiếu hoặc cổ short... lợi ích hài hòa, rủi ro chia sẻ. Hehe. \nTất nhiên món huy động nguồn lực tài sản (ts tài chính, ts thực) này có nơi có sp và cơ chế minh bạch, chuẩn hóa (tất nhiên được cho phép), có nơi không chuẩn hóa nhưng vẫn làm được, có nơi không cho phép nhưng vẫn phát sinh...\nVàng cũng có thể tận dụng nguồn lực như vậy. Bạn - nếu có thể, có đủ khả năng, thì mượn ai đó, có thể là family bank cục vàng để vào việc, hay mượn sổ đỏ với lý do... để nằm không đó làm chi, đưa con đi kinh doanh. Vân vân. \n...\nĐối ứng trên cân đối là nợ và phát sinh monetary flow. Stock of money có thể tăng lên, nhưng theo quy tắc tạo tiền của nền kt và mục tiêu quản lý của NHTW...\n\nCó lẽ với VN khá xa lạ, nhưng ví dụ US, ta có bảng cân đối hộ gia đình, trong đó thống kê tài sản của người dân: đang nắm những gì như cổ, trái, tiền gửi, bđs, vàng bạc, các món khác (alternatives); vay bao nhiêu, TS ròng bao nhiêu, tăng lên từ đâu - vd từ chứng khoán, bđs, vàng tăng giá, vay chủ yếu là gì ...\nCâu chuyện tiền và tài sản... \nVd của US bạn có thể xem ở bc Z.1 của Fed (link ở commts). Nhờ các chuyên gia qua đó huy động.\n\nP/s: Câu hỏi quan trọng là tại sao \"dân\" thích phân bổ vào vàng đến vậy.",
+    "banks": [],
+    "topic": "deals_corp",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-6/659813499_26637874515853636_655866767353125997_n.jpg?stp=dst-jpg_tt6&cstp=mx720x362&ctp=s720x362&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=151Wuj7dSssQ7kNvwEglNQI&_nc_oc=AdrP-BXfJWYR4yBDH-1_DC3VQzxeBGkgL6doJLLi51rPl9pp0PaV-NLyIl6-JHF49B0&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=C_0VPZbl-29wpbPhxGe5YQ&_nc_ss=72289&oh=00_AQEsu5LfWTohbrq6PgSntjbwgI7I3wZ5uqlBMcToARfSrQ&oe=6A8A07D3",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-6/659813499_26637874515853636_655866767353125997_n.jpg?stp=dst-jpg_tt6&cstp=mx720x362&ctp=s720x362&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=151Wuj7dSssQ7kNvwEglNQI&_nc_oc=AdrP-BXfJWYR4yBDH-1_DC3VQzxeBGkgL6doJLLi51rPl9pp0PaV-NLyIl6-JHF49B0&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=C_0VPZbl-29wpbPhxGe5YQ&_nc_ss=72289&oh=00_AQEsu5LfWTohbrq6PgSntjbwgI7I3wZ5uqlBMcToARfSrQ&oe=6A8A07D3",
+          "height": 362,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26637874455853642&set=a.2029578063776623",
+        "id": "26637874455853642",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY2Mzc4NzQ4NjU4NTM2MDE="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-04-04T05:15:09.000Z",
+    "timestamp": 1775279709,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0fqdBKVyixikMdQNgGyjgjNzKe5eXBudEQYbNHrk97FZYQprHK4nB5LAaovM2wJFbl",
+    "text": "Đang chạy lại svar irf DSGE các kb shock, mở lại eo Hormuz thì ông bạn gửi cho tấm bản đồ: phải mở nhanh.... So với kb tháng trc thì hiện tại đã có nhiều thay đổi.",
+    "banks": [],
+    "topic": "exchange_fx",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lax7-1.xx.fbcdn.net/v/t39.30808-6/659172919_26633923129582108_3617327961340442300_n.jpg?stp=dst-jpg_tt6&cstp=mx592x1013&ctp=p526x296&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Yu_L9AtcDsEQ7kNvwGrRRQs&_nc_oc=AdpKVhC2yIklviCe4kxVYQHgCosLiaRy7f687Ywdacx6I4T70z1KUjNdSGJfMvxdV63JAQoRjh4wLDCxetTQ2Cmo&_nc_zt=23&_nc_ht=scontent-lax7-1.xx&_nc_gid=IqklXww-fe6lZGiJSM-5Cg&_nc_ss=72289&oh=00_AQG2EGTuvPfq29QIdKxD3Am7GTySScEeaR0XGGBbiEX6sA&oe=6A89E57A",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFCAC78E",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lax7-1.xx.fbcdn.net/v/t39.30808-6/659172919_26633923129582108_3617327961340442300_n.jpg?stp=dst-jpg_tt6&cstp=mx592x1013&ctp=p526x296&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Yu_L9AtcDsEQ7kNvwGrRRQs&_nc_oc=AdpKVhC2yIklviCe4kxVYQHgCosLiaRy7f687Ywdacx6I4T70z1KUjNdSGJfMvxdV63JAQoRjh4wLDCxetTQ2Cmo&_nc_zt=23&_nc_ht=scontent-lax7-1.xx&_nc_gid=IqklXww-fe6lZGiJSM-5Cg&_nc_ss=72289&oh=00_AQG2EGTuvPfq29QIdKxD3Am7GTySScEeaR0XGGBbiEX6sA&oe=6A89E57A",
+          "height": 900,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26633923109582110&set=a.2029578063776623",
+        "id": "26633923109582110",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY2MzM5MjM0MzYyNDg3NDQ="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-04-02T15:02:11.000Z",
+    "timestamp": 1775142131,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02VpWuwt8mg12vTaNK6E2Y13bQLdCGTPmE3Axd96YYpD8MwuT3YubpScPEywqQ1QU6l",
+    "text": "Throwback. \nTiếp theo (giới thiệu sơ, tuy nhiên nếu kết hợp với các chart gần đây trong chuỗi BS dispatch thì có thể hiểu sơ sơ, vd nguồn offshore và swaps, outflow, vấn đề swap demand cao lên và nhu cầu vay OMO, Treasury, 4 pipelines...), thú vị là mặc dù \"bơm\" VND Reserves cả triệu tỷ nhưng vẫn thiếu, sẽ ở chart tiếp theo lần tới [drain Reserves]. \nMột hiện tượng vừa chịu áp lực mất cân đối funding (funding gap âm dần) * vừa mất cân đối kỳ hạn * giảm dự trữ và thiếu cash * Fx mismatch * Asset quality...\n\nỞ chart bên dưới giải thích vì sao chênh lệch hđ-cv suy giảm âm cả triệu tỷ (và theo đó, LDR lên cao = gđ 201x] trong vài năm qua. Cũng may Treasury vừa làm suy giảm tiền gửi và reserves, lại cố gắng hỗ trợ trở lại reserves qua 4 pipelines đề cập ở trên, mặc dù bản chất về tiền trong BS capacity management rất khác nhau. Q1 năm nay nghe nói thu ròng ngân sách khá tốt...\n\nP/S: Trên toàn hệ thống, tín dụng tạo tiền nhưng tiền trong nền kinh tế không phải chỉ do tín dụng tạo ra, đặc biệt tại các vùng giới hạn, tín dụng tạo tiền nhưng không tạo dự trữ, nhưng dự trữ phải theo yêu cầu, một hiện tượng xảy ra... BS mở rộng nhưng dự trữ không theo kịp/suy giảm tạo nên demand dự trữ ++... \nNon-borrowed Reserves hay NBR trở nên thâm hụt (âm) tích lũy lớn và kéo dài (ngay cả trước/không điều chỉnh cho các hoạt động reserves absorptions nếu có của CB.\n\nPPS: Các bạn thử làm bài tập mô phỏng NH1 có khoản vay 2U offshore và để nostro, qua một số hoạt động swap vs NH khác 1U và cho vay 1 customer1 ở VN 25kVND (khách CHUYỂN qua customer 2 ở NH2, lưu ý, modern bank - NH tạo loan asset và tạo deposit liability simultaneously, nhưng để KH thanh toán/chuyển đi thì phải có nguồn (i.e nostro, citad reserves) và đảm bảo các tỷ lệ, giới hạn theo quy định.),...ở vòng 1., tiếp theo (NH1)cho vay 1 customer3 1U và họ chuyển thanh toán ở Greenland. Customer 2 nhận  ở VN chuyển nộp tax 5 đồng và rút cash 5 đồng. Câu hỏi 1. NH sẽ nói gì với SBV. 2. Tính các tỷ lệ cơ bản. :-d\nBc chi tiết chia sẽ khi phù hợp.",
+    "banks": [],
+    "topic": "ratio_ldr",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-6/658910032_26618088181165603_674853823811803669_n.jpg?stp=dst-jpg_tt6&cstp=mx970x1061&ctp=s565x565&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=CODeie8_VZIQ7kNvwFXyY3q&_nc_oc=Adp0NCNnWIwd5dmAkvGc0-cuBoeuYyJiqjxT3DQvYBuqIqzk_lo3E08HghX9fccz_rNdT3eyPViIhYSIu-YKvKxf&_nc_zt=23&_nc_ht=scontent-lax3-1.xx&_nc_gid=IqklXww-fe6lZGiJSM-5Cg&_nc_ss=72289&oh=00_AQFlriUEGekOMicCK1umL4ANCWZ8NiVaVjWuQcVQ0oaZKA&oe=6A89E048",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-6/658910032_26618088181165603_674853823811803669_n.jpg?stp=dst-jpg_tt6&cstp=mx970x1061&ctp=s565x565&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=CODeie8_VZIQ7kNvwFXyY3q&_nc_oc=Adp0NCNnWIwd5dmAkvGc0-cuBoeuYyJiqjxT3DQvYBuqIqzk_lo3E08HghX9fccz_rNdT3eyPViIhYSIu-YKvKxf&_nc_zt=23&_nc_ht=scontent-lax3-1.xx&_nc_gid=IqklXww-fe6lZGiJSM-5Cg&_nc_ss=72289&oh=00_AQFlriUEGekOMicCK1umL4ANCWZ8NiVaVjWuQcVQ0oaZKA&oe=6A89E048",
+          "height": 565,
+          "width": 517
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26618088134498941&set=a.2029578063776623",
+        "id": "26618088134498941",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY2MTUzMjE0MDE0NDIyODE="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-04-02T01:39:43.000Z",
+    "timestamp": 1775093983,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02p7iE6SXvUpxCumT3uKfGuSwSK9NEoK4LgAESMigaMsoC1VQucdk3Pv7siXvLTunfl",
+    "text": "Sáng ngồi xem cụ phát biểu... high volatility + big fun, as usually. :-d\n\nNew normal term:",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lax7-1.xx.fbcdn.net/v/t39.30808-6/656201597_26608848268756261_8386990619084258390_n.jpg?stp=dst-jpg_tt6&cstp=mx968x1080&ctp=s565x565&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=RfMu5nMVXHQQ7kNvwHHE_fp&_nc_oc=AdrfnBYtR5qtItBhYpIa0q9jqs5pRV7EQMmhY_flrFWCAgdziEoKM9yv3r7VynprW9DDnDH0zvIAIoHlkUHZLVGo&_nc_zt=23&_nc_ht=scontent-lax7-1.xx&_nc_gid=IqklXww-fe6lZGiJSM-5Cg&_nc_ss=72289&oh=00_AQH3452Fy6C1Qq7_wDSkFUkmbbR--nIVH7nlCIJI-1wEZw&oe=6A8A0839",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF373948",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lax7-1.xx.fbcdn.net/v/t39.30808-6/656201597_26608848268756261_8386990619084258390_n.jpg?stp=dst-jpg_tt6&cstp=mx968x1080&ctp=s565x565&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=RfMu5nMVXHQQ7kNvwHHE_fp&_nc_oc=AdrfnBYtR5qtItBhYpIa0q9jqs5pRV7EQMmhY_flrFWCAgdziEoKM9yv3r7VynprW9DDnDH0zvIAIoHlkUHZLVGo&_nc_zt=23&_nc_ht=scontent-lax7-1.xx&_nc_gid=IqklXww-fe6lZGiJSM-5Cg&_nc_ss=72289&oh=00_AQH3452Fy6C1Qq7_wDSkFUkmbbR--nIVH7nlCIJI-1wEZw&oe=6A8A0839",
+          "height": 565,
+          "width": 506
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26608848235422931&set=a.2029578063776623",
+        "id": "26608848235422931",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY2MDg4NDg1NDU0MjI5MDA="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-04-01T03:37:19.000Z",
+    "timestamp": 1775014639,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02scqngAhdQcULdxLYZw2bDQUuVFUYdVzmnz9VgKYmh8yg7aDxwP2bK8Ujtfg15Ys4l",
+    "text": "Fx, Interest Rates and Interventions\nPhổ 2022 khá dày. Từ q32025 đến nay rất thú vị, đặc biệt khi các hợp đồng đến hạn.\n\nVùng màu vàng là gđ mua vào USD của SBV trong mấy năm qua (chủ yếu H1 '23), mình quên ghi trên chart.\n\nP/s. AHOD: all hands on deck situation.\n\nPPs. Cof lên cao và persistently, hai ba năm qua một lượng lớn USD offshore được dùng tài trợ cho hoạt động mở rộng BS (credit-led) VND (xem OIN âm, ở cmmt) thông qua hoán đổi chẳng hạn, và phần lớn cuối cùng đến từ supply reserves của SBV và Treasury. Nếu ko full-hegde hoặc có mismatch lớn, khá là... :-d",
+    "banks": [],
+    "topic": "exchange_fx",
+    "media": [
+      {
+        "thumbnail": "https://scontent.fmkc1-1.fna.fbcdn.net/v/t39.30808-6/657266594_26599216859719402_4502805942513839007_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x2048&ctp=p526x296&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=OYbXk0Zq-hoQ7kNvwEGmTOv&_nc_oc=AdqXa_lfn7zpsrIv9JxmnagWzalmQX6gl8poVmSZvFV6G0ze0d_fhROyINPnEHfxJlw&_nc_zt=23&_nc_ht=scontent.fmkc1-1.fna&_nc_gid=tf7qAehp2Kvbrk_e9Po-uw&_nc_ss=72289&oh=00_AQEEr9jUgsQXrysXSMfiKcznvr8tdLRvwGi-8-K4XkSzFA&oe=6A8A0919",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent.fmkc1-1.fna.fbcdn.net/v/t39.30808-6/657266594_26599216859719402_4502805942513839007_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x2048&ctp=p526x296&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=OYbXk0Zq-hoQ7kNvwEGmTOv&_nc_oc=AdqXa_lfn7zpsrIv9JxmnagWzalmQX6gl8poVmSZvFV6G0ze0d_fhROyINPnEHfxJlw&_nc_zt=23&_nc_ht=scontent.fmkc1-1.fna&_nc_gid=tf7qAehp2Kvbrk_e9Po-uw&_nc_ss=72289&oh=00_AQEEr9jUgsQXrysXSMfiKcznvr8tdLRvwGi-8-K4XkSzFA&oe=6A8A0919",
+          "height": 898,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26599216833052738&set=a.2029578063776623",
+        "id": "26599216833052738",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY1OTc2MzkxMDMyMTA1MTE="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-04-01T01:09:14.000Z",
+    "timestamp": 1775005754,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid038C8PapMEzGvT5vike7CXM1KvY8vvmQxT15Hcgcv98aeE4tv1TqAP6m876PwJqBRMl",
+    "text": "PMI \"inflation\", cao nhất từ 4/2022, tốc độ pass-through cao nhất kể từ 2011.\n\nP/s. Thông thueongf input price tăng, với đặc điểm của VN, tỷ giá thường chịu áp lực đáng kể.",
+    "banks": [],
+    "topic": "exchange_fx",
+    "media": [
+      {
+        "thumbnail": "https://scontent.fmkc1-1.fna.fbcdn.net/v/t39.30808-6/657390822_26596404886667266_3287861850357588086_n.jpg?stp=dst-jpg_tt6&cstp=mx720x420&ctp=s720x420&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=tq9snEO2XrYQ7kNvwEF_3PZ&_nc_oc=AdpXMBb8w0F849TIfAf563Oe3r1n3rV1DYCi8mt_0szgA2qBicylP20lJIl36OEVKZI&_nc_zt=23&_nc_ht=scontent.fmkc1-1.fna&_nc_gid=tf7qAehp2Kvbrk_e9Po-uw&_nc_ss=72289&oh=00_AQFg3lkLTRN4pN7F0apRbVu4pTzfeezEnaHklV6nMlBq1g&oe=6A89E8B1",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFEFEFC",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent.fmkc1-1.fna.fbcdn.net/v/t39.30808-6/657390822_26596404886667266_3287861850357588086_n.jpg?stp=dst-jpg_tt6&cstp=mx720x420&ctp=s720x420&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=tq9snEO2XrYQ7kNvwEF_3PZ&_nc_oc=AdpXMBb8w0F849TIfAf563Oe3r1n3rV1DYCi8mt_0szgA2qBicylP20lJIl36OEVKZI&_nc_zt=23&_nc_ht=scontent.fmkc1-1.fna&_nc_gid=tf7qAehp2Kvbrk_e9Po-uw&_nc_ss=72289&oh=00_AQFg3lkLTRN4pN7F0apRbVu4pTzfeezEnaHklV6nMlBq1g&oe=6A89E8B1",
+          "height": 420,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26596404843333937&set=a.2029578063776623",
+        "id": "26596404843333937",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY1OTY0MDUwNzAwMDA1ODE="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-03-30T13:43:14.000Z",
+    "timestamp": 1774878194,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0hUkEJniKjJBpdPkeJW89c4rAYErq4U9DJTahNNiBkEhtfC3nBWc5pnWjJt9qpqNZl",
+    "text": "Throwback, :-d",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2026-03-30T03:12:34.000Z",
+    "timestamp": 1774840354,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02zCy77JX3mpz3jNxkmTuWBMD332QqFfEFLfrdnpzLfBpKBpXKiWCrN9aQSnbjGYTtl",
+    "text": "Dễ thả đá trúng chân nếu reserves rơi xuống ngưỡng LCLoR hoặc quá thấp/normal activity và intraday liquidity management của NH.\nTrước cải tổ (citad) đã hỗ trợ trong payment system, nhưng nếu xuống quá thấp thì...\n\nGo parabolic.\n\nP/s. Thật ra kết hợp LCLoR (nội bộ hệ thống nhưng thiếu kỷ luật) với RR (dự trữ bắt buộc) theo cơ chế bình quân cùng với tình huống đưa đẩy gì đó khiến vừa qua có những pha rất thú vị.",
+    "banks": [],
+    "topic": "cfa_updates",
+    "media": [
+      {
+        "thumbnail": "https://scontent.fhio2-2.fna.fbcdn.net/v/t39.30808-6/657326737_26576848895289532_4116651442154036665_n.jpg?stp=dst-jpg_tt6&cstp=mx612x522&ctp=s590x590&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=rVl7w_jPpjsQ7kNvwEAdnEy&_nc_oc=AdrdLiqxNiYFU1fGHnHj75hShI1sq-s733LAFC5fZKAFOOZMx3EXeR0HkNvLJULY1QlPhg-ZcI_8JAZOxj8ujAaH&_nc_zt=23&_nc_ht=scontent.fhio2-2.fna&_nc_gid=iowHXsj3VvwhSwg7K78ckw&_nc_ss=72289&oh=00_AQGBB6bxfJTR9tbn8nak_sdsAxluFtkEH8e-k8ss-OdSVw&oe=6A8A02A3",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent.fhio2-2.fna.fbcdn.net/v/t39.30808-6/657326737_26576848895289532_4116651442154036665_n.jpg?stp=dst-jpg_tt6&cstp=mx612x522&ctp=s590x590&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=rVl7w_jPpjsQ7kNvwEAdnEy&_nc_oc=AdrdLiqxNiYFU1fGHnHj75hShI1sq-s733LAFC5fZKAFOOZMx3EXeR0HkNvLJULY1QlPhg-ZcI_8JAZOxj8ujAaH&_nc_zt=23&_nc_ht=scontent.fhio2-2.fna&_nc_gid=iowHXsj3VvwhSwg7K78ckw&_nc_ss=72289&oh=00_AQGBB6bxfJTR9tbn8nak_sdsAxluFtkEH8e-k8ss-OdSVw&oe=6A8A02A3",
+          "height": 503,
+          "width": 590
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26576848858622869&set=a.2029578063776623",
+        "id": "26576848858622869",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY1NzY4NDkwODg2MjI4NDY="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-03-28T14:29:55.000Z",
+    "timestamp": 1774708195,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0VDu34rnNp42wufDNMsfrmAkHWB1BJ55EiDzWbeJbURgGdG2Um46Pe9eQ55qJtqwal",
+    "text": "On BS expansion (cont.)",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent.fhio2-1.fna.fbcdn.net/v/t39.30808-6/655758343_26561220056852416_5058079101670465599_n.jpg?stp=dst-jpg_tt6&cstp=mx1079x601&ctp=s960x960&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=9P7YXhpry0wQ7kNvwGWRMTB&_nc_oc=Adp6wQR6E7JXqiYNJ3-hNhdezp7poOvz-umOupeRKWfzi5ze-NSFju37eLKrufuYXx4PE0VVp2Wee2WVwLsqjLpY&_nc_zt=23&_nc_ht=scontent.fhio2-1.fna&_nc_gid=iowHXsj3VvwhSwg7K78ckw&_nc_ss=72289&oh=00_AQFF5YFJgTOitjtgYZP5u_6djSdii1d8CgeNFElWRYIdyQ&oe=6A89F7E1",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent.fhio2-1.fna.fbcdn.net/v/t39.30808-6/655758343_26561220056852416_5058079101670465599_n.jpg?stp=dst-jpg_tt6&cstp=mx1079x601&ctp=s960x960&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=9P7YXhpry0wQ7kNvwGWRMTB&_nc_oc=Adp6wQR6E7JXqiYNJ3-hNhdezp7poOvz-umOupeRKWfzi5ze-NSFju37eLKrufuYXx4PE0VVp2Wee2WVwLsqjLpY&_nc_zt=23&_nc_ht=scontent.fhio2-1.fna&_nc_gid=iowHXsj3VvwhSwg7K78ckw&_nc_ss=72289&oh=00_AQFF5YFJgTOitjtgYZP5u_6djSdii1d8CgeNFElWRYIdyQ&oe=6A89F7E1",
+          "height": 535,
+          "width": 960
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26561219983519090&set=a.2029578063776623",
+        "id": "26561219983519090",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY1NjEyMjA0NTM1MTkwNDM="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-03-28T01:48:25.000Z",
+    "timestamp": 1774662505,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0AXSZpNGL6pg3pym3QEoTsRVkLG8mppydEFmb35CLEUyoCcT5bGWzmfm2BqJaqA1Dl",
+    "text": "UJ 160 (kể từ Jul 2024 - crowded carry trade).",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent.fhio2-2.fna.fbcdn.net/v/t39.30808-6/658372808_26555450027429419_314094590688173490_n.jpg?stp=dst-jpg_tt6&cstp=mx720x412&ctp=s720x412&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=1cQWA1qQ8dQQ7kNvwEohgBB&_nc_oc=Adr86aXNPWjDmw1j0JmmSPiv2V_mdpFNSYbZuUNYJE8KtpmVz0AEC8zLpl5v7E32K9mA0aJQTRoUljBDzhpMTZRo&_nc_zt=23&_nc_ht=scontent.fhio2-2.fna&_nc_gid=iowHXsj3VvwhSwg7K78ckw&_nc_ss=72289&oh=00_AQEVpMw4sI8S6_F-XlbxHFDJCU4sMxqccPfeiTzybu8K5g&oe=6A8A061C",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF000000",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent.fhio2-2.fna.fbcdn.net/v/t39.30808-6/658372808_26555450027429419_314094590688173490_n.jpg?stp=dst-jpg_tt6&cstp=mx720x412&ctp=s720x412&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=1cQWA1qQ8dQQ7kNvwEohgBB&_nc_oc=Adr86aXNPWjDmw1j0JmmSPiv2V_mdpFNSYbZuUNYJE8KtpmVz0AEC8zLpl5v7E32K9mA0aJQTRoUljBDzhpMTZRo&_nc_zt=23&_nc_ht=scontent.fhio2-2.fna&_nc_gid=iowHXsj3VvwhSwg7K78ckw&_nc_ss=72289&oh=00_AQEVpMw4sI8S6_F-XlbxHFDJCU4sMxqccPfeiTzybu8K5g&oe=6A8A061C",
+          "height": 412,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26555450010762754&set=a.2029578063776623",
+        "id": "26555450010762754",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY1NTU0NTAyMjQwOTYwNjY="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-03-26T11:45:29.000Z",
+    "timestamp": 1774525529,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02By6X1d8de4WVzN9B6DMCuuwHE2meLzuVwUavQTQKwTJSv9x2RegVgyNbTLUxkM7Xl",
+    "text": "Interesting",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent.fhnl3-1.fna.fbcdn.net/v/t39.30808-6/659668969_26537641242543631_1006616203378733467_n.jpg?stp=dst-jpg_tt6&cstp=mx592x412&ctp=s592x412&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=pbC-pYD9JpsQ7kNvwG2oakc&_nc_oc=AdrS0J1BoCoislYkN8UCUrJTUSgRpoaohBsGRTCuRWQcGZbQlE-SBb2wXHDlcFp_z5k&_nc_zt=23&_nc_ht=scontent.fhnl3-1.fna&_nc_gid=QAIZRg0RT1g1EOCdR59zPQ&_nc_ss=72289&oh=00_AQG1y0vZUd8I-GW3xC8bIB3LH_Dh9KhZ_4PZSk1EW4U7gA&oe=6A89F3AD",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent.fhnl3-1.fna.fbcdn.net/v/t39.30808-6/659668969_26537641242543631_1006616203378733467_n.jpg?stp=dst-jpg_tt6&cstp=mx592x412&ctp=s592x412&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=pbC-pYD9JpsQ7kNvwG2oakc&_nc_oc=AdrS0J1BoCoislYkN8UCUrJTUSgRpoaohBsGRTCuRWQcGZbQlE-SBb2wXHDlcFp_z5k&_nc_zt=23&_nc_ht=scontent.fhnl3-1.fna&_nc_gid=QAIZRg0RT1g1EOCdR59zPQ&_nc_ss=72289&oh=00_AQG1y0vZUd8I-GW3xC8bIB3LH_Dh9KhZ_4PZSk1EW4U7gA&oe=6A89F3AD",
+          "height": 412,
+          "width": 592
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26537641219210300&set=a.2029578063776623",
+        "id": "26537641219210300",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY1Mzc2NDE0OTI1NDM2MDY="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-03-26T08:30:16.000Z",
+    "timestamp": 1774513816,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0wwG8v7D1bF8gm9qDoy7vdX41yXdimhpwcWnbFHDKULkzGGBtufuEbtmX8AAwyxWCl",
+    "text": "",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2026-03-25T02:03:24.000Z",
+    "timestamp": 1774404204,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0AXYuCa272nG99dw3CXr2s22WXoDuVcD7SU2ytgKBqtDVBrhv3cWghGVWSGAuxPJcl",
+    "text": "On Marginal Flow ft. Margial CoF, tiếp.\nỞ khía cạnh pass-through cost of capital, thường dưới các áp lực NH sẽ absorb một phần, nhưng chỉ ở pha lag tại vùng NIM band mục tiêu. \nXét về cấu trúc CoF, pha tăng marginal CoF giai đoạn giữa Q4 '25 đến nay thậm chí mạnh hơn cả giai đoạn mạnh nhất 2022. \nCấu trúc Cost của LDR nhạy cảm hơn, tăng toàn diện hơn (i.e marginal cof của interbank, marginal cof của market 1, cof của capital* như bond, CoF từ Treasury được neo cao > all OMO term từ \"đầu nguồn\" và thống trị/chi phối marginal flow... ), trong khi yielding của side L có khả năng hấp thụ hạn chế hơn nhưng bắt buộc NH phải pass-through vào với sự phân hóa rất cao so với trước đây (i.e hiện cho vay ngắn hạn cho các mục đích abcd các loại rất khó tăng ls và yếu, sẽ phải dồn vào tdh trong đó có bđs với vòng quay thấp, rộng hơn là allocation danh mục asset). Điều này sẽ dẫn đến hiện tượng... (còn tiếp, :-d)\n\n---\n*thậm chí với cấu trúc cost của các trái phiếu của một số NH kể cả big4 và doanh nghiệp, gắn chặt với ls tiền gửi (big4, ref + margin) và đây là pha mà nhóm big4  cũng tăng ls sôi động không kém phần còn lại.",
+    "banks": [],
+    "topic": "ratio_ldr",
+    "media": [
+      {
+        "thumbnail": "https://scontent.fhnl3-2.fna.fbcdn.net/v/t39.30808-6/655747009_26522171777423911_627931389798775307_n.jpg?stp=dst-jpg_tt6&cstp=mx1509x562&ctp=p180x540&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=vmwY2PD-JakQ7kNvwGm01gj&_nc_oc=AdqnqhTxDJH-N2ZAnVwyGVPhTpI0JbtNjG-SmCCcD_9fzR5IPShXlMGTaEoiecjwUTk&_nc_zt=23&_nc_ht=scontent.fhnl3-2.fna&_nc_gid=QAIZRg0RT1g1EOCdR59zPQ&_nc_ss=72289&oh=00_AQFpumBm6g9wyDQA4qoGpuNh6imQL4XrjQz8Kgm3tLBxiA&oe=6A89F640",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent.fhnl3-2.fna.fbcdn.net/v/t39.30808-6/655747009_26522171777423911_627931389798775307_n.jpg?stp=dst-jpg_tt6&cstp=mx1509x562&ctp=p180x540&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=vmwY2PD-JakQ7kNvwGm01gj&_nc_oc=AdqnqhTxDJH-N2ZAnVwyGVPhTpI0JbtNjG-SmCCcD_9fzR5IPShXlMGTaEoiecjwUTk&_nc_zt=23&_nc_ht=scontent.fhnl3-2.fna&_nc_gid=QAIZRg0RT1g1EOCdR59zPQ&_nc_ss=72289&oh=00_AQFpumBm6g9wyDQA4qoGpuNh6imQL4XrjQz8Kgm3tLBxiA&oe=6A89F640",
+          "height": 540,
+          "width": 1450
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26522171737423915&set=a.2029578063776623",
+        "id": "26522171737423915",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY1MjIxNzIwMTQwOTA1NTQ="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-03-24T13:22:10.000Z",
+    "timestamp": 1774358530,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0qvzR9oMj24hygJxkD8biYC2ySHa6yaJVnmkBFaRsGUX6THC6gF1GQF42ussm4Vtgl",
+    "text": "Nghe nói hôm nay mới mở khá đắt hàng 6m, nhiều bạn ... déjà vu hỏi lại 2022-23",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/655437123_26516449487996140_7986637109327465342_n.jpg?stp=dst-jpg_tt6&cstp=mx1240x1435&ctp=s590x590&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=F9betrfV3xwQ7kNvwF6tj3b&_nc_oc=AdqD-0V35Cjq3JUIPIrl-L9pnJMsuQXiuf5Te2XtDbRLM6zp7bHmtK7zyKzVUBCqP_SgyFkgDMnDHOpz-OwBd8gE&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=spbjkPis-zbvKRZdCsfY0w&_nc_ss=72289&oh=00_AQHoKDQ1tOT8XvVxkn75kg_Pjsp14gpDYZapakCb0mWuKQ&oe=6A89D95E",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/655437123_26516449487996140_7986637109327465342_n.jpg?stp=dst-jpg_tt6&cstp=mx1240x1435&ctp=s590x590&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=F9betrfV3xwQ7kNvwF6tj3b&_nc_oc=AdqD-0V35Cjq3JUIPIrl-L9pnJMsuQXiuf5Te2XtDbRLM6zp7bHmtK7zyKzVUBCqP_SgyFkgDMnDHOpz-OwBd8gE&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=spbjkPis-zbvKRZdCsfY0w&_nc_ss=72289&oh=00_AQHoKDQ1tOT8XvVxkn75kg_Pjsp14gpDYZapakCb0mWuKQ&oe=6A89D95E",
+          "height": 590,
+          "width": 510
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26516449441329478&set=a.2029578063776623",
+        "id": "26516449441329478",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY1MTY0NDk3NjEzMjk0NDY="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-03-23T06:19:53.000Z",
+    "timestamp": 1774246793,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0sxW13sTDwnfg3XiWiVKRAbAUzopmNisJsGw4xdHLmoUnSgexknXZbNQEdnyUExAYl",
+    "text": "Water to basics",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/655602754_26502977939343295_2477136840386230839_n.jpg?stp=dst-jpg_tt6&cstp=mx1081x1350&ctp=s640x640&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=BVf-Ww2dzzwQ7kNvwE5LpLk&_nc_oc=AdqN9h7s1D5w-8s4Jm6OfSbtd7-gZQ58Qp2BoJWjhHKWYCrzRzSrLIo2uE07uF9BU_E7y1r7xtovmAhT6McZBqQv&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=spbjkPis-zbvKRZdCsfY0w&_nc_ss=72289&oh=00_AQH210hG8FdpSNbWtwIrd29nxtEWmNJZfjkSZ56twQPBYA&oe=6A89F4E4",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/655602754_26502977939343295_2477136840386230839_n.jpg?stp=dst-jpg_tt6&cstp=mx1081x1350&ctp=s640x640&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=BVf-Ww2dzzwQ7kNvwE5LpLk&_nc_oc=AdqN9h7s1D5w-8s4Jm6OfSbtd7-gZQ58Qp2BoJWjhHKWYCrzRzSrLIo2uE07uF9BU_E7y1r7xtovmAhT6McZBqQv&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=spbjkPis-zbvKRZdCsfY0w&_nc_ss=72289&oh=00_AQH210hG8FdpSNbWtwIrd29nxtEWmNJZfjkSZ56twQPBYA&oe=6A89F4E4",
+          "height": 640,
+          "width": 512
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26502977919343297&set=a.2029578063776623",
+        "id": "26502977919343297",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY1MDI5NzgxMTYwMDk5NDQ="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-03-23T03:10:02.000Z",
+    "timestamp": 1774235402,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02Q8V17RKr97R6yKybqgpHvaaUnamTVbD5yx3eCCHxGNxp3YGnp5RxCWfNtHUmwfA8l",
+    "text": "23 Mar, 1008 AM, \nNhà thông thái Charlie Munger bảo rằng mấy gã đàn ông trở nên thân tàn ma dại khi dính phải cả 3 lờ (3L) rượu chè, gái gú và đòn bẩy. \nNhưng có một nơi còn ghê gớm hơn... tập trung toàn bộ 3XLeverage without lady nor liquor.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/654382774_26501748546132901_214592600333829320_n.jpg?stp=dst-jpg_tt6&cstp=mx648x170&ctp=s648x170&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=SyROC1S_W8EQ7kNvwG_GOXk&_nc_oc=Adq6HWaW-Ij0TUIN34BC4OUUKzLuKUhkAmZVxZxv0ke6NR3LqzvAhyIG46ppnUzd4rCl3NBoVa-4G0R3DKv01PSR&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=spbjkPis-zbvKRZdCsfY0w&_nc_ss=72289&oh=00_AQFYF8EVZ2nGnurq0nUCqPMn_tI5821ErBu74dxxa7I5-A&oe=6A89FD23",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF141332",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/654382774_26501748546132901_214592600333829320_n.jpg?stp=dst-jpg_tt6&cstp=mx648x170&ctp=s648x170&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=SyROC1S_W8EQ7kNvwG_GOXk&_nc_oc=Adq6HWaW-Ij0TUIN34BC4OUUKzLuKUhkAmZVxZxv0ke6NR3LqzvAhyIG46ppnUzd4rCl3NBoVa-4G0R3DKv01PSR&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=spbjkPis-zbvKRZdCsfY0w&_nc_ss=72289&oh=00_AQFYF8EVZ2nGnurq0nUCqPMn_tI5821ErBu74dxxa7I5-A&oe=6A89FD23",
+          "height": 170,
+          "width": 648
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26501748526132903&set=a.2029578063776623",
+        "id": "26501748526132903",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY1MDE3NDg3NTk0NjYyMTM="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-03-21T03:44:49.000Z",
+    "timestamp": 1774064689,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02P8VYqoZXBDiBzqZhz5gmFP5nogZZTMauAVgygnqjnryuStg1oGQMtrsEaA3jxA81l",
+    "text": "Hôm qua markets có pha sell-off, bear flattening at extreme đối với cả UST curve lẫn inflation swap curve. \nThú vị là 2yr vượt FFR kể từ pha tăng ls 2 năm trước, trong khi hiện nay market vẫn còn động lượng của (expectations) pha giảm, nghĩa là một cú twist rất mạnh đã diễn ra. \nVấn đề cũng phải nói đến sự khuếch đại của unwind các vị thế và cả var shock.\nVề kỳ vọng lscs, phiên cuối tuần đúng là hiếm thấy. Gần như đồng loạt repricing, cụ thể là rủi ro của tăng ls đã tăng lên, từ ...Fed, ECB, BoE, đến... CA, AU, đến BoJ... (xem chart ở cmmt).",
+    "banks": [],
+    "topic": "interest_macro",
+    "media": []
+  },
+  {
+    "time": "2026-03-20T02:49:26.000Z",
+    "timestamp": 1773974966,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02Kd2xgEVPd5KLcj43AFaqTCif87iE9TFsXVqkdxkkoaL9SXrSk8qwzngigxcCYDHfl",
+    "text": "Nếu giá dầu duy trì 100 trở lên bq kéo dài mỗi 3 tháng có thể xói mòn cán cân vãng lai (%CA/GDP) hơn 0.5ppt, trong bối cảnh hiện nay có thể đẩy Fx Reserves theo Imports coverage (In months of GNFS imports) xuống gần mức thấp nhất (đáy) nửa đầu ... 2011.\nCơ bản sensitivity to oil price (độ nhạy vs giá dầu) cao lên, mức độ phụ thuộc (net import) cao nhưng reserves giảm tương đối nếu không nói mỏng cả physical (xăng dầu) lẫn Fx Reserves.",
+    "banks": [],
+    "topic": "exchange_fx",
+    "media": []
+  },
+  {
+    "time": "2026-03-19T14:32:53.000Z",
+    "timestamp": 1773930773,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0WPHEFuTKcfAznufqiksGZda46HRQpNSFQqveLJUFjrnZkqv4Nmox77Cf5TkQ4Jrfl",
+    "text": "Disruptions...\nWhen flow over price?",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2026-03-19T13:37:37.000Z",
+    "timestamp": 1773927457,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02v34tCPnFSCQtGajPofLRcaXpfgydwhqVKQP1JyMW6X1NXTBSWVzhginXvGwuupiHl",
+    "text": "Hot.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/653700203_26462548780052878_3729685375976064820_n.jpg?stp=dst-jpg_tt6&cstp=mx324x134&ctp=s324x134&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=BhyULLttXbMQ7kNvwEwiwMQ&_nc_oc=Adr74RG8_PmsXz-xd348zB_OrUqBergqxW-MCj2uJmDiL79dUVCLNHnsjghx6sUv4z0&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=7-XCKevS0vRtZnfRjN-7qw&_nc_ss=72289&oh=00_AQFZ2_wfF_-6kZTsImUbLhTkoBA-5pBD2ISxTo39gKr_jg&oe=6A89E78E",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF000000",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/653700203_26462548780052878_3729685375976064820_n.jpg?stp=dst-jpg_tt6&cstp=mx324x134&ctp=s324x134&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=BhyULLttXbMQ7kNvwEwiwMQ&_nc_oc=Adr74RG8_PmsXz-xd348zB_OrUqBergqxW-MCj2uJmDiL79dUVCLNHnsjghx6sUv4z0&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=7-XCKevS0vRtZnfRjN-7qw&_nc_ss=72289&oh=00_AQFZ2_wfF_-6kZTsImUbLhTkoBA-5pBD2ISxTo39gKr_jg&oe=6A89E78E",
+          "height": 134,
+          "width": 324
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26462548763386213&set=a.2029578063776623",
+        "id": "26462548763386213",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY0NjI1NDkwMzAwNTI4NTM="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-03-18T02:09:17.000Z",
+    "timestamp": 1773799757,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0ced4rBTWJUSd4vZ71kVc8gN8FKwtswxXWLEiSeG9DsZf8T4nsVjuPTfFtBA7fm9Gl",
+    "text": "Liệu qua cú shock của geopol hiện tại, các thành viên FOMC sẽ \"phản ứng\" ntn với dot-plot mới?\n\nP/s. Market đang pricing cao hơn (tức ít number of cut hơn, 0.25 tương ứng 1 lần cut/hike) so với kỳ họp có dot-plot/sep trước, tuy nhiên chỉ ở mức marginal, các chấm xám là khả năng sẽ bị chuyển lên cao hơn.)",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/651817626_26448783661429390_7949872212212870389_n.jpg?stp=dst-jpg_tt6&cstp=mx1240x630&ctp=p180x540&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ssVseSNPOAMQ7kNvwFH7W5x&_nc_oc=AdoEL8kZSLhDbr6AWghnRe2wu89NgkCRXDoAhgTZR5EzSWdg4Fh1fRGh40ZgyEeRuPU&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=7-XCKevS0vRtZnfRjN-7qw&_nc_ss=72289&oh=00_AQF_rpJzzZGWqBdhUltX38vFJfo5QY5CYOz06_O_NsPFjg&oe=6A89DE16",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/651817626_26448783661429390_7949872212212870389_n.jpg?stp=dst-jpg_tt6&cstp=mx1240x630&ctp=p180x540&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ssVseSNPOAMQ7kNvwFH7W5x&_nc_oc=AdoEL8kZSLhDbr6AWghnRe2wu89NgkCRXDoAhgTZR5EzSWdg4Fh1fRGh40ZgyEeRuPU&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=7-XCKevS0vRtZnfRjN-7qw&_nc_ss=72289&oh=00_AQF_rpJzzZGWqBdhUltX38vFJfo5QY5CYOz06_O_NsPFjg&oe=6A89DE16",
+          "height": 540,
+          "width": 1063
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26448783641429392&set=a.2029578063776623",
+        "id": "26448783641429392",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjY0NDg3ODM5MDgwOTYwMzI="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-03-13T03:33:18.000Z",
+    "timestamp": 1773372798,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02kHo8oPGnCDnXeEZEh5pwcoLxepkxvYTznwTzBf5BidKqMZ29QcuKNF6LTz486H6Cl",
+    "text": "Hay quá!",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2026-03-09T02:19:31.000Z",
+    "timestamp": 1773022771,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0ZVhJeiH1HHHAQy3RbUrM47e15fnorZ8LGTUf69EPVthqZgyMaLtuBGJugM37s5r9l",
+    "text": "VN, 915AM, 9Mar:",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-6/648922209_26363218266652597_1636954133935333286_n.jpg?stp=dst-jpg_tt6&cstp=mx720x170&ctp=s720x170&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=fzUqmFIifJ8Q7kNvwFzqS4A&_nc_oc=Adpd7vMyqKXXy9UKQNaZY4lLMsL_XE23A3NSko2npOPgKD6CnD1FXHTZIzHTbWLQpLU&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=LoepkRPHRJXkm_UtEqpG4Q&_nc_ss=72289&oh=00_AQH-_YPv3K3uQ5-o-BYArrzwkZQYcEkZe4Db8PGzHDbyUQ&oe=6A8A0D8C",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF141332",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-6/648922209_26363218266652597_1636954133935333286_n.jpg?stp=dst-jpg_tt6&cstp=mx720x170&ctp=s720x170&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=fzUqmFIifJ8Q7kNvwFzqS4A&_nc_oc=Adpd7vMyqKXXy9UKQNaZY4lLMsL_XE23A3NSko2npOPgKD6CnD1FXHTZIzHTbWLQpLU&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=LoepkRPHRJXkm_UtEqpG4Q&_nc_ss=72289&oh=00_AQH-_YPv3K3uQ5-o-BYArrzwkZQYcEkZe4Db8PGzHDbyUQ&oe=6A8A0D8C",
+          "height": 170,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26363218226652601&set=a.2029578063776623",
+        "id": "26363218226652601",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjYzNjMyMTg0NTMzMTkyNDU="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-03-08T15:23:11.000Z",
+    "timestamp": 1772983391,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0hwPmiEsLFcC6aFrrFZdRNz887aBHSzpzCVK6HxyeTBSWcBNkfMFtq8DvuJCNg2sSl",
+    "text": "GeoPol...\nOil matters\n\nRiêng về rates, curve, expectations cpi, gdp cũng khá mix tùy vào từng loại shocks và giai đoạn bước vào events.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/647617989_26358860083755082_1558913137408513800_n.jpg?stp=dst-jpg_tt6&cstp=mx1240x874&ctp=s720x720&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=_5YGMLbUTF4Q7kNvwGKItkl&_nc_oc=AdoXDu0wwmxEh09vVO8Y7en5iRTPfm8W-6R827lnCaemyQBpRb6AU_4NB7WbH4ZFPsE&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=LoepkRPHRJXkm_UtEqpG4Q&_nc_ss=72289&oh=00_AQGr2LvdNvvFKSgiSD8zk5UmBZpmpeJU72JEdi40paJVyg&oe=6A89D622",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/647617989_26358860083755082_1558913137408513800_n.jpg?stp=dst-jpg_tt6&cstp=mx1240x874&ctp=s720x720&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=_5YGMLbUTF4Q7kNvwGKItkl&_nc_oc=AdoXDu0wwmxEh09vVO8Y7en5iRTPfm8W-6R827lnCaemyQBpRb6AU_4NB7WbH4ZFPsE&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=LoepkRPHRJXkm_UtEqpG4Q&_nc_ss=72289&oh=00_AQGr2LvdNvvFKSgiSD8zk5UmBZpmpeJU72JEdi40paJVyg&oe=6A89D622",
+          "height": 507,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26358860043755086&set=a.2029578063776623",
+        "id": "26358860043755086",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjYzNTg4NjAyNzcwODgzOTY="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-03-07T09:17:22.000Z",
+    "timestamp": 1772875042,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0rNDcachfUXbFiBng9m9YGJC1ktKaGyiWGzDZh3165sorTP1hqgaybFu6RTbQhK6Nl",
+    "text": "Giá xăng.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/647042875_26347931951514562_7902025112219156971_n.jpg?stp=dst-jpg_tt6&cstp=mx1240x737&ctp=p843x403&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=qzzv8V1yDQQQ7kNvwHorZAt&_nc_oc=AdqhyxbnKRkswApcwj3bBJtwsk-ve_guQ6KpSeeoCRB3utVz_Aio29d1Xs9xxIJPJDU&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=LoepkRPHRJXkm_UtEqpG4Q&_nc_ss=72289&oh=00_AQEM7N-yRg3wAGQDSOBhmK7I29BDokOleD0uJBFAdWJjSg&oe=6A89E1EC",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF252525",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/647042875_26347931951514562_7902025112219156971_n.jpg?stp=dst-jpg_tt6&cstp=mx1240x737&ctp=p843x403&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=qzzv8V1yDQQQ7kNvwHorZAt&_nc_oc=AdqhyxbnKRkswApcwj3bBJtwsk-ve_guQ6KpSeeoCRB3utVz_Aio29d1Xs9xxIJPJDU&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=LoepkRPHRJXkm_UtEqpG4Q&_nc_ss=72289&oh=00_AQEM7N-yRg3wAGQDSOBhmK7I29BDokOleD0uJBFAdWJjSg&oe=6A89E1EC",
+          "height": 501,
+          "width": 843
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26347931908181233&set=a.2029578063776623",
+        "id": "26347931908181233",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjYzNDc5MzIxNzQ4NDc4NzM="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-03-05T09:00:45.000Z",
+    "timestamp": 1772701245,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid022ZbEU4bGba5MJAShzccu781y7z6wuTs1of3xVkJMsfep1rWrCLndVdhtZ34TkJxDl",
+    "text": "Dầu Đô * Đô Đồng.\n\n[Petro Đô la system] * [S system]",
+    "banks": [],
+    "topic": "exchange_fx",
+    "media": [
+      {
+        "thumbnail": "https://scontent.fcps4-2.fna.fbcdn.net/v/t39.30808-6/647133662_26328835963424161_7079444406714157815_n.jpg?stp=dst-jpg_tt6&cstp=mx720x1114&ctp=p526x296&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=UpalC2DSZdMQ7kNvwEIZpxa&_nc_oc=AdqVukn4TcMdK3EXqVeXxejzt4Llylz3JSOW8b0tL9-Rgx2z0bYFqrew7It0jodOyVKrUa1kRmf3SypFRUFA4XjN&_nc_zt=23&_nc_ht=scontent.fcps4-2.fna&_nc_gid=Xgb6V6UdogkBiNU8ywUlxQ&_nc_ss=72289&oh=00_AQHemMDj3JVRmekuG2fJcfcSSKTONqzVYDdbAjLDrJsBZA&oe=6A89DBC5",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent.fcps4-2.fna.fbcdn.net/v/t39.30808-6/647133662_26328835963424161_7079444406714157815_n.jpg?stp=dst-jpg_tt6&cstp=mx720x1114&ctp=p526x296&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=UpalC2DSZdMQ7kNvwEIZpxa&_nc_oc=AdqVukn4TcMdK3EXqVeXxejzt4Llylz3JSOW8b0tL9-Rgx2z0bYFqrew7It0jodOyVKrUa1kRmf3SypFRUFA4XjN&_nc_zt=23&_nc_ht=scontent.fcps4-2.fna&_nc_gid=Xgb6V6UdogkBiNU8ywUlxQ&_nc_ss=72289&oh=00_AQHemMDj3JVRmekuG2fJcfcSSKTONqzVYDdbAjLDrJsBZA&oe=6A89DBC5",
+          "height": 814,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26328835933424164&set=a.2029578063776623",
+        "id": "26328835933424164",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjYzMjg4MzYyMDM0MjQxMzc="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-02-26T01:44:03.000Z",
+    "timestamp": 1772070243,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02wk1damvxhLVvbG8wzxsZFeMH4kLa7VFmBPKUWhyqHHaSLFCsKBF8g2W6a99aGyusl",
+    "text": "Wild West fashion but without swaps\n\nP/s. Làm tôi nhớ đến cuốn Who Moved My Interest Rate. Một sự kết hợp nguyên bản các frameworks phương Tây với nền toán học Ấn cổ nhưng thực thi dựa trên tinh thần đặc sắc của ... Vật lý Ấn hiện đại.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent.fcps4-2.fna.fbcdn.net/v/t39.30808-6/641550657_26260707696903655_4731443273205621861_n.jpg?stp=dst-jpg_tt6&cstp=mx719x460&ctp=s719x460&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=2M7nt_25fTAQ7kNvwHNuL3a&_nc_oc=AdqRl-Wr1u94PTAdaaFnnXV-Q_cQkpnZjfvd9UvwptogIsiY1-YyXXMlRI2zNGAuwf11KIYNnh50i5Fwt_fyUrB-&_nc_zt=23&_nc_ht=scontent.fcps4-2.fna&_nc_gid=Xgb6V6UdogkBiNU8ywUlxQ&_nc_ss=72289&oh=00_AQFZoTe7GwzkgqUi4sgdiMB6zWWYzLJmETKPEnGEMxEwyQ&oe=6A89F157",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent.fcps4-2.fna.fbcdn.net/v/t39.30808-6/641550657_26260707696903655_4731443273205621861_n.jpg?stp=dst-jpg_tt6&cstp=mx719x460&ctp=s719x460&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=2M7nt_25fTAQ7kNvwHNuL3a&_nc_oc=AdqRl-Wr1u94PTAdaaFnnXV-Q_cQkpnZjfvd9UvwptogIsiY1-YyXXMlRI2zNGAuwf11KIYNnh50i5Fwt_fyUrB-&_nc_zt=23&_nc_ht=scontent.fcps4-2.fna&_nc_gid=Xgb6V6UdogkBiNU8ywUlxQ&_nc_ss=72289&oh=00_AQFZoTe7GwzkgqUi4sgdiMB6zWWYzLJmETKPEnGEMxEwyQ&oe=6A89F157",
+          "height": 460,
+          "width": 719
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26260707660236992&set=a.2029578063776623",
+        "id": "26260707660236992",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjYyNjA3MDgwMDAyMzY5NTg="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-02-11T01:55:17.000Z",
+    "timestamp": 1770774917,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid022btFWKSY6EYtiHwttpveiH5Ukoy8aqkEbpbUL1ZJZjQywPUTDVt2ZMLkUegeq2Ywl",
+    "text": "Cấu trúc funding và capital phân bổ cho RE credit bao giờ cũng phức tạp với nhiều premiums và embedded options, trên cân đối A-L, nhiều năm qua RE (long duration, low velocity, cùng các thể loại độ nhạy sensitivity hiện diện vd lãi suất...) luôn là cái hub absorb lượng vốn trung dài hạn (MLT mobilization) và Capital allocation (CAR). Năm qua ước tính mức tăng thêm (incremental required) của RE credit chiếm đến 2/3 lượng vốn TDH tăng thêm (incremental available) toàn ngành (tăng so với mức khoảng 43% năm 2024), phần còn lại dành cho tài trợ capex, các dự án TDH, các dự án hạ tầng... (vốn dự kiến tăng mạnh các năm tiếp).\nNên khi cân đối vốn TDH, bỏ qua sự hấp thụ hút vào RE là một thiếu sót.\nNăm nay ngay từ đầu năm cơ quan điều hành một phần nào đó đã yêu cầu đồng tốc với tín dụng chung và tạm hãm phanh một thời gian góp phần hỗ trợ cân đối lại. Liệu có kéo dài...",
+    "banks": [],
+    "topic": "ratio_car",
+    "media": [
+      {
+        "thumbnail": "https://scontent.fcps4-2.fna.fbcdn.net/v/t39.30808-6/632059247_26121397244168035_6890103714020764867_n.jpg?stp=dst-jpg_tt6&cstp=mx1240x1098&ctp=s565x565&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Fs68v0aiTtMQ7kNvwFnomVD&_nc_oc=AdpLYn5QyFT9PMmil4OriBheMoOgbrsNto-lZaTW_DvfXR51ZuCj9YE7IaRmJdKTuhjdtCGG6sRv2jA4voXcJwjz&_nc_zt=23&_nc_ht=scontent.fcps4-2.fna&_nc_gid=Xgb6V6UdogkBiNU8ywUlxQ&_nc_ss=72289&oh=00_AQG9JFy4nzmi_ebPsgdVOzf9P9WVOMU4EEbJD0nmhe2JvA&oe=6A89F816",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent.fcps4-2.fna.fbcdn.net/v/t39.30808-6/632059247_26121397244168035_6890103714020764867_n.jpg?stp=dst-jpg_tt6&cstp=mx1240x1098&ctp=s565x565&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Fs68v0aiTtMQ7kNvwFnomVD&_nc_oc=AdpLYn5QyFT9PMmil4OriBheMoOgbrsNto-lZaTW_DvfXR51ZuCj9YE7IaRmJdKTuhjdtCGG6sRv2jA4voXcJwjz&_nc_zt=23&_nc_ht=scontent.fcps4-2.fna&_nc_gid=Xgb6V6UdogkBiNU8ywUlxQ&_nc_ss=72289&oh=00_AQG9JFy4nzmi_ebPsgdVOzf9P9WVOMU4EEbJD0nmhe2JvA&oe=6A89F816",
+          "height": 500,
+          "width": 565
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26121397200834706&set=a.2029578063776623",
+        "id": "26121397200834706",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjYxMjEzOTc1MDQxNjgwMDk="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-02-10T03:18:04.000Z",
+    "timestamp": 1770693484,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0BYdfryh5SWyfLidH1aaFujSLvFXHfSASf1uKBrNYqXE4SPaKG7yPYhaCz2UdrRril",
+    "text": "Cực kỳ quan trọng! Trong khi, hồi trước nhớ một vị nguyên thủ check hàng ngày với chứng khoán mà?",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/630017371_26112744421699984_769532846603256252_n.jpg?stp=dst-jpg_tt6&cstp=mx720x641&ctp=s565x565&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Ww8lncLzR24Q7kNvwFro49f&_nc_oc=AdoRiN1EuKQMvLTsaZQyn8_4N-Ukxh3EM2C4cMt5-VwtEbaB6iwyeHi8vCPug9w3v6g&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=ZD8g_zVoWWW8Pl7Gvt3pAw&_nc_ss=72289&oh=00_AQFJ7Xxqwy0Fqbt3T3ONzMqraMjaYadqCXpbGf9ZRtz55w&oe=6A89F8C1",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/630017371_26112744421699984_769532846603256252_n.jpg?stp=dst-jpg_tt6&cstp=mx720x641&ctp=s565x565&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Ww8lncLzR24Q7kNvwFro49f&_nc_oc=AdoRiN1EuKQMvLTsaZQyn8_4N-Ukxh3EM2C4cMt5-VwtEbaB6iwyeHi8vCPug9w3v6g&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=ZD8g_zVoWWW8Pl7Gvt3pAw&_nc_ss=72289&oh=00_AQFJ7Xxqwy0Fqbt3T3ONzMqraMjaYadqCXpbGf9ZRtz55w&oe=6A89F8C1",
+          "height": 503,
+          "width": 565
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26112744391699987&set=a.2029578063776623",
+        "id": "26112744391699987",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjYxMTI3NDQ2ODgzNjY2MjQ="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-02-07T09:19:09.000Z",
+    "timestamp": 1770455949,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02NN3Y3KPFL3bkVtMG4Pkdi5XKQCVEyB5wbaNUeVxC1UnwEufnyDpHUkbQS2eGnFhyl",
+    "text": "Độc ẩm.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/627281265_26086699144304512_7816125347096635395_n.jpg?stp=dst-jpg_tt6&cstp=mx648x462&ctp=s648x462&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=F48aTHFHzH8Q7kNvwESFCDO&_nc_oc=Adq2ce9WOh8WlHs8Wyduq5-sk4MuLZaRI-ye_XwQ7S1EsufweA3pIhKGB1cegZO-vLs&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=ZD8g_zVoWWW8Pl7Gvt3pAw&_nc_ss=72289&oh=00_AQHIZxf4us1pn7i9zoDyjO_9hLARYjPfA-O5ng3UvoGemA&oe=6A89FDF9",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFC75133",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/627281265_26086699144304512_7816125347096635395_n.jpg?stp=dst-jpg_tt6&cstp=mx648x462&ctp=s648x462&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=F48aTHFHzH8Q7kNvwESFCDO&_nc_oc=Adq2ce9WOh8WlHs8Wyduq5-sk4MuLZaRI-ye_XwQ7S1EsufweA3pIhKGB1cegZO-vLs&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=ZD8g_zVoWWW8Pl7Gvt3pAw&_nc_ss=72289&oh=00_AQHIZxf4us1pn7i9zoDyjO_9hLARYjPfA-O5ng3UvoGemA&oe=6A89FDF9",
+          "height": 462,
+          "width": 648
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26086699114304515&set=a.2029578063776623",
+        "id": "26086699114304515",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjYwODY2OTk2NTA5NzExMjg="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-02-06T01:04:44.000Z",
+    "timestamp": 1770339884,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02XAvroQ2xF5N2V1eWEMEA1eAYThsXCumVmDTwFk6bfgC5MD2P7MtDnMMEDUE7JRkFl",
+    "text": "Tournament...",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/626194581_26073910445583382_3157819818119183187_n.jpg?stp=dst-jpg_tt6&cstp=mx1240x1320&ctp=p180x540&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=_3sHXo-IKmgQ7kNvwH5fwhm&_nc_oc=AdpwNYJbrLEyBDGj7IQPSQAqm345cAHRRaR_mV7OIqga-ZRnIZpNPhOF3-R-gp4I8oI&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=ZD8g_zVoWWW8Pl7Gvt3pAw&_nc_ss=72289&oh=00_AQF0Hgf2tG6ponzyDUJ950eRMoCRqXkrX0pQI-M8J65GnQ&oe=6A89F4E6",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/626194581_26073910445583382_3157819818119183187_n.jpg?stp=dst-jpg_tt6&cstp=mx1240x1320&ctp=p180x540&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=_3sHXo-IKmgQ7kNvwH5fwhm&_nc_oc=AdpwNYJbrLEyBDGj7IQPSQAqm345cAHRRaR_mV7OIqga-ZRnIZpNPhOF3-R-gp4I8oI&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=ZD8g_zVoWWW8Pl7Gvt3pAw&_nc_ss=72289&oh=00_AQF0Hgf2tG6ponzyDUJ950eRMoCRqXkrX0pQI-M8J65GnQ&oe=6A89F4E6",
+          "height": 540,
+          "width": 507
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26073910412250052&set=a.2029578063776623",
+        "id": "26073910412250052",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjYwNzM5MTA2OTIyNTAwMjQ="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-02-05T02:29:29.000Z",
+    "timestamp": 1770258569,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid033cJyqXKoLQikPKB2EvXmWt1Do3aZ8oNi9dwdS8FajQCxVJ6cJKt86BBx96o3cz7gl",
+    "text": "Vẫn hai vùng riêng biệt. Chia ... sân đình.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent.fric1-2.fna.fbcdn.net/v/t39.30808-6/625074532_26064461916528235_4005628775205358707_n.jpg?stp=dst-jpg_tt6&cstp=mx1240x1068&ctp=s590x590&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=nkZKcACOw3QQ7kNvwHoqYDQ&_nc_oc=AdpPQQpsOftEVWTYmdoRej1ScQzT2ZI0B-lLFpKcFC7nB7irPyAGR7j3L1rCOBQ9hnmyQjbefF1RRpIyZVk8IyNw&_nc_zt=23&_nc_ht=scontent.fric1-2.fna&_nc_gid=hQNZ-XwAo3iU0Qbwma4rgA&_nc_ss=72289&oh=00_AQH7PQwxHFESEeeX1NdG068WV_f67-80vgWi3u_LZ4Of2Q&oe=6A8A047E",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent.fric1-2.fna.fbcdn.net/v/t39.30808-6/625074532_26064461916528235_4005628775205358707_n.jpg?stp=dst-jpg_tt6&cstp=mx1240x1068&ctp=s590x590&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=nkZKcACOw3QQ7kNvwHoqYDQ&_nc_oc=AdpPQQpsOftEVWTYmdoRej1ScQzT2ZI0B-lLFpKcFC7nB7irPyAGR7j3L1rCOBQ9hnmyQjbefF1RRpIyZVk8IyNw&_nc_zt=23&_nc_ht=scontent.fric1-2.fna&_nc_gid=hQNZ-XwAo3iU0Qbwma4rgA&_nc_ss=72289&oh=00_AQH7PQwxHFESEeeX1NdG068WV_f67-80vgWi3u_LZ4Of2Q&oe=6A8A047E",
+          "height": 508,
+          "width": 590
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26064461896528237&set=a.2029578063776623",
+        "id": "26064461896528237",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjYwNjQ0NjIyMTY1MjgyMDU="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-02-02T03:11:05.000Z",
+    "timestamp": 1770001865,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0X1yWt13bYrhNN38KjEWRoHcGEBYbxmnBxicjm6pCHk4eA87xDon6ws4bAvhzrhp5l",
+    "text": "Fed staffs hý hửng khoe rằng với RMP (mới triển khai hồi tháng trc) giúp em smooth được markets (in orderly) trong những ngày như tax-date và year-end party.\n(Tất nhiên cũng cần sự trợ giúp của Kho bạc trong Treasury Buyback Program, cái này thì có 2 nhánh: liquidity management vs. cash management).\n\nP/s. Nay interbank cũng 2 con số, có bên bảo em còn \"bột giặt\"...",
+    "banks": [],
+    "topic": "interest_macro",
+    "media": [
+      {
+        "thumbnail": "https://scontent.fric1-2.fna.fbcdn.net/v/t39.30808-6/625151963_26037306622577098_8832579426434729436_n.jpg?stp=dst-jpg_tt6&cstp=mx720x547&ctp=p180x540&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=drfhqOaOiaQQ7kNvwGQMI21&_nc_oc=AdqDFF7PolOUt5qDdEf0ee2-Z6dqz5wZKQLvYKcpzu3OnSgNvv_15wfJOkWSz_4scrSyFcbMDx1ytf5ToQqQurNQ&_nc_zt=23&_nc_ht=scontent.fric1-2.fna&_nc_gid=hQNZ-XwAo3iU0Qbwma4rgA&_nc_ss=72289&oh=00_AQG8HDEk5DQ1WApRPu9l-YAiXtTFn-z9OKeETbV2wdrZSQ&oe=6A89E698",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent.fric1-2.fna.fbcdn.net/v/t39.30808-6/625151963_26037306622577098_8832579426434729436_n.jpg?stp=dst-jpg_tt6&cstp=mx720x547&ctp=p180x540&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=drfhqOaOiaQQ7kNvwGQMI21&_nc_oc=AdqDFF7PolOUt5qDdEf0ee2-Z6dqz5wZKQLvYKcpzu3OnSgNvv_15wfJOkWSz_4scrSyFcbMDx1ytf5ToQqQurNQ&_nc_zt=23&_nc_ht=scontent.fric1-2.fna&_nc_gid=hQNZ-XwAo3iU0Qbwma4rgA&_nc_ss=72289&oh=00_AQG8HDEk5DQ1WApRPu9l-YAiXtTFn-z9OKeETbV2wdrZSQ&oe=6A89E698",
+          "height": 540,
+          "width": 711
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26037306592577101&set=a.2029578063776623",
+        "id": "26037306592577101",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjYwMzczMDY4MDkyNDM3NDY="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-02-02T02:06:02.000Z",
+    "timestamp": 1769997962,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02CpnXKNFtNTLKJEZzHsBE4CBPADCFkLTLgxWdKW2js5Q9JLS16CKA9ArzFXDJ1NzVl",
+    "text": "Nhìn đồ thị này (từ BERI, chỗ anh Lực) có vẻ không chính xác lắm theo những nguồn dữ liệu hiện tại. Năm 2025 (số ước tính, available) thì NX hay net exports đang đóng góp âm vào tốc độ tăng trưởng. Cụ thể, xuất khẩu ròng (giá 2010) năm 2025 là 54.244 tỷ so với 2024 là 91.074 tỷ. Mặt khác, ở \"demand side\" khi đã so sánh, thì cũng cần nêu rõ một thành phần là statistical discrepancy, nên còn thiếu thành phần này trong đóng góp tạo tốc độ tăng của GDP là 8,018%. Tăng trưởng GDP 2024 điều chỉnh xuống còn 7,039% (số sơ bộ, vs số ước tính năm trước là 7,09...)\n\nĐiều này có ý nghĩa gì? Bởi vì tăng trưởng GDP ở VN được chọn là một trong những ultimate target cực kỳ quan trọng, và nó gần giống như nền KT láng giềng cho quá trình theo dõi mà nhiều bên nhận định: quy tắc thứ 2 trong kinh tế vĩ mô - rủi ro không đạt được mục tiêu tăng trưởng càng cao, xác suất kích thích càng lớn. Quy tắc thứ 1, mục tiêu tăng trưởng là vô cùng quan trọng. \nNếu những rủi ro giảm mạnh này trở thành hiện thực, chính phủ sẽ tăng cường hỗ trợ chính sách hơn nữa các thành phần để tạo \"counter-balancing\" làm tròn mục tiêu, năm ngoái bao gồm, external components (như trên) càng bất lợi, -> cần mạnh mẽ hơn domestic components, trong đó có các khu vực G, Private I và C. C năm ngoái cũng không đạt chỉ tiêu (nếu loại trừ C xuất khẩu như dịch vụ du lịch... (trong tổng Nx ở trên) thì tiêu dùng nội địa chỉ tăng trưởng ở mức khoảng 5% so với GDP mức 8...\n\"Thực tế\" (theo số liệu sơ bộ) thì I đóng góp vào tăng trưởng ~3.126ppt trong 8.018 overall, cao hơn so với số trong bc đã nêu ở trên (cũng hợp lý, vì bc estimate net export như trên).",
+    "banks": [],
+    "topic": "interest_macro",
+    "media": [
+      {
+        "thumbnail": "https://scontent.fric1-2.fna.fbcdn.net/v/t39.30808-6/624657396_26036954049279022_8952980284259782765_n.jpg?stp=dst-jpg_tt6&cstp=mx632x315&ctp=s632x315&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=d0PWqYljvJAQ7kNvwFsSM4C&_nc_oc=AdrfM5Og95iLCex_t1U7RA1N0HEoY9rNW5Qsqclc1YDBUnAaQrZvEwmodBugyNDizDzqkdGBBvXeRWvB9qeZmPCt&_nc_zt=23&_nc_ht=scontent.fric1-2.fna&_nc_gid=hQNZ-XwAo3iU0Qbwma4rgA&_nc_ss=72289&oh=00_AQFVjWDWnvCyGUxHEEbLkZpM_kLgBXFZxiOVfQDXckn-ag&oe=6A89F69C",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent.fric1-2.fna.fbcdn.net/v/t39.30808-6/624657396_26036954049279022_8952980284259782765_n.jpg?stp=dst-jpg_tt6&cstp=mx632x315&ctp=s632x315&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=d0PWqYljvJAQ7kNvwFsSM4C&_nc_oc=AdrfM5Og95iLCex_t1U7RA1N0HEoY9rNW5Qsqclc1YDBUnAaQrZvEwmodBugyNDizDzqkdGBBvXeRWvB9qeZmPCt&_nc_zt=23&_nc_ht=scontent.fric1-2.fna&_nc_gid=hQNZ-XwAo3iU0Qbwma4rgA&_nc_ss=72289&oh=00_AQFVjWDWnvCyGUxHEEbLkZpM_kLgBXFZxiOVfQDXckn-ag&oe=6A89F69C",
+          "height": 315,
+          "width": 632
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26036953999279027&set=a.2029578063776623",
+        "id": "26036953999279027",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjYwMzY5NTQxODkyNzkwMDg="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-01-31T02:20:27.000Z",
+    "timestamp": 1769826027,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid07DZNo3ZD7mEpTiGWSYfSBnisr94pbR8kLWmReTzoP8pTKLov5SMNvtPULaRdm8Nal",
+    "text": "Trump nominated Kevin Warsh to succeed Powell as Fed Chair. What next...\n\nHồi GFC08 mình ấn tượng với KW bởi sự trẻ trung và là cầu nối năng động giữa Fed với Wall Street lẫn Main Street, cũng như KW có xu hướng không ủng hộ balance sheet management policy lúc đó (QE2, 3, YCC...) mà hồi đó mình note khá nhiều về vấn đề này. Gần đây hơn là về forward guidance, data dependency và vấn đề dự báo ngắn hạn của Fed, cũng như regulatory framework (vs Basel, sau khủng hoảng GFC)...\n\nVới Bernanke lúc đó, bộ đôi Don Kohn (kiểu như ... Trương Chiêu) và KW giống câu chuyện nội sự nhờ DK, ngoại sự đề xuất Kevin Warsh vậy. \n\nP/s. Câu chuyện sắp tới, cũng như trước đó, không phải chuyện của một người, một nhân vật (trừ Trump), cụ thể ở đây không phải riêng Fed Chair alone, và với một nền KT, thì không chỉ Fed alone...\n\nPps. Bạn nào muốn thêm một chút thú vị mở rộng phạm vi trà dư tử hậu thì có thể đọc bài mới nhất của Paul Krugman. Tuy nhiên, để tránh hình thành  bias, thì không nên đọc, vì có thể ảnh hưởng đến bạn trong các nhận định và ra quyết định sau này - một quá trình dài khi sẽ phải theo dõi KW as FedChair.",
+    "banks": [],
+    "topic": "interest_macro",
+    "media": [
+      {
+        "thumbnail": "https://scontent.fcps3-1.fna.fbcdn.net/v/t39.30808-6/622816877_26020465330927894_5233755901417225808_n.jpg?stp=dst-jpg_tt6&cstp=mx720x531&ctp=s720x531&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=zUSuJWQIynsQ7kNvwEsk1Lb&_nc_oc=Adp6rxi3pAXud7uFQf4w5zz8j2SKnXwS7-xrk_o--XdIayRf6lBxoXeTu-AZAqOB0t-Eve3HbDiJf3uky3KLBkKE&_nc_zt=23&_nc_ht=scontent.fcps3-1.fna&_nc_gid=npXePku-y84PxcVKLopMfQ&_nc_ss=7d289&oh=00_AQFgxMsuyisM9oupUX2By9Foz24mQbwLIR9-0YiIDjAmug&oe=6A89EF11",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent.fcps3-1.fna.fbcdn.net/v/t39.30808-6/622816877_26020465330927894_5233755901417225808_n.jpg?stp=dst-jpg_tt6&cstp=mx720x531&ctp=s720x531&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=zUSuJWQIynsQ7kNvwEsk1Lb&_nc_oc=Adp6rxi3pAXud7uFQf4w5zz8j2SKnXwS7-xrk_o--XdIayRf6lBxoXeTu-AZAqOB0t-Eve3HbDiJf3uky3KLBkKE&_nc_zt=23&_nc_ht=scontent.fcps3-1.fna&_nc_gid=npXePku-y84PxcVKLopMfQ&_nc_ss=7d289&oh=00_AQFgxMsuyisM9oupUX2By9Foz24mQbwLIR9-0YiIDjAmug&oe=6A89EF11",
+          "height": 531,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26020465300927897&set=a.2029578063776623",
+        "id": "26020465300927897",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjYwMjA0NjU1Mjc1OTQ1NDE="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-01-30T05:04:37.000Z",
+    "timestamp": 1769749477,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0777geKfcBgUWFs9mD7WiAWEUZQwJHx9bpQuhfvKc2Kze4ZPBfFbY8wWVnrTEnnLql",
+    "text": "EAB SOT:",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent.fcps3-1.fna.fbcdn.net/v/t39.30808-6/623377815_26012232425084518_806427203174473238_n.jpg?stp=dst-jpg_tt6&cstp=mx720x781&ctp=s565x565&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=OPNUKJGaZqUQ7kNvwEkW7oc&_nc_oc=AdqYi65zhxiGY6pTE_YJpCZ6YZ3UzUPpTVP2wOrEN5zOSpuOmWIZoz_hrnC8MT8qRJCFW3T2pyz-LZ2VSf_RMv9L&_nc_zt=23&_nc_ht=scontent.fcps3-1.fna&_nc_gid=npXePku-y84PxcVKLopMfQ&_nc_ss=7d289&oh=00_AQGlMOmd2thfme6V7wX0D0eELb_vSdfvM29ZTEGDYfuqrg&oe=6A8A0403",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent.fcps3-1.fna.fbcdn.net/v/t39.30808-6/623377815_26012232425084518_806427203174473238_n.jpg?stp=dst-jpg_tt6&cstp=mx720x781&ctp=s565x565&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=OPNUKJGaZqUQ7kNvwEkW7oc&_nc_oc=AdqYi65zhxiGY6pTE_YJpCZ6YZ3UzUPpTVP2wOrEN5zOSpuOmWIZoz_hrnC8MT8qRJCFW3T2pyz-LZ2VSf_RMv9L&_nc_zt=23&_nc_ht=scontent.fcps3-1.fna&_nc_gid=npXePku-y84PxcVKLopMfQ&_nc_ss=7d289&oh=00_AQGlMOmd2thfme6V7wX0D0eELb_vSdfvM29ZTEGDYfuqrg&oe=6A8A0403",
+          "height": 565,
+          "width": 521
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26012232391751188&set=a.2029578063776623",
+        "id": "26012232391751188",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjYwMTIyMzI3MTUwODQ0ODk="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-01-30T04:03:28.000Z",
+    "timestamp": 1769745808,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0jFWixjZMAVcTNwD9FUVYDGMoNxw87ae31ckAxLe39ewFdMWndt1gU19t5JfnupWwl",
+    "text": "International Comparision, PPP... but which PPPs?",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent.fcps3-1.fna.fbcdn.net/v/t39.30808-6/622167985_26011850621789365_6217148894243048116_n.jpg?stp=dst-jpg_tt6&cstp=mx720x990&ctp=s720x720&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ji54-A3d9wwQ7kNvwHXS3AJ&_nc_oc=AdrwEp9QFOWO-X3IbmR4wd5ljEtvvPL1_qjSRjj2aP5l53bSwXQ4f_eQsmGMn1ysZBxHTNFtPRpg8NsyNOWwvLLm&_nc_zt=23&_nc_ht=scontent.fcps3-1.fna&_nc_gid=npXePku-y84PxcVKLopMfQ&_nc_ss=7d289&oh=00_AQG9ohm8Wdz-7GGn2o539JrkcCgU-Tl4gMRMaJzIV5sWiQ&oe=6A89EFF2",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFDF6E4",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent.fcps3-1.fna.fbcdn.net/v/t39.30808-6/622167985_26011850621789365_6217148894243048116_n.jpg?stp=dst-jpg_tt6&cstp=mx720x990&ctp=s720x720&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ji54-A3d9wwQ7kNvwHXS3AJ&_nc_oc=AdrwEp9QFOWO-X3IbmR4wd5ljEtvvPL1_qjSRjj2aP5l53bSwXQ4f_eQsmGMn1ysZBxHTNFtPRpg8NsyNOWwvLLm&_nc_zt=23&_nc_ht=scontent.fcps3-1.fna&_nc_gid=npXePku-y84PxcVKLopMfQ&_nc_ss=7d289&oh=00_AQG9ohm8Wdz-7GGn2o539JrkcCgU-Tl4gMRMaJzIV5sWiQ&oe=6A89EFF2",
+          "height": 720,
+          "width": 524
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26011850615122699&set=a.2029578063776623",
+        "id": "26011850615122699",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjYwMTE4NTA4MzUxMjI2Nzc="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-01-29T02:00:29.000Z",
+    "timestamp": 1769652029,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02SNszkAqemv27RoL4F27HwfrDYd7Yk7rtkRyLms5VswjmXRZgF5xqaCWMWFXjPbKLl",
+    "text": "Đến cuối 2025 thì TTS hệ thống vượt 27 triệu, VCSH 1.7 triệu, với hơn 1300 TCTD (> 4000 CN/PGD), riêng hệ thống NHTM chiếm hơn 95% TTS. \nTín dụng gần 19 triệu, với TB mỗi khoản vay~1 tỷ, ~80% khoản vay < 2 tỷ.\n\nTT không dùng tiền mặt tăng mạnh với GV ~27x GDP (casa, NFI base...) trên nền M2 gần 2x GPD, nhưng tiền mặt cũng tăng mạnh... :-d\n\nNhững TCTD lớn nhất, > Top Q (triệu tỷ):\nChart từ VNBA",
+    "banks": [],
+    "topic": "cfa_updates",
+    "media": [
+      {
+        "thumbnail": "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/623866882_26001871522787275_5082371932090136805_n.jpg?stp=dst-jpg_tt6&cstp=mx901x781&ctp=s590x590&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=NiwlU6HcUiIQ7kNvwE0cCJr&_nc_oc=AdqQpbAXPw4_POVm5L_i7DJXeIBXVylSu9XV17HSrqvDxufgLQfDN831XcUd5Q1_n5Q&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=L4TTJlghCb9HVHigdtiEdQ&_nc_ss=72289&oh=00_AQGRWrZYKlhubvr9Z63HUGJFkqe-ibbU6tI6c7yWgm75fw&oe=6A89EA31",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/623866882_26001871522787275_5082371932090136805_n.jpg?stp=dst-jpg_tt6&cstp=mx901x781&ctp=s590x590&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=NiwlU6HcUiIQ7kNvwE0cCJr&_nc_oc=AdqQpbAXPw4_POVm5L_i7DJXeIBXVylSu9XV17HSrqvDxufgLQfDN831XcUd5Q1_n5Q&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=L4TTJlghCb9HVHigdtiEdQ&_nc_ss=72289&oh=00_AQGRWrZYKlhubvr9Z63HUGJFkqe-ibbU6tI6c7yWgm75fw&oe=6A89EA31",
+          "height": 511,
+          "width": 590
+        },
+        "url": "https://www.facebook.com/photo/?fbid=26001871506120610&set=a.2029578063776623",
+        "id": "26001871506120610",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjYwMDE4NzE3NjYxMjA1ODQ="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-01-23T13:49:13.000Z",
+    "timestamp": 1769176153,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02UJPCb6RYdxoXEmMw3xxoQHh7achK5CfGpYE2yi6zhZ2RqwbHJ7Mj4wf6yKVfiBs4l",
+    "text": "Từ một qđ nền tảng: dễ dùng, dễ tạo, funding cho faster credit expansion, nên cũng có thêm vòng lặp mismatch & funding need --> higher Interbank funding demand + higher interconnectedness...",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/619384442_25949935827980845_331306142266476630_n.jpg?stp=dst-jpg_tt6&cstp=mx1240x1291&ctp=p180x540&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=5TOiLcjen8AQ7kNvwEmkctr&_nc_oc=AdpX_ZaQwz4fjQIJuuXov8s6SQzCGb9Kolx43dhkkhHXYV2l5iCnuQhnTK_a36chGos&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=L4TTJlghCb9HVHigdtiEdQ&_nc_ss=72289&oh=00_AQGx3RxMFrmSBfGmLGE5YUTReF-IkDjLcDEtrwCwHlaccA&oe=6A8A0B32",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/619384442_25949935827980845_331306142266476630_n.jpg?stp=dst-jpg_tt6&cstp=mx1240x1291&ctp=p180x540&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=5TOiLcjen8AQ7kNvwEmkctr&_nc_oc=AdpX_ZaQwz4fjQIJuuXov8s6SQzCGb9Kolx43dhkkhHXYV2l5iCnuQhnTK_a36chGos&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=L4TTJlghCb9HVHigdtiEdQ&_nc_ss=72289&oh=00_AQGx3RxMFrmSBfGmLGE5YUTReF-IkDjLcDEtrwCwHlaccA&oe=6A8A0B32",
+          "height": 540,
+          "width": 519
+        },
+        "url": "https://www.facebook.com/photo/?fbid=25949935794647515&set=a.2029578063776623",
+        "id": "25949935794647515",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjU5NDk5MzYwMTQ2NDc0OTM="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-01-18T04:40:50.000Z",
+    "timestamp": 1768711250,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0UjB9PZHeeigDEfvJeDmNV6xZ8Za5FHmhkGgoCrwKd8VrRNAtYWQ1em8xP1w5g7XPl",
+    "text": "Về thay đổi weights, base 2024 (từ tháng 11).\n\nP/s. Bạn nào hôm trước hỏi thì lấy nhé.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/615235704_25899729716334790_924541132422910682_n.jpg?stp=dst-jpg_tt6&cstp=mx599x330&ctp=s599x330&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=fObaxndzhBIQ7kNvwHP7oRL&_nc_oc=AdpNFpA4QiRuRaaGyihO1gGwfwSzMOUIvqwNjxS3Ef7jl0obQBrK5J74_Eu9SGW8v9U&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=L4TTJlghCb9HVHigdtiEdQ&_nc_ss=72289&oh=00_AQHE7je_PJIFMiRdHBJ6R9tlMzC_TsvIJRb5f8aRySSRSA&oe=6A89FD50",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/615235704_25899729716334790_924541132422910682_n.jpg?stp=dst-jpg_tt6&cstp=mx599x330&ctp=s599x330&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=fObaxndzhBIQ7kNvwHP7oRL&_nc_oc=AdpNFpA4QiRuRaaGyihO1gGwfwSzMOUIvqwNjxS3Ef7jl0obQBrK5J74_Eu9SGW8v9U&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=L4TTJlghCb9HVHigdtiEdQ&_nc_ss=72289&oh=00_AQHE7je_PJIFMiRdHBJ6R9tlMzC_TsvIJRb5f8aRySSRSA&oe=6A89FD50",
+          "height": 330,
+          "width": 599
+        },
+        "url": "https://www.facebook.com/photo/?fbid=25899729683001460&set=a.2029578063776623",
+        "id": "25899729683001460",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjU4OTk3Mjk4NzMwMDE0NDE="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-01-09T02:49:28.000Z",
+    "timestamp": 1767926968,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0Tz39BWAfwnvudY3mvZkeMFbAuGfeT7QGdZKFDn2kzrTKQtJfP1eaJcP9VaVHGf8tl",
+    "text": "Liabilities' Characteristics: Non-maturity deposits \n\nP/s. Casa của hệ thống ngân hàng VN cũng thú vị, cũng như FTP Casa context.\n\nEU 67 Banks:",
+    "banks": [],
+    "topic": "cfa_updates",
+    "media": [
+      {
+        "thumbnail": "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/611964069_25822749074032855_1934497054003442815_n.jpg?stp=dst-jpg_tt6&cstp=mx1840x1191&ctp=p180x540&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=sUP3TFMXCoUQ7kNvwFco7qI&_nc_oc=AdpCxBY8pW28puU02s_ybxWzSO9R-I5lIko5rCi7Zj-QIWrvUSsCmvJGJ9ECSLu1sHvtBLu7NRG00jhiqm4XbXV9&_nc_zt=23&_nc_ht=scontent-sjc3-1.xx&_nc_gid=v1ZGvYNB5r0LfIeGXOaLeA&_nc_ss=72289&oh=00_AQGoQwuOhN_iMIkro4pmpobrbESZEnUwACZcJT5ctfrInA&oe=6A8A068B",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/611964069_25822749074032855_1934497054003442815_n.jpg?stp=dst-jpg_tt6&cstp=mx1840x1191&ctp=p180x540&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=sUP3TFMXCoUQ7kNvwFco7qI&_nc_oc=AdpCxBY8pW28puU02s_ybxWzSO9R-I5lIko5rCi7Zj-QIWrvUSsCmvJGJ9ECSLu1sHvtBLu7NRG00jhiqm4XbXV9&_nc_zt=23&_nc_ht=scontent-sjc3-1.xx&_nc_gid=v1ZGvYNB5r0LfIeGXOaLeA&_nc_ss=72289&oh=00_AQGoQwuOhN_iMIkro4pmpobrbESZEnUwACZcJT5ctfrInA&oe=6A8A068B",
+          "height": 540,
+          "width": 834
+        },
+        "url": "https://www.facebook.com/photo/?fbid=25822749047366191&set=a.2029578063776623",
+        "id": "25822749047366191",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjU4MjI3NDkyOTczNjYxNjY="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2026-01-07T04:49:32.000Z",
+    "timestamp": 1767761372,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0ujp9BbS2BaCvmW5LfbTo591XQCiFnJ5ZoWorfoUyuUb9kCFAeCzBeGs1wKj6PViWl",
+    "text": "Cứ mỗi độ thay Lđ hoặc chuyển sở hữu...\nTake a big bath then goes spa \nNăm nay có thể ở một NH khác.",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2026-01-07T02:00:08.000Z",
+    "timestamp": 1767751208,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid099icNRJrPdu61Qg1HLALqnYqRspaA2vz6ViLDCxcAmnZ2zVMsGpcJNENUR8HRQArl",
+    "text": "And then, leverage x",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/611748328_25805201785787584_2444250578099798772_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1336&ctp=p180x540&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=4IFE_eJ77fQQ7kNvwGANVKX&_nc_oc=AdqaVk2hzb_qIifD2iidkGNBrQJlJE0G1fMqkL1DuwmaBMI39dlAjJ5jcY3dJ4JFnbDQ_CbDqgjxeJETUbyXyDz5&_nc_zt=23&_nc_ht=scontent-sjc3-1.xx&_nc_gid=v1ZGvYNB5r0LfIeGXOaLeA&_nc_ss=72289&oh=00_AQFCkX0X2FyaHVy7mSL42OwdzzTgy4D29ji_ccNygJoxkQ&oe=6A89E0CF",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFF0F9E8",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/611748328_25805201785787584_2444250578099798772_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1336&ctp=p180x540&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=4IFE_eJ77fQQ7kNvwGANVKX&_nc_oc=AdqaVk2hzb_qIifD2iidkGNBrQJlJE0G1fMqkL1DuwmaBMI39dlAjJ5jcY3dJ4JFnbDQ_CbDqgjxeJETUbyXyDz5&_nc_zt=23&_nc_ht=scontent-sjc3-1.xx&_nc_gid=v1ZGvYNB5r0LfIeGXOaLeA&_nc_ss=72289&oh=00_AQFCkX0X2FyaHVy7mSL42OwdzzTgy4D29ji_ccNygJoxkQ&oe=6A89E0CF",
+          "height": 540,
+          "width": 828
+        },
+        "url": "https://www.facebook.com/photo/?fbid=25805201755787587&set=a.2029578063776623",
+        "id": "25805201755787587",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjU4MDUyMDE5ODU3ODc1NjQ="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-12-31T03:27:30.000Z",
+    "timestamp": 1767151650,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02CPfghzJpghHxuCsGM8StU2hc8tZzJpQX6MDLvh4uVJykPe53EmmCDRNwcjmaCoVhl",
+    "text": "Tăng san kim thủ số.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-hou1-1.xx.fbcdn.net/v/t39.30808-6/606690942_25748920114749085_5615242457516643766_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x1200&ctp=p526x296&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=a_mF9Oi0K0MQ7kNvwHTbAFU&_nc_oc=AdoXgKjk946fKGIJVRt_cm6Rnqmw2zxAballl4yYYZBaYUmnImVmmb7jS_AoFMshrhNtreGrARUfBtgsU6SDFfXD&_nc_zt=23&_nc_ht=scontent-hou1-1.xx&_nc_gid=R6egsXm9ymghi6n06XtYww&_nc_ss=72289&oh=00_AQEkjnhZI7C3SapswD5B26gwsRUv2xaP6uvfxRZ6MFlRsg&oe=6A8A06AB",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFDFFFE",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-hou1-1.xx.fbcdn.net/v/t39.30808-6/606690942_25748920114749085_5615242457516643766_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x1200&ctp=p526x296&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=a_mF9Oi0K0MQ7kNvwHTbAFU&_nc_oc=AdoXgKjk946fKGIJVRt_cm6Rnqmw2zxAballl4yYYZBaYUmnImVmmb7jS_AoFMshrhNtreGrARUfBtgsU6SDFfXD&_nc_zt=23&_nc_ht=scontent-hou1-1.xx&_nc_gid=R6egsXm9ymghi6n06XtYww&_nc_ss=72289&oh=00_AQEkjnhZI7C3SapswD5B26gwsRUv2xaP6uvfxRZ6MFlRsg&oe=6A8A06AB",
+          "height": 526,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=25748920098082420&set=a.2029578063776623",
+        "id": "25748920098082420",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjU3NDg5MjAzMzE0MTU3MzA="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-12-14T02:49:05.000Z",
+    "timestamp": 1765680545,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02r2zjjiyAeXoLTeZK52CiEQcr6Tfupz6VRHZrkfFvdqdBDBVvwWUKS3HymtTRdcapl",
+    "text": "Cấu trúc hình thành lãi suất của nội bộ NH cơ bản dẫn dắt bởi xu hướng chung, nhưng lại phản ứng theo những cách khác nhau trên cơ sở cân bằng áp lực giữa cạnh tranh và hiệu quả/ràng buộc, (và chỉ giải thích cho ~20-40% mức sai lệch khỏi xu hướng chung), cho độ trễ (lag) có thể đến ~2 quý với giảm ls, nhưng độ lead có thể trước 1 quý với tăng ls. :-d",
+    "banks": [],
+    "topic": "interest_macro",
+    "media": [
+      {
+        "thumbnail": "https://scontent-hou1-1.xx.fbcdn.net/v/t39.30808-6/599451269_25614440514863713_3446567185294455008_n.jpg?stp=dst-jpg_tt6&cstp=mx720x659&ctp=p552x414&_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=UXXVmnRcczsQ7kNvwEtwdyx&_nc_oc=AdrzmSq5kFj2gbL0gJv0LsNz-2cdafnf6Tfeg2zryoNta4045Zqu_r_hpHmxApTbvqdDnC4fFT130fJLUmnQJdKP&_nc_zt=23&_nc_ht=scontent-hou1-1.xx&_nc_gid=R6egsXm9ymghi6n06XtYww&_nc_ss=72289&oh=00_AQGQJp-5gGU9h_IR2lxyq8kVSBWDHz2EYzEoc0ZBzFGEGg&oe=6A89DB1C",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFCFCFC",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-hou1-1.xx.fbcdn.net/v/t39.30808-6/599451269_25614440514863713_3446567185294455008_n.jpg?stp=dst-jpg_tt6&cstp=mx720x659&ctp=p552x414&_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=UXXVmnRcczsQ7kNvwEtwdyx&_nc_oc=AdrzmSq5kFj2gbL0gJv0LsNz-2cdafnf6Tfeg2zryoNta4045Zqu_r_hpHmxApTbvqdDnC4fFT130fJLUmnQJdKP&_nc_zt=23&_nc_ht=scontent-hou1-1.xx&_nc_gid=R6egsXm9ymghi6n06XtYww&_nc_ss=72289&oh=00_AQGQJp-5gGU9h_IR2lxyq8kVSBWDHz2EYzEoc0ZBzFGEGg&oe=6A89DB1C",
+          "height": 505,
+          "width": 552
+        },
+        "url": "https://www.facebook.com/photo/?fbid=25614440508197047&set=a.2028510173883412",
+        "id": "25614440508197047",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjU2MTQ0NDA3MTQ4NjM2OTM="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-10-17T11:15:57.000Z",
+    "timestamp": 1760699757,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0LtkbYFqRhviTx5J1FkDwJepC5R2URTDqVQjjWGi29sYhb7BXJ9fqfB6ga4y5TUT9l",
+    "text": "Vĩnh biệt ba, ông đã có một đời tràn đầy yêu thương và sự tử tế.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-hou1-1.xx.fbcdn.net/v/t39.30808-6/561156531_25104083465899423_8030092271761028248_n.jpg?stp=dst-jpg_tt6&cstp=mx761x694&ctp=p552x414&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=RxIegJFoCaEQ7kNvwHcsIb0&_nc_oc=AdqoWeFgPnTIWoNzPtkoa5AhCVvuSNkGhyrZKQHquU0D_48-rsET3Tq0tpGflwLlB-ClSaS4ubseCwcLcKdPKBMh&_nc_zt=23&_nc_ht=scontent-hou1-1.xx&_nc_gid=R6egsXm9ymghi6n06XtYww&_nc_ss=72289&oh=00_AQFSN9TXOiURewmi5bjTHSJ1QridQkLbhF7GmdVz-5u6XQ&oe=6A89D8E2",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF020202",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-hou1-1.xx.fbcdn.net/v/t39.30808-6/561156531_25104083465899423_8030092271761028248_n.jpg?stp=dst-jpg_tt6&cstp=mx761x694&ctp=p552x414&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=RxIegJFoCaEQ7kNvwHcsIb0&_nc_oc=AdqoWeFgPnTIWoNzPtkoa5AhCVvuSNkGhyrZKQHquU0D_48-rsET3Tq0tpGflwLlB-ClSaS4ubseCwcLcKdPKBMh&_nc_zt=23&_nc_ht=scontent-hou1-1.xx&_nc_gid=R6egsXm9ymghi6n06XtYww&_nc_ss=72289&oh=00_AQFSN9TXOiURewmi5bjTHSJ1QridQkLbhF7GmdVz-5u6XQ&oe=6A89D8E2",
+          "height": 503,
+          "width": 552
+        },
+        "url": "https://www.facebook.com/photo/?fbid=25104083462566090&set=a.2029578063776623",
+        "id": "25104083462566090",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjUxMDQwODM1OTU4OTk0MTA="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-10-15T09:47:30.000Z",
+    "timestamp": 1760521650,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02MdnCttJU3wzVs9QDqdKQZ8xiuXaBFEnMhLGfDqtFusRS51rrPwPs8dVkdVMYS2DYl",
+    "text": "Tiệm cận giá 15, parallel market...",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2025-10-15T09:45:19.000Z",
+    "timestamp": 1760521519,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02KPbrbJf7SCufaoFwXcYe6aJFWj5c8fCm1cE97EWNVdgNuoxZ9aJnFQJW1ye8maxol",
+    "text": "VN GoldX...",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/559585032_25083087121332391_1857381063370914535_n.jpg?stp=dst-jpg_tt6&cstp=mx720x805&ctp=s565x565&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=OB_uz6P73qEQ7kNvwGUxK8h&_nc_oc=AdosuTe6x3YbpkryN19VDkbZV7N1ZT-6tNcP00THdIgTteesCl5pD3Gdy32oJwvNUWNE2EPLS86Eby-j78BnnKqx&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=Giv17Hd2ZQw57-eA0WHTzA&_nc_ss=72289&oh=00_AQH0x_l0ABqf8Lysoc3o6yKgvYERJW8mE5k9THLGF4gVbg&oe=6A89EA63",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/559585032_25083087121332391_1857381063370914535_n.jpg?stp=dst-jpg_tt6&cstp=mx720x805&ctp=s565x565&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=OB_uz6P73qEQ7kNvwGUxK8h&_nc_oc=AdosuTe6x3YbpkryN19VDkbZV7N1ZT-6tNcP00THdIgTteesCl5pD3Gdy32oJwvNUWNE2EPLS86Eby-j78BnnKqx&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=Giv17Hd2ZQw57-eA0WHTzA&_nc_ss=72289&oh=00_AQH0x_l0ABqf8Lysoc3o6yKgvYERJW8mE5k9THLGF4gVbg&oe=6A89EA63",
+          "height": 565,
+          "width": 505
+        },
+        "url": "https://www.facebook.com/photo/?fbid=25083087117999058&set=a.2029578063776623",
+        "id": "25083087117999058",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjUwODMwODcyNDQ2NjU3MTI="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-10-12T05:05:05.000Z",
+    "timestamp": 1760245505,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0uoxqjJ7TTsEVZcATmQtgEfb2WqfXHHkqLr9LvenBcFhfBMTa8vAARFHL8PuFhWcfl",
+    "text": "Với người mua vàng VN, giả sử từ trước co-vid, thì mỗi lượng vàng nắm giữ riêng sự mất giá của VND và gia tăng của \"gap\" đã mang lại hiệu ứng lãi gộp hơn 70%. Đó là một trong những \"tính năng\" và đặc điểm góp phần thúc đẩy nắm giữ vàng (và càng làm lượng cung có thể tradable trên market giảm xuống).",
+    "banks": [],
+    "topic": "cfa_updates",
+    "media": [
+      {
+        "thumbnail": "https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/560193634_25053260347648402_6847423122176835744_n.jpg?stp=dst-jpg_tt6&cstp=mx617x510&ctp=s617x510&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=b_FU_wmDZPgQ7kNvwGSqJ7t&_nc_oc=AdqWSXz-ypcgpaO_CBtayUaJi-8jp9Ym54x3lWonExH2v-p4jU1jnnWcyJTxiRzAY8ionxGnWAzFYnVyxtl2G-Zx&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=Giv17Hd2ZQw57-eA0WHTzA&_nc_ss=72289&oh=00_AQEn9zPapdW2AaiIs014Ap9KbIboVsljvZtqAt5mxasDSw&oe=6A89E8A7",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF252525",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/560193634_25053260347648402_6847423122176835744_n.jpg?stp=dst-jpg_tt6&cstp=mx617x510&ctp=s617x510&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=b_FU_wmDZPgQ7kNvwGSqJ7t&_nc_oc=AdqWSXz-ypcgpaO_CBtayUaJi-8jp9Ym54x3lWonExH2v-p4jU1jnnWcyJTxiRzAY8ionxGnWAzFYnVyxtl2G-Zx&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=Giv17Hd2ZQw57-eA0WHTzA&_nc_ss=72289&oh=00_AQEn9zPapdW2AaiIs014Ap9KbIboVsljvZtqAt5mxasDSw&oe=6A89E8A7",
+          "height": 510,
+          "width": 617
+        },
+        "url": "https://www.facebook.com/photo/?fbid=25053260344315069&set=a.2029578063776623",
+        "id": "25053260344315069",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjUwNTMyNjA0NjA5ODE3MjQ="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-10-10T05:12:35.000Z",
+    "timestamp": 1760073155,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid01DBM5mbFTTo8mVW9LgTnNVVDJZcK8CREF1rp8LAcUpZLEvdiK56nBdQft5Gcdusnl",
+    "text": "Có bạn hỏi về giá trị BĐS làm TSBĐ ở hệ thống NH.\nVới Top 10 sôi nổi: hơn 14 tr ty. (Không bao gồm \"cá voi\" S)",
+    "banks": [],
+    "topic": "cfa_updates",
+    "media": [
+      {
+        "thumbnail": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/557767132_25031745286466575_7209308517334040363_n.jpg?stp=dst-jpg_tt6&cstp=mx582x916&ctp=p526x296&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Q6B8J11PYc4Q7kNvwH8Odd2&_nc_oc=AdqZfmT2r0xajbj_3NPv7g3_68YG5qPovBKEdafXpkgcD9Ei_YI3wNoOnvToFqXfKcLlzLue7RDKmwTGjzRL9JxE&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=s789pmxGlsdldo-u3f29Gg&_nc_ss=72289&oh=00_AQH1_RjHuDRG5De0_0WZ8_C7LcC_zh-Pn-EFBGKTmVNa5g&oe=6A8A071F",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF2483AF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/557767132_25031745286466575_7209308517334040363_n.jpg?stp=dst-jpg_tt6&cstp=mx582x916&ctp=p526x296&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Q6B8J11PYc4Q7kNvwH8Odd2&_nc_oc=AdqZfmT2r0xajbj_3NPv7g3_68YG5qPovBKEdafXpkgcD9Ei_YI3wNoOnvToFqXfKcLlzLue7RDKmwTGjzRL9JxE&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=s789pmxGlsdldo-u3f29Gg&_nc_ss=72289&oh=00_AQH1_RjHuDRG5De0_0WZ8_C7LcC_zh-Pn-EFBGKTmVNa5g&oe=6A8A071F",
+          "height": 828,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=25031745283133242&set=a.2029578063776623",
+        "id": "25031745283133242",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjUwMzE3NDU0NTk3OTk4OTE="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-10-08T14:29:03.000Z",
+    "timestamp": 1759933743,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0iNqduTipZe1pQLppzk28Z6VPXdG7P875fWMhE5RBEhsYE8NgzmUAmgD216ZtHgJpl",
+    "text": "Có thể có cách tiếp cận, thiết kế chính sách và mục tiêu khác nhau trong từng giai đoạn và mục tiêu...\nNhưng khẳng định \"không có quốc gia nào...\" thì tôi cũng không hiểu quãng thời gian làm PCT UBGSTCQC là làm gì!\n\nP/s. Thực sự ít ai dám nói \"không có...\" và nghe rất dị ứng, dù với đại chúng họ mong muốn truyền tải...",
+    "banks": [],
+    "topic": "sbv",
+    "media": [
+      {
+        "thumbnail": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/557641031_25014013011573136_3238182029041931338_n.jpg?stp=dst-jpg_tt6&cstp=mx720x591&ctp=s640x640&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=N7rSLYmXP2kQ7kNvwH4BCfS&_nc_oc=AdqopCnFjMDvIlRBHih9leq_BieBEJ7xi9KCyVQp0ZFpxQ1rWkeKxzhZveNdKnUdhV2Wqp6FUmqMUmPYIQEi6J8x&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=s789pmxGlsdldo-u3f29Gg&_nc_ss=72289&oh=00_AQE-6atc6vLtdNmjqJTXb6mW2JNf02hfvqmBzU7zo8aB2g&oe=6A89F795",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/557641031_25014013011573136_3238182029041931338_n.jpg?stp=dst-jpg_tt6&cstp=mx720x591&ctp=s640x640&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=N7rSLYmXP2kQ7kNvwH4BCfS&_nc_oc=AdqopCnFjMDvIlRBHih9leq_BieBEJ7xi9KCyVQp0ZFpxQ1rWkeKxzhZveNdKnUdhV2Wqp6FUmqMUmPYIQEi6J8x&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=s789pmxGlsdldo-u3f29Gg&_nc_ss=72289&oh=00_AQE-6atc6vLtdNmjqJTXb6mW2JNf02hfvqmBzU7zo8aB2g&oe=6A89F795",
+          "height": 525,
+          "width": 640
+        },
+        "url": "https://www.facebook.com/photo/?fbid=25014013004906470&set=a.2029578063776623",
+        "id": "25014013004906470",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjUwMTQwMTMyNTQ5MDY0NDU="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-10-07T15:18:03.000Z",
+    "timestamp": 1759850283,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02oiEMMddH3RWX93AxRATFRg4W9MHLVt37UUTdK77EWAjSVbwtN5LbvE4MCb5mBHg1l",
+    "text": "Tether\n\nCredit: Willem Middelkoop",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/557627491_25004366675871103_4133418555780255751_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1111&ctp=s960x960&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=l8sm1GsGmAEQ7kNvwG_YVYH&_nc_oc=AdqslUEap1DJVATVAEIm0CEsNCXF57B142mJi2gi8f5qbibaR35Bk7f7Twlf7-HNThIxypwlaMeIZ-VdsX_ahy-S&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=s789pmxGlsdldo-u3f29Gg&_nc_ss=72289&oh=00_AQHDQdt3g1IDF2XhJ7frmgPT2Ri3P30X9clsIX8AnlFtgw&oe=6A8A0711",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/557627491_25004366675871103_4133418555780255751_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1111&ctp=s960x960&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=l8sm1GsGmAEQ7kNvwG_YVYH&_nc_oc=AdqslUEap1DJVATVAEIm0CEsNCXF57B142mJi2gi8f5qbibaR35Bk7f7Twlf7-HNThIxypwlaMeIZ-VdsX_ahy-S&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=s789pmxGlsdldo-u3f29Gg&_nc_ss=72289&oh=00_AQHDQdt3g1IDF2XhJ7frmgPT2Ri3P30X9clsIX8AnlFtgw&oe=6A8A0711",
+          "height": 521,
+          "width": 960
+        },
+        "url": "https://www.facebook.com/photo/?fbid=25004366295871141&set=a.2029578063776623",
+        "id": "25004366295871141",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjUwMDQzNjY0MjkyMDQ0NjE="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-10-07T02:02:30.000Z",
+    "timestamp": 1759802550,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02BzQXc4BvnDtQJKg7KectrZ31zAZdMvyq1EV1bDS7scKDcA8zoY2KNvm1PNZQ3jDtl",
+    "text": "Số liệu công bố đến nay không thấy update nữa?\nTháng 6 chắc cao?",
+    "banks": [],
+    "topic": "cfa_updates",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/558664199_24999178566389914_3118637257993155617_n.jpg?stp=dst-jpg_tt6&cstp=mx720x487&ctp=s720x487&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=4nLKSB5ZAHEQ7kNvwH1y58W&_nc_oc=AdqjKeobygN8p5vH4Y1PS0Pz3KKZJrwXnM5r8INH6ShMFTDefDrFJBb4FPyHyS6-TBRMrrB9iby2eb9lZ_yQsjFL&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=oP1xwoGuzBv7ye9stK9wxQ&_nc_ss=72289&oh=00_AQEPru3Lgz36Umya8NRn8lVbHW7vhlOw9Zc7CEPkknMHTQ&oe=6A89F2EF",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/558664199_24999178566389914_3118637257993155617_n.jpg?stp=dst-jpg_tt6&cstp=mx720x487&ctp=s720x487&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=4nLKSB5ZAHEQ7kNvwH1y58W&_nc_oc=AdqjKeobygN8p5vH4Y1PS0Pz3KKZJrwXnM5r8INH6ShMFTDefDrFJBb4FPyHyS6-TBRMrrB9iby2eb9lZ_yQsjFL&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=oP1xwoGuzBv7ye9stK9wxQ&_nc_ss=72289&oh=00_AQEPru3Lgz36Umya8NRn8lVbHW7vhlOw9Zc7CEPkknMHTQ&oe=6A89F2EF",
+          "height": 487,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24999178563056581&set=a.2029578063776623",
+        "id": "24999178563056581",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ5OTkxNzg3MjMwNTY1NjU="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-10-07T01:35:45.000Z",
+    "timestamp": 1759800945,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0259kiPViHGBesdw4pxx4HPcpd8opirfVXkteCRSe54oNhKQsZWSMpLvDvt5GVrjd8l",
+    "text": "Sáng có ông quốc ngoại share cái như thế này, thật là quá đáng. \nRising star, họ không học hỏi và ghi nhận được gì chăng.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/557629941_24999012199739884_1420162475725062769_n.jpg?stp=dst-jpg_tt6&cstp=mx615x1048&ctp=p526x296&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=RIzRb-dTGrYQ7kNvwHnZuvN&_nc_oc=AdrPrYledzlUevUE7aL8f_YcJ0swNZ_RgVgQlmSRLVGgTL3_LjFohjihUPpKFmwcMrIdnCMO1VwcoRxWTy_cDC_V&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=oP1xwoGuzBv7ye9stK9wxQ&_nc_ss=72289&oh=00_AQG5_zCzHgQsAcblc9zP1ZRXQ-SAzeahhOOwAvYkD-Jzvg&oe=6A8A0066",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/557629941_24999012199739884_1420162475725062769_n.jpg?stp=dst-jpg_tt6&cstp=mx615x1048&ctp=p526x296&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=RIzRb-dTGrYQ7kNvwHnZuvN&_nc_oc=AdrPrYledzlUevUE7aL8f_YcJ0swNZ_RgVgQlmSRLVGgTL3_LjFohjihUPpKFmwcMrIdnCMO1VwcoRxWTy_cDC_V&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=oP1xwoGuzBv7ye9stK9wxQ&_nc_ss=72289&oh=00_AQG5_zCzHgQsAcblc9zP1ZRXQ-SAzeahhOOwAvYkD-Jzvg&oe=6A8A0066",
+          "height": 896,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24999012193073218&set=a.2029578063776623",
+        "id": "24999012193073218",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ5OTkwMTIzNDY0MDY1MzY="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-10-05T08:41:03.000Z",
+    "timestamp": 1759653663,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0Z4FSTVRWyJn9hewPmDazVJjnSZ7Sywhb4rN38WF5s1CSktrhvVG8SKcrnDsN3RD1l",
+    "text": "Continued.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/558612197_24982483158059455_2675744783587105148_n.jpg?stp=dst-jpg_tt6&cstp=mx720x498&ctp=s720x498&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=p27z1hPFue0Q7kNvwEOUmIO&_nc_oc=Adq7ay-RPrER3rUDF9LJeqPuUm-gGoz50YgwBGNEWkZltVmbbm-c7Hjqk7BkEgy9ydJHVbn33xSNfujljgqxTBWU&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=oP1xwoGuzBv7ye9stK9wxQ&_nc_ss=72289&oh=00_AQG8SsA2IQkMOlMa5JP-bvvbgX04tyYwl4vH_XpNbH-_bA&oe=6A89DE64",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/558612197_24982483158059455_2675744783587105148_n.jpg?stp=dst-jpg_tt6&cstp=mx720x498&ctp=s720x498&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=p27z1hPFue0Q7kNvwEOUmIO&_nc_oc=Adq7ay-RPrER3rUDF9LJeqPuUm-gGoz50YgwBGNEWkZltVmbbm-c7Hjqk7BkEgy9ydJHVbn33xSNfujljgqxTBWU&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=oP1xwoGuzBv7ye9stK9wxQ&_nc_ss=72289&oh=00_AQG8SsA2IQkMOlMa5JP-bvvbgX04tyYwl4vH_XpNbH-_bA&oe=6A89DE64",
+          "height": 498,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24982483148059456&set=a.2029578063776623",
+        "id": "24982483148059456",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ5ODI0ODMzMDEzOTI3NzQ="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-10-05T03:17:26.000Z",
+    "timestamp": 1759634246,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02NXevHvAKBuiXAquSu6urdGe3bJxXWV77MrefDwauz37kiMEds4xnPCdRTgxqaGzCl",
+    "text": "The great escapes' three components :-d\n\n1. escape velocity",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/557599365_24980362468271524_3108877210945355321_n.jpg?stp=dst-jpg_tt6&cstp=mx720x329&ctp=s720x329&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=qIe9Cw6Jx2MQ7kNvwFqDrff&_nc_oc=Adpo26Lcc--go0qVZz2NunDmRYppwMuHGLMHEqF1IoxuR3TzkeBJ3X_1GwpnuJFvKQI&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=xqL6p3EhvDQqiaRo6712RA&_nc_ss=72289&oh=00_AQEdN4SRHt10a5t8sr65a8b2us2r9-eNGMFD72SGMFL6sA&oe=6A89F387",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/557599365_24980362468271524_3108877210945355321_n.jpg?stp=dst-jpg_tt6&cstp=mx720x329&ctp=s720x329&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=qIe9Cw6Jx2MQ7kNvwFqDrff&_nc_oc=Adpo26Lcc--go0qVZz2NunDmRYppwMuHGLMHEqF1IoxuR3TzkeBJ3X_1GwpnuJFvKQI&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=xqL6p3EhvDQqiaRo6712RA&_nc_ss=72289&oh=00_AQEdN4SRHt10a5t8sr65a8b2us2r9-eNGMFD72SGMFL6sA&oe=6A89F387",
+          "height": 329,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24980362464938191&set=a.2029578063776623",
+        "id": "24980362464938191",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ5ODAzNjI2OTE2MDQ4MzU="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-10-04T05:31:42.000Z",
+    "timestamp": 1759555902,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0N6D919r69fB6W3iRWV4f1tHkK6vGemmwmuscMQ6S2oAhZiyCu6VRZw9PLRFa7ydpl",
+    "text": "Và phải nâng chip.",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2025-10-04T02:40:12.000Z",
+    "timestamp": 1759545612,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02in6nQeDkiEj2Vyyk6pRDTYA1qNC8CxqznzHPxfKeKgHrFRJmngDTx5gyf5Sg9Zosl",
+    "text": "Đợt trước có trao đổi với một vị bên FM, quan điểm về dòng vốn ngoại \"rút\" trên thị trường, cũng khá là phức tạp, và tùy giai đoạn mà có thể một yếu tố nào đó trở thành nguyên nhân dominate. Đó có thể là các deal lớn phải unwind (như đủ thời gian nắm giữ, cty nội không đạt KPI, các cam kết trong các deal \"hybrid\" trước đây đến hạn - bán vốn nhưng thực ra là debt structure...)\nYếu tố tỷ giá cũng rất quan trọng, các biến động và quan ngại về sự suy yếu của đồng nội tệ (VND) khiến implied về chi phí phòng ngừa cao. Vd kết hợp với risk free yield của USD vẫn ở mức rất cao, cộng với cost của mất giá VND (Fx), cùng các loại thuế, phí liên quan, 10% là mức require cần phải cân nhắc so với lợi một danh mục đủ lớn khi vào thị trường VN (nếu không nói là quá khó). Vậy nên, hoặc phải hedge với cost realized already, hoặc để ngỏ (open)! \nVới \"để ngỏ\" thì chỉ phù hợp với đánh nhanh rút nhanh bet ở nhiều yếu tố.\nTất nhiên, sự rút lui không chỉ USD, mà còn ở một vài thị trường- đồng tiền khác!\nUSD giảm mạnh trong thời gian qua, VND cũng vậy.\n\nP/s. VND mất giá bản thân là một vòng lặp - nếu không tin vào khả năng ổn định của nhà điều hành. Riêng vốn ngoại trên ttck (chưa nói đến những hoạt động của các DN SXKD) một số deal Fx trên thị trường đã gia tăng áp lực mất giá VND. Đơn giản với kế hoạch rút vốn, họ phải mua USD trước (square posy), thậm chí front-running, có thể qua fwd. Nghĩa là bán VND mua U càng tăng, NH phải bán U, bất kể spot hay fwd đều ảnh hưởng trạng thái. Càng dồn demand, càng áp lực. Thực tế là đã có dồn demand fwd (vậy nên SBV cũng chửa cháy bằng supply fwd contract, với mong muốn chặn - implied... nhưng không đủ và cần nhiều điều kiện, thậm chí một vài banks có thể take advantage từ...)\nPps. Cũng có quan ngại rút không nhanh như kế hoạch.",
+    "banks": [],
+    "topic": "exchange_fx",
+    "media": [
+      {
+        "thumbnail": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/558397332_24969580059349765_1480085174758186363_n.jpg?stp=dst-jpg_tt6&cstp=mx720x702&ctp=p526x296&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=uPj9THMqlAQQ7kNvwGrOs62&_nc_oc=AdpHD-Nh4wIbG__AfaHPm1Q7CfIPGIq9JjPidqVXAk-roYq-sf-VlrfMYZLrAgrnzus&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=xqL6p3EhvDQqiaRo6712RA&_nc_ss=72289&oh=00_AQHH41NBwoJWvW-vA4kVnJNiqLSOHvhOeB2CM-lkM4B_BQ&oe=6A8A0812",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/558397332_24969580059349765_1480085174758186363_n.jpg?stp=dst-jpg_tt6&cstp=mx720x702&ctp=p526x296&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=uPj9THMqlAQQ7kNvwGrOs62&_nc_oc=AdpHD-Nh4wIbG__AfaHPm1Q7CfIPGIq9JjPidqVXAk-roYq-sf-VlrfMYZLrAgrnzus&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=xqL6p3EhvDQqiaRo6712RA&_nc_ss=72289&oh=00_AQHH41NBwoJWvW-vA4kVnJNiqLSOHvhOeB2CM-lkM4B_BQ&oe=6A8A0812",
+          "height": 513,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24969580056016432&set=a.2029578063776623",
+        "id": "24969580056016432",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ5Njk1ODAyOTI2ODMwNzU="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-10-01T11:50:57.000Z",
+    "timestamp": 1759319457,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02xp9qGZevcrM8K7dRNT7PHd9Yb1UEAKyh5KTzq8mvJKAbzp17j6d6jL8CkYPmGjYKl",
+    "text": "NHNN quay trở lại phương án can thiệp bán kỳ hạn (có hủy ngang). \nFx intervention Forward contract,180d @26550.\n\nLeo gác gảy đàn.",
+    "banks": [],
+    "topic": "exchange_fx",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/556781883_24940674265573678_5090593146339185438_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x1200&ctp=p526x296&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=JdkYVoAi7-0Q7kNvwGlBPEd&_nc_oc=AdqJyLBezH-uHW3_JU6BDOstI4UG4DBu2aQWXeJSK60aQeMlE-9ml39EXHcMluDdz-BmFh55QVK8lLM_OgoP1gN3&_nc_zt=23&_nc_ht=scontent-atl3-1.xx&_nc_gid=3G5udsNBGFDvUP1FQLQ1ng&_nc_ss=72289&oh=00_AQEiL6MmiwS_9IakEzuoxe5mN3PUcmjwTVHvxpo9e2M90g&oe=6A89FA75",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFDFFFE",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/556781883_24940674265573678_5090593146339185438_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x1200&ctp=p526x296&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=JdkYVoAi7-0Q7kNvwGlBPEd&_nc_oc=AdqJyLBezH-uHW3_JU6BDOstI4UG4DBu2aQWXeJSK60aQeMlE-9ml39EXHcMluDdz-BmFh55QVK8lLM_OgoP1gN3&_nc_zt=23&_nc_ht=scontent-atl3-1.xx&_nc_gid=3G5udsNBGFDvUP1FQLQ1ng&_nc_ss=72289&oh=00_AQEiL6MmiwS_9IakEzuoxe5mN3PUcmjwTVHvxpo9e2M90g&oe=6A89FA75",
+          "height": 526,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24940674255573679&set=a.2029578063776623",
+        "id": "24940674255573679",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ5NDA2NzQ0NjIyNDAzMjU="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-09-30T02:47:58.000Z",
+    "timestamp": 1759200478,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid032aaBSfV5WzKpGRRBAAMS4Ftwgt83P3FHQogNyje7jrnDn1bH3ix7CguptswppUHil",
+    "text": "Consumption",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/557162835_24927841253523646_4438230102217830291_n.jpg?stp=dst-jpg_tt6&cstp=mx606x329&ctp=s606x329&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=0wUfvDH1fG0Q7kNvwHipmPs&_nc_oc=AdoH2s_uuM6TCzLJB9_2ox1RpbQigZhYGmCZTyiMpcZwCN9ezfw28uAUN3HNXiXPJAzlLJF8Oj3V3a3mwKilY5D1&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=3G5udsNBGFDvUP1FQLQ1ng&_nc_ss=72289&oh=00_AQFipa5G6CyLegj5oIxP7JeufeHhh-EE4mdjfft9MXJRfw&oe=6A89FFC4",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFEF9F5",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/557162835_24927841253523646_4438230102217830291_n.jpg?stp=dst-jpg_tt6&cstp=mx606x329&ctp=s606x329&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=0wUfvDH1fG0Q7kNvwHipmPs&_nc_oc=AdoH2s_uuM6TCzLJB9_2ox1RpbQigZhYGmCZTyiMpcZwCN9ezfw28uAUN3HNXiXPJAzlLJF8Oj3V3a3mwKilY5D1&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=3G5udsNBGFDvUP1FQLQ1ng&_nc_ss=72289&oh=00_AQFipa5G6CyLegj5oIxP7JeufeHhh-EE4mdjfft9MXJRfw&oe=6A89FFC4",
+          "height": 329,
+          "width": 606
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24927841236856981&set=a.2029578063776623",
+        "id": "24927841236856981",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ5Mjc4NDE0MjM1MjM2Mjk="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-09-28T10:58:35.000Z",
+    "timestamp": 1759057115,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02k4N2iTSW182eLcF3gnCSnK1N7GUnH3WgutdTw6Jufg9eF1Mrsc4qpbBuF1tZb1rnl",
+    "text": "John Cochrane:",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/556033132_24913421658298939_7352004541907588178_n.jpg?stp=dst-jpg_tt6&cstp=mx684x318&ctp=s684x318&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=7btmav7vuM8Q7kNvwGMtriN&_nc_oc=Adr5eovSDBCvV-mzPh-cK0ffBEM6JuYZIOzeCNyL_-yhIAXtHh9xr2OpNhCdO-wwMUVw9OGx7cViy8KEnsfxmR3Y&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=3G5udsNBGFDvUP1FQLQ1ng&_nc_ss=72289&oh=00_AQHDrA6nDsIYO2p4fAdemE6Tf-OyYt8PQ9kwIF9thQywgQ&oe=6A89D664",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/556033132_24913421658298939_7352004541907588178_n.jpg?stp=dst-jpg_tt6&cstp=mx684x318&ctp=s684x318&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=7btmav7vuM8Q7kNvwGMtriN&_nc_oc=Adr5eovSDBCvV-mzPh-cK0ffBEM6JuYZIOzeCNyL_-yhIAXtHh9xr2OpNhCdO-wwMUVw9OGx7cViy8KEnsfxmR3Y&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=3G5udsNBGFDvUP1FQLQ1ng&_nc_ss=72289&oh=00_AQHDrA6nDsIYO2p4fAdemE6Tf-OyYt8PQ9kwIF9thQywgQ&oe=6A89D664",
+          "height": 318,
+          "width": 684
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24913421641632274&set=a.2029578063776623",
+        "id": "24913421641632274",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ5MTM0MjE4MjQ5NjU1ODk="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-09-27T10:58:37.000Z",
+    "timestamp": 1758970717,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02tXGCRSyT2La2unzgdPz75nZ7Ha6q3Cjmxiiep3UG31GnqQBPdixVmmQbArLvQRrLl",
+    "text": "",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2025-09-27T01:21:39.000Z",
+    "timestamp": 1758936099,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid021fpq1zr6Ykb9CQiuhzajzD2FxDkh4f2dopXCuWb8n6ckYvVfMTRGpSaXdJvBSC2Gl",
+    "text": "Nhân chuyện loay hoay cs, mình nhớ lại hồi xưa có khái niệm/phân loại ... \"phi sản xuất\", rồi loay hoay điều chỉnh các tỷ lệ, không gian, \"kích thước thảm/đệm\"...\n\nMình post lại một bài hồi đầu 2012:\n...\nReal Estate Loans\nHợp thức hóa mọi thứ cho BĐS? Rất cân đối các chỉ tiêu đề ra như hệ số CAR, tỷ lệ dư nợ phi sản xuất (không vượt quá 16%) và target tăng trưởng tín dụng (tổng) trong năm 2012 (15 – 16%)\n\nMấy ngày gần đây, BĐS rục rịch, thể hiện qua sự sốt sắng trên TTCK (nhóm ngành BĐS). Sự chủ ý vào khu vực thị trường BĐS là không phải bàn cải khi loại gần 50% nhóm hạn chế tín dụng và có cả dự thảo giảm tỷ trọng rủi ro đối với tài sản liên quan đưa vào nhóm BĐS từ 250% xuống 150% (dự thảo sửa đổi, bổ sung Thông tư 13). Đồng thời, chủ trương tái cơ cấu khoản nợ và gia hạn nợ đã được đề ra.\n\nChỉ nghe có thể ớn lạnh! Với những NH tốt, thì họ đã có chủ trương này, tức là NH và DN đã ngồi với nhau, NH với vị thế, uy tín của mình, sẽ tìm cho DN những đối tác, “đồng hành cùng bước đi của DN” để cứu chính các NH.Còn NH kém (với năng lực vốn có hạn, tầm nhìn hạn hẹp) chỉ có thể sử dụng giải pháp kỹ thuật (như trên, “tái cơ cấu” các khoản nợ) để có chỉ số đẹp. Giờ đây, tất cả các giải pháp đã được hợp thức hóa.Và lý do là…\n\nDư nợ BĐS mới chỉ khoảng hơn 9%, Nợ xấu của khu vực này theo thông tin là chỉ hơn 3%! Dư nợ liên quan đến BĐS chiếm tới 60% tổng dư nợ (như dư nợ có TSBĐ là BĐS, dư nợ cho vay KD, đầu tư BĐS (gồm cả trái phiếu), cho vay dự án nhà ở có tài sản thế chấp là BĐS,…chiếm khoảng 55% GDP!). Hiệu ứng dây chuyền gây ra từ BĐS là rất lớn như một loạt các DN khác sẽ bán được hàng (sắt thép, xi măng, xây dựng,…), tạo việc làm, khơi thông dòng luân chuyển vốn,…giải quyết thanh khoản ngân hàng, giảm áp lực nợ xấu,…Tất nhiên, có thể còn thêm các lý do khác!\n\n* Thêm khoảng bao nhiêu?\n\n•    Loại 50% ra khỏi tỷ lệ giới hạn đồng nghĩa với có thêm 50% dư địa nữa để dòng tiền chảy vào khu vực này.\n•    Giảm tỷ lệ rủi ro từ 250% xuống 150% đồng nghĩa có thêm một dư địa bằng 100% tổng dự nợ BĐS hiện tại có thể dùng để phát triển dự nợ SX hoặc thêm một lượng bằng 66,7% (=100%/150%) dư nợ BĐS hiện tại vào lại…BĐS.\n•    Rõ ràng là hướng mạnh dòng tiền vào BĐS, nhưng quan trọng nhất vẫn là tác động tâm lý của tính định hướng và tính hợp thức hóa mạnh mẽ của cơ quan quản lý vì nó xem như chấm dứt tinh thần siết chặt tín dụng BĐS theo Nghị Quyết 11 của Chính phủ 24/02/2011 cũng như Chỉ thị 01 ngày 01/3/2011 của NHNN.\n\nƯớc tính đơn giản, việc nâng tỷ lệ hệ số rủi ro của nhóm BĐS và Chứng khoán trước đây là nhằm mục tiêu cân đối nguồn vốn cho việc phát triển tín dụng. Có nghĩa là tăng tín dụng vào BĐS sẽ phải giảm mạnh tín dụng vào các khu vực khác theo tốc độ gấp rưỡi. Lần này mục đích giảm tỷ lệ xuống khi sửa đổi Thông tư 13 là để phát triển tín dụng cho các lĩnh vực SX khác, cũng có thể cho chính khu vực BĐS để khai thông sự tắc nghẽn dòng tiền của khu vực này.\n\nHệ số CAR toàn ngành năm 2011 vào khoảng 11,9%. Vốn đã điều chỉnh ước tính cho việc tính CAR đến cuối năm vào khoảng 330 nghìn tỷ (tổng Vốn CSH khoảng 355 nghìn) thì TTS Có rủi ro vào khoảng hơn 2.820 nghìn tỷ.  Tín dụng BĐS vào khoảng 210 nghìn (chiếm khoảng 9,3% tổng dư nợ), Dư nợ BĐS với hệ số 250% chiếm khoảng 18,6% TTS Có rủi ro. Khi tỷ trọng rủi ro giảm từ 250% xuống 150% thì giải phóng được room cho tổng tín dụng là 210 nghìn tỷ (tức giả sử giữ nguyên CAR, còn không tăng dư nợ, hệ số CAR có thể tăng thêm 0,95 điểm %). Nếu áp tỷ lệ rủi ro là 150%, thì room tín dụng cho BĐS được mở thêm là 210/150% = 140 nghìn tỷ! Nếu tăng Vốn CSH lên, thì dư nợ sẽ tăng lên tương ứng.\nTỷ lệ dư nợ phi SX cuối năm 2011 khoảng 11%, tương đương khoảng 250 nghìn tỷ, dư nợ BĐS khoảng 210 còn dư nợ khác (như chứng khoán, tiêu dùng khoảng 40 nghìn tỷ). Việc loại thêm khoảng 50% ra khỏi khu vực phi SX, đồng nghĩa với room để tính tỷ lệ “phi SX” được nới ra thêm khoảng 125 nghìn tỷ. Cũng phù hợp với hệ số CAR ở trên!\nTuy nhiên, không chỉ dừng ở đó, target tăng tín dụng trong năm là 15%, và tỷ lệ phi SX tối đa là 16%, có nghĩa tổng dư nợ phi SX tối đa cuối năm tới là hơn 415 nghìn tỷ, con số này cách khá xa so với con số cơ sở (sau khi loại thêm một số nhóm ra khỏi nhóm phi SX). Do đó, NHTM không lo chuyện hết room. (các số liệu ở trên được làm tròn cho dễ dễ tính)\n\nCác chỉ tiêu về giảm đối tượng hạn chế ra khỏi nhóm Phi SX, định hướng giảm tỷ trọng rủi ro trong hệ số CAR và các chỉ tiêu về định mức tín dụng trong năm (tăng 15%, tỷ lệ phi SX 16%) được tính toán rất đồng bộ.\n\nĐịnh hướng đã mở, nơi dấu “rác” cũng được chỉ! Áp lực lợi nhuận sổ sách, làm đẹp sổ sách (nợ xấu giảm thông qua việc “cái cơ cấu” các khoản cho vay), việc đáp ứng theo chỉ định tín dụng cho các nhóm lợi ích (chủ yếu là ông chủ lớn) và cả tình huống “ném lao thì phải theo lao” chắc chắn tín dụng khu vực này sẽ được mở rộng tối đa có thể!\n\n* Hấp dẫn nhưng là nguyên nhân của mọi rủi ro?\n•    Các NHTM rất “ưa thích” cho vay khu vực phi sản xuất, BĐS là một segment có thu nhập sổ sách cao, theo ước tính của tôi, NIM_real estate loans có thể lên đến 1,5 – 1,7 NIM bình quân (tính cả các khoản phí ngoài lãi suất cho vay). Chính điều này sẽ tạo nên lợi nhuận hạch toán rất cao, mặc dù Thông tư 13 đã hạn chế bằng tỷ trọng rủi ro 250% (nhưng tỷ lệ dư nợ nhóm này ở nhiều NH trước đây thậm chí hơn 50% tổng dư nợ)\n•    Đặc thù, đó là các dự án lớn đều đến từ sự chỉ định/lợi ích nhóm, nói thẳng là cho vay theo mục đích riêng của các ông chủ –> Buộc phải cho vay, đảo nợ. Tỷ lệ nợ xấu hiện tại chắc chắn không phản ánh được! Đối với NH nhỏ, thì đây là rủi ro lớn ảnh hưởng đến sự lành mạnh tài chính (financial soundness) thể hiện qua rủi ro tập trung.\n•    Dự phòng không phản ánh hết/rất nhỏ so với rủi ro do đa số được backed bằng một giá trị TSBĐ, mà giá trị này theo định giá của NH thường cao hơn rất nhiều so với giá trị khoản vay (TSBĐ cao thì dự phòng thấp, với các nhóm nợ phải trích), trong khi thị trường BĐS chưa phản ánh đúng giá trị thực và kém thanh khoản.\n•    Đối với các khoản cho vay này, hiện tượng đảo nợ hoặc xử lý kỹ thuật là rất dễ dàng.\n•    Theo tính toán của tôi trên 3 công ty có dự án BĐS vay vốn mà tôi có khả năng tiếp cận, thì Độ lệch chuẩn (SD) của dòng tiền (so với kỳ vọng, E) tính theo % bình quân trên 100%, thậm chí lên đến trên 200%. Chỉ tiếc là tôi không có đủ thông tin cở mẫu lớn, cũng như độ lệch theo thời gian và quy mô. Nhưng với chừng đó có thể tưởng tượng “đơn giản” là hầu như 100% khoản vay BĐS có dòng tiền không như kỳ vọng để trả NH.\n\nTóm lại, đối với các khoản cho vay BĐS, rủi ro mất vốn là rất thấp nếu thể hiện qua trích lập dự phòng - thấp (do backed bằng TS bảo đảm khá lớn và luôn có mọi lý do để hỗ trợ tăng giá trị, trừ một số \"đứt gãy\" ở pháp lý DA), nợ xấu không phản ánh đầy đủ vào lợi nhuận, mà rủi ro lớn nhất là rủi ro thanh khoản, nợ xấu cũng phản ảnh vào thanh khoản, và có thể nó đã khiến cho rất nhiều NH lợi nhuận sổ sách khả quan nhưng đã mất thanh khoản trong thời gian vừa rồi (ví dụ là trường hợp M&A đầu tiên), phải thu tích lũy cao cũng cùng câu chuyện khi thoái thu không được thực hiện đầy đủ tương xứng, \n... vì lý do tương tự mà đã ra đời tỷ lệ khống chế cho vay phi SX từ 22%, rồi xuống 16%. Tiếc là…\n\n* Chọn BĐS đầu tiên? Cần sự thận trọng và can đảm.Thử nhìn theo quan điểm bi quan của tôi thì thật dũng cảm nếu đúng là giải pháp hâm nóng thị trường bằng phá băng BĐS. Thật dũng cảm nếu nói rằng, giải quyết tình hình hiện tại bằng giải pháp khơi thông nguồn vốn, tăng luân chuyển vốn của thị trường bằng việc kích thích thị trường BĐS. Với logic dư nợ BĐS và các khoản liên quan (như dư nợ có bảo đảm bằng BĐS) thì kích thích tín dụng vào khu vực này sẽ khơi thông thanh khoản, giảm được nợ xấu vốn tăng lên với tốc độ nhanh?\n\nBởi, liệu bản chất nợ xấu trong năm tới, vài năm tới sẽ như thế nào? Ai là người chịu trách nhiệm, và nếu có xảy sẽ là quả bom nổ chậm, khi sẽ có chính sách để “quét các bụi” này giấu đi tiếp! Có ai nghĩ đến kịch bản những giải pháp trước mắt có thể là điều kiện thích hợp cho một cuộc khủng hoảng ghê gớm hơn trong tương lai.\n\nHình: chôm trên mạng.",
+    "banks": [],
+    "topic": "ratio_npl",
+    "media": [
+      {
+        "thumbnail": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/553352256_24901757006132071_224941105635506100_n.jpg?stp=dst-jpg_tt6&cstp=mx1024x1024&ctp=p526x296&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=t9LK23gWc1EQ7kNvwHB5-G2&_nc_oc=AdoGsv8J8MoDkK09lpmwatya24e3JDcAZlvYduDdKyjd_QmMBl9LmBj3ZnfGXoXhMQI&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=dvtFN8uqdezTMqHEq4KnZQ&_nc_ss=72289&oh=00_AQHICNMQ0PNyGCOpkNyA7LL7xQeInsOsMclGhEx8Qf2FSA&oe=6A89E1BF",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF161616",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/553352256_24901757006132071_224941105635506100_n.jpg?stp=dst-jpg_tt6&cstp=mx1024x1024&ctp=p526x296&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=t9LK23gWc1EQ7kNvwHB5-G2&_nc_oc=AdoGsv8J8MoDkK09lpmwatya24e3JDcAZlvYduDdKyjd_QmMBl9LmBj3ZnfGXoXhMQI&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=dvtFN8uqdezTMqHEq4KnZQ&_nc_ss=72289&oh=00_AQHICNMQ0PNyGCOpkNyA7LL7xQeInsOsMclGhEx8Qf2FSA&oe=6A89E1BF",
+          "height": 526,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24901756996132072&set=a.2029578063776623",
+        "id": "24901756996132072",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ5MDE3NTcxOTYxMzIwNTI="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-09-25T02:58:33.000Z",
+    "timestamp": 1758769113,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0266aUZEb9Jj8mrfLMEpMMQwB8B7rXUXzsCRpQFpWD9gaCjRa47vbnyME6JVyRdbNsl",
+    "text": "Thấy nhiều bạn share cái này, không rõ nguồn.\n\nNhìn style thì có vẻ nguồn từ \"thương hiệu\" Wealth Report của Knight Frank, nhưng bản 2025 thì làm gì có HN, HCM... 5 bản gần nhất mình đọc cũng không có.\nVậy có thể là HN hay HCM được tạo lại trong bc khác?\n\nNhưng của KF là prime property, cụ thể \"How many square metres of prime property US$1m \nbuys in selected cities\".\n\nUpdate: nguồn chart là từ BBW: https://www.facebook.com/share/r/1KaJ5S7s8y/\n\nDòng xa xỉ nhưng nhiều bên lại sử dụng như là mặt bằng chung của HCMC, HN!",
+    "banks": [],
+    "topic": "cfa_updates",
+    "media": [
+      {
+        "thumbnail": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/554086013_24884197344554704_8450238007676555398_n.jpg?stp=dst-jpg_tt6&cstp=mx892x1280&ctp=s720x720&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=HjdL5Jtyu7sQ7kNvwFmYk63&_nc_oc=AdoK7ThZGQkrTPxvsW5KFKAp5vZUX6XKBLsqAdRWDnBo8XjSgG6S_3DNphu5QKrxZ3I&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=dvtFN8uqdezTMqHEq4KnZQ&_nc_ss=72289&oh=00_AQFwDroieuuZ75hLOx8hQY1pjr4nDY_2HiGSbpF0qYPdUA&oe=6A89F0CE",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/554086013_24884197344554704_8450238007676555398_n.jpg?stp=dst-jpg_tt6&cstp=mx892x1280&ctp=s720x720&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=HjdL5Jtyu7sQ7kNvwFmYk63&_nc_oc=AdoK7ThZGQkrTPxvsW5KFKAp5vZUX6XKBLsqAdRWDnBo8XjSgG6S_3DNphu5QKrxZ3I&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=dvtFN8uqdezTMqHEq4KnZQ&_nc_ss=72289&oh=00_AQFwDroieuuZ75hLOx8hQY1pjr4nDY_2HiGSbpF0qYPdUA&oe=6A89F0CE",
+          "height": 720,
+          "width": 502
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24884197341221371&set=a.2029578063776623",
+        "id": "24884197341221371",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ4ODQxOTc0Nzc4ODgwMjQ="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-09-23T02:54:11.000Z",
+    "timestamp": 1758596051,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02KLmAe32yJFuCTy6uULqhkbzSC6XTaFrWg6CaCFoKjx5rTQXAdRULSuwemdkM22nxl",
+    "text": "Hóa ra nói chơi mà gần thật, hiện cũng ~0.35 đồng và ~24% rồi.",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2025-09-23T02:37:14.000Z",
+    "timestamp": 1758595034,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0acEotVKowxNgKAnjJHDDAKYaimxREMgL4MGg1gWsZ5AB6JiT5NqAEAxKmbeJW5P9l",
+    "text": "Tín dụng, \nTừ đầu năm đến nay thì tín dụng bđs có mức tăng cao và đóng góp lớn vào mục tiêu td chung.\nCứ 100 đồng td tăng lên, có khoảng 35 phân bổ vào bđs.\nCả gđ từ cuối 2022, tỷ lệ này là gần 30 đồng (trong đó td cho nhà pt bds ~20, cho tiêu dùng- tự sử dụng ~10).",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-6/553447948_24866751866299252_5250215000145972170_n.jpg?stp=dst-jpg_tt6&cstp=mx720x971&ctp=p526x296&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=WD2GTYX7ZxkQ7kNvwGKmFmx&_nc_oc=AdpEP7qYBRq3Ahu3DG4WHyjacQ4q3c0fyElsJu3Sfqp_hR79ZIXdcOcZWAoIo-AgcDw&_nc_zt=23&_nc_ht=scontent-lax3-1.xx&_nc_gid=-hvNL-vPLWYFp_32MCyPgQ&_nc_ss=7c289&oh=00_AQEAtf5iYiXrKYMBTQUHnTRb03PgccayaL4CngbV9jmTkQ&oe=6A8A029D",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFEFEFE",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-6/553447948_24866751866299252_5250215000145972170_n.jpg?stp=dst-jpg_tt6&cstp=mx720x971&ctp=p526x296&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=WD2GTYX7ZxkQ7kNvwGKmFmx&_nc_oc=AdpEP7qYBRq3Ahu3DG4WHyjacQ4q3c0fyElsJu3Sfqp_hR79ZIXdcOcZWAoIo-AgcDw&_nc_zt=23&_nc_ht=scontent-lax3-1.xx&_nc_gid=-hvNL-vPLWYFp_32MCyPgQ&_nc_ss=7c289&oh=00_AQEAtf5iYiXrKYMBTQUHnTRb03PgccayaL4CngbV9jmTkQ&oe=6A8A029D",
+          "height": 709,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24866751862965919&set=a.2029578063776623",
+        "id": "24866751862965919",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ4NjY3NTE5MjYyOTkyNDY="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-09-18T02:04:38.000Z",
+    "timestamp": 1758161078,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0akyYWhhnDcg38kFrHyjyL32xXwD9yBoo2teDM9tFZvxYLC5PgfuivTYxmoi2LFNSl",
+    "text": "FOMC quyết định cắt 25bps, tuy nhiên chất nhất khi gọi đó là \"risk management\" cut.\n19 \"dot\" tạo nên bức tranh khá đa dạng, nhưng 12 trong đó mới thực quyết.\nCut 25bps hôm qua với 11/12 đồng thuận, chấm lẻ loi với 50bps cut là của Miran - người mới được đưa vào (trong BoG, nên cũng trong voter của FOMC). Miran có lẽ đã vẽ (tạo) nên cận dưới của dot-plot, với 2.75-3.0 cho 2025 và 2.25-2.50 cho 2027, tuy nhiên điều này vẫn... cao hơn mức TT Trump buột miệng trước đó.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lax3-2.xx.fbcdn.net/v/t39.30808-6/549428887_24825199567121149_2357448462749802210_n.jpg?stp=dst-jpg_tt6&cstp=mx720x525&ctp=s720x525&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=c7F6a-rWQaYQ7kNvwHb3s1_&_nc_oc=AdoWUk2gS6kcpemvbx51_g3h2M_ldibeW20KpwnBxLVz1EtVj7FFkd7m5OLtmvOILi0&_nc_zt=23&_nc_ht=scontent-lax3-2.xx&_nc_gid=-hvNL-vPLWYFp_32MCyPgQ&_nc_ss=7c289&oh=00_AQFyVc0pOFgCNxbOPhfvJUfcXWAaiEuyS0_BNFFo06kyBA&oe=6A8A0303",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lax3-2.xx.fbcdn.net/v/t39.30808-6/549428887_24825199567121149_2357448462749802210_n.jpg?stp=dst-jpg_tt6&cstp=mx720x525&ctp=s720x525&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=c7F6a-rWQaYQ7kNvwHb3s1_&_nc_oc=AdoWUk2gS6kcpemvbx51_g3h2M_ldibeW20KpwnBxLVz1EtVj7FFkd7m5OLtmvOILi0&_nc_zt=23&_nc_ht=scontent-lax3-2.xx&_nc_gid=-hvNL-vPLWYFp_32MCyPgQ&_nc_ss=7c289&oh=00_AQFyVc0pOFgCNxbOPhfvJUfcXWAaiEuyS0_BNFFo06kyBA&oe=6A8A0303",
+          "height": 525,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24825199543787818&set=a.2029578063776623",
+        "id": "24825199543787818",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ4MjUxOTk3NzA0NTQ0NjI="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-09-16T06:48:23.000Z",
+    "timestamp": 1758005303,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0mYRRqP54zQCajBmnpKVErJftFYwJrhAwJG78wmEbqnXJYiTu9N1QyJ6LRGbbB3WMl",
+    "text": "",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2025-09-15T01:20:36.000Z",
+    "timestamp": 1757899236,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0GPXDsUWX3XmKnnRwYqv7y2NAwBTuLWMjasSFB3nih2TYm3f4MDo8meJH9cf5FzNhl",
+    "text": "Fast movin repricing \n\nCác bạn biết hệ thống NH nước nào không?\n\nPs. Trước đây VN cũng có NH báo cáo khá ổn định một thời gian, nhưng sau không biết vì sao lại bỏ khỏi bc cho nđt.",
+    "banks": [],
+    "topic": "cfa_updates",
+    "media": [
+      {
+        "thumbnail": "https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/548580313_24801508892823550_7792006834657791596_n.jpg?stp=dst-jpg_tt6&cstp=mx720x375&ctp=s720x375&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=3mLBlJV1dpoQ7kNvwHkVm5n&_nc_oc=Adpdy4ImYuoR5asS8huY7b9pbQ-5NYc-nLEuEey8lQdejlxhKNYVmDY08hs_s-11yMg&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=sJnjZvxF9z9dZLWmDcEkXg&_nc_ss=72289&oh=00_AQERDat2XWkutUw-FbmKgloZGTjuXkmczbiAHTPUCMF-Jw&oe=6A89DC8F",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/548580313_24801508892823550_7792006834657791596_n.jpg?stp=dst-jpg_tt6&cstp=mx720x375&ctp=s720x375&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=3mLBlJV1dpoQ7kNvwHkVm5n&_nc_oc=Adpdy4ImYuoR5asS8huY7b9pbQ-5NYc-nLEuEey8lQdejlxhKNYVmDY08hs_s-11yMg&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=sJnjZvxF9z9dZLWmDcEkXg&_nc_ss=72289&oh=00_AQERDat2XWkutUw-FbmKgloZGTjuXkmczbiAHTPUCMF-Jw&oe=6A89DC8F",
+          "height": 375,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24801508889490217&set=a.2029578063776623",
+        "id": "24801508889490217",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ4MDE1MDg5OTk0OTAyMDY="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-09-13T04:26:36.000Z",
+    "timestamp": 1757737596,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02AF4Nvk9yR7Y3G8HdqdvtHc3JFwHfMArzN1hZJWSXz9z3kedNAEfNcGLvNufkDHuSl",
+    "text": "Ưu tiên tất cả!",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/548079089_24786777450963361_2929283207914082944_n.jpg?stp=dst-jpg_tt6&cstp=mx720x1037&ctp=s720x720&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=sd5sfsjujfIQ7kNvwFvFkFz&_nc_oc=AdrmEJcU4H7V7uKR1F0LM3hh49SysgWFSRrwquJKdyNUsLH0xwWPBBWPUlI0TFrggNg&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=sJnjZvxF9z9dZLWmDcEkXg&_nc_ss=72289&oh=00_AQGslxBBIFOT89AvUhwwdJOvlikAAIOgKf5bHe6q-5TpFw&oe=6A89DAB2",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-det1-1.xx.fbcdn.net/v/t39.30808-6/548079089_24786777450963361_2929283207914082944_n.jpg?stp=dst-jpg_tt6&cstp=mx720x1037&ctp=s720x720&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=sd5sfsjujfIQ7kNvwFvFkFz&_nc_oc=AdrmEJcU4H7V7uKR1F0LM3hh49SysgWFSRrwquJKdyNUsLH0xwWPBBWPUlI0TFrggNg&_nc_zt=23&_nc_ht=scontent-det1-1.xx&_nc_gid=sJnjZvxF9z9dZLWmDcEkXg&_nc_ss=72289&oh=00_AQGslxBBIFOT89AvUhwwdJOvlikAAIOgKf5bHe6q-5TpFw&oe=6A89DAB2",
+          "height": 720,
+          "width": 500
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24786777437630029&set=a.2029578063776623",
+        "id": "24786777437630029",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ3ODY3Nzc1NDQyOTY2ODU="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-09-12T01:03:10.000Z",
+    "timestamp": 1757638990,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0oKJESJ2mWsY4MuUZZQZNt1rNM2MwHaB6fFissvXDdqWDHChm2LLMKYe5MBTxmfWrl",
+    "text": "Siêu nhạy.\n\nP/s để xem mấy bạn làm ... AIRS quote sao. :-d",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-sea5-1.xx.fbcdn.net/v/t39.30808-6/548206467_24777686955205744_6974593420444399394_n.jpg?stp=dst-jpg_tt6&cstp=mx1179x1616&ctp=s720x720&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=t8JcALZ3kckQ7kNvwF_llxC&_nc_oc=AdrVn1BSoDSYcSZjeqGn9xLa1aPtN3q0TaCnDC1uJUGD0tHWjOA23yDg92sDEpgIot0&_nc_zt=23&_nc_ht=scontent-sea5-1.xx&_nc_gid=43xADAz1QUJKPgeqfHrjJA&_nc_ss=72289&oh=00_AQFXtUh3dVkuchi61AensZMFrpiInBeAigj30OKx0oqkhg&oe=6A89F61D",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF0C1115",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-sea5-1.xx.fbcdn.net/v/t39.30808-6/548206467_24777686955205744_6974593420444399394_n.jpg?stp=dst-jpg_tt6&cstp=mx1179x1616&ctp=s720x720&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=t8JcALZ3kckQ7kNvwF_llxC&_nc_oc=AdrVn1BSoDSYcSZjeqGn9xLa1aPtN3q0TaCnDC1uJUGD0tHWjOA23yDg92sDEpgIot0&_nc_zt=23&_nc_ht=scontent-sea5-1.xx&_nc_gid=43xADAz1QUJKPgeqfHrjJA&_nc_ss=72289&oh=00_AQFXtUh3dVkuchi61AensZMFrpiInBeAigj30OKx0oqkhg&oe=6A89F61D",
+          "height": 720,
+          "width": 525
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24777686941872412&set=a.2029578063776623",
+        "id": "24777686941872412",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ3Nzc2ODcxMzg1MzkwNTk="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-09-11T14:19:32.000Z",
+    "timestamp": 1757600372,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0xAUaEdXjvVp13cdRKayixN1ELezKhFf7VgLkK22np35nxCjVp8KqbriQPVFm1X3Tl",
+    "text": ":-d",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2025-09-09T07:59:41.000Z",
+    "timestamp": 1757404781,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02FyAe34JcazxVP3632P2JpohPXkRc5mU8eGK92cT8LLErAZttxN7mMEQ8tF3wmbLFl",
+    "text": "Biểu đồ của NHNN tại triển lãm thành tựu ngành NH, đồng hành cùng chặng đường lịch sử đất nước.\n\nNguồn: SBV",
+    "banks": [],
+    "topic": "sbv",
+    "media": [
+      {
+        "thumbnail": "https://scontent-sea5-1.xx.fbcdn.net/v/t39.30808-6/545318719_24755133214127785_5936798196408203011_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1440&ctp=p526x296&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=mtFLTpHncLIQ7kNvwHqXnb0&_nc_oc=AdrLUxNuj8sReWLSX7aurhZRAqa2-c-m5ci1WBV_fRdszsTcVQfIBy99u6zwyXhdaDM&_nc_zt=23&_nc_ht=scontent-sea5-1.xx&_nc_gid=43xADAz1QUJKPgeqfHrjJA&_nc_ss=72289&oh=00_AQF93vyI8nX4XwCoIu6-ArBQBDtrQLuljT9-RvUb8BUYpw&oe=6A89D89C",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFB34014",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-sea5-1.xx.fbcdn.net/v/t39.30808-6/545318719_24755133214127785_5936798196408203011_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1440&ctp=p526x296&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=mtFLTpHncLIQ7kNvwHqXnb0&_nc_oc=AdrLUxNuj8sReWLSX7aurhZRAqa2-c-m5ci1WBV_fRdszsTcVQfIBy99u6zwyXhdaDM&_nc_zt=23&_nc_ht=scontent-sea5-1.xx&_nc_gid=43xADAz1QUJKPgeqfHrjJA&_nc_ss=72289&oh=00_AQF93vyI8nX4XwCoIu6-ArBQBDtrQLuljT9-RvUb8BUYpw&oe=6A89D89C",
+          "height": 701,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24755133204127786&set=a.2029578063776623",
+        "id": "24755133204127786",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ3NTUxMzMzODQxMjc3Njg="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-09-09T01:29:34.000Z",
+    "timestamp": 1757381374,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid031GtbADTGAD4NH71UwzdPoaZFUC3FQPqePifrJbv6cYLxcBpBT5EnBDavhzvYmjFPl",
+    "text": "Fresh  ATH",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2025-09-08T16:02:44.000Z",
+    "timestamp": 1757347364,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02dRcffDsPWxoE9dtzeoAtyGvVEPBEkuRWzZxsuenWGLyxzjKFLuCPdEvUCSvpSACel",
+    "text": "Hèn gì trên mạng xã hội rần rần chuyện sa thải cậu vàng và đòi đóng cửa WB VN.\n\nJff.",
+    "banks": [],
+    "topic": "deals_corp",
+    "media": [
+      {
+        "thumbnail": "https://scontent-sjc6-1.xx.fbcdn.net/v/t39.30808-6/545166802_24749853924655714_998041094754219129_n.jpg?stp=dst-jpg_tt6&cstp=mx720x614&ctp=s590x590&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=FDaLfSTEsjUQ7kNvwGoK8zd&_nc_oc=AdorGhF7ZBWeKnxkOCmRBgcwmzEQMd27gHzbrDHqp6JQaTn6DAG2qOf8LHNS_x__WEk&_nc_zt=23&_nc_ht=scontent-sjc6-1.xx&_nc_gid=IFWyP20eM-DwzyjHV7l5cg&_nc_ss=72289&oh=00_AQESLoOwOaAdgOJyX6e_6PTn46gLotbmeK-19AAYkKKr3w&oe=6A89DDE8",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFE2013B",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-sjc6-1.xx.fbcdn.net/v/t39.30808-6/545166802_24749853924655714_998041094754219129_n.jpg?stp=dst-jpg_tt6&cstp=mx720x614&ctp=s590x590&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=FDaLfSTEsjUQ7kNvwGoK8zd&_nc_oc=AdorGhF7ZBWeKnxkOCmRBgcwmzEQMd27gHzbrDHqp6JQaTn6DAG2qOf8LHNS_x__WEk&_nc_zt=23&_nc_ht=scontent-sjc6-1.xx&_nc_gid=IFWyP20eM-DwzyjHV7l5cg&_nc_ss=72289&oh=00_AQESLoOwOaAdgOJyX6e_6PTn46gLotbmeK-19AAYkKKr3w&oe=6A89DDE8",
+          "height": 503,
+          "width": 590
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24749853921322381&set=a.2029578063776623",
+        "id": "24749853921322381",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ3NDk4NTQxNTQ2NTU2OTE="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-09-08T01:47:36.000Z",
+    "timestamp": 1757296056,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid08VpeY6R4FN9tyizgFPmWAMmybu7dhnc48j9Brma8GdHAkEMNaG48MVCFuxfjbavQl",
+    "text": "Possible Trinitry :-d",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-sjc6-1.xx.fbcdn.net/v/t39.30808-6/544915514_24745150575126049_7846414647079664811_n.jpg?stp=dst-jpg_tt6&cstp=mx720x314&ctp=s720x314&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=rJ3sTGH1cfYQ7kNvwEQFcJn&_nc_oc=Adqhl71zgagpIdgVVw2tgaXj1TVKKDQAE0lDgwa7c_5igrAP3lQ9qivMVGGqQAbyYv0&_nc_zt=23&_nc_ht=scontent-sjc6-1.xx&_nc_gid=IFWyP20eM-DwzyjHV7l5cg&_nc_ss=72289&oh=00_AQGs9nhDr7oXia62CyRTYiq3_V2vsG2LsdT2bnvqrbTQfg&oe=6A89EEA8",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-sjc6-1.xx.fbcdn.net/v/t39.30808-6/544915514_24745150575126049_7846414647079664811_n.jpg?stp=dst-jpg_tt6&cstp=mx720x314&ctp=s720x314&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=rJ3sTGH1cfYQ7kNvwEQFcJn&_nc_oc=Adqhl71zgagpIdgVVw2tgaXj1TVKKDQAE0lDgwa7c_5igrAP3lQ9qivMVGGqQAbyYv0&_nc_zt=23&_nc_ht=scontent-sjc6-1.xx&_nc_gid=IFWyP20eM-DwzyjHV7l5cg&_nc_ss=72289&oh=00_AQGs9nhDr7oXia62CyRTYiq3_V2vsG2LsdT2bnvqrbTQfg&oe=6A89EEA8",
+          "height": 314,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24745150568459383&set=a.2029578063776623",
+        "id": "24745150568459383",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ3NDUxNTA3Mjg0NTkzNjc="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-09-07T04:08:33.000Z",
+    "timestamp": 1757218113,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid07qvghmXG773tYuLD9Y1maPZGaULmiA7hBLwFeDMKddKXLZR23j1NRnCnKyLG9ZG1l",
+    "text": "Interesting reading",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/543044182_24737893989185041_4205616073105544301_n.jpg?stp=dst-jpg_tt6&cstp=mx720x363&ctp=s720x363&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=QSoGcEUoNX4Q7kNvwESUTl6&_nc_oc=AdovI0UcFkyws1FhH4uQnRWGx8qE9ObdSWnkxG4IPVkq-x9azhvA6PD2A_qwWd0xbWIba4IVQmWZ1b6-_lnhih2s&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=EwlI7vkvIkXowS04hKuPzg&_nc_ss=72289&oh=00_AQHihHadYBCE4qSk4aXLONbKYnYwBJbrnb60susCKeP5_g&oe=6A89F8FA",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/543044182_24737893989185041_4205616073105544301_n.jpg?stp=dst-jpg_tt6&cstp=mx720x363&ctp=s720x363&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=QSoGcEUoNX4Q7kNvwESUTl6&_nc_oc=AdovI0UcFkyws1FhH4uQnRWGx8qE9ObdSWnkxG4IPVkq-x9azhvA6PD2A_qwWd0xbWIba4IVQmWZ1b6-_lnhih2s&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=EwlI7vkvIkXowS04hKuPzg&_nc_ss=72289&oh=00_AQHihHadYBCE4qSk4aXLONbKYnYwBJbrnb60susCKeP5_g&oe=6A89F8FA",
+          "height": 363,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24737893985851708&set=a.2029578063776623",
+        "id": "24737893985851708",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ3Mzc4OTQxMTU4NTE2OTU="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-09-06T03:45:49.000Z",
+    "timestamp": 1757130349,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02hFCkofsD29TcTfwWZfTGghPtqjBPBH72xNFMKdhBsBcDQPj9bFXgUidDMB3hpsRVl",
+    "text": "Phải nhìn vào thực tế.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/543345597_24729693743338399_997668215598949613_n.jpg?stp=dst-jpg_tt6&cstp=mx720x563&ctp=s640x640&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=dD-so8DtSn8Q7kNvwF0YA6F&_nc_oc=AdqWdBYTiYBJ81XKQB34ohRUtxUUUqlDybN513qfaxqHObkDpAnB42BhiZAz6At5zG9oZMeJ7lSVXlWBnYGgr7js&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=EwlI7vkvIkXowS04hKuPzg&_nc_ss=72289&oh=00_AQFTlSn0MFEungb6A8PukwHkNDtExZj4CJnV9ZKya3VSOg&oe=6A89F632",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/543345597_24729693743338399_997668215598949613_n.jpg?stp=dst-jpg_tt6&cstp=mx720x563&ctp=s640x640&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=dD-so8DtSn8Q7kNvwF0YA6F&_nc_oc=AdqWdBYTiYBJ81XKQB34ohRUtxUUUqlDybN513qfaxqHObkDpAnB42BhiZAz6At5zG9oZMeJ7lSVXlWBnYGgr7js&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=EwlI7vkvIkXowS04hKuPzg&_nc_ss=72289&oh=00_AQFTlSn0MFEungb6A8PukwHkNDtExZj4CJnV9ZKya3VSOg&oe=6A89F632",
+          "height": 500,
+          "width": 640
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24729693726671734&set=a.2029578063776623",
+        "id": "24729693726671734",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ3Mjk2OTM5NjY2NzE3MTA="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-09-05T09:39:35.000Z",
+    "timestamp": 1757065175,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0b3gg5iBJFztARDHk2WeVeK8dhyEimSYXRMkLAuohqas4NgD3FkTGYS379qKuSqs2l",
+    "text": "Đánh giá lại gdp danh nghĩa (delta * compound nominal growth rate) cũng góp phần rất lớn vào tỷ lệ nợ/gdp xuống thấp gđ qua.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/535866588_24723536003954173_8700732872421789975_n.jpg?stp=dst-jpg_tt6&cstp=mx949x547&ctp=p180x540&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=9bTQJz2t_WsQ7kNvwFYYCDZ&_nc_oc=AdoMT4UFC1YdZHWaxeZR6gl4nlrLpI6OPEN4B-TVuV1sdPOH-lRP2mw-ECNwMErkI9s1dgalBtvtD9KdcQS1mSjt&_nc_zt=23&_nc_ht=scontent-atl3-1.xx&_nc_gid=EwlI7vkvIkXowS04hKuPzg&_nc_ss=72289&oh=00_AQEplBDFUuLvUQ_Ub4Qnl2fc-PFISQ_E3dL6JCG8CAvK_w&oe=6A89EC41",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/535866588_24723536003954173_8700732872421789975_n.jpg?stp=dst-jpg_tt6&cstp=mx949x547&ctp=p180x540&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=9bTQJz2t_WsQ7kNvwFYYCDZ&_nc_oc=AdoMT4UFC1YdZHWaxeZR6gl4nlrLpI6OPEN4B-TVuV1sdPOH-lRP2mw-ECNwMErkI9s1dgalBtvtD9KdcQS1mSjt&_nc_zt=23&_nc_ht=scontent-atl3-1.xx&_nc_gid=EwlI7vkvIkXowS04hKuPzg&_nc_ss=72289&oh=00_AQEplBDFUuLvUQ_Ub4Qnl2fc-PFISQ_E3dL6JCG8CAvK_w&oe=6A89EC41",
+          "height": 540,
+          "width": 937
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24723535987287508&set=a.2029578063776623",
+        "id": "24723535987287508",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ3MjM1MzYyNTA2MjA4MTU="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-08-30T05:00:37.000Z",
+    "timestamp": 1756530037,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid029X83vvLWvLDS6fUwn3LgNbXttfbgj53t8UdT3829xL23m19UwVZFkBZiT3waUUGPl",
+    "text": "XV",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-dfw6-2.xx.fbcdn.net/v/t39.30808-6/540526296_24672972505677190_2095601676608288742_n.jpg?stp=dst-jpg_tt6&cstp=mx720x597&ctp=s640x640&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=0ve0U4lRnmAQ7kNvwG6l1hq&_nc_oc=AdqD4Fw7CTJNrUlFxhAkyLbuFfo_hBHUXX481A4Fq4CawL0sFK-Z1k67lpGh9QCkWIFBUo0J8jfnxBXq-SxA9m9_&_nc_zt=23&_nc_ht=scontent-dfw6-2.xx&_nc_gid=ET8L6j_N4eXmomTm_TRv3g&_nc_ss=7d289&oh=00_AQHaOUyVlymE2wGPovrtfQHFPVp9vwd2o6KL-sRhwnimeg&oe=6A89EB8F",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-dfw6-2.xx.fbcdn.net/v/t39.30808-6/540526296_24672972505677190_2095601676608288742_n.jpg?stp=dst-jpg_tt6&cstp=mx720x597&ctp=s640x640&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=0ve0U4lRnmAQ7kNvwG6l1hq&_nc_oc=AdqD4Fw7CTJNrUlFxhAkyLbuFfo_hBHUXX481A4Fq4CawL0sFK-Z1k67lpGh9QCkWIFBUo0J8jfnxBXq-SxA9m9_&_nc_zt=23&_nc_ht=scontent-dfw6-2.xx&_nc_gid=ET8L6j_N4eXmomTm_TRv3g&_nc_ss=7d289&oh=00_AQHaOUyVlymE2wGPovrtfQHFPVp9vwd2o6KL-sRhwnimeg&oe=6A89EB8F",
+          "height": 531,
+          "width": 640
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24672972489010525&set=a.2029578063776623",
+        "id": "24672972489010525",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ2NzI5NzI2NzkwMTA1MDY="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-08-29T16:36:34.000Z",
+    "timestamp": 1756485394,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02Pw1uv95WfGZhwhti71b7uuLsLGANbc43Yb56R97jcfbrf1qRzchBFrnfuVPfZs3ol",
+    "text": "Wow, pv gđ số hóa.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-dfw6-1.xx.fbcdn.net/v/t39.30808-6/540970774_24669228672718240_7397673631790486318_n.jpg?stp=dst-jpg_tt6&cstp=mx719x352&ctp=s719x352&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=7DdRRs4nV7sQ7kNvwFF6HXZ&_nc_oc=AdrQdndz-UJlhbyS8Qs8u-6GL571f-Fvyw3Eu97YgYN2lwF468Bk60LhQruk2SoTANGAdTUgW522mqc4xSAQby2z&_nc_zt=23&_nc_ht=scontent-dfw6-1.xx&_nc_gid=ET8L6j_N4eXmomTm_TRv3g&_nc_ss=7d289&oh=00_AQEp1AsoTQmlIsCrbb-pCfrx8JBwPnk0q_dgGm9ja_OXfQ&oe=6A89FC88",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-dfw6-1.xx.fbcdn.net/v/t39.30808-6/540970774_24669228672718240_7397673631790486318_n.jpg?stp=dst-jpg_tt6&cstp=mx719x352&ctp=s719x352&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=7DdRRs4nV7sQ7kNvwFF6HXZ&_nc_oc=AdrQdndz-UJlhbyS8Qs8u-6GL571f-Fvyw3Eu97YgYN2lwF468Bk60LhQruk2SoTANGAdTUgW522mqc4xSAQby2z&_nc_zt=23&_nc_ht=scontent-dfw6-1.xx&_nc_gid=ET8L6j_N4eXmomTm_TRv3g&_nc_ss=7d289&oh=00_AQEp1AsoTQmlIsCrbb-pCfrx8JBwPnk0q_dgGm9ja_OXfQ&oe=6A89FC88",
+          "height": 352,
+          "width": 719
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24669228666051574&set=a.2029578063776623",
+        "id": "24669228666051574",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ2NjkyMjg4NjYwNTE1NTQ="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-08-26T12:03:44.000Z",
+    "timestamp": 1756209824,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02N6yRDMEMDXMp4wcb7YJhsNArKbPPkmH6Dg3FtFAiNree6TfbZ7bGSQtzNHkC5DRKl",
+    "text": "The new first steps...",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-dfw6-2.xx.fbcdn.net/v/t39.30808-6/537987719_24642277288746712_5576499383815556493_n.jpg?stp=dst-jpg_tt6&cstp=mx720x666&ctp=p552x414&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=-y9uNQR0dq0Q7kNvwGFQTUY&_nc_oc=AdqcuZZXf2043U-6c5czj4wZIrBJODq5l8otjM07BrI4M4DYDVrjjxWpktMvJuL5wNC-k8z5sQo3J5OtCZeiowG_&_nc_zt=23&_nc_ht=scontent-dfw6-2.xx&_nc_gid=ET8L6j_N4eXmomTm_TRv3g&_nc_ss=7d289&oh=00_AQGuFwvhBnYIPLi6rV9daiEefAWuuIZ28ABIai6ccWozAQ&oe=6A89FBE7",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFF9CF00",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-dfw6-2.xx.fbcdn.net/v/t39.30808-6/537987719_24642277288746712_5576499383815556493_n.jpg?stp=dst-jpg_tt6&cstp=mx720x666&ctp=p552x414&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=-y9uNQR0dq0Q7kNvwGFQTUY&_nc_oc=AdqcuZZXf2043U-6c5czj4wZIrBJODq5l8otjM07BrI4M4DYDVrjjxWpktMvJuL5wNC-k8z5sQo3J5OtCZeiowG_&_nc_zt=23&_nc_ht=scontent-dfw6-2.xx&_nc_gid=ET8L6j_N4eXmomTm_TRv3g&_nc_ss=7d289&oh=00_AQGuFwvhBnYIPLi6rV9daiEefAWuuIZ28ABIai6ccWozAQ&oe=6A89FBE7",
+          "height": 511,
+          "width": 552
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24642277278746713&set=a.2029578063776623",
+        "id": "24642277278746713",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ2NDIyNzc1NjU0MTMzNTE="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-08-22T14:13:57.000Z",
+    "timestamp": 1755872037,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02JeMX13nMoHGy2aKS9vc2FrzC9LBnxPYVVMDyY27XkbgnwPCUNdrbv2nFQ4KaZaSRl",
+    "text": "JPow JHole\nSpeech by Chair Powell on the economic outlook and framework review at an economic policy symposium sponsored by the Federal Reserve Bank of Kansas City: \n\nP/s. Ngoài ra, phát biểu của thống đốc Kazuo Ueda cuat BoJ cũng đáng chú ý (for signals on the central bank’s policy path).",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://external-atl3-2.xx.fbcdn.net/emg1/v/t13/7381228695003656958?url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FvkvFIlGupIE%2Fmaxresdefault.jpg%3Fv%3D68a7599c&fb_obo=1&utld=ytimg.com&stp=c0.5000x0.5000f_dst-jpg_flffffff_p500x261_q75_tt6&_nc_gid=mgbsWczT3LT84qRTe2WhNA&_nc_oc=AdrVFhX8jZIxKsabximAEZrSC-HZ15VhRiO62B1YP7zIrLHp7zi-IzkHzamFfm-NCw98RoUNoZSNquYfuWdwHDoP&ccb=13-1&oh=06_Q3_CAaMFSNk8RV35MNk7baVp0ogt-53O3mg7qFA8LTs_tTY4&oe=6A85E267&_nc_sid=c97757",
+        "__typename": "GenericAttachmentMedia",
+        "__isMedia": "GenericAttachmentMedia",
+        "flexible_height_share_image": null,
+        "large_share_image": {
+          "height": 261,
+          "uri": "https://external-atl3-2.xx.fbcdn.net/emg1/v/t13/7381228695003656958?url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FvkvFIlGupIE%2Fmaxresdefault.jpg%3Fv%3D68a7599c&fb_obo=1&utld=ytimg.com&stp=c0.5000x0.5000f_dst-jpg_flffffff_p500x261_q75_tt6&_nc_gid=mgbsWczT3LT84qRTe2WhNA&_nc_oc=AdrVFhX8jZIxKsabximAEZrSC-HZ15VhRiO62B1YP7zIrLHp7zi-IzkHzamFfm-NCw98RoUNoZSNquYfuWdwHDoP&ccb=13-1&oh=06_Q3_CAaMFSNk8RV35MNk7baVp0ogt-53O3mg7qFA8LTs_tTY4&oe=6A85E267&_nc_sid=c97757",
+          "width": 500
+        },
+        "id": "24610000201974421"
+      }
+    ]
+  },
+  {
+    "time": "2025-08-22T13:15:30.000Z",
+    "timestamp": 1755868530,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02g3RDCAbDnrhX26LfXhphuBWsTjN8sWxutvXFJCMByzLQLzPR5ZGM9U4MXFEkBRoBl",
+    "text": "NHNN quay trở lại phương án can thiệp bán kỳ hạn (có hủy ngang). \nFx intervention Forward contract,180d @26550.",
+    "banks": [],
+    "topic": "exchange_fx",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/536139494_24609612075346567_5336976290190598623_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1350&ctp=s640x640&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=c6P_TVrDjuYQ7kNvwHs4OaR&_nc_oc=AdooMxzBXCh121StGDBrMRr8oz6HglxjROU0hfWPE83dAjylDi2hWrQDVjQ-IWnUg_oXmBspIP0aO4uKKNWa8r4z&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=mgbsWczT3LT84qRTe2WhNA&_nc_ss=72289&oh=00_AQEJeXzVS2CkTTtrEyc6yesyHoPkEPVsXBQNRwhbnNvZKg&oe=6A8A08C6",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF59574B",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/536139494_24609612075346567_5336976290190598623_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1350&ctp=s640x640&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=c6P_TVrDjuYQ7kNvwHs4OaR&_nc_oc=AdooMxzBXCh121StGDBrMRr8oz6HglxjROU0hfWPE83dAjylDi2hWrQDVjQ-IWnUg_oXmBspIP0aO4uKKNWa8r4z&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=mgbsWczT3LT84qRTe2WhNA&_nc_ss=72289&oh=00_AQEJeXzVS2CkTTtrEyc6yesyHoPkEPVsXBQNRwhbnNvZKg&oe=6A8A08C6",
+          "height": 640,
+          "width": 512
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24609612058679902&set=a.2029578063776623",
+        "id": "24609612058679902",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ2MDk2MTIxODUzNDY1NTY="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-08-22T03:07:55.000Z",
+    "timestamp": 1755832075,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0uPiekJZVN6z7V6fNGJxqQkMYsWHUQdeSbLYve2sSjovWnZfCRt7zrygJx7KxfjXul",
+    "text": "Một trong những yếu tố dịch chuyển NIM, casa contribution không offset được...",
+    "banks": [],
+    "topic": "ratio_nim",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/536626479_24606006699040438_4102397500941478672_n.jpg?stp=dst-jpg_tt6&cstp=mx633x574&ctp=p552x414&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=dJqxCQeqIVwQ7kNvwFQdnlf&_nc_oc=Ado4bV0qOus_aitjVG__rf6vKvouxgIKKpr1Mv79eo6RQyf23Ei-xw_9pmGMOwLvnVqSdx_wBg7ezecsxHrmYk3J&_nc_zt=23&_nc_ht=scontent-atl3-1.xx&_nc_gid=mgbsWczT3LT84qRTe2WhNA&_nc_ss=72289&oh=00_AQGwvKQcaSvF23p5NRZQpC1Ur8CvRWNJNwQcE2eFlsafHw&oe=6A89F2F1",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/536626479_24606006699040438_4102397500941478672_n.jpg?stp=dst-jpg_tt6&cstp=mx633x574&ctp=p552x414&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=dJqxCQeqIVwQ7kNvwFQdnlf&_nc_oc=Ado4bV0qOus_aitjVG__rf6vKvouxgIKKpr1Mv79eo6RQyf23Ei-xw_9pmGMOwLvnVqSdx_wBg7ezecsxHrmYk3J&_nc_zt=23&_nc_ht=scontent-atl3-1.xx&_nc_gid=mgbsWczT3LT84qRTe2WhNA&_nc_ss=72289&oh=00_AQGwvKQcaSvF23p5NRZQpC1Ur8CvRWNJNwQcE2eFlsafHw&oe=6A89F2F1",
+          "height": 501,
+          "width": 552
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24606006695707105&set=a.2029578063776623",
+        "id": "24606006695707105",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ2MDYwMDY3ODIzNzM3NjM="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-08-20T02:26:37.000Z",
+    "timestamp": 1755656797,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0SmGb8B6iMt2ziw3isz34pySesy6Dn7srfBeEHsUyrv5mhYqvnKF1PJVP4JaH4Ufdl",
+    "text": "Nhắc lại câu năm trước với vàng: the phrase new ATH is really starting to lose its punch.\n\nP/s. Nhưng nếu nhanh mạnh nữa thì cũng có ... wow factor.",
+    "banks": [],
+    "topic": "deals_corp",
+    "media": [
+      {
+        "thumbnail": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/536121697_24588096494164792_4831526009548617696_n.jpg?stp=dst-jpg_tt6&cstp=mx720x603&ctp=s600x600&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kb6WNOMdyigQ7kNvwGHymgm&_nc_oc=Adr85jYDsbgU_0Jq4pu1h42nXxbXoTbN_vpl8U2wXazR496Ux2ecdqXPm32-n0kKjeU&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=dqHJQKkyaCOnmFQ8zLAquw&_nc_ss=72289&oh=00_AQE4PDnFf0CGq-zo5UC7EXMLGAexCbd9UHZK3fNWqzLq-w&oe=6A89F46A",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF9BD9FE",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/536121697_24588096494164792_4831526009548617696_n.jpg?stp=dst-jpg_tt6&cstp=mx720x603&ctp=s600x600&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kb6WNOMdyigQ7kNvwGHymgm&_nc_oc=Adr85jYDsbgU_0Jq4pu1h42nXxbXoTbN_vpl8U2wXazR496Ux2ecdqXPm32-n0kKjeU&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=dqHJQKkyaCOnmFQ8zLAquw&_nc_ss=72289&oh=00_AQE4PDnFf0CGq-zo5UC7EXMLGAexCbd9UHZK3fNWqzLq-w&oe=6A89F46A",
+          "height": 503,
+          "width": 600
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24588096490831459&set=a.2029578063776623",
+        "id": "24588096490831459",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ1ODgwOTY2Nzc0OTgxMDc="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-08-15T02:52:19.000Z",
+    "timestamp": 1755226339,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0aFVK9yvdZJZsu8kfbPJUaXgFiXWrL1CkTVbtKdwYf9UuLnEgXLCgq3j7SbmbU8T8l",
+    "text": "Khổ cho lãi suất, lãi suất mà biết nói thì...\n\n1/2 Nobel.\n\nLink toàn bài trong comment.",
+    "banks": [],
+    "topic": "interest_macro",
+    "media": [
+      {
+        "thumbnail": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/532502414_24546316695009439_1648983270770865007_n.jpg?stp=dst-jpg_tt6&cstp=mx720x971&ctp=p526x296&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=tkJxuAyLpV0Q7kNvwFPrWxe&_nc_oc=AdrjqLAA-F8NRApNUr4cX-eAI3yAy6_2kVzjAk0911Smf_sw2ySreAVRGazJXKXwFNM&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=dqHJQKkyaCOnmFQ8zLAquw&_nc_ss=72289&oh=00_AQHa9k8apmMuV_VqUYS5rkpOa-yd1BbUxVuXo5m9gvpXZw&oe=6A89ED2C",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFDACCFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/532502414_24546316695009439_1648983270770865007_n.jpg?stp=dst-jpg_tt6&cstp=mx720x971&ctp=p526x296&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=tkJxuAyLpV0Q7kNvwFPrWxe&_nc_oc=AdrjqLAA-F8NRApNUr4cX-eAI3yAy6_2kVzjAk0911Smf_sw2ySreAVRGazJXKXwFNM&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=dqHJQKkyaCOnmFQ8zLAquw&_nc_ss=72289&oh=00_AQHa9k8apmMuV_VqUYS5rkpOa-yd1BbUxVuXo5m9gvpXZw&oe=6A89ED2C",
+          "height": 709,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24546316685009440&set=a.2029578063776623",
+        "id": "24546316685009440",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ1NDYzMTY4NjUwMDk0MjI="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-08-14T11:21:30.000Z",
+    "timestamp": 1755170490,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02WKtovQA9QUuDVwi4ikLG1Tk4CcWTiFvj6KwAK5s3k24BFf7VK4nFRrFWyzFaidQVl",
+    "text": "Haha",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/532942870_24540755552232220_1691264938429066783_n.jpg?stp=dst-jpg_tt6&cstp=mx720x413&ctp=s720x413&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=7IlhjStoRRsQ7kNvwF7mXrp&_nc_oc=Adr9vwv3epIJGCEptbm-zVYh3K0PETP98wc0ArQ7tP-KVGf6517bfRmhtGZ1qOzXGqw&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=dqHJQKkyaCOnmFQ8zLAquw&_nc_ss=72289&oh=00_AQEtkl0S0xorkrcJG27RcdlVuCD8t42XJRTytK9KY7rr9w&oe=6A89F437",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/532942870_24540755552232220_1691264938429066783_n.jpg?stp=dst-jpg_tt6&cstp=mx720x413&ctp=s720x413&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=7IlhjStoRRsQ7kNvwF7mXrp&_nc_oc=Adr9vwv3epIJGCEptbm-zVYh3K0PETP98wc0ArQ7tP-KVGf6517bfRmhtGZ1qOzXGqw&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=dqHJQKkyaCOnmFQ8zLAquw&_nc_ss=72289&oh=00_AQEtkl0S0xorkrcJG27RcdlVuCD8t42XJRTytK9KY7rr9w&oe=6A89F437",
+          "height": 413,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24540755535565555&set=a.2029578063776623",
+        "id": "24540755535565555",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ1NDA3NTU2NTg4OTg4NzY="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-08-14T02:15:02.000Z",
+    "timestamp": 1755137702,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0bh9JPE3zgt2bSaL8KLygeFjdqJy6meLAANW1a2uLqDFJzio78sDvSgHQtgkooGiol",
+    "text": "Turn up the music! More pls :-d",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/533168708_24537693672538408_8179677379631455365_n.jpg?stp=dst-jpg_tt6&cstp=mx720x979&ctp=p526x296&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=p7Ig-VmNVrEQ7kNvwGRaLvj&_nc_oc=AdqK7Xe-dvgoxMRebwlf35sw_6qpVthlasOeOu2zCCHJiILBBy8f5Emvz2gHbxk3PMQ&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=8udVRfgzke-9j-mz7xF5oQ&_nc_ss=72289&oh=00_AQEFST0LI32ZlbJRdlQTaNMJxBocMdTE8p8TP8FGkBf86Q&oe=6A89F731",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/533168708_24537693672538408_8179677379631455365_n.jpg?stp=dst-jpg_tt6&cstp=mx720x979&ctp=p526x296&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=p7Ig-VmNVrEQ7kNvwGRaLvj&_nc_oc=AdqK7Xe-dvgoxMRebwlf35sw_6qpVthlasOeOu2zCCHJiILBBy8f5Emvz2gHbxk3PMQ&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=8udVRfgzke-9j-mz7xF5oQ&_nc_ss=72289&oh=00_AQEFST0LI32ZlbJRdlQTaNMJxBocMdTE8p8TP8FGkBf86Q&oe=6A89F731",
+          "height": 715,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24537693662538409&set=a.2029578063776623",
+        "id": "24537693662538409",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ1Mzc2OTM3NjkyMDUwNjU="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-08-13T01:36:49.000Z",
+    "timestamp": 1755049009,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02HZLh87JQ8YdCVE58Bht1vLP6kHJcqSYyGkiQvUFEqTd2h6SqjkhG7tWAeXeDLqMVl",
+    "text": "Vđ này có nhiều chuyên gia hiểu nhầm.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/531759678_24529302536710855_447559554247766848_n.jpg?stp=dst-jpg_tt6&cstp=mx720x461&ctp=s720x461&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=-v8ynCLN8SEQ7kNvwFYO_PQ&_nc_oc=AdpCYZko_j4duGWZUZoNcdsMQMEmPPdIfztmGBbiy0fHljeMVRnl0iJybvKe_F9ZU9Y&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=8udVRfgzke-9j-mz7xF5oQ&_nc_ss=72289&oh=00_AQFtm7-w1jTf1CJnq-p_5_0CEkQGF7ENDg197UQD4f46Og&oe=6A89E939",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/531759678_24529302536710855_447559554247766848_n.jpg?stp=dst-jpg_tt6&cstp=mx720x461&ctp=s720x461&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=-v8ynCLN8SEQ7kNvwFYO_PQ&_nc_oc=AdpCYZko_j4duGWZUZoNcdsMQMEmPPdIfztmGBbiy0fHljeMVRnl0iJybvKe_F9ZU9Y&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=8udVRfgzke-9j-mz7xF5oQ&_nc_ss=72289&oh=00_AQFtm7-w1jTf1CJnq-p_5_0CEkQGF7ENDg197UQD4f46Og&oe=6A89E939",
+          "height": 461,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24529302533377522&set=a.2029578063776623",
+        "id": "24529302533377522",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ1MjkzMDI2NzY3MTA4NDE="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-08-12T13:56:41.000Z",
+    "timestamp": 1755007001,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0ukFUiQT7u4EFjnTqiaGpk3jwbSScAv3zMFBmUEcTKphFzbDFrShTNdBs9SLBdoNBl",
+    "text": "",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2025-08-11T03:36:57.000Z",
+    "timestamp": 1754883417,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0YQF9ExmwuELww4wHHykNMmsDpG9Y3dQiozzpz6h9hu47VLAVBDiidtyhW2vXvHgtl",
+    "text": "Behold! Sixteen hundred be o’erleapt,\nand the market’s heart doth beat with valiant cheer. :-d",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2025-08-10T07:13:37.000Z",
+    "timestamp": 1754810017,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0tpjj96dYzpysP5EDVMwc9UXoRX8aKty4ZzvdbphYfBuymizCQP3Y3KzxdgLQnNYml",
+    "text": "Thú vị,\nSau nhiều ồn ào từ các post của Mr. Tr vs. JP và dữ liệu gần đây, implied rate path của thị trường lại ở trạng thái cho thấy hầu hết các đợt cắt giảm đều được định giá trước khi Powell rời đi, chứ không phải sau đó (ngày kết thúc nhiệm kỳ ct gần giữa năm sau).\nKhẩu vị với vị thế EUR vs JPY, lên cao nhất kể từ .... Draghi \"whatever it takes\": \n\nSource: Brent Donnelly",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/531346246_24505812075726568_8634899453365651788_n.jpg?stp=dst-jpg_tt6&cstp=mx592x431&ctp=s592x431&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=zXF7-LJ3RwYQ7kNvwExqJHv&_nc_oc=Adq_gEJl3zL8zAVexxpd9VbiH3Ze1d6iMc-5oFIgSHouMn88AwijvK33qnEc2UdnYpg&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=unXHUs_kK7m8UoQfdpjI-A&_nc_ss=72289&oh=00_AQGRC1mzA3PlID0SW7yjyTxsAEqUQ3uy870GaHH1ypCotw&oe=6A89D818",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/531346246_24505812075726568_8634899453365651788_n.jpg?stp=dst-jpg_tt6&cstp=mx592x431&ctp=s592x431&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=zXF7-LJ3RwYQ7kNvwExqJHv&_nc_oc=Adq_gEJl3zL8zAVexxpd9VbiH3Ze1d6iMc-5oFIgSHouMn88AwijvK33qnEc2UdnYpg&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=unXHUs_kK7m8UoQfdpjI-A&_nc_ss=72289&oh=00_AQGRC1mzA3PlID0SW7yjyTxsAEqUQ3uy870GaHH1ypCotw&oe=6A89D818",
+          "height": 431,
+          "width": 592
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24505812062393236&set=a.2029578063776623",
+        "id": "24505812062393236",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ1MDU4MTIyMjIzOTMyMjA="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-08-09T04:18:56.000Z",
+    "timestamp": 1754713136,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0bkK1vLaZT9Um8995UDkYyrKHiMAcmbZvGhTaBjRqXa2pZyApHsfaukBghWG8uZorl",
+    "text": "Huy động vốn cho kỷ nguyên mới: máy bơm thế hệ mới.\n\nP/s: mà thật ra, một phần cũng từ thế hệ cũ, chỉ phân dòng xoắn ốc, vd từ nguồn của banks qua NBFI, các source of funds của private credit (và cả CLO, BDC - Business Development Company,...), thậm chí từ cả các cty Insurers.",
+    "banks": [],
+    "topic": "interest_macro",
+    "media": [
+      {
+        "thumbnail": "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/530202830_24496311376676638_2161892702215507166_n.jpg?stp=dst-jpg_tt6&cstp=mx720x459&ctp=s720x459&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=N7GrqI1VkqsQ7kNvwF3OJJQ&_nc_oc=AdplNvw_ffuRoUziavPI28Axn5uoLdtIAvULtTa4xQDmyVIPaQeLTjkE9teYyV897Kc&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=unXHUs_kK7m8UoQfdpjI-A&_nc_ss=72289&oh=00_AQH1PJbHdnvrYwllirNeZcNKp1CGEvk9BzeRMEFATVzQPg&oe=6A89EC13",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-6/530202830_24496311376676638_2161892702215507166_n.jpg?stp=dst-jpg_tt6&cstp=mx720x459&ctp=s720x459&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=N7GrqI1VkqsQ7kNvwF3OJJQ&_nc_oc=AdplNvw_ffuRoUziavPI28Axn5uoLdtIAvULtTa4xQDmyVIPaQeLTjkE9teYyV897Kc&_nc_zt=23&_nc_ht=scontent-phl2-1.xx&_nc_gid=unXHUs_kK7m8UoQfdpjI-A&_nc_ss=72289&oh=00_AQH1PJbHdnvrYwllirNeZcNKp1CGEvk9BzeRMEFATVzQPg&oe=6A89EC13",
+          "height": 459,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24496311366676639&set=a.2029578063776623",
+        "id": "24496311366676639",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ0OTYzMTE1NzY2NzY2MTg="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-08-09T04:07:36.000Z",
+    "timestamp": 1754712456,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02uurpw1y8APYb796dKHhACxD6EJwZNPxWH3KaznJvpahc3bHZZRBdBj8Z3D2FfDenl",
+    "text": "Rush...",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lax7-1.xx.fbcdn.net/v/t39.30808-6/529739455_24496243393350103_8657517499353851119_n.jpg?stp=dst-jpg_tt6&cstp=mx720x260&ctp=s720x260&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=1dbhou0qlgIQ7kNvwFWsgGj&_nc_oc=AdoJqCtKRnODpxjDhMiWYborZxXeYPD-lq-qOrt_daFyx1Gf3c50TdLmWDoqKah2gaUNV3hoJ8qV1sq1RpAPZZ4t&_nc_zt=23&_nc_ht=scontent-lax7-1.xx&_nc_gid=-4Zd_n21eSqHcCmH-xKgKw&_nc_ss=72289&oh=00_AQE3kVc7rSVi4zL7qIycFEGQc73_FER06IVGIM0MpxKi3w&oe=6A89D8A4",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lax7-1.xx.fbcdn.net/v/t39.30808-6/529739455_24496243393350103_8657517499353851119_n.jpg?stp=dst-jpg_tt6&cstp=mx720x260&ctp=s720x260&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=1dbhou0qlgIQ7kNvwFWsgGj&_nc_oc=AdoJqCtKRnODpxjDhMiWYborZxXeYPD-lq-qOrt_daFyx1Gf3c50TdLmWDoqKah2gaUNV3hoJ8qV1sq1RpAPZZ4t&_nc_zt=23&_nc_ht=scontent-lax7-1.xx&_nc_gid=-4Zd_n21eSqHcCmH-xKgKw&_nc_ss=72289&oh=00_AQE3kVc7rSVi4zL7qIycFEGQc73_FER06IVGIM0MpxKi3w&oe=6A89D8A4",
+          "height": 260,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24496243380016771&set=a.2029578063776623",
+        "id": "24496243380016771",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ0OTYyNDM2MDAwMTY3NDk="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-08-09T04:01:47.000Z",
+    "timestamp": 1754712107,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0LDDcxtd1dvGXKxMfRXUacyhtYj9JGhiMMjG2gGRHWiRZvXbcE9FeJ1HGJPvf8FBGl",
+    "text": "On points: Corps. on structural problems",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-6/528870762_24496206390020470_969846507581300061_n.jpg?stp=dst-jpg_tt6&cstp=mx720x696&ctp=p526x296&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=qd-P2qfStMkQ7kNvwHPvi2v&_nc_oc=AdowqCFgD082705ijS0kNl2UfJweypK9unoa7UYMLqsD0xzrBotzcpgZtQYUT8fxGvC8a5Fu8g4JyCHcQT57X7t9&_nc_zt=23&_nc_ht=scontent-lax3-1.xx&_nc_gid=-4Zd_n21eSqHcCmH-xKgKw&_nc_ss=72289&oh=00_AQFrnPGRguaQgagVoeTZ-1PswONnU-wVTV5UXf5_zdb3RA&oe=6A89E41E",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-6/528870762_24496206390020470_969846507581300061_n.jpg?stp=dst-jpg_tt6&cstp=mx720x696&ctp=p526x296&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=qd-P2qfStMkQ7kNvwHPvi2v&_nc_oc=AdowqCFgD082705ijS0kNl2UfJweypK9unoa7UYMLqsD0xzrBotzcpgZtQYUT8fxGvC8a5Fu8g4JyCHcQT57X7t9&_nc_zt=23&_nc_ht=scontent-lax3-1.xx&_nc_gid=-4Zd_n21eSqHcCmH-xKgKw&_nc_ss=72289&oh=00_AQFrnPGRguaQgagVoeTZ-1PswONnU-wVTV5UXf5_zdb3RA&oe=6A89E41E",
+          "height": 508,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24496206380020471&set=a.2029578063776623",
+        "id": "24496206380020471",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ0OTYyMDY1OTY2ODcxMTY="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-08-07T01:48:51.000Z",
+    "timestamp": 1754531331,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid09TxRJGMDRt3Beu3RcjZsbdRvPFmoGpQzneu1MYrE2HmHkbWQfK5YDeebBfNnkHtPl",
+    "text": "Swaps then? Buy USD bond then?",
+    "banks": [],
+    "topic": "exchange_fx",
+    "media": []
+  },
+  {
+    "time": "2025-08-06T07:21:54.000Z",
+    "timestamp": 1754464914,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02HdVNEaLjZve17KxPJNeofUjeJeienTvZSnuSNkgPbyVCMefRoWBykAcRtE4j6gKwl",
+    "text": "\"Shadow Central Bank\" Dynamic. \n\nKk nhiều lúc SBV phải đi trước hoặc hand in hand, không thì như đợt vừa qua.\n\nP/s. SBV nghiên cứu... Swaps thì cũng nên nghiên cứu Forward Reserve Requirement, nghiên cứu thôi, để trong toolbox. Kk",
+    "banks": [],
+    "topic": "sbv",
+    "media": [
+      {
+        "thumbnail": "https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/527818433_24470840805890362_8360371603573566749_n.jpg?stp=dst-jpg_tt6&cstp=mx692x865&ctp=s640x640&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=hynNRj70IuEQ7kNvwHB1s9U&_nc_oc=AdpBuH7CkiAsmcbHvGli5MqFlFPjmOiAhxt6PDDvuBa4kkZEZOtsudBmTJ7vFHPbCaPSIA4EeLf8czRq2eglN4P-&_nc_zt=23&_nc_ht=scontent-dfw5-1.xx&_nc_gid=5POmDmHyUAUpo6C9S7frRA&_nc_ss=7d289&oh=00_AQHrAvOvWoMvkKl1SwXrEiW6V5dnIuypCNnLmRovKyh3JQ&oe=6A8A0883",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/527818433_24470840805890362_8360371603573566749_n.jpg?stp=dst-jpg_tt6&cstp=mx692x865&ctp=s640x640&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=hynNRj70IuEQ7kNvwHB1s9U&_nc_oc=AdpBuH7CkiAsmcbHvGli5MqFlFPjmOiAhxt6PDDvuBa4kkZEZOtsudBmTJ7vFHPbCaPSIA4EeLf8czRq2eglN4P-&_nc_zt=23&_nc_ht=scontent-dfw5-1.xx&_nc_gid=5POmDmHyUAUpo6C9S7frRA&_nc_ss=7d289&oh=00_AQHrAvOvWoMvkKl1SwXrEiW6V5dnIuypCNnLmRovKyh3JQ&oe=6A8A0883",
+          "height": 640,
+          "width": 512
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24470840789223697&set=a.2029578063776623",
+        "id": "24470840789223697",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ0NzA4NDA5ODkyMjM2Nzc="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-08-06T03:41:37.000Z",
+    "timestamp": 1754451697,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0wzRq1z6UWtZGHnTWzsLy3YJKPpgTjgpppk674faRATFm1PsdZvMFVrfsistt3e5vl",
+    "text": "Đơn hàng hàng mới xuất khẩu vẫn yếu và gây áp lực lên việc làm...\nTuy nhiên đơn hàng khởi sắc hơn ở khu vực sx nội địa.\n\nP/s. IIP (7month ytd-yoy) +8.6%.\n\nWind in the sails, shifting to the bow?",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-dfw6-2.xx.fbcdn.net/v/t39.30808-6/526800569_24469613309346445_3722062536457433021_n.jpg?stp=dst-jpg_tt6&cstp=mx1640x1126&ctp=p180x540&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=jGQeivPdzBkQ7kNvwFu3Ti7&_nc_oc=AdpQLpn2p_M3OHjr4Eu9RKFvhQa9BeVsQoGjKtapAuqxCBYE15RQw664llCU0pIVX2c0md4hwGMVUkF7ISCP1mkm&_nc_zt=23&_nc_ht=scontent-dfw6-2.xx&_nc_gid=5POmDmHyUAUpo6C9S7frRA&_nc_ss=7d289&oh=00_AQG-lWoTFAPzYE7SYBpVN9XB-tsqSci4pIEogz7vjVMdww&oe=6A8A000D",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-dfw6-2.xx.fbcdn.net/v/t39.30808-6/526800569_24469613309346445_3722062536457433021_n.jpg?stp=dst-jpg_tt6&cstp=mx1640x1126&ctp=p180x540&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=jGQeivPdzBkQ7kNvwFu3Ti7&_nc_oc=AdpQLpn2p_M3OHjr4Eu9RKFvhQa9BeVsQoGjKtapAuqxCBYE15RQw664llCU0pIVX2c0md4hwGMVUkF7ISCP1mkm&_nc_zt=23&_nc_ht=scontent-dfw6-2.xx&_nc_gid=5POmDmHyUAUpo6C9S7frRA&_nc_ss=7d289&oh=00_AQG-lWoTFAPzYE7SYBpVN9XB-tsqSci4pIEogz7vjVMdww&oe=6A8A000D",
+          "height": 540,
+          "width": 787
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24469613282679781&set=a.2029578063776623",
+        "id": "24469613282679781",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ0Njk2MTM0ODkzNDY0Mjc="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-08-05T07:57:56.000Z",
+    "timestamp": 1754380676,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid033JQB4HYm5mhJXeW8Qud3Bay91U5VvmBWfZkLWttqv68qiD6jSSwtJgTA3gv11AFtl",
+    "text": "All time of all time.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/526629228_24462564903384619_3553027915128827297_n.jpg?stp=dst-jpg_tt6&cstp=mx960x816&ctp=s590x590&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=o_70QETODp8Q7kNvwGJMtZ4&_nc_oc=AdoGPRl-luHEMrMGIlTKDPRV6uIG7dkDEcl0IpvHMCOK2PqhBCiViedgOJdL-tePgFfoGm980n7E-jcFlfZDfHrE&_nc_zt=23&_nc_ht=scontent-dfw5-1.xx&_nc_gid=5POmDmHyUAUpo6C9S7frRA&_nc_ss=7d289&oh=00_AQFB3_k8FsPxaN7CgUu3ljXA8Zu1ksj_t-Is0QEkywvjaA&oe=6A8A01AE",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/526629228_24462564903384619_3553027915128827297_n.jpg?stp=dst-jpg_tt6&cstp=mx960x816&ctp=s590x590&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=o_70QETODp8Q7kNvwGJMtZ4&_nc_oc=AdoGPRl-luHEMrMGIlTKDPRV6uIG7dkDEcl0IpvHMCOK2PqhBCiViedgOJdL-tePgFfoGm980n7E-jcFlfZDfHrE&_nc_zt=23&_nc_ht=scontent-dfw5-1.xx&_nc_gid=5POmDmHyUAUpo6C9S7frRA&_nc_ss=7d289&oh=00_AQFB3_k8FsPxaN7CgUu3ljXA8Zu1ksj_t-Is0QEkywvjaA&oe=6A8A01AE",
+          "height": 502,
+          "width": 590
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24462564896717953&set=a.2029578063776623",
+        "id": "24462564896717953",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ0NjI1NjUxNTMzODQ1OTQ="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-08-05T03:33:02.000Z",
+    "timestamp": 1754364782,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0Dx6T928Noppk7L7sVo1ku15H2mAxEWWA53cnvCaF9Xu3o39dY8M6mWgp72DkNxPUl",
+    "text": "New... ATH?\n:-d",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2025-08-05T02:22:43.000Z",
+    "timestamp": 1754360563,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid05yhWLvac699PEerfjpfQmFBpeAMYEZcDtbXnJDLjFSEY6GnBynKE1iue3otEu376l",
+    "text": "Top Global về quy mô lợi nhuận. NH số đông, 10/25. Công nghệ đóng góp LN lớn nhất.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-mia3-2.xx.fbcdn.net/v/t39.30808-6/526658375_24460647453576364_6728490972612950148_n.jpg?stp=dst-jpg_tt6&cstp=mx601x1037&ctp=p526x296&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Rs2BYEKlrMcQ7kNvwHcn0Tb&_nc_oc=AdphCLK9325s8vWW9QeWFmidFJtkrhnzfdqNlPxILVpRG3GgqRIbllb2KooBZ3_v7aY&_nc_zt=23&_nc_ht=scontent-mia3-2.xx&_nc_gid=EvMenBBJiATLht4sx3aP7w&_nc_ss=72289&oh=00_AQHXehQ8kDyNNwfifK-z5ua_5ADuzXrc54-LEoy_GXG_Zw&oe=6A89EBCB",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-mia3-2.xx.fbcdn.net/v/t39.30808-6/526658375_24460647453576364_6728490972612950148_n.jpg?stp=dst-jpg_tt6&cstp=mx601x1037&ctp=p526x296&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Rs2BYEKlrMcQ7kNvwHcn0Tb&_nc_oc=AdphCLK9325s8vWW9QeWFmidFJtkrhnzfdqNlPxILVpRG3GgqRIbllb2KooBZ3_v7aY&_nc_zt=23&_nc_ht=scontent-mia3-2.xx&_nc_gid=EvMenBBJiATLht4sx3aP7w&_nc_ss=72289&oh=00_AQHXehQ8kDyNNwfifK-z5ua_5ADuzXrc54-LEoy_GXG_Zw&oe=6A89EBCB",
+          "height": 908,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24460647450243031&set=a.2029578063776623",
+        "id": "24460647450243031",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ0NjA2NDc2NjM1NzYzNDM="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-08-04T07:59:46.000Z",
+    "timestamp": 1754294386,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0xbA6kS6ojePXMz2Hvk8FDP2dEiAEPp1ZKDUMTBbj42HVMuTpiqpJAZrYRZSXNjeMl",
+    "text": "Rất nhanh.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-mia3-1.xx.fbcdn.net/v/t39.30808-6/527898452_24453899984251111_4502690476022940097_n.jpg?stp=dst-jpg_tt6&cstp=mx720x458&ctp=s720x458&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Xbg8NmVtYZYQ7kNvwELK2ZV&_nc_oc=AdoPid5AY8Y5NRzgZORGFMiLCQoxkqlNsDiK1CFgoUSWUgjZR0XlKtp_Q_uYVLAKdng&_nc_zt=23&_nc_ht=scontent-mia3-1.xx&_nc_gid=EvMenBBJiATLht4sx3aP7w&_nc_ss=72289&oh=00_AQHz_zLOz9Xn5Z4U1bZJ0i2KAq4MY8SiOw5DaMWHmsWEDA&oe=6A89FBFF",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-mia3-1.xx.fbcdn.net/v/t39.30808-6/527898452_24453899984251111_4502690476022940097_n.jpg?stp=dst-jpg_tt6&cstp=mx720x458&ctp=s720x458&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Xbg8NmVtYZYQ7kNvwELK2ZV&_nc_oc=AdoPid5AY8Y5NRzgZORGFMiLCQoxkqlNsDiK1CFgoUSWUgjZR0XlKtp_Q_uYVLAKdng&_nc_zt=23&_nc_ht=scontent-mia3-1.xx&_nc_gid=EvMenBBJiATLht4sx3aP7w&_nc_ss=72289&oh=00_AQHz_zLOz9Xn5Z4U1bZJ0i2KAq4MY8SiOw5DaMWHmsWEDA&oe=6A89FBFF",
+          "height": 458,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24453899980917778&set=a.2029578063776623",
+        "id": "24453899980917778",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ0NTM5MDAxNjQyNTEwOTM="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-08-03T15:02:21.000Z",
+    "timestamp": 1754233341,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0cfCPLro4GDChhHGHxEFeKxXrCw45RdNuRPr2raygirBJgiaS7uBrBGDQe45Pw7yl",
+    "text": "Fx. Bảng cân đối ngoại tệ... \n\nToàn hệ thống, Fx Deposit khoảng 10% GDP. Nói chung giảm tương đối. Nhưng Fx Reserves cũng... giảm trong mấy năm qua.\n\nVới huy động và cho vay, LDR (customers) thấp, ~55%, tuy nhiên đặc điểm của Fx Deposit thì Fx Casa lớn.\nTrong tổng Fx Deposit toàn hệ thống ở trên, tg tckt là chủ yếu, với hơn 80%. ~70% tg tckt là Casa. Fx Casa của tckt rất khác casa thông thường... \n\nVới Big4, aggregate Fx LDR (customers) ~66%.\n\nP/s. Với các dự án % GDP lớn có cấu phần ngoại tệ lớn, cần các cơ chế và quyết sách quyết liệt...\n\nFX BS của... Big4:",
+    "banks": [],
+    "topic": "ratio_ldr",
+    "media": [
+      {
+        "thumbnail": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/527671811_24451777031130073_5676773344980348835_n.jpg?stp=dst-jpg_tt6&cstp=mx936x910&ctp=p526x296&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=7Rb13_nVUMgQ7kNvwGHrDHg&_nc_oc=AdqeCJfc5WWQyGRXr7ev-vb1--7ib9Z9BcW7KiqheKJ8yNNiodqO6zJJ-Oo6IoMEAXs&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=VwYoGUG2LOnQ-7fq31jaSQ&_nc_ss=72289&oh=00_AQGPNkHWpwvrQ__Nxxn2y3FYsDm1woZ3Hi7xsXlgwvsJfw&oe=6A8A0095",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/527671811_24451777031130073_5676773344980348835_n.jpg?stp=dst-jpg_tt6&cstp=mx936x910&ctp=p526x296&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=7Rb13_nVUMgQ7kNvwGHrDHg&_nc_oc=AdqeCJfc5WWQyGRXr7ev-vb1--7ib9Z9BcW7KiqheKJ8yNNiodqO6zJJ-Oo6IoMEAXs&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=VwYoGUG2LOnQ-7fq31jaSQ&_nc_ss=72289&oh=00_AQGPNkHWpwvrQ__Nxxn2y3FYsDm1woZ3Hi7xsXlgwvsJfw&oe=6A8A0095",
+          "height": 511,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24451777024463407&set=a.2029578063776623",
+        "id": "24451777024463407",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ0NDg1NDI3OTE0NTM0OTc="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-08-02T13:31:38.000Z",
+    "timestamp": 1754141498,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0ZC1Adt1WtPejcc3JJMhHKCCMSpezWi281Nwhn4ShVd2r3df1bhUK6dUyN7e7sDYbl",
+    "text": "Có mấy từ đặt gần nhau cũng thú vị. :-d\nĐó cũng là 1 trong ít nhất 3 điểm quan trọng.\n\nP/s: Cũng tròn 10 năm lô TPCP 1 tỷ USD thành công vào balance sheet của VCB và bằng khen vào phòng truyền thống. Lúc đó coupon 4.8.",
+    "banks": [
+      "VCB"
+    ],
+    "topic": "exchange_fx",
+    "media": [
+      {
+        "thumbnail": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/525994996_24440020418972401_8655527654169499402_n.jpg?stp=dst-jpg_tt6&cstp=mx662x798&ctp=p526x296&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Gbs3JOUgyrIQ7kNvwEFXhbm&_nc_oc=AdqM2-_h7RL6b3pEwoM1pMRawLJnAgKuI-6JgVyv49Keeo3CiSbRtmBB35SQhlvSnfU&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=VwYoGUG2LOnQ-7fq31jaSQ&_nc_ss=72289&oh=00_AQF_uyoKXyCmxMm5huNc-UU1MwGdtL21QlXLxxklHk3Ofw&oe=6A89FDAC",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/525994996_24440020418972401_8655527654169499402_n.jpg?stp=dst-jpg_tt6&cstp=mx662x798&ctp=p526x296&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Gbs3JOUgyrIQ7kNvwEFXhbm&_nc_oc=AdqM2-_h7RL6b3pEwoM1pMRawLJnAgKuI-6JgVyv49Keeo3CiSbRtmBB35SQhlvSnfU&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=VwYoGUG2LOnQ-7fq31jaSQ&_nc_ss=72289&oh=00_AQF_uyoKXyCmxMm5huNc-UU1MwGdtL21QlXLxxklHk3Ofw&oe=6A89FDAC",
+          "height": 634,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24440020408972402&set=a.2029578063776623",
+        "id": "24440020408972402",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ0NDAwMjA2MjU2MzkwNDc="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-08-01T14:22:07.000Z",
+    "timestamp": 1754058127,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0a5DuAvypHxSP6V3EYuY8FCfPaxQLp7YWs4vmaJkWyEHQurzfMkvFnHArDHoCcgMVl",
+    "text": "Số NFP 73k, -- vs. expected + đặc biệt big downward revised 2 tháng trc 258k!\nRates market phản ứng rất mạnh.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/526013172_24432278003079976_3537837743023397981_n.jpg?stp=dst-jpg_tt6&cstp=mx720x518&ctp=s720x518&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=iF4GQuF4DRQQ7kNvwHsYoph&_nc_oc=AdrhhAgxmPS_bxOmRxx2kuf8IZhfI39UQ1MOTCPg44yxGU-Njjej0K2JWPxpfdPbQ74&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=VwYoGUG2LOnQ-7fq31jaSQ&_nc_ss=72289&oh=00_AQET6yczJ-TibWrvLNmcSfuKxjGmNEpzM7m-dSatH30I1Q&oe=6A89F294",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/526013172_24432278003079976_3537837743023397981_n.jpg?stp=dst-jpg_tt6&cstp=mx720x518&ctp=s720x518&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=iF4GQuF4DRQQ7kNvwHsYoph&_nc_oc=AdrhhAgxmPS_bxOmRxx2kuf8IZhfI39UQ1MOTCPg44yxGU-Njjej0K2JWPxpfdPbQ74&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=VwYoGUG2LOnQ-7fq31jaSQ&_nc_ss=72289&oh=00_AQET6yczJ-TibWrvLNmcSfuKxjGmNEpzM7m-dSatH30I1Q&oe=6A89F294",
+          "height": 518,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24432277996413310&set=a.2029578063776623",
+        "id": "24432277996413310",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ0MzIyNzgyMzY0MTMyODY="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-08-01T05:15:38.000Z",
+    "timestamp": 1754025338,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02hEYkWTLZT4xMFnbipgJoP91GKL2pqqizG4RqjN7jf7bKrbKJRm63cL3F5BijZQyql",
+    "text": "Ai làm tốt, cho làm tới + tiếp tục giảm lscv. \nTarget vẫn 16 nhưng mở ngoặc.\n\nIRRBB works hard. :-d",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-hou1-1.xx.fbcdn.net/v/t39.30808-6/515438323_24429041873403589_6062504217860991122_n.jpg?stp=dst-jpg_tt6&cstp=mx720x660&ctp=p552x414&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=rnvC1xOrjlIQ7kNvwGtSDgd&_nc_oc=Adqc-gUvdpzCkXF9XDCVudD4TWQ441h_rhbrPF3fj6AcebGTg4kOH0bTmI0ZzIfSSag&_nc_zt=23&_nc_ht=scontent-hou1-1.xx&_nc_gid=1Ly6VALCA4EkpU3LngcLEw&_nc_ss=72289&oh=00_AQEDXL4nM4nYRGJ387ziSRoIyzCqHsnYorkNuS4R96tCHw&oe=6A8A0905",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-hou1-1.xx.fbcdn.net/v/t39.30808-6/515438323_24429041873403589_6062504217860991122_n.jpg?stp=dst-jpg_tt6&cstp=mx720x660&ctp=p552x414&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=rnvC1xOrjlIQ7kNvwGtSDgd&_nc_oc=Adqc-gUvdpzCkXF9XDCVudD4TWQ441h_rhbrPF3fj6AcebGTg4kOH0bTmI0ZzIfSSag&_nc_zt=23&_nc_ht=scontent-hou1-1.xx&_nc_gid=1Ly6VALCA4EkpU3LngcLEw&_nc_ss=72289&oh=00_AQEDXL4nM4nYRGJ387ziSRoIyzCqHsnYorkNuS4R96tCHw&oe=6A8A0905",
+          "height": 506,
+          "width": 552
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24429041856736924&set=a.2029578063776623",
+        "id": "24429041856736924",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ0MjkwNDIwMjM0MDM1NzQ="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-07-31T06:53:18.000Z",
+    "timestamp": 1753944798,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0pK51wWHYd8ZQeunSLwJmB8qwCCcKgquiYUc22aUZeMYKZXjP5FjBjTk1FjkHyYk2l",
+    "text": "Chi phí hiệu quả, nhân sự nóng bỏng...\nMột năm qua (12 month ->Q2) mặt trận chi phí nhân sự thực sự quyết liệt, khi đóng góp chính cân bằng cho CIR mục tiêu, trong bối cảnh biên thu nhập trên banking book và ngoài lãi nén lại, trong khi nhu cầu đầu tư hạ tầng công nghệ và chi phí biên customers accquiring tăng.\n\nForward looking: CIR risk bands?",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-hou1-1.xx.fbcdn.net/v/t39.30808-6/526445718_24421379197503190_481705088493189023_n.jpg?stp=dst-jpg_tt6&cstp=mx489x421&ctp=s489x421&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=x35NtFj70CkQ7kNvwHH-V3Q&_nc_oc=Adq_qe1Y_IvLlmxoPD1bw9QgaR9e7W32tL19rHvJWt41ik-k-dJCzD7MZb8j-aCOcX4&_nc_zt=23&_nc_ht=scontent-hou1-1.xx&_nc_gid=1Ly6VALCA4EkpU3LngcLEw&_nc_ss=72289&oh=00_AQFD6RIf6v-L9t7g1TVIuKT7SCP89oIde3KAJa8pE2bxQw&oe=6A8A0231",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-hou1-1.xx.fbcdn.net/v/t39.30808-6/526445718_24421379197503190_481705088493189023_n.jpg?stp=dst-jpg_tt6&cstp=mx489x421&ctp=s489x421&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=x35NtFj70CkQ7kNvwHH-V3Q&_nc_oc=Adq_qe1Y_IvLlmxoPD1bw9QgaR9e7W32tL19rHvJWt41ik-k-dJCzD7MZb8j-aCOcX4&_nc_zt=23&_nc_ht=scontent-hou1-1.xx&_nc_gid=1Ly6VALCA4EkpU3LngcLEw&_nc_ss=72289&oh=00_AQFD6RIf6v-L9t7g1TVIuKT7SCP89oIde3KAJa8pE2bxQw&oe=6A8A0231",
+          "height": 421,
+          "width": 489
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24421379187503191&set=a.2029578063776623",
+        "id": "24421379187503191",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ0MjEzNzkzNTA4MzY1MDg="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-07-29T05:45:09.000Z",
+    "timestamp": 1753767909,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid07AHNkCZ576cm71ioBBgeDEMt4VMvd7wGg7QC57jA3vW7cxGvvQbBtGmy656urkftl",
+    "text": "Kìa.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-hou1-1.xx.fbcdn.net/v/t39.30808-6/525383963_24405048045802972_409450926212504274_n.jpg?stp=dst-jpg_tt6&cstp=mx960x816&ctp=s590x590&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=mG3agVOOyN4Q7kNvwH_OyJB&_nc_oc=AdqJXq2WHeXEa3v5ByRf-_U8emuM5vgH-W1MQRPHf9S19aIJCHqknEGcPnXtJkCDqAU&_nc_zt=23&_nc_ht=scontent-hou1-1.xx&_nc_gid=1Ly6VALCA4EkpU3LngcLEw&_nc_ss=72289&oh=00_AQEgstE9JCBudavuZBvL4MnDtGGVsJ0FMh90Qv55K6Sktw&oe=6A89FF17",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-hou1-1.xx.fbcdn.net/v/t39.30808-6/525383963_24405048045802972_409450926212504274_n.jpg?stp=dst-jpg_tt6&cstp=mx960x816&ctp=s590x590&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=mG3agVOOyN4Q7kNvwH_OyJB&_nc_oc=AdqJXq2WHeXEa3v5ByRf-_U8emuM5vgH-W1MQRPHf9S19aIJCHqknEGcPnXtJkCDqAU&_nc_zt=23&_nc_ht=scontent-hou1-1.xx&_nc_gid=1Ly6VALCA4EkpU3LngcLEw&_nc_ss=72289&oh=00_AQEgstE9JCBudavuZBvL4MnDtGGVsJ0FMh90Qv55K6Sktw&oe=6A89FF17",
+          "height": 502,
+          "width": 590
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24405048042469639&set=a.2029578063776623",
+        "id": "24405048042469639",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQ0MDUwNDgyNTkxMzYyODQ="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-07-28T02:16:18.000Z",
+    "timestamp": 1753668978,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid026p5VTV2bvkhqNv1zD2edxPMhwtN4f9oxLwmMGU42MkJQ6vKFVVDr94PEeDCCQzUBl",
+    "text": "Great! ATH\n25th Anniversary",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2025-07-27T15:55:20.000Z",
+    "timestamp": 1753631720,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02RP7EgCDyWL7bTZevv4nv6NjBiPboSganRBoJVUqfDjsr3SYK8hC28nVjX284RMTGl",
+    "text": "Chuyên gia này nêu mấy vấn đề hay (và có thể liên hệ VN). Nhưng...\nTheo các bạn điểm nào chưa chính xác, điểm nào cần điều kiện...? :-d",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/524381743_24392307627077014_5279053081990671628_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1173&ctp=s565x565&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kAzX_jwNdvIQ7kNvwGZmtkL&_nc_oc=AdopvPzJIe78152ZkE8OX9dUs1tFlZr2blkOXLnQqrzflo4J6oCvOZ9tGri2sww3bXg&_nc_zt=23&_nc_ht=scontent-atl3-1.xx&_nc_gid=WtulRu0rxjV4C2J7Ac19tw&_nc_ss=72289&oh=00_AQEnBKEHkz-WAud2SH6n-dh8Tz3esUBwOjo8_gISydFWbw&oe=6A8A0AF2",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/524381743_24392307627077014_5279053081990671628_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1173&ctp=s565x565&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kAzX_jwNdvIQ7kNvwGZmtkL&_nc_oc=AdopvPzJIe78152ZkE8OX9dUs1tFlZr2blkOXLnQqrzflo4J6oCvOZ9tGri2sww3bXg&_nc_zt=23&_nc_ht=scontent-atl3-1.xx&_nc_gid=WtulRu0rxjV4C2J7Ac19tw&_nc_ss=72289&oh=00_AQEnBKEHkz-WAud2SH6n-dh8Tz3esUBwOjo8_gISydFWbw&oe=6A8A0AF2",
+          "height": 565,
+          "width": 520
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24392307620410348&set=a.2029578063776623",
+        "id": "24392307620410348",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQzOTIzMDc3NTM3NDM2Njg="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-07-27T14:11:38.000Z",
+    "timestamp": 1753625498,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0PEHM316qefjxc3Wi36vULATbUVGfndVUm75fJ96B3fkP4YTtanFHh9TSsBTsKwCil",
+    "text": "SMEs Supporting Factor (SF)\n\nVới khu vực tư nhân và SMEs, Basel III/IV của EU (CRR-Capital Requirements Regulation) cũng dành riêng với quy định về hệ số hỗ trợ SMEs nhằm hỗ trợ tăng trưởng tín dụng cho doanh nghiệp nhỏ và vừa-được xem là động lực của nền kinh tế-bằng cách giảm mức độ ràng buộc vốn mà ngân hàng phải duy trì với các khoản vay này. Trong điều kiện bình thường cũng như trong điều kiện căng thẳng, thắt chặt tín dụng (ví dụ chèn lấn khả năng tiếp cận vốn).\n\nTT 14 được ban hành trong bối cảnh Kinh tế tư nhân Việt Nam được định vị lại với vị thế, vai trò và tầm nhìn mới. \nSự thay đổi về thể chế, chính sách đang diễn ra... Các chính sách đối với ngân hàng, bên cạnh tín dụng, lãi suất, thì cơ chế vốn rất quan trọng.\nTrong đó có quy tắc vốn.\nNhưng những thay đổi, dù có nới lỏng và hỗ trợ khu vực này (trong bán lẻ/SMEs, cùng biện pháp giảm rủi ro tín dụng...) vẫn cần rõ nét và mạnh mẽ hơn. Không chỉ Risk Weigh mà còn có thể nên có cả “buffer flexibility” hay “CCyB targeting\" với SME-heavy sectors. \n\nTất nhiên, khi nói \"supporting\" thì không đúng nguyên tắc của Basel, vốn đề cao mức độ risk sensitivity nếu tồn tại RW ưu đãi khác, cũng như hạn chế double counting (vì risk-based differentiation đã được thực thi), nhưng cũng cần hài hòa và thúc đẩy định hướng hỗ trợ chính sách phát triển kinh tế.\n.\nCó điều kiện mình sẽ nói tiếp về mô phỏng, ví dụ 10ppt giảm xuống trong RW của SMEs (đặc biệt khi danh mục cho vay lớn) tác động như thế nào đến:\n1. Mức độ giải phóng vốn phân bổ - theo vốn mục tiêu (capital charge), và theo đó là khả năng (i) tăng cho vay SME (exposures), vd tăng x lần; giảm lãi suất...\n2. Cân NIM vs. NII (và ROA, ROE) định hướng tăng trưởng SME mà vẫn bảo đảm ROA/ROE mục tiêu ở mức khả thi) khi kết hợp với 1 ở trên và 3 ở mục tiếp theo.\n3. Định giá (pricing) Lãi suất cho vay và/hoặc chính sách giá cạnh tranh. Vd cost of capital (theo CAR targeting và vốn yêu cầu phân bổ) giảm, cộng CoF + NIM + EL +...\nHỗ trợ chính sách ưu đãi lãi suất thực chất hơn.\n4. Chính sách Internal Capital Allocation, vd phân bổ qua RAROC hurdle rate cho Segments. Khi RW giảm, RAROC của một đv SMEs hấp dẫn hơn vs khác như Corps loans... bao nhiêu; tính đến correlation của SME portfolio.\n5. Linh hoạt hơn với chính sách absorb dự phòng EL/ECL...\n.\nI.e. “Capital requirements for credit risk on exposures to SMEs shall be multiplied by the factor 0.7619”",
+    "banks": [],
+    "topic": "ratio_nim",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/523649088_24391685973805846_1533601327964330315_n.jpg?stp=dst-jpg_tt6&cstp=mx937x547&ctp=p180x540&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=zmkzB6P6Zh4Q7kNvwF4z3Tj&_nc_oc=AdrpFBeo131mGHJBYiS6Ny35hBHXsSoz6t7QAABgaOkrfEEd2KGg85gyivExuQF-FiM&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=WtulRu0rxjV4C2J7Ac19tw&_nc_ss=72289&oh=00_AQGQnorFymTkWI7qzsOS-K7oNoaz4JO9ejB-yY-6z7RByw&oe=6A89EC3C",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFF1F1F1",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/523649088_24391685973805846_1533601327964330315_n.jpg?stp=dst-jpg_tt6&cstp=mx937x547&ctp=p180x540&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=zmkzB6P6Zh4Q7kNvwF4z3Tj&_nc_oc=AdrpFBeo131mGHJBYiS6Ny35hBHXsSoz6t7QAABgaOkrfEEd2KGg85gyivExuQF-FiM&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=WtulRu0rxjV4C2J7Ac19tw&_nc_ss=72289&oh=00_AQGQnorFymTkWI7qzsOS-K7oNoaz4JO9ejB-yY-6z7RByw&oe=6A89EC3C",
+          "height": 540,
+          "width": 925
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24391685957139181&set=a.2029578063776623",
+        "id": "24391685957139181",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQzOTE2ODYxNjcxMzkxNjA="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-07-25T16:55:16.000Z",
+    "timestamp": 1753462516,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02HDTr1zJKL4hsBMAydFhvxzDo874GHmkyEtUvwgMYvFEwVKTZwtDziRdGsM1iftrsl",
+    "text": "Chart rất giống VN-index.\n\nTừ một nền kt châu Á gặp rất nhiều vấn đề và cũng  từng có thị trường trái phiếu doanh nghiệp \"nát bét\".\nBạn đoán ra ở đâu không? :-d",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/524172479_24377580935216350_4052418589707833914_n.jpg?stp=dst-jpg_tt6&cstp=mx571x688&ctp=p526x296&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=o4OHvJs2n28Q7kNvwFx2Cum&_nc_oc=AdocpjENIeVcnkVW2A5ExxTJeT_XP2X2caWVmD1s0rtjg1veFtTZEi-DlCwN5BMUfvI&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=KXiWqj8ue96xXCI5AOgu8A&_nc_ss=72289&oh=00_AQHICmQWfofTDles1TP7UzlMIyglFAxKkXYN2Y0QQ3vQMw&oe=6A89E842",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFF8F8F8",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/524172479_24377580935216350_4052418589707833914_n.jpg?stp=dst-jpg_tt6&cstp=mx571x688&ctp=p526x296&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=o4OHvJs2n28Q7kNvwFx2Cum&_nc_oc=AdocpjENIeVcnkVW2A5ExxTJeT_XP2X2caWVmD1s0rtjg1veFtTZEi-DlCwN5BMUfvI&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=KXiWqj8ue96xXCI5AOgu8A&_nc_ss=72289&oh=00_AQHICmQWfofTDles1TP7UzlMIyglFAxKkXYN2Y0QQ3vQMw&oe=6A89E842",
+          "height": 634,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24377580921883018&set=a.2029578063776623",
+        "id": "24377580921883018",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQzNzc1ODExNzE4ODI5OTM="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-07-25T09:03:36.000Z",
+    "timestamp": 1753434216,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02zfcd5X2xTSpcKGXFLhciujhcaSuTcWb3FuZGqtUzuEKwng8RRmheffBXh8B7Xqtzl",
+    "text": "Vậy là còn một chút  nữa để đạt điểm ATH trong phiên nhỉ. :-d",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2025-07-25T08:59:58.000Z",
+    "timestamp": 1753433998,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid07FCPY5sq3W4S1N3NdV7tLQXgaMoXovn4PJS5eDFechEWeHQMiu2cVmj2wWacExFDl",
+    "text": "Đặt vấn đề không đúng trọng tâm, nên câu trả lời cũng vậy (dù có thể phù hợp với nd vấn đề).\n\nCũng là chủ đề hay, nhưng tại sao không mời một vị Phó Thống đốc liên quan nhỉ.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/523290895_24374841132156997_103438146637594031_n.jpg?stp=dst-jpg_tt6&cstp=mx712x939&ctp=p526x296&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=WTg-5hk4AcEQ7kNvwGURAZC&_nc_oc=Adp7PQXiYHho6UtuSE9n3n7OEUAflZrcN9J1NaUX1XfjOY5VvC8x6yZEF4NWV3ORjtk&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=KXiWqj8ue96xXCI5AOgu8A&_nc_ss=72289&oh=00_AQFxYC-AS5N6D7Lf4GLwQLiPUMSpJnDnrhw-O9hEEnqUXw&oe=6A8A01E6",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/523290895_24374841132156997_103438146637594031_n.jpg?stp=dst-jpg_tt6&cstp=mx712x939&ctp=p526x296&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=WTg-5hk4AcEQ7kNvwGURAZC&_nc_oc=Adp7PQXiYHho6UtuSE9n3n7OEUAflZrcN9J1NaUX1XfjOY5VvC8x6yZEF4NWV3ORjtk&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=KXiWqj8ue96xXCI5AOgu8A&_nc_ss=72289&oh=00_AQFxYC-AS5N6D7Lf4GLwQLiPUMSpJnDnrhw-O9hEEnqUXw&oe=6A8A01E6",
+          "height": 694,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24374841115490332&set=a.2029578063776623",
+        "id": "24374841115490332",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQzNzQ4NDEyOTg4MjM2NDc="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-07-25T01:42:05.000Z",
+    "timestamp": 1753407725,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid034wxb1cwZQZ3KgqeyiHuVV8z6fS3PaDx2JgWMYLYU2Auy44SwyqBdExNSYokt7i9hl",
+    "text": "Có một thực tế các tập đoàn của TL đầu tư lớn vào VN và kiểm soát một số lĩnh vực. \nVN vào pha investment-led growth (công, tư) thì tốc độ cao hơn nữa. Tuy nhiên, transmission sang PCE không cùng mức.\nFunding cho investments tốc độ cao cũng dựa vào banking system, trong khi capital markets chưa đủ mạnh, pha loãng và tập trung... (nhưng đây là tiềm năng), xem thêm ở cmmt. \nVới aggregate finance demand khổng lồ cho \"kỷ nguyên\" mới, có thể mapping vào một nhóm potential NH và IBs.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent.fmem1-1.fna.fbcdn.net/v/t39.30808-6/522480085_24372608812380229_8032023277402172890_n.jpg?stp=dst-jpg_tt6&cstp=mx881x772&ctp=s590x590&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=PeQNjDx6k3QQ7kNvwH3qaXB&_nc_oc=AdpBLqhQ0bE6CtBGVyIwYgLgCZH0X25nUVYO0zslIF6n_9Q5Vtz3he34B5QFa0_sXvg&_nc_zt=23&_nc_ht=scontent.fmem1-1.fna&_nc_gid=8enZOLNt6N5xOpiPqjUOmQ&_nc_ss=72289&oh=00_AQH-GbcBRs-DTgLShvkymtuQF_b7La5pO0lKVY0j0q6sPQ&oe=6A8A064B",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent.fmem1-1.fna.fbcdn.net/v/t39.30808-6/522480085_24372608812380229_8032023277402172890_n.jpg?stp=dst-jpg_tt6&cstp=mx881x772&ctp=s590x590&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=PeQNjDx6k3QQ7kNvwH3qaXB&_nc_oc=AdpBLqhQ0bE6CtBGVyIwYgLgCZH0X25nUVYO0zslIF6n_9Q5Vtz3he34B5QFa0_sXvg&_nc_zt=23&_nc_ht=scontent.fmem1-1.fna&_nc_gid=8enZOLNt6N5xOpiPqjUOmQ&_nc_ss=72289&oh=00_AQH-GbcBRs-DTgLShvkymtuQF_b7La5pO0lKVY0j0q6sPQ&oe=6A8A064B",
+          "height": 517,
+          "width": 590
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24372608805713563&set=a.2029578063776623",
+        "id": "24372608805713563",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQzNzI2MDg5NjIzODAyMTQ="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-07-24T06:36:52.000Z",
+    "timestamp": 1753339012,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02JQvQv7x5cHWTfV59EKkE1D5ETkUv4XTkpCoEdGqmTqcVritkdbTcQJiX3pYMubF8l",
+    "text": "Căng thẳng leo thang, các khí tài, vk đã được điều động và sử dụng!",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent.fmem1-1.fna.fbcdn.net/v/t39.30808-6/515297180_24366295023011608_7284915393589456232_n.jpg?stp=dst-jpg_tt6&cstp=mx720x592&ctp=s640x640&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=l5_boD28BfkQ7kNvwF0q8OQ&_nc_oc=Adodn33Xw15Hc1Gct7K8azH4VxRBb8lB4vnZ5daubSbmsfHkQShAwj5irw0xlK85FuY&_nc_zt=23&_nc_ht=scontent.fmem1-1.fna&_nc_gid=8enZOLNt6N5xOpiPqjUOmQ&_nc_ss=72289&oh=00_AQGBr8vHUMV6YaeIHZ-rYiKw_v_nrbRff4NOG1HuCt6A7w&oe=6A89E572",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent.fmem1-1.fna.fbcdn.net/v/t39.30808-6/515297180_24366295023011608_7284915393589456232_n.jpg?stp=dst-jpg_tt6&cstp=mx720x592&ctp=s640x640&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=l5_boD28BfkQ7kNvwF0q8OQ&_nc_oc=Adodn33Xw15Hc1Gct7K8azH4VxRBb8lB4vnZ5daubSbmsfHkQShAwj5irw0xlK85FuY&_nc_zt=23&_nc_ht=scontent.fmem1-1.fna&_nc_gid=8enZOLNt6N5xOpiPqjUOmQ&_nc_ss=72289&oh=00_AQGBr8vHUMV6YaeIHZ-rYiKw_v_nrbRff4NOG1HuCt6A7w&oe=6A89E572",
+          "height": 526,
+          "width": 640
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24366295009678276&set=a.2029578063776623",
+        "id": "24366295009678276",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQzNjYyOTUxOTYzNDQ5MjQ="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-07-24T04:39:13.000Z",
+    "timestamp": 1753331953,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0H1nAxm5hGHir94WwWc3M9o5wsBcyGAUrtttuYhJRwmLfJS4aeG3DikkFf7cLbzNil",
+    "text": "Indices",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent.fmem1-2.fna.fbcdn.net/v/t39.30808-6/522744925_24365691333071977_6007429737890402957_n.jpg?stp=dst-jpg_tt6&cstp=mx665x449&ctp=s665x449&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=BL6WF6NMpl0Q7kNvwFKS3bC&_nc_oc=AdrSmHB1ZzLyNAtUl7Zcnf5h7b_dWg3hEcfvOWOw04L6Wp5sqt8qRLLefndaUnY01kw&_nc_zt=23&_nc_ht=scontent.fmem1-2.fna&_nc_gid=8enZOLNt6N5xOpiPqjUOmQ&_nc_ss=72289&oh=00_AQGaJRVqZ6028aj3MHr8t9RKGV7CRUMTI7uDmzSS51DQow&oe=6A89F8DE",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFF8F8F8",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent.fmem1-2.fna.fbcdn.net/v/t39.30808-6/522744925_24365691333071977_6007429737890402957_n.jpg?stp=dst-jpg_tt6&cstp=mx665x449&ctp=s665x449&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=BL6WF6NMpl0Q7kNvwFKS3bC&_nc_oc=AdrSmHB1ZzLyNAtUl7Zcnf5h7b_dWg3hEcfvOWOw04L6Wp5sqt8qRLLefndaUnY01kw&_nc_zt=23&_nc_ht=scontent.fmem1-2.fna&_nc_gid=8enZOLNt6N5xOpiPqjUOmQ&_nc_ss=72289&oh=00_AQGaJRVqZ6028aj3MHr8t9RKGV7CRUMTI7uDmzSS51DQow&oe=6A89F8DE",
+          "height": 449,
+          "width": 665
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24365691326405311&set=a.2029578063776623",
+        "id": "24365691326405311",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQzNjU2OTE1MDk3Mzg2MjY="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-07-23T04:02:12.000Z",
+    "timestamp": 1753243332,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02ZWtvPigN4e8o4qS73p6XQKYwrLHtaNi73VLUtDLJmBZG1EU5VzDa3gdeuNx7JTETl",
+    "text": "Đợt trước nhìn thiên tượng thấy thất tinh đồng quy thành hình trendline, đặc biệt khúc cuối có God Candle Formation. Nên mình buột miệng khuyên ngồi im mà enjoy.\nCòn mấy phiên nữa, không biết được không, hay lại nghịch hành nghịch đảo gì đó. :-d\n\nDear God, it's your candle. Please!",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent.fjan1-1.fna.fbcdn.net/v/t39.30808-6/522971654_24357351883905922_4133597257055372567_n.jpg?stp=dst-jpg_tt6&cstp=mx720x232&ctp=s720x232&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=qSPQ9fIWUdMQ7kNvwHp9w0I&_nc_oc=AdovBHFIQMKnhKwoqFWw05spp1X3DogFH39DItL23adjEyqHDkBAhxdfL7wwSuJ5mQM&_nc_zt=23&_nc_ht=scontent.fjan1-1.fna&_nc_gid=GIKs5T-TZiculV4VrgXdsQ&_nc_ss=72289&oh=00_AQFtCsTGaRktmd4--XgYxu8FtO3beDXMftZEQ6QSqXv8KA&oe=6A89F791",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFE2E9F1",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent.fjan1-1.fna.fbcdn.net/v/t39.30808-6/522971654_24357351883905922_4133597257055372567_n.jpg?stp=dst-jpg_tt6&cstp=mx720x232&ctp=s720x232&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=qSPQ9fIWUdMQ7kNvwHp9w0I&_nc_oc=AdovBHFIQMKnhKwoqFWw05spp1X3DogFH39DItL23adjEyqHDkBAhxdfL7wwSuJ5mQM&_nc_zt=23&_nc_ht=scontent.fjan1-1.fna&_nc_gid=GIKs5T-TZiculV4VrgXdsQ&_nc_ss=72289&oh=00_AQFtCsTGaRktmd4--XgYxu8FtO3beDXMftZEQ6QSqXv8KA&oe=6A89F791",
+          "height": 232,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24357351873905923&set=a.2029578063776623",
+        "id": "24357351873905923",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQzNTczNTIwMTA1NzI1NzY="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-07-23T01:31:09.000Z",
+    "timestamp": 1753234269,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0Nh3igZy6TUvahpvg2vSpuebiD9691oxHigNar4csddPAWTxShERCGvNjgXq8mLEJl",
+    "text": "Fyi, bạn quan tâm đến chủ đề cải cách hệ thống NHTW và quản lý NH có thể xem (link ở cmmt).\n\nVN (SBV) cũng vậy, cũng cần cải cách thể chế và khuôn khổ điều hành, cho kỷ nguyên mới. \n\nP/s: một số \"đầu bài\" như bỏ \"room\" tín dụng, nâng \"room\" sở hữu, hay quản lý Fx (e.g. cho mục tiêu upgrade hạng...) cũng cần những khuôn khổ phù hợp.",
+    "banks": [],
+    "topic": "cfa_updates",
+    "media": [
+      {
+        "thumbnail": "https://scontent.fjan1-1.fna.fbcdn.net/v/t39.30808-6/521353661_24356619510645826_1007985062210877237_n.jpg?stp=dst-jpg_tt6&cstp=mx632x363&ctp=s632x363&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=1VY2YtPvAjMQ7kNvwHjfzh0&_nc_oc=AdrKokO1zrdjMVwWXY0PK21gt1xE-2EtefEdzL5BAjRHB50d7G-x0r-ABW0UG-zpsPQ&_nc_zt=23&_nc_ht=scontent.fjan1-1.fna&_nc_gid=GIKs5T-TZiculV4VrgXdsQ&_nc_ss=72289&oh=00_AQFziz0iCf-fdBcJCj2TwYoxONCrR_Ti24ROdQ8jJ3bqTg&oe=6A89E62F",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF00264D",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent.fjan1-1.fna.fbcdn.net/v/t39.30808-6/521353661_24356619510645826_1007985062210877237_n.jpg?stp=dst-jpg_tt6&cstp=mx632x363&ctp=s632x363&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=1VY2YtPvAjMQ7kNvwHjfzh0&_nc_oc=AdrKokO1zrdjMVwWXY0PK21gt1xE-2EtefEdzL5BAjRHB50d7G-x0r-ABW0UG-zpsPQ&_nc_zt=23&_nc_ht=scontent.fjan1-1.fna&_nc_gid=GIKs5T-TZiculV4VrgXdsQ&_nc_ss=72289&oh=00_AQFziz0iCf-fdBcJCj2TwYoxONCrR_Ti24ROdQ8jJ3bqTg&oe=6A89E62F",
+          "height": 363,
+          "width": 632
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24356619507312493&set=a.2029578063776623",
+        "id": "24356619507312493",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQzNTY2MTk1NzczMTI0ODY="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-07-22T13:37:50.000Z",
+    "timestamp": 1753191470,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0iLDe9qFL7zbUCtjjDWpSaAJuw3w9FHjaGY3q7zpnP8jqPqJTpE3oNBbUvQNv8F5fl",
+    "text": "Integrated Review of the Capital Framework for Large Banks Conference\n\nLive:",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://external.fjan1-1.fna.fbcdn.net/emg1/v/t13/4242544917386578906?url=https%3A%2F%2Fwww.federalreserve.gov%2Fimages%2Fsocial-media%2Fsocial-default-image-opengraph.jpg&fb_obo=1&utld=federalreserve.gov&stp=c0.5000x0.5000f_dst-jpg_flffffff_p500x261_q75_tt6&_nc_gid=GIKs5T-TZiculV4VrgXdsQ&_nc_oc=AdqySFfRKuSHZSUuXq5DYpMToW1z2LUxPqSpWsZyppIHu4BIGL3bTVVMxxXJ57zZN0E&ccb=13-1&oh=06_Q3_CAcAFJNLXA5o1fDSgKskFS2Ekq-2I0shl6ZC0EKCz8NSE&oe=6A85EDBC&_nc_sid=c97757",
+        "__typename": "GenericAttachmentMedia",
+        "__isMedia": "GenericAttachmentMedia",
+        "flexible_height_share_image": null,
+        "large_share_image": {
+          "height": 261,
+          "uri": "https://external.fjan1-1.fna.fbcdn.net/emg1/v/t13/4242544917386578906?url=https%3A%2F%2Fwww.federalreserve.gov%2Fimages%2Fsocial-media%2Fsocial-default-image-opengraph.jpg&fb_obo=1&utld=federalreserve.gov&stp=c0.5000x0.5000f_dst-jpg_flffffff_p500x261_q75_tt6&_nc_gid=GIKs5T-TZiculV4VrgXdsQ&_nc_oc=AdqySFfRKuSHZSUuXq5DYpMToW1z2LUxPqSpWsZyppIHu4BIGL3bTVVMxxXJ57zZN0E&ccb=13-1&oh=06_Q3_CAcAFJNLXA5o1fDSgKskFS2Ekq-2I0shl6ZC0EKCz8NSE&oe=6A85EDBC&_nc_sid=c97757",
+          "width": 500
+        },
+        "id": "24352667647707679"
+      }
+    ]
+  },
+  {
+    "time": "2025-07-22T04:24:35.000Z",
+    "timestamp": 1753158275,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02dz3wnefZ5utKQD4kDd5asNa5s6QYUxwDjP1t1MsCKC32CQPynjKDfrSy92P86oBCl",
+    "text": "Động lực tăng trưởng tín dụng: cho vay kd bđs và cho vay mua nhà (bao gồm doanh nghiệp, cá nhân, trái phiếu) của một NH (có tăng trưởng top).\nĐóng góp vào tăng thêm:\n\nP/s: tuy nhiên, adjusted NIM và NII có sự thay đổi không tương xứng với thay đổi RWA (và giải phóng vốn cho nhu cầu cash Div + Investments) dù Credit Cost được control...",
+    "banks": [],
+    "topic": "ratio_nim",
+    "media": [
+      {
+        "thumbnail": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/520886363_24352949374346173_156788747969636765_n.jpg?stp=dst-jpg_tt6&cstp=mx531x639&ctp=p526x296&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=0RgLYW4aa0sQ7kNvwFo7Yn1&_nc_oc=AdomqLiNYLtIeSS-5Ps2JlGwVh5mVkFudYOOW3qSvjyluY3d-kEegAfiYOzbmOKc3cI&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=-36Kfmg8nNnS5nAwi2jsJg&_nc_ss=72289&oh=00_AQHCj1PiLUngJlQ2CNxPz3-Cuql64gE2oaZb2OQT5Yyfgg&oe=6A8A0199",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF252525",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/520886363_24352949374346173_156788747969636765_n.jpg?stp=dst-jpg_tt6&cstp=mx531x639&ctp=p526x296&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=0RgLYW4aa0sQ7kNvwFo7Yn1&_nc_oc=AdomqLiNYLtIeSS-5Ps2JlGwVh5mVkFudYOOW3qSvjyluY3d-kEegAfiYOzbmOKc3cI&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=-36Kfmg8nNnS5nAwi2jsJg&_nc_ss=72289&oh=00_AQHCj1PiLUngJlQ2CNxPz3-Cuql64gE2oaZb2OQT5Yyfgg&oe=6A8A0199",
+          "height": 633,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24352949371012840&set=a.2029578063776623",
+        "id": "24352949371012840",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQzNDk2NDQ4MzgwMDk5NjA="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-07-21T04:38:14.000Z",
+    "timestamp": 1753072694,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0onASc9hKtwKG8Lc9ULvZQDcYBat4qezqP1YfS3BtNdJwpJsL7UqiewpppLpCEjgBl",
+    "text": "Vài năm nữa, dư nợ (ứng trc, margin, khác) khéo 1 triệu tỷ. Đơn vị mới, bình thường mới. :-d\n10^6*10^9 target.\nChart: nguồn chưa rõ.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/521634869_24341809648793479_3533347996815069671_n.jpg?stp=dst-jpg_tt6&cstp=mx636x420&ctp=s636x420&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=9Hby2JdyeHwQ7kNvwHwmh0e&_nc_oc=Adp_XVYN0KjEiO2CJtngvu8tgYEBW6WTVy7N4ycSdanD2_9U6U4EiYy7b5PNGFdPegY&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=-36Kfmg8nNnS5nAwi2jsJg&_nc_ss=72289&oh=00_AQFB4OTY5hFgw9LxtJ5Kp9utLLbUJacTWAFPbO-g0sUQAQ&oe=6A89DF66",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFAFAFA",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/521634869_24341809648793479_3533347996815069671_n.jpg?stp=dst-jpg_tt6&cstp=mx636x420&ctp=s636x420&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=9Hby2JdyeHwQ7kNvwHwmh0e&_nc_oc=Adp_XVYN0KjEiO2CJtngvu8tgYEBW6WTVy7N4ycSdanD2_9U6U4EiYy7b5PNGFdPegY&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=-36Kfmg8nNnS5nAwi2jsJg&_nc_ss=72289&oh=00_AQFB4OTY5hFgw9LxtJ5Kp9utLLbUJacTWAFPbO-g0sUQAQ&oe=6A89DF66",
+          "height": 420,
+          "width": 636
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24341809612126816&set=a.2029578063776623",
+        "id": "24341809612126816",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQzNDE4MDk3NTU0NjAxMzU="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-07-21T02:22:26.000Z",
+    "timestamp": 1753064546,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02Jr3GxjYF8rRNE75NoU6TjuzALvt88gLWyd317USJHYBmB7yGDXABKsneYNwJBGTcl",
+    "text": "Nhân chuyện stablecoin, private currency, tokenization và một số vấn đề khác.\nKỷ nguyên mới, TT14, thiếu digital assets...\n.\nNợ công và tiền tư nhân...\nSau dự thảo \"nới lỏng\" đòn bẩy (SLR) với hệ thống NH, đạo luật về stablecoin được đánh giá có tác động thúc đẩy tích cực cầu trái phiếu chính phủ (quantity và theo đó là đẩy yield lower). Cầu trái phiếu cp ngắn hạn tăng theo cơ chế bảo chứng. Cũng như kỳ vọng foreign demand tăng lên qua kênh stablecoins.\nNhưng cơ bản stablecoin là tiền tư nhân phát hành tích hợp vào hệ thống, tất nhiên rủi ro đối với sự ổn định của hệ thống nếu có runs on stablecoins.\nĐiều này hình dung về thời kỳ khủng hoảng \"wildcat\", cho đến khi thống nhất với \"greenback\".\n\nGần đây có đề xuất thí điểm tokenization với ETF, hình như thiếu đáng giá run on Tokenized ETF.  Tokenization có điểm ưu là chia nhỏ và tăng mức độ tiếp cận nđt... nhưng đó cũng là điểm potential vs rủi ro... (trước chúng ta có run on funds...). \nNếu có foreign demand, thì sẽ tác động tích cực lên nội tệ (và ngược lại khi \"bán\").\n.\nCSTT... \nTư nhân phát hành stablecoin không trực tiếp làm tăng cung tiền nhưng có thể làm suy giảm kiểm soát của NHTW, nhất là nếu stablecoin lưu hành bên ngoài hệ thống ngân hàng.\nNgân hàng phát hành stablecoin có khả năng làm tăng cung tiền nếu stablecoin trở thành một phần của vòng quay tín dụng, đồng thời dễ kiểm soát hơn nếu được quản lý đúng. (Tăng velocity + multiplier). Cũng như, có... LoLR. :-d\n(Giám sát) cần phân biệt rõ nguồn gốc phát hành stablecoin để tránh regulatory blindspot, đồng thời cân nhắc khuôn khổ đo lường mới cho M1, M2, nếu stablecoin trở nên phổ biến, tái phân bổ từ M1/M2 sang một “pseudo-money”...\n.\nBasel và ALM.\nTư nhân phát hành tiền (backed bằng fiat) gây nên thay đổi cấu trúc tiền gửi và dòng vốn. Với LCR và NSFR, chẳng hạn:\nKhi một tổ chức tài chính (FI) phát hành stablecoin, retail deposits chuyển tiền gửi truyền thống sang dạng tiền gửi tại tổ chức phát hành đó để nhận stablecoin. (Như US market thì còn có MMFs.) Về mặt tổng thể, tổng tiền gửi trong hệ thống không thay đổi trước khi bên phát hành thực hiện quá trình (mua) tài sản bảo chứng, nhưng cấu trúc phân loại thay đổi đáng kể:\nTiền gửi retails \"sticky\" (run-off rút thấp) giảm. Tiền gửi tại các FI (FIs deposits) - nơi phát hành stablecoin tăng, nhưng với tỷ lệ rút cao hơn, theo Basel III về cấu trúc thanh khoản.\nĐến lượt, tăng nhu cầu dự trữ HQLA (trong đó có tpcp). Mặt khác, deposit structure và cả sự dịch chuyển của flow of funds (FoF), trên cơ sở bank by bank, vẫn có những tác động nhất định đến thanh khoản và cơ sở tiền gửi/thậm chí giảm. Giảm nếu FoF parks tạm thời ở Reserves và/hoặc TGA khi bảo chứng (của tc phát hành) hoàn tất (bao gồm cả sự tham gia của TGA).\n\nVới yêu cầu vốn, RW: Nếu stablecoin không được bảo chứng minh bạch hoặc sử dụng tài sản rủi ro (crypto, token không ổn định), có thể bị áp RW tới 1250%, tức là yêu cầu vốn ~ 1:1.\nVới stablecoin được bảo chứng bằng USD (hoặc VND - ở VN) hoặc tài sản như TPCP, RW có thể thấp hơn nhiều, gần bằng tài sản ngân hàng (0-20%), tùy thuộc vào mức độ minh bạch và cơ chế bảo đảm.\nCơ bản thì Basel phân loại theo khuôn khổ quản lý tài sản số với 2 nhóm lớn:\nGroup 1: Digital assets có tính ổn định và bảo chứng đầy đủ, bao gồm: group 1a: Tokenized traditional assets (ví dụ token hóa trái phiếu, tiền gửi); và group 1b: Stablecoins có cấu trúc bảo chứng đầy đủ bằng fiat/HQLA.\nNhưng Group 2: các Crypto-assets không có bảo chứng đầy đủ (như Bitcoin, Ether, v.v.), bị áp dụng hệ số rủi ro cực cao (RƯ 1250%).\n[Cách phân loại này thực ra kém linh hoạt, đơn giản và ở góc độ an toàn hệ thống, nếu không muốn nói là có bias (cũng như khi các định chế lớn như IMF nói về loại ts này). Ví dụ trong khi trên thực tế, rủi ro của digital assets là phổ quát và phân bố liên tục (spectrum) và tùy thuộc vào mức độ cơ chế bảo chứng (full reserve hay overcollateralized), tính minh bạch, kiểm toán thường xuyên; hay khả năng quy đổi (convertibility); rủi ro thanh khoản và rút vốn hàng loạt... gộp tất cả stablecoin vào Group 2 nếu thiếu một vài yếu tố kỹ thuật (dù có dự trữ ...USD, VND hoặc TPCP)!]\n.\nVới hệ thống NH? Cơ hội? NH co-issuing? Shadow-issuing? nguyên kết hợp tiền tệ vs tài khóa mới? Cái này để dịp khác.\n\nChart: nợ liên bang held by the public (từ Gregory Mankiw)",
+    "banks": [],
+    "topic": "ratio_lcr_nsfr",
+    "media": [
+      {
+        "thumbnail": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/521451794_24341175508856893_4819158157837688248_n.jpg?stp=dst-jpg_tt6&cstp=mx592x431&ctp=s592x431&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=hSC_DOjB3ZEQ7kNvwHAjVLf&_nc_oc=Ado-3ToGtlFAt6UN0tdg5HHYmm38arJjba0zgjQx06E9_8_nlHheFZouK7JesSMSHNI&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=-36Kfmg8nNnS5nAwi2jsJg&_nc_ss=72289&oh=00_AQH54FprQlIe7d6ul7VP07IhN11HLpfLxxDiGHrj6ru8fw&oe=6A89EC00",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFF3F8FC",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/521451794_24341175508856893_4819158157837688248_n.jpg?stp=dst-jpg_tt6&cstp=mx592x431&ctp=s592x431&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=hSC_DOjB3ZEQ7kNvwHAjVLf&_nc_oc=Ado-3ToGtlFAt6UN0tdg5HHYmm38arJjba0zgjQx06E9_8_nlHheFZouK7JesSMSHNI&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=-36Kfmg8nNnS5nAwi2jsJg&_nc_ss=72289&oh=00_AQH54FprQlIe7d6ul7VP07IhN11HLpfLxxDiGHrj6ru8fw&oe=6A89EC00",
+          "height": 431,
+          "width": 592
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24341175478856896&set=a.2029578063776623",
+        "id": "24341175478856896",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQzNDExNzU2MzU1MjM1NDc="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-07-18T05:09:39.000Z",
+    "timestamp": 1752815379,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02rWdHazv9XaSA3haYyrHtbrfusfgP5ioqu3d8Lu6xscTWqunxEvySdPoNwLwJmv34l",
+    "text": "DC VN đề xuất thí điểm với ETF. Sẵn với trái phiếu chính phủ luôn cũng được? :-d",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2025-07-17T09:50:57.000Z",
+    "timestamp": 1752745857,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid08EKCBKF4RPn7WBYoENtGPzGAvQYyjKbQ7tm4Xb36nH7KKQyoNXwcUn8EM76kZotVl",
+    "text": "Các khuôn khổ điều hành thiếu một nền tảng tư tưởng cốt lõi làm định hướng - xương sống quản lý an toàn hệ thống các TCTD. Quá trình chuyển đổi 20 năm qua giúp định hình rõ hơn và vững chắc hơn, các thay đổi, tiến bộ đều được xây dựng dựng, tinh chỉnh, bao gồm cả lộ trình đảm bảo tương thích. \n\nTrước 2013, có thể nói là khá loang lỗ các vệt màu thử nghiệm với sự không rõ ràng về nền tảng chủ đạo và sự kiên định. Về vận dụng, không có một khuôn khổ quản lý khoa học (cả cơ quan quản lý và NH nói riêng). Phải nói rằng cho đến khi TT36 (2014) ra đời, mới đặt viên gạch đầu tiên cho hệ thống quản trị - an toàn hệ thống - triển khai các thông lệ các bộ quy tắc mang tính chuẩn mực. Đó là định hướng đúng (sau nhiều đổ vỡ phải trả giá đắt). Các thay đổi về sau dưah trên nền tảng tư duy và hệ thống này.\n\nTrước TT36, chúng ta có TT13 và QĐ457, nhưng đó chỉ mới dừng ở tư tưởng kiểm soát, hạn chế, không phải quản trị an toàn hệ thống đúng hướng.\n\nĐến TT41, (và TT 22, TT13 (2018) thì đã tạo nên hệ thống bộ khung vững chắc hơn. Chính điều này cũng có tác dụng hỗ trợ tích cực cho công cuộc thực thi các chính sách vĩ mô và tái cấu trúc lấy trọng điểm \"ổn định vĩ mô\" làm tôn chỉ, bao gồm cả hiệu quả thực thi chính sách tiền tệ và tài khóa.\n\nKhi có nền tảng vững chắc, đúng hướng, giảm đi sự bất định và chi phí đánh đổi, tăng khả năng thích ứng và khả năng nâng cấp hiệu quả.\n\nCho kỷ nguyên mới. Quản trị an toàn hệ thống là giao thoa giữa an toàn mà không kìm hãm tinh thần đổi mới và phát triển; càng hợp lý, hiệu quả, càng trở thành nền tảng cho sự phát triển bền vững. \n\nCho kỷ nguyên mới. Cũng gần tròn 10 năm từ dự thảo version 1 của T41. Nhưng 41 không đủ, có chủ đích, 14 nhiều ngoại lệ, cũng vậy.",
+    "banks": [],
+    "topic": "cfa_updates",
+    "media": [
+      {
+        "thumbnail": "https://scontent-hou1-1.xx.fbcdn.net/v/t39.30808-6/518966310_24313455571628887_5084426411942075857_n.jpg?stp=dst-jpg_tt6&cstp=mx720x308&ctp=s720x308&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=bmJ_9bQDKHEQ7kNvwEhYCq1&_nc_oc=AdqISv11TNUMtVuvzpcDSQmswUdAcVxXkU-93UGqsfNMoVaW9hcFqNvtqOkzz6-j6Dc&_nc_zt=23&_nc_ht=scontent-hou1-1.xx&_nc_gid=b5FXpNZpnr-fbUq_mDJ79Q&_nc_ss=72289&oh=00_AQFfdPUdscJPzmEx-NJzK2ddoE5SRTm91Ic1pAfoMbYe_Q&oe=6A89F22A",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-hou1-1.xx.fbcdn.net/v/t39.30808-6/518966310_24313455571628887_5084426411942075857_n.jpg?stp=dst-jpg_tt6&cstp=mx720x308&ctp=s720x308&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=bmJ_9bQDKHEQ7kNvwEhYCq1&_nc_oc=AdqISv11TNUMtVuvzpcDSQmswUdAcVxXkU-93UGqsfNMoVaW9hcFqNvtqOkzz6-j6Dc&_nc_zt=23&_nc_ht=scontent-hou1-1.xx&_nc_gid=b5FXpNZpnr-fbUq_mDJ79Q&_nc_ss=72289&oh=00_AQFfdPUdscJPzmEx-NJzK2ddoE5SRTm91Ic1pAfoMbYe_Q&oe=6A89F22A",
+          "height": 308,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24313455548295556&set=a.2029578063776623",
+        "id": "24313455548295556",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQzMTM0NTU3NjE2Mjg4Njg="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-07-17T01:38:07.000Z",
+    "timestamp": 1752716287,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid034Z8mSVqmDZMk95PpCaUtjeK36RiRxyCyWZcME6eD6ZSVRFF5pd6KU4jVrLHrCZTRl",
+    "text": "Labubu hiện đang bỏ xa những Hello Kitty, Transformers, Barbie.\n\n\"Since its rocky post-IPO debut in 2020, the company has staged a sharp turnaround.\"\n\nNhìn chart khủng thật!",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-hou1-1.xx.fbcdn.net/v/t39.30808-6/518603583_24310914318549679_3327987233960016083_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1952&ctp=p526x296&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=uqPNys78dmUQ7kNvwFY9ZFj&_nc_oc=AdrbKYCvdMjsqXx6GWk5dJE_6qPhA-CWJr80tKdL0QiTYZvHQuahbNGX2knG1o8Ep3w&_nc_zt=23&_nc_ht=scontent-hou1-1.xx&_nc_gid=b5FXpNZpnr-fbUq_mDJ79Q&_nc_ss=72289&oh=00_AQFO2OA8yNB-zzv3sjmh7uQ0Ud1gaeGqbimbE3YulJLp1g&oe=6A89FA44",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-hou1-1.xx.fbcdn.net/v/t39.30808-6/518603583_24310914318549679_3327987233960016083_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1952&ctp=p526x296&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=uqPNys78dmUQ7kNvwFY9ZFj&_nc_oc=AdrbKYCvdMjsqXx6GWk5dJE_6qPhA-CWJr80tKdL0QiTYZvHQuahbNGX2knG1o8Ep3w&_nc_zt=23&_nc_ht=scontent-hou1-1.xx&_nc_gid=b5FXpNZpnr-fbUq_mDJ79Q&_nc_ss=72289&oh=00_AQFO2OA8yNB-zzv3sjmh7uQ0Ud1gaeGqbimbE3YulJLp1g&oe=6A89FA44",
+          "height": 501,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24310913758549735&set=a.2029578063776623",
+        "id": "24310913758549735",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQzMTA5MTQwMjE4ODMwNDI="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-07-16T15:33:25.000Z",
+    "timestamp": 1752680005,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02U3y7VaSPwCAcjB9AqxtTAErUNbfqjKh5r2AciXxnJXuDuGUgf6Ag946CAzCgvXHPl",
+    "text": "Thú vị, Commercial Banks NFA.\nĐặc biệt khi Central Bank NFA giữ đi ngang hoặc để giảm Fx Reserves dù các thặng dư tổng thể vẫn tích lũy, thì các SoBs \"làm nhiệm vụ\"?\nTotal NFA, và mức độ \"phân bổ\" NFA, thì đó là những tính toán đỉnh cao khác bên cạnh tỷ lệ NFA/NDA của riêng Central bank (CB) (trên cđkt CB thì NFA_CB + NDA_CB = MB). Do đó, --> fx, liquidity, interestrates... ở mục tiêu hướng đến của tổng thể cstt. Bất kể thay đổi nào của các thành phần trên đều có flows đối ứng. Vd, tại sao không mua để tăng NFA CB tại mức giá xyz, đối ứng sẽ là flows vào NDA CB, trung hòa lại...\nTất nhiên để trên SoB thì còn thực hiện ẩn các chính sách khác nữa, như cross border loans, investment, các window guidance có mục đích riêng...\n\nChart: Brad Sester",
+    "banks": [],
+    "topic": "exchange_fx",
+    "media": [
+      {
+        "thumbnail": "https://scontent-mia3-2.xx.fbcdn.net/v/t39.30808-6/518937622_24307628992211545_3839480112144389040_n.jpg?stp=dst-jpg_tt6&cstp=mx720x519&ctp=s720x519&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=TWvPU8Lgre4Q7kNvwFweVd5&_nc_oc=AdroD7zAMvB0n_6EZQn-SsVpdN5QiQy1OduX0g-nZty6MQ7EfqBLHN8FcLkQRDx8hhg&_nc_zt=23&_nc_ht=scontent-mia3-2.xx&_nc_gid=x2RNpq1xcceYVkqKZClhNg&_nc_ss=72289&oh=00_AQFPeiOax6Y7bmAdBz4OQiGdG-RDJCnnzRGRM8Rap7lr6A&oe=6A89E81F",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-mia3-2.xx.fbcdn.net/v/t39.30808-6/518937622_24307628992211545_3839480112144389040_n.jpg?stp=dst-jpg_tt6&cstp=mx720x519&ctp=s720x519&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=TWvPU8Lgre4Q7kNvwFweVd5&_nc_oc=AdroD7zAMvB0n_6EZQn-SsVpdN5QiQy1OduX0g-nZty6MQ7EfqBLHN8FcLkQRDx8hhg&_nc_zt=23&_nc_ht=scontent-mia3-2.xx&_nc_gid=x2RNpq1xcceYVkqKZClhNg&_nc_ss=72289&oh=00_AQFPeiOax6Y7bmAdBz4OQiGdG-RDJCnnzRGRM8Rap7lr6A&oe=6A89E81F",
+          "height": 519,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24307628958878215&set=a.2029578063776623",
+        "id": "24307628958878215",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQzMDc2MjkyNzg4NzgxODM="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-07-15T06:02:50.000Z",
+    "timestamp": 1752559370,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0D2uhiKa8gvfN5Z2NcpPqsiJewmfxMULqCPrdoyATVfaBDQ6Wy4F6LqzJdULX2cXil",
+    "text": "Thấy lan truyền phương án đề xuất này. \nHay là đề xuất gd thêm phiên Mỹ nữa, cho đồng bộ  một vòng tuần hoàn.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-mia5-1.xx.fbcdn.net/v/t39.30808-6/518348209_24296300960011015_3842828527303636414_n.jpg?stp=dst-jpg_tt6&cstp=mx960x1280&ctp=p526x296&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=jrVo5LNQV8EQ7kNvwEvDF5k&_nc_oc=AdrDPolTJhDyu4RKKR0V3F-UwyqxG_mgH7rNX7-pPE2ZpDdIXZTeNCZWJpYX_D864j0&_nc_zt=23&_nc_ht=scontent-mia5-1.xx&_nc_gid=x2RNpq1xcceYVkqKZClhNg&_nc_ss=72289&oh=00_AQFE363d5qP3D6Bm9tmqi3p9KlHxuB1-0ioIWoUPwQv9TA&oe=6A89EC15",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFD8D9D3",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-mia5-1.xx.fbcdn.net/v/t39.30808-6/518348209_24296300960011015_3842828527303636414_n.jpg?stp=dst-jpg_tt6&cstp=mx960x1280&ctp=p526x296&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=jrVo5LNQV8EQ7kNvwEvDF5k&_nc_oc=AdrDPolTJhDyu4RKKR0V3F-UwyqxG_mgH7rNX7-pPE2ZpDdIXZTeNCZWJpYX_D864j0&_nc_zt=23&_nc_ht=scontent-mia5-1.xx&_nc_gid=x2RNpq1xcceYVkqKZClhNg&_nc_ss=72289&oh=00_AQFE363d5qP3D6Bm9tmqi3p9KlHxuB1-0ioIWoUPwQv9TA&oe=6A89EC15",
+          "height": 701,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24296300923344352&set=a.2029578063776623",
+        "id": "24296300923344352",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQyOTYzMDExNDY2Nzc2NjM="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-07-14T03:25:46.000Z",
+    "timestamp": 1752463546,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0tvdmp3PP8Sv7tPkqqjafnYvmb1PGtTbMYaHccFMGt6t3KbNXfBrmvtUmXL8Zck9Gl",
+    "text": "Thử sử dụng dữ liệu báo cáo mức lương của lao động qua các quý từ GSO/NSO (mình sử dụng mức lương chung, còn chi tiết hơn thì trong bc bao gồm cả lương theo ngành nghề, khu vực, giới tính), mình thấy có mấy điểm: \nNếu nhìn tốc độ tăng lương thực tế (real wage, tức điều chỉnh lạm phát) tích lũy so với tăng real GDP (hoặc per capita) thì tình hình không mấy tích cực. Có giai đoạn chất lượng tăng trưởng chuyển hóa thành thu nhập (lương) với một hệ số rất thấp. Tức nghe tăng trưởng GDP rất cao, nhưng lương tăng theo thấp. Đặc biệt giai đoạn trước 2022, khi mức lương thực hầu như dậm chân tại chỗ!\nTiêu cực hơn, sự bất cân xứng từ hưởng lợi từ tăng trưởng kinh tế, không chỉ cost of living nói chung tăng nhanh hơn, còn ở chiều hướng chịu tác động và khả năng hấp thụ tác động trong những giai đoạn môi trường bất ổn - lực lượng lao động bị tác động mạnh hơn trong giai đoạn khó khăn khi kết hợp giảm thu nhập, lạm phát tăng,...\n...Lạm phát càng làm vấn đề chất lượng sống nghiêm trọng hơn, bỏ rơi xa hơn.\nỞ chart, mình khử lạm phát với CPI, nhưng khi nhìn lại tích lũy CPI qua một giai đoạn đủ dài để nhìn lại một cách rõ ràng qua cảm nhận mà không cần con số chứng minh (VN không có nhiều dữ liệu thay thế trong tính lạm phát, cũng như cá nhân thì chỉ cảm nhận theo rỗ tiêu dùng của bản thân/gia đình chứ không đo được) thì thấy CPI mới tích lũy được vài chục % gần 10 năm qua, trong khi giá cả thực tế cho rỗ tiêu dùng thông thường khó tìm thấy mặt hàng nào thấp như vậy (mà có thể tính tăng bằng lần được rồi). Nghĩa là, real wage có thể thấp hơn nữa, bỏ rơi hơn nữa so với con số tăng trưởng GDP như một tham chiếu.\nVề điều này, rõ ràng lợi thế cạnh tranh lương bao nhiêu năm không nên tự hào! Tìm và kiến tạo lợi thế cạnh tranh khác thay thế ...\n\nPS: Mức độ tăng lương (real) vs. tăng trưởng của các nền kt khác (DM, EM) bạn nghĩ sẽ thế nào? Lag như VN không?\n\nPPS: Có một hiện tượng lạm phát nữa ảnh hưởng chất lượng cuộc sống nhưng không đo đếm đủ đó là lạm phát tiết kiệm, lạm phát thu nhỏ (shrinkflation, skimpflation). Nôm na thì lạm phát thông thường cần nhiều tiền (ví dụ VND) hơn cho một sản phẩm, thì lạm phát tiết kiệm, thu nhỏ xảy ra khi sản phẩm được giảm kích cỡ, khối lượng, quy cách, hoặc giảm chất lượng, nhưng vẫn giá như cũ hoặc thay đổi theo hướng tăng/giảm không tương xứng. Đặc biệt khi khó khăn sẽ dễ dàng chấp nhận, thỏa hiệp.",
+    "banks": [],
+    "topic": "interest_macro",
+    "media": [
+      {
+        "thumbnail": "https://scontent-mia3-3.xx.fbcdn.net/v/t39.30808-6/517014585_24287330500908061_6109146572506924171_n.jpg?stp=dst-jpg_tt6&cstp=mx622x495&ctp=s622x495&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=jtzQnngtVQsQ7kNvwFa8f2y&_nc_oc=AdrF9F7SU_9T1J9P5vbWVHm1MJRwBAQ_UBVlZyCcPnA9iaNgrkFhfmA3woc9absvuJ0&_nc_zt=23&_nc_ht=scontent-mia3-3.xx&_nc_gid=x2RNpq1xcceYVkqKZClhNg&_nc_ss=72289&oh=00_AQFUncS3fcpKbCDlAObD3rH8GCp_qrbND5ggy8PAI3GEcw&oe=6A89EB7A",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF252525",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-mia3-3.xx.fbcdn.net/v/t39.30808-6/517014585_24287330500908061_6109146572506924171_n.jpg?stp=dst-jpg_tt6&cstp=mx622x495&ctp=s622x495&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=jtzQnngtVQsQ7kNvwFa8f2y&_nc_oc=AdrF9F7SU_9T1J9P5vbWVHm1MJRwBAQ_UBVlZyCcPnA9iaNgrkFhfmA3woc9absvuJ0&_nc_zt=23&_nc_ht=scontent-mia3-3.xx&_nc_gid=x2RNpq1xcceYVkqKZClhNg&_nc_ss=72289&oh=00_AQFUncS3fcpKbCDlAObD3rH8GCp_qrbND5ggy8PAI3GEcw&oe=6A89EB7A",
+          "height": 495,
+          "width": 622
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24287330464241398&set=a.2029578063776623",
+        "id": "24287330464241398",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQyODczMzA3NjA5MDgwMzU="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-07-13T05:44:39.000Z",
+    "timestamp": 1752385479,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0pk5Ybv7wDh4omsrnyU9AEmQ2i61v2uh7Y9ZPAVLAAQBfbbZJM9f3yxEMoUqgXKJkl",
+    "text": "\"Trai co gối hạc khom khom cật\nGái uốn lưng ong ngửa ngửa lòng.\"\n.\nTuần vừa qua và tiếp theo, có thể bạn sẽ bắt gặp nhiều phân tích về vũ điệu của đường cong (usd, yields, từ us đến nhật, đức,...) từ các IBs trong thế trận \"đánh đu\" nông sâu tùy kb. \nMình share lại note sau về biến động của yield curve, có thể giúp các bạn dễ tiếp cận hơn.",
+    "banks": [],
+    "topic": "exchange_fx",
+    "media": []
+  },
+  {
+    "time": "2025-07-13T05:12:11.000Z",
+    "timestamp": 1752383531,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0j25csoj4yV1kgg7QTL7jsnWGJsbnz9RaTD6nwfBV33w6iRMvgugKXBR3mNfg2aDyl",
+    "text": "Một nguyên tắc (bị) đe dọa\nNửa câu chuyện ngân hàng (tw). [*]\n\nCó lẽ giai đoạn này là thời kỳ đen tối nhất trong việc lập chính sách của Fed hơn 100 năm qua. Một nửa câu chuyện trong hơn thế kỷ tồn tại của họ xoay quay nền tảng mà hiện nay đang bị đe dọa.\n\nHình: Nick Timiraos đăng kèm trong câu chuyện trên X hôm qua.\n.",
+    "banks": [],
+    "topic": "interest_macro",
+    "media": [
+      {
+        "thumbnail": "https://scontent-phx1-1.xx.fbcdn.net/v/t39.30808-6/518340330_24280459588261819_988315162922783048_n.jpg?stp=dst-jpg_tt6&cstp=mx610x627&ctp=p180x540&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=q4eqwhX0y54Q7kNvwEf4VWe&_nc_oc=AdrjRny-BJ7i8taXBC-g5gkPZ1G036upvoxVY9wVEU5dL_7YbM2N6_WABQDMLXgswiU&_nc_zt=23&_nc_ht=scontent-phx1-1.xx&_nc_gid=ttd56wqJlGrJGCeqagtLlw&_nc_ss=72289&oh=00_AQELkeAt2DCOl2R9Y0eh9NTjgOfbIUFztF1fCNN3WZ2ljg&oe=6A89EF1F",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-phx1-1.xx.fbcdn.net/v/t39.30808-6/518340330_24280459588261819_988315162922783048_n.jpg?stp=dst-jpg_tt6&cstp=mx610x627&ctp=p180x540&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=q4eqwhX0y54Q7kNvwEf4VWe&_nc_oc=AdrjRny-BJ7i8taXBC-g5gkPZ1G036upvoxVY9wVEU5dL_7YbM2N6_WABQDMLXgswiU&_nc_zt=23&_nc_ht=scontent-phx1-1.xx&_nc_gid=ttd56wqJlGrJGCeqagtLlw&_nc_ss=72289&oh=00_AQELkeAt2DCOl2R9Y0eh9NTjgOfbIUFztF1fCNN3WZ2ljg&oe=6A89EF1F",
+          "height": 540,
+          "width": 525
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24280459568261821&set=a.2029578063776623",
+        "id": "24280459568261821",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQyODA0NTk3NjQ5Mjg0Njg="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-07-12T14:02:49.000Z",
+    "timestamp": 1752328969,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid021LVgG8FzE5iLZzo7LEFvXBQL3QVw3EfYNMEbENeZA8uYHWCRBGBNUcq1Ak3u256Ll",
+    "text": "Khảo sát của LĐLĐ!",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-phx1-1.xx.fbcdn.net/v/t39.30808-6/518271484_24275870032054108_720195683541044759_n.jpg?stp=dst-jpg_tt6&cstp=mx720x1405&ctp=p526x296&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=0ov8ciaeB6gQ7kNvwFHErFq&_nc_oc=AdrD4zVC93n16oUX8RwPUMZ6xQBmjREmMjQ88_1lmxjN2aZsD2X6swJS6SZRx6qaxWY&_nc_zt=23&_nc_ht=scontent-phx1-1.xx&_nc_gid=ttd56wqJlGrJGCeqagtLlw&_nc_ss=72289&oh=00_AQE8f15XBKsM12fD8QCsP6EnLdlnIAQiEjersxEy9TjOqQ&oe=6A89FB1A",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-phx1-1.xx.fbcdn.net/v/t39.30808-6/518271484_24275870032054108_720195683541044759_n.jpg?stp=dst-jpg_tt6&cstp=mx720x1405&ctp=p526x296&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=0ov8ciaeB6gQ7kNvwFHErFq&_nc_oc=AdrD4zVC93n16oUX8RwPUMZ6xQBmjREmMjQ88_1lmxjN2aZsD2X6swJS6SZRx6qaxWY&_nc_zt=23&_nc_ht=scontent-phx1-1.xx&_nc_gid=ttd56wqJlGrJGCeqagtLlw&_nc_ss=72289&oh=00_AQE8f15XBKsM12fD8QCsP6EnLdlnIAQiEjersxEy9TjOqQ&oe=6A89FB1A",
+          "height": 1026,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24275870025387442&set=a.2029578063776623",
+        "id": "24275870025387442",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQyNzU4NzAyMDIwNTQwOTE="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-07-10T01:02:40.000Z",
+    "timestamp": 1752109360,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0h3C5bqPGAxf2NRXwgghep4bfdoLfJAuX1CJ7r8ad5VFy4qrvgj9xQoEq1vnAcgtel",
+    "text": "Với nội dung thuế thư mới gửi cho Brazil, Trump chính thức cho chim cánh cụt và các nhà kinh tế đã chỉ trích vì mê chữ cái Hy Lạp và điều khoản thương mại chính thức việt vị. Cuộc cờ mới.\nBinh bất yếm trá trong kẻ mạnh.",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2025-07-09T06:24:10.000Z",
+    "timestamp": 1752042250,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02JSfm3N2UTp4MLwTtjHPw9Fo1NV9hsJ6KNe5HEPapR9oqJddc9yzfmKjwaKSunvRrl",
+    "text": "Monetary survey and real eco activity linkage\nMở rộng thêm note hôm kia (và các cmmt) về dòng tiền đi đâu, mình bổ sung một chút (một nội dung có bạn hỏi, vd asset side của cung tiền rộng). Nội dung này mình có chia sẻ nhiều.\nCơ bản thì:\n\nMoney Supply M = CTE + NCG + NFA + NIO\n\n\"Tiền đi\" (ngoài cash hay CIC - tiền mặt lưu thông): xem xét các hoạt động tín dụng ngành nghề chẳng hạn thì nó chính là CTE (tín dụng đối với khu vực tư nhân), NCG chính là cho vay ròng Chính phủ (các hình thức, đơn giản thì như TPCP), NFA là TS ngoại tệ ròng, phần còn lại là khác.\n\n1/V = M/GDP, \ncũng khai triển một vài bước đơn giản, thì:\n\n1/V = CTE/GDP + NCG/GDP + NFA/GDP + O.\nChúng ta thấy có mấy thứ quen quen, mà đọc báo làm theo cụ Keynes nên hở là kích kích...Ví dụ \n\ndelta CTE/GDP hay Credit/GDP chính là credit impulse,\ndelta NCG/GDP --> Fiscal Impulse \n\nKhoản kia lại liên quan hiệu quả dòng vốn ngoại.\nVới hệ quy chiếu là GDP.\n\n1/V là nghịch đảo của V hay velocity thôi. V cao thì 1/V thấp, ngon lành là các kích thích tín dụng hay tài khóa đụng một phát làm GDP bật ngay, không ngon thì...cần rất nhiều lực mà vẫn không lên. Tất nhiên có giới hạn. \n\nCác thể loại impulse vẫn quan trọng nhất là tính thực chất, hiệu quả và lag - độ trễ. \nVd credit impulse, và vừa qua ta có marginal credit phân bổ vào ... khá cao (trên mỗi đồng credit tăng lên). Hôm qua đại diện NHNN có dẫn chứng một vài \"dòng tiền\" - dòng tín dụng ở một vài ngành nghề, nhưng dòng lớn tỷ trọng × liều lượng cao thì không được đề cập.\n\nHình: cung tiền từ 2 phía. Chart cũ minh họa thôi.\n\nNhân đây, khi nói tiền dân gửi NH là không đi vào sx cũng không đúng, vấn đề là mức độ và hiệu quả thôi. Nếu dân gửi tiền (cơ sở tiền gửi D) thì đã có NH - được \"sinh ra\" để làm bộ máy phân bổ chuyên nghiệp (với hệ thống các quy định riêng) dòng tiền một cách hiệu quả từ tiền gửi đi đến .... các thành phần/doanh nghiệp có nhu cầu, có năng lực sxkd -   một trong những động lực và là nền tảng của phát triển KTXH. \n\nNhư hình, đối ứng với asset side là liability side, tức là tiền của dân (cùng các công cụ khác):\n\nC + D + O_L = Credit + NCG + NFA + O_A.\n\nNhư NCG chính là \"dân\" gián tiếp cho chính phủ vay bên cạnh nộp thuế. Trước đây có công trái, dân mua, thì đó là dân cho vay trực tiếp. \n.\nConstraints: vd NH thì lấy D bên Nợ vs. Credit bên Có, nó là một phần của cân đối rộng...\nTạm thời vậy.",
+    "banks": [],
+    "topic": "cfa_updates",
+    "media": [
+      {
+        "thumbnail": "https://scontent-hou1-1.xx.fbcdn.net/v/t39.30808-6/518276901_24249807887993656_1378311170962446473_n.jpg?stp=dst-jpg_tt6&cstp=mx720x528&ctp=s720x528&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=w8qo5hLKXdYQ7kNvwFbc_Kd&_nc_oc=AdrgnA75zOtfC2QmQXL_xvoqlDeU9BLfKGKVmSCnMGR9OuhJIrrK6LB5Kg7IfvE5-pA&_nc_zt=23&_nc_ht=scontent-hou1-1.xx&_nc_gid=9GwsoLsLIQv97AqxxwhRWg&_nc_ss=72289&oh=00_AQEbtcHcvpwrQ64N4qymCSrHydJVFBzOGKZEJX7BRnTIKw&oe=6A8A0518",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFF5F2EB",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-hou1-1.xx.fbcdn.net/v/t39.30808-6/518276901_24249807887993656_1378311170962446473_n.jpg?stp=dst-jpg_tt6&cstp=mx720x528&ctp=s720x528&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=w8qo5hLKXdYQ7kNvwFbc_Kd&_nc_oc=AdrgnA75zOtfC2QmQXL_xvoqlDeU9BLfKGKVmSCnMGR9OuhJIrrK6LB5Kg7IfvE5-pA&_nc_zt=23&_nc_ht=scontent-hou1-1.xx&_nc_gid=9GwsoLsLIQv97AqxxwhRWg&_nc_ss=72289&oh=00_AQEbtcHcvpwrQ64N4qymCSrHydJVFBzOGKZEJX7BRnTIKw&oe=6A8A0518",
+          "height": 528,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24249807871326991&set=a.2029578063776623",
+        "id": "24249807871326991",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQyNDk4MDgwODc5OTM2MzY="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-07-08T08:32:05.000Z",
+    "timestamp": 1751963525,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid026NrJ2fgfUTt6rcTYGj2BYfoKZC6ubFse3Gw4oLiuzqsEy3DJbUYWg2iQBWtT8yzYl",
+    "text": "Anh Quang Vụ trưởng CSTT hôm nay trả lời PV: \n\n\"Từ đầu năm đến nay, USD Index (DXY) - chỉ số đo lường sức mạnh của đồng bạc xanh - giảm 11%. Tuy nhiên, tỷ giá VND/USD lại tăng khoảng 3% trong cùng giai đoạn, có lúc giá bán ra ở mức đỉnh 26.345 đồng một USD. Không chỉ mất giá so với USD, tỷ giá tiền đồng so với yen Nhật hay Bảng Anh cũng tăng.\n\nTheo ông Quang, DXY giảm do những thay đổi chính sách nhanh chóng của chính quyền Tổng thống Mỹ Donald Trump. Tuy nhiên, tiền đồng mất giá vì Ngân hàng Nhà nước muốn duy trì mặt bằng lãi suất thấp để hỗ trợ cho doanh nghiệp, nền kinh tế.\"\n.\nMình throwback vài chart hồi tháng 6 cho vùng swaps âm từ [100bps - par].\nDivergence by design",
+    "banks": [],
+    "topic": "exchange_fx",
+    "media": [
+      {
+        "thumbnail": "https://scontent-hou1-1.xx.fbcdn.net/v/t39.30808-6/515438128_24242980542009724_6669351302008028697_n.jpg?stp=dst-jpg_tt6&cstp=mx720x292&ctp=s720x292&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=BLbDAv42lSwQ7kNvwFfiwfN&_nc_oc=Ado7dTi6fk7kwswLNrBXFVsyA3sXLC1UyoCx4jHPmuljMdhWgpnHoTs3Am9sbOusPpU&_nc_zt=23&_nc_ht=scontent-hou1-1.xx&_nc_gid=9GwsoLsLIQv97AqxxwhRWg&_nc_ss=72289&oh=00_AQHnHa6957efHpHtM8cMP3MxiutzbJJFAAc64OAAY-z2yw&oe=6A89D92D",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-hou1-1.xx.fbcdn.net/v/t39.30808-6/515438128_24242980542009724_6669351302008028697_n.jpg?stp=dst-jpg_tt6&cstp=mx720x292&ctp=s720x292&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=BLbDAv42lSwQ7kNvwFfiwfN&_nc_oc=Ado7dTi6fk7kwswLNrBXFVsyA3sXLC1UyoCx4jHPmuljMdhWgpnHoTs3Am9sbOusPpU&_nc_zt=23&_nc_ht=scontent-hou1-1.xx&_nc_gid=9GwsoLsLIQv97AqxxwhRWg&_nc_ss=72289&oh=00_AQHnHa6957efHpHtM8cMP3MxiutzbJJFAAc64OAAY-z2yw&oe=6A89D92D",
+          "height": 292,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24242980528676392&set=a.2028510173883412",
+        "id": "24242980528676392",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQyNDI5ODA3MTIwMDk3MDc="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-07-08T03:18:08.000Z",
+    "timestamp": 1751944688,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0TCw85oTkXeJT49Wpc9v5SmQJzRXJfiHGgpRd3EfCtuRQACTxwHbb2rigzSJeSRAKl",
+    "text": "Nhiều CS đặc thù sẽ tiếp tục được triển khai. \n\nH1 final:",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/518272282_24241432662164512_3698327307711966587_n.jpg?stp=dst-jpg_tt6&cstp=mx720x380&ctp=s720x380&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=vjDi5KYWB18Q7kNvwFvbXpc&_nc_oc=Adq8dPF3JYaqj671Fg5iTAEiQGkGaPV075VN2hWFfiAl7fhfmihR4vnXbqtG61vi2mM&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=t0VFK0gLeV_MVLRwTxp0Iw&_nc_ss=72289&oh=00_AQHyG-LN178IAftRI3DMqzQQnSVoJ3__7vGnHKDg2phI2g&oe=6A89D7AF",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/518272282_24241432662164512_3698327307711966587_n.jpg?stp=dst-jpg_tt6&cstp=mx720x380&ctp=s720x380&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=vjDi5KYWB18Q7kNvwFvbXpc&_nc_oc=Adq8dPF3JYaqj671Fg5iTAEiQGkGaPV075VN2hWFfiAl7fhfmihR4vnXbqtG61vi2mM&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=t0VFK0gLeV_MVLRwTxp0Iw&_nc_ss=72289&oh=00_AQHyG-LN178IAftRI3DMqzQQnSVoJ3__7vGnHKDg2phI2g&oe=6A89D7AF",
+          "height": 380,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24241432642164514&set=a.2029578063776623",
+        "id": "24241432642164514",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQyNDE0MzI3OTU0OTc4MzI="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-07-08T02:18:48.000Z",
+    "timestamp": 1751941128,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02DptLQRR66pWYpy3SuFpmyvNQp2H7KmgVo14LAyWPxebgFzvkHjeUASgBVzSVKWpFl",
+    "text": "Thư tình trước mùa Thu...\nTóm tắt một số nội dung thư, thấy rằng thuế quan chi tiết vẫn có thể tăng hoặc giảm, các... transshipment sẽ chịu mức cao hơn nữa, khoanh vùng một số nước ChauAs và ĐNA. Rõ là:\n\nAll roads lead to the fake Rome\nAll letters - tariffs included - may rise or fall\nAll transshipments now risk higher rates too\nAll eyes on Vietnam-\nstill in the spotlight. And I'm doing fine.\nThose love letters, sent before the fall,\nWith ink still fresh, some kissed by skyfall...\n\nP/s. Quên nữa, bên cạnh còn vụ cảnh báo \"bạn muốn hẹn hò\" với Brics nữa.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/518273699_24241137875527324_754574622683295889_n.jpg?stp=dst-jpg_tt6&cstp=mx622x928&ctp=p526x296&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=1qQFcWhjt7YQ7kNvwGDMqBP&_nc_oc=Adq-PYAPmSf4EJUxbK43nLPc4K04aWc2JXLA0JtcDlp-VZLADtrVQz1gZ1HOZ6HzQ9s&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=t0VFK0gLeV_MVLRwTxp0Iw&_nc_ss=72289&oh=00_AQEtNCyS90H_UawlVs3WCVgbaCvpBkYQ3qHGQCgSAK9_xQ&oe=6A89F5D8",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/518273699_24241137875527324_754574622683295889_n.jpg?stp=dst-jpg_tt6&cstp=mx622x928&ctp=p526x296&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=1qQFcWhjt7YQ7kNvwGDMqBP&_nc_oc=Adq-PYAPmSf4EJUxbK43nLPc4K04aWc2JXLA0JtcDlp-VZLADtrVQz1gZ1HOZ6HzQ9s&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=t0VFK0gLeV_MVLRwTxp0Iw&_nc_ss=72289&oh=00_AQEtNCyS90H_UawlVs3WCVgbaCvpBkYQ3qHGQCgSAK9_xQ&oe=6A89F5D8",
+          "height": 785,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24241137858860659&set=a.2029578063776623",
+        "id": "24241137858860659",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQyNDExMzgwMTU1MjczMTA="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-07-07T04:35:20.000Z",
+    "timestamp": 1751862920,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02F1aYBu9L3gPoe5K9amYyYieaYT5WPdKubPpKZq9xLWd3EXpBmKtMkS6KiLEbuGiMl",
+    "text": "Đánh giá riêng Q2 thì đã có một quý chuyển biến khủng khiếp...",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2025-07-07T02:53:00.000Z",
+    "timestamp": 1751856780,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02edQEhxnUasvL35F5Z6RgTRk6vZD64143wDnzpBhkmKiyqaUJiE3FZyvxuAGCMKcxl",
+    "text": "Sáng đọc được bài này, tổng quan đặt vấn đề hợp lý, nhưng chi tiết của chuyên gia lại mâu thuẫn. \n\nThật ra, nếu là mình, nên hỏi Thống đốc tại sao tiền mặt trong lưu thông ngoài hệ thống ngân hàng (tức tổng tiền mặt phát hành của SBV trừ tồn quỹ tại họ và quỹ tiền mặt NHTM và hệ thống kho bạc) lại tăng rất mạnh như vậy, trong năm 2024 và H1 '25. Đây là một địa điểm \"tiền đi\".\n\nVề áp lực \"khát tiền\" (vốn), một phần vì tập trung và chênh lệch trong phân bổ tín dụng, tức là số đông, như SMEs hoặc doanh nghiệp siêu nhỏ, hộ kinh doanh mặt bằng chung có cảm giác \"khát\" hoặc khó tiếp cận (do nhiều nguyên nhân) dù thống kê tín dụng chung tăng mạnh. Điều này mình có nêu trước đây. Tức sự tăng lên của tín dụng không dành cho tất cả nói chung. Thậm chí có NH, chỉ tiêu tín dụng DN lớn đã hoàn thành từ trước H1 kết thúc. (Xem thêm ở cmmt.)\nTài trợ dự án lớn.\nTiếp theo nữa, trong nền kinh tế, tài trợ nói chung thì phải tính đến aggregate finance, và mấy năm gần đây có sự chuyển dịch bắt buộc (từ tái cấu trúc) giữa các loại hình. Vd hai năm trước mình có nêu, aggregate finance cơ bản là tpdn shadow banking + tín dụng ngân hàng (cho vay) + tpdn do NH đầu tư. Vì một số yếu tố và định hướng tái cấu trúc, bảng cân đối NH \"gánh\" --> phình to cơ học lẫn tăng thêm... (bao gồm cả P+I+Fee). Đặc điểm này cũng không dành/phân bổ số đông.\nHai đặc điểm vừa nêu, xét về khía cạnh phía tài sản của dòng tiền (tức asset side of money supply) như tín dụng (credit là asset side và từ đó mới link với chất lượng và hiệu quả hay \"chôn vốn\" - cách gọi dân gian với tài sản không luân chuyển/quay vòng hay monetizing được ứng ở phía người sử dụng vốn/đầu tư. Tức NH giải ngân tín dụng, thì ứng với đồng tín dụng chính là một hoạt động kt, vd tín dụng dành cho phát triển bđs -> gắn với chu kỳ phát triển một tòa nhà chẳng hạn, hoặc tín dụng bổ sung vlđ/tồn kho/capex (trong I), tiêu dùng...) thì asset side này đang vào hoạt động có vòng quay thấp. Một cảm giác crowding out trong tín dụng đối với nền kt. (Vậy nên, CP, SBV có thiết kế thêm các gói tín dụng riêng lẻ, đặc thù... nhưng vẫn yếu).\n\nTiếp theo nữa, NFA (outflows).\nMột factor quan trọng nữa (trước đây mình có đề cập nhiều), đó là thu ròng ngân sách như thuế, phí, trong bối cảnh chi tiêu chậm ... (kết hợp vay, trả) -->  thay đổi TGA (và tiền gửi tại NHTM)...\n...\nVòng quay thấp, nhưng lý luận như anh Lực lại không đầy đủ/cần cẩn trọng trên quan điểm làm chính sách: \n\n\"“So với thời kỳ kinh tế tăng trưởng tốt, vòng quay đồng tiền thường trên 1 lần, thì rõ ràng vòng quay tiền đang chậm. Hiện nay, chúng ta cũng không cần lo lắng quá về lạm phát. Từ nay đến cuối năm, cung tiền có thể được tăng thêm và vòng quay tiền có thể nhanh hơn một chút”, Tiến sĩ Lực nhận định.\"\n\nHẳn nhiên kinh tế trong hồi phục và kích thích --> kỳ vọng V tăng lên, đặc biệt từ đầu tư công (ngắn và trung dài hạn), các chính sách tín dụng, lãi suất, thuế, phí... đến lan tỏa: tốc độ và phạm vi. Một khi lan tỏa tốt, velocity toàn nền kt sẽ tăng lên.\nĐiều đó có nghĩa là, trong mỗi pha kích thích, một trong những cái người ta quan tâm là thay đổi của vòng quay, hay delta velocity. (Bình thường thì giả định delta ổn định.)\nVd với MVPQ, lấy log và V ổn định (delta ~ zero), thì delta M vs delta P + Q là trực quan nhất, như các cụ hay lo: tăng M (cung tiền) thì vào P và Q, mà đến Q giới hạn thì P sẽ bung...\nVậy, trong những giai đoạn cung ứng tín dụng và mở rộng cung tiền ntn, phải theo dõi chặt những thay đổi của V chứ không phải là an tâm... (V tăng nhân với M tăng...) \n\n(Riêng lạm phát, còn từ phía cung nữa.)\n\nQuan trọng hơn nữa, đó làm tầm nhìn chiến lược của làm chính sách. Một trong những cân nhắc đó là tác động tích lũy và chiến lược exit. Nghĩa là, tín dụng hay cung tiền tăng mạnh, một giai đoạn vài năm tạo nên trạng thái tích lũy - cao×cao. Ổn thì không sao, nhưng không may một vài cú shock thì rất rủi ro để đối phó. Exit là gì? Là, khi điều kiện không phù hợp, cần tinh chỉnh chính sách, ví dụ giảm tốc độ tăng từ 16 xuống 14 (chưa nói đến tình huống buộc phải thắt chặt quyết liệt), liệu có xảy ra \"đứt gãy\" gì không? Tình trạng ưu tiên tín dụng phi thị trường và chèn lấn có xảy ra không (như giai đoạn trần tín dụng 2022). Lên thì dễ, xuống khó. Thực tế VN cho thấy khả năng chống chịu của hệ thống yếu một khi thắt chặt- dù chỉ \"đạp phanh\" vài điểm % như trên và biện pháp này nó khó khăn hơn nhiều so với các biện pháp khác như tăng lãi suất...\n...\nNăm sau, bạn nghĩ SBV sẽ \"chọn\" tín dụng 16, 18 hay 14, 13? Dù đang nghĩ cách bỏ \"room\". Vị thế SBV: \"cứng\" và kiên định?",
+    "banks": [],
+    "topic": "cfa_updates",
+    "media": [
+      {
+        "thumbnail": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/517409097_24233305229643922_2428716167942261670_n.jpg?stp=dst-jpg_tt6&cstp=mx720x1111&ctp=p526x296&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ghDLZN5hR_AQ7kNvwFLv4_9&_nc_oc=AdqkU9m2R55DyffnHHQcgQ3tMIimmpr1s0QTvqDtU5HgoJpQqIBgLt2VqOplyo8ww3o&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=WgZzEpbtvwNLiVCsfqPrpA&_nc_ss=72289&oh=00_AQHkFSaGxTWChSuKakGEE3FcGhZwMx8Xt1VpZWZK0MREjA&oe=6A89E807",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/517409097_24233305229643922_2428716167942261670_n.jpg?stp=dst-jpg_tt6&cstp=mx720x1111&ctp=p526x296&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ghDLZN5hR_AQ7kNvwFLv4_9&_nc_oc=AdqkU9m2R55DyffnHHQcgQ3tMIimmpr1s0QTvqDtU5HgoJpQqIBgLt2VqOplyo8ww3o&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=WgZzEpbtvwNLiVCsfqPrpA&_nc_ss=72289&oh=00_AQHkFSaGxTWChSuKakGEE3FcGhZwMx8Xt1VpZWZK0MREjA&oe=6A89E807",
+          "height": 812,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24233305216310590&set=a.2029578063776623",
+        "id": "24233305216310590",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQyMzMzMDU0MjI5NzcyMzY="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-07-06T15:44:22.000Z",
+    "timestamp": 1751816662,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02jvHJPTbBJabtqBTmZ6uPUbCtegxtLMMmsHkXAtut26ocUxEAKvbU4GxjsHGj16Fwl",
+    "text": "Về huy động vốn, tiền gửi (deposits) tăng khá, tuy nhiên lượng vốn bổ sung ấn tượng và mang tính cân đối cho một số constraints quan trọng đến từ phát hành GTCG (bao gồm cả FI bond). Vd 2024 số net (phát hành ròng hay phát hành mới trừ đáo  theo maturity + redemption chủ động) lên đến hơn 350 nghìn tỷ (vs. tăng ròng huy động VND của dân cư ~ 493k, tckt ~ 765k), marginal contribution cao.\n\n(Nhân tiện trả lời một nb về mấy cái thống kê không chính xác về chênh lệch hđ cv... nên mình post lên, hình như trước đây cũng có giải thích.)",
+    "banks": [],
+    "topic": "interest_macro",
+    "media": [
+      {
+        "thumbnail": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/517186676_24229824426658669_7835716878004847551_n.jpg?stp=dst-jpg_tt6&cstp=mx519x711&ctp=s519x711&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=7Mgi_TM85ZgQ7kNvwEDsoCo&_nc_oc=AdpI0S2Hvo_hD9rlfeZ1JnglOslmIN4GpVLpZ6JtbxuGVUDo8f0_oIv5wcGUs8KgQgE&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=WgZzEpbtvwNLiVCsfqPrpA&_nc_ss=72289&oh=00_AQFB7rAksU0fRTCfKPBBJWK7iRyFNi1L6qD1vfdNoN7cVQ&oe=6A89DBF4",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF252525",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/517186676_24229824426658669_7835716878004847551_n.jpg?stp=dst-jpg_tt6&cstp=mx519x711&ctp=s519x711&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=7Mgi_TM85ZgQ7kNvwEDsoCo&_nc_oc=AdpI0S2Hvo_hD9rlfeZ1JnglOslmIN4GpVLpZ6JtbxuGVUDo8f0_oIv5wcGUs8KgQgE&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=WgZzEpbtvwNLiVCsfqPrpA&_nc_ss=72289&oh=00_AQFB7rAksU0fRTCfKPBBJWK7iRyFNi1L6qD1vfdNoN7cVQ&oe=6A89DBF4",
+          "height": 711,
+          "width": 519
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24229824409992004&set=a.2029578063776623",
+        "id": "24229824409992004",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQyMjk4MjQ1Nzk5OTE5ODc="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-07-03T09:15:13.000Z",
+    "timestamp": 1751534113,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0zsJTwfL74bjkLW7Yk5PLCJuJGNQCFTNKv4hxw6c7gwg58whD2TR6pYnr3V4SmQhPl",
+    "text": "Gần 8%. Kỳ vọng H2\n\nPs. Tuy nhiên tiêu dùng mới level 9 (nominal), đầu tư khởi sắc, tín dụng bùng nổ.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/527197715_24431628133144963_4046576949485970592_n.jpg?stp=dst-jpg_tt6&cstp=mx720x667&ctp=p552x414&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=0tSEqUIuZuUQ7kNvwEB0POu&_nc_oc=AdouKl4cIZXk1y4a8g3SpyW2KB6EjFk8tG9Tyx_bW3KTYUMUoxqBEEL_EP_0z-LnEyE&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=WgZzEpbtvwNLiVCsfqPrpA&_nc_ss=72289&oh=00_AQGl1TLfOP1-B78DUYmbRKGJBksd4Jo6DOXFTnrDr1f5oA&oe=6A89D6C4",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/527197715_24431628133144963_4046576949485970592_n.jpg?stp=dst-jpg_tt6&cstp=mx720x667&ctp=p552x414&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=0tSEqUIuZuUQ7kNvwEB0POu&_nc_oc=AdouKl4cIZXk1y4a8g3SpyW2KB6EjFk8tG9Tyx_bW3KTYUMUoxqBEEL_EP_0z-LnEyE&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=WgZzEpbtvwNLiVCsfqPrpA&_nc_ss=72289&oh=00_AQGl1TLfOP1-B78DUYmbRKGJBksd4Jo6DOXFTnrDr1f5oA&oe=6A89D6C4",
+          "height": 511,
+          "width": 552
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24205733519067760&set=a.2029578063776623",
+        "id": "24205733519067760",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQyMDQzOTkxOTkyMDExOTI="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-07-03T02:12:10.000Z",
+    "timestamp": 1751508730,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02kvVRRUs48FEfZxePWq6u8HB9u5PRQXZAifBV272MLktXsW6byTYkMVjLj8LJDGfGl",
+    "text": "Trade deal VN-US công bố hôm qua chỉ mới là thỏa thuận lớn thứ ba trong vòng 90 ngày qua của TT Trump, kể từ sau thời điểm tạm thời hoãn áp thuế quan đối ứng + áp mức chung 10%. (Cố vấn Navarro thì kỳ vọng đến 90 deals.) Điều này càng củng cố vai trò và tầm quan trọng của VN (trong chuỗi cung ứng toàn cầu) và phản ánh mối quan tâm chiến lược ngày càng tăng từ các nền kinh tế lớn, bao gồm cả TQ.\n\nViệc đạt được thỏa thuận ban đầu [Khuôn khổ Hiệp định thương mại đối ứng, công bằng và cân bằng] giúp giảm thiểu phần nào những bất định về chính sách và tạo ra một khung tham chiếu sơ bộ về mức thuế quan cơ sở, từ đó định hình kỳ vọng cho các doanh nghiệp (- cơ bản thì tích cực hơn so với những áp lực ban đầu). Tuy nhiên, phần khó khăn thực sự nằm ở các điều khoản chi tiết – nơi các lợi ích chiến lược thường xung đột với thực tiễn thương mại.\n\nVới khuôn khổ này, VN có thêm không gian rõ hơn để thiết kế các chính sách phản ứng – từ những hỗ trợ mang tính cơ cấu đến các giải pháp điều chỉnh mang tính \"bespoke\" nhằm bảo vệ lợi ích của doanh nghiệp trong nước trước và các tình huống cụ thể với FDI.\n\nMình nghĩ chủ quan thì có khả năng tốt hơn nữa. Tuy nhiên, riêng những dòng thương mại liên quan đến hoạt động \"transshipment\", đặc biệt từ các quốc gia có rủi ro cao, sẽ khó khăn. Vì điều này đã được thể hiện là một trong những điểm then chốt trong các tính toán thương mại và cả địa chính trị, và khả năng xử lý vấn đề này sẽ đòi hỏi không chỉ trong đối thoại, đối diện và thống nhất (với sức ép phải chọn thể hiện hoặc là một phép thử ẩn) cách giải quyết, mà cả trong khâu thực thi tương ứng một cách minh bạch. Nếu để ý một chút, ngay trong 3 deals \"lớn\", có Việt, Trung, nhưng ngay cả \"bộ 3\" Trung Việt Mỹ, đã xuất hiện khoảng cách thuế khá lạ, với những thông tin cơ bản ban đầu, mức 40% áp cho Việt có lẽ khá cao so với mức thuế Mỹ áp lên hàng hóa trực tiếp Trung nếu nội hàm của \"Transshipment\" chỉ dành cho hàng TQ!",
+    "banks": [],
+    "topic": "sbv",
+    "media": [
+      {
+        "thumbnail": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/525861344_24428051216835988_1515010795640600146_n.jpg?stp=dst-jpg_tt6&cstp=mx720x553&ctp=p180x540&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=5HyQH9ItSJAQ7kNvwEt7HYZ&_nc_oc=AdqcoJpBR2bV5HXM_0H5sgvvVZNP88NF6ACaYSpAVAv3X4B8OS3QKBQr-zIKojSwJ5k&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=XKStkIEcH0DAPVd8mACt7g&_nc_ss=72289&oh=00_AQFWTjU5eZtYrx6pV0rsZKVIoG6myutSy0CPHYhizK9BKQ&oe=6A89EE34",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/525861344_24428051216835988_1515010795640600146_n.jpg?stp=dst-jpg_tt6&cstp=mx720x553&ctp=p180x540&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=5HyQH9ItSJAQ7kNvwEt7HYZ&_nc_oc=AdqcoJpBR2bV5HXM_0H5sgvvVZNP88NF6ACaYSpAVAv3X4B8OS3QKBQr-zIKojSwJ5k&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=XKStkIEcH0DAPVd8mACt7g&_nc_ss=72289&oh=00_AQFWTjU5eZtYrx6pV0rsZKVIoG6myutSy0CPHYhizK9BKQ&oe=6A89EE34",
+          "height": 540,
+          "width": 703
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24201732392801206&set=a.2029578063776623",
+        "id": "24201732392801206",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQyMDE3MzI1ODYxMzQ1MjA="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-07-02T15:03:29.000Z",
+    "timestamp": 1751468609,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0szFMB7XcoHg831SvahzVrUXtkSjhn6beh9a3MxVoQGQ39zkeZoxPbKRLCYWgCy1zl",
+    "text": "Trump announces\nVN-US Trade deal:",
+    "banks": [],
+    "topic": "deals_corp",
+    "media": [
+      {
+        "thumbnail": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/526751967_24424253513882425_2269966998854109137_n.jpg?stp=dst-jpg_tt6&cstp=mx720x460&ctp=s720x460&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=FeE60tlGS94Q7kNvwGcCRV2&_nc_oc=AdqLrQxjVCvOvh4YQ_czZz5bvDirgZEHPe_tLZg7FAcLVFQSnPGzhQUEjrz_q06tjPM&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=XKStkIEcH0DAPVd8mACt7g&_nc_ss=72289&oh=00_AQGhbqunWpbyNPGhGWZFX_dQQV78UG9lqGvvAwCu7u1xJg&oe=6A89DCB9",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/526751967_24424253513882425_2269966998854109137_n.jpg?stp=dst-jpg_tt6&cstp=mx720x460&ctp=s720x460&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=FeE60tlGS94Q7kNvwGcCRV2&_nc_oc=AdqLrQxjVCvOvh4YQ_czZz5bvDirgZEHPe_tLZg7FAcLVFQSnPGzhQUEjrz_q06tjPM&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=XKStkIEcH0DAPVd8mACt7g&_nc_ss=72289&oh=00_AQGhbqunWpbyNPGhGWZFX_dQQV78UG9lqGvvAwCu7u1xJg&oe=6A89DCB9",
+          "height": 460,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24197687463205699&set=a.2029578063776623",
+        "id": "24197687463205699",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQxOTc2ODc3MzY1MzkwMDU="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-07-02T09:52:33.000Z",
+    "timestamp": 1751449953,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02rT2EX5NV416FHwUSFJfbTrKQYgYaFJDFEugFFkqNNHi3jjas1QcDYxrLDLiR6wT9l",
+    "text": "Lại lấy Cam như một phản ví dụ! :-d\n\nP/s: riêng chức năng phương tiện thanh toán (means of payment) của tiền - các loại khác khó khăn thay thế, có một trong những nguyên nhân như đủ thị trường hàng hóa và dịch vụ dùng phương tiện ấy, chi phí (và quy mô, gắn liền), đặc biệt có một \"central bank\" elastic nominal currency supply (đủ), quan trọng nữa là nominal debts (giao dịch, thanh toán, càng lớn càng thống trị) và nghĩa vụ tax payments.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/526077225_24422380604069716_8811816504043626442_n.jpg?stp=dst-jpg_tt6&cstp=mx720x1514&ctp=p526x296&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=o-obzyYJZFoQ7kNvwFPebcO&_nc_oc=AdomiZQXc9qzK8EV_6Ouj8fTX_ol97m-O7-_LkakwelPafFW7XDAw4qZ6IRoTVfhpoM&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=XKStkIEcH0DAPVd8mACt7g&_nc_ss=72289&oh=00_AQFgw3PXbHzpgjzEs-JJbhFWhZf7v7vvNkiQ5Df3FoZfmw&oe=6A89FD88",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/526077225_24422380604069716_8811816504043626442_n.jpg?stp=dst-jpg_tt6&cstp=mx720x1514&ctp=p526x296&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=o-obzyYJZFoQ7kNvwFPebcO&_nc_oc=AdomiZQXc9qzK8EV_6Ouj8fTX_ol97m-O7-_LkakwelPafFW7XDAw4qZ6IRoTVfhpoM&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=XKStkIEcH0DAPVd8mACt7g&_nc_ss=72289&oh=00_AQFgw3PXbHzpgjzEs-JJbhFWhZf7v7vvNkiQ5Df3FoZfmw&oe=6A89FD88",
+          "height": 1106,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24195768750064237&set=a.2029578063776623",
+        "id": "24195768750064237",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQxOTU3NjkwMTY3MzA4Nzc="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-07-02T01:29:38.000Z",
+    "timestamp": 1751419778,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid03fhTeFX8ynig54W2FMvaSMWUbXUsQr3yHtP48NagVMqpN31WRUvs75pNeqDQSuTQl",
+    "text": "An update\n\n... by design",
+    "banks": [],
+    "topic": "cfa_updates",
+    "media": [
+      {
+        "thumbnail": "https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/525411435_24419777504330026_3647364070347624213_n.jpg?stp=dst-jpg_tt6&cstp=mx1075x705&ctp=p180x540&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=OtPG5jm8Gv8Q7kNvwHBCYfn&_nc_oc=Ado8BvhtiDvvQrReB_umkMQwFGBapbqn-xQaQ46mccYo78WMBL-E9p2qey4Wjmgmf_k&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=ieZxwLVqap9Ro2RWGWEK6Q&_nc_ss=72289&oh=00_AQHYRk1TEUaS8PWIj6p0QXUQHR1njiX-r0jLdRG1vxrM1g&oe=6A89FF9B",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF252525",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/525411435_24419777504330026_3647364070347624213_n.jpg?stp=dst-jpg_tt6&cstp=mx1075x705&ctp=p180x540&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=OtPG5jm8Gv8Q7kNvwHBCYfn&_nc_oc=Ado8BvhtiDvvQrReB_umkMQwFGBapbqn-xQaQ46mccYo78WMBL-E9p2qey4Wjmgmf_k&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=ieZxwLVqap9Ro2RWGWEK6Q&_nc_ss=72289&oh=00_AQHYRk1TEUaS8PWIj6p0QXUQHR1njiX-r0jLdRG1vxrM1g&oe=6A89FF9B",
+          "height": 540,
+          "width": 823
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24192195783754867&set=a.2029578063776623",
+        "id": "24192195783754867",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQxOTIxOTU5MDM3NTQ4NTU="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-06-30T16:19:45.000Z",
+    "timestamp": 1751300385,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02wLe96e4Hs88VJ1pBHrFdEjXDS1ZtDwGuA7HsAEBk9BXvbkbisquSLZ9jEKZD2p5vl",
+    "text": "Interesting.\n\nP/s. Nhân tiện cũng nhắc lại một thắc mắc của bác Bùi Trinh về phân bổ FISIM hồi 2019. :-d\n\"Năm 2013, TCTK điều chỉnh tăng GDP ở ngành ngân hàng trong khi chưa phân bổ FISIM - giá trị dịch vụ trung gian tài chính đo lường gián tiếp. Như vậy, nhẽ ra phải trừ một lượng FISIM nhưng không trừ ra mà lại cộng thêm vào. Giá trị sản xuất của ngành ngân hàng cơ bản bao gồm phí dịch vụ thẳng và phí dịch vụ ngầm.\"",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/524903470_24408974418743668_2039820160036571099_n.jpg?stp=dst-jpg_tt6&cstp=mx720x1152&ctp=p526x296&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=imvg1ZO5RJ8Q7kNvwG4Gyb4&_nc_oc=AdrhXYiUAI0NhKNCgE5NJGa-b5I1RS8-PngYQsU-tYh_qiZxxPeF7vAgnu6yt2lg324&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=ieZxwLVqap9Ro2RWGWEK6Q&_nc_ss=72289&oh=00_AQFZ2M9VCP4eM-yKJsiNNqATbTpz78ar0EDK7avRCL5Jhw&oe=6A8A0DE6",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/524903470_24408974418743668_2039820160036571099_n.jpg?stp=dst-jpg_tt6&cstp=mx720x1152&ctp=p526x296&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=imvg1ZO5RJ8Q7kNvwG4Gyb4&_nc_oc=AdrhXYiUAI0NhKNCgE5NJGa-b5I1RS8-PngYQsU-tYh_qiZxxPeF7vAgnu6yt2lg324&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=ieZxwLVqap9Ro2RWGWEK6Q&_nc_ss=72289&oh=00_AQFZ2M9VCP4eM-yKJsiNNqATbTpz78ar0EDK7avRCL5Jhw&oe=6A8A0DE6",
+          "height": 842,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24179708251670287&set=a.2029578063776623",
+        "id": "24179708251670287",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQxNzk3MDg0NzgzMzY5MzE="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-06-30T04:15:45.000Z",
+    "timestamp": 1751256945,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0AL5p1HmmYunVYMPukRSVVUtJgAP5oeGnvb9yjR9aASKcVCU54hMrsaxDjCegFshWl",
+    "text": "OMGO to 80k. \nATH on recorded. \nGo hard or go home.",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2025-06-30T02:32:13.000Z",
+    "timestamp": 1751250733,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0uXUNvh9VH4NGxKWRvEhPRRyKWTHnNhVcyLkACyFFc8EFcf9C4oGoRiY3T8d9sbPRl",
+    "text": "Các TCTD: nhóm NH 100% vốn nước ngoài có dư nợ khoảng 16B USD (~2.5% thị phần cấp tín dụng), dư nợ Fx khoảng 10%. NPL ratio ~0.5%",
+    "banks": [],
+    "topic": "ratio_npl",
+    "media": [
+      {
+        "thumbnail": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/524734009_24404010932573350_5102155863465672903_n.jpg?stp=dst-jpg_tt6&cstp=mx570x956&ctp=p526x296&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=vkKHScDRdHoQ7kNvwFS1XCy&_nc_oc=AdrXvOkLKuOC2aLQ6yRkvC3N2DPKjvkIVt64eqC6n_RHLTj-h6eKZts5q2kyUmX-yH8&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=EGLSAW9Qcv81PxTBIDfkdA&_nc_ss=72289&oh=00_AQF3DoiSB3Om5fvTxldo8Y_oHPljXxUEXKWEwE2iI3AyEQ&oe=6A8A0B08",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF252525",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/524734009_24404010932573350_5102155863465672903_n.jpg?stp=dst-jpg_tt6&cstp=mx570x956&ctp=p526x296&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=vkKHScDRdHoQ7kNvwFS1XCy&_nc_oc=AdrXvOkLKuOC2aLQ6yRkvC3N2DPKjvkIVt64eqC6n_RHLTj-h6eKZts5q2kyUmX-yH8&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=EGLSAW9Qcv81PxTBIDfkdA&_nc_ss=72289&oh=00_AQF3DoiSB3Om5fvTxldo8Y_oHPljXxUEXKWEwE2iI3AyEQ&oe=6A8A0B08",
+          "height": 882,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24174499688857810&set=a.2029578063776623",
+        "id": "24174499688857810",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQxNzQ0OTk4Mjg4NTc3OTY="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-06-26T18:48:09.000Z",
+    "timestamp": 1750963689,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0o29mLUY9m64HSo1U39XYfnn4wVMhhw1hfCVb8b6cZExQzadexQdHKtZx3ahn9kRjl",
+    "text": "SLR/eSLR trở lại spotlight, nhưng đó là câu chuyện dài, đặc biệt từ đại dịch cvid. Trọng tâm ở các lần điều chỉnh vẫn là giải phóng balance sheet capacity, hỗ trở lại liquidity và functioning của bond market. \nHiện có 2 yếu tố xoay quanh được thảo luận: tăng năng lực của marginal buyers đối với UST và mức độ thúc đẩy vào quá trình \"nắn\" yield curve ứng với kế hoạch vay nợ của Treasury [Đây là vấn đề khó nhằn mà chủ tịch Fed mới hay Trea. Sec không muốn đối mặt: cơ chế truyền dẫn - vd đã chứng kiến có những giai đoạn FFR giảm (và rate cut expectations) nhưng... long-term cứ tăng do term premium và yếu cầu từ nội đến ngoại mà không phải driven by growth (++steepening yc lead bởi ++long-term > - short term chứ không phải --short > - long-term), nghĩa là một target long-term yield lvl 3 (như Bessent kỳ vọng, và link to everything) không phải dễ dù cut rate (trừ suy thoái nặng). Cũng có những giải pháp, đơn giản thì như kết hợp YCC/Twist được bàn...]\nCác G-SIBs tích hợp rộng hơn tỷ trọng model narrow bank (xem thêm ở cmmt).\n.\nFed proposal:",
+    "banks": [],
+    "topic": "interest_macro",
+    "media": [
+      {
+        "thumbnail": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/523215417_24378193331821777_4100066806252571820_n.jpg?stp=dst-jpg_tt6&cstp=mx720x868&ctp=p526x296&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=A3EOEorfxfsQ7kNvwEgASgt&_nc_oc=AdpFTl2IX6QFAWl_8LUkvA-Vhdd5zp_ql9MPDYYd2w5qrCTbPKF7MYbBaFb6kHzvylw&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=EGLSAW9Qcv81PxTBIDfkdA&_nc_ss=72289&oh=00_AQGGPi-X19xdUDadzokrbK7OYSFMu2cEbWF6_MH_xI335w&oe=6A89FB76",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/523215417_24378193331821777_4100066806252571820_n.jpg?stp=dst-jpg_tt6&cstp=mx720x868&ctp=p526x296&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=A3EOEorfxfsQ7kNvwEgASgt&_nc_oc=AdpFTl2IX6QFAWl_8LUkvA-Vhdd5zp_ql9MPDYYd2w5qrCTbPKF7MYbBaFb6kHzvylw&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=EGLSAW9Qcv81PxTBIDfkdA&_nc_ss=72289&oh=00_AQGGPi-X19xdUDadzokrbK7OYSFMu2cEbWF6_MH_xI335w&oe=6A89FB76",
+          "height": 634,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24147475244893588&set=a.2029578063776623",
+        "id": "24147475244893588",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQxNDc0NzU0MDE1NjAyMzk="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-06-19T11:39:57.000Z",
+    "timestamp": 1750333197,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02TofLM2ZvKV4sVsZicSJC4FE8Sza9DLcpvwyepDAaHfPuhwf63HuB8FkSrNTHnkVUl",
+    "text": "Hôm nay Thống đốc \"than\" hệ thống NH \"gánh\" vốn, mà bản thân NH cũng phải \"sản xuất, tái chế\" kỳ hạn qua bộ máy và đội ngũ kỹ sư lành nghề về maturity transformation của mình để đủ vốn đúng kỳ hạn theo nhu cầu. Hai gánh nặng này là đặc trưng (trong khi các trụ cột khác của thị trường vốn đang... còi cọc) của banking based system của VN. Trước mắt có dự phóng các dự án lớn + dài hạn cũng nhăm nhe, có thể vì vậy mà thống đốc tranh thủ than trước. Tất nhiên, các vấn đề không dừng ở đó, trong các cân đối lớn hơn, cùng vđ tỷ giá vs lãi suất, phân bổ, giới hạn, v.v...",
+    "banks": [],
+    "topic": "cfa_updates",
+    "media": []
+  },
+  {
+    "time": "2025-06-18T11:37:49.000Z",
+    "timestamp": 1750246669,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02RuoAgNwkDhURqzbC4h6jG5KxtaTQ1AQkon8mCgnFT5d52Hq7nyzWYpJuQBAHyK4El",
+    "text": "Hura.\n\"Thu ngân sách 5 tháng đạt 1,13 triệu tỉ đồng (bằng 58% dự toán, tăng 24,5% svck 2024), trong đó thu thuế từ nhà, đất đạt 198,3 ngàn tỉ đồng (tăng 105%). Thặng dư hơn 305 ngàn tỉ đồng.\"\n\nP/s: Tiền gửi KBNN năm nay cũng kỷ lục.",
+    "banks": [],
+    "topic": "interest_macro",
+    "media": []
+  },
+  {
+    "time": "2025-06-18T06:29:22.000Z",
+    "timestamp": 1750228162,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0MHo7K25sbKgkpP2CrPTd4YvZVGo7nCLm6fYAxQoX7nWspdnS5aJQwfkgKkbLkQ6Jl",
+    "text": "Vấn đề và chương trình khá hay và ghi nhận. \nTrước đây khi thiết kế sản phẩm nguồn vốn (và structure products) mình cũng có những suy nghĩ này và các hình thức khác nhau của sản phẩm, như child accumulative savings account (cũng viết tắt là CASA), tham khảo từ CDA của Sing với một số cơ chế add-on, kiểu cũng tương tự CTF của Anh hoặc TSA của Mỹ. Điều này phụ thuộc vào một vài yêu cầu (kỳ vọng) và mô phỏng các gói mục tiêu. \nĐể đảm bảo, (mà bản thân suất sinh lợi, lãi suất có thể thấp hơn - an toàn hơn, giới hạn gói ở phạm vi tiền gửi tiết kiệm, gtcg), thì có thể \"bù đắp\" bằng initial fund, tức tăng số tiền ban đầu bằng một gói \"trợ cấp\" khác, đến từ nhiều nguồn trong một gia đình chẳng hạn, như cha mẹ, ông bà, hoặc bất kỳ ai trong một gói do NH quản lý - có tài khoản. Ở một số quốc gia, một phần vốn ban đầu còn đến từ chính phủ cấp cho - từ tài khóa. Thậm chí là cả một lộ trình dài các bên \"cùng góp, tích lũy\" đó chính là tinh thần của các chương trình như của Anh, Sing, Mỹ...\nHiện nay với công nghệ NH có thể tự động và cá nhân hóa rất cao trong việc thiết kế sản phẩm. Đánh giá lợi ích và quy trình quản lý rủi ro tương ứng dễ dàng, thậm chí là tự phân bổ tạo suất sinh lợi tối ưu tự động.\n\nP/s: các chính sách của CP khuyến khích sinh đẻ, an sinh xã hội, các phụ trợ cấp... có thể tích hợp thông qua sản phẩm của một số NH uy tín hoặc ủy thác thực hiện chương trình mục tiêu... Mặt khác, cũng không nhất thiết phải quy mô CP/TW, các tỉnh, thành có điều kiện vẫn có thể triển khai riêng- kết hợp với NH.",
+    "banks": [],
+    "topic": "interest_macro",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/518308788_24312419395065838_3867002374662378404_n.jpg?stp=dst-jpg_tt6&cstp=mx720x560&ctp=p180x540&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=5-UtFAatwXUQ7kNvwHVQkVE&_nc_oc=AdpVFJecxbUtcne6C423MSa1ghHE-qJJ4GAz1waAxDhbHa9bykSKPCxHw1r6kcXuWkI&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=8aZQ_mpUK-syeyPlvoXKYQ&_nc_ss=72289&oh=00_AQE8syMo6fmSW7D3xkVsAy5xPMAFQziNFRMoGhdaW3PQkQ&oe=6A89FD4D",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFAFAFA",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/518308788_24312419395065838_3867002374662378404_n.jpg?stp=dst-jpg_tt6&cstp=mx720x560&ctp=p180x540&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=5-UtFAatwXUQ7kNvwHVQkVE&_nc_oc=AdpVFJecxbUtcne6C423MSa1ghHE-qJJ4GAz1waAxDhbHa9bykSKPCxHw1r6kcXuWkI&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=8aZQ_mpUK-syeyPlvoXKYQ&_nc_ss=72289&oh=00_AQE8syMo6fmSW7D3xkVsAy5xPMAFQziNFRMoGhdaW3PQkQ&oe=6A89FD4D",
+          "height": 540,
+          "width": 694
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24079371761703937&set=a.2029578063776623",
+        "id": "24079371761703937",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQwNzkzNzE5NTgzNzA1ODQ="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-06-12T10:07:47.000Z",
+    "timestamp": 1749722867,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0Qp8NYDCCa5h58epPr5Km7az8PY3k2KtCneCL7scXDDjBpt3j1XzchtihKuZiZDTMl",
+    "text": "Tiền mặt trong lưu thông, update.\n\n(Về seasonal pattern xem lại các note trc đây)",
+    "banks": [],
+    "topic": "cfa_updates",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-6/518182285_24274335242207587_972724494419873610_n.jpg?stp=dst-jpg_tt6&cstp=mx646x716&ctp=s565x565&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=P7d0MJsFnu0Q7kNvwFfLUWb&_nc_oc=AdpVOtB-ZaICHAK3A8qMKID1JJ9W5A3wprTH7r-teZjWbAeQ6nrk_i62tYmYeuram2Q&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=8aZQ_mpUK-syeyPlvoXKYQ&_nc_ss=72289&oh=00_AQECIgRDkIzqkLrcdENCREw6FgNpoyD-j3CUAuR7gBu0NA&oe=6A89F8F7",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF252525",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-6/518182285_24274335242207587_972724494419873610_n.jpg?stp=dst-jpg_tt6&cstp=mx646x716&ctp=s565x565&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=P7d0MJsFnu0Q7kNvwFfLUWb&_nc_oc=AdpVOtB-ZaICHAK3A8qMKID1JJ9W5A3wprTH7r-teZjWbAeQ6nrk_i62tYmYeuram2Q&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=8aZQ_mpUK-syeyPlvoXKYQ&_nc_ss=72289&oh=00_AQECIgRDkIzqkLrcdENCREw6FgNpoyD-j3CUAuR7gBu0NA&oe=6A89F8F7",
+          "height": 565,
+          "width": 510
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24041409728833474&set=a.2029578063776623",
+        "id": "24041409728833474",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQwMzM3MTIxNzk2MDMyMjk="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-06-11T01:42:07.000Z",
+    "timestamp": 1749606127,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0NaiMv3qGTFFnnRbGJM4uRUNEfTcSyyXTvxMM7VZFg3bVm1QMzkBqCs5oS8zRDj46l",
+    "text": "Từ chiến lược xoay trục vào ĐNA hơn hai thập kỷ qua trong bản đồ [searching for high yield * high growth * at a reasonable price] của các NH Nhật Bản, đến nay đã hoàn tất và họ đánh giá là chuyển sang giai đoạn bảo hòa, với điểm đến cuối cùng là VN trong dòng luân chuyển của đồng Yen. \n\nCác NH Nhật Bản quyết định xoay trục vào Ấn để hoàn thiện các mảnh ghép, cũng với kỳ vọng tương tự, đặc biệt triển vọng của [tốc độ tăng trưởng * phân khúc tiêu dùng/dịch vụ tiền mặt * công nghệ] * high base. \n\nSau khi tích lũy được kinh nghiệm về quản trị và kỹ thuật \"accounting acrobatics\" sổ sách, họ cảm thấy tự tin với quyết định khăn gói vào thị trường Ấn Độ. Nhưng không biết đã chiết khấu đủ trong \"reasonable price\" chưa, bởi kỹ thuật ở đó cũng thượng thừa không kém... \n\n[Hơn nữa, về thể chế và hành lang pháp lý với sở hữu nước ngoài trong ngành NH và phi NH, ở đó không có sự bảo vệ tốt như VN]\n\nTừ 2021 đến nay, các NH Nhật đã giải ngân vào VN, ĐNA (trừ VN) và Ấn độ lần lượt khoảng 3.1, 4.2 và 5.1 tỷ USD.",
+    "banks": [],
+    "topic": "exchange_fx",
+    "media": [
+      {
+        "thumbnail": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/515926851_24256242300683548_7020183803912099118_n.jpg?stp=dst-jpg_tt6&cstp=mx720x481&ctp=s720x481&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=t0NkmL1-KvEQ7kNvwG6dqdm&_nc_oc=AdrrbHC6OnDxp9iEEBXklGCHgRcU8O9xiWCOqIAt757ljwFVMCruKii8zcszAa3m5Eg&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=Z7M40HfAntwXy5WQUnJdOw&_nc_ss=72289&oh=00_AQGOONr1e0EAX2c8M9xg4rJCzkxjoa6GP6x5Ui8wAYboTg&oe=6A89E46B",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/515926851_24256242300683548_7020183803912099118_n.jpg?stp=dst-jpg_tt6&cstp=mx720x481&ctp=s720x481&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=t0NkmL1-KvEQ7kNvwG6dqdm&_nc_oc=AdrrbHC6OnDxp9iEEBXklGCHgRcU8O9xiWCOqIAt757ljwFVMCruKii8zcszAa3m5Eg&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=Z7M40HfAntwXy5WQUnJdOw&_nc_ss=72289&oh=00_AQGOONr1e0EAX2c8M9xg4rJCzkxjoa6GP6x5Ui8wAYboTg&oe=6A89E46B",
+          "height": 481,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24021411877499926&set=a.2029578063776623",
+        "id": "24021411877499926",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQwMjE0MTIwMDc0OTk5MTM="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-06-10T15:21:52.000Z",
+    "timestamp": 1749568912,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02DPSVeSChda9x5DQYaWau7HAeByjtN1BTcSeKxeLaUcXhWSSJPdSu1WYS24h8WGjxl",
+    "text": "Cũng tình cờ đúng một năm trước mình có nói về \"phép\" in tiền từ \"hư không\" của SBV (Nghiệp vụ NHTW), LoLR, cho vay đặc biệt, ls zero. \n.\nHôm nay Thống đốc khi giải trình tại phiên họp Ủy ban Thường vụ Quốc hội sáng 10/6, về dự thảo luật sửa đổi, bổ sung một số điều Luật Các tổ chức tín dụng.\n\"Theo quy định hiện hành, thẩm quyền cho vay đặc biệt 0% một năm, không có tài sản đảm bảo là của Thủ tướng. Nhưng ở lần sửa luật này cơ quan quản lý đề xuất phân quyền quyết việc này cho Ngân hàng Nhà nước.\nThống đốc Nguyễn Thị Hồng cho biết nguồn tiền để cho vay đặc biệt được Ngân hàng Nhà nước không dùng ngân sách, mà lấy từ nguồn thực hiện chức năng của ngân hàng trung ương về phát hành tiền.\n\"Do vậy, việc Ngân hàng Nhà nước cho vay đặc biệt có lãi suất 0% không dẫn tới rủi ro ngân sách nhà nước phải bù lãi suất\", bà Hồng nói.\"\"\n.\nTất nhiên, quyết sách ngân sách thì thuộc về tài khóa. \n.\nNhưng khi nào thì tiền tệ kết hợp tài khóa? Kk.",
+    "banks": [],
+    "topic": "sbv",
+    "media": []
+  },
+  {
+    "time": "2025-06-10T06:49:22.000Z",
+    "timestamp": 1749538162,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0QdCxFwijja2bCrqhFA2F2MSWpq8haSWCyv99M6edQrasJZo5NGBASoU4uU75eM7Vl",
+    "text": "Haha, chém theo chiều gió. \n\nTiền từ sao hỏa, tức tài khoản ghi có Sao hỏa, nợ sao kim, một phần nhỏ ở Cần Thơ. \n\nNhân tiện, tổng cung tiền rộng (M3) của EU chỉ hơn 16 nghìn, trong đó bao gồm tiền mặt, tiền gửi nh, ...\n\nCòn nếu bạn chưa hình dung được thì một ví dụ vui: VN hiện nay có tổng lượng tiền gửi NH và tiền mặt trong lưu thông là khoảng 17 triệu tỷ, và ai đó nói rằng họ đang có ... 78 triệu tỷ.\n.\nP/s. Kể chuyện khác, trước đây mình cũng từng tiếp các chiêu trò gửi tiền của các bên, ví dụ... ai đó giới thiệu có vài chục nghìn tỷ tiền mặt muốn gửi, các yc về lộ trình làm việc, thủ tục... và hình dung được sau đó họ sẽ sử dụng tài liệu, hình ảnh, báo chí, lộ trình, ghi nhớ, hđ, kiểu điện MT \"tự chế\"... cho ai không vững đọc ba chớp ba nhoáng... rồi dùng...\nChính họ cũng không hình dung được từng đó lượng tiền mặt thì phải để bao nhiêu tòa nhà, chở bao nhiêu xe.",
+    "banks": [],
+    "topic": "interest_macro",
+    "media": [
+      {
+        "thumbnail": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/517423207_24249952861312492_1487763437353816548_n.jpg?stp=dst-jpg_tt6&cstp=mx720x1377&ctp=s960x960&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=6wdoHtW0LaAQ7kNvwEbQY06&_nc_oc=Adr9Wu6AEILtGBDb3DaTiS9Q9knFESy5aVtTkpz2xOoBmUsM4NeJrLAA8DWhS-zp8pg&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=Z7M40HfAntwXy5WQUnJdOw&_nc_ss=72289&oh=00_AQEDJDQqGmq9cJiw89_YfKFaI8O1PVnLSR2tmhpGwBcmMQ&oe=6A89E15F",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/517423207_24249952861312492_1487763437353816548_n.jpg?stp=dst-jpg_tt6&cstp=mx720x1377&ctp=s960x960&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=6wdoHtW0LaAQ7kNvwEbQY06&_nc_oc=Adr9Wu6AEILtGBDb3DaTiS9Q9knFESy5aVtTkpz2xOoBmUsM4NeJrLAA8DWhS-zp8pg&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=Z7M40HfAntwXy5WQUnJdOw&_nc_ss=72289&oh=00_AQEDJDQqGmq9cJiw89_YfKFaI8O1PVnLSR2tmhpGwBcmMQ&oe=6A89E15F",
+          "height": 960,
+          "width": 502
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24015299704777810&set=a.2029578063776623",
+        "id": "24015299704777810",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQwMTUyOTk4MTgxMTExMzI="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-06-10T03:17:51.000Z",
+    "timestamp": 1749525471,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02Zcny4fSCCEJqmr9b6UF4gKD2qLYfU2xtSEsTuf2ywmX2ayESXzsLRCfQMWmTQfwPl",
+    "text": "Bức tranh tiền gửi CASA, tiếp.\n\nMỗi unit/đồng CASA khi được add vào bảng cân đối có thể tạo thu nhập gấp 7-10x(*). Cấu trúc lợi nhuận này được tính dựa trên:\n\n1/Cấu trúc kỳ hạn hành vi tương đương matching với asset duration buckets và maturity transformation level.\n2/Natural hedge opportunity costs.\n3/Adjustments on liquidity and other reserves costs vs. liquidity premium. \n4/Fx Adjustment and Allocation.\n.\nTạo ra một model về non interest income khoảng 5-8x. (Các dịch vụ payment và account under managed). Cấu trúc này phụ thuộc vào vòng quay tiền, casa turnover (vd một NH đỉnh cao casa với turnover 33x) và chất lượng của casa profile. Cross-sell, nền tảng cho gia tăng trở lại Non-II.  \n.\n(Chưa tính đến tạo lợi thế cạnh tranh lớn trong việc thiết kế và định giá sản phẩm cho vay cũng như kiểm soát chi phí vốn. Một điểm quan trọng, nó cho phép NH theo đuổi chiến lược cho vay thận trọng hơn. Về chiến lược, đây là điểm đặc biệt và dài hạn.)  \n\n*\n5 năm qua là thời kỳ vàng - golden age. Định nghĩa hẹp của golden này là: CoF of Casa thấp; và, rất thấp vs. phần còn lại của CoF of deposit curve (tức steepening slope); và, thấp vs average HQLA, interbank yields (để phân bổ lại); và, tính stable cao * casa beta thấp. \n\nCấu thành điều trên từ, môi trường và chính sách vĩ mô (tài tệ), các quy định và cả structural shifting (các tỷ lệ casa, tỷ lệ tiền mặt...)\n\nNhiều NH hơn 5 năm trước đã nhìn xa với tầm 15 năm.\n.\nTuy nhiên, Marginal Cost of Acquisition đối với Casa (MCAC) tăng lên từ công nghệ, các chi phí và hoa hồng phân bổ (-> CIR...). \n\nVì vậy chuỗi giá trị, đường đi của một đồng casa vào và ra khỏi bảng cđkt được kiểm soát ngày càng chặt chẽ hơn.\n\nTất nhiên, cũng vì vậy mà Deposit Franchise Valuation cao, đặc biệt khi CASA ratio cao.\n\n___\n(*) Tùy NH, có thể phân bổ ở  cấu trúc \"NIM\" from Deposit, NIM from Loans or Treasury khác nhau.\n\nP/s: một đặc điểm nữa, risk-free short-term deposits: Ở VN tính risk-free cao, nên CoF nói chung và casa nói riêng thấp xuống.",
+    "banks": [],
+    "topic": "ratio_nim",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/520248436_24303055836002194_3355138310149142910_n.jpg?stp=dst-jpg_tt6&cstp=mx720x578&ctp=s640x640&_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Up2fe8FXLj8Q7kNvwGROyD3&_nc_oc=AdraFBGJAJnohDNtCq8TWRwM1A3g-YqkNLJ9jD8U6yDCsG7HrURGv15FFwdLh4XV2vE&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=DvRBU3rgd5QsnGx1esQDyQ&_nc_ss=72289&oh=00_AQHBKKe3Nkxs_eorxKHRzuCLeyT9QYvtB0ipUNMgyo_8UQ&oe=6A8A0D5B",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/520248436_24303055836002194_3355138310149142910_n.jpg?stp=dst-jpg_tt6&cstp=mx720x578&ctp=s640x640&_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Up2fe8FXLj8Q7kNvwGROyD3&_nc_oc=AdraFBGJAJnohDNtCq8TWRwM1A3g-YqkNLJ9jD8U6yDCsG7HrURGv15FFwdLh4XV2vE&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=DvRBU3rgd5QsnGx1esQDyQ&_nc_ss=72289&oh=00_AQHBKKe3Nkxs_eorxKHRzuCLeyT9QYvtB0ipUNMgyo_8UQ&oe=6A8A0D5B",
+          "height": 514,
+          "width": 640
+        },
+        "url": "https://www.facebook.com/photo/?fbid=24069645912676522&set=a.2028510173883412",
+        "id": "24069645912676522",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjQwMTQxOTE2NzgyMjE5NDY="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-06-06T12:16:10.000Z",
+    "timestamp": 1749212170,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid033cXg3AUT2ufnyPNe55wYTjYTVBDiffzWM71yb2v9NEzLBrv3aBbNXaWSQbhr2ciil",
+    "text": "Story of accounting acrobatics and regulatory arbitrage.\nNhớ mấy năm trước có note. \nP/s. Nghe đâu cũng có cty lớn: \"Sai lệch thông tin nghiêm trọng\" và \"không phản ánh đúng thực tế\", \"xử lý kế toán\"... Trả hàng!\nPps. Cũng có tập đoàn cân tiền chứng minh... từ lợi nhuận dự kiến của các cty con!",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2025-06-03T02:08:04.000Z",
+    "timestamp": 1748916484,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid023EaWhBPiBhhnLRvjwPq1p3chopv6b28YimCpLPevNyg1PKDeWHHUDXnTgznDEBF6l",
+    "text": "Haha, tây this tây that, rác cũng nhiều. \n\nCũng tình cờ, tuần trước mình có bàn về tính độc lập của nhtw và các implications, cũng khá dài. Past một đoạn: \n\nTính độc lập, bộ ba (triad of) lăng kính: Nền tảng (có bị xói mòn), phạm vi của tính độc lập (mở rộng), và độc lập về công cụ vs. mục tiêu.\n\nĐộc lập của NHTW là \"bữa trưa miễn phí\" như một phó chủ tịch Fed đã tự hào, nhưng John Cochrane gần đây có trao đổi, phải trong giới hạn vs. \"mission creep\"... hay những vấn đề kinh điển về phân định với tài khóa, không miễn nhiễm với dòng chảy chính trị, mục tiêu quốc gia,... (Rajan, Blanchard, Krugman)...\n\nĐộc lập trong việc sử dụng các công cụ CSTT vs. Mục tiêu. [Biểu đồ phần tư tương tác và sự dịch chuyển, lý tưởng nhất, Fed nằm ở góc phần tư \"nền tảng mạnh\" và \"phạm vi rõ ràng\", nơi họ sử dụng công cụ hiệu quả và bám sát nhiệm vụ. Nhưng áp lực từ Trump hoặc bất kỳ sự lạm dụng chính sách nào đó, có thể đẩy họ về phía \"nền tảng yếu, phạm vi mơ hồ\" - vùng nguy hiểm dẫn đến niềm tin bị xói mòn.]\n\nTương tác giữa tính độc lập trong việc sử dụng các công cụ (tools, facilities) và các mục tiêu, nhiệm vụ (mandates) tạo thành ranh giới thực tế của quyền tự chủ của ngân hàng trung ương. Một cấu trúc tổ chức vững mạnh - được hỗ trợ bởi tính minh bạch, trách nhiệm giải trình và các quy trình ra quyết định đáng tin cậy - hoạt động như một bức tường thành chống lại các áp lực bên ngoài. Điều này có thể thấy trong phản ứng của Fed đối với sự can thiệp chính trị, chẳng hạn như chống lại áp lực từ chính quyền Trump nhằm hạ lãi suất (công cụ) để đạt được lợi ích chính trị, các phản ứng phòng vệ của Fed và chủ tịch Powell đưa ra là dựa trên mandates... Ngay cả dưới những áp lực tấn công như vậy, và, giả sử Powell có sự nhượng bộ, thì cấu trúc của Ủy ban Thị trường Mở Liên bang (FOMC) được trong đợi như tấm khiên cuối cùng bảo toàn được tính toàn vẹn của các quyết định chính sách.\n\nHay, điều hướng căng thẳng và sự đánh đổi...\n... Sự sáng tạo vô hạn của hệ thống các công cụ kết hợp với các khóa an toàn được sử dụng như \"khẩn cấp\", \"ổn định hệ thống\", \"tình huống đặc biệt\", v.v. đẩy xa lằn ranh giới hạn đã tạo nên sức mạnh nhưng cũng là đòn giáng đánh thẳng vào uy tín... \nCũng như sự xét lại của việc tham gia sâu hơn vào các lĩnh vực như biến đổi khí hậu hoặc bất bình đẳng và các biện pháp can thiệp thị trường có thể thúc đẩy bong bóng tài chính... điều mà vốn thường xuất hiện trên bàn nghị sự của chính quyền hơn...\n\nBối cảnh toàn cầu... áp lực mất cân bằng tiềm tàng của các NHTW với các chiến lược quốc gia và địa chính trị làm tăng thêm một lớp phức tạp. Điều gì sẽ xảy ra nếu Fed không biểu hiện rõ ràng lập trường trong cuộc chiến, mà có thể đến từ chính quyền TT Trump - với sự vận dụng sức mạnh dân túy mạnh mẽ...",
+    "banks": [],
+    "topic": "cfa_updates",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/514871166_24205941799046932_4998750448764908130_n.jpg?stp=dst-jpg_tt6&cstp=mx720x427&ctp=s720x427&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=SMBd0KwRj_8Q7kNvwGmkmmt&_nc_oc=Adq7uBImn0Jguj02sGNgmksu9NEVEd9kf_hKFFzQ5l_7L-T82WT5oKOifbETTkJHF4I&_nc_zt=23&_nc_ht=scontent-atl3-1.xx&_nc_gid=DvRBU3rgd5QsnGx1esQDyQ&_nc_ss=72289&oh=00_AQFrS2AAVIwcYIa4PAFX7ByNKO9dR1J86Vp3F5U85soHsQ&oe=6A89E840",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF000000",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/514871166_24205941799046932_4998750448764908130_n.jpg?stp=dst-jpg_tt6&cstp=mx720x427&ctp=s720x427&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=SMBd0KwRj_8Q7kNvwGmkmmt&_nc_oc=Adq7uBImn0Jguj02sGNgmksu9NEVEd9kf_hKFFzQ5l_7L-T82WT5oKOifbETTkJHF4I&_nc_zt=23&_nc_ht=scontent-atl3-1.xx&_nc_gid=DvRBU3rgd5QsnGx1esQDyQ&_nc_ss=72289&oh=00_AQFrS2AAVIwcYIa4PAFX7ByNKO9dR1J86Vp3F5U85soHsQ&oe=6A89E840",
+          "height": 427,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=23957624100545371&set=a.2029578063776623",
+        "id": "23957624100545371",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjM5NTc2MjQyNzcyMTIwMjA="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-05-30T03:42:57.000Z",
+    "timestamp": 1748576577,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02G7U38TfV9LLM96dp53jVf7BDTWyDmi9bCiQiHbY2iieP31fU5hzgUb5k1pfSR6Zcl",
+    "text": "Gold demand is less an outcome than a profound reflection; \nMeanwhile, vertical & non-substitutable gold supply curve cements its unique power.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/514836324_24205329745774804_499531644574275721_n.jpg?stp=dst-jpg_tt6&cstp=mx646x314&ctp=s646x314&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=S_sIp0oS1YMQ7kNvwEhTbFF&_nc_oc=AdqvB7Ed371p486oKrFxcalZSXfOCvkw25Ac09E6pMcmRym9Ar4M3gkebFA8c49Skf0&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=3fL-BmQCjB83EcqSqsSDlw&_nc_ss=72289&oh=00_AQHsswO2bJuY1MthhYm5oRff75MQrfbI-iogrMKenb4mAg&oe=6A89E7F3",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFEF9F5",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/514836324_24205329745774804_499531644574275721_n.jpg?stp=dst-jpg_tt6&cstp=mx646x314&ctp=s646x314&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=S_sIp0oS1YMQ7kNvwEhTbFF&_nc_oc=AdqvB7Ed371p486oKrFxcalZSXfOCvkw25Ac09E6pMcmRym9Ar4M3gkebFA8c49Skf0&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=3fL-BmQCjB83EcqSqsSDlw&_nc_ss=72289&oh=00_AQHsswO2bJuY1MthhYm5oRff75MQrfbI-iogrMKenb4mAg&oe=6A89E7F3",
+          "height": 314,
+          "width": 646
+        },
+        "url": "https://www.facebook.com/photo/?fbid=23927781533529628&set=a.2029578063776623",
+        "id": "23927781533529628",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjM5Mjc3ODE2ODY4NjI5NDY="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-05-29T02:12:38.000Z",
+    "timestamp": 1748484758,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0272JttwvG4hKqn3d8PuoRU1Lgh28rQWTUSBCfwYNfAtXwFzawujiRmM8PHYh3i5pXl",
+    "text": "Trong ALM cũng có thể có paradox như thế này. Approaches nào để cân bằng?\nTiếp theo note trước về mortgages, giả sử bảng cđkt dự kiến tăng thêm 5% từ mortgage balance, bạn phải xem xét điều gì nếu kq các scenarios hiện tại như bên dưới?\n\nP/s: có một nghiên cứu gần đây chỉ ra (từ 9,025 banks & credit unions):\n- On average, NII is 22.4% of EVE (ranging from 11.4% to 51.1%);\n- OAS Income usually makes up ~70% of NII (ranging from 0% to 95%).",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/515319505_24205320559109056_2282491447523015669_n.jpg?stp=dst-jpg_tt6&cstp=mx720x257&ctp=s720x257&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Ofd_o3MbBGUQ7kNvwHvJX09&_nc_oc=AdoVGZdcaWWjNucFjvQy4TY_v-SeeE01yNTR_KvYxmPdvW99cqwDn429EwSqcFJTwt8&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=3fL-BmQCjB83EcqSqsSDlw&_nc_ss=72289&oh=00_AQGLgEdVU2hSu3KeESjVV3phK1sk96UjBX0MVVat54N33w&oe=6A89F736",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/515319505_24205320559109056_2282491447523015669_n.jpg?stp=dst-jpg_tt6&cstp=mx720x257&ctp=s720x257&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Ofd_o3MbBGUQ7kNvwHvJX09&_nc_oc=AdoVGZdcaWWjNucFjvQy4TY_v-SeeE01yNTR_KvYxmPdvW99cqwDn429EwSqcFJTwt8&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=3fL-BmQCjB83EcqSqsSDlw&_nc_ss=72289&oh=00_AQGLgEdVU2hSu3KeESjVV3phK1sk96UjBX0MVVat54N33w&oe=6A89F736",
+          "height": 257,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=23919962570978191&set=a.2029578063776623",
+        "id": "23919962570978191",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjM5MTk5NjI2NjQzMTE1MTU="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-05-26T02:18:28.000Z",
+    "timestamp": 1748225908,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0WjA3vnpJaeutZrSHzQRoguhKbrTzSontVT5mtwp3ZieQsijEXv49GVnxdFV7NUC1l",
+    "text": "Bài này có nhiều điểm chưa chính xác, kể cả ý kiến của chuyên gia (mình cũng chỉ ra nhiều lần, như tăng VĐL, expected. vs. Un-expected losses, CAR target.) Tuy nhiên có nhắc đến việc sửa đổi TT41 (là một tư duy được đánh giá là tiến bộ trong... 10 năm trước).\nTinh thần của bản sửa đổi mới rất hay mặc dù về kỹ thuật, phải chờ xem góp ý - như là một thực trạng của sự thỏa hiệp.\nNhân tiện, trong bản mới có CCyB - một cấu phần mà mấy năm trước mình có đề xuất. \nTiếp theo, mình nghĩ cần sửa đổi tiếp TT13 (i.e thực thi pillar 2) và, cũng như các quy định về thanh khoản, ví dụ bỏ tỷ lệ dự trữ thanh khoản (cái mà aligned với tổng nợ theo accounting based, cũng như không tính off-bs), chuyển qua thực thi theo khuôn khổ Basel 3 (LCR, NSFR, ...) ĐỒNG THỜI thêm Maturity Add-on vào. \nKết hợp với tinh thần thực thi pillar 2, thì có thể bỏ luôn chính sách dự trữ bắt buộc. \nKỷ nguyên mới... thích nghi và gia tăng năng lực cưỡi sóng hoặc bị cuốn phăng.\n...\nMình trích lại đoạn note mấy năm trước:\n\"Về khía cạnh chu kỳ,  \nNhư người xưa vẫn nói, những khoản vay tồi tệ nhất được thực hiện trong thời gian tốt nhất và [nếu hệ thống yếu kém] đó trở thành khoản vay quan trọng nhất trong thời điểm tồi tệ nhất. (\"The worst loans are made during the best of times.\") Khi ở chu kỳ rực rỡ thì cũng cần phòng khi khó khăn... kết  quả của tích tụ rủi ro. Và có thêm cái gọi là bộ đệm vốn ngược chu kỳ - countercyclical capital buffer (CCyB). \n\nYêu cầu đủ vốn,  \nTrước tiên, yêu cầu đủ vốn là một giới hạn tối thiểu được xác định để giúp các NH có thể HẤP THỤ được các rủi ro thua lỗ tùy vào quy mô rủi ro NH mở rộng và TIẾP TỤC thực hiện chức năng của mình: cung cấp vốn cho hoạt động của nền kinh tế thực trong giai đoạn nền kinh tế xấu nhất. (E.g, vốn yêu cầu, mục tiêu, vốn kinh tế, expected risk vs. un-expected risk,...)\n   \nVới nguyên lý như vậy, trước tiên không dễ để tối ưu đối với cơ quan quản lý, nhưng rất dễ để hiểu nên theo hướng nào - đây có lẽ là ý nghĩa lớn nhất của các quy định về vốn. Cũng đặt ra các điểm yếu hoặc có thể bị lợi dụng để tạo sự thỏa hiệp, (thậm chí là con tin).\n\n*\nTrước tiên, trong ngắn hạn, trong môi trường cần can thiệp: \nFunding and Capital: Thúc đẩy sự phân bổ vốn chính xác hơn, và ưu tiên mục tiêu dài hạn - phát triển bền vững, nghĩa là cân bằng trong cấu trúc và trạng thái, và, cân bằng trong lợi nhuận - rủi ro.  \nLiquidity and Capital buffers: \"Uốn cong nhưng không gãy\".\nNPL/NPA: \"Làm phẳng đường cong\" (flattening the NPL curve), cơ bản là bài học kinh nghiệm quá lớn, một khi \"cong lên\" quá mức, quá trình làm phẳng sẽ tốn kém (bao gồm đánh sụp tiềm năng tăng trưởng của nền kinh tế trong một thời gian dài, ví dụ một thập kỷ, hoặc \"vết sẹo kinh tế\" - vĩnh viễn.)  \n\nMục tiêu chung vẫn là: đảm bảo đủ khả năng hấp thụ và tiếp tục (xem thêm ở bên dưới), hạn chế các lan truyền... Và cũng có cấu phần capital charge thêm với những NH quan trọng trong dự phòng vốn ... \nNếu \"ba đầu mục trên\" vẫn yếu, thiếu, thì bằng những cơ chế (thẩm quyền) khác nhau, cơ quan quản lý sẽ tạo ra những động cơ mới để tăng năng lực hấp thụ, ví dụ hấp thụ bổ sung rủi ro và /hoặc hỗ trợ tăng vốn, mấy cái cơ bản hay nghe như cho vay, mua/hoán đổi tài sản xấu, thậm chí bail-outs... \n\nTóm lại là các cơ chế về liquidity, funding, capital và ở cả liabilities lẫn assets side để tác động đến balance sheet capacity. Đến nay, tập trung vào balance sheet capacity là cốt lõi và đỉnh cao nhất. Những điều chỉnh về các quy định, có điểm bắt đầu và kết thúc là balance sheet capacity. \n\nVà, nói đến RWA với bất kỳ điều chỉnh nào thì phải bắt đầu từ ý nghĩa nền tảng của nó: rủi ro (như tên gọi: risk based/weighted), không được rời xa nguyên lý này, đặc biệt khi những can thiệp mà sự cân nhắc giữa đánh đổi ngắn hạn vs. dài hạn trở nên khó xác định. Và nếu phải phá vỡ nguyên lý, các giải pháp bổ sung hoặc thay thế khác có thể được cân nhắc lựa chọn, giải pháp đó có thể đến bên ngoài, ví dụ từ tài khóa, các chính sách vĩ mô, vi mô khác, v.v.\"",
+    "banks": [],
+    "topic": "ratio_lcr_nsfr",
+    "media": [
+      {
+        "thumbnail": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/515012098_24205174265790352_1767140848294898252_n.jpg?stp=dst-jpg_tt6&cstp=mx720x655&ctp=p552x414&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=WuH-7WUMjLIQ7kNvwGuxOFE&_nc_oc=Ado6AqScnx80uUKkKM1Ge2a-kwdTSG49hfgFCSAaMwgy0F9UoLynL3XBuCeHJ8paoKA&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=3fL-BmQCjB83EcqSqsSDlw&_nc_ss=72289&oh=00_AQEjE3nDG9r6HBjOkqXBZw-0KYFUvhbvlODnBfo4rgKR6g&oe=6A8A0CE6",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/515012098_24205174265790352_1767140848294898252_n.jpg?stp=dst-jpg_tt6&cstp=mx720x655&ctp=p552x414&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=WuH-7WUMjLIQ7kNvwGuxOFE&_nc_oc=Ado6AqScnx80uUKkKM1Ge2a-kwdTSG49hfgFCSAaMwgy0F9UoLynL3XBuCeHJ8paoKA&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=3fL-BmQCjB83EcqSqsSDlw&_nc_ss=72289&oh=00_AQEjE3nDG9r6HBjOkqXBZw-0KYFUvhbvlODnBfo4rgKR6g&oe=6A8A0CE6",
+          "height": 502,
+          "width": 552
+        },
+        "url": "https://www.facebook.com/photo/?fbid=23898643229776792&set=a.2029578063776623",
+        "id": "23898643229776792",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjM4OTg2NDQyMjMxMTAwMjY="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-05-24T12:07:35.000Z",
+    "timestamp": 1748088455,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0Mh4HrBqsLRHiaYdHebRmDmuYkPfHoD4PxdJTFuUz2UFh5fjdxcjTeNc9G2UWZHWpl",
+    "text": "TRFs/TARFs structured product. \n(Conditional) Target redemption forwards thì rất ... hedge and ck-ill!",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/515266482_24205151445792634_6196764107413571262_n.jpg?stp=dst-jpg_tt6&cstp=mx720x401&ctp=s720x401&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=2V2ybzWpLcAQ7kNvwFmwcCL&_nc_oc=AdoIpv0Hw3zgB7M4BgjVuRx0KtWQXkJKoDV_DY4q68L2o3BxKgiQcir-wHllHOaSFkE&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=b-WcyvGhFK6F-5kPtfDk3Q&_nc_ss=72289&oh=00_AQFMDXBQ78UJlQK3sajTWpoyNTYtGl7mOkrceUw_bh1ZjA&oe=6A89F967",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/515266482_24205151445792634_6196764107413571262_n.jpg?stp=dst-jpg_tt6&cstp=mx720x401&ctp=s720x401&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=2V2ybzWpLcAQ7kNvwFmwcCL&_nc_oc=AdoIpv0Hw3zgB7M4BgjVuRx0KtWQXkJKoDV_DY4q68L2o3BxKgiQcir-wHllHOaSFkE&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=b-WcyvGhFK6F-5kPtfDk3Q&_nc_ss=72289&oh=00_AQFMDXBQ78UJlQK3sajTWpoyNTYtGl7mOkrceUw_bh1ZjA&oe=6A89F967",
+          "height": 401,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=23888059347501847&set=a.2029578063776623",
+        "id": "23888059347501847",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjM4ODgwNTk0Njc1MDE4MzU="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-05-23T14:21:23.000Z",
+    "timestamp": 1748010083,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0e7hQ44PwWAfsCFePY5hHfZNXSx76Wtg4KDvD5o8AYNYw8zp2hX6yZFTqTnYVYYr6l",
+    "text": "PV Jamie Dimon \nChủ đề hay. Link ở comment.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/514935704_24205078449133267_6259652710742144546_n.jpg?stp=dst-jpg_tt6&cstp=mx720x900&ctp=s640x640&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=-371I6NhiNQQ7kNvwH1Oy01&_nc_oc=AdozFnbnT0mZv3cd5ZMUAFkAICKFHK5rXe6aoPU1W-noIbHDDMHnfwZnoQRJVmMeOUA&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=b-WcyvGhFK6F-5kPtfDk3Q&_nc_ss=72289&oh=00_AQHSiUgRYpKd7H33pUEQfp6lPonQQedPKJ-n_EH23Jkilg&oe=6A89EE7F",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/514935704_24205078449133267_6259652710742144546_n.jpg?stp=dst-jpg_tt6&cstp=mx720x900&ctp=s640x640&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=-371I6NhiNQQ7kNvwH1Oy01&_nc_oc=AdozFnbnT0mZv3cd5ZMUAFkAICKFHK5rXe6aoPU1W-noIbHDDMHnfwZnoQRJVmMeOUA&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=b-WcyvGhFK6F-5kPtfDk3Q&_nc_ss=72289&oh=00_AQHSiUgRYpKd7H33pUEQfp6lPonQQedPKJ-n_EH23Jkilg&oe=6A89EE7F",
+          "height": 640,
+          "width": 512
+        },
+        "url": "https://www.facebook.com/photo/?fbid=23881715854802863&set=a.2029578063776623",
+        "id": "23881715854802863",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjM4ODE3MTU5NzQ4MDI4NTE="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-05-23T02:15:14.000Z",
+    "timestamp": 1747966514,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid09JTLzdgpfHBMxgxBAHLvCcde8dKg3NHTzBSAXaJkZRVPmC9Bc9GQyGNmUMLq5YwLl",
+    "text": "Thông điệp qua các lựa chọn trang phục khi xuất hiện trước công chúng hoặc các sự kiện rất quan trọng. Đây không phải là sự kiện ngoại giao mà là một cuộc họp về thành lập trung tâm tài chính quốc tế.\nNhớ không nhầm (trong rất nhiều hình ảnh xuất hiện của TTg), cảm nhận rằng lần này thực sự khác, style \"cháy\" hơn nhưng giữ được sự uy nghiêm (các mảng màu). \nTheo các bạn, thông điệp là gì? (Mệnh lệnh phải) đột phá, think outside the box, phá vỡ mọi quy tắc, hòa nhập vào dòng chảy nhân loại,... hay năng động và cháy hết mình; hoặc giả nghiêng về một lựa chọn trang phục xuất hiện nào đó, như prototypicality hay charisma hay khác trong DG (Direction and Governance), v.v.\n\nHình: TTXVN.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/514763043_24205068439134268_2407217226410572185_n.jpg?stp=dst-jpg_tt6&cstp=mx665x443&ctp=s665x443&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=0y8FNt8xhtEQ7kNvwHZoZIe&_nc_oc=AdrJEedhmrjDG0vZIthIUMkxjv8BE5ubxDSXZAlzAqgWl7sYzN8soJ6O8IdC_a_FEyQ&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=b-WcyvGhFK6F-5kPtfDk3Q&_nc_ss=72289&oh=00_AQGWhwJbrvEnG6V9f85RxVkVI4elLNlRPflnA20WU8TxGQ&oe=6A89D8B4",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF311D12",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/514763043_24205068439134268_2407217226410572185_n.jpg?stp=dst-jpg_tt6&cstp=mx665x443&ctp=s665x443&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=0y8FNt8xhtEQ7kNvwHZoZIe&_nc_oc=AdrJEedhmrjDG0vZIthIUMkxjv8BE5ubxDSXZAlzAqgWl7sYzN8soJ6O8IdC_a_FEyQ&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=b-WcyvGhFK6F-5kPtfDk3Q&_nc_ss=72289&oh=00_AQGWhwJbrvEnG6V9f85RxVkVI4elLNlRPflnA20WU8TxGQ&oe=6A89D8B4",
+          "height": 443,
+          "width": 665
+        },
+        "url": "https://www.facebook.com/photo/?fbid=23877924148515367&set=a.2029578063776623",
+        "id": "23877924148515367",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjM4Nzc5MjQyNjUxODIwMjI="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-05-22T01:54:08.000Z",
+    "timestamp": 1747878848,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0GxcWJ7qLBMgJ53o8BzFyrL9sHpNWy2Wc9sPsDjECRN64x5j4fmstAHd6ZQFyh7ACl",
+    "text": "What’s wrong with the Bond\nNo...\nNo bad Bond\nJust bad price, this is fine...\nTill destabilize(ing)\nDone.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/514760144_24205043999136712_630797225813292351_n.jpg?stp=dst-jpg_tt6&cstp=mx671x475&ctp=s671x475&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=rRLGz9g5rm0Q7kNvwGefqU3&_nc_oc=AdrstXylxpLPPX0cheEDVkOwRo07YVx8vRi3upTGX_-8mPL4fuPE43qinzyW-IB_OhE&_nc_zt=23&_nc_ht=scontent-dfw5-1.xx&_nc_gid=0QBLxYHN3i6nLCtlLRgeGw&_nc_ss=72289&oh=00_AQFW9ikdx0APIhCfH3wI0yjbyUw84yCoa_BSECnREpxgkA&oe=6A8A0CC0",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/514760144_24205043999136712_630797225813292351_n.jpg?stp=dst-jpg_tt6&cstp=mx671x475&ctp=s671x475&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=rRLGz9g5rm0Q7kNvwGefqU3&_nc_oc=AdrstXylxpLPPX0cheEDVkOwRo07YVx8vRi3upTGX_-8mPL4fuPE43qinzyW-IB_OhE&_nc_zt=23&_nc_ht=scontent-dfw5-1.xx&_nc_gid=0QBLxYHN3i6nLCtlLRgeGw&_nc_ss=72289&oh=00_AQFW9ikdx0APIhCfH3wI0yjbyUw84yCoa_BSECnREpxgkA&oe=6A8A0CC0",
+          "height": 475,
+          "width": 671
+        },
+        "url": "https://www.facebook.com/photo/?fbid=23870667185907730&set=a.2029578063776623",
+        "id": "23870667185907730",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjM4NzA2NjczOTI1NzQzNzY="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-05-21T03:18:50.000Z",
+    "timestamp": 1747797530,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0tKoAhPdGydgodUk7NUGaDfDGVLrNM5KboE59kaqHL2MBVogzJVBXLZRCCfdK1UsJl",
+    "text": "IRRS, Spring 2025 \n(vs. 2022 (đỉnh Interest Rates, trước events như  SVB, CS...) có nhiều khác biệt thú vị.)",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-dfw6-2.xx.fbcdn.net/v/t39.30808-6/514663705_24204933889147723_319735606993495974_n.jpg?stp=dst-jpg_tt6&cstp=mx720x791&ctp=s565x565&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Q230tqqBzBgQ7kNvwEacmQ3&_nc_oc=AdoD3JqOsazpEg7gVQv3s21g81h_izmfmjBeVhs6VxUqbmilINIH4xEfcA3VkKs8BPg&_nc_zt=23&_nc_ht=scontent-dfw6-2.xx&_nc_gid=0QBLxYHN3i6nLCtlLRgeGw&_nc_ss=72289&oh=00_AQHrXf089uKn3KsbrYUkVhbvhQF8BE_hQbsUkUusF4QwkQ&oe=6A89FC31",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-dfw6-2.xx.fbcdn.net/v/t39.30808-6/514663705_24204933889147723_319735606993495974_n.jpg?stp=dst-jpg_tt6&cstp=mx720x791&ctp=s565x565&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Q230tqqBzBgQ7kNvwEacmQ3&_nc_oc=AdoD3JqOsazpEg7gVQv3s21g81h_izmfmjBeVhs6VxUqbmilINIH4xEfcA3VkKs8BPg&_nc_zt=23&_nc_ht=scontent-dfw6-2.xx&_nc_gid=0QBLxYHN3i6nLCtlLRgeGw&_nc_ss=72289&oh=00_AQHrXf089uKn3KsbrYUkVhbvhQF8BE_hQbsUkUusF4QwkQ&oe=6A89FC31",
+          "height": 565,
+          "width": 514
+        },
+        "url": "https://www.facebook.com/photo/?fbid=23863878386586610&set=a.2029578063776623",
+        "id": "23863878386586610",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjM4NjM4Nzg0NjMyNTMyNjk="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-05-21T02:46:47.000Z",
+    "timestamp": 1747795607,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0ncnFR72P6AM9AAzHzini8fj6Eb72eShURKFgo43u325nmDLJuswQ9BRJv43wkiF2l",
+    "text": "Four schools of thought on the LOLR, it's beyond.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-dfw6-1.xx.fbcdn.net/v/t39.30808-6/514326263_24204933885814390_4714373900576888310_n.jpg?stp=dst-jpg_tt6&cstp=mx720x485&ctp=s720x485&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=SCnzUXf7t_cQ7kNvwEy59Nc&_nc_oc=AdrPZWQPARC9549fA43B3mzo6g9nVSBSUtQP6wwCc99AZcJ_vA3hukPGyFgcfJ-zmLY&_nc_zt=23&_nc_ht=scontent-dfw6-1.xx&_nc_gid=0QBLxYHN3i6nLCtlLRgeGw&_nc_ss=72289&oh=00_AQFBxREE0AkgJCzL9ugUkXWqsmpn-vorxeIHmy5MFotnzQ&oe=6A89EF11",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-dfw6-1.xx.fbcdn.net/v/t39.30808-6/514326263_24204933885814390_4714373900576888310_n.jpg?stp=dst-jpg_tt6&cstp=mx720x485&ctp=s720x485&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=SCnzUXf7t_cQ7kNvwEy59Nc&_nc_oc=AdrPZWQPARC9549fA43B3mzo6g9nVSBSUtQP6wwCc99AZcJ_vA3hukPGyFgcfJ-zmLY&_nc_zt=23&_nc_ht=scontent-dfw6-1.xx&_nc_gid=0QBLxYHN3i6nLCtlLRgeGw&_nc_ss=72289&oh=00_AQFBxREE0AkgJCzL9ugUkXWqsmpn-vorxeIHmy5MFotnzQ&oe=6A89EF11",
+          "height": 485,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=23863719253269190&set=a.2029578063776623",
+        "id": "23863719253269190",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MjM4NjM3MTkzNjMyNjkxNzk="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-05-20T02:07:53.000Z",
+    "timestamp": 1747706873,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0WgeN88TVEEGJxx3PmU2eB4pzhCYGvRxEGFXaGNbESNU7vyUpVyWRHiYbpN8a9TBol",
+    "text": "ASSET MONETIZATION\n\nNhững cơ chế và chính sách gần đây đã tạo tiền đề và nền tảng cho quá trình asset monetizing giúp khơi mở cũng như giải phóng các giá trị kinh tế tiềm năng và nâng cao hiệu quả trong đóng góp của khu vực tư nhân thông qua các structural partnerships và structural mechanisms trong đầu tư và hệ thống ngân hàng cùng thị trường vốn.\nMình nghĩ đây có thể là điểm bùng nổ mới từ các NQ và Luật mới (sửa đổi, bổ sung).\n.\nP/s. Thỉnh thoảng kết hợp với debt monetizing (dạng comprehensive, tức vươn tới khu vực tư, đặc biệt các big projects) có nghệ thuật cũng không sao. :-d\nPps. Việc tạo hành lang trong tái định nghĩa, quan điểm và công nhận \"assets\" quan trọng.",
+    "banks": [],
+    "topic": "cfa_updates",
+    "media": []
+  },
+  {
+    "time": "2025-05-19T01:56:27.000Z",
+    "timestamp": 1747619787,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02hkadLxFUuxEAL3mZq5ayJnVpjTKzYcNXSXNPvcPpF1EVowfVntcrAtnpJVbJBfASl",
+    "text": "Không những hạn chế mà còn mất cân bằng, nếu nhìn từ top-down.\n.\nCác doanh nghiệp tư nhân vừa và nhỏ vẫn gặp nhiều khó khăn trong việc tiếp cận các nguồn lực về tài chính, tín dụng, đất đai...\n.\n2% DNTN lớn chiếm đến hơn 60% tín dụng khu vực DNTN (trong đó có BĐS), 98% SMEs còn lại chiếm khoảng gần 40%. Xu hướng chênh lệch càng tăng (vd marginal growth...). \n.\nRào cản và điều kiện tiếp cận tín dụng và phi tín dụng cao trong khi SMEs là đối tượng nhạy cảm/ mức độ dễ tổn thương với lãi suất và dòng tiền cao (high interest rate sensitive và CF at Risk). Cũng có thể mô tả dễ hình dung là kiểu J-curve effect - tức là trước một cú shock khả năng chịu tổn thương/phá sản cao trong ngắn hạn là lớn và cơ hội/khả năng hồi phục và tăng trưởng trong tương lai dài hạn hơn thấp xuống (xác suất DN leo lên lại được phần đỉnh \"J\" càng hiếm). Điều này đến lượt tác động trở lại hạn chế sự dấn thân/khởi nghiệp hoặc giảm bớt cơ hội cho khu vực DNTN phát triển.\nCũng vì vậy nên cần có những chính sách hỗ trợ, nâng đỡ, kích thích phù hợp.\n.\nSMEs (và siêu nhỏ) vẫn là mảnh đất các NHTM đang tập trung... nhưng chưa đủ, trong đó nguyên nhân còn đến từ các cơ chế, cs.",
+    "banks": [],
+    "topic": "interest_macro",
+    "media": [
+      {
+        "thumbnail": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/515501635_24204827602491685_4550853727518199272_n.jpg?stp=dst-jpg_tt6&cstp=mx720x701&ctp=p526x296&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=6z630nWV-RgQ7kNvwG-M_nH&_nc_oc=AdpEd2oZPy3UZvEV5V-4y7OnBU2FkUfOMkmL97ARM7Os_LvaOlQrvbhFb8QVPgapokw&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=LeTgQlzJHMGhgg4ORiv_aA&_nc_ss=72289&oh=00_AQGLjqw8VirM-88gExSZ4Y2H2ZvLM5xH0XExMKh62y67aw&oe=6A89F30A",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/515501635_24204827602491685_4550853727518199272_n.jpg?stp=dst-jpg_tt6&cstp=mx720x701&ctp=p526x296&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=6z630nWV-RgQ7kNvwG-M_nH&_nc_oc=AdpEd2oZPy3UZvEV5V-4y7OnBU2FkUfOMkmL97ARM7Os_LvaOlQrvbhFb8QVPgapokw&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=LeTgQlzJHMGhgg4ORiv_aA&_nc_ss=72289&oh=00_AQGLjqw8VirM-88gExSZ4Y2H2ZvLM5xH0XExMKh62y67aw&oe=6A89F30A",
+          "height": 512,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=10084629041604778&set=a.2029578063776623",
+        "id": "10084629041604778",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MTAwODQ2MjkyMjE2MDQ3NjA="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-05-16T02:34:26.000Z",
+    "timestamp": 1747362866,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0fyvaQuLbWuqcVDGPZr5kBqt3a6kVk1kWoGE1sX93bW5F2xjJpu1N9Gr4NVZhRu5Zl",
+    "text": "F88: wow, deep understanding local market\nKhi chỉ TA ~ 5k/IBLs ~60%.\nĐược biết F88 trích lập dự phòng 100% quá hạn 90+ ngày & write off nội bảng!\n.\nP/s. \"Voi hóa\" một chút khi so sánh khập khiễng với banking, nhưng có những mơ ước. :-d\nCũng là phạm vi kiểm tính non-monotonicity, như RWA vs PD, LGD. \nMột điểm nữa, khi bạn chắc chắn cao về tổn thất cao thì cấu phần (U) unexpected giảm xuống.\n\nChart: Cafef",
+    "banks": [],
+    "topic": "ratio_npl",
+    "media": [
+      {
+        "thumbnail": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/514477933_24204706865837092_7094864348917211789_n.jpg?stp=dst-jpg_tt6&cstp=mx720x860&ctp=s600x600&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=KgLB28gdmxEQ7kNvwFwHiBz&_nc_oc=AdrF5ii6qdPPj1Jur2apID0u72sMl8zLaKvaBdcIXd1rfjBSKffJjPH1cwlQK64SNzs&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=LeTgQlzJHMGhgg4ORiv_aA&_nc_ss=72289&oh=00_AQHyaWD1osqKM0Tu6yXt8I6WGlRnThZ0pdaBbuAU0fIwYA&oe=6A89F66E",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFCE7D2",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/514477933_24204706865837092_7094864348917211789_n.jpg?stp=dst-jpg_tt6&cstp=mx720x860&ctp=s600x600&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=KgLB28gdmxEQ7kNvwFwHiBz&_nc_oc=AdrF5ii6qdPPj1Jur2apID0u72sMl8zLaKvaBdcIXd1rfjBSKffJjPH1cwlQK64SNzs&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=LeTgQlzJHMGhgg4ORiv_aA&_nc_ss=72289&oh=00_AQHyaWD1osqKM0Tu6yXt8I6WGlRnThZ0pdaBbuAU0fIwYA&oe=6A89F66E",
+          "height": 600,
+          "width": 502
+        },
+        "url": "https://www.facebook.com/photo/?fbid=10059383704129312&set=a.2029578063776623",
+        "id": "10059383704129312",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MTAwNTkzODM5MzA3OTU5NTY="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-05-14T01:34:47.000Z",
+    "timestamp": 1747186487,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid033U7v8Kihi9MaqGPDpMFBCAmDaVrJpnn5CJuW8nuyRibbvRBh6bnsaEpAnrs2MKPkl",
+    "text": "Các NH của JP & CA under IRB: ++CRWAs khá cao. \nTrong khi under FRTB (trading book) MRWA ổn, như nhiều bank của CN.\n\nNguồn bảng: GARP",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/514074863_24204522679188844_2638082117225013908_n.jpg?stp=dst-jpg_tt6&cstp=mx720x1378&ctp=s960x960&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=2pQT5NkgSPMQ7kNvwFObQ9S&_nc_oc=AdoRcHxMGXOz3j24DtpVAkefM1hzmWHTohY19JI3TrOVfwVtVnxfHhFQlyiMCZOhxvg&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=0HNmNB1uceW1T7RVlVstzw&_nc_ss=72289&oh=00_AQGkThoCI-WhV1XZEr8G_tZHczaxgG1Td9l2NUc9MwopVA&oe=6A89EE18",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFE6F7FF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/514074863_24204522679188844_2638082117225013908_n.jpg?stp=dst-jpg_tt6&cstp=mx720x1378&ctp=s960x960&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=2pQT5NkgSPMQ7kNvwFObQ9S&_nc_oc=AdoRcHxMGXOz3j24DtpVAkefM1hzmWHTohY19JI3TrOVfwVtVnxfHhFQlyiMCZOhxvg&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=0HNmNB1uceW1T7RVlVstzw&_nc_ss=72289&oh=00_AQGkThoCI-WhV1XZEr8G_tZHczaxgG1Td9l2NUc9MwopVA&oe=6A89EE18",
+          "height": 960,
+          "width": 502
+        },
+        "url": "https://www.facebook.com/photo/?fbid=10040900539310962&set=a.2029578063776623",
+        "id": "10040900539310962",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MTAwNDA5MDA2MjkzMTA5NTM="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-05-13T04:38:20.000Z",
+    "timestamp": 1747111100,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0phZqN2822esMXqkNkPCQVLHL3DRiqpTcfAVGwDfckYeiEFUsYjB6RnoeEpz4ybQrl",
+    "text": "Riêng td, min 16%.\n\nP/s. Ytd cũng hơn 5.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/514331875_24204514389189673_2362350256496573000_n.jpg?stp=dst-jpg_tt6&cstp=mx720x162&ctp=s720x162&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=F1pL9gaxhq8Q7kNvwHlZnUq&_nc_oc=Adq0cEqLCXgB9bfFBHZ1Bt23SmWDZEzQUyIJXvRSC2u0NLZmPAQfQXIAdgCCzPQK__I&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=0HNmNB1uceW1T7RVlVstzw&_nc_ss=72289&oh=00_AQFxS9s-lu9JlxD9ABJ6akpS-XGNJyxYtiGs028-qpca0g&oe=6A8A058B",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFEFEFE",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/514331875_24204514389189673_2362350256496573000_n.jpg?stp=dst-jpg_tt6&cstp=mx720x162&ctp=s720x162&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=F1pL9gaxhq8Q7kNvwHlZnUq&_nc_oc=Adq0cEqLCXgB9bfFBHZ1Bt23SmWDZEzQUyIJXvRSC2u0NLZmPAQfQXIAdgCCzPQK__I&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=0HNmNB1uceW1T7RVlVstzw&_nc_ss=72289&oh=00_AQFxS9s-lu9JlxD9ABJ6akpS-XGNJyxYtiGs028-qpca0g&oe=6A8A058B",
+          "height": 162,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=10032866966780986&set=a.2029578063776623",
+        "id": "10032866966780986",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MTAwMzI4NjcyMTM0NDc2Mjg="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-05-12T07:09:41.000Z",
+    "timestamp": 1747033781,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0b3o1Tuw5BsFSTC4qvKowKTieazmfVUdsGQKCw9VTUneVyWu6hXc1jDu2ywxa2bHxl",
+    "text": "Together we cut, 90day. To\n30 vs. 10%\n🤝",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2025-05-09T12:37:40.000Z",
+    "timestamp": 1746794260,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid06ZSmdYnxxV5LsS7AAWqwXaSaUG8U45UDHFNY4VZvERA5zbJuXniwgVrK7UFexfjml",
+    "text": "Nhân tiện note hôm trước, hôm qua là phiên auction loại 30yr bond được chú ý, khá soft với auction tails ~0.8bps. Nhưng đặc biệt là indirect bidding với tỷ lệ thấp nhất kể từ 2019, trong khi dealers cũng thấp. Auction stopped cao hơn đến 25bps vs. Average (6ss). Under pressure cả ngoài và trong nước.\n.\nTuy nhiên, điểm thú vị là Fed mua 30yr. Nôm na là cho CP vay 30 năm. Nhưng đọc đến đây thì xem lại note trước mình để ở cmmt để tránh nhầm lẫn. \n.\nRồi, bạn nghĩ gì nếu giả sử 1 NHTW cho BTC/CP vay, vd thông qua mua trực tiếp trái phiếu 15-30 năm, hoặc giả mua TP hoặc cho vay hoặc \"mua\" một gói  \"tương tự trái phiếu\" của NHTM có kỳ hạn 15-30 năm?",
+    "banks": [],
+    "topic": "interest_macro",
+    "media": [
+      {
+        "thumbnail": "https://scontent.fosu3-1.fna.fbcdn.net/v/t39.30808-6/515051670_24204274982546947_8079402120982020180_n.jpg?stp=dst-jpg_tt6&cstp=mx720x925&ctp=p526x296&_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=R-y3hkwY7YYQ7kNvwGyXckf&_nc_oc=Adr8jBgjMdT7wjUPANXgNr_b0YUonVKHLufMOrssY7Y0JuXNeUDZ78xdGKOYQfH-rOI&_nc_zt=23&_nc_ht=scontent.fosu3-1.fna&_nc_gid=RK3AkT4G-v9oboxo8wZeLg&_nc_ss=72289&oh=00_AQGWQtAKi9waGOCDHATf7RNbU3vXew52fBzagVPgYsq7yA&oe=6A8A039A",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent.fosu3-1.fna.fbcdn.net/v/t39.30808-6/515051670_24204274982546947_8079402120982020180_n.jpg?stp=dst-jpg_tt6&cstp=mx720x925&ctp=p526x296&_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=R-y3hkwY7YYQ7kNvwGyXckf&_nc_oc=Adr8jBgjMdT7wjUPANXgNr_b0YUonVKHLufMOrssY7Y0JuXNeUDZ78xdGKOYQfH-rOI&_nc_zt=23&_nc_ht=scontent.fosu3-1.fna&_nc_gid=RK3AkT4G-v9oboxo8wZeLg&_nc_ss=72289&oh=00_AQGWQtAKi9waGOCDHATf7RNbU3vXew52fBzagVPgYsq7yA&oe=6A8A039A",
+          "height": 676,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=10002828593118157&set=a.2028510173883412",
+        "id": "10002828593118157",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6MTAwMDI4MjU5MzMxMTg0MjM="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-05-09T02:42:38.000Z",
+    "timestamp": 1746758558,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02Cav78s3cJnu6st5bMtjDiJFL2RxuW8vLhbDJ3yRQbkRqjahWUDT4kDkQijUkHV3Pl",
+    "text": "Wow, lướt thông tin Q1 thấy bạn BNP... ORWA ++ (delta ORWA còn lớn hơn cả market MRWA). Có thể do new SA OpRisk takes effect?\n\nPic: Ben Ali",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent.fosu3-1.fna.fbcdn.net/v/t39.30808-6/514673270_24204270035880775_2804430468458238077_n.jpg?stp=dst-jpg_tt6&cstp=mx720x402&ctp=s720x402&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ENapS8C5VE4Q7kNvwF4W3Y2&_nc_oc=AdrnKcurfZIYRZwtpw1E6WaIxd8OUsZhe4oj3egfbZ9FgT_Bmhw4pW55NVliOD5ajWk&_nc_zt=23&_nc_ht=scontent.fosu3-1.fna&_nc_gid=RK3AkT4G-v9oboxo8wZeLg&_nc_ss=72289&oh=00_AQFTwyJIeoyFMc-An1xnHKYxRAxhK4YW2gSLZIM_SDinng&oe=6A89D6E8",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent.fosu3-1.fna.fbcdn.net/v/t39.30808-6/514673270_24204270035880775_2804430468458238077_n.jpg?stp=dst-jpg_tt6&cstp=mx720x402&ctp=s720x402&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ENapS8C5VE4Q7kNvwF4W3Y2&_nc_oc=AdrnKcurfZIYRZwtpw1E6WaIxd8OUsZhe4oj3egfbZ9FgT_Bmhw4pW55NVliOD5ajWk&_nc_zt=23&_nc_ht=scontent.fosu3-1.fna&_nc_gid=RK3AkT4G-v9oboxo8wZeLg&_nc_ss=72289&oh=00_AQFTwyJIeoyFMc-An1xnHKYxRAxhK4YW2gSLZIM_SDinng&oe=6A89D6E8",
+          "height": 402,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9999213073479709&set=a.2029578063776623",
+        "id": "9999213073479709",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTk5OTIxMzI2NjgxMzAyMw=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-05-09T01:06:05.000Z",
+    "timestamp": 1746752765,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0s54bkQyNgeEpsfeMBAyyQQTVGH3TWUApKgfnbaMXCvWWN7khwJ1FypkAUkDsNiBgl",
+    "text": "",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2025-05-07T04:42:35.000Z",
+    "timestamp": 1746592955,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid08R8H5NxkKxsRGW9X9haN9g4xiaTxnz7umUMQHYpAU7oDiMtCyXPpNoM8bEv6B5HZl",
+    "text": "VN PMI, sub-components\nStalling...\nNew Export Orders: 44.4\nStocks of Purchases 43 while Backlogs 43.5 -> -Employment",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/515490255_24204095502564895_7470711947608974693_n.jpg?stp=dst-jpg_tt6&cstp=mx640x165&ctp=s640x165&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=3eKbLnXyxMUQ7kNvwHnuD0c&_nc_oc=AdqXu-JHowB2ms6tLnadw_aMuqTTgzToJgGY3GFREHSs5_QOIktvV3QHuM7HXdEya0g&_nc_zt=23&_nc_ht=scontent-atl3-1.xx&_nc_gid=PMOk710kVCsJqHC-0MTBQA&_nc_ss=72289&oh=00_AQFxUQqK0QfLz9qwCJ6SAFJVkwFALFXAaf14n4uUa-kEcQ&oe=6A89EC62",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/515490255_24204095502564895_7470711947608974693_n.jpg?stp=dst-jpg_tt6&cstp=mx640x165&ctp=s640x165&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=3eKbLnXyxMUQ7kNvwHnuD0c&_nc_oc=AdqXu-JHowB2ms6tLnadw_aMuqTTgzToJgGY3GFREHSs5_QOIktvV3QHuM7HXdEya0g&_nc_zt=23&_nc_ht=scontent-atl3-1.xx&_nc_gid=PMOk710kVCsJqHC-0MTBQA&_nc_ss=72289&oh=00_AQFxUQqK0QfLz9qwCJ6SAFJVkwFALFXAaf14n4uUa-kEcQ&oe=6A89EC62",
+          "height": 165,
+          "width": 640
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9982656661802017&set=a.2029578063776623",
+        "id": "9982656661802017",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTk4MjY1Njg2MTgwMTk5Nw=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-05-06T09:12:37.000Z",
+    "timestamp": 1746522757,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0rWX1g24Y2gpWERotoudJ5ypcfmKtFv8U4zQL8ZGEZTdQEuVGJhqctrfQU5w8kmwdl",
+    "text": "Sáng nay có một bạn hỏi nghiệp vụ này, đặc biệt có một số fbers \"tán\" suy luận Fed đã phải can thiệp, trở lại QE, \"bơm tiền\"...\nNếu bạn không hiểu đủ sâu nhưng đọc những \"câu chuyện\" dẫn dắt ntn rất khó để nhìn nhận đúng đắn. Thậm chí nhiều chuyên gia lâu năm trên thị trường (nước ngoài) còn nhầm lẫn.\n.\nTheo dõi các phiên auctions của Treasury thì không lạ gì, kết quả như hình bên dưới. Mình vào Treasury Direct để in một vài phiên gần đây để các bạn xem (xem hình ở cmmt, lưu ý ko phải ai cũng vào Treasury Direct xem đc kq, :-d), nó là hoạt động bình thường, chứ không như bài viết bên dưới. \n.\nNói thêm vì sao có nghiệp vụ này. Nhưng trước tiên nhắc lại là (NY) Fed tham gia auction sơ cấp, tức mua trực tiếp từ Treasury phát hành chứ không phải trên thị trường. Còn lại đây là hoạt động quản lý bảng cân đối của họ trong quá trình thực thi QT hay giảm quy mô nắm giữ các loại GTCG (balance sheet normalization, quản lý SOMA). \nLộ trình giảm lượng này theo các quyết định ở các cuộc họp FOMC, cụ thể là cơ cấu và tốc độ giảm (pace). Giảm một cách passive theo thời gian đáo hạn của lượng GTCG (maturity distribution, lượng này biết trước) họ đang nắm nhưng không quá pace khống chế trần (cap) - tức lượng tối đa được giảm trong một kỳ (tháng). Ví dụ giảm 5b với UST. Nhưng lượng đáo hạn trong kỳ thì có thể lớn hơn, ví như có thể đáo hạn đến 35b chẳng hạn. Theo cơ chế, họ sẽ thực hiện reinvestment (tái đầu tư, mua) lại một lượng vượt là 30b bổ sung vào SOMA book. So với trước đây QT với pace cao - 25b chẳng hạn, thì khi QT càng giảm, tức là pace thấp xuống thì lượng reinvest càng tăng lên khi excess cap cao lên, nên chúng ta sẽ thấy tần suất và amount đấu thầu nhiều hơn. Tất nhiên là phụ thuộc vào maturity distribution của SOMA book ở trên.\nCơ chế reinvestment này thực hiện thông qua tham gia trực tiếp đấu thầu các phiên của Treasury. Nhưng đấu theo kiểu không cạnh tranh và add-on, tức là mua bổ sung lượng cần mua dựa trên kết quả ĐÃ trúng thầu của phiên đấu thầu đó mà các bên khác tham gia. Ví dụ như phiên 5/5, loại note 3 yr như hình bên dưới, kết quả của \"market\" tham gia đấu thầu cho lô chào bán 58b đã done, sau đó Fed \"chỉ việc\" mua thêm 20b với giá done trên. \n.\nCũng nói thêm, họ sẽ mua lại theo cơ cấu với các loại khác nhau, chứ không chỉ mỗi khoản 20b như trong hình, 20b ở đây chỉ là một loại kỳ hạn (3y note) thôi, bên cạnh còn gần 10b bills... Báo chí hay các bên thỉnh thoảng capture được infos như hình hay nhầm lẫn là chừng đó hoặc thậm chí kết luận như đầu bài viết...\n.\nTrong cmmt mình có print một số kỳ hạn khác (bill, note) mà SOMA tham gia vừa qua.",
+    "banks": [],
+    "topic": "interest_macro",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/515323140_24203975049243607_6805342715865785109_n.jpg?stp=dst-jpg_tt6&cstp=mx720x1203&ctp=p526x296&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=vz2soO9P45UQ7kNvwFCmcl4&_nc_oc=AdqNqgIZACaWfhxYEZIwBpbTcdC6JPZ8q5Ik53fuTUhK69t-iPsA37p09K3OYxuHJf4&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=PMOk710kVCsJqHC-0MTBQA&_nc_ss=72289&oh=00_AQG0Wdhj4I0TaYcRXI3WrrR11H7lvKhMY0Z5nClXT9gAzg&oe=6A8A0D0E",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/515323140_24203975049243607_6805342715865785109_n.jpg?stp=dst-jpg_tt6&cstp=mx720x1203&ctp=p526x296&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=vz2soO9P45UQ7kNvwFCmcl4&_nc_oc=AdqNqgIZACaWfhxYEZIwBpbTcdC6JPZ8q5Ik53fuTUhK69t-iPsA37p09K3OYxuHJf4&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=PMOk710kVCsJqHC-0MTBQA&_nc_ss=72289&oh=00_AQG0Wdhj4I0TaYcRXI3WrrR11H7lvKhMY0Z5nClXT9gAzg&oe=6A8A0D0E",
+          "height": 879,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9975401389194211&set=a.2029578063776623",
+        "id": "9975401389194211",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTk3NTQwMTYwMjUyNzUyMw=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-05-06T00:51:27.000Z",
+    "timestamp": 1746492687,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02somCxSB6F9Nvpaaxbmb6x8d1h77bcdkiM442kPneB5J4PvzSdKi8LH7T65FxgpMUl",
+    "text": "",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2025-05-06T00:24:55.000Z",
+    "timestamp": 1746491095,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid01LH4xweboU24SwLoPTPZipYJW3CcHAXZDL3UPspJYsM7g7XEn25bVX9T48WUGPcbl",
+    "text": "Quản lý danh mục tài sản của các family offices.\n\nDữ liệu UBS.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lax7-1.xx.fbcdn.net/v/t39.30808-6/514368850_24203926712581774_5537941191281378348_n.jpg?stp=dst-jpg_tt6&cstp=mx658x701&ctp=p180x540&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=taoXwC1oHeMQ7kNvwHi7SqZ&_nc_oc=AdrvMykC2zfkMlONngfnlLBhvBa2ZTMTexTd1_CF7QNSK9WcoUOlzfiovzB99Bgt67s&_nc_zt=23&_nc_ht=scontent-lax7-1.xx&_nc_gid=LU-j9q97QOLddKSjvi6aAA&_nc_ss=72289&oh=00_AQF9uLxTrJx16jKNw6Cfpa7yOlkl5m-_7ELPE5ISdZH2KA&oe=6A89DBA6",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lax7-1.xx.fbcdn.net/v/t39.30808-6/514368850_24203926712581774_5537941191281378348_n.jpg?stp=dst-jpg_tt6&cstp=mx658x701&ctp=p180x540&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=taoXwC1oHeMQ7kNvwHi7SqZ&_nc_oc=AdrvMykC2zfkMlONngfnlLBhvBa2ZTMTexTd1_CF7QNSK9WcoUOlzfiovzB99Bgt67s&_nc_zt=23&_nc_ht=scontent-lax7-1.xx&_nc_gid=LU-j9q97QOLddKSjvi6aAA&_nc_ss=72289&oh=00_AQF9uLxTrJx16jKNw6Cfpa7yOlkl5m-_7ELPE5ISdZH2KA&oe=6A89DBA6",
+          "height": 540,
+          "width": 507
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9972478596153157&set=a.2029578063776623",
+        "id": "9972478596153157",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTk3MjQ3ODcwNjE1MzE0Ng=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-05-05T15:37:00.000Z",
+    "timestamp": 1746459420,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid017idwdrX3BmUCgmEfRjYxLgiaCNG1q86H4DezSLCkXo8Yepfvd9zBM5yLmaVKesYl",
+    "text": "Hôm nay chú ý cũng tiếp tục với vicious cycle USDTWD, các lifers (life insurers & ALM), có thời điểm market tê liệt, trong khi monetary authority có những tính toán riêng trong bối cảnh trade talk với US.\nUT 1-month forward vượt 28.28\n.\nKRW và JPY lớn nhưng được đánh giá quy mô unhedged và mismatch không như Đài.\n.\nMột số kế hoạch của các lifers lớn của JP:",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-6/514487051_24203892042585241_183865221588039783_n.jpg?stp=dst-jpg_tt6&cstp=mx720x483&ctp=s720x483&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=nNapx9BEguQQ7kNvwFCGiXt&_nc_oc=AdoCXL7jSU-QhD6vzB2z-AHF0YmbCwKgBPvgaihiByOTSCSD8SC7j_D2gcmmV1FV-Qw&_nc_zt=23&_nc_ht=scontent-lax3-1.xx&_nc_gid=LU-j9q97QOLddKSjvi6aAA&_nc_ss=72289&oh=00_AQF6WzZr4J_izWcVMb7zPD4wxp7PTeuOqCxPN9utLzokQw&oe=6A8A0EF6",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-6/514487051_24203892042585241_183865221588039783_n.jpg?stp=dst-jpg_tt6&cstp=mx720x483&ctp=s720x483&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=nNapx9BEguQQ7kNvwFCGiXt&_nc_oc=AdoCXL7jSU-QhD6vzB2z-AHF0YmbCwKgBPvgaihiByOTSCSD8SC7j_D2gcmmV1FV-Qw&_nc_zt=23&_nc_ht=scontent-lax3-1.xx&_nc_gid=LU-j9q97QOLddKSjvi6aAA&_nc_ss=72289&oh=00_AQF6WzZr4J_izWcVMb7zPD4wxp7PTeuOqCxPN9utLzokQw&oe=6A8A0EF6",
+          "height": 483,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9969426649791685&set=a.2028510173883412",
+        "id": "9969426649791685",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTk2OTQyNjc1NjQ1ODM0MQ=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-05-05T01:43:19.000Z",
+    "timestamp": 1746409399,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0u5NWSFmMQ2BnXs4GNZTJtNBereShpLBzM2jdwveeNTqQW64DNpQF356GAAnNFnefl",
+    "text": "Cụ Warren Buffett đã thông báo tại AGM 2025 của Berkshire Hathaway rằng ông sẽ từ chức CEO vào cuối năm.\nHuyền thoại xứ Omaha quyết định nghỉ hưu ở tuổi 94!\n\nPS: bên lề, hơn 20 năm trước, cụ WB cũng đã từng đề cập \"the way to fix the problem\" trade deficit của US với ICs - Import Certificates.\nPPS. Cụ cũng là tay options writer khét tiếng (nếu không muốn nói là thuộc loại lớn nhất), gđ 2004-2008 cụ BÁN put options cả 4 chỉ số chính S&P500, FTSE100, Nikkei 225, Euro Stoxx 50 với notional exposure lên đến khoảng 37b, premiums recieved gần 5b. GFC xảy ra khiến có lúc lỗ (non-cash, after tax) lên đến hơn 3.2b... cho đến khi thị trường hồi phục.",
+    "banks": [],
+    "topic": "cfa_updates",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-6/514717649_24203836579257454_7313322842912711104_n.jpg?stp=dst-jpg_tt6&cstp=mx720x423&ctp=s720x423&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=VKwdbL7XnagQ7kNvwEGTeDp&_nc_oc=AdrBoQ1TfdfemmEH7RAPNhnBNw2vx8UrTarrId7phe0PwViMgss7vh_RS1KJEp6cWRk&_nc_zt=23&_nc_ht=scontent-lax3-1.xx&_nc_gid=LU-j9q97QOLddKSjvi6aAA&_nc_ss=72289&oh=00_AQFOfcVOGtFG8UQAxzltkUCYzOdtfdXuX9tbJrRU5WQJmA&oe=6A8A074C",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF000000",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-6/514717649_24203836579257454_7313322842912711104_n.jpg?stp=dst-jpg_tt6&cstp=mx720x423&ctp=s720x423&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=VKwdbL7XnagQ7kNvwEGTeDp&_nc_oc=AdrBoQ1TfdfemmEH7RAPNhnBNw2vx8UrTarrId7phe0PwViMgss7vh_RS1KJEp6cWRk&_nc_zt=23&_nc_ht=scontent-lax3-1.xx&_nc_gid=LU-j9q97QOLddKSjvi6aAA&_nc_ss=72289&oh=00_AQFOfcVOGtFG8UQAxzltkUCYzOdtfdXuX9tbJrRU5WQJmA&oe=6A8A074C",
+          "height": 423,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9964787310255619&set=a.2029578063776623",
+        "id": "9964787310255619",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTk2NDc4NzQ0MDI1NTYwNg=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-05-04T07:11:41.000Z",
+    "timestamp": 1746342701,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02L2J9DQFPNF1NUN457hhYgdydvwuynqs5nvb8FTkH6ddMhLCRojvBMFBihGqVDzVtl",
+    "text": "Các bạn IMF có vẻ bi quan hoặc mô hình phản ứng thái quá với các biến động gần đây? Cụ thể external shocks trong khi khu vực domestic (tư và công) và những cải cách và chính sách đang có những chuyển biến tích cực hơn. \n\nMình ít khi tham khảo số dự báo của các tổ chức như IMF hay WB, nhưng quan tâm đến các thay đổi drivers và outlook của họ, cũng như nghĩ rằng đây là những tổ chức có mức độ giao tiếp và thâm nhập định hướng và chính sách của VN rất tốt.\n.\nNhớ giai đoạn 2022, từ q2 mình có post kỳ vọng q3 sẽ rất cao, q3 thì mình có nói sau đỉnh cao sẽ là khoảng trống (vực sâu) bởi quá nhiều vấn đề ĐỒNG THỜI xảy ra ở cả khu vực kt thực và tài chính, cả trong và ngoài (bi quan cực độ), nhưng cũng cho rằng, những nền kt như VN, thông qua proxy như GDP, thì GDP tăng 3,5 - 4% (yoy) cũng có thể xem là suy thoái rồi. Và đó là lần gần nhất nghĩ đến mức thấp như vậy. Hiện IMF's projection mới thấy lại.\n.\nMột điểm chú ý nữa là IMF có steeper downgrade do external shocks và domestic demand weakness nhưng với VN thì hệ số (gearing hoặc độ sensitive) cao nhất vs. mức chung của khu vực cho tích lũy 2 năm 2025-26!",
+    "banks": [],
+    "topic": "sbv",
+    "media": [
+      {
+        "thumbnail": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/514966555_24203777179263394_7721789376369878032_n.jpg?stp=dst-jpg_tt6&cstp=mx720x943&ctp=p526x296&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=2z5oHbSkdM0Q7kNvwGWhFnW&_nc_oc=Adq76kmeU_fkRH9TP-b4u9mGU8NF5EstrhOM4yF4YN70wevn0-e4NM8cHrwanG008io&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=41prtG49N7JlPQXT4jwkXg&_nc_ss=72289&oh=00_AQEPpRw27yHG0Z_VBsX-pEsTgK4LqeTbCOztyr4_B5uBEQ&oe=6A89E120",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/514966555_24203777179263394_7721789376369878032_n.jpg?stp=dst-jpg_tt6&cstp=mx720x943&ctp=p526x296&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=2z5oHbSkdM0Q7kNvwGWhFnW&_nc_oc=Adq76kmeU_fkRH9TP-b4u9mGU8NF5EstrhOM4yF4YN70wevn0-e4NM8cHrwanG008io&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=41prtG49N7JlPQXT4jwkXg&_nc_ss=72289&oh=00_AQEPpRw27yHG0Z_VBsX-pEsTgK4LqeTbCOztyr4_B5uBEQ&oe=6A89E120",
+          "height": 689,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9958626397538377&set=a.2029578063776623",
+        "id": "9958626397538377",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTk1ODYyNjU5MDg3MTY5MQ=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-05-01T04:07:53.000Z",
+    "timestamp": 1746072473,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid029hw8pz4Cq27zDDPBt4BBgM8FfTcHLjkzKveDSBaw32W3kYfmhK42pUKvXc9Uu2sbl",
+    "text": "Sáng có bạn gửi hình này, thật ra nó cũng misleading như bài của Vietnam+ hôm qua mình có đề cập (trước khi có số công bố GDP lần 1 -advance) vv cho rằng nhập khẩu làm tăng trưởng GDP giảm. \n.\nNhập khẩu cao cũng không bất ngờ. Nhưng... xuất khẩu dịch vụ lại contribution âm và sự chậm lại trong việc xây dựng các factory!\nNhìn chung core GDP + Exports có yếu đi nhưng không quá bi đát. Còn sau tariff day, mọi thứ trở nên khó đoán hơn. Liệu có sự chuyển dịch hiện thực hóa kỳ vọng, tâm lý (rất yếu) thành hành động và kết quả hay không, từ tiêu dùng đến đầu tư. \n.\nMột vài tín hiệu phía báo cáo labor market khi Job openings (demand) có giảm, điều này vẫn chưa xấu nếu ở vùng toàn dụng và lay-off vẫn ổn (tức thấp), nhưng nó cho thấy sự hạn chế về nổ lực mở rộng hđ sxkd. Ngược lại, khi lay off bắt đầu tăng lên, mọi thứ sẽ xấu đi với xu hướng Job openings như thế này. Đến lượt, tác động trở lại tâm lý và chi tiêu...\n.\nHoặc nếu cuộc cách mạng kéo thành công \"đám mây\" sản xuất về, JO sẽ khả quan và tạo nên một điểm mà T có thể sẽ vin vào... xem kìa, chúng ta đang tuyển dụng lao động sx chưa từng có (và che đi cấu phần phải tăng nhập khẩu lao động (dịch vụ) và lấp đầy bằng nhiều robot)? (Jff)\n.\nP/s. Khu vực công quý rồi đóng góp âm vào GDP, Doge hành động tất nhiên ảnh hưởng nhiều chiều, nhưng khác với VN, chúng ta nghe đâu tổng mức chi trả cho việc tinh gọn nhân sự dự kiến tăng lên?",
+    "banks": [],
+    "topic": "deals_corp",
+    "media": [
+      {
+        "thumbnail": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/514866161_24203636139277498_1143070823245183713_n.jpg?stp=dst-jpg_tt6&cstp=mx720x633&ctp=s590x590&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=jDuv7mAWbGkQ7kNvwE-x_wh&_nc_oc=Adr_ununpD6MXEM05dGJMZ93O9s3yx-tVlH6I41qxwP0C4VF1w1AMH6ge7WdK4DmV38&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=41prtG49N7JlPQXT4jwkXg&_nc_ss=72289&oh=00_AQHH4ZVj_EsRRWyQjZ_E-y-V4FVx6KTdGKupCdTw08tSnQ&oe=6A89DEAD",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/514866161_24203636139277498_1143070823245183713_n.jpg?stp=dst-jpg_tt6&cstp=mx720x633&ctp=s590x590&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=jDuv7mAWbGkQ7kNvwE-x_wh&_nc_oc=Adr_ununpD6MXEM05dGJMZ93O9s3yx-tVlH6I41qxwP0C4VF1w1AMH6ge7WdK4DmV38&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=41prtG49N7JlPQXT4jwkXg&_nc_ss=72289&oh=00_AQHH4ZVj_EsRRWyQjZ_E-y-V4FVx6KTdGKupCdTw08tSnQ&oe=6A89DEAD",
+          "height": 519,
+          "width": 590
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9932794846788199&set=a.2029578063776623",
+        "id": "9932794846788199",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTkzMjc5NTE0MzQ1NDgzNg=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-04-29T09:36:12.000Z",
+    "timestamp": 1745919372,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02fQccd6tGmkooSM4aCytcNp2taay3k6T28WjRGi1imFwcb4QgS2a3Ty6tcztmNCPyl",
+    "text": "Combo gia cố.\nVới TLAC, big5 dự kiến cần thêm khoảng 2.5k tỷ Tệ. Đợt trước trong kế hoạch, CN dự kiến phát hành 500 tỷ tệ special government bonds để hỗ  trợ recapitalization.",
+    "banks": [],
+    "topic": "promos_courses",
+    "media": [
+      {
+        "thumbnail": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/514407994_24203475939293518_1285205290317023171_n.jpg?stp=dst-jpg_tt6&cstp=mx720x322&ctp=s720x322&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=YhsyTDXUdmEQ7kNvwEeotqg&_nc_oc=AdpPk1iAaSPUOAhAaNyYbn08r26gsDLQzmpBoA_UJDKnn7LQ44kmc_1EtLASERARXkU&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=41prtG49N7JlPQXT4jwkXg&_nc_ss=72289&oh=00_AQE0RegNgVBKt4PAHdYQESt-vZghpGUc46ifzWroc8ZwXw&oe=6A8A088B",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/514407994_24203475939293518_1285205290317023171_n.jpg?stp=dst-jpg_tt6&cstp=mx720x322&ctp=s720x322&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=YhsyTDXUdmEQ7kNvwEeotqg&_nc_oc=AdpPk1iAaSPUOAhAaNyYbn08r26gsDLQzmpBoA_UJDKnn7LQ44kmc_1EtLASERARXkU&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=41prtG49N7JlPQXT4jwkXg&_nc_ss=72289&oh=00_AQE0RegNgVBKt4PAHdYQESt-vZghpGUc46ifzWroc8ZwXw&oe=6A8A088B",
+          "height": 322,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9917980058269678&set=a.2029578063776623",
+        "id": "9917980058269678",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTkxNzk4MDIyMTYwMjk5NQ=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-04-29T01:40:54.000Z",
+    "timestamp": 1745890854,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0UxHDteDWDVcwVgfz6az8HzTEBpvK8ZhQUcK1RkiKi63hmEHnP56HbR7VeECjJe7Bl",
+    "text": "Theo các bạn ý giải thích nào trong hình bên dưới là không chính xác?\n[Hình như trước đây bộ sậu của TT Trump cũng sử dụng lập luận này (nhập khẩu làm giảm tăng trưởng GDP, cụ thể là giảm Nx --> giảm GDP khi sử dụng... GDP ~ C + I + G + Nx) để bổ trợ cho việc \"lấy lại\" cân bằng thương mại, nên cũng không bất ngờ khi truyền thông phương tây có nhiều bài dẫn dắt như vậy. :-d]\n.\nNhưng có một thực trạng, (cùng với sự phát triển của các nền tảng mua sắm online), tiêu dùng nội địa có thể bị \"leak\".\nVd khu households cân đối lại chi tiêu và ưu tiên dùng hàng giá rẻ phù hợp với gia đình thì họ có thể ưu tiên dùng hành nhập khẩu theo tiêu chí đó như của TQ chứ không phải nội địa (nói thẳng ra là ko cạnh tranh khi hàng TQ \"tràn vào\" và hành vi tiêu dùng ưu tiên). Nói rộng ra là tiêu dùng, nhưng không phải nội địa mà từ nhập khẩu không còn là câu chuyện của phân vị thu nhập trung bình cao mà có thể ở cả những phân vị thấp hơn. Chúng ta đang có tăng trưởng tiêu dùng thấp, vậy thực ra có thể là thấp hơn trong đóng góp GDP.\n.\nHàn Quốc là nền kt hiếm hoi thần kỳ bước vào nhóm thu nhập cao ngay cả khi có đóng góp của tiêu dùng trong GDP (tỷ trọng) thấp và giữ được tốc độ tăng trưởng cao sau đó (trong 10 năm tiếp theo) so với nhóm các nền kt phát triển. \n.\nCũng câu chuyện trao đổi hôm trước, tỷ giá, hay USDVND thấp nhất mọi thời đại, các tỷ giá chéo... \nỞ một khía cạnh, thì cũng góp phần tăng cạnh tranh trong xk dịch vụ như du lịch và lan tỏa đến các spdv, tiêu dùng khu vực liên quan, tất nhiên +GDP, nhưng khác với đóng góp từ \"nội địa\".\n.\nTrở lại với câu hỏi trên, bạn nhập hàng, vd TQ để tiêu dùng, first order, ghi nhận (\"hạch toán\") có \"làm\" GDP giảm không? \nSau đó xét thêm các round khác, vd hiệu ứng thay thế trong hàng tiêu dùng, tác động động đến khu vực sx,kd,đt nội địa?",
+    "banks": [],
+    "topic": "exchange_fx",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/515742087_24203472525960526_2824592326304390591_n.jpg?stp=dst-jpg_tt6&cstp=mx720x385&ctp=s720x385&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=hxJM3FybOn8Q7kNvwFVQJ2w&_nc_oc=AdpMONMEJxK6fUViQ75XAwaWWNGRbOU2ng6MEF4tLpWsgHBS4Dk2HIJBFsudr_eTDsI&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=k3uPi_cvwOGoPsAvQOAT8A&_nc_ss=72289&oh=00_AQGTOAzjXOQnbv-I0hJwYSTB_qP48g3TlTVA0h4jC2OqTQ&oe=6A89FCCF",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/515742087_24203472525960526_2824592326304390591_n.jpg?stp=dst-jpg_tt6&cstp=mx720x385&ctp=s720x385&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=hxJM3FybOn8Q7kNvwFVQJ2w&_nc_oc=AdpMONMEJxK6fUViQ75XAwaWWNGRbOU2ng6MEF4tLpWsgHBS4Dk2HIJBFsudr_eTDsI&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=k3uPi_cvwOGoPsAvQOAT8A&_nc_ss=72289&oh=00_AQGTOAzjXOQnbv-I0hJwYSTB_qP48g3TlTVA0h4jC2OqTQ&oe=6A89FCCF",
+          "height": 385,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9915269208540763&set=a.2029578063776623",
+        "id": "9915269208540763",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTkxNTI2OTMyODU0MDc1MQ=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-04-28T04:39:47.000Z",
+    "timestamp": 1745815187,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0eAD5rikkrZs7y4YvN2LqeKNjv2UApHpFF2m8PbxaaG3hPoy4ELryjBJybQUa5VDml",
+    "text": "Haha, \"đối tượng\" mục tiêu là \"ông\" GDP hay người dân, doanh nghiệp?\nCũng chưa thấy đề cập để người dân, doanh nghiệp đạt được abc thì đối tượng là \"ông\" CHÍNH SÁCH phải tăng gấp đôi hiệu quả, gấp đối kiến tạo xx, gấp đôi yy và giảm đi một nửa zz...?\n\nChi tiêu của người dân (nội địa) là kết quả của tổng hợp nhiều yếu tố phức tạp. Dễ thì ông CN, ông Nhật ... đã có khẩu hiệu: vì GDP, bà con chịu khó chi tiêu gấp rưỡi, gấp đôi lên.",
+    "banks": [],
+    "topic": "sbv",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/514406206_24203461592628286_6670138534073635787_n.jpg?stp=dst-jpg_tt6&cstp=mx720x245&ctp=s720x245&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=54A5x1Ey7EAQ7kNvwHc5h_l&_nc_oc=AdoS_HB0byNrTXM5PMBVUiIexpKUIaqHlVQKiv9hcZ-NK_D6SQywRpCGUPcbrfao680&_nc_zt=23&_nc_ht=scontent-atl3-1.xx&_nc_gid=k3uPi_cvwOGoPsAvQOAT8A&_nc_ss=72289&oh=00_AQFzs7NZ0kbFipmubk5VXFpvXtN3vcucGwPWTnmFXloU-Q&oe=6A89F9C2",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/514406206_24203461592628286_6670138534073635787_n.jpg?stp=dst-jpg_tt6&cstp=mx720x245&ctp=s720x245&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=54A5x1Ey7EAQ7kNvwHc5h_l&_nc_oc=AdoS_HB0byNrTXM5PMBVUiIexpKUIaqHlVQKiv9hcZ-NK_D6SQywRpCGUPcbrfao680&_nc_zt=23&_nc_ht=scontent-atl3-1.xx&_nc_gid=k3uPi_cvwOGoPsAvQOAT8A&_nc_ss=72289&oh=00_AQFzs7NZ0kbFipmubk5VXFpvXtN3vcucGwPWTnmFXloU-Q&oe=6A89F9C2",
+          "height": 245,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9908619659205718&set=a.2029578063776623",
+        "id": "9908619659205718",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTkwODYxOTc0NTg3MjM3Ng=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-04-24T03:50:54.000Z",
+    "timestamp": 1745466654,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0GirNdM6dNKf91EFB7TZuvFYunDbEc9ByKCMMtRbgvqqiBtj9CZU5WbrguGn5FJE3l",
+    "text": "Bài này, Xie sử dụng các thuật ngữ như \"importer of last resort\" và \"exporter of first order\" hay quá.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/514719676_24203368899304222_4791201503253304173_n.jpg?stp=dst-jpg_tt6&cstp=mx720x1238&ctp=p526x296&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=2XOtysQ8CrYQ7kNvwHN3TJv&_nc_oc=Adpnj4TC5AFCa9R-xV1gDc0VgsJrTRtoMVgJuKmkd0ojsuGDoI9krH9Crnn_nt44RNc&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=k3uPi_cvwOGoPsAvQOAT8A&_nc_ss=72289&oh=00_AQHL_kAfMSLEwG6PR8ByoMMhRzeWPtTgXfv-Rky7w_h-AA&oe=6A89E03E",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/514719676_24203368899304222_4791201503253304173_n.jpg?stp=dst-jpg_tt6&cstp=mx720x1238&ctp=p526x296&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=2XOtysQ8CrYQ7kNvwHN3TJv&_nc_oc=Adpnj4TC5AFCa9R-xV1gDc0VgsJrTRtoMVgJuKmkd0ojsuGDoI9krH9Crnn_nt44RNc&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=k3uPi_cvwOGoPsAvQOAT8A&_nc_ss=72289&oh=00_AQHL_kAfMSLEwG6PR8ByoMMhRzeWPtTgXfv-Rky7w_h-AA&oe=6A89E03E",
+          "height": 904,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9879425288791822&set=a.2029578063776623",
+        "id": "9879425288791822",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTg3OTQyNTQwMjEyNTE0NA=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-04-23T14:38:26.000Z",
+    "timestamp": 1745419106,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid034WJ2ckwRQJ1tsGj24Aa5Xxugwsfdt5XeBnNDnA49HHnBRjYtkaChCmuRGJQpAgTEl",
+    "text": "Bắt đầu. Chúc đoàn VN tinh tấn và thuận lợi.\nSau màn chào hỏi và bắt tay, trao đổi cờ...\nDự kiến sẽ có cuộc tấn công thăm dò (gọi là probing attacks)\nChiến thuật: Gửi các ... \"đội quân\" nhỏ hoặc lính tinh nhuệ để thử nghiệm phòng thủ của đối phương, tìm kiếm điểm yếu hoặc xác định vị trí trọng yếu.\nMục tiêu: Đánh giá sức mạnh và tinh thần của quân thủ thành, đồng thời xác định các vị trí dễ tấn công. :-d\n...",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/514532222_24203319729309139_2600031169112939120_n.jpg?stp=dst-jpg_tt6&cstp=mx720x334&ctp=s720x334&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ll0wPVl2iQ4Q7kNvwF0wB6X&_nc_oc=AdpBt87M12iQp_CdHdhVDqNCJzhsjJn3y6LbX3U7z3MOcfi0TjlkPpa9KQCyKQIUVzY&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=ra7WN4iG8e1fPh71tg8P-w&_nc_ss=72289&oh=00_AQEFBce-WfIlvK7_X2Jqvt6ooeq2pGSK7czZaBdofI5m9Q&oe=6A8A0CA3",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/514532222_24203319729309139_2600031169112939120_n.jpg?stp=dst-jpg_tt6&cstp=mx720x334&ctp=s720x334&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ll0wPVl2iQ4Q7kNvwF0wB6X&_nc_oc=AdpBt87M12iQp_CdHdhVDqNCJzhsjJn3y6LbX3U7z3MOcfi0TjlkPpa9KQCyKQIUVzY&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=ra7WN4iG8e1fPh71tg8P-w&_nc_ss=72289&oh=00_AQEFBce-WfIlvK7_X2Jqvt6ooeq2pGSK7czZaBdofI5m9Q&oe=6A8A0CA3",
+          "height": 334,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9875599129174438&set=a.2029578063776623",
+        "id": "9875599129174438",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTg3NTU5OTI3NTg0MTA5MA=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-04-23T01:05:04.000Z",
+    "timestamp": 1745370304,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0A7xh5ZMgfQiUddRidMEULafZ6E2JwmyJ5QfC8TzNYDEErf7fU6fP9o6JNk7drdxDl",
+    "text": "Tất cả chỉ là hiểu lầm, hiểu lầm.\n\nP/s: Reuters chọn cái hình khá là hợp.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/515501698_24203314409309671_4565506443088782660_n.jpg?stp=dst-jpg_tt6&cstp=mx720x918&ctp=s640x640&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=jyhQEtuRRRUQ7kNvwGC4lbR&_nc_oc=AdqFBRkzKM8YSmAPfnQKfgWycdiXVF5baVgaUeo5ge6huB-cSSVC8bJUuxq7yGA-_7g&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=ra7WN4iG8e1fPh71tg8P-w&_nc_ss=72289&oh=00_AQG6UiWBDXB-FSikqMYtnsrE-rUy3Cf0IedBH0FrbbRfbw&oe=6A89F9F4",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/515501698_24203314409309671_4565506443088782660_n.jpg?stp=dst-jpg_tt6&cstp=mx720x918&ctp=s640x640&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=jyhQEtuRRRUQ7kNvwGC4lbR&_nc_oc=AdqFBRkzKM8YSmAPfnQKfgWycdiXVF5baVgaUeo5ge6huB-cSSVC8bJUuxq7yGA-_7g&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=ra7WN4iG8e1fPh71tg8P-w&_nc_ss=72289&oh=00_AQG6UiWBDXB-FSikqMYtnsrE-rUy3Cf0IedBH0FrbbRfbw&oe=6A89F9F4",
+          "height": 640,
+          "width": 502
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9871552986245719&set=a.2029578063776623",
+        "id": "9871552986245719",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTg3MTU1MzA3OTU3OTA0Mw=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-04-22T04:34:36.000Z",
+    "timestamp": 1745296476,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02JrawskK7mxWTeNNv3KpdT7mYsJZXthoWUPdSKiuMaNmwjQsdHggsGWxqdELx77Lml",
+    "text": "Years ago.",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2025-04-22T03:01:27.000Z",
+    "timestamp": 1745290887,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0JGBiKtqAw1k2YDnnhTXoeyz5b2mYTT7bRXqux8MNJnBYGaxXiyfpddeQHiWbSCr5l",
+    "text": "Nhìn cách người Nhật đóng cửa phòng họp sau khi ra về, tham vọng của các nước đã nổi lên? Kk\n.\nLiệu có khổ tâm hơn, đến nay D.T. vẫn không có quick wins nào liên quan để pin lên tường- MXH.\n\nP/s: nếu bất thình lình yêu cầu... \"cậu mua giúp mình lô trái phiếu 100 năm\" thì nên trả lời sao cho ngầu?",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/516042741_24203306512643794_3780973152537939031_n.jpg?stp=dst-jpg_tt6&cstp=mx720x703&ctp=p526x296&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=_MyfIxFAmzIQ7kNvwG5-UtF&_nc_oc=AdrKs-kKmcv3LX10NDZF18ZDPJzQLKU4-Kaaw3TuhC5BBKeHIofZCSlyaeqDoRMxlSE&_nc_zt=23&_nc_ht=scontent-dfw5-2.xx&_nc_gid=BsO39LpeOGzc40Ki4hoPzg&_nc_ss=72289&oh=00_AQHYFws64zVkHNIwawo6n1JqrsXFXhbcTy9wkW3LcQmA-w&oe=6A89DE0C",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFBFAF6",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/516042741_24203306512643794_3780973152537939031_n.jpg?stp=dst-jpg_tt6&cstp=mx720x703&ctp=p526x296&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=_MyfIxFAmzIQ7kNvwG5-UtF&_nc_oc=AdrKs-kKmcv3LX10NDZF18ZDPJzQLKU4-Kaaw3TuhC5BBKeHIofZCSlyaeqDoRMxlSE&_nc_zt=23&_nc_ht=scontent-dfw5-2.xx&_nc_gid=BsO39LpeOGzc40Ki4hoPzg&_nc_ss=72289&oh=00_AQHYFws64zVkHNIwawo6n1JqrsXFXhbcTy9wkW3LcQmA-w&oe=6A89DE0C",
+          "height": 514,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9865186680215683&set=a.2029578063776623",
+        "id": "9865186680215683",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTg2NTE4NjkyNjg4MjMyNQ=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-04-21T14:58:08.000Z",
+    "timestamp": 1745247488,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0o9gpkTcbpaCdRAGyiWuMDdae97ZTTKWFu7NaDA3tTNGTtZd3AbvwdtjgAhwaoYgJl",
+    "text": "Các thị trường move giống như thể đang... \"sell America\". \n:-d",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2025-04-17T02:49:42.000Z",
+    "timestamp": 1744858182,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02SiKWKUpds6WQpGxSqiygSRiGUuVUyim8bQpnzoi78tRhZCQBDa2jVvibEwY77BGQl",
+    "text": "\"Mặc dù dữ liệu xuất khẩu rất quan trọng và được công bố kịp thời, nhưng nó không nhất thiết phản ánh toàn cảnh, đặc biệt là khi hàng hóa được chuyển hướng để né thuế quan trong một thế giới với chủ nghĩa bảo hộ gia tăng. Phương pháp tiếp cận giá trị gia tăng có thể tránh được việc tính hai lần (các thành phần có thể vượt biên giới nhiều lần trong quá trình sản xuất) và tập trung không chỉ vào sản phẩm cuối cùng mà còn vào hàng hóa trung gian. [...] có thể phản ánh tốt hơn mức độ tiếp xúc theo ngành của nền kinh tế với một số thị trường cuối cùng, qua đó cung cấp cái nhìn sâu sắc hơn về tác động đối với sản xuất và việc làm trong nước.\"\n\nVia. Alicia García Herrero",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/514738301_24203165835991195_1664305387069575117_n.jpg?stp=dst-jpg_tt6&cstp=mx719x356&ctp=s719x356&_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=N2SYMmaR9jgQ7kNvwFMtoem&_nc_oc=Adr2yyoC9cSQYbi_iyk_hb1vad1hIdnvT4X44olCaOBfXCH4jojjbRPlj5QrBbwIZXA&_nc_zt=23&_nc_ht=scontent-dfw5-2.xx&_nc_gid=BsO39LpeOGzc40Ki4hoPzg&_nc_ss=72289&oh=00_AQHjLjOwvJxz18XlIvsOKKE5WjmfsIVkgoEpS2w8fV9gAg&oe=6A89DE44",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/514738301_24203165835991195_1664305387069575117_n.jpg?stp=dst-jpg_tt6&cstp=mx719x356&ctp=s719x356&_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=N2SYMmaR9jgQ7kNvwFMtoem&_nc_oc=Adr2yyoC9cSQYbi_iyk_hb1vad1hIdnvT4X44olCaOBfXCH4jojjbRPlj5QrBbwIZXA&_nc_zt=23&_nc_ht=scontent-dfw5-2.xx&_nc_gid=BsO39LpeOGzc40Ki4hoPzg&_nc_ss=72289&oh=00_AQHjLjOwvJxz18XlIvsOKKE5WjmfsIVkgoEpS2w8fV9gAg&oe=6A89DE44",
+          "height": 356,
+          "width": 719
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9832995993434752&set=a.2028510173883412",
+        "id": "9832995993434752",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTgzMjk4OTQ1MDEwMjA3Mw=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-04-17T02:05:33.000Z",
+    "timestamp": 1744855533,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02kHo8oPGnCBBeqhiNJHAdsb7DFFJ9kRVNJ957RFW83LWdXaprUTvriNi6UnwAWa5ml",
+    "text": "Bài này có một so sánh (bilateral trade between the two countries) đáng chú ý.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-phx1-1.xx.fbcdn.net/v/t39.30808-6/514405198_24203165745991204_8804874430411520874_n.jpg?stp=dst-jpg_tt6&cstp=mx1522x1296&ctp=s590x590&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=pGAS9aakaxEQ7kNvwEy7JGi&_nc_oc=AdpMZLB_yOfWOGE39kiOfmBG0HkcNC3W5mpbNqrgqCNQ01hkqujowFRQsZ7XxruLLN8&_nc_zt=23&_nc_ht=scontent-phx1-1.xx&_nc_gid=mI1wP2Y46DeL65hgmrh6Vg&_nc_ss=72289&oh=00_AQEdVcWedGJMKGsPXgjyB9Tnqp9XOJ6PIuNYI2AeaXRJBQ&oe=6A89F156",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFDF1E5",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-phx1-1.xx.fbcdn.net/v/t39.30808-6/514405198_24203165745991204_8804874430411520874_n.jpg?stp=dst-jpg_tt6&cstp=mx1522x1296&ctp=s590x590&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=pGAS9aakaxEQ7kNvwEy7JGi&_nc_oc=AdpMZLB_yOfWOGE39kiOfmBG0HkcNC3W5mpbNqrgqCNQ01hkqujowFRQsZ7XxruLLN8&_nc_zt=23&_nc_ht=scontent-phx1-1.xx&_nc_gid=mI1wP2Y46DeL65hgmrh6Vg&_nc_ss=72289&oh=00_AQEdVcWedGJMKGsPXgjyB9Tnqp9XOJ6PIuNYI2AeaXRJBQ&oe=6A89F156",
+          "height": 502,
+          "width": 590
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9832796423454709&set=a.2029578063776623",
+        "id": "9832796423454709",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTgzMjc5NjY3MzQ1NDY4NA=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-04-16T01:45:52.000Z",
+    "timestamp": 1744767952,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid07hBx5Z9HqPtntmns4pFKe5svCx5gHqVWqvFRhu4pDKamch6z4FtFQUuPfcFSACcdl",
+    "text": "Stunning numbers! Sự khó khăn trong nắm bắt chính sách thuế là rõ ràng, cũng như thận trọng trong building hàng tồn kho. \nTuy nhiên cần theo dõi thêm bởi dữ liệu so sánh như thế này dễ dẫn đến những kết luận thiên lệch (ở đây là bi quan thái quá). Nói chung những sự kiện (trigger event) như như thuế đối ứng Apr. 2nd là sự kiện lớn, nếu xem là một điểm thì giai đoạn trước đó thường có... front-loading, và sau đó là reactive stalling. Lấy reactive stalling/front-loading...",
+    "banks": [],
+    "topic": "sbv",
+    "media": [
+      {
+        "thumbnail": "https://scontent-phx1-1.xx.fbcdn.net/v/t39.30808-6/515009367_24203125109328601_7600087791257409879_n.jpg?stp=dst-jpg_tt6&cstp=mx720x1514&ctp=p526x296&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=VaWz9xnKdvwQ7kNvwFq00JD&_nc_oc=AdocyXUxylIaKmQadyM7OABu9GLXsYNrQgWlvs73-oH0iNy0tiUHZdOVkehzMIm1lgM&_nc_zt=23&_nc_ht=scontent-phx1-1.xx&_nc_gid=mI1wP2Y46DeL65hgmrh6Vg&_nc_ss=72289&oh=00_AQEzS1AS-O2-s2sjKINdAVrQdgqIXBM41IzFEFytnW0PZw&oe=6A89D8EC",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF000000",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-phx1-1.xx.fbcdn.net/v/t39.30808-6/515009367_24203125109328601_7600087791257409879_n.jpg?stp=dst-jpg_tt6&cstp=mx720x1514&ctp=p526x296&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=VaWz9xnKdvwQ7kNvwFq00JD&_nc_oc=AdocyXUxylIaKmQadyM7OABu9GLXsYNrQgWlvs73-oH0iNy0tiUHZdOVkehzMIm1lgM&_nc_zt=23&_nc_ht=scontent-phx1-1.xx&_nc_gid=mI1wP2Y46DeL65hgmrh6Vg&_nc_ss=72289&oh=00_AQEzS1AS-O2-s2sjKINdAVrQdgqIXBM41IzFEFytnW0PZw&oe=6A89D8EC",
+          "height": 1106,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9825875337480151&set=a.2029578063776623",
+        "id": "9825875337480151",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTgyNTg3NTQ1MDgxMzQ3Mw=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-04-15T01:52:37.000Z",
+    "timestamp": 1744681957,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0WstnZ1CGrJGSubXjLyJnEVHz9k17fRtApHFyKVmyFyhW3scihi6195Xf4VH7RWq9l",
+    "text": "Trong một buổi chiều muộn, nán lại phòng làm việc với khuôn mặt có phần hơi dỗi, Trump buột miệng hỏi Navarro: sách của cậu đoạn này viết chưa rõ...",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-phx1-1.xx.fbcdn.net/v/t39.30808-6/515013824_24203094122665033_2760396898562275270_n.jpg?stp=dst-jpg_tt6&cstp=mx720x815&ctp=s590x590&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=v_06oGYnGJcQ7kNvwGfIBgg&_nc_oc=AdrD7h4uGWrskG3XksmqWeGvVjZvakO8zTTMr_0Js-3nvIzeypjNyRxC-5A9X3hMrJw&_nc_zt=23&_nc_ht=scontent-phx1-1.xx&_nc_gid=mI1wP2Y46DeL65hgmrh6Vg&_nc_ss=72289&oh=00_AQFigOdwRadnVm4yjdtiTl-6B_Yw6ISAf0dA9aNmpV6ZvQ&oe=6A89F8B6",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-phx1-1.xx.fbcdn.net/v/t39.30808-6/515013824_24203094122665033_2760396898562275270_n.jpg?stp=dst-jpg_tt6&cstp=mx720x815&ctp=s590x590&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=v_06oGYnGJcQ7kNvwGfIBgg&_nc_oc=AdrD7h4uGWrskG3XksmqWeGvVjZvakO8zTTMr_0Js-3nvIzeypjNyRxC-5A9X3hMrJw&_nc_zt=23&_nc_ht=scontent-phx1-1.xx&_nc_gid=mI1wP2Y46DeL65hgmrh6Vg&_nc_ss=72289&oh=00_AQFigOdwRadnVm4yjdtiTl-6B_Yw6ISAf0dA9aNmpV6ZvQ&oe=6A89F8B6",
+          "height": 590,
+          "width": 521
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9819030178164667&set=a.2029578063776623",
+        "id": "9819030178164667",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTgxOTAzMDM1MTQ5Nzk4Mw=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-04-15T01:43:48.000Z",
+    "timestamp": 1744681428,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02kXfaR88A6YkHRzTy9ufDyxXcrGJrofU3kQLJR5rr4CZZKAtfiZuKroyL15XNHGqal",
+    "text": "Kéo đám mây, à không, kéo sx về!\n\nP/s: chart 12 không ổn, vd cụ thể nhất là như những năm gần đây, khi theo dõi cấu trúc thị trường lao động và đặc biệt phổ phân bổ lương, kể cả sx hay dịch vụ, độ lệch cao.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/514664582_24203094102665035_4501167325219651584_n.jpg?stp=dst-jpg_tt6&cstp=mx720x458&ctp=s720x458&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=fbiVb7IfZ-AQ7kNvwG6sULx&_nc_oc=Adp0vIg1meLmBz3JAS-6VwM5wMDZolXOmy95ATo3LGKu4mysjPE7zqp8-FR4v8tPI6U&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=lZ2M8pVdoCMdL4OGdUwylw&_nc_ss=72289&oh=00_AQFSkSiwmt_IMh9BLTIvD3U-vSWnTYNvsK7MZju9IijOuQ&oe=6A89DA7C",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/514664582_24203094102665035_4501167325219651584_n.jpg?stp=dst-jpg_tt6&cstp=mx720x458&ctp=s720x458&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=fbiVb7IfZ-AQ7kNvwG6sULx&_nc_oc=Adp0vIg1meLmBz3JAS-6VwM5wMDZolXOmy95ATo3LGKu4mysjPE7zqp8-FR4v8tPI6U&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=lZ2M8pVdoCMdL4OGdUwylw&_nc_ss=72289&oh=00_AQFSkSiwmt_IMh9BLTIvD3U-vSWnTYNvsK7MZju9IijOuQ&oe=6A89DA7C",
+          "height": 458,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9818991648168520&set=a.2029578063776623",
+        "id": "9818991648168520",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTgxODk5MTgyMTUwMTgzNg=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-04-13T04:21:16.000Z",
+    "timestamp": 1744518076,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02mJzGHELdNNwGXnuW8HjMT4kVYQaJPfAQ9ZAkJJ9QBZPd9jj1VgYYuz8MJD5iuV6rl",
+    "text": "Điểm lại tuần vừa qua:\n- Có stresses trên SOFR swaps, cash-futures basis (basis trade) nhưng cơ bản kết tuần đã relatively well behaved.\n- Bear Steepening... (curve steepened ~20bps, long end +~50bps...)\n- Xói mòn nền tảng market (depth & liquidity), nhưng cơ bản vẫn ổn.\n- Longend sell off, tìm kiếm tín hiệu của foreign officials (một vài dữ liệu liên quan nước ngoài thường lag, vd tuần cuối Apr. mới công bố dữ liệu cho tuần rồi.)\n- Fed steps in (intervention)?\n...\nTuần rồi curve biến động mạnh với sell-off của long end, đẩy bear steepening lên cao.\nVề dữ liệu, sự dịu đi của dữ liệu (lag) của (core) CPI và PPI cũng phai mờ trước diễn biến thuế quan --> củng cố cho câu chuyện fundamentals: (soft data) kỳ vọng lạm phát tăng nhanh trong khi niềm tin tiêu dùng giảm mạnh (stagflation). \nTheo đó, những định giá (ngắn hạn) trên đường cong kỳ vọng SOFR (FFR # cuts) cũng nhiễu loạn. \nTrên thị trường trái phiếu, xuất hiện nhiều kỳ vọng liệu Fed sẽ step in can thiệp? \nIf the treasury market goes wrong, everything goes wrong. \nNhiều IBs cho rằng, dù có sự xói mòn điều kiện thị trường nhưng chưa đến mức (market depth và liquidity), Fed chú trọng nhất đến market function và liquidity. Mặt khác, bỏ qua những vấn đề cơ bản hay fundamentals và mandates vốn khiến Fed phải thận trọng như họ explicit trong thời gian qua, một điều khác họ phải cân nhắc một khi step in (quá sớm) đó là khi can thiệp, \"the Fed would be effectively backing a trade war that could have serious negative ramifications for the US economy\". Trước mắt vẫn sử dụng ... OMI* qua trấn an.\n\n...\nTuần rồi nhiều bạn cũng gửi hình như bên dưới. Đúng là đã có sell-off dài hạn và liquidity giảm, cũng như có sự shortages in collateral (loại short end). \nSpreads dài hạn (như hình) vốn đã phản ánh những giới hạn (balance sheet constraints) do quy định, I.e consume more capital đối với không gian bảng cân đối bất kể đó là... UST (tức more expensive, required more compensation khi add trái phiếu). Sắp tới có thể sửa quy định regulatory capital. Nhưng, marginal, biến động một cú như vậy là rất lớn. \nNhưng nhìn chart, \"basis\" lớn vậy tại sao không \"lấp gap\", vd mở +payer Swaps kết hợp long UST? Bạn nào giải thích đúng một điểm cho 10đ. :-d\nHints: Fix leg swaps << UST <-->?\n\nP/s: long bond vẫn có thể qua... long TLT.",
+    "banks": [],
+    "topic": "interest_macro",
+    "media": [
+      {
+        "thumbnail": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/515267681_24203074839333628_1073604864203384020_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x675&ctp=s960x960&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=vOgGSvCzmlwQ7kNvwEAiLHn&_nc_oc=AdopMyOLaZ6D-vCuTgAWEC53MqboniRkcgDKUW85sVeBlpyyhQWs7l7p71DodmdSt5Y&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=lZ2M8pVdoCMdL4OGdUwylw&_nc_ss=72289&oh=00_AQEvyyQbQCmiOFHhrDjv2L-CeJtGDlEyrne9S9rgaQtyaA&oe=6A89EFDC",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/515267681_24203074839333628_1073604864203384020_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x675&ctp=s960x960&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=vOgGSvCzmlwQ7kNvwEAiLHn&_nc_oc=AdopMyOLaZ6D-vCuTgAWEC53MqboniRkcgDKUW85sVeBlpyyhQWs7l7p71DodmdSt5Y&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=lZ2M8pVdoCMdL4OGdUwylw&_nc_ss=72289&oh=00_AQEvyyQbQCmiOFHhrDjv2L-CeJtGDlEyrne9S9rgaQtyaA&oe=6A89EFDC",
+          "height": 540,
+          "width": 960
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9806764369391248&set=a.2029578063776623",
+        "id": "9806764369391248",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTgwNjc2NDU3OTM5MTIyNw=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-04-12T12:20:47.000Z",
+    "timestamp": 1744460447,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02xoAoPWDrRZ8Vtm3MAQot9wb5q6rvps8dWUiWwqqmr8D2JNYKZK1LAZv3Th1dha5rl",
+    "text": "Q1 done (including vol. & imported prices).\nQ2 or 90 days ahead?\n\nP/s: Không biết dữ liệu có điều chỉnh lượng gold nhập chưa.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/515261397_24203067509334361_2429865501533386234_n.jpg?stp=dst-jpg_tt6&cstp=mx667x884&ctp=p526x296&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=A2oM8-eohkQQ7kNvwHA3hCw&_nc_oc=Ado6TPXVFVUXRXIxuZMsgZroPf55y7ZIDqRvI9ZAncaSbqAZaVE5nRCKARfsbPL8TBw&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=lZ2M8pVdoCMdL4OGdUwylw&_nc_ss=72289&oh=00_AQF5OlTBdDh8-ecaQnCbKk-6TXmBUSWo-u6oNTH65W6f_w&oe=6A89DB49",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/515261397_24203067509334361_2429865501533386234_n.jpg?stp=dst-jpg_tt6&cstp=mx667x884&ctp=p526x296&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=A2oM8-eohkQQ7kNvwHA3hCw&_nc_oc=Ado6TPXVFVUXRXIxuZMsgZroPf55y7ZIDqRvI9ZAncaSbqAZaVE5nRCKARfsbPL8TBw&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=lZ2M8pVdoCMdL4OGdUwylw&_nc_ss=72289&oh=00_AQF5OlTBdDh8-ecaQnCbKk-6TXmBUSWo-u6oNTH65W6f_w&oe=6A89DB49",
+          "height": 697,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9802533613147657&set=a.2029578063776623",
+        "id": "9802533613147657",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTgwMjUzMzc3OTgxNDMwNw=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-04-12T08:51:46.000Z",
+    "timestamp": 1744447906,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid06AQFrnYX4zfJqycsVMw25TQxPYaf8LASwAEGBmKJ3RagwoSpHJCCNGd1tq7TrQRCl",
+    "text": "Soft. front-loading\nHow hard. approaching?",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/515384973_24203067676001011_1324004091985782230_n.jpg?stp=dst-jpg_tt6&cstp=mx719x468&ctp=s719x468&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Di174hzoJ5UQ7kNvwF6e8jn&_nc_oc=AdoiUHYZxD2zPFePb5q1ks_8_-18mq_8MVPjkBBTyT4aNPtBsl4dxPyygpOW_m9MC1U&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=kDCm57kRPszwkd54OYzC9w&_nc_ss=72289&oh=00_AQH6vI45Tnyu158aUy0PrilHRbnuP6tZgMpBf2tK3vkLzA&oe=6A89E167",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF000000",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/515384973_24203067676001011_1324004091985782230_n.jpg?stp=dst-jpg_tt6&cstp=mx719x468&ctp=s719x468&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Di174hzoJ5UQ7kNvwF6e8jn&_nc_oc=AdoiUHYZxD2zPFePb5q1ks_8_-18mq_8MVPjkBBTyT4aNPtBsl4dxPyygpOW_m9MC1U&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=kDCm57kRPszwkd54OYzC9w&_nc_ss=72289&oh=00_AQH6vI45Tnyu158aUy0PrilHRbnuP6tZgMpBf2tK3vkLzA&oe=6A89E167",
+          "height": 468,
+          "width": 719
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9801566553244363&set=a.2029578063776623",
+        "id": "9801566553244363",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTgwMTU2Njc0MzI0NDM0NA=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-04-11T09:31:09.000Z",
+    "timestamp": 1744363869,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0mJmez3jEwhmEByoYSzo9BZ917a1Fj3qAW2gU8HUXmLTkSisro8QWNasAj6o37oyyl",
+    "text": "TQ nâng thuế đối ứng lên 125% đối với US. Đồng thời cũng thông báo thêm đừng đợi điện thoại nữa, à không, cụ thể TQ cho rằng nhận thấy với mức thuế quan như thế này, hàng hóa Mỹ không có khả năng tiêu thụ tại thị trường họ, nếu Mỹ tiếp tục gia tăng thuế suất, TQ sẽ bỏ qua (ignore).\n.\nNói chung về mức thuế cao như thế này, bên tố bên theo có đến vô cực cũng vậy thôi với marginal impact ...\nNên nhiều IBs bắt đầu đặt vấn đề liệu hai bên tố nhau tariffs lên số đủ to, rồi còn rũ nhau chơi món gì khác cho đỡ chán không, đề xuất các hiệp đấu extra tính giờ với một số bộ môn đặc sắc để hai bên hiểu nhau hơn, hoặc tìm được nút gỡ phù hợp.\n\nHình: Nikkei.",
+    "banks": [],
+    "topic": "cfa_updates",
+    "media": [
+      {
+        "thumbnail": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/514746528_24203012222673223_6530903212174048834_n.jpg?stp=dst-jpg_tt6&cstp=mx720x405&ctp=s720x405&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=WYDj2tp-s-0Q7kNvwFxW_Zl&_nc_oc=AdqFmdX9SRO8-WVhxrQKelDPl2EDBw9vpmDhPIcjtFWi5A_hj2HMtJ8VAEoGMj39mO8&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=kDCm57kRPszwkd54OYzC9w&_nc_ss=72289&oh=00_AQHEEwphBhTGz9EC7B0yL1GENbe31lw3y_QwGEnsO9evew&oe=6A8A0A79",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF000000",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/514746528_24203012222673223_6530903212174048834_n.jpg?stp=dst-jpg_tt6&cstp=mx720x405&ctp=s720x405&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=WYDj2tp-s-0Q7kNvwFxW_Zl&_nc_oc=AdqFmdX9SRO8-WVhxrQKelDPl2EDBw9vpmDhPIcjtFWi5A_hj2HMtJ8VAEoGMj39mO8&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=kDCm57kRPszwkd54OYzC9w&_nc_ss=72289&oh=00_AQHEEwphBhTGz9EC7B0yL1GENbe31lw3y_QwGEnsO9evew&oe=6A8A0A79",
+          "height": 405,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9795075697226782&set=a.2029578063776623",
+        "id": "9795075697226782",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTc5NTA3NTg2Mzg5MzQzMg=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-04-11T01:54:13.000Z",
+    "timestamp": 1744336453,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02QauskTyJoeWk1apVKgUoJzcsncJV8d9dbSozik2vaZowEnSXDXfprJC1yHtNMkB1l",
+    "text": "The divergence of arrogant privilege erosion.\n\nĐây là phản ứng đặc biệt của thị trường, 30 năm qua chỉ khoảng 4 tệp có correlation ntn. \n.\nNói thêm về yield curve uốn mạnh trong mấy ngày qua. \nCác phiên auction được theo dõi khá kỹ, đặc biệt indirect bidding.\nNhững căng thẳng trên thị trường TP, đặc biệt là basis trade, margin call (cả collateral) kết hợp cùng những quan ngại về một tài sản \"an toàn\" trong bối cảnh mới có thể đã được kích hoạt thêm bằng một cú trọng pháo UST từ các officials holders.\n\nMới đây cựu bộ trưởng tài chính (cũng là cựu chủ tịch Fed) bà Yellen cho rằng sự biến động của thị trường TP có thể là một áp lực khiến Trump \"quay xe\" và đàm phán, trong đó có nhắc đến một trong những nội dung về nắm giữ TPCP. \n.\nTrái ngược với những đồn đoán ban đầu về bên khai pháo là TQ (thật ra họ đã túc tắc giảm nắm giữ UST và tái cấu trúc Fx Reserves portfolio trong mấy năm qua rồi, trong đó có tăng tỷ trọng Gold), những nguồn tin gần đây đang hướng về phía Japan. Có thể Nhật đã khai pháo tạo leverage trước khi bước vào nêu vấn đề tariffs (và đc đón tiếp...) Nếu đúng vậy thì rõ ràng họ rất kinh nghiệm và nhạy, giữa bối cảnh căng thẳng, một cú trigger nhẹ có thể tạo nên \"Truss moment\" (xem thêm note về sự kiện này mình nêu trước đây). [Và trong ngắn hạn, Sell ust,usd, buy other assets/tier 1 currencies.]\nNếu mới là Nhật, thì có lý do quan ngại hơn khi chưa phải TQ.\n\nChart: Evercore ISI via Nick Timiraos",
+    "banks": [],
+    "topic": "exchange_fx",
+    "media": [
+      {
+        "thumbnail": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/514399050_24203008916006887_7118648728581954430_n.jpg?stp=dst-jpg_tt6&cstp=mx652x429&ctp=s652x429&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=vLijK8uU0cMQ7kNvwHEl77g&_nc_oc=AdpzGEAHuK4VgzB-pEyZZyDGcHeX4L-Oy6zvQRLDxgcmpiDWzNy9HXGp4uIF1RYbdEU&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=kDCm57kRPszwkd54OYzC9w&_nc_ss=72289&oh=00_AQG2yRrrEUlFhc22LHCRg-QTwBF89TWXLAsPRTMLki107Q&oe=6A89DCD9",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/514399050_24203008916006887_7118648728581954430_n.jpg?stp=dst-jpg_tt6&cstp=mx652x429&ctp=s652x429&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=vLijK8uU0cMQ7kNvwHEl77g&_nc_oc=AdpzGEAHuK4VgzB-pEyZZyDGcHeX4L-Oy6zvQRLDxgcmpiDWzNy9HXGp4uIF1RYbdEU&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=kDCm57kRPszwkd54OYzC9w&_nc_ss=72289&oh=00_AQG2yRrrEUlFhc22LHCRg-QTwBF89TWXLAsPRTMLki107Q&oe=6A89DCD9",
+          "height": 429,
+          "width": 652
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9793132654087753&set=a.2028510173883412",
+        "id": "9793132654087753",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTc5MzEzMjgyNzQyMTA2OQ=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-04-10T02:10:30.000Z",
+    "timestamp": 1744251030,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid034SoMoWRjXuxrEQA25JV8gErE6WahnatQbzvsnGpJvAvGK7wumsixP9etSvMwuMVtl",
+    "text": "Good starts",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/514508015_24202992366008542_768031920895500483_n.jpg?stp=dst-jpg_tt6&cstp=mx720x517&ctp=s720x517&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=OfU0S9h7V98Q7kNvwHfqVK5&_nc_oc=AdpIqP5g361jQDlswmiditGEFn0CrGR0zGxivVf14EdAA-8jQEK23NB6Bc4srPB9H6Q&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=LifoL591qCracyFFjvujWg&_nc_ss=72289&oh=00_AQHkeLoDj5o1J44N3_gFWxhnMYHHGhIgelkEWNulhgEJ0g&oe=6A8A044E",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFF8F7F5",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/514508015_24202992366008542_768031920895500483_n.jpg?stp=dst-jpg_tt6&cstp=mx720x517&ctp=s720x517&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=OfU0S9h7V98Q7kNvwHfqVK5&_nc_oc=AdpIqP5g361jQDlswmiditGEFn0CrGR0zGxivVf14EdAA-8jQEK23NB6Bc4srPB9H6Q&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=LifoL591qCracyFFjvujWg&_nc_ss=72289&oh=00_AQHkeLoDj5o1J44N3_gFWxhnMYHHGhIgelkEWNulhgEJ0g&oe=6A8A044E",
+          "height": 517,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9786454671422218&set=a.2029578063776623",
+        "id": "9786454671422218",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTc4NjQ1NDg0MTQyMjIwMQ=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-04-08T05:58:20.000Z",
+    "timestamp": 1744091900,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02hmtdwPJn3vRovF2QsL1h1Gz3rWL2uWNoVSj4tqiF23XRtw2NSVpwi4aoGnvtiRYKl",
+    "text": "Bạn nào quan tâm có thể đọc tài liệu này của Stephen Miran để nắm bắt khung nền tảng của ông trong công cuộc hỗ trợ TT Trump. Miran hiện là chủ tịch hội đồng cố vấn kt (CEA) của Trump. Hôm qua ông ấy cũng có một bài phát biểu sau khi TT Trump chính thức ban hành các cs thuế.\n\nHồi cuối 2024 có nhiều nhà kt phản biện, gay gắt cũng có (như Paul Krugman). \nĐại loại có câu, lý thuyết đó như cái cột đèn dùng để hỗ trợ kẻ say hơn là chiếu sáng.\n...\nNhưng dù gì, phải thích nghi.\n\nLink download mình để ở comment.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/514362317_24202935686014210_8816721641872052393_n.jpg?stp=dst-jpg_tt6&cstp=mx665x732&ctp=s565x565&_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Yw9c88xIXP4Q7kNvwGDBG4m&_nc_oc=AdqmS7lczy6M5Hb7QvWIPyKwE9P-2CQWdlXOsvxDM2PMlQVPpYyYuxUDPtVREGH9kjQ&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=LifoL591qCracyFFjvujWg&_nc_ss=72289&oh=00_AQH4HPVHWLJhTYlJnP_JuM89IO29EIsAG1-hA_R_bFK_Vg&oe=6A89F4D6",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/514362317_24202935686014210_8816721641872052393_n.jpg?stp=dst-jpg_tt6&cstp=mx665x732&ctp=s565x565&_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Yw9c88xIXP4Q7kNvwGDBG4m&_nc_oc=AdqmS7lczy6M5Hb7QvWIPyKwE9P-2CQWdlXOsvxDM2PMlQVPpYyYuxUDPtVREGH9kjQ&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=LifoL591qCracyFFjvujWg&_nc_ss=72289&oh=00_AQH4HPVHWLJhTYlJnP_JuM89IO29EIsAG1-hA_R_bFK_Vg&oe=6A89F4D6",
+          "height": 565,
+          "width": 513
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9775088739225478&set=a.2028510173883412",
+        "id": "9775088739225478",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTc3MzcwNzI0NjAzMDI5NA=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-04-08T05:07:31.000Z",
+    "timestamp": 1744088851,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02RVDyYn8TLSSg8WBfStqmQhe5Y4ZbG4cqeHdbNpxHDntAmtjVrNcafq9UAe4KmELVl",
+    "text": "Bài báo nhiều dữ liệu của VNExpress. Xem thêm ở cmmt. \n\nKhoảng trống cố ý để ra là không đề cập đến các thành phần, từ đó mở hướng liên quan như tái cấu trúc, liên kết/sáp nhập vùng...?\nNhư thường lệ, biểu đồ dạng thích nhất của mình vẫn là contribution và marginal... (đóng góp vào tăng trưởng, năng suất, ...)\nNhưng để khoảng trống mà không có đủ đối tượng để tô sắc, thì thành lạc lỏng và yếu về cơ cấu.\nÀ, mà đó chính là cơ cấu như vậy.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/515090361_24202935582680887_6882832020559916166_n.jpg?stp=dst-jpg_tt6&cstp=mx720x1183&ctp=p526x296&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=s_WqnJfFHmEQ7kNvwEBMorb&_nc_oc=AdqKVIrIQJx-KVOxQbYkR0gWOzINZ8s_mGb1gxQNtKD5WW5_VrK34rS-syXcdGLT9t0&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=LifoL591qCracyFFjvujWg&_nc_ss=72289&oh=00_AQF9DLCuL-ORaDoGDFbMEN5P-f3ADuXTrR6c_ntiTF2wRg&oe=6A89F94A",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/515090361_24202935582680887_6882832020559916166_n.jpg?stp=dst-jpg_tt6&cstp=mx720x1183&ctp=p526x296&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=s_WqnJfFHmEQ7kNvwEBMorb&_nc_oc=AdqKVIrIQJx-KVOxQbYkR0gWOzINZ8s_mGb1gxQNtKD5WW5_VrK34rS-syXcdGLT9t0&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=LifoL591qCracyFFjvujWg&_nc_ss=72289&oh=00_AQF9DLCuL-ORaDoGDFbMEN5P-f3ADuXTrR6c_ntiTF2wRg&oe=6A89F94A",
+          "height": 864,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9773468422720843&set=a.2029578063776623",
+        "id": "9773468422720843",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTc3MzQ2ODY1NjA1NDE1Mw=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-04-08T03:50:39.000Z",
+    "timestamp": 1744084239,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02PBzF6HiJtL2tYs1eDXpaz7mK1VAycxSJpcyqp8Yrc6iuCFYnk3D3eZMY19apYQ3sl",
+    "text": "Meanwhile, UV F5 for fresh...",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-6/514857149_24202935449347567_5046805295323452315_n.jpg?stp=dst-jpg_tt6&cstp=mx720x705&ctp=p526x296&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=7ep4qOaPT3wQ7kNvwEUGIKD&_nc_oc=Ado-G-pZQbhFS9_aiDnz6gtZs-SRwyDujsYqocGzzeHzq4tNnkqZYpW6WRYevqfmhoE&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=I5YSZ48WxHY1lJD8XcFH1A&_nc_ss=72289&oh=00_AQFcL8X4idxwPytukH7IBYqGQ3ohPLJRXk3zE5EpfyXTlw&oe=6A89E2E5",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-6/514857149_24202935449347567_5046805295323452315_n.jpg?stp=dst-jpg_tt6&cstp=mx720x705&ctp=p526x296&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=7ep4qOaPT3wQ7kNvwEUGIKD&_nc_oc=Ado-G-pZQbhFS9_aiDnz6gtZs-SRwyDujsYqocGzzeHzq4tNnkqZYpW6WRYevqfmhoE&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=I5YSZ48WxHY1lJD8XcFH1A&_nc_ss=72289&oh=00_AQFcL8X4idxwPytukH7IBYqGQ3ohPLJRXk3zE5EpfyXTlw&oe=6A89E2E5",
+          "height": 515,
+          "width": 526
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9773089169425435&set=a.2028510173883412",
+        "id": "9773089169425435",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTc3MzA4OTM1NjA5MjA4Mw=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-04-08T02:01:24.000Z",
+    "timestamp": 1744077684,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02sFsdBFnuALB1KthPrd5bPdCxb2qvtKnMwWQt6dpng2hgJXRuMT2fwygouW4S1WG1l",
+    "text": "Big statement. :-d",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-6/514925445_24202935556014223_4383242419290464449_n.jpg?stp=dst-jpg_tt6&cstp=mx720x519&ctp=s720x519&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=aRBiZVPyMhsQ7kNvwGlaPA8&_nc_oc=AdqZ94qp1d8ZYXHPJvDUkYkgNSWWGcvODq3r_l6hAdeZjBPRJHHgiPQ2yy9nonsRQ4M&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=I5YSZ48WxHY1lJD8XcFH1A&_nc_ss=72289&oh=00_AQGZEZBbeT-pjjoW3WtADoPw4q5sHRTztEgNrjn9etJkaA&oe=6A8A0200",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-6/514925445_24202935556014223_4383242419290464449_n.jpg?stp=dst-jpg_tt6&cstp=mx720x519&ctp=s720x519&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=aRBiZVPyMhsQ7kNvwGlaPA8&_nc_oc=AdqZ94qp1d8ZYXHPJvDUkYkgNSWWGcvODq3r_l6hAdeZjBPRJHHgiPQ2yy9nonsRQ4M&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=I5YSZ48WxHY1lJD8XcFH1A&_nc_ss=72289&oh=00_AQGZEZBbeT-pjjoW3WtADoPw4q5sHRTztEgNrjn9etJkaA&oe=6A8A0200",
+          "height": 519,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9772562766144742&set=a.2029578063776623",
+        "id": "9772562766144742",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTc3MjU2Mjk2MjgxMTM4OQ=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-04-07T16:55:18.000Z",
+    "timestamp": 1744044918,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0GcdKoo5UT8ECCTHgYbcWki71QhVXWsjqGa32MUNo9jAhi74arh84UqBmrwxoQ59Dl",
+    "text": "Hơi nhạy cảm quá, đây chỉ là cuộc họp theo lịch trình của Fed, cụ thể là BoG, tức hội đồng thống đốc. Hết sức bình thường nên bình thường không ai để ý. Những lúc căng thẳng thì cứ có xuất hiện tin là hay gán vào lẫn lộn. \nBack to basics: phân biệt Fed BoG vs. FOMC.",
+    "banks": [],
+    "topic": "interest_macro",
+    "media": [
+      {
+        "thumbnail": "https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-6/514757459_24202929466014832_367007580540820189_n.jpg?stp=dst-jpg_tt6&cstp=mx720x675&ctp=p552x414&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=1qbCQPZhCw4Q7kNvwGHf7Eh&_nc_oc=AdpmDN3Vul1EWZC-LBNWj4sO1ggd6BCB-jQ0jSy0U8UkG2BM20jDp5AJOU7GtbzrSGc&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=I5YSZ48WxHY1lJD8XcFH1A&_nc_ss=72289&oh=00_AQGo393LvIUiuGrY1kRXEcVlOA2tz2rfvD9Fyp6DnH9F5Q&oe=6A89E7BD",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-6/514757459_24202929466014832_367007580540820189_n.jpg?stp=dst-jpg_tt6&cstp=mx720x675&ctp=p552x414&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=1qbCQPZhCw4Q7kNvwGHf7Eh&_nc_oc=AdpmDN3Vul1EWZC-LBNWj4sO1ggd6BCB-jQ0jSy0U8UkG2BM20jDp5AJOU7GtbzrSGc&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=I5YSZ48WxHY1lJD8XcFH1A&_nc_ss=72289&oh=00_AQGo393LvIUiuGrY1kRXEcVlOA2tz2rfvD9Fyp6DnH9F5Q&oe=6A89E7BD",
+          "height": 518,
+          "width": 552
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9769945316406487&set=a.2029578063776623",
+        "id": "9769945316406487",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTc2OTk0NTUzMzA3MzEzMg=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-04-05T05:16:01.000Z",
+    "timestamp": 1743830161,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0yJDkgdt4oY79m78oMeKT3hyHtwc8QoajUWeHFhavajL5yVnug6wuDWX5fZZWLXAMl",
+    "text": "Nghe bảo (trên X, không xác thực được thực hư) nhóm chuyên gia chuẩn bị cho nhóm chính sách thuế đối ứng cũng ròng rà nhiều tuần và cũng rất này nọ, còn cái công thức delta \"tau\" và epsilon, phi kia là \"cụ\" chọn.\nVậy thôi, xem như là phương tiện...\n.\nCó mấy thế khóa:",
+    "banks": [],
+    "topic": "sbv",
+    "media": []
+  },
+  {
+    "time": "2025-04-04T16:02:21.000Z",
+    "timestamp": 1743782541,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0BLqbxKpX1rfbeHWin8gohDaggzXorQuWLpMohiAhPH7h2yHatTWSWmtJX8E7dgQgl",
+    "text": "Big move.\n\nP/s: TTXVN cũng đã đăng tin, xem ở cmmt.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-mia3-1.xx.fbcdn.net/v/t39.30808-6/514690206_24202863712688074_6601484333137944415_n.jpg?stp=dst-jpg_tt6&cstp=mx720x412&ctp=s720x412&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=subs3qKEcE8Q7kNvwExfGSN&_nc_oc=AdonYFaLKjAOJOt7GP-Ho8IXgG5ib5tANidjoKbRahWvMgt3CdIbPPkHgC8UzHthZmA&_nc_zt=23&_nc_ht=scontent-mia3-1.xx&_nc_gid=jHwLXg5aQ0Z5FlYcpUEmXg&_nc_ss=72289&oh=00_AQHxi-YOdviwunOa0Pzu-T3HrvSS3S85_mpvhZcztxI8zg&oe=6A89E04A",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-mia3-1.xx.fbcdn.net/v/t39.30808-6/514690206_24202863712688074_6601484333137944415_n.jpg?stp=dst-jpg_tt6&cstp=mx720x412&ctp=s720x412&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=subs3qKEcE8Q7kNvwExfGSN&_nc_oc=AdonYFaLKjAOJOt7GP-Ho8IXgG5ib5tANidjoKbRahWvMgt3CdIbPPkHgC8UzHthZmA&_nc_zt=23&_nc_ht=scontent-mia3-1.xx&_nc_gid=jHwLXg5aQ0Z5FlYcpUEmXg&_nc_ss=72289&oh=00_AQHxi-YOdviwunOa0Pzu-T3HrvSS3S85_mpvhZcztxI8zg&oe=6A89E04A",
+          "height": 412,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9749995791734773&set=a.2029578063776623",
+        "id": "9749995791734773",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTc0OTk5NTk5ODQwMTQxOQ=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-04-04T11:10:16.000Z",
+    "timestamp": 1743765016,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid033fog61Ub3YJMzivUKWGNb5T7Cq9RkV2LkWCcpZZRYnvwRXPAWrcKMB1S1ZP8DnHsl",
+    "text": "TQ đáp trả. Liệu có thêm một vài công cụ khác nữa không?",
+    "banks": [],
+    "topic": "cfa_updates",
+    "media": [
+      {
+        "thumbnail": "https://scontent-mia3-1.xx.fbcdn.net/v/t39.30808-6/515317549_24202859112688534_5527868901679605985_n.jpg?stp=dst-jpg_tt6&cstp=mx720x900&ctp=s640x640&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=yp3h82ZvLuMQ7kNvwEfU2og&_nc_oc=AdrCoMsicqsEtwt81ARvX-5M9uLPoMgAw1ajKQqdZhoe7tQ-VFkbM7DoRUDBUOXoCbI&_nc_zt=23&_nc_ht=scontent-mia3-1.xx&_nc_gid=jHwLXg5aQ0Z5FlYcpUEmXg&_nc_ss=72289&oh=00_AQFOFsjIv-qE0lVl2-92Bn3dVvg6h8zGqQmm-AhMvyZioQ&oe=6A8A03F1",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF151517",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-mia3-1.xx.fbcdn.net/v/t39.30808-6/515317549_24202859112688534_5527868901679605985_n.jpg?stp=dst-jpg_tt6&cstp=mx720x900&ctp=s640x640&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=yp3h82ZvLuMQ7kNvwEfU2og&_nc_oc=AdrCoMsicqsEtwt81ARvX-5M9uLPoMgAw1ajKQqdZhoe7tQ-VFkbM7DoRUDBUOXoCbI&_nc_zt=23&_nc_ht=scontent-mia3-1.xx&_nc_gid=jHwLXg5aQ0Z5FlYcpUEmXg&_nc_ss=72289&oh=00_AQFOFsjIv-qE0lVl2-92Bn3dVvg6h8zGqQmm-AhMvyZioQ&oe=6A8A03F1",
+          "height": 640,
+          "width": 512
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9748445108556508&set=a.2029578063776623",
+        "id": "9748445108556508",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTc0ODQ0NTI2NTIyMzE1OQ=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-04-04T02:38:38.000Z",
+    "timestamp": 1743734318,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02P4zrbKQjUEzuBE3Jwm2gxbEZyc2Tk2MXhFgFEbnmYPBzXa8b544caGmQEQpbcvqcl",
+    "text": "",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2025-04-04T02:20:45.000Z",
+    "timestamp": 1743733245,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02dYVkDE4Hr59MgmDbiH9wmdeQj6VoMQ52SKkkF55ouZkPUJTinGRqVqion3QXJAaRl",
+    "text": "“Escalate to negotiate” tactics are still the preferred course of action?\n.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/514411908_24202854896022289_1026823855557974224_n.jpg?stp=dst-jpg_tt6&cstp=mx612x189&ctp=s612x189&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=e8VANqEBDhQQ7kNvwFuE369&_nc_oc=AdpnX-HKk1sQ-qz8VYw8v5pN7csL3ZQUrZXR-qrqGRTwrnPzy3D08--7RSVoN-xR-IA&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=imLhcKQl9vjTQVeo_7AQgQ&_nc_ss=72289&oh=00_AQF1o-BPYPaBKDK8cmSSfDIknQ_35ISyu0T1N6CwmF7Z5A&oe=6A89F2B2",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFF1F2F6",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/514411908_24202854896022289_1026823855557974224_n.jpg?stp=dst-jpg_tt6&cstp=mx612x189&ctp=s612x189&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=e8VANqEBDhQQ7kNvwFuE369&_nc_oc=AdpnX-HKk1sQ-qz8VYw8v5pN7csL3ZQUrZXR-qrqGRTwrnPzy3D08--7RSVoN-xR-IA&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=imLhcKQl9vjTQVeo_7AQgQ&_nc_ss=72289&oh=00_AQF1o-BPYPaBKDK8cmSSfDIknQ_35ISyu0T1N6CwmF7Z5A&oe=6A89F2B2",
+          "height": 189,
+          "width": 612
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9745993125468373&set=a.2029578063776623",
+        "id": "9745993125468373",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTc0NTk5MzMxODgwMTY4Nw=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-04-03T23:55:59.000Z",
+    "timestamp": 1743724559,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0BwEsYAZXTDxJ6k3bZQxP9NuTGVLALXfFyD6AE6qSLYTXGTGRNpAtxDLZ8CXtRGuTl",
+    "text": "This marked the fifth-worst point drop for the Dow in history.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/514409791_24202854819355630_621413487544557118_n.jpg?stp=dst-jpg_tt6&cstp=mx546x783&ctp=s720x720&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=zSJZgHlhei0Q7kNvwE1QPtW&_nc_oc=AdqYX74MPZakVsZ3h3eq0fILeeNRmWGAJ5cwQIcTfvWpiY6VkyLGFZTW25-ISEh_t8k&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=imLhcKQl9vjTQVeo_7AQgQ&_nc_ss=72289&oh=00_AQFHo5oe2NKksmJGJs0Rm4SkSymKcQcJND7DTLxdkgaerg&oe=6A89F3CB",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/514409791_24202854819355630_621413487544557118_n.jpg?stp=dst-jpg_tt6&cstp=mx546x783&ctp=s720x720&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=zSJZgHlhei0Q7kNvwE1QPtW&_nc_oc=AdqYX74MPZakVsZ3h3eq0fILeeNRmWGAJ5cwQIcTfvWpiY6VkyLGFZTW25-ISEh_t8k&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=imLhcKQl9vjTQVeo_7AQgQ&_nc_ss=72289&oh=00_AQFHo5oe2NKksmJGJs0Rm4SkSymKcQcJND7DTLxdkgaerg&oe=6A89F3CB",
+          "height": 720,
+          "width": 502
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9745338798867139&set=a.2029578063776623",
+        "id": "9745338798867139",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTc0NTMzODkzMjIwMDQ1OQ=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-04-03T14:59:02.000Z",
+    "timestamp": 1743692342,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02mE5FVM1sS5NLWBoybgcZxe2QkA21oVxLM19xfbuDXj13SaTFmGksdLzTDLhyDLwql",
+    "text": "Paul Krugman, 2 bài liên tiếp, cùng một chất giọng. \n\n\"Bạn có thể bị cám dỗ để bác bỏ những lời phàn nàn về quy trình chính sách như là sự kiêu ngạo của giới tinh hoa. Nhưng uy tín là một phần quan trọng của việc hoạch định chính sách. Các doanh nghiệp không thể lập kế hoạch nếu họ không biết điều gì sẽ xảy ra tiếp theo. Các chính phủ nước ngoài sẽ không đưa ra các chính sách giúp ích cho nước Mỹ nếu họ không mong đợi chúng ta phản ứng một cách hợp lý.\"\n\nLink ở cmmt.",
+    "banks": [],
+    "topic": "sbv",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/515373181_24202850869356025_6804272615075708842_n.jpg?stp=dst-jpg_tt6&cstp=mx720x133&ctp=s720x133&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=iQgSRRJyGj0Q7kNvwFC1WWJ&_nc_oc=AdovPff5ik8H5IVk_crrx7Yno4PArLvfw17iM8SSTW0gZPjHizRRMJ4By5WVIWzGDDA&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=_y_SIRGVTI2QHf6dakhsmQ&_nc_ss=72289&oh=00_AQFQNoH4LPU5R8EN57jb72kjb10bIDZmXmttHyXvEri_TQ&oe=6A89E60E",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/515373181_24202850869356025_6804272615075708842_n.jpg?stp=dst-jpg_tt6&cstp=mx720x133&ctp=s720x133&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=iQgSRRJyGj0Q7kNvwFC1WWJ&_nc_oc=AdovPff5ik8H5IVk_crrx7Yno4PArLvfw17iM8SSTW0gZPjHizRRMJ4By5WVIWzGDDA&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=_y_SIRGVTI2QHf6dakhsmQ&_nc_ss=72289&oh=00_AQFQNoH4LPU5R8EN57jb72kjb10bIDZmXmttHyXvEri_TQ&oe=6A89E60E",
+          "height": 133,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9742855575782128&set=a.2029578063776623",
+        "id": "9742855575782128",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTc0Mjg1NTc4MjQ0ODc3NA=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-04-03T06:48:46.000Z",
+    "timestamp": 1743662926,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0DaoHVVxKmozhQMSvBuYyTC2DfWu6u2SR7Bz4yejH6NPvKvGLtWhzbNucSF41zyrQl",
+    "text": "Rồi phái đoàn cánh cụt có phải đến US để tìm hiểu nguyên tắc áp dụng epsilon và phi, làm sao để có discount lớn?",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/515310615_24202816596026119_2634095419050923105_n.jpg?stp=dst-jpg_tt6&cstp=mx627x702&ctp=s565x565&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ct_rCRhgPOoQ7kNvwF08leN&_nc_oc=Adr-d9cC3JhH1NWFw1LG_-OPNy4dtDszhnbNZhpA-GDSZRjDBLaA4rvMiuRMu8IaU4M&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=_y_SIRGVTI2QHf6dakhsmQ&_nc_ss=72289&oh=00_AQEPiyELmShi_TAfgre3dE-cCtABZAoNdcixCJoXxCgJaQ&oe=6A89E512",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/515310615_24202816596026119_2634095419050923105_n.jpg?stp=dst-jpg_tt6&cstp=mx627x702&ctp=s565x565&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ct_rCRhgPOoQ7kNvwF08leN&_nc_oc=Adr-d9cC3JhH1NWFw1LG_-OPNy4dtDszhnbNZhpA-GDSZRjDBLaA4rvMiuRMu8IaU4M&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=_y_SIRGVTI2QHf6dakhsmQ&_nc_ss=72289&oh=00_AQEPiyELmShi_TAfgre3dE-cCtABZAoNdcixCJoXxCgJaQ&oe=6A89E512",
+          "height": 565,
+          "width": 505
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9740472162687136&set=a.2029578063776623",
+        "id": "9740472162687136",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTc0MDQ3MjM3NjAyMDQ0OA=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-04-03T05:58:54.000Z",
+    "timestamp": 1743659934,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02obty9srMCM15euMpjW4Y5bRb9Lx3sCBvRi84UKmHAgF62YeWpSmL2cnNR7Q32tWJl",
+    "text": "Sáng nay VN cũng \"đỏ đậm\" nhất toàn cầu.\nVN-INDEX giảm hơn 82đ\nUV cũng tăng hơn 185đ\n...\nLưu.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/514423966_24202816536026125_8387701615651969354_n.jpg?stp=dst-jpg_tt6&cstp=mx642x479&ctp=s642x479&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=yNh8aA7eSJMQ7kNvwEAWNRq&_nc_oc=AdrniOIxwC3PpTcotu1ZkkBoPgEPPbkLVX1WYApS4UcuMBJMyGpfSIql9FSEHYHe2m8&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=_y_SIRGVTI2QHf6dakhsmQ&_nc_ss=72289&oh=00_AQGsa3viQjAKzbu9Xcv5ZZ-0jt4YOKTTJUvLrOM2WxmfTQ&oe=6A89E02A",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/514423966_24202816536026125_8387701615651969354_n.jpg?stp=dst-jpg_tt6&cstp=mx642x479&ctp=s642x479&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=yNh8aA7eSJMQ7kNvwEAWNRq&_nc_oc=AdrniOIxwC3PpTcotu1ZkkBoPgEPPbkLVX1WYApS4UcuMBJMyGpfSIql9FSEHYHe2m8&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=_y_SIRGVTI2QHf6dakhsmQ&_nc_ss=72289&oh=00_AQGsa3viQjAKzbu9Xcv5ZZ-0jt4YOKTTJUvLrOM2WxmfTQ&oe=6A89E02A",
+          "height": 479,
+          "width": 642
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9740238966043789&set=a.2029578063776623",
+        "id": "9740238966043789",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTc0MDIzOTEzOTM3NzEwNQ=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-04-03T03:20:11.000Z",
+    "timestamp": 1743650411,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid028i41wa3enuD8syPqbDJdiG7L7Vcg44ikYhYsLyLRSzFYmXBszRQcXEKPBv74uxDNl",
+    "text": "Khá nhanh, \nnhưng lại nhớ câu... \"speak softly and carry a big stick\" (T.R.).",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/514254319_24202814889359623_1119304353079983723_n.jpg?stp=dst-jpg_tt6&cstp=mx720x900&ctp=s640x640&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=c5BQld2ay_YQ7kNvwF5tOEK&_nc_oc=AdqzV6EYC8UT9zCU2nwUHLD9Z7nMZt2b1CoKAYhdl9CxQHcbrVhjf7YzHNWIc2rEE_0&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=crztpJ6qGZC0a99jJuMXRA&_nc_ss=72289&oh=00_AQG0ICsu4fk6mVkRWz7cbmb0UfBPSGFA21cwI_g9denZOg&oe=6A89ED71",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF0C0D0F",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/514254319_24202814889359623_1119304353079983723_n.jpg?stp=dst-jpg_tt6&cstp=mx720x900&ctp=s640x640&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=c5BQld2ay_YQ7kNvwF5tOEK&_nc_oc=AdqzV6EYC8UT9zCU2nwUHLD9Z7nMZt2b1CoKAYhdl9CxQHcbrVhjf7YzHNWIc2rEE_0&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=crztpJ6qGZC0a99jJuMXRA&_nc_ss=72289&oh=00_AQG0ICsu4fk6mVkRWz7cbmb0UfBPSGFA21cwI_g9denZOg&oe=6A89ED71",
+          "height": 640,
+          "width": 512
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9739491626118523&set=a.2029578063776623",
+        "id": "9739491626118523",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTczOTQ5MTgwOTQ1MTgzOA=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-04-03T02:26:28.000Z",
+    "timestamp": 1743647188,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02En36imZGvwkjSR2EzPNLqXi81jN5cLQf3Awk8JERRTNBXM9RcJNqrznWfKMM7LLAl",
+    "text": "Pic. of the day.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/515637351_24202814652692980_5956764154207560561_n.jpg?stp=dst-jpg_tt6&cstp=mx379x115&ctp=s379x115&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=0RLHiO6y5DYQ7kNvwHCJ6Sd&_nc_oc=AdrtR91rnv814bfjGfPJzvtdgzlGeeRfbuQNaUNpYd4YkvtH2HdRVCA_A7LMHlN0nzo&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=crztpJ6qGZC0a99jJuMXRA&_nc_ss=72289&oh=00_AQHwdxSdyo8cIktXAUBVGD4J7ltnqup0U8nr9MiVDv5NHg&oe=6A89E0C3",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/515637351_24202814652692980_5956764154207560561_n.jpg?stp=dst-jpg_tt6&cstp=mx379x115&ctp=s379x115&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=0RLHiO6y5DYQ7kNvwHCJ6Sd&_nc_oc=AdrtR91rnv814bfjGfPJzvtdgzlGeeRfbuQNaUNpYd4YkvtH2HdRVCA_A7LMHlN0nzo&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=crztpJ6qGZC0a99jJuMXRA&_nc_ss=72289&oh=00_AQHwdxSdyo8cIktXAUBVGD4J7ltnqup0U8nr9MiVDv5NHg&oe=6A89E0C3",
+          "height": 115,
+          "width": 379
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9739229529478066&set=a.2029578063776623",
+        "id": "9739229529478066",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTczOTIyOTc3MjgxMTM3NQ=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-04-03T00:12:09.000Z",
+    "timestamp": 1743639129,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid034KGJPXMHUaxdypD5bF3fKFkZ6BbiwNrGNzrq1e14anCfGVoDuaAP8SuhnR3ceE5nl",
+    "text": "Bảng thuế sau sự kiện \"vườn hồng\" (ngày giải phóng).\nXem các cụ bình luận, thì khả năng mở ra cuộc ch-iến thế hệ mới, trong thuế quan và thương mại và ngoại giao.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/515490661_24202812929359819_4838499032484820800_n.jpg?stp=dst-jpg_tt6&cstp=mx720x545&ctp=p180x540&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=SwXKZahtMS0Q7kNvwE5VkNX&_nc_oc=AdoOWdSdoZpEptuN5Opel8uFBWCtwos2iT_9rpMWiDBnTE43Mfx_oiGbm-2viQE0iik&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=crztpJ6qGZC0a99jJuMXRA&_nc_ss=72289&oh=00_AQFigGz09uKLQHwf-G6Tdz0joMV9wO6yndaXgd1Xlp5HAQ&oe=6A8A0A6C",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF111322",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/515490661_24202812929359819_4838499032484820800_n.jpg?stp=dst-jpg_tt6&cstp=mx720x545&ctp=p180x540&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=SwXKZahtMS0Q7kNvwE5VkNX&_nc_oc=AdoOWdSdoZpEptuN5Opel8uFBWCtwos2iT_9rpMWiDBnTE43Mfx_oiGbm-2viQE0iik&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=crztpJ6qGZC0a99jJuMXRA&_nc_ss=72289&oh=00_AQFigGz09uKLQHwf-G6Tdz0joMV9wO6yndaXgd1Xlp5HAQ&oe=6A8A0A6C",
+          "height": 540,
+          "width": 713
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9738556606212025&set=a.2029578063776623",
+        "id": "9738556606212025",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTczODU1NjgyNjIxMjAwMw=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-04-02T01:43:03.000Z",
+    "timestamp": 1743558183,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0LYz7FaEDfowt18RrFQAqJSu6QjrjmxZoW9WQ6dVQVMYXQ1wwsEkJvCEf6eGbRf2Cl",
+    "text": "Quý 1, 2025. \nVàng tăng tốt nhất kể từ Mexico '86, +19%.\nCk US: S&P giảm lớn nhất kể từ bong bóng công nghệ hơn 2 thập kỷ trc, -4.3%, với nhóm mag 7 -16%. (In USD total return terms.)\nCk EU: outperformance với gap vs. US cao nhất kể từ khủng hoảng nợ thập kỷ trc. EU thì có performance tốt của EURUSD nữa.\nUST (trái phiếu) +2.9% (total return). \nRiêng tháng 3:",
+    "banks": [],
+    "topic": "exchange_fx",
+    "media": [
+      {
+        "thumbnail": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/514489669_24202801989360913_1488825451775829517_n.jpg?stp=dst-jpg_tt6&cstp=mx1197x499&ctp=s1197x499&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=5uXBGJrM2DIQ7kNvwGyAZ-5&_nc_oc=Adqujjc3uyJkA_dutnn8a5fqMCseRrhfrSjMmFPNfa1FDu9SyzyujJoDHrSPhZp5E58&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=B-YhP-Zx4StASxjncbwWyQ&_nc_ss=72289&oh=00_AQEZ84_AwgVolPdPAcbnAoakoxVvecqseu-faxa8pSFbcQ&oe=6A89D7BE",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/514489669_24202801989360913_1488825451775829517_n.jpg?stp=dst-jpg_tt6&cstp=mx1197x499&ctp=s1197x499&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=5uXBGJrM2DIQ7kNvwGyAZ-5&_nc_oc=Adqujjc3uyJkA_dutnn8a5fqMCseRrhfrSjMmFPNfa1FDu9SyzyujJoDHrSPhZp5E58&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=B-YhP-Zx4StASxjncbwWyQ&_nc_ss=72289&oh=00_AQEZ84_AwgVolPdPAcbnAoakoxVvecqseu-faxa8pSFbcQ&oe=6A89D7BE",
+          "height": 499,
+          "width": 1197
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9731751933559159&set=a.2029578063776623",
+        "id": "9731751933559159",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTczMTc1MjEzNjg5MjQ3Mg=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-04-01T01:30:23.000Z",
+    "timestamp": 1743471023,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02Lwotni4xGT5E4izNjf8YrHRTyirfTEmvRzLuToczbMcLveHo7zxUb2ivAkNeFzohl",
+    "text": "VN Money panacea\n\nSBV có lẽ đang tính toán gap vs. kế hoạch sau GDP Q1... kk.\n\nApril 1st.\n\nPer IMF chart: contribution to growth:",
+    "banks": [],
+    "topic": "sbv",
+    "media": [
+      {
+        "thumbnail": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/514259615_24202791212695324_5447829565199826726_n.jpg?stp=dst-jpg_tt6&cstp=mx665x742&ctp=s565x565&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=K9ODq7DMWCAQ7kNvwFU0BsK&_nc_oc=Adrcv27Cd0eZZRrc_mtJaOjZrxIWElh3MZNgFeRdfkgziHH7Km2ABqlUDT4ysSGDi54&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=B-YhP-Zx4StASxjncbwWyQ&_nc_ss=72289&oh=00_AQGqdCzqGm1fL_wBx2BoYZbJB6AAF2F6loTUgmHTpPiKPw&oe=6A89FE3A",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/514259615_24202791212695324_5447829565199826726_n.jpg?stp=dst-jpg_tt6&cstp=mx665x742&ctp=s565x565&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=K9ODq7DMWCAQ7kNvwFU0BsK&_nc_oc=Adrcv27Cd0eZZRrc_mtJaOjZrxIWElh3MZNgFeRdfkgziHH7Km2ABqlUDT4ysSGDi54&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=B-YhP-Zx4StASxjncbwWyQ&_nc_ss=72289&oh=00_AQGqdCzqGm1fL_wBx2BoYZbJB6AAF2F6loTUgmHTpPiKPw&oe=6A89FE3A",
+          "height": 565,
+          "width": 506
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9724939914240361&set=a.2029578063776623",
+        "id": "9724939914240361",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTcyNDk0MDA1NDI0MDM0Nw=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-03-31T02:05:32.000Z",
+    "timestamp": 1743386732,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0ZdLhSu7EGdQYfTBrug1wk5GTNf2rAsgYEannFBVcpAizg2V2Xqb5ByA4MZiuS8vpl",
+    "text": "Năm nay chưa qua 1st Apr. mà toàn cầu đã sẵn sàng kể chuyện cho 2nd rồi. VN cũng vậy.\n\nFool me once, fool me twice\nApril 2nd is not the only, right?",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2025-03-31T01:29:04.000Z",
+    "timestamp": 1743384544,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid04JB44hxmDUmFYty6erBNidHSoXMQ36VoJ1aciChngHEAMpEbFZ44c9CQiV2ScYApl",
+    "text": "Một trong những ngành...\n\nChart: The Nikkei",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/514667334_24202773529363759_5318491249363394291_n.jpg?stp=dst-jpg_tt6&cstp=mx579x334&ctp=s579x334&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=WKNrcxrJvnkQ7kNvwFuwnVN&_nc_oc=Adq5SzIlYLQPfqKTyaD5k0aacTZxytxh9k8Wno37yIKh-OMlhGW5GaO-FMiI6fD-XGc&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=ax117afg03UEfFkA1ZfwCA&_nc_ss=72289&oh=00_AQHjQBaPVTqZe8FGHfNl9MS7OH70uWNJyyXXHJkD8W5FlA&oe=6A89E0C9",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/514667334_24202773529363759_5318491249363394291_n.jpg?stp=dst-jpg_tt6&cstp=mx579x334&ctp=s579x334&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=WKNrcxrJvnkQ7kNvwFuwnVN&_nc_oc=Adq5SzIlYLQPfqKTyaD5k0aacTZxytxh9k8Wno37yIKh-OMlhGW5GaO-FMiI6fD-XGc&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=ax117afg03UEfFkA1ZfwCA&_nc_ss=72289&oh=00_AQHjQBaPVTqZe8FGHfNl9MS7OH70uWNJyyXXHJkD8W5FlA&oe=6A89E0C9",
+          "height": 334,
+          "width": 579
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9718241838243502&set=a.2029578063776623",
+        "id": "9718241838243502",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTcxODI0MTk1MTU3NjgyNA=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-03-30T09:48:19.000Z",
+    "timestamp": 1743328099,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02f72nZEjTTroW8BtwrQknPDv5EdqGkSzXPsmXzSyxUscEWpaFicxGPMLFafxd7cgml",
+    "text": "Bản đồ bên dưới ghi nhận các trận động đất tại ĐNA trong 50 năm qua. \n\nKhu vực này là một trong những nơi có hoạt động địa chấn mạnh, nơi các mảng kiến ​​tạo lớn như Mảng Á-Âu và Mảng Úc tương tác và tạo ra một số trận động đất và sóng thần mạnh nhất thế giới.\n\nNhững thảm họa như động đất và sóng thần Ấn Độ Dương 2004, hay là trận động đất mạnh 7,7 độ Richter ở Myanmar vào ngày 28/3/2025 vừa qua. \n\nPhilippines và Indonesia chịu ảnh hưởng nhiều nhất, trong khi Việt Nam, Thái Lan, Lào và Campuchia hiếm khi gặp động đất mạnh. (Như trong hình: các chấm đỏ đậm to là từ 7 độ trở lên phân bố \"tránh\" xa Việt Nam.)\n\nNguồn: SienceKonek/USGS Earthquake Database (1975-2025).\n\nP/s: Không/ít có động đất mạnh (rủi ro thảm họa) trở thành một lợi thế. Có nhiều nghiên cứu về tổn thất và tác động do các thảm họa động đất gây ra.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/514044479_24202710956036683_7415882138256612923_n.jpg?stp=dst-jpg_tt6&cstp=mx720x563&ctp=s640x640&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=xLfX-l5jJMQQ7kNvwHUZ279&_nc_oc=Adoug9IeF8MvLLQrz7bbQup9EvbXv-uNqgK0b1n9ctGKaNrmQuiDnvXkzrguGMkKfH0&_nc_zt=23&_nc_ht=scontent-atl3-1.xx&_nc_gid=ax117afg03UEfFkA1ZfwCA&_nc_ss=72289&oh=00_AQFHUpjMBNMPB4eRDwSmQF1tz6kfonjGceMMIvpkHN-z1Q&oe=6A8A0F15",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FF2D384A",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/514044479_24202710956036683_7415882138256612923_n.jpg?stp=dst-jpg_tt6&cstp=mx720x563&ctp=s640x640&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=xLfX-l5jJMQQ7kNvwHUZ279&_nc_oc=Adoug9IeF8MvLLQrz7bbQup9EvbXv-uNqgK0b1n9ctGKaNrmQuiDnvXkzrguGMkKfH0&_nc_zt=23&_nc_ht=scontent-atl3-1.xx&_nc_gid=ax117afg03UEfFkA1ZfwCA&_nc_ss=72289&oh=00_AQFHUpjMBNMPB4eRDwSmQF1tz6kfonjGceMMIvpkHN-z1Q&oe=6A8A0F15",
+          "height": 500,
+          "width": 640
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9714401485294204&set=a.2029578063776623",
+        "id": "9714401485294204",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTcxNDQwMTY4MTk2MDg1MQ=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-03-29T11:37:08.000Z",
+    "timestamp": 1743248228,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid024QWQEUUdU9g4qUmYAX2QeWSup6vrM5sSytoJTNH2hSHsgZ9FU6VbKfbvjzLGN6EYl",
+    "text": "\"Implied\" QE, PBoC\n\nTrong nỗ lực giữ ổn định cổ máy tăng trưởng và hệ thống tài chính, khi không gian tài khóa co lại.\n\nChart: Rhodium.",
+    "banks": [],
+    "topic": "cfa_updates",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/514492625_24202686069372505_2289332519794804751_n.jpg?stp=dst-jpg_tt6&cstp=mx1452x804&ctp=s960x960&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=wZDTUlhpuowQ7kNvwE2MVSP&_nc_oc=AdqXVjtK9LtZpPqMjDVhtDKH4A6VQF_NPTAp747pczsRhryv4oOaIbsCkp2r0oYZG8s&_nc_zt=23&_nc_ht=scontent-atl3-1.xx&_nc_gid=ax117afg03UEfFkA1ZfwCA&_nc_ss=72289&oh=00_AQFmjjj1uwYV0JHoZkEy3UNudYoPivibxtFassSnfpw26w&oe=6A89F596",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/514492625_24202686069372505_2289332519794804751_n.jpg?stp=dst-jpg_tt6&cstp=mx1452x804&ctp=s960x960&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=wZDTUlhpuowQ7kNvwE2MVSP&_nc_oc=AdqXVjtK9LtZpPqMjDVhtDKH4A6VQF_NPTAp747pczsRhryv4oOaIbsCkp2r0oYZG8s&_nc_zt=23&_nc_ht=scontent-atl3-1.xx&_nc_gid=ax117afg03UEfFkA1ZfwCA&_nc_ss=72289&oh=00_AQFmjjj1uwYV0JHoZkEy3UNudYoPivibxtFassSnfpw26w&oe=6A89F596",
+          "height": 532,
+          "width": 960
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9708915459176140&set=a.2029578063776623",
+        "id": "9708915459176140",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTcwODkxNTYzOTE3NjEyMg=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-03-25T02:48:42.000Z",
+    "timestamp": 1742870922,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0Xudaws2zfhUtG3X51HEZC1pePWuSiNFLCCq6rgoAiqrgXzRfQze8xFtAJKkxMQ1Ml",
+    "text": "Cũng hơi bất ngờ và có phần xúc động, bởi thời gian qua, dù con tạo xoay vần, đất trời long lở, dù quỹ bán hay mua (aka xả hay gom cp), thì người đứng đầu quỹ vẫn giữ một quan điểm bất diệt: đã không nói (xuất hiện trên báo chí) thì thôi, đã nói thì phải nói điều tích cực - theo phân tích sentiment định lượng dựa trên... \"big data\" theo dõi của làng tin VN. \nXem thêm ở bình luận.",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-bos5-1.xx.fbcdn.net/v/t39.30808-6/515293827_24202543256053453_1338941695614154470_n.jpg?stp=dst-jpg_tt6&cstp=mx720x252&ctp=s720x252&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=GH1ZZC9-DHAQ7kNvwHDA-cA&_nc_oc=Ado8D53l3Z9Qd-88zMGQoVjmK6rcX9Gar9-bbmoshLzrtgdToLFVpOsjvtkAER8b5UE&_nc_zt=23&_nc_ht=scontent-bos5-1.xx&_nc_gid=AyhNWykCeZ1gkkJ2ZhQVMQ&_nc_ss=72289&oh=00_AQHrEGY3O0GV1JcKtnQg4_Qc9HE3_I_7Hc2lSPTGFNOVdg&oe=6A89F34A",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-bos5-1.xx.fbcdn.net/v/t39.30808-6/515293827_24202543256053453_1338941695614154470_n.jpg?stp=dst-jpg_tt6&cstp=mx720x252&ctp=s720x252&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=GH1ZZC9-DHAQ7kNvwHDA-cA&_nc_oc=Ado8D53l3Z9Qd-88zMGQoVjmK6rcX9Gar9-bbmoshLzrtgdToLFVpOsjvtkAER8b5UE&_nc_zt=23&_nc_ht=scontent-bos5-1.xx&_nc_gid=AyhNWykCeZ1gkkJ2ZhQVMQ&_nc_ss=72289&oh=00_AQHrEGY3O0GV1JcKtnQg4_Qc9HE3_I_7Hc2lSPTGFNOVdg&oe=6A89F34A",
+          "height": 252,
+          "width": 720
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9681841068550246&set=a.2029578063776623",
+        "id": "9681841068550246",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTY4MTg0MTI2MTg4MzU2MA=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-03-25T02:06:07.000Z",
+    "timestamp": 1742868367,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02yZcpBzQ8GeQys5g23NJyo5SfNR1qXdSrmMNNzmp3TFvUbmBRa62nTi8EmzCH8t3Hl",
+    "text": "Đây là một điểm thú vị nữa kể từ cuộc họp FOMC tháng 3 - nghệ thuật balancing act - mà mình có bình luận, một kết quả mở ra rất nhiều điều hấp dẫn, có thể nói là hấp dẫn nhất trong hơn 1 năm qua. Có lẽ là sự xuất hiện của nhân tố... Mr.47. Trong đó ông Powell chịu trách nhiệm tô màu nóng cho bức tranh lạnh với nhiều điểm tương phản, bằng cách \"mang\" trở lại từ \"transitory\" - một từ mà những tưởng ông ấy sẽ cố gắng quên đi. Chung quy lại cũng chỉ dùng như một van an toàn cho kịch bản là không... kịch bản (uncertainty) và chỉ wait 'n see là phù hợp (mà wait thì các đk nền kt vẫn có thể \"chạy\" theo hướng nào đó, vd mr. T có thể làm gì đó, các soft data liệu có translation sang thành hard data,...) nên phải phòng trc mấy câu chung chung. \nNhưng market thích \"transitory\" lần này, vì hàm ý trong phát biểu là có sự ưu tiên, giải thích cho delta dịch chuyển và phân tán của rate path vs. sự dịch chuyển (delta) của kỳ vọng về [lạm phát, thất nghiệp, tăng trưởng]. \n\nTrở lại điểm thú vị bên dưới về QT, mình bình luận thêm, sau khi giảm tốc độ với run-off với UST về một mức tượng trưng (5 đồng), xem là tượng trưng ở level này. Trong khi đó vẫn giữ tốc độ của MBS. Nghe thì hơi nặng tay trên con số danh nghĩa, nhưng người ta tính toán lại thì mức thực tế (bình quân) của MBS nó còn thấp hơn cái \"cap\", và do đó, tổng pace thực tế đã giảm xuống nhiều so với những gì công bố (nôm na là lượng tích cực hơn). Tất nhiên các cụ không lẩm cẩm để quyết định vậy. Vậy khả năng của các hàm ý? \n... hạ hồi phân giải. :-d",
+    "banks": [],
+    "topic": "interest_macro",
+    "media": [
+      {
+        "thumbnail": "https://scontent-bos5-1.xx.fbcdn.net/v/t39.30808-6/515585062_24202542076053571_658595273269825512_n.jpg?stp=dst-jpg_tt6&cstp=mx875x373&ctp=s875x373&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=OXN9incaeS8Q7kNvwEuEAZP&_nc_oc=AdoYD-G4CVHwrBFNNkiFm0fMFkL2FENWIuOR8HUSpua5pXT1mraz2h8WAhqO7zRYUQs&_nc_zt=23&_nc_ht=scontent-bos5-1.xx&_nc_gid=AyhNWykCeZ1gkkJ2ZhQVMQ&_nc_ss=72289&oh=00_AQEhFrXHyihjXiB-62nf3pjyaYmuf7OtR_J2WyUwtOVvJw&oe=6A89FC0A",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-bos5-1.xx.fbcdn.net/v/t39.30808-6/515585062_24202542076053571_658595273269825512_n.jpg?stp=dst-jpg_tt6&cstp=mx875x373&ctp=s875x373&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=OXN9incaeS8Q7kNvwEuEAZP&_nc_oc=AdoYD-G4CVHwrBFNNkiFm0fMFkL2FENWIuOR8HUSpua5pXT1mraz2h8WAhqO7zRYUQs&_nc_zt=23&_nc_ht=scontent-bos5-1.xx&_nc_gid=AyhNWykCeZ1gkkJ2ZhQVMQ&_nc_ss=72289&oh=00_AQEhFrXHyihjXiB-62nf3pjyaYmuf7OtR_J2WyUwtOVvJw&oe=6A89FC0A",
+          "height": 373,
+          "width": 875
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9681634115237608&set=a.2029578063776623",
+        "id": "9681634115237608",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTY4MTYzNDMwODU3MDkyMg=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-03-24T02:32:33.000Z",
+    "timestamp": 1742783553,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02M2BG6pFwQQYegEXnWhSjrkKtKXxh11AohyZpfvY4Z9YRJsZ7uZmxKu3RPDhudketl",
+    "text": "Có lẽ sau trận này, trong trướng Mạnh Đức đã để mắt.\nVì vậy, về sau mới có hồi ...\nDốc Trường Bản, Đại Ngọc thu phục Tử Long.",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2025-03-20T03:59:41.000Z",
+    "timestamp": 1742443181,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0yXKrcxT2CxJCx5mzFhPufNJnS2UKrLydcA9mqSJxDuiJnj95Ss7iAjuweEEZ4Csal",
+    "text": "Nếu hiện nay tình trạng chênh lệch như năm ngoái...",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "call_to_action_renderer": null,
+        "source": null,
+        "target": {
+          "__typename": "Story",
+          "id": "UzpfSTEwMDAwMTczMzQ2NDQ5MTo3NTQ5ODc2NTg4NDEzMzgyOjc1NDk4NzY1ODg0MTMzODI="
+        },
+        "story_attachment_link_renderer": {
+          "__typename": "StoryAttachmentGenericLinkRenderer",
+          "attachment": {
+            "web_link": {
+              "__typename": "ExternalWebLink",
+              "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02PQDfxzF4ry6utxQT5HFrTGq2ZngB1i8y5uyDU6KUUGsNh16KyhXcxfKoEgK76YNkl",
+              "fbclid": null,
+              "fbclid_data": {
+                "fbclid": null,
+                "aggr_id": null
+              },
+              "lynx_mode": "ASYNCLAZY"
+            },
+            "action_links": [
+              {
+                "__typename": "GoodwillThrowbackActionLink",
+                "url": "https://www.facebook.com/onthisday/?source=shared_feed_story"
+              }
+            ],
+            "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02PQDfxzF4ry6utxQT5HFrTGq2ZngB1i8y5uyDU6KUUGsNh16KyhXcxfKoEgK76YNkl"
+          },
+          "__module_operation_CometFeedStoryLink_attachment": {
+            "__dr": "CometFeedStoryGenericLink_story$normalization.graphql"
+          },
+          "__module_component_CometFeedStoryLink_attachment": {
+            "__dr": "CometFeedStoryGenericLink.react"
+          }
+        },
+        "title_with_entities": {
+          "text": "1 Year Ago"
+        }
+      }
+    ]
+  },
+  {
+    "time": "2025-03-19T14:12:01.000Z",
+    "timestamp": 1742393521,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02QJ6QoFk1qTUoxRZsCjdZfX3LxRmRsxXe7vYJEQjDb2y5TtiM7rKLTqo6BjUUmPPjl",
+    "text": "Haha, rõ là\nAnh Chủ tịch, xướng thăng \"Tái sinh\" khúc, \nnăm châu rền vang chí lớn.\nNhà Đầu tư, họa giáng \"Tính sai\" phương, \nmuôn lối lạc phách hồn siêu.\n.\nP/s: đối vui một chút khi thấy tựa đề bài báo, không có ý gì khác. :-d",
+    "banks": [],
+    "topic": "other",
+    "media": [
+      {
+        "thumbnail": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/515065462_24202423229398789_1353418327090799391_n.jpg?stp=dst-jpg_tt6&cstp=mx417x446&ctp=s417x446&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=oopD-WThqkoQ7kNvwGo9lgD&_nc_oc=AdoVD0p1Bi_Xzli78iJoCstr2wUzWKD_RTqpTciw8sKPTq4h-eTtYeA3y9vGtrq1AaA&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=PMM5OdHVBnHP-v_nz_fphw&_nc_ss=72289&oh=00_AQEXpn3TitS3BEbaqRonbLO_u54FMtwp47ySMTrwA66ZUg&oe=6A89E71B",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFF5EFFB",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/515065462_24202423229398789_1353418327090799391_n.jpg?stp=dst-jpg_tt6&cstp=mx417x446&ctp=s417x446&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=oopD-WThqkoQ7kNvwGo9lgD&_nc_oc=AdoVD0p1Bi_Xzli78iJoCstr2wUzWKD_RTqpTciw8sKPTq4h-eTtYeA3y9vGtrq1AaA&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=PMM5OdHVBnHP-v_nz_fphw&_nc_ss=72289&oh=00_AQEXpn3TitS3BEbaqRonbLO_u54FMtwp47ySMTrwA66ZUg&oe=6A89E71B",
+          "height": 446,
+          "width": 417
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9647011245366562&set=a.2029578063776623",
+        "id": "9647011245366562",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTY0NzAxMTQyMjAzMzIxMQ=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-03-18T05:57:29.000Z",
+    "timestamp": 1742277449,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0xD1ucxTEezeuNh3XND6Ppv7asoTYZKjYzybAUUj1JcSqa7zrs5MEzUp1FUcHhjEl",
+    "text": "Giả sử Bình Thuận nhập cùng Lâm Đồng thì Lâm Đồng có thêm... đảo to luôn nhỉ.\nSau này viết lại, thiên nhiên ban tặng, núi cao đảo to, biển dài và rộng, ...phát triển tour du lịch dài ngày...\n\nCòn BRVT nếu về với Tp.HCM thì Tp.HCM cũng có đảo to. Sau này lại bảo đi Tp.HCM thăm Côn đảo... :-d",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  },
+  {
+    "time": "2025-03-17T02:49:37.000Z",
+    "timestamp": 1742179777,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0in6qss7v9Qj6BWXv4tesDMbbiM3u4mQocQAd4cdUmhpDNBfH5SBC6kP37HZgQVv7l",
+    "text": "Sáng đầu tuần với một vài news (quốc tế) thú vị:\nĐức, cũng Ngân sách, EU và Đức cuối cùng cũng bị cầm tay dí vào túi mở ví, nới lỏng \"giới hạn nợ\" để chi tiêu xám hơn, xanh hơn và nhiều bánh mì hơn. ECB thì thận trọng như một người đang cân bằng trên dây, với lợi suất Bund leo thang và đồng euro đang \"thở mạnh\" hơn.\nUS: cũng vấn đề ngân sách tạm thời, một bên là Fed, bên kia là QH, và ở giữa là Trump và nền kinh tế bị \"kẹt\". \nTrung Quốc: Nền kinh tế lớn thứ hai thế giới đang cố gắng biến \"tiêu dùng\" từ một khẩu hiệu thành hiện thực. Cũng có ví von, nó như một món quà sinh nhật đến muộn, nó có thể mang lại niềm vui ngắn hạn nhưng không xóa tan được những bất an dài hạn, đặc biệt khi bất động sản vẫn là \"hòn đá trong giày\".\nĐiểm chung: Nợ công, tâm lý tiêu dùng giảm, và kỳ vọng lạm phát là ba yếu tố nổi bật trong bức tranh chung này. Nếu Diogenes sống ở thời hiện đại, có lẽ ông sẽ lang thang cầm đèn lồng để tìm một chính phủ thực sự cam kết giảm nợ, nhưng ngay cả cụ, chắc hẳn cũng phải xin một miếng bánh mì trong hoàn cảnh này.\nHội tụ của điểm chung và điểm riêng của Mr. 47, JPM xung phong downgrade triển vọng tăng trưởng của US, giảm 0.3 ppt (1.9 xuống 1.6%) ngay trước thềm FOMC họp kỳ tháng 3 (kỳ vọng có nhiều thông tin) và tăng đỉnh UR thêm 0.2ppt. \nGiảm 0.3ppt trong bối cảnh US bất cân xứng hơn 0.2ppt của VN mà WB xung phong upgrade vừa, dù implications đâu đó vẫn chung: nền kt cần cs hỗ trợ... Tâm lý thì một bên hết sức lo ngại còn một bên vẫn cảm thấy... không thỏa mãn với danh xưng... \"mặt trời vẫn tỏa sáng...\"\nWhen the facts change, I change...",
+    "banks": [],
+    "topic": "interest_macro",
+    "media": []
+  },
+  {
+    "time": "2025-03-15T05:42:41.000Z",
+    "timestamp": 1742017361,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0uwpuHtTEJkDBxMm8PDBr3baRm9vCZWVirtbboxQ4R1JfBhWRqXsojqSfRBHP1Fynl",
+    "text": "Maiden Lane - LTT Lane.\nNgày này năm xưa, cụ thể là 14 Mar. 2008. \n\nSự (sụp đổ) của NHĐT Bear Stearns vốn nổi tiếng và các hồ sơ cũng dần dần được \"giải mật\". (Tuy nhiên vẫn còn một vài thuyết nghi ngờ còn tranh cãi, dù báo cáo chính thức của Fed không cho thấy điều đó.)\n\nSau khoản cho vay 12.8 tỷ (bridge loan) của Fed NY để Bear Stearns cầm cự (qua JPM) trong vài ngày để tìm kiếm giải pháp phù hợp. 14 Mar. báo chí đưa tin Fed \"hứa\" cho Bear Stearns vay khoảng 25b (emergency funding, 28days) để đáp ứng khả năng chi trả (mất thanh khoản, không thể tiếp cận nguồn từ đồng liêu). \nTuy nhiên sau đó Fed \"lật kèo\" - khi cho rằng không thể cung cấp khoản cho vay này, dù bảo đảm bằng các tài sản phù hợp (eligible collateral backed...).\nPhương án thay thế sau đó là Fed sẽ lập một cty (TNHH) để mua tài sản này. Maiden Lane chính là công ty đó.\nMaiden Lane mua đứt 30 tỷ tài sản - chủ yếu là các MBS và nợ doanh nghiệp - của Bear Stearns đang nắm giữ, \"bơm tiền tươi\" thông qua giao dịch mua. \nThú vị là tài trợ cho giao dịch này cho Maiden là bằng nguồn của Fed là 29b, 1b còn lại từ... JPM (qua long term debt). Với phân định rõ ràng, tổn thất (nếu có) thì JPM \"chịu trước\" (tức subordinated debt thôi) với khoản cho vay này của JPM có Ls \"xử đẹp\": Prime rate + 450bps). [*] \nSong song đó là Fed \"tác hợp\" chuyển giao qua giao dịch mua lại Bear Stearns của JPM, giao dịch được thực hiện với stock swaps (hoán đổi cổ phần), định giá mỗi cp của Bear là 2U.\nToàn bộ giao dịch diễn ra sau khi Fed hỗ trợ tách \"cục\" tài sản định giá 30B ra khỏi bảng cđkt của Bear và thay bằng cục tiền. Giải phóng bảng cđkt và tách rủi ro trước khi chuyển cho JPM.\nGiá CP Bear Stearns thì trước khi về 2U, có thời điểm trước đó 1 năm là trên 170U, sau giảm xuống 90 rồi cuối cùng exit tại 2U.\nCâu chuyện ở trên, \"lời hứa\" của Fed được cho là các nhà đầu tư và báo chí hiểu lầm, quá trình cơ cấu rất nhất quán. Nhưng vẫn là bí mật lớn. Bởi những chỉ trích rất nhiều từ Maiden Lane 1 này. Trong đó có câu chuyện rủi ro đạo đức, tiền thuế của tax payers và cả của cổ đông Bear Stearns. \n.\nĐể các bạn nhanh chóng biết Maiden Lane là gì, thì nó là tên con đường bên tổng hành dinh Fed NY - (nơi thừa hành thực hiện các chính sách), khi các chủ banks đi bộ, trao đổi và cả trà đá vỉa hè trước khi vào Fed, như Lý Thái Tổ vậy. \nTrà đá vỉa hè bao gồm cả tình huống bắt buộc, và cả các bác bán trà đá với lượng thông tin của... CIA, cũng có thể là news flow cho những gì...kiểu bạn nghe được là do người ta muốn bạn nghe.\n\nMaiden Lane lần này là phiên bản 1.0, tức đầu tiên của Fed. Sau đó có thêm 2 bản nữa, Maiden Lanes cho... AIG.\nNó là một SPV của Central Banks. Với Fed, Maiden Lane ở trên là bản mở đầu cho 11 SPVs tính đến đại dịch CV19.\n.\nCũng tình cờ nhắc lại, khi mình có nêu các \"Maiden Lane\" trong nội dung phân tích chính sách cơ cấu NH yếu kém và chuyển giao bắt buộc cùng các cơ chế hỗ trợ. Trước đó, với VAMC cho quá trình tái cấu trúc gắn liền với xử lý nợ xấu. Nhưng khác nhau rất nhiều, có lẽ là một sự khôn khéo tầm cỡ.\n...\nCòn tiếp...\nĐặt gạch mở đầu nhân kỷ niệm Maiden. (Hồi đó mình nhớ có note bên bolg).\n...\nSẽ tiếp tục khi phù hợp, với:\nCấu trúc Maiden Lane SPV ntn, Maiden 1.0 mang lại khoản...lợi nhuận ròng 2.5b và bản 2.0.\nSOB as a SPV\nPOB as a SPV \n(Bao gồm cả các bridge loan)\nVAMC/Asset Swaps, Special Loans vs. Refinancing Facilities, Sell/Sell and Buy Back, NIM (Margin) vs. \"Capital gain\" on Loans/bonds transactions vs. Fees Management transaction structure...\n.\n[*] Cấu trúc \"1Fed + 1Partner\" này là cơ chế bảo vệ - protection mà Fed thiết kế, như TH này là qua protect source và protect form từ JPM, form chính là cấu trúc subordinated debt. Còn Maiden 2 và 3 thì chính AIG với một số form khác nữa, sẽ nói sau. Còn gần đây, trong khủng hoảng NH 2023, cơ chế BTFP Fed sử dụng, cũng cài protection vào nhưng source từ... UST qua quỹ ESF cho trường hợp rủi ro, mà mình cũng có lần nói đến.]",
+    "banks": [],
+    "topic": "ratio_lcr_nsfr",
+    "media": []
+  },
+  {
+    "time": "2025-03-12T03:50:59.000Z",
+    "timestamp": 1741751459,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02CFaxNzTVz4ow5UpGgSPK9g9UM4QXFM2LUnBuKseSU8PZfn9dxprADFLGVVrYgb7Yl",
+    "text": "Tuần rồi EUR quá +++.\nVới VND, đúng là có cẩn trọng trong điều tiết, nhưng liệu mức độ tập trung cần thiết có được duy trì hoặc không còn chi phối khi có nhiều sự thỏa hiệp?",
+    "banks": [],
+    "topic": "exchange_fx",
+    "media": [
+      {
+        "thumbnail": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/514252396_24200920942882351_7203370776347208797_n.jpg?stp=dst-jpg_tt6&cstp=mx579x322&ctp=s579x322&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=dYZmkit6bJwQ7kNvwFAP1he&_nc_oc=AdrnbaAihgnguqhyXPeHr-SaPI6t_IpmzIwDBEQGkYsEoq_1zRKD3jOYf2czqhPV0uU&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=65_YGBInrWV5nnl_lEzsMw&_nc_ss=72289&oh=00_AQHdO1dEphRFOc6d0YtQzGxoNP_zamhRQjGsNUassiGvng&oe=6A89F956",
+        "__typename": "Photo",
+        "__isMedia": "Photo",
+        "accent_color": "FFFFFFFF",
+        "photo_product_tags": [],
+        "photo_image": {
+          "uri": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.30808-6/514252396_24200920942882351_7203370776347208797_n.jpg?stp=dst-jpg_tt6&cstp=mx579x322&ctp=s579x322&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=dYZmkit6bJwQ7kNvwFAP1he&_nc_oc=AdrnbaAihgnguqhyXPeHr-SaPI6t_IpmzIwDBEQGkYsEoq_1zRKD3jOYf2czqhPV0uU&_nc_zt=23&_nc_ht=scontent-iad6-1.xx&_nc_gid=65_YGBInrWV5nnl_lEzsMw&_nc_ss=72289&oh=00_AQHdO1dEphRFOc6d0YtQzGxoNP_zamhRQjGsNUassiGvng&oe=6A89F956",
+          "height": 322,
+          "width": 579
+        },
+        "url": "https://www.facebook.com/photo/?fbid=9602375513163469&set=a.2029578063776623",
+        "id": "9602375513163469",
+        "feedback": {
+          "can_viewer_comment": false,
+          "id": "ZmVlZGJhY2s6OTYwMjM3NTcwOTgzMDExNg=="
+        },
+        "ocrText": "No photo description available."
+      }
+    ]
+  },
+  {
+    "time": "2025-03-10T10:39:17.000Z",
+    "timestamp": 1741603157,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid0GgEMSUz35yjxJVKZBYetvG2Lz8XP1nDxDhPq1JoSf9AhniSVF4sC8RhLfBTuBv4Bl",
+    "text": "Năm nay toàn hệ thống NH/TCTD có thể đạt mốc 1000 tỷ (USD) TTS. Kk\nRWA sẽ...",
+    "banks": [],
+    "topic": "cfa_updates",
+    "media": []
+  },
+  {
+    "time": "2025-03-10T07:11:31.000Z",
+    "timestamp": 1741590691,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid02Y7CvctVqoXnFXSKTW3zv5eT3La7NZvdBpxnNsrFsKGhkVftRCadjNvbEzxbmAp1ol",
+    "text": "Trên quan điểm hẹp (khắt khe nhất) về nghiệp vụ bơm tiền, thì hiện tại chúng ta đang hội đủ 5 ống bơm. \nQuan điểm khắt khe là gì, là dựa trên trực tiếp tiền rộng đối ứng với các hoạt động kt thực và tài chính. \nTất nhiên, cấu trúc banking based, hay credit đóng góp lớn nhất vào thay đổi money supply, thì phụ thuộc cầu tín dụng vẫn là then chốt (mà ytd vẫn khá yếu). \n.\nBắt đầu bằng \"nhỏ nhỏ\", vd giải quyết chế độ, vd 130k tỷ, trên quan điểm private net worth, thì tương đương với một gói stimulus kiểu \"helicopter\" mà bất kể tài trợ từ đâu (vss, fiscal deficit hay central bank, lưu ý là \"kiểu\" thôi, xem thêm ở comment), vì nó làm ++private/households net assets (lưu ý là net value, tức (+private netw, +deposit/money supply cả value lẫn flow, tức dòng tiền thực) - vốn phân biệt vs ++private debts qua các chương trình khác). Dù về \"số nhân\", thì giá trị present value của package có hiệu ứng số nhân thấp hơn (so với các money gifts khác), vì nó lấy từ future value... của các đối tượng hưởng chế độ, như nghỉ việc, tức họ sẽ thận trọng hơn trong chi tiêu khi future flows dồn về hiện tại, mà một PFA cơ bản thì có thể tư vấn allocation tiết kiệm, bđs, vàng hay ck*... :-d.\n\nVí dụ khác... từ từ sẽ viết tiếp, như tcv vs. vay đb, nguồn từ tăng kênh DIV (vd qua bond của tctd), TGA...\nMột vài pipelines vd, vài facility (tái) cấp vốn..., trong trường hợp này đối ứng account đã rõ ràng.\n.\n(*) Giả định rất chủ quan của mình về hành vi khu vực households khi nhận \"cục\" tiền và hoạch định lại trong bối cảnh hiện nay. :-d",
+    "banks": [],
+    "topic": "exchange_fx",
+    "media": []
+  },
+  {
+    "time": "2025-03-09T12:05:54.000Z",
+    "timestamp": 1741521954,
+    "url": "https://www.facebook.com/TranQuangNghia/posts/pfbid028yfnFKLKiHskcpwdEHu5GzidSLSNx7mxYA845xEZMSAGLPXDHmTmZinaH9vWrsSgl",
+    "text": "Một vài moving trên thị trường tp, ngược (đấu) với bond vigilante, nhiều bên sử dụng mantra \"fewer cuts now, more later\". :-d \nHiện the firmer đang yếu, latter đang mạnh lên, khi đang có đc nhiều cơ sở support.",
+    "banks": [],
+    "topic": "other",
+    "media": []
+  }
+];

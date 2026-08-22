@@ -1,7 +1,7 @@
 // Trình quản trị giao diện chính (Main App Controller)
 class BaselApp {
   constructor() {
-    this.currentTab = "dashboard";
+    this.currentTab = "jobs";
     this.theme = localStorage.getItem("theme") || "dark";
     
     this.initElements();
@@ -35,12 +35,88 @@ class BaselApp {
       });
     });
 
-    // Sự kiện click liên kết từ màn hình Dashboard
+    // Sự kiện click liên kết từ màn hình Dashboard (hỗ trợ chuyển hướng sub-tabs của Basel)
     this.dashLinks.forEach(link => {
       link.addEventListener("click", (e) => {
         e.preventDefault();
-        const tabId = link.getAttribute("data-target");
-        this.switchTab(tabId);
+        const target = link.getAttribute("data-target");
+        const baselSubTabs = ["timeline", "pillars", "comparison", "calculator", "quiz"];
+        
+        if (baselSubTabs.includes(target)) {
+          this.switchTab("basel");
+          // Kích hoạt sub-tab tương ứng
+          const subTabBtn = document.querySelector(`.sub-tab-btn[data-baseltab="${target}"]`);
+          if (subTabBtn) {
+            subTabBtn.click();
+          }
+        } else {
+          this.switchTab(target);
+        }
+      });
+    });
+
+    // Sự kiện đóng mở (toggle) sidebar
+    const collapseBtn = document.getElementById("sidebar-collapse-btn");
+    const expandBtn = document.getElementById("sidebar-expand-btn");
+    const appContainer = document.querySelector(".app-container");
+    
+    if (collapseBtn && expandBtn && appContainer) {
+      collapseBtn.addEventListener("click", () => {
+        appContainer.classList.add("sidebar-collapsed");
+        appContainer.classList.remove("mobile-sidebar-active");
+        expandBtn.classList.remove("hidden");
+      });
+      expandBtn.addEventListener("click", () => {
+        appContainer.classList.remove("sidebar-collapsed");
+        appContainer.classList.add("mobile-sidebar-active");
+        expandBtn.classList.add("hidden");
+      });
+    }
+
+    // Sự kiện đóng sidebar trên mobile khi nhấp ra ngoài
+    document.addEventListener("click", (e) => {
+      if (window.innerWidth <= 768 && appContainer) {
+        const sidebar = document.querySelector(".sidebar");
+        if (sidebar && !sidebar.contains(e.target) && expandBtn && !expandBtn.contains(e.target)) {
+          if (appContainer.classList.contains("mobile-sidebar-active")) {
+            appContainer.classList.add("sidebar-collapsed");
+            appContainer.classList.remove("mobile-sidebar-active");
+            expandBtn.classList.remove("hidden");
+          }
+        }
+      }
+    });
+
+    // Sự kiện chuyển sub-tab trong phân hệ Basel
+    const baselSubTabBtns = document.querySelectorAll(".sub-tab-btn[data-baseltab]");
+    const baselTabPanels = document.querySelectorAll(".basel-tab-panel");
+    
+    baselSubTabBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        baselSubTabBtns.forEach(b => {
+          b.classList.remove("active");
+          b.style.borderBottomColor = "transparent";
+          b.style.color = "var(--text-muted)";
+        });
+        btn.classList.add("active");
+        btn.style.borderBottomColor = "var(--primary)";
+        btn.style.color = "var(--text-main)";
+
+        const subTabId = btn.getAttribute("data-baseltab");
+        baselTabPanels.forEach(panel => {
+          if (panel.id === `${subTabId}-section`) {
+            panel.classList.remove("hidden");
+          } else {
+            panel.classList.add("hidden");
+          }
+        });
+
+        // Kích hoạt tính toán nếu nhảy vào tab calculator
+        if (subTabId === "calculator" && window.baselCalculator) {
+          window.baselCalculator.calculate();
+        }
+
+        lucide.createIcons();
       });
     });
   }
@@ -90,12 +166,24 @@ class BaselApp {
       }
     });
 
+    // Tự động đóng sidebar trên mobile khi chuyển tab
+    const appContainer = document.querySelector(".app-container");
+    const expandBtn = document.getElementById("sidebar-expand-btn");
+    if (appContainer && window.innerWidth <= 768) {
+      appContainer.classList.add("sidebar-collapsed");
+      appContainer.classList.remove("mobile-sidebar-active");
+      if (expandBtn) expandBtn.classList.remove("hidden");
+    }
+
     // Cuộn lên đầu trang
     window.scrollTo({ top: 0, behavior: "smooth" });
 
-    // Trình kích hoạt vẽ biểu đồ trong máy tính nếu nhảy vào tab máy tính
-    if (tabId === "calculator" && window.baselCalculator) {
-      window.baselCalculator.calculate();
+    // Kích hoạt biểu đồ nếu vào tab máy tính (hoặc qua tab basel đang mở máy tính)
+    if (tabId === "basel") {
+      const activeSub = document.querySelector(".sub-tab-btn[data-baseltab].active");
+      if (activeSub && activeSub.getAttribute("data-baseltab") === "calculator" && window.baselCalculator) {
+        window.baselCalculator.calculate();
+      }
     }
   }
 
@@ -107,6 +195,11 @@ class BaselApp {
       const isEven = idx % 2 === 0;
       const keyRulesHtml = item.keyRules.map(rule => `<li>${this.formatMarkdown(rule)}</li>`).join("");
       const limitationsHtml = item.limitations.map(lim => `<li>${this.formatMarkdown(lim)}</li>`).join("");
+      const sourceUrlHtml = item.sourceUrl ? `
+        <button class="source-link-btn open-pdf-timeline-btn" data-docpath="${item.sourceUrl}" data-docname="${item.title}" style="cursor: pointer; border: none; outline: none; display: inline-flex; align-items: center; gap: 6px;">
+          <i data-lucide="book-open" style="width: 12px; height: 12px;"></i> Đọc trực tiếp (PDF)
+        </button>
+      ` : "";
 
       return `
         <div class="timeline-item ${isEven ? 'left' : 'right'}">
@@ -129,11 +222,28 @@ class BaselApp {
                 <h4>Hạn chế & Điểm yếu:</h4>
                 <ul>${limitationsHtml}</ul>
               </div>
+
+              ${sourceUrlHtml}
             </div>
           </div>
         </div>
       `;
     }).join("");
+
+    // Đăng ký sự kiện click mở xem PDF trực tiếp cho Timeline
+    const timelinePdfBtns = container.querySelectorAll(".open-pdf-timeline-btn");
+    timelinePdfBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const path = btn.getAttribute("data-docpath");
+        const name = btn.getAttribute("data-docname");
+        if (window.documentFinder) {
+          window.documentFinder.openPdfViewer(path, name);
+        }
+      });
+    });
+
+    // Khởi tạo lại icons cho nội dung sinh động
+    lucide.createIcons();
   }
 
   renderComparisonTable() {
@@ -168,6 +278,55 @@ class BaselApp {
         </table>
       </div>
     `;
+
+    // Thiết lập tính năng tương tác làm nổi bật (highlight) cột khi hover và click
+    const table = container.querySelector(".comparison-table");
+    if (table) {
+      const cells = table.querySelectorAll("th, td");
+      cells.forEach(cell => {
+        // Chỉ xử lý các cột chỉ số (cột 1 đến cột 4), bỏ qua cột tiêu chí đầu tiên (cột 0)
+        cell.addEventListener("mouseenter", () => {
+          const colIdx = cell.cellIndex;
+          if (colIdx === 0) return;
+          const rows = table.querySelectorAll("tr");
+          rows.forEach(row => {
+            const targetCell = row.cells[colIdx];
+            if (targetCell) {
+              targetCell.classList.add("col-highlight");
+            }
+          });
+        });
+
+        cell.addEventListener("mouseleave", () => {
+          const colIdx = cell.cellIndex;
+          const rows = table.querySelectorAll("tr");
+          rows.forEach(row => {
+            const targetCell = row.cells[colIdx];
+            if (targetCell) {
+              targetCell.classList.remove("col-highlight");
+            }
+          });
+        });
+
+        // Click để ghim highlight cố định cho cột đó
+        cell.addEventListener("click", () => {
+          const colIdx = cell.cellIndex;
+          if (colIdx === 0) return;
+          
+          // Xóa tất cả các ghim cũ
+          table.querySelectorAll("th, td").forEach(c => c.classList.remove("col-active"));
+
+          // Thêm ghim mới cho cột được click
+          const rows = table.querySelectorAll("tr");
+          rows.forEach(row => {
+            const targetCell = row.cells[colIdx];
+            if (targetCell) {
+              targetCell.classList.add("col-active");
+            }
+          });
+        });
+      });
+    }
   }
 
   // Tiện ích format markdown cơ bản (in đậm **, code ``, màu sắc)

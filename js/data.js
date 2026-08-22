@@ -1,4 +1,4 @@
-// Dữ liệu lý thuyết và bài tập trắc nghiệm về Basel Accords (Basel I, II, III)
+// Dữ liệu lý thuyết và bài tập trắc nghiệm về Basel Accords (Basel I, II, III) và Luật Ngân hàng Việt Nam
 const BASEL_DATA = {
   // Dòng thời gian tiến hóa
   timeline: [
@@ -6,6 +6,7 @@ const BASEL_DATA = {
       id: "basel-i",
       year: "1988",
       title: "Basel I - Khởi đầu tỷ lệ an toàn vốn",
+      sourceUrl: "docs/basel_i.pdf",
       context: "Ra đời trong bối cảnh các ngân hàng lớn trên thế giới gia tăng đòn bẩy tài chính và đối mặt với rủi ro tín dụng ngày càng cao sau cuộc khủng hoảng nợ thập niên 1980.",
       objective: "Tập trung đo lường rủi ro tín dụng và thiết lập mức vốn tối thiểu toàn cầu để bảo vệ hệ thống ngân hàng tránh khỏi đổ vỡ.",
       keyRules: [
@@ -23,6 +24,7 @@ const BASEL_DATA = {
       id: "basel-ii",
       year: "2004",
       title: "Basel II - Ba trụ cột vững chắc",
+      sourceUrl: "docs/basel_ii.pdf",
       context: "Được công bố nhằm khắc phục các lỗ hổng của Basel I, đặc biệt là tính cào bằng trong đo lường rủi ro tín dụng và sự xuất hiện của các loại rủi ro mới trong kỷ nguyên tài chính số.",
       objective: "Nâng cao chất lượng quản trị rủi ro bằng cách đưa ra cấu trúc 3 trụ cột toàn diện và đo lường rủi ro chính xác, nhạy cảm hơn.",
       keyRules: [
@@ -39,6 +41,7 @@ const BASEL_DATA = {
       id: "basel-iii",
       year: "2010",
       title: "Basel III - Lá chắn khủng hoảng thanh khoản",
+      sourceUrl: "docs/basel_iii_capital.pdf",
       context: "Được xây dựng trực tiếp sau cuộc khủng hoảng tài chính toàn cầu năm 2007 - 2008, khi nhiều ngân hàng lớn sụp đổ do cạn kiệt thanh khoản dù vẫn đạt tỷ lệ CAR danh nghĩa rất cao theo Basel II.",
       objective: "Củng cố năng lực chống đỡ của hệ thống ngân hàng toàn cầu bằng cách nâng cao chất lượng vốn, thiết lập các đệm dự phòng vốn và giới hạn thanh khoản bắt buộc.",
       keyRules: [
@@ -56,6 +59,7 @@ const BASEL_DATA = {
       id: "basel-iv",
       year: "2023+",
       title: "Basel IV - Chuẩn hóa và Minh bạch hóa",
+      sourceUrl: "docs/basel_iv.pdf",
       context: "Thực chất là các cải cách bổ sung cho Basel III (thường được gọi là Basel III Reforms), có hiệu lực dần từ năm 2023 đến 2028 nhằm giải quyết sự thiếu nhất quán trong việc áp dụng mô hình nội bộ giữa các ngân hàng toàn cầu.",
       objective: "Hạn chế tính tùy biến của các mô hình nội bộ của ngân hàng, tăng tính so sánh giữa các tổ chức tài chính.",
       keyRules: [
@@ -119,7 +123,7 @@ const BASEL_DATA = {
     ]
   },
 
-  // Câu hỏi trắc nghiệm
+  // Câu hỏi trắc nghiệm Basel
   quizzes: [
     {
       question: "Tỷ lệ an toàn vốn tối thiểu (CAR) quy định tại Basel I là bao nhiêu phần trăm và dựa trên rủi ro nào?",
@@ -208,6 +212,197 @@ const BASEL_DATA = {
       ],
       answer: 1,
       explanation: "Basel IV đưa ra cơ chế sàn đầu ra (Output Floor) ở mức 72.5%, quy định RWA tính theo mô hình nội bộ nâng cao của ngân hàng không được phép thấp hơn 72.5% so với cách tính theo phương pháp chuẩn hóa tiêu chuẩn. Điều này giúp ngăn chặn các ngân hàng 'làm đẹp' chỉ số bằng mô hình toán học nội bộ phức tạp."
+    }
+  ],
+
+  // Dữ liệu Văn bản Pháp luật Việt Nam
+  laws: [
+    {
+      id: "law-tctd-2024",
+      type: "Luật",
+      code: "Luật số 32/2024/QH15",
+      title: "Luật Các tổ chức tín dụng 2024",
+      category: "core",
+      sourceUrl: "docs/luat_tctd_2024.pdf",
+      summary: "Đây là văn bản luật tối cao điều chỉnh việc thành lập, tổ chức, hoạt động, kiểm soát đặc biệt, tổ chức lại, giải thể các tổ chức tín dụng tại Việt Nam, thay thế Luật 2010.",
+      effectDate: "01/07/2024",
+      highlights: [
+        "**Giảm tỷ lệ sở hữu cổ phần**: Giảm giới hạn sở hữu của cổ đông cá nhân từ 5% xuống **10%** đối với cổ đông tổ chức (không quá 15% đối với nhóm người có liên quan) nhằm chống sở hữu chéo và thao túng ngân hàng.",
+        "**Giảm giới hạn cấp tín dụng**: Giảm dần giới hạn cho vay đối với một khách hàng từ 15% xuống **10%** vốn tự có, và một nhóm khách hàng liên quan từ 20% xuống **15%** vốn tự có (lộ trình giảm dần từ 2024 đến 2029).",
+        "**Công khai thông tin cổ đông**: Bắt buộc công bố thông tin cổ đông sở hữu từ **1%** vốn điều lệ trở lên kèm người có liên quan để tăng tính minh bạch.",
+        "**Quy chế kiểm soát đặc biệt**: Quy định rõ ràng hơn các biện pháp can thiệp sớm và xử lý khẩn cấp khi ngân hàng có dấu hiệu mất thanh khoản."
+      ]
+    },
+    {
+      id: "law-nhnn-2010",
+      type: "Luật",
+      code: "Luật số 46/2010/QH12",
+      title: "Luật Ngân hàng Nhà nước Việt Nam 2010",
+      category: "core",
+      sourceUrl: "docs/luat_nhnn_2010.pdf",
+      summary: "Quy định về tổ chức và hoạt động của Ngân hàng Nhà nước Việt Nam (NHNN) - cơ quan vị thế Thống đốc, chịu trách nhiệm quản lý nhà nước về tiền tệ và hoạt động ngân hàng.",
+      effectDate: "01/01/2011",
+      highlights: [
+        "Xác định NHNN là Ngân hàng trung ương của nước Cộng hòa xã hội chủ nghĩa Việt Nam, thực hiện chức năng phát hành tiền, ngân hàng của các ngân hàng và ngân hàng đại lý cho Chính phủ.",
+        "Quy định mục tiêu xây dựng và thực thi Chính sách tiền tệ quốc gia nhằm ổn định giá trị đồng tiền, kiểm soát lạm phát, góp phần thúc đẩy phát triển kinh tế.",
+        "Quy định thẩm quyền thanh tra, giám sát ngân hàng và quyền can thiệp, áp dụng các biện pháp xử lý để đảm bảo an toàn hệ thống tài chính."
+      ]
+    },
+    {
+      id: "tt-41-2016",
+      type: "Thông tư",
+      code: "Thông tư 41/2016/TT-NHNN",
+      category: "safety",
+      title: "Quy định tỷ lệ an toàn vốn (CAR) theo chuẩn Basel II",
+      sourceUrl: "docs/thong_tu_41_2016.pdf",
+      summary: "Thông tư cốt lõi nội địa hóa Trụ cột 1 của chuẩn mực Basel II tại Việt Nam, áp dụng phương pháp chuẩn hóa đối với các ngân hàng thương mại.",
+      effectDate: "01/01/2020",
+      highlights: [
+        "Quy định tỷ lệ CAR tối thiểu tại Việt Nam là **8%** (thay vì 9% trước đây theo Thông tư 13/36, phù hợp với thông lệ thế giới của Basel II).",
+        "Công thức tính RWA chi tiết gồm cả 3 cấu phần: RWA Tín dụng, RWA Thị trường, RWA Hoạt động.",
+        "Hướng dẫn chi tiết trọng số rủi ro tài sản tín dụng nhạy cảm hơn: Trái phiếu chính phủ (0%), nợ ngân hàng khác từ 20-50%, cho vay mua nhà ở xã hội từ 30-50% tùy tỷ lệ LTV, cho vay tiêu dùng thông thường chịu trọng số cao 100-150%."
+      ]
+    },
+    {
+      id: "tt-22-2023",
+      type: "Thông tư",
+      code: "Thông tư 22/2023/TT-NHNN",
+      category: "safety",
+      title: "Sửa đổi, bổ sung Thông tư 41/2016/TT-NHNN về tỷ lệ an toàn vốn",
+      sourceUrl: "docs/thong_tu_22_2023.pdf",
+      summary: "Thông tư sửa đổi, bổ sung một số điều về việc tính trọng số rủi ro tài sản đối với các khoản cho vay mua nhà, cho vay tiêu dùng và dự án bất động sản.",
+      effectDate: "01/07/2024",
+      highlights: [
+        "**Ưu đãi cho vay nhà ở xã hội**: Áp dụng trọng số rủi ro ưu đãi từ **30% đến 50%** đối với các khoản cho vay mua nhà ở xã hội và nhà ở theo chương trình hỗ trợ của Chính phủ.",
+        "**Thế chấp bất động sản chặt chẽ**: Quy định chi tiết các điều kiện để khoản cho vay được coi là cho vay thế chấp nhà (nhà đã hoàn thành bàn giao, nguồn trả nợ không phải từ tiền cho thuê nhà hình thành từ khoản vay).",
+        "**Khuyến khích hạ tầng công nghiệp**: Điều chỉnh giảm trọng số rủi ro đối với khoản cấp tín dụng cho dự án bất động sản khu công nghiệp xuống **160%** (so với 200% trước đây)."
+      ]
+    },
+    {
+      id: "tt-14-2025",
+      type: "Thông tư",
+      code: "Thông tư 14/2025/TT-NHNN",
+      category: "safety",
+      title: "Quy định mới về tỷ lệ an toàn vốn đối với ngân hàng thương mại",
+      sourceUrl: "docs/thong_tu_14_2025.pdf",
+      summary: "Thông tư mới nhất ban hành giữa năm 2025 nhằm hoàn thiện khung tỷ lệ an toàn vốn (CAR) phù hợp với xu hướng chuẩn bị triển khai Basel III tại Việt Nam.",
+      effectDate: "30/06/2025",
+      highlights: [
+        "**Cập nhật quy chuẩn tính RWA**: Hoàn thiện các phương pháp tính tài sản có rủi ro nhạy cảm hơn, đồng bộ hóa hệ số rủi ro với Luật Các TCTD 2024 mới nhất.",
+        "**Ngoại trừ ngân hàng đặc biệt**: Quy định không áp dụng tỷ lệ an toàn vốn đối với ngân hàng thương mại được kiểm soát đặc biệt hoặc đang trong giai đoạn can thiệp sớm.",
+        "**Nâng cao năng lực phòng vệ**: Bổ sung các cấu phần đệm vốn bảo toàn và yêu cầu quản trị rủi ro thanh khoản nâng cao đi kèm với tỷ lệ an toàn vốn."
+      ]
+    },
+    {
+      id: "tt-22-2019",
+      type: "Thông tư",
+      code: "Thông tư 22/2019/TT-NHNN",
+      category: "safety",
+      title: "Quy định các giới hạn, tỷ lệ bảo đảm an toàn hoạt động",
+      sourceUrl: "docs/thong_tu_22_2019.pdf",
+      summary: "Quy định các giới hạn an toàn thực tế nhằm đảm bảo khả năng chi trả thanh khoản khẩn cấp và cơ cấu vốn ổn định của tổ chức tín dụng.",
+      effectDate: "01/01/2020",
+      highlights: [
+        "**Tỷ lệ dư nợ cho vay so với tổng vốn huy động (LDR)** tối đa bắt buộc ở mức **85%** đối với tất cả các ngân hàng thương mại.",
+        "**Tỷ lệ nguồn vốn ngắn hạn cho vay trung và dài hạn** bị siết chặt và giảm dần theo lộ trình để quản trị rủi ro kỳ hạn (hiện tại khống chế tối đa **30%**).",
+        "Quy định **Tỷ lệ khả năng chi trả** trong vòng 24 giờ và Tỷ lệ trữ lượng thanh khoản tối thiểu 10%."
+      ]
+    },
+    {
+      id: "tt-11-2021",
+      type: "Thông tư",
+      code: "Thông tư 11/2021/TT-NHNN",
+      category: "provision",
+      title: "Quy định về phân loại tài sản có và trích lập dự phòng rủi ro",
+      sourceUrl: "docs/thong_tu_11_2021.pdf",
+      summary: "Vản bản hướng dẫn chi tiết cách xếp hạng tín dụng nội bộ, phân loại các nhóm nợ từ 1 đến 5 và tỷ lệ trích dự phòng tổn thất tín dụng tương ứng.",
+      effectDate: "01/10/2021",
+      highlights: [
+        "**Phân loại 5 nhóm nợ chính**: Nhóm 1 (Nợ đủ tiêu chuẩn - quá hạn < 10 ngày); Nhóm 2 (Nợ cần chú ý - quá hạn 10-90 ngày); Nhóm 3 (Nợ dưới tiêu chuẩn - quá hạn 91-180 ngày); Nhóm 4 (Nợ nghi ngờ - quá hạn 181-360 ngày); Nhóm 5 (Nợ có khả năng mất vốn - quá hạn > 360 ngày).",
+        "**Dự phòng cụ thể**: Quy định tỷ lệ trích lập bắt buộc theo từng nhóm nợ: Nhóm 1 (0%), Nhóm 2 (5%), Nhóm 3 (20%), Nhóm 4 (50%), Nhóm 5 (100%). Giá trị trích lập = (Dư nợ - Giá trị tài sản bảo đảm đã khấu trừ) x Tỷ lệ trích lập.",
+        "**Dự phòng chung**: Yêu cầu trích lập **0.75%** trên tổng số dư nợ từ nhóm 1 đến nhóm 4 (ngoại trừ các khoản tiền gửi tại TCTD khác, trái phiếu chính phủ,...)."
+      ]
+    }
+  ],
+
+  // Trắc nghiệm Pháp luật Việt Nam
+  lawQuizzes: [
+    {
+      question: "Theo Luật Các tổ chức tín dụng 2024 mới nhất, giới hạn cấp tín dụng tối đa cho một khách hàng của ngân hàng thương mại là bao nhiêu phần trăm vốn tự có?",
+      options: [
+        "15% vốn tự có",
+        "10% vốn tự có",
+        "5% vốn tự có",
+        "20% vốn tự có"
+      ],
+      answer: 1,
+      explanation: "Luật Các tổ chức tín dụng 2024 quy định giảm giới hạn cấp tín dụng của một khách hàng từ 15% (theo Luật 2010) xuống còn **10%** vốn tự có của ngân hàng thương mại (có lộ trình thực hiện từ 2024 đến 2029 để các ngân hàng điều chỉnh)."
+    },
+    {
+      question: "Tỷ lệ an toàn vốn tối thiểu (CAR) bắt buộc đối với ngân hàng áp dụng Thông tư 41/2016/TT-NHNN tại Việt Nam là bao nhiêu?",
+      options: [
+        "9% theo Basel I",
+        "10.5% bao gồm đệm vốn",
+        "8% theo Basel II chuẩn hóa",
+        "6% đối với vốn cấp 1"
+      ],
+      answer: 2,
+      explanation: "Thông tư 41/2016/TT-NHNN nội địa hóa Basel II tại Việt Nam quy định tỷ lệ CAR tối thiểu là **8%**, tính dựa trên 3 loại rủi ro: Tín dụng, Thị trường, và Hoạt động."
+    },
+    {
+      question: "Theo Thông tư 22/2019/TT-NHNN, tỷ lệ dư nợ cho vay so với tổng tiền gửi huy động (LDR) tối đa của ngân hàng thương mại Việt Nam là bao nhiêu?",
+      options: [
+        "80%",
+        "85%",
+        "90%",
+        "75%"
+      ],
+      answer: 1,
+      explanation: "Thông tư 22 quy định tỷ lệ LDR tối đa của các ngân hàng thương mại cổ phần, ngân hàng liên doanh, ngân hàng 100% vốn nước ngoài là **85%**."
+    },
+    {
+      question: "Một khoản vay quá hạn thanh toán 120 ngày sẽ bị xếp vào nhóm nợ nào theo quy định tại Thông tư 11/2021/TT-NHNN?",
+      options: [
+        "Nhóm 2 - Nợ cần chú ý",
+        "Nhóm 3 - Nợ dưới tiêu chuẩn",
+        "Nhóm 4 - Nợ nghi ngờ",
+        "Nhóm 5 - Nợ có khả năng mất vốn"
+      ],
+      answer: 1,
+      explanation: "Nợ quá hạn từ 91 ngày đến 180 ngày thuộc định nghĩa của **Nhóm 3 (Nợ dưới tiêu chuẩn)**. Khoản nợ này bắt đầu bị tính là nợ xấu (NPL)."
+    },
+    {
+      question: "Tỷ lệ trích lập dự phòng cụ thể đối với một khoản nợ thuộc nhóm 4 (Nợ nghi ngờ) theo Thông tư 11/2021/TT-NHNN là bao nhiêu?",
+      options: [
+        "20%",
+        "50%",
+        "100%",
+        "5%"
+      ],
+      answer: 1,
+      explanation: "Tỷ lệ trích lập dự phòng cụ thể quy định tại Thông tư 11 đối với nợ nhóm 4 (Nợ nghi ngờ) là **50%**. Đối với nợ nhóm 3 là 20%, nợ nhóm 5 là 100%."
+    },
+    {
+      question: "Tỷ lệ trích lập dự phòng chung bắt buộc đối với dư nợ từ Nhóm 1 đến Nhóm 4 (ngoại trừ các tài sản được loại trừ) là bao nhiêu?",
+      options: [
+        "0.50%",
+        "0.75%",
+        "1.00%",
+        "2.00%"
+      ],
+      answer: 1,
+      explanation: "Thông tư 11/2021/TT-NHNN quy định tỷ lệ trích lập dự phòng chung là **0.75%** trên tổng số dư các khoản nợ từ nhóm 1 đến nhóm 4."
+    },
+    {
+      question: "Theo Luật Các tổ chức tín dụng 2024, một cổ đông là tổ chức không được sở hữu vượt quá bao nhiêu phần trăm vốn điều lệ của một TCTD (trừ một số trường hợp đặc biệt)?",
+      options: [
+        "5% vốn điều lệ",
+        "10% vốn điều lệ",
+        "15% vốn điều lệ",
+        "20% vốn điều lệ"
+      ],
+      answer: 1,
+      explanation: "Luật Các tổ chức tín dụng 2024 quy định cổ đông tổ chức không được sở hữu vượt quá **10%** vốn điều lệ của một TCTD (Luật 2010 quy định giới hạn này là 15%). Điều này giúp hạn chế mức độ tập trung quyền lực và rủi ro sở hữu chéo."
     }
   ]
 };

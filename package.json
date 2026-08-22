@@ -4,6 +4,7 @@
   "description": "Basel & BankRegs - Hệ thống Pháp chế & Quản trị Rủi ro Ngân hàng",
   "main": "index.html",
   "scripts": {
+    "build": "node build.js",
     "dev": "wrangler dev --port 8000"
   },
   "devDependencies": {
